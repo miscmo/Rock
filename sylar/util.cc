@@ -45,12 +45,14 @@ static std::string demangle(const char* str) {
 }
 
 void Backtrace(std::vector<std::string>& bt, int size, int skip) {
+    //协程栈一般比较小，轻易不要再栈上开辟大量空间，防止栈溢出
     void** array = (void**)malloc((sizeof(void*) * size));
     size_t s = ::backtrace(array, size);
 
     char** strings = backtrace_symbols(array, s);
     if(strings == NULL) {
         SYLAR_LOG_ERROR(g_logger) << "backtrace_synbols error";
+        free(array);
         return;
     }
 

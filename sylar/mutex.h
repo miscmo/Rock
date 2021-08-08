@@ -261,7 +261,7 @@ public:
 };
 
 /**
- * @brief 读写互斥量
+ * @brief 读写锁
  */
 class RWMutex : Noncopyable{
 public:
