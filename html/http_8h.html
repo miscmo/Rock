@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/http/http.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">http.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP定义结构体封装  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+http.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+</div>
+<p><a href="http_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1CaseInsensitiveLess.html">sylar::http::CaseInsensitiveLess</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">忽略大小写比较仿函数  <a href="structsylar_1_1http_1_1CaseInsensitiveLess.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpRequest.html">sylar::http::HttpRequest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP请求结构  <a href="classsylar_1_1http_1_1HttpRequest.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpResponse.html">sylar::http::HttpResponse</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP响应结构体  <a href="classsylar_1_1http_1_1HttpResponse.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a062873fd30d66c26468d4f1bd73e2976"><td class="memItemLeft" align="right" valign="top"><a id="a062873fd30d66c26468d4f1bd73e2976"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTTP_METHOD_MAP</b>(XX)</td></tr>
+<tr class="separator:a062873fd30d66c26468d4f1bd73e2976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbba37710a56ceabef05d8e3e7ed5939"><td class="memItemLeft" align="right" valign="top"><a id="acbba37710a56ceabef05d8e3e7ed5939"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTTP_STATUS_MAP</b>(XX)</td></tr>
+<tr class="separator:acbba37710a56ceabef05d8e3e7ed5939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001751e2abb71763b08651bec986b6f7"><td class="memItemLeft" align="right" valign="top"><a id="a001751e2abb71763b08651bec986b6f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>XX</b>(num,  name,  string)&#160;&#160;&#160;name = num,</td></tr>
+<tr class="separator:a001751e2abb71763b08651bec986b6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b0ee7714b452bc90aa69d6fac7cb69f"><td class="memItemLeft" align="right" valign="top"><a id="a2b0ee7714b452bc90aa69d6fac7cb69f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>XX</b>(code,  name,  desc)&#160;&#160;&#160;name = code,</td></tr>
+<tr class="separator:a2b0ee7714b452bc90aa69d6fac7cb69f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ae6e414e88664e23d4e83cb6cd91b477e"><td class="memItemLeft" align="right" valign="top"><a id="ae6e414e88664e23d4e83cb6cd91b477e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">sylar::http::HttpMethod</a> { <b>XX</b>, 
+<b>INVALID_METHOD</b>
+ }</td></tr>
+<tr class="memdesc:ae6e414e88664e23d4e83cb6cd91b477e"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP方法枚举 <br /></td></tr>
+<tr class="separator:ae6e414e88664e23d4e83cb6cd91b477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5200eca685ab9ffeb9a63236b8253332"><td class="memItemLeft" align="right" valign="top"><a id="a5200eca685ab9ffeb9a63236b8253332"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#a5200eca685ab9ffeb9a63236b8253332">sylar::http::HttpStatus</a> { <b>XX</b>
+ }</td></tr>
+<tr class="memdesc:a5200eca685ab9ffeb9a63236b8253332"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP状态枚举 <br /></td></tr>
+<tr class="separator:a5200eca685ab9ffeb9a63236b8253332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a6d0898c57921cf8936a666504ccae688"><td class="memItemLeft" align="right" valign="top">HttpMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#a6d0898c57921cf8936a666504ccae688">sylar::http::StringToHttpMethod</a> (const std::string &amp;m)</td></tr>
+<tr class="memdesc:a6d0898c57921cf8936a666504ccae688"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串方法名转成HTTP方法枚举  <a href="http_8h.html#a6d0898c57921cf8936a666504ccae688">更多...</a><br /></td></tr>
+<tr class="separator:a6d0898c57921cf8936a666504ccae688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad509430dc4d5bf1a95c695be7d5777b5"><td class="memItemLeft" align="right" valign="top">HttpMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#ad509430dc4d5bf1a95c695be7d5777b5">sylar::http::CharsToHttpMethod</a> (const char *m)</td></tr>
+<tr class="memdesc:ad509430dc4d5bf1a95c695be7d5777b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串指针转换成HTTP方法枚举  <a href="http_8h.html#ad509430dc4d5bf1a95c695be7d5777b5">更多...</a><br /></td></tr>
+<tr class="separator:ad509430dc4d5bf1a95c695be7d5777b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7975f0a126c5310506a757e0bd8c8a55"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#a7975f0a126c5310506a757e0bd8c8a55">sylar::http::HttpMethodToString</a> (const HttpMethod &amp;m)</td></tr>
+<tr class="memdesc:a7975f0a126c5310506a757e0bd8c8a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">将HTTP方法枚举转换成字符串  <a href="http_8h.html#a7975f0a126c5310506a757e0bd8c8a55">更多...</a><br /></td></tr>
+<tr class="separator:a7975f0a126c5310506a757e0bd8c8a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c12349237c113d848876a58df50796"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#a07c12349237c113d848876a58df50796">sylar::http::HttpStatusToString</a> (const HttpStatus &amp;s)</td></tr>
+<tr class="memdesc:a07c12349237c113d848876a58df50796"><td class="mdescLeft">&#160;</td><td class="mdescRight">将HTTP状态枚举转换成字符串  <a href="http_8h.html#a07c12349237c113d848876a58df50796">更多...</a><br /></td></tr>
+<tr class="separator:a07c12349237c113d848876a58df50796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae706fa797ef4b8066246dccc0a905f46"><td class="memTemplParams" colspan="2">template&lt;class MapType , class T &gt; </td></tr>
+<tr class="memitem:ae706fa797ef4b8066246dccc0a905f46"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="http_8h.html#ae706fa797ef4b8066246dccc0a905f46">sylar::http::checkGetAs</a> (const MapType &amp;m, const std::string &amp;key, T &amp;val, const T &amp;def=T())</td></tr>
+<tr class="memdesc:ae706fa797ef4b8066246dccc0a905f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Map中的key值,并转成对应类型,返回是否成功  <a href="http_8h.html#ae706fa797ef4b8066246dccc0a905f46">更多...</a><br /></td></tr>
+<tr class="separator:ae706fa797ef4b8066246dccc0a905f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a3a1218593d2a5e4613d9900c3b387"><td class="memTemplParams" colspan="2">template&lt;class MapType , class T &gt; </td></tr>
+<tr class="memitem:a80a3a1218593d2a5e4613d9900c3b387"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="http_8h.html#a80a3a1218593d2a5e4613d9900c3b387">sylar::http::getAs</a> (const MapType &amp;m, const std::string &amp;key, const T &amp;def=T())</td></tr>
+<tr class="memdesc:a80a3a1218593d2a5e4613d9900c3b387"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Map中的key值,并转成对应类型  <a href="http_8h.html#a80a3a1218593d2a5e4613d9900c3b387">更多...</a><br /></td></tr>
+<tr class="separator:a80a3a1218593d2a5e4613d9900c3b387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81ae3fe4fac399d5d85017ce8ba4a3b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#aa81ae3fe4fac399d5d85017ce8ba4a3b">sylar::http::operator&lt;&lt;</a> (std::ostream &amp;os, const HttpRequest &amp;req)</td></tr>
+<tr class="memdesc:aa81ae3fe4fac399d5d85017ce8ba4a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式输出HttpRequest  <a href="http_8h.html#aa81ae3fe4fac399d5d85017ce8ba4a3b">更多...</a><br /></td></tr>
+<tr class="separator:aa81ae3fe4fac399d5d85017ce8ba4a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4821bfcba891b2f43046b4fe92ee89c3"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http_8h.html#a4821bfcba891b2f43046b4fe92ee89c3">sylar::http::operator&lt;&lt;</a> (std::ostream &amp;os, const HttpResponse &amp;rsp)</td></tr>
+<tr class="memdesc:a4821bfcba891b2f43046b4fe92ee89c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">流式输出HttpResponse  <a href="http_8h.html#a4821bfcba891b2f43046b4fe92ee89c3">更多...</a><br /></td></tr>
+<tr class="separator:a4821bfcba891b2f43046b4fe92ee89c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP定义结构体封装 </p>
+<dl class="section author"><dt>作者</dt><dd>sylar.yin @email <a href="#" onclick="location.href='mai'+'lto:'+'564'+'62'+'827'+'6@'+'qq.'+'co'+'m'; return false;">56462<span style="display: none;">.nosp@m.</span>8276<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-06-07 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top) </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="ad509430dc4d5bf1a95c695be7d5777b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad509430dc4d5bf1a95c695be7d5777b5">&#9670;&nbsp;</a></span>CharsToHttpMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpMethod sylar::http::CharsToHttpMethod </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将字符串指针转换成HTTP方法枚举 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>字符串方法枚举 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>HTTP方法枚举 </dd></dl>
+
+</div>
+</div>
+<a id="ae706fa797ef4b8066246dccc0a905f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae706fa797ef4b8066246dccc0a905f46">&#9670;&nbsp;</a></span>checkGetAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MapType , class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sylar::http::checkGetAs </td>
+          <td>(</td>
+          <td class="paramtype">const MapType &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取Map中的key值,并转成对应类型,返回是否成功 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>Map数据结构 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>关键字 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">val</td><td>保存转换后的值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">def</td><td>默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>转换成功, val 为对应的值 </td></tr>
+    <tr><td class="paramname">false</td><td>不存在或者转换失败 val = def </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 2 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a80a3a1218593d2a5e4613d9900c3b387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80a3a1218593d2a5e4613d9900c3b387">&#9670;&nbsp;</a></span>getAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class MapType , class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T sylar::http::getAs </td>
+          <td>(</td>
+          <td class="paramtype">const MapType &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取Map中的key值,并转成对应类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>Map数据结构 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>关键字 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">def</td><td>默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果存在且转换成功返回对应的值,否则返回默认值 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 3 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7975f0a126c5310506a757e0bd8c8a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7975f0a126c5310506a757e0bd8c8a55">&#9670;&nbsp;</a></span>HttpMethodToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* sylar::http::HttpMethodToString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将HTTP方法枚举转换成字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>HTTP方法枚举 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串 </dd></dl>
+
+</div>
+</div>
+<a id="a07c12349237c113d848876a58df50796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c12349237c113d848876a58df50796">&#9670;&nbsp;</a></span>HttpStatusToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* sylar::http::HttpStatusToString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="http_8h.html#a5200eca685ab9ffeb9a63236b8253332">HttpStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将HTTP状态枚举转换成字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>HTTP状态枚举 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字符串 </dd></dl>
+
+</div>
+</div>
+<a id="aa81ae3fe4fac399d5d85017ce8ba4a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81ae3fe4fac399d5d85017ce8ba4a3b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; sylar::http::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsylar_1_1http_1_1HttpRequest.html">HttpRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>req</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>流式输出HttpRequest </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">os</td><td>输出流 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>HTTP请求 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输出流 </dd></dl>
+
+</div>
+</div>
+<a id="a4821bfcba891b2f43046b4fe92ee89c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821bfcba891b2f43046b4fe92ee89c3">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; sylar::http::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsylar_1_1http_1_1HttpResponse.html">HttpResponse</a> &amp;&#160;</td>
+          <td class="paramname"><em>rsp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>流式输出HttpResponse </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">os</td><td>输出流 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rsp</td><td>HTTP响应 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>输出流 </dd></dl>
+
+</div>
+</div>
+<a id="a6d0898c57921cf8936a666504ccae688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0898c57921cf8936a666504ccae688">&#9670;&nbsp;</a></span>StringToHttpMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpMethod sylar::http::StringToHttpMethod </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将字符串方法名转成HTTP方法枚举 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>HTTP方法 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>HTTP方法枚举 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

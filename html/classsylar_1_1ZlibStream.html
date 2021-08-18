@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::ZlibStream类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1ZlibStream.html">ZlibStream</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classsylar_1_1ZlibStream-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::ZlibStream类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::ZlibStream 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::ZlibStream 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a8a2ed2ac36bfe3a24ead4208f68f27a3"><td class="memItemLeft" align="right" valign="top"><a id="a8a2ed2ac36bfe3a24ead4208f68f27a3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>ZLIB</b>, 
+<b>DEFLATE</b>, 
+<b>GZIP</b>
+ }</td></tr>
+<tr class="separator:a8a2ed2ac36bfe3a24ead4208f68f27a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76e71e4626f975ac859bf7fc3f0dc1f"><td class="memItemLeft" align="right" valign="top"><a id="ad76e71e4626f975ac859bf7fc3f0dc1f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Strategy</b> { <br />
+&#160;&#160;<b>DEFAULT</b> = Z_DEFAULT_STRATEGY, 
+<b>FILTERED</b> = Z_FILTERED, 
+<b>HUFFMAN</b> = Z_HUFFMAN_ONLY, 
+<b>FIXED</b> = Z_FIXED, 
+<br />
+&#160;&#160;<b>RLE</b> = Z_RLE
+<br />
+ }</td></tr>
+<tr class="separator:ad76e71e4626f975ac859bf7fc3f0dc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57ce4854925cc268860543a87e7715c"><td class="memItemLeft" align="right" valign="top"><a id="ae57ce4854925cc268860543a87e7715c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CompressLevel</b> { <b>NO_COMPRESSION</b> = Z_NO_COMPRESSION, 
+<b>BEST_SPEED</b> = Z_BEST_SPEED, 
+<b>BEST_COMPRESSION</b> = Z_BEST_COMPRESSION, 
+<b>DEFAULT_COMPRESSION</b> = Z_DEFAULT_COMPRESSION
+ }</td></tr>
+<tr class="separator:ae57ce4854925cc268860543a87e7715c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3662b9d0ff4d7bdadf9c222f3ab18405"><td class="memItemLeft" align="right" valign="top"><a id="a3662b9d0ff4d7bdadf9c222f3ab18405"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1ZlibStream.html">ZlibStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a3662b9d0ff4d7bdadf9c222f3ab18405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="ad9d5c6252a7e22c9f238f5892aae8a4e"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Stream.html">Stream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aed4a4ad161d1127fc4e88c02ec4b4b02"><td class="memItemLeft" align="right" valign="top"><a id="aed4a4ad161d1127fc4e88c02ec4b4b02"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ZlibStream</b> (bool encode, uint32_t buff_size=4096)</td></tr>
+<tr class="separator:aed4a4ad161d1127fc4e88c02ec4b4b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d8f30f74be95410ffbdb372789d014"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1ZlibStream.html#a49d8f30f74be95410ffbdb372789d014">read</a> (void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a49d8f30f74be95410ffbdb372789d014"><td class="mdescLeft">&#160;</td><td class="mdescRight">读数据  <a href="classsylar_1_1ZlibStream.html#a49d8f30f74be95410ffbdb372789d014">更多...</a><br /></td></tr>
+<tr class="separator:a49d8f30f74be95410ffbdb372789d014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d704a5c7ef1818e2d813b5a2f3e74d9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1ZlibStream.html#a4d704a5c7ef1818e2d813b5a2f3e74d9">read</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a4d704a5c7ef1818e2d813b5a2f3e74d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">读数据  <a href="classsylar_1_1ZlibStream.html#a4d704a5c7ef1818e2d813b5a2f3e74d9">更多...</a><br /></td></tr>
+<tr class="separator:a4d704a5c7ef1818e2d813b5a2f3e74d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73933d8cce7af3657d7b4a3903451920"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1ZlibStream.html#a73933d8cce7af3657d7b4a3903451920">write</a> (const void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a73933d8cce7af3657d7b4a3903451920"><td class="mdescLeft">&#160;</td><td class="mdescRight">写数据  <a href="classsylar_1_1ZlibStream.html#a73933d8cce7af3657d7b4a3903451920">更多...</a><br /></td></tr>
+<tr class="separator:a73933d8cce7af3657d7b4a3903451920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e042190e2c84f1f66b5c845613446d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1ZlibStream.html#a74e042190e2c84f1f66b5c845613446d">write</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a74e042190e2c84f1f66b5c845613446d"><td class="mdescLeft">&#160;</td><td class="mdescRight">写数据  <a href="classsylar_1_1ZlibStream.html#a74e042190e2c84f1f66b5c845613446d">更多...</a><br /></td></tr>
+<tr class="separator:a74e042190e2c84f1f66b5c845613446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41178cfd39f9d7a91d2c95b796ca0085"><td class="memItemLeft" align="right" valign="top"><a id="a41178cfd39f9d7a91d2c95b796ca0085"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1ZlibStream.html#a41178cfd39f9d7a91d2c95b796ca0085">close</a> () override</td></tr>
+<tr class="memdesc:a41178cfd39f9d7a91d2c95b796ca0085"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭流 <br /></td></tr>
+<tr class="separator:a41178cfd39f9d7a91d2c95b796ca0085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884ac6b6a1eb6b56c38d4f1ba73ec569"><td class="memItemLeft" align="right" valign="top"><a id="a884ac6b6a1eb6b56c38d4f1ba73ec569"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> ()</td></tr>
+<tr class="separator:a884ac6b6a1eb6b56c38d4f1ba73ec569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7044147739e37e45d8e2ee9251edfb38"><td class="memItemLeft" align="right" valign="top"><a id="a7044147739e37e45d8e2ee9251edfb38"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFree</b> () const</td></tr>
+<tr class="separator:a7044147739e37e45d8e2ee9251edfb38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6820f4ebf13c70dd702e06e82d70886"><td class="memItemLeft" align="right" valign="top"><a id="ad6820f4ebf13c70dd702e06e82d70886"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFree</b> (bool v)</td></tr>
+<tr class="separator:ad6820f4ebf13c70dd702e06e82d70886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0470a700ab6e8450233f6fad27684602"><td class="memItemLeft" align="right" valign="top"><a id="a0470a700ab6e8450233f6fad27684602"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEncode</b> () const</td></tr>
+<tr class="separator:a0470a700ab6e8450233f6fad27684602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956106010ee5c734c1f6f4d02320290e"><td class="memItemLeft" align="right" valign="top"><a id="a956106010ee5c734c1f6f4d02320290e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEndcode</b> (bool v)</td></tr>
+<tr class="separator:a956106010ee5c734c1f6f4d02320290e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc28ca1da37b4c08965e9a4e84184c00"><td class="memItemLeft" align="right" valign="top"><a id="afc28ca1da37b4c08965e9a4e84184c00"></a>
+std::vector&lt; iovec &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getBuffers</b> ()</td></tr>
+<tr class="separator:afc28ca1da37b4c08965e9a4e84184c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27209598d5a04cb29b316dfd835bf31"><td class="memItemLeft" align="right" valign="top"><a id="ab27209598d5a04cb29b316dfd835bf31"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getResult</b> () const</td></tr>
+<tr class="separator:ab27209598d5a04cb29b316dfd835bf31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3fff56740ab35ef574ab7b7c3bfbc8"><td class="memItemLeft" align="right" valign="top"><a id="abd3fff56740ab35ef574ab7b7c3bfbc8"></a>
+sylar::ByteArray::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getByteArray</b> ()</td></tr>
+<tr class="separator:abd3fff56740ab35ef574ab7b7c3bfbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="a67520125cad49bb3fb4835a36ec56762"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">~Stream</a> ()</td></tr>
+<tr class="memdesc:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a> (void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">更多...</a><br /></td></tr>
+<tr class="separator:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">readFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">更多...</a><br /></td></tr>
+<tr class="separator:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a> (const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">更多...</a><br /></td></tr>
+<tr class="separator:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">writeFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">更多...</a><br /></td></tr>
+<tr class="separator:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0da09b9ccd831c4a7b4b86159269e192"><td class="memItemLeft" align="right" valign="top"><a id="a0da09b9ccd831c4a7b4b86159269e192"></a>
+static ZlibStream::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>CreateGzip</b> (bool encode, uint32_t buff_size=4096)</td></tr>
+<tr class="separator:a0da09b9ccd831c4a7b4b86159269e192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9deee258b06c121f23fe157e719a48"><td class="memItemLeft" align="right" valign="top"><a id="a7e9deee258b06c121f23fe157e719a48"></a>
+static ZlibStream::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>CreateZlib</b> (bool encode, uint32_t buff_size=4096)</td></tr>
+<tr class="separator:a7e9deee258b06c121f23fe157e719a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0618e5eaeb9fc90e9ff25df2fb990ba"><td class="memItemLeft" align="right" valign="top"><a id="ab0618e5eaeb9fc90e9ff25df2fb990ba"></a>
+static ZlibStream::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>CreateDeflate</b> (bool encode, uint32_t buff_size=4096)</td></tr>
+<tr class="separator:ab0618e5eaeb9fc90e9ff25df2fb990ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba1df62e5ccec050923d8d6e5b7fe80"><td class="memItemLeft" align="right" valign="top"><a id="acba1df62e5ccec050923d8d6e5b7fe80"></a>
+static ZlibStream::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (bool encode, uint32_t buff_size=4096, Type type=DEFLATE, int level=DEFAULT_COMPRESSION, int window_bits=15, int memlevel=8, Strategy strategy=DEFAULT)</td></tr>
+<tr class="separator:acba1df62e5ccec050923d8d6e5b7fe80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4d704a5c7ef1818e2d813b5a2f3e74d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d704a5c7ef1818e2d813b5a2f3e74d9">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sylar::ZlibStream::read </td>
+          <td>(</td>
+          <td class="paramtype">ByteArray::ptr&#160;</td>
+          <td class="paramname"><em>ba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ba</td><td>接收数据的ByteArray </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>接收数据的内存大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;0</td><td>返回接收到的数据的实际大小 </td></tr>
+    <tr><td class="paramname">=0</td><td>被关闭 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>出现流错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classsylar_1_1Stream.html#a3eff9c660adf8339885e91f06daddae1">sylar::Stream</a>.</p>
+
+</div>
+</div>
+<a id="a49d8f30f74be95410ffbdb372789d014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d8f30f74be95410ffbdb372789d014">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sylar::ZlibStream::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>接收数据的内存 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>接收数据的内存大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;0</td><td>返回接收到的数据的实际大小 </td></tr>
+    <tr><td class="paramname">=0</td><td>被关闭 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>出现流错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classsylar_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">sylar::Stream</a>.</p>
+
+</div>
+</div>
+<a id="a74e042190e2c84f1f66b5c845613446d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e042190e2c84f1f66b5c845613446d">&#9670;&nbsp;</a></span>write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sylar::ZlibStream::write </td>
+          <td>(</td>
+          <td class="paramtype">ByteArray::ptr&#160;</td>
+          <td class="paramname"><em>ba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>写数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ba</td><td>写数据的ByteArray </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>写入数据的内存大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;0</td><td>返回写入到的数据的实际大小 </td></tr>
+    <tr><td class="paramname">=0</td><td>被关闭 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>出现流错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classsylar_1_1Stream.html#a3fb968a29622bcf27913b20633895a97">sylar::Stream</a>.</p>
+
+</div>
+</div>
+<a id="a73933d8cce7af3657d7b4a3903451920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73933d8cce7af3657d7b4a3903451920">&#9670;&nbsp;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sylar::ZlibStream::write </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>写数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>写数据的内存 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>写入数据的内存大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">&gt;0</td><td>返回写入到的数据的实际大小 </td></tr>
+    <tr><td class="paramname">=0</td><td>被关闭 </td></tr>
+    <tr><td class="paramname">&lt;0</td><td>出现流错误 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classsylar_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">sylar::Stream</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/streams/<a class="el" href="zlib__stream_8h_source.html">zlib_stream.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

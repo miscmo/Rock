@@ -1,0 +1,15 @@
+digraph "sylar/http" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_85140288eee94f6c1dbd59c496fa876b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="sylar" fontname="Helvetica", fontsize="10", URL="dir_85140288eee94f6c1dbd59c496fa876b.html"]
+  subgraph clusterdir_5fdfbf8b0b8272587873e17fac938b86 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5fdfbf8b0b8272587873e17fac938b86.html"];
+    dir_5fdfbf8b0b8272587873e17fac938b86 [shape=plaintext label="http"];
+    dir_f02dc2ae36f537734332bb85beb1c493 [shape=box label="servlets" color="black" fillcolor="white" style="filled" URL="dir_f02dc2ae36f537734332bb85beb1c493.html"];
+  }
+  }
+  dir_5fecf1443bd42aaf252383bf16ba653f [shape=box label="streams" URL="dir_5fecf1443bd42aaf252383bf16ba653f.html"];
+  dir_5fdfbf8b0b8272587873e17fac938b86->dir_5fecf1443bd42aaf252383bf16ba653f [headlabel="2", labeldistance=1.5 headhref="dir_000005_000009.html"];
+}

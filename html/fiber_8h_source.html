@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/fiber.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fiber.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fiber_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_FIBER_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_FIBER_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ucontext.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>Scheduler;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1Fiber.html">Fiber</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Fiber&gt; {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsylar_1_1Scheduler.html">Scheduler</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Fiber&gt; ptr;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">   31</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">State</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3">   33</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3">INIT</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8">   35</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8">HOLD</a>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d">   37</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d">EXEC</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092">   39</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092">TERM</a>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049">   41</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049">READY</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13">   43</a></span>&#160;        <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13">EXCEPT</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classsylar_1_1Fiber.html">Fiber</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="classsylar_1_1Fiber.html">Fiber</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; cb, <span class="keywordtype">size_t</span> stacksize = 0, <span class="keywordtype">bool</span> use_caller = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classsylar_1_1Fiber.html#a2e9a01682c9290b34a103b4f41a7e0d6">~Fiber</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a765bbbf572ffefa9719ef6927472ab89">reset</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; cb);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a4a1f61001070d3e14c274e98fd68e6d8">swapIn</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a43585923f39c2230fb529229a6eb6d3b">swapOut</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a0e2abad4fd10a7f9f6e16fd51d044285">call</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#aa9f42925ec8f66eafb481ae453df946b">back</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a357f571db2dc90eb942e4e7fef62d251">  101</a></span>&#160;    uint64_t <a class="code" href="classsylar_1_1Fiber.html#a357f571db2dc90eb942e4e7fef62d251">getId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_id;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89">  106</a></span>&#160;    <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">State</a> <a class="code" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89">getState</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_state;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a235383a38d2877800fb3d65ffae729d0">SetThis</a>(<a class="code" href="classsylar_1_1Fiber.html">Fiber</a>* f);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">static</span> Fiber::ptr <a class="code" href="classsylar_1_1Fiber.html#ac615a161a131e8867fae7b0657d97860">GetThis</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a21eedd398e89f4cec66605e3f3c3f1b0">YieldToReady</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a09b69821a292ae0b2ac1e1fa3f642010">YieldToHold</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">static</span> uint64_t <a class="code" href="classsylar_1_1Fiber.html#a17cba1b5a9976f872378bcbdca5300e7">TotalFibers</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a2b5c4e4a8906affd34d1a8a917c99186">MainFunc</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Fiber.html#a6b7c87ecf7772fe5baff562357edb764">CallerMainFunc</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">static</span> uint64_t <a class="code" href="classsylar_1_1Fiber.html#aa2856295355a48a29e02726c7f80cef3">GetFiberId</a>();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    uint64_t m_id = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    uint32_t m_stacksize = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">State</a> m_state = <a class="code" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3">INIT</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    ucontext_t m_ctx;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">void</span>* m_stack = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::function&lt;void()&gt; m_cb;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;};</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d">sylar::Fiber::EXEC</a></div><div class="ttdeci">@ EXEC</div><div class="ttdoc">执行中状态</div><div class="ttdef"><b>Definition:</b> fiber.h:37</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a765bbbf572ffefa9719ef6927472ab89"><div class="ttname"><a href="classsylar_1_1Fiber.html#a765bbbf572ffefa9719ef6927472ab89">sylar::Fiber::reset</a></div><div class="ttdeci">void reset(std::function&lt; void()&gt; cb)</div><div class="ttdoc">重置协程执行函数,并设置状态</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a357f571db2dc90eb942e4e7fef62d251"><div class="ttname"><a href="classsylar_1_1Fiber.html#a357f571db2dc90eb942e4e7fef62d251">sylar::Fiber::getId</a></div><div class="ttdeci">uint64_t getId() const</div><div class="ttdoc">返回协程id</div><div class="ttdef"><b>Definition:</b> fiber.h:101</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a43585923f39c2230fb529229a6eb6d3b"><div class="ttname"><a href="classsylar_1_1Fiber.html#a43585923f39c2230fb529229a6eb6d3b">sylar::Fiber::swapOut</a></div><div class="ttdeci">void swapOut()</div><div class="ttdoc">将当前协程切换到后台</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a0e2abad4fd10a7f9f6e16fd51d044285"><div class="ttname"><a href="classsylar_1_1Fiber.html#a0e2abad4fd10a7f9f6e16fd51d044285">sylar::Fiber::call</a></div><div class="ttdeci">void call()</div><div class="ttdoc">将当前线程切换到执行状态</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a6b7c87ecf7772fe5baff562357edb764"><div class="ttname"><a href="classsylar_1_1Fiber.html#a6b7c87ecf7772fe5baff562357edb764">sylar::Fiber::CallerMainFunc</a></div><div class="ttdeci">static void CallerMainFunc()</div><div class="ttdoc">协程执行函数</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13">sylar::Fiber::EXCEPT</a></div><div class="ttdeci">@ EXCEPT</div><div class="ttdoc">异常状态</div><div class="ttdef"><b>Definition:</b> fiber.h:43</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a235383a38d2877800fb3d65ffae729d0"><div class="ttname"><a href="classsylar_1_1Fiber.html#a235383a38d2877800fb3d65ffae729d0">sylar::Fiber::SetThis</a></div><div class="ttdeci">static void SetThis(Fiber *f)</div><div class="ttdoc">设置当前线程的运行协程</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_ac615a161a131e8867fae7b0657d97860"><div class="ttname"><a href="classsylar_1_1Fiber.html#ac615a161a131e8867fae7b0657d97860">sylar::Fiber::GetThis</a></div><div class="ttdeci">static Fiber::ptr GetThis()</div><div class="ttdoc">返回当前所在的协程</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a09b69821a292ae0b2ac1e1fa3f642010"><div class="ttname"><a href="classsylar_1_1Fiber.html#a09b69821a292ae0b2ac1e1fa3f642010">sylar::Fiber::YieldToHold</a></div><div class="ttdeci">static void YieldToHold()</div><div class="ttdoc">将当前协程切换到后台,并设置为HOLD状态</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3">sylar::Fiber::INIT</a></div><div class="ttdeci">@ INIT</div><div class="ttdoc">初始化状态</div><div class="ttdef"><b>Definition:</b> fiber.h:33</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_aa9f42925ec8f66eafb481ae453df946b"><div class="ttname"><a href="classsylar_1_1Fiber.html#aa9f42925ec8f66eafb481ae453df946b">sylar::Fiber::back</a></div><div class="ttdeci">void back()</div><div class="ttdoc">将当前线程切换到后台</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049">sylar::Fiber::READY</a></div><div class="ttdeci">@ READY</div><div class="ttdoc">可执行状态</div><div class="ttdef"><b>Definition:</b> fiber.h:41</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a21eedd398e89f4cec66605e3f3c3f1b0"><div class="ttname"><a href="classsylar_1_1Fiber.html#a21eedd398e89f4cec66605e3f3c3f1b0">sylar::Fiber::YieldToReady</a></div><div class="ttdeci">static void YieldToReady()</div><div class="ttdoc">将当前协程切换到后台,并设置为READY状态</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092">sylar::Fiber::TERM</a></div><div class="ttdeci">@ TERM</div><div class="ttdoc">结束状态</div><div class="ttdef"><b>Definition:</b> fiber.h:39</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a17cba1b5a9976f872378bcbdca5300e7"><div class="ttname"><a href="classsylar_1_1Fiber.html#a17cba1b5a9976f872378bcbdca5300e7">sylar::Fiber::TotalFibers</a></div><div class="ttdeci">static uint64_t TotalFibers()</div><div class="ttdoc">返回当前协程的总数量</div></div>
+<div class="ttc" id="aclasssylar_1_1Scheduler_html"><div class="ttname"><a href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></div><div class="ttdoc">协程调度器</div><div class="ttdef"><b>Definition:</b> scheduler.h:26</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a8b2f1e5ba3a5b94fffa55aa601a22e89"><div class="ttname"><a href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89">sylar::Fiber::getState</a></div><div class="ttdeci">State getState() const</div><div class="ttdoc">返回协程状态</div><div class="ttdef"><b>Definition:</b> fiber.h:106</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">sylar::Fiber::State</a></div><div class="ttdeci">State</div><div class="ttdoc">协程状态</div><div class="ttdef"><b>Definition:</b> fiber.h:31</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_aa2856295355a48a29e02726c7f80cef3"><div class="ttname"><a href="classsylar_1_1Fiber.html#aa2856295355a48a29e02726c7f80cef3">sylar::Fiber::GetFiberId</a></div><div class="ttdeci">static uint64_t GetFiberId()</div><div class="ttdoc">获取当前协程的id</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4a1f61001070d3e14c274e98fd68e6d8"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4a1f61001070d3e14c274e98fd68e6d8">sylar::Fiber::swapIn</a></div><div class="ttdeci">void swapIn()</div><div class="ttdoc">将当前协程切换到运行状态</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html"><div class="ttname"><a href="classsylar_1_1Fiber.html">sylar::Fiber</a></div><div class="ttdoc">协程类</div><div class="ttdef"><b>Definition:</b> fiber.h:23</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a2e9a01682c9290b34a103b4f41a7e0d6"><div class="ttname"><a href="classsylar_1_1Fiber.html#a2e9a01682c9290b34a103b4f41a7e0d6">sylar::Fiber::~Fiber</a></div><div class="ttdeci">~Fiber()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8"><div class="ttname"><a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8">sylar::Fiber::HOLD</a></div><div class="ttdeci">@ HOLD</div><div class="ttdoc">暂停状态</div><div class="ttdef"><b>Definition:</b> fiber.h:35</div></div>
+<div class="ttc" id="aclasssylar_1_1Fiber_html_a2b5c4e4a8906affd34d1a8a917c99186"><div class="ttname"><a href="classsylar_1_1Fiber.html#a2b5c4e4a8906affd34d1a8a917c99186">sylar::Fiber::MainFunc</a></div><div class="ttdeci">static void MainFunc()</div><div class="ttdoc">协程执行函数</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

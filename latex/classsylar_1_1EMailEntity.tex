@@ -1,0 +1,41 @@
+\doxysection{sylar\+::E\+Mail\+Entity类 参考}
+\label{classsylar_1_1EMailEntity}\index{sylar::EMailEntity@{sylar::EMailEntity}}
+
+
+sylar\+::E\+Mail\+Entity 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a1e68a2a3aa8a300b334f1f786687f686}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ E\+Mail\+Entity} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a076572feb6bcc10c3b27b7c7c5ca94a4}} 
+void {\bfseries add\+Header} (const std\+::string \&key, const std\+::string \&val)
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a14a58ff2a9fa7a0d9685520560b98ddc}} 
+std\+::string {\bfseries get\+Header} (const std\+::string \&key, const std\+::string \&def=\char`\"{}\char`\"{})
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_ad0bbc378677bdc6acd650bdc193ef048}} 
+const std\+::string \& {\bfseries get\+Content} () const
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a956571a175b7b4ff3d92f546d780f875}} 
+void {\bfseries set\+Content} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a54974ec20e98b668c1e991f424e9ce59}} 
+std\+::string {\bfseries to\+String} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1EMailEntity_a0d464024c1eb2bc054743b0bd1ff9e82}} 
+static E\+Mail\+Entity\+::ptr {\bfseries Create\+Attach} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/email/email.\+h\end{DoxyCompactItemize}

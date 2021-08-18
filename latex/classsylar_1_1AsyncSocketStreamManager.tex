@@ -1,0 +1,53 @@
+\doxysection{sylar\+::Async\+Socket\+Stream\+Manager类 参考}
+\label{classsylar_1_1AsyncSocketStreamManager}\index{sylar::AsyncSocketStreamManager@{sylar::AsyncSocketStreamManager}}
+
+
+sylar\+::Async\+Socket\+Stream\+Manager 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_aab50b5774a7d6a1c53d9a68b7e5fd4e2}} 
+typedef \textbf{ sylar\+::\+R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a2c36a84b7160bff8f65a8cd62a073bcb}} 
+typedef Async\+Socket\+Stream\+::connect\+\_\+callback {\bfseries connect\+\_\+callback}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_ae4c2dbbf17a0358ce7950f53927bf05c}} 
+typedef Async\+Socket\+Stream\+::disconnect\+\_\+callback {\bfseries disconnect\+\_\+callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_acacff08474153ab3f94290399670d786}} 
+void {\bfseries add} (Async\+Socket\+Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a20934d6a06374d96ed46780fa70baa69}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a9b6974bd18cd238e79ac4d977aa41374}} 
+void {\bfseries set\+Connection} (const std\+::vector$<$ Async\+Socket\+Stream\+::ptr $>$ \&streams)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a724b531729e81de46255d1027fcaec85}} 
+Async\+Socket\+Stream\+::ptr {\bfseries get} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a6fa0146fca9aff53e9e7acb590e5b0a4}} 
+{\footnotesize template$<$class T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get\+As} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_af26700aef70f5dd9c01de842305a08ad}} 
+connect\+\_\+callback {\bfseries get\+Connect\+Cb} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a288f5fafe806163155912f8ffdb0c08d}} 
+disconnect\+\_\+callback {\bfseries get\+Disconnect\+Cb} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a79a92d7f90f6ac1b725b7f53abc3530e}} 
+void {\bfseries set\+Connect\+Cb} (connect\+\_\+callback v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStreamManager_a900c0d724bf060b9b990a892e07ab4cb}} 
+void {\bfseries set\+Disconnect\+Cb} (disconnect\+\_\+callback v)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/streams/async\+\_\+socket\+\_\+stream.\+h\end{DoxyCompactItemize}

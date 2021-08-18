@@ -1,0 +1,40 @@
+\doxysection{sylar\+::Rock\+S\+D\+Load\+Balance类 参考}
+\label{classsylar_1_1RockSDLoadBalance}\index{sylar::RockSDLoadBalance@{sylar::RockSDLoadBalance}}
+
+
+类 sylar\+::Rock\+S\+D\+Load\+Balance 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Rock\+S\+D\+Load\+Balance 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_a2a16ddd8c235b56ee6fa5f9e68974ceb}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Rock\+S\+D\+Load\+Balance} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_aef40babc5767855972917017aaa172bf}} 
+{\bfseries Rock\+S\+D\+Load\+Balance} (I\+Service\+Discovery\+::ptr sd)
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_a765432fe819a0caec207ac98114cc038}} 
+virtual void {\bfseries start} ()
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_a3fb823a2760a45e00fe90801eb3e14e9}} 
+virtual void {\bfseries stop} ()
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_a7225af9214e73cff2d068486327f056a}} 
+void {\bfseries start} (const std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $>$ \&confs)
+\item 
+\mbox{\label{classsylar_1_1RockSDLoadBalance_a02c442c8e221ddc450b385f34fb835f1}} 
+Rock\+Result\+::ptr {\bfseries request} (const std\+::string \&domain, const std\+::string \&service, Rock\+Request\+::ptr req, uint32\+\_\+t timeout\+\_\+ms, uint64\+\_\+t idx=-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/rock/rock\+\_\+stream.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/bytearray.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bytearray.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bytearray_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_BYTEARRAY_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_BYTEARRAY_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsylar_1_1ByteArray.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ByteArray.html">ByteArray</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;ByteArray&gt; ptr;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structsylar_1_1ByteArray_1_1Node.html">   31</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structsylar_1_1ByteArray_1_1Node.html">Node</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#a2cacad3e4eefed15a3046418c13e28d4">Node</a>(<span class="keywordtype">size_t</span> s);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#a2cacad3e4eefed15a3046418c13e28d4">Node</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#a510df97d00384920bb092d99ad90facb">~Node</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structsylar_1_1ByteArray_1_1Node.html#a9d9dc610d64e07e210ea553d51e2c8da">   49</a></span>&#160;        <span class="keywordtype">char</span>* <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#a9d9dc610d64e07e210ea553d51e2c8da">ptr</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structsylar_1_1ByteArray_1_1Node.html#afc2b501336ffef7d462d8bb75803123a">   51</a></span>&#160;        <a class="code" href="structsylar_1_1ByteArray_1_1Node.html">Node</a>* <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#afc2b501336ffef7d462d8bb75803123a">next</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structsylar_1_1ByteArray_1_1Node.html#a7ec6b6a8254aa2c9b3302a4f43d2ae23">   53</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="structsylar_1_1ByteArray_1_1Node.html#a7ec6b6a8254aa2c9b3302a4f43d2ae23">size</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classsylar_1_1ByteArray.html#a6e9f2eff57c380de87fce2d77a476b55">ByteArray</a>(<span class="keywordtype">size_t</span> base_size = 4096);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classsylar_1_1ByteArray.html#a1ec2060607924eb789ebd175b26f3434">~ByteArray</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a268f969e8988fe82d3bd0b595ab8dcf6">writeFint8</a>  (int8_t value);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a6b06ddcdf3f9eb2784dd40bb1351564e">writeFuint8</a> (uint8_t value);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a6b0631d8278da20c9b69e65b03a87715">writeFint16</a> (int16_t value);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a24aa3be1bca40a0d0af6696a554ba342">writeFuint16</a>(uint16_t value);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a7b6d812d210b995e2846ce60afc38646">writeFint32</a> (int32_t value);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#ab36f106f0c14457e89913448adce9821">writeFuint32</a>(uint32_t value);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aa419a41d256ef99ecc93be3d26dee300">writeFint64</a> (int64_t value);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a45b7a0e3ffd7654df9125b5d7014ff31">writeFuint64</a>(uint64_t value);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a24fc6ecee446c56366c5ac2a1cf441ee">writeInt32</a>  (int32_t value);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aacc7d361418de9bffd69a2c4bbf02f7d">writeUint32</a> (uint32_t value);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a735fc95adfac4baf583da29d6ee8d39e">writeInt64</a>  (int64_t value);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aea9565d96c17bb40b36902cb2910549f">writeUint64</a> (uint64_t value);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a7be73c311bfd710297190453d534372b">writeFloat</a>  (<span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#acf2456f48a48546166822553f348c4e4">writeDouble</a> (<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a8ade2a532e339bec93cb01e143babc44">writeStringF16</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aa03d4679a4f1930b3da600ab65fbb03e">writeStringF32</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aa43458c06759a2d798a083b82483b81f">writeStringF64</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a2155ef5ae7bbf254d375f5d15789a5f6">writeStringVint</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#ae72ff109a6b3c947acd35d8bd308492a">writeStringWithoutLength</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    int8_t   <a class="code" href="classsylar_1_1ByteArray.html#a9befc74454614840e5889744c87f5346">readFint8</a>();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    uint8_t  <a class="code" href="classsylar_1_1ByteArray.html#aa68fb27eef571c42e4dabdc1331a59d6">readFuint8</a>();</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    int16_t  <a class="code" href="classsylar_1_1ByteArray.html#ad3aa462204995a1cb187aaf159a2f7c1">readFint16</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    uint16_t <a class="code" href="classsylar_1_1ByteArray.html#a803580ac0dc43e428be8a629b5e01307">readFuint16</a>();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    int32_t  <a class="code" href="classsylar_1_1ByteArray.html#ad01577de6b457b3347774d5de522665d">readFint32</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    uint32_t <a class="code" href="classsylar_1_1ByteArray.html#a65bb6d59d13e234a2ad2e786482f1ee1">readFuint32</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    int64_t  <a class="code" href="classsylar_1_1ByteArray.html#aa5ec3be135f05933d941da9880446465">readFint64</a>();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    uint64_t <a class="code" href="classsylar_1_1ByteArray.html#aa9652f213ed9f4ffd1965fbdc444a9d9">readFuint64</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    int32_t  <a class="code" href="classsylar_1_1ByteArray.html#a030c9f1b23065ca5f9351e21a0bdff78">readInt32</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    uint32_t <a class="code" href="classsylar_1_1ByteArray.html#a7dc598ec63e41422c62cc28fc06eeee5">readUint32</a>();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    int64_t  <a class="code" href="classsylar_1_1ByteArray.html#aad44ea46e4077a1b8cc137602361bdb4">readInt64</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    uint64_t <a class="code" href="classsylar_1_1ByteArray.html#a7c45e91cbb1761b66ca9d9f6a788ac30">readUint64</a>();</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">float</span>    <a class="code" href="classsylar_1_1ByteArray.html#a98b32f743e684a4fa900a17dabae3929">readFloat</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">double</span>   <a class="code" href="classsylar_1_1ByteArray.html#a85af590a2c12c7fbafad23d3407cf439">readDouble</a>();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#a8c44f61faf3b192d39ef4d4331902d14">readStringF16</a>();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#ac0fc1540691b295d4ebb8088230b74f7">readStringF32</a>();</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#a6a79587d66588fd3f009abbb5fc58df5">readStringF64</a>();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#a29b314000d17f5727b811ddce8abacbc">readStringVint</a>();</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a07b992fccef82f943b9febdf7278bb10">clear</a>();</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#aa02ff9c7ab29ee312e3ad8043acf28dc">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buf, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#add0a86b9e7ac29fe11e9a9efc3f25699">read</a>(<span class="keywordtype">void</span>* buf, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#add0a86b9e7ac29fe11e9a9efc3f25699">read</a>(<span class="keywordtype">void</span>* buf, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="classsylar_1_1ByteArray.html#aeff49fd6b1de6290aae8f415240addfe">  375</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classsylar_1_1ByteArray.html#aeff49fd6b1de6290aae8f415240addfe">getPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_position;}</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a07785726c95061127c7b294ab528f275">setPosition</a>(<span class="keywordtype">size_t</span> v);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1ByteArray.html#aecf85d4a29e7f0e06b2093539d91a2b6">writeToFile</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1ByteArray.html#a0b369c280a2556bd1548421279b279ac">readFromFile</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="classsylar_1_1ByteArray.html#a1cabe193f62faf4f73477e20b59531ea">  399</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classsylar_1_1ByteArray.html#a1cabe193f62faf4f73477e20b59531ea">getBaseSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_baseSize;}</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno"><a class="line" href="classsylar_1_1ByteArray.html#a763d792f91cfd84072692ac0cdef8efc">  404</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classsylar_1_1ByteArray.html#a763d792f91cfd84072692ac0cdef8efc">getReadSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_size - m_position;}</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1ByteArray.html#a72909157855595c883ac325a96289f28">isLittleEndian</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1ByteArray.html#a2324a31cd48c64daae5303e3f1489169">setIsLittleEndian</a>(<span class="keywordtype">bool</span> val);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#a60b2558f247c672a7dd347011cc72125">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    std::string <a class="code" href="classsylar_1_1ByteArray.html#a9de014ee29513f5f69661ba42580144c">toHexString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    uint64_t <a class="code" href="classsylar_1_1ByteArray.html#a7773dd5bfed1291c4ee9ea46f3af810a">getReadBuffers</a>(std::vector&lt;iovec&gt;&amp; buffers, uint64_t len = ~0ull) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    uint64_t <a class="code" href="classsylar_1_1ByteArray.html#a7773dd5bfed1291c4ee9ea46f3af810a">getReadBuffers</a>(std::vector&lt;iovec&gt;&amp; buffers, uint64_t len, uint64_t position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    uint64_t <a class="code" href="classsylar_1_1ByteArray.html#ac495e047c897835df11ff5076c5b7784">getWriteBuffers</a>(std::vector&lt;iovec&gt;&amp; buffers, uint64_t len);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno"><a class="line" href="classsylar_1_1ByteArray.html#a8a40496dc6ca7003fe38b550040e83a1">  455</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classsylar_1_1ByteArray.html#a8a40496dc6ca7003fe38b550040e83a1">getSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_size;}</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    </div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">void</span> addCapacity(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordtype">size_t</span> getCapacity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_capacity - m_position;}</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">size_t</span> m_baseSize;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordtype">size_t</span> m_position;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordtype">size_t</span> m_capacity;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    <span class="keywordtype">size_t</span> m_size;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    int8_t m_endian;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    Node* m_root;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    Node* m_cur;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;};</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;}</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160; </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a030c9f1b23065ca5f9351e21a0bdff78"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a030c9f1b23065ca5f9351e21a0bdff78">sylar::ByteArray::readInt32</a></div><div class="ttdeci">int32_t readInt32()</div><div class="ttdoc">读取有符号Varint32类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ac0fc1540691b295d4ebb8088230b74f7"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ac0fc1540691b295d4ebb8088230b74f7">sylar::ByteArray::readStringF32</a></div><div class="ttdeci">std::string readStringF32()</div><div class="ttdoc">读取std::string类型的数据,用uint32_t作为长度</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a8ade2a532e339bec93cb01e143babc44"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a8ade2a532e339bec93cb01e143babc44">sylar::ByteArray::writeStringF16</a></div><div class="ttdeci">void writeStringF16(const std::string &amp;value)</div><div class="ttdoc">写入std::string类型的数据,用uint16_t作为长度类型</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a763d792f91cfd84072692ac0cdef8efc"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a763d792f91cfd84072692ac0cdef8efc">sylar::ByteArray::getReadSize</a></div><div class="ttdeci">size_t getReadSize() const</div><div class="ttdoc">返回可读取数据大小</div><div class="ttdef"><b>Definition:</b> bytearray.h:404</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a07b992fccef82f943b9febdf7278bb10"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a07b992fccef82f943b9febdf7278bb10">sylar::ByteArray::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清空ByteArray</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a6b0631d8278da20c9b69e65b03a87715"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a6b0631d8278da20c9b69e65b03a87715">sylar::ByteArray::writeFint16</a></div><div class="ttdeci">void writeFint16(int16_t value)</div><div class="ttdoc">写入固定长度int16_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a803580ac0dc43e428be8a629b5e01307"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a803580ac0dc43e428be8a629b5e01307">sylar::ByteArray::readFuint16</a></div><div class="ttdeci">uint16_t readFuint16()</div><div class="ttdoc">读取uint16_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aea9565d96c17bb40b36902cb2910549f"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aea9565d96c17bb40b36902cb2910549f">sylar::ByteArray::writeUint64</a></div><div class="ttdeci">void writeUint64(uint64_t value)</div><div class="ttdoc">写入无符号Varint64类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a45b7a0e3ffd7654df9125b5d7014ff31"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a45b7a0e3ffd7654df9125b5d7014ff31">sylar::ByteArray::writeFuint64</a></div><div class="ttdeci">void writeFuint64(uint64_t value)</div><div class="ttdoc">写入固定长度uint64_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa68fb27eef571c42e4dabdc1331a59d6"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa68fb27eef571c42e4dabdc1331a59d6">sylar::ByteArray::readFuint8</a></div><div class="ttdeci">uint8_t readFuint8()</div><div class="ttdoc">读取uint8_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a8a40496dc6ca7003fe38b550040e83a1"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a8a40496dc6ca7003fe38b550040e83a1">sylar::ByteArray::getSize</a></div><div class="ttdeci">size_t getSize() const</div><div class="ttdoc">返回数据的长度</div><div class="ttdef"><b>Definition:</b> bytearray.h:455</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html_a510df97d00384920bb092d99ad90facb"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html#a510df97d00384920bb092d99ad90facb">sylar::ByteArray::Node::~Node</a></div><div class="ttdeci">~Node()</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a1cabe193f62faf4f73477e20b59531ea"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a1cabe193f62faf4f73477e20b59531ea">sylar::ByteArray::getBaseSize</a></div><div class="ttdeci">size_t getBaseSize() const</div><div class="ttdoc">返回内存块的大小</div><div class="ttdef"><b>Definition:</b> bytearray.h:399</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a72909157855595c883ac325a96289f28"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a72909157855595c883ac325a96289f28">sylar::ByteArray::isLittleEndian</a></div><div class="ttdeci">bool isLittleEndian() const</div><div class="ttdoc">是否是小端</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a735fc95adfac4baf583da29d6ee8d39e"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a735fc95adfac4baf583da29d6ee8d39e">sylar::ByteArray::writeInt64</a></div><div class="ttdeci">void writeInt64(int64_t value)</div><div class="ttdoc">写入有符号Varint64类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ad3aa462204995a1cb187aaf159a2f7c1"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ad3aa462204995a1cb187aaf159a2f7c1">sylar::ByteArray::readFint16</a></div><div class="ttdeci">int16_t readFint16()</div><div class="ttdoc">读取int16_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa9652f213ed9f4ffd1965fbdc444a9d9"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa9652f213ed9f4ffd1965fbdc444a9d9">sylar::ByteArray::readFuint64</a></div><div class="ttdeci">uint64_t readFuint64()</div><div class="ttdoc">读取uint64_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a9befc74454614840e5889744c87f5346"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a9befc74454614840e5889744c87f5346">sylar::ByteArray::readFint8</a></div><div class="ttdeci">int8_t readFint8()</div><div class="ttdoc">读取int8_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aecf85d4a29e7f0e06b2093539d91a2b6"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aecf85d4a29e7f0e06b2093539d91a2b6">sylar::ByteArray::writeToFile</a></div><div class="ttdeci">bool writeToFile(const std::string &amp;name) const</div><div class="ttdoc">把ByteArray的数据写入到文件中</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a29b314000d17f5727b811ddce8abacbc"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a29b314000d17f5727b811ddce8abacbc">sylar::ByteArray::readStringVint</a></div><div class="ttdeci">std::string readStringVint()</div><div class="ttdoc">读取std::string类型的数据,用无符号Varint64作为长度</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa03d4679a4f1930b3da600ab65fbb03e"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa03d4679a4f1930b3da600ab65fbb03e">sylar::ByteArray::writeStringF32</a></div><div class="ttdeci">void writeStringF32(const std::string &amp;value)</div><div class="ttdoc">写入std::string类型的数据,用uint32_t作为长度类型</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a2155ef5ae7bbf254d375f5d15789a5f6"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a2155ef5ae7bbf254d375f5d15789a5f6">sylar::ByteArray::writeStringVint</a></div><div class="ttdeci">void writeStringVint(const std::string &amp;value)</div><div class="ttdoc">写入std::string类型的数据,用无符号Varint64作为长度类型</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a98b32f743e684a4fa900a17dabae3929"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a98b32f743e684a4fa900a17dabae3929">sylar::ByteArray::readFloat</a></div><div class="ttdeci">float readFloat()</div><div class="ttdoc">读取float类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html"><div class="ttname"><a href="classsylar_1_1ByteArray.html">sylar::ByteArray</a></div><div class="ttdoc">二进制数组,提供基础类型的序列化,反序列化功能</div><div class="ttdef"><b>Definition:</b> bytearray.h:24</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa43458c06759a2d798a083b82483b81f"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa43458c06759a2d798a083b82483b81f">sylar::ByteArray::writeStringF64</a></div><div class="ttdeci">void writeStringF64(const std::string &amp;value)</div><div class="ttdoc">写入std::string类型的数据,用uint64_t作为长度类型</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a7c45e91cbb1761b66ca9d9f6a788ac30"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a7c45e91cbb1761b66ca9d9f6a788ac30">sylar::ByteArray::readUint64</a></div><div class="ttdeci">uint64_t readUint64()</div><div class="ttdoc">读取无符号Varint64类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_acf2456f48a48546166822553f348c4e4"><div class="ttname"><a href="classsylar_1_1ByteArray.html#acf2456f48a48546166822553f348c4e4">sylar::ByteArray::writeDouble</a></div><div class="ttdeci">void writeDouble(double value)</div><div class="ttdoc">写入double类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a6a79587d66588fd3f009abbb5fc58df5"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a6a79587d66588fd3f009abbb5fc58df5">sylar::ByteArray::readStringF64</a></div><div class="ttdeci">std::string readStringF64()</div><div class="ttdoc">读取std::string类型的数据,用uint64_t作为长度</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa02ff9c7ab29ee312e3ad8043acf28dc"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa02ff9c7ab29ee312e3ad8043acf28dc">sylar::ByteArray::write</a></div><div class="ttdeci">void write(const void *buf, size_t size)</div><div class="ttdoc">写入size长度的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a8c44f61faf3b192d39ef4d4331902d14"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a8c44f61faf3b192d39ef4d4331902d14">sylar::ByteArray::readStringF16</a></div><div class="ttdeci">std::string readStringF16()</div><div class="ttdoc">读取std::string类型的数据,用uint16_t作为长度</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a268f969e8988fe82d3bd0b595ab8dcf6"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a268f969e8988fe82d3bd0b595ab8dcf6">sylar::ByteArray::writeFint8</a></div><div class="ttdeci">void writeFint8(int8_t value)</div><div class="ttdoc">写入固定长度int8_t类型的数据</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html_a2cacad3e4eefed15a3046418c13e28d4"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html#a2cacad3e4eefed15a3046418c13e28d4">sylar::ByteArray::Node::Node</a></div><div class="ttdeci">Node()</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a1ec2060607924eb789ebd175b26f3434"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a1ec2060607924eb789ebd175b26f3434">sylar::ByteArray::~ByteArray</a></div><div class="ttdeci">~ByteArray()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a60b2558f247c672a7dd347011cc72125"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a60b2558f247c672a7dd347011cc72125">sylar::ByteArray::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">将ByteArray里面的数据[m_position, m_size)转成std::string</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aad44ea46e4077a1b8cc137602361bdb4"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aad44ea46e4077a1b8cc137602361bdb4">sylar::ByteArray::readInt64</a></div><div class="ttdeci">int64_t readInt64()</div><div class="ttdoc">读取有符号Varint64类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a24aa3be1bca40a0d0af6696a554ba342"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a24aa3be1bca40a0d0af6696a554ba342">sylar::ByteArray::writeFuint16</a></div><div class="ttdeci">void writeFuint16(uint16_t value)</div><div class="ttdoc">写入固定长度uint16_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ae72ff109a6b3c947acd35d8bd308492a"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ae72ff109a6b3c947acd35d8bd308492a">sylar::ByteArray::writeStringWithoutLength</a></div><div class="ttdeci">void writeStringWithoutLength(const std::string &amp;value)</div><div class="ttdoc">写入std::string类型的数据,无长度</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ab36f106f0c14457e89913448adce9821"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ab36f106f0c14457e89913448adce9821">sylar::ByteArray::writeFuint32</a></div><div class="ttdeci">void writeFuint32(uint32_t value)</div><div class="ttdoc">写入固定长度uint32_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a7b6d812d210b995e2846ce60afc38646"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a7b6d812d210b995e2846ce60afc38646">sylar::ByteArray::writeFint32</a></div><div class="ttdeci">void writeFint32(int32_t value)</div><div class="ttdoc">写入固定长度int32_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa419a41d256ef99ecc93be3d26dee300"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa419a41d256ef99ecc93be3d26dee300">sylar::ByteArray::writeFint64</a></div><div class="ttdeci">void writeFint64(int64_t value)</div><div class="ttdoc">写入固定长度int64_t类型的数据(大端/小端)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a6b06ddcdf3f9eb2784dd40bb1351564e"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a6b06ddcdf3f9eb2784dd40bb1351564e">sylar::ByteArray::writeFuint8</a></div><div class="ttdeci">void writeFuint8(uint8_t value)</div><div class="ttdoc">写入固定长度uint8_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aacc7d361418de9bffd69a2c4bbf02f7d"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aacc7d361418de9bffd69a2c4bbf02f7d">sylar::ByteArray::writeUint32</a></div><div class="ttdeci">void writeUint32(uint32_t value)</div><div class="ttdoc">写入无符号Varint32类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_add0a86b9e7ac29fe11e9a9efc3f25699"><div class="ttname"><a href="classsylar_1_1ByteArray.html#add0a86b9e7ac29fe11e9a9efc3f25699">sylar::ByteArray::read</a></div><div class="ttdeci">void read(void *buf, size_t size)</div><div class="ttdoc">读取size长度的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a24fc6ecee446c56366c5ac2a1cf441ee"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a24fc6ecee446c56366c5ac2a1cf441ee">sylar::ByteArray::writeInt32</a></div><div class="ttdeci">void writeInt32(int32_t value)</div><div class="ttdoc">写入有符号Varint32类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aa5ec3be135f05933d941da9880446465"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aa5ec3be135f05933d941da9880446465">sylar::ByteArray::readFint64</a></div><div class="ttdeci">int64_t readFint64()</div><div class="ttdoc">读取int64_t类型的数据</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html_a9d9dc610d64e07e210ea553d51e2c8da"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html#a9d9dc610d64e07e210ea553d51e2c8da">sylar::ByteArray::Node::ptr</a></div><div class="ttdeci">char * ptr</div><div class="ttdoc">内存块地址指针</div><div class="ttdef"><b>Definition:</b> bytearray.h:49</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html">sylar::ByteArray::Node</a></div><div class="ttdoc">ByteArray的存储节点</div><div class="ttdef"><b>Definition:</b> bytearray.h:31</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a7773dd5bfed1291c4ee9ea46f3af810a"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a7773dd5bfed1291c4ee9ea46f3af810a">sylar::ByteArray::getReadBuffers</a></div><div class="ttdeci">uint64_t getReadBuffers(std::vector&lt; iovec &gt; &amp;buffers, uint64_t len=~0ull) const</div><div class="ttdoc">获取可读取的缓存,保存成iovec数组</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ad01577de6b457b3347774d5de522665d"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ad01577de6b457b3347774d5de522665d">sylar::ByteArray::readFint32</a></div><div class="ttdeci">int32_t readFint32()</div><div class="ttdoc">读取int32_t类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a85af590a2c12c7fbafad23d3407cf439"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a85af590a2c12c7fbafad23d3407cf439">sylar::ByteArray::readDouble</a></div><div class="ttdeci">double readDouble()</div><div class="ttdoc">读取double类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a6e9f2eff57c380de87fce2d77a476b55"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a6e9f2eff57c380de87fce2d77a476b55">sylar::ByteArray::ByteArray</a></div><div class="ttdeci">ByteArray(size_t base_size=4096)</div><div class="ttdoc">使用指定长度的内存块构造ByteArray</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a9de014ee29513f5f69661ba42580144c"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a9de014ee29513f5f69661ba42580144c">sylar::ByteArray::toHexString</a></div><div class="ttdeci">std::string toHexString() const</div><div class="ttdoc">将ByteArray里面的数据[m_position, m_size)转成16进制的std::string(格式:FF FF FF)</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a0b369c280a2556bd1548421279b279ac"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a0b369c280a2556bd1548421279b279ac">sylar::ByteArray::readFromFile</a></div><div class="ttdeci">bool readFromFile(const std::string &amp;name)</div><div class="ttdoc">从文件中读取数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a7dc598ec63e41422c62cc28fc06eeee5"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a7dc598ec63e41422c62cc28fc06eeee5">sylar::ByteArray::readUint32</a></div><div class="ttdeci">uint32_t readUint32()</div><div class="ttdoc">读取无符号Varint32类型的数据</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a2324a31cd48c64daae5303e3f1489169"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a2324a31cd48c64daae5303e3f1489169">sylar::ByteArray::setIsLittleEndian</a></div><div class="ttdeci">void setIsLittleEndian(bool val)</div><div class="ttdoc">设置是否为小端</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a07785726c95061127c7b294ab528f275"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a07785726c95061127c7b294ab528f275">sylar::ByteArray::setPosition</a></div><div class="ttdeci">void setPosition(size_t v)</div><div class="ttdoc">设置ByteArray当前位置</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_aeff49fd6b1de6290aae8f415240addfe"><div class="ttname"><a href="classsylar_1_1ByteArray.html#aeff49fd6b1de6290aae8f415240addfe">sylar::ByteArray::getPosition</a></div><div class="ttdeci">size_t getPosition() const</div><div class="ttdoc">返回ByteArray当前位置</div><div class="ttdef"><b>Definition:</b> bytearray.h:375</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a7be73c311bfd710297190453d534372b"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a7be73c311bfd710297190453d534372b">sylar::ByteArray::writeFloat</a></div><div class="ttdeci">void writeFloat(float value)</div><div class="ttdoc">写入float类型的数据</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html_afc2b501336ffef7d462d8bb75803123a"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html#afc2b501336ffef7d462d8bb75803123a">sylar::ByteArray::Node::next</a></div><div class="ttdeci">Node * next</div><div class="ttdoc">下一个内存块地址</div><div class="ttdef"><b>Definition:</b> bytearray.h:51</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_ac495e047c897835df11ff5076c5b7784"><div class="ttname"><a href="classsylar_1_1ByteArray.html#ac495e047c897835df11ff5076c5b7784">sylar::ByteArray::getWriteBuffers</a></div><div class="ttdeci">uint64_t getWriteBuffers(std::vector&lt; iovec &gt; &amp;buffers, uint64_t len)</div><div class="ttdoc">获取可写入的缓存,保存成iovec数组</div></div>
+<div class="ttc" id="astructsylar_1_1ByteArray_1_1Node_html_a7ec6b6a8254aa2c9b3302a4f43d2ae23"><div class="ttname"><a href="structsylar_1_1ByteArray_1_1Node.html#a7ec6b6a8254aa2c9b3302a4f43d2ae23">sylar::ByteArray::Node::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">内存块大小</div><div class="ttdef"><b>Definition:</b> bytearray.h:53</div></div>
+<div class="ttc" id="aclasssylar_1_1ByteArray_html_a65bb6d59d13e234a2ad2e786482f1ee1"><div class="ttname"><a href="classsylar_1_1ByteArray.html#a65bb6d59d13e234a2ad2e786482f1ee1">sylar::ByteArray::readFuint32</a></div><div class="ttdeci">uint32_t readFuint32()</div><div class="ttdoc">读取uint32_t类型的数据</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

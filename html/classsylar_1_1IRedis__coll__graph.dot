@@ -1,0 +1,7 @@
+digraph "sylar::IRedis"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::IRedis\n|# m_name\l# m_passwd\l# m_type\l# m_logEnable\l|+ IRedis()\l+ ~IRedis()\l+ cmd()\l+ cmd()\l+ cmd()\l+ getName()\l+ setName()\l+ getPasswd()\l+ setPasswd()\l+ getType()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

@@ -1,0 +1,39 @@
+\doxysection{roaring\+\_\+array\+\_\+s结构体 参考}
+\label{structroaring__array__s}\index{roaring\_array\_s@{roaring\_array\_s}}
+
+
+{\ttfamily \#include $<$roaring.\+h$>$}
+
+
+
+roaring\+\_\+array\+\_\+s 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structroaring__array__s_ac57d9bb4a0d147856e0fef9016ad1321}} 
+int32\+\_\+t {\bfseries size}
+\item 
+\mbox{\label{structroaring__array__s_a382e5eb57a4718f791bf9af91077602c}} 
+int32\+\_\+t {\bfseries allocation\+\_\+size}
+\item 
+\mbox{\label{structroaring__array__s_a888f1d68e281ec949f7604ca59d157bf}} 
+void $\ast$$\ast$ {\bfseries containers}
+\item 
+\mbox{\label{structroaring__array__s_a09289a15c34a410999c34d6493b6e11f}} 
+uint16\+\_\+t $\ast$ {\bfseries keys}
+\item 
+\mbox{\label{structroaring__array__s_af26b23e840262c77f46eaa1a88353c43}} 
+uint8\+\_\+t $\ast$ {\bfseries typecodes}
+\item 
+\mbox{\label{structroaring__array__s_adb877485220b0e12221ad4fce43b404a}} 
+uint8\+\_\+t {\bfseries flags}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Roaring arrays are array-\/based key-\/value pairs having containers as values and 16-\/bit integer keys. A roaring bitmap might be implemented as such. 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/ds/roaring.\+h\end{DoxyCompactItemize}

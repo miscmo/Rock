@@ -1,0 +1,48 @@
+\doxysection{sylar\+::C\+A\+S\+Lock类 参考}
+\label{classsylar_1_1CASLock}\index{sylar::CASLock@{sylar::CASLock}}
+
+
+原子锁  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+
+
+类 sylar\+::C\+A\+S\+Lock 继承关系图\+:
+% FIG 0
+
+
+sylar\+::C\+A\+S\+Lock 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1CASLock_af248dcf25f3613e0242a666cf486aeb8}} 
+typedef \textbf{ Scoped\+Lock\+Impl}$<$ \textbf{ C\+A\+S\+Lock} $>$ \textbf{ Lock}
+\begin{DoxyCompactList}\small\item\em 局部锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1CASLock_ad50de9b2b17d3cac2a6a540cd78e2026}} 
+\textbf{ C\+A\+S\+Lock} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1CASLock_ac294174c0873d985a013bae47455c734}} 
+\textbf{ $\sim$\+C\+A\+S\+Lock} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1CASLock_a6bf4d98aa994321b83b8e949bd0de938}} 
+void \textbf{ lock} ()
+\begin{DoxyCompactList}\small\item\em 上锁 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1CASLock_af6d158c89cefb57c06639783bb469712}} 
+void \textbf{ unlock} ()
+\begin{DoxyCompactList}\small\item\em 解锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+原子锁 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/mutex.\+h\end{DoxyCompactItemize}

@@ -9,9 +9,12 @@ namespace sylar {
 
 static Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
+//全局协程id
 static std::atomic<uint64_t> s_fiber_id {0};
+//全局协程数量
 static std::atomic<uint64_t> s_fiber_count {0};
 
+//thread_local：生命周期为当前线程
 static thread_local Fiber* t_fiber = nullptr;
 static thread_local Fiber::ptr t_threadFiber = nullptr;
 
@@ -135,6 +138,7 @@ void Fiber::swapIn() {
     SetThis(this);
     SYLAR_ASSERT(m_state != EXEC);
     m_state = EXEC;
+    //从线程主协程切换到其他协程
     if(swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx)) {
         SYLAR_ASSERT2(false, "swapcontext");
     }
@@ -143,6 +147,8 @@ void Fiber::swapIn() {
 //切换到后台执行
 void Fiber::swapOut() {
     SetThis(Scheduler::GetMainFiber());
+
+    //其他协程切换到线程主协程
     if(swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx)) {
         SYLAR_ASSERT2(false, "swapcontext");
     }

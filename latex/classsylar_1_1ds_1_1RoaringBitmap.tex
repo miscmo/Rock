@@ -1,0 +1,125 @@
+\doxysection{sylar\+::ds\+::Roaring\+Bitmap类 参考}
+\label{classsylar_1_1ds_1_1RoaringBitmap}\index{sylar::ds::RoaringBitmap@{sylar::ds::RoaringBitmap}}
+
+
+sylar\+::ds\+::Roaring\+Bitmap 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a6631b57e54f5afba10fb5a84b7d22afa}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Roaring\+Bitmap} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a880a40259279cc28d68f79fc656142de}} 
+typedef Roaring\+Set\+Bit\+Forward\+Iterator {\bfseries iterator}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a44f4bf62ee86d40b7e4b3747a840ee3f}} 
+typedef Roaring\+Set\+Bit\+Reverse\+Iterator {\bfseries reverse\+\_\+iterator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a8d4286aad7114ac67383f4151f4f3130}} 
+{\bfseries Roaring\+Bitmap} (uint32\+\_\+t size)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_aee3197085415b60baf2f2af1626ac3e4}} 
+{\bfseries Roaring\+Bitmap} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ae32459b78a1a73e056a27c98175c681e}} 
+\textbf{ Roaring\+Bitmap} \& {\bfseries operator=} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a7192b6c5ede798fccf01766ae3fbb388}} 
+std\+::string {\bfseries to\+String} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ad8faf7828b99656de7a3d77784c48b8b}} 
+bool {\bfseries get} (uint32\+\_\+t idx) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_af51bd68009708eb0196417222120e179}} 
+void {\bfseries set} (uint32\+\_\+t idx, bool v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_aeb438a763c5e927a69af1df92469af43}} 
+void {\bfseries set} (uint32\+\_\+t from, uint32\+\_\+t size, bool v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_acad3c81b6ee8317ffdaf5747fbbdf8c3}} 
+bool {\bfseries get} (uint32\+\_\+t from, uint32\+\_\+t size, bool v) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a3efa1cdb940534f1e7b98899b5ac90c4}} 
+\textbf{ Roaring\+Bitmap} \& {\bfseries operator\&=} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ab28c728a3864a5daa30f3de5b0a0bc04}} 
+\textbf{ Roaring\+Bitmap} \& {\bfseries operator$\vert$=} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ac4eb0347016aed28dfb0afe4b80fda40}} 
+\textbf{ Roaring\+Bitmap} \& {\bfseries operator-\/=} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ab99c5f1fc5041de376520840c9fdf364}} 
+\textbf{ Roaring\+Bitmap} \& {\bfseries operator$^\wedge$=} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ab5da5546d5553b84cceeb7425663f94c}} 
+\textbf{ Roaring\+Bitmap} {\bfseries operator\&} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ad98cc11d3b2cb531a4a9288d84ec5ad6}} 
+\textbf{ Roaring\+Bitmap} {\bfseries operator$\vert$} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_aa7022c3ea6d7cd553fdaef797593235d}} 
+\textbf{ Roaring\+Bitmap} {\bfseries operator-\/} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a8df7b44254121207a5fab6016fdb21a6}} 
+\textbf{ Roaring\+Bitmap} {\bfseries operator$^\wedge$} (const \textbf{ Roaring\+Bitmap} \&b)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a5b2db78a14abb3b4b991b8f699a2d9a1}} 
+bool {\bfseries operator==} (const \textbf{ Roaring\+Bitmap} \&b) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a9567ac8768c65af2ba5545d8474504c6}} 
+bool {\bfseries operator!=} (const \textbf{ Roaring\+Bitmap} \&b) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ae3e6755417bfbd8e935171595a4e91f0}} 
+Roaring\+Bitmap\+::ptr {\bfseries compress} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a08fbabc6c92572aa2ef6f4a3c8ee55b2}} 
+Roaring\+Bitmap\+::ptr {\bfseries uncompress} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a2a171f16086e9f275df482670485068f}} 
+bool {\bfseries any} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ab18e052963f2b31ee6ab500e3b63bc4d}} 
+void {\bfseries list\+Pos\+Asc} (std\+::vector$<$ uint32\+\_\+t $>$ \&pos)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a1be1f8eeecb438114d92ad44cd83eb1a}} 
+void {\bfseries foreach} (std\+::function$<$ bool(uint32\+\_\+t)$>$ cb)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a9e70a1cbe2ca19d2c1ebac73ca0b9297}} 
+void {\bfseries rforeach} (std\+::function$<$ bool(uint32\+\_\+t)$>$ cb)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a31edfa18639f33e353afc53c3f147d0c}} 
+void {\bfseries write\+To} (sylar\+::\+Byte\+Array\+::ptr ba) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a98b95b569fb29b6e850de11f0ea5bc68}} 
+bool {\bfseries read\+From} (sylar\+::\+Byte\+Array\+::ptr ba)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_aabfef91fdd24b71359fed421395bf17a}} 
+bool {\bfseries cross} (const \textbf{ Roaring\+Bitmap} \&b) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a0179df0ded17dd934ae2c2da988a5619}} 
+float {\bfseries get\+Compress\+Rate} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_ae3c8f866a1712d8b446a7b86b1f88f58}} 
+uint32\+\_\+t {\bfseries get\+Count} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a57bb6edb9add2f6a7921a761ec063222}} 
+iterator {\bfseries begin} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a36fb9a43f78d3e90c21af4d31ef01896}} 
+iterator {\bfseries end} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a7f18f797938120dfad1cb15acc96c18f}} 
+reverse\+\_\+iterator {\bfseries rbegin} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1RoaringBitmap_a46781861e354adbd54e322b31d01f617}} 
+reverse\+\_\+iterator {\bfseries rend} () const
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/ds/roaring\+\_\+bitmap.\+h\end{DoxyCompactItemize}

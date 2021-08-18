@@ -1,0 +1,82 @@
+\doxysection{sylar/sylar.h 文件参考}
+\label{sylar_8h}\index{sylar/sylar.h@{sylar/sylar.h}}
+
+
+sylar头文件  
+
+
+{\ttfamily \#include \char`\"{}address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}application.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bytearray.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}env.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fd\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fiber.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hook.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}iomanager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}library.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}macro.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}module.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}noncopyable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}singleton.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}socket.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tcp\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uri.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}worker.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}db/db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}db/mysql.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}db/sqlite3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ds/cache\+\_\+status.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ds/lru\+\_\+cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ds/timed\+\_\+cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ds/timed\+\_\+lru\+\_\+cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}email/email.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}email/smtp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http11\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http11\+\_\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http\+\_\+connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http\+\_\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/http\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/httpclient\+\_\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/servlet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/session\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/ws\+\_\+connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/ws\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/ws\+\_\+servlet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}http/ws\+\_\+session.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rock/rock\+\_\+protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rock/rock\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rock/rock\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streams/async\+\_\+socket\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streams/load\+\_\+balance.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streams/socket\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}streams/zlib\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util/crypto\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util/hash\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util/json\+\_\+util.\+h\char`\"{}}\newline
+
+
+\doxysubsection{详细描述}
+sylar头文件 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/05-\/24 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}

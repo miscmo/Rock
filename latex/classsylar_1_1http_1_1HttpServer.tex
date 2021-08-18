@@ -1,0 +1,76 @@
+\doxysection{sylar\+::http\+::Http\+Server类 参考}
+\label{classsylar_1_1http_1_1HttpServer}\index{sylar::http::HttpServer@{sylar::http::HttpServer}}
+
+
+H\+T\+T\+P服务器类  
+
+
+
+
+{\ttfamily \#include $<$http\+\_\+server.\+h$>$}
+
+
+
+类 sylar\+::http\+::Http\+Server 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::Http\+Server 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpServer_a8b20e42827860311189e4eddb1001f82}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Server} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em 智能指针类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Http\+Server} (bool keepalive=false, \textbf{ sylar\+::\+I\+O\+Manager} $\ast$worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$io\+\_\+worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$accept\+\_\+worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}())
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpServer_a4b7668cb742902ba14f7ccfa4a7c36ef}} 
+\textbf{ Servlet\+Dispatch\+::ptr} \textbf{ get\+Servlet\+Dispatch} () const
+\begin{DoxyCompactList}\small\item\em 获取\+Servlet\+Dispatch \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpServer_ad6eef1b5cf60e7608f247f152337df95}} 
+void \textbf{ set\+Servlet\+Dispatch} (\textbf{ Servlet\+Dispatch\+::ptr} v)
+\begin{DoxyCompactList}\small\item\em 设置\+Servlet\+Dispatch \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpServer_a49961d8e68d6f2b7b0c1d315b1377751}} 
+virtual void \textbf{ set\+Name} (const std\+::string \&v) override
+\begin{DoxyCompactList}\small\item\em 设置服务器名称 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpServer_a94dce5c73b7da05b2499a25fec35ad5c}} 
+virtual void \textbf{ handle\+Client} (Socket\+::ptr client) override
+\begin{DoxyCompactList}\small\item\em 处理新连接的\+Socket类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+H\+T\+T\+P服务器类 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpServer_a2b62353a6452d18ea16f9e2b5bcdcf7d}} 
+\index{sylar::http::HttpServer@{sylar::http::HttpServer}!HttpServer@{HttpServer}}
+\index{HttpServer@{HttpServer}!sylar::http::HttpServer@{sylar::http::HttpServer}}
+\doxysubsubsection{HttpServer()}
+{\footnotesize\ttfamily sylar\+::http\+::\+Http\+Server\+::\+Http\+Server (\begin{DoxyParamCaption}\item[{bool}]{keepalive = {\ttfamily false},  }\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{worker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{io\+\_\+worker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{accept\+\_\+worker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()} }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em keepalive} & 是否长连接 \\
+\hline
+\mbox{\texttt{ in}}  & {\em worker} & 工作调度器 \\
+\hline
+\mbox{\texttt{ in}}  & {\em accept\+\_\+worker} & 接收连接调度器 \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ http\+\_\+server.\+h}\end{DoxyCompactItemize}

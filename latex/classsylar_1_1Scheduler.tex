@@ -1,0 +1,184 @@
+\doxysection{sylar\+::Scheduler类 参考}
+\label{classsylar_1_1Scheduler}\index{sylar::Scheduler@{sylar::Scheduler}}
+
+
+协程调度器  
+
+
+
+
+{\ttfamily \#include $<$scheduler.\+h$>$}
+
+
+
+类 sylar\+::Scheduler 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Scheduler 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Scheduler_ac434e42aaa729f53e15e6c206e459186}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Scheduler} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1Scheduler_a6f9614e712ec344e039e66cc58ac9c1e}} 
+typedef \textbf{ Mutex} {\bfseries Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Scheduler} (size\+\_\+t threads=1, bool use\+\_\+caller=true, const std\+::string \&name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a5d96648576115a7cc0b4602190a390d1}} 
+virtual \textbf{ $\sim$\+Scheduler} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a9d153fbd07ba72cfb57e8534f97a53d3}} 
+const std\+::string \& \textbf{ get\+Name} () const
+\begin{DoxyCompactList}\small\item\em 返回协程调度器名称 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a028c935d19b263bd0c49c5f65201e8b5}} 
+void \textbf{ start} ()
+\begin{DoxyCompactList}\small\item\em 启动协程调度器 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_aa1f195d4d6862200f7a979200692d3ef}} 
+void \textbf{ stop} ()
+\begin{DoxyCompactList}\small\item\em 停止协程调度器 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Fiber\+Or\+Cb $>$ }\\void \textbf{ schedule} (Fiber\+Or\+Cb fc, int thread=-\/1)
+\begin{DoxyCompactList}\small\item\em 调度协程 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void \textbf{ schedule} (Input\+Iterator begin, Input\+Iterator end)
+\begin{DoxyCompactList}\small\item\em 批量调度协程 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a86628ee28a79b165300eec9c19522913}} 
+void {\bfseries switch\+To} (int thread=-\/1)
+\item 
+\mbox{\label{classsylar_1_1Scheduler_ae534714b521c1714f960d4429af56006}} 
+std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Scheduler_a1a2808b67d1eb43f872e9c7f3890a342}} 
+static \textbf{ Scheduler} $\ast$ \textbf{ Get\+This} ()
+\begin{DoxyCompactList}\small\item\em 返回当前协程调度器 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a976852e92b696bd37af444619cf99468}} 
+static \textbf{ Fiber} $\ast$ \textbf{ Get\+Main\+Fiber} ()
+\begin{DoxyCompactList}\small\item\em 返回当前协程调度器的调度协程 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Scheduler_af9c7148718b612596faf9ef669722548}} 
+virtual void \textbf{ tickle} ()
+\begin{DoxyCompactList}\small\item\em 通知协程调度器有任务了 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_ac87e22634869414e4b493685cbbf82e2}} 
+void \textbf{ run} ()
+\begin{DoxyCompactList}\small\item\em 协程调度函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_adffdaa1a84c5f934488d08548b8cbb3e}} 
+virtual bool \textbf{ stopping} ()
+\begin{DoxyCompactList}\small\item\em 返回是否可以停止 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a3183466c45f91b9680467bea81f971e3}} 
+virtual void \textbf{ idle} ()
+\begin{DoxyCompactList}\small\item\em 协程无任务可调度时执行idle协程 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_aab919e867c6b4dac93a6f810551e9def}} 
+void \textbf{ set\+This} ()
+\begin{DoxyCompactList}\small\item\em 设置当前的协程调度器 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_ac4c9dae03a23adeffe04ca2cf6e4f8fd}} 
+bool \textbf{ has\+Idle\+Threads} ()
+\begin{DoxyCompactList}\small\item\em 是否有空闲线程 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Scheduler_a14da3ea7c8a253f2bc9a199e7975ef91}} 
+std\+::vector$<$ int $>$ \textbf{ m\+\_\+thread\+Ids}
+\begin{DoxyCompactList}\small\item\em 协程下的线程id数组 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a8bcf2c2c1b89fcd3ee2fec70b42987ce}} 
+size\+\_\+t \textbf{ m\+\_\+thread\+Count} = 0
+\begin{DoxyCompactList}\small\item\em 线程数量 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a837fcf7e9403f859813cf830d2efe306}} 
+std\+::atomic$<$ size\+\_\+t $>$ \textbf{ m\+\_\+active\+Thread\+Count} = \{0\}
+\begin{DoxyCompactList}\small\item\em 工作线程数量 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a51cab9237c299fc30f537dc9fd4935db}} 
+std\+::atomic$<$ size\+\_\+t $>$ \textbf{ m\+\_\+idle\+Thread\+Count} = \{0\}
+\begin{DoxyCompactList}\small\item\em 空闲线程数量 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_ab40c5cd7c4d39a1bed431781f299b1ee}} 
+bool \textbf{ m\+\_\+stopping} = true
+\begin{DoxyCompactList}\small\item\em 是否正在停止 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_a857b3c4ea979fe4ccdea1a94dc5c8aae}} 
+bool \textbf{ m\+\_\+auto\+Stop} = false
+\begin{DoxyCompactList}\small\item\em 是否自动停止 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Scheduler_ad798d9881a2285fcb55e0dc3b60708f0}} 
+int \textbf{ m\+\_\+root\+Thread} = 0
+\begin{DoxyCompactList}\small\item\em 主线程id(use\+\_\+caller) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+协程调度器 
+
+封装的是\+N-\/\+M的协程调度器 内部有一个线程池,支持协程在线程池里面切换 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1Scheduler_a91af0820b085ae59c9e0feddb80c5ec4}} 
+\index{sylar::Scheduler@{sylar::Scheduler}!Scheduler@{Scheduler}}
+\index{Scheduler@{Scheduler}!sylar::Scheduler@{sylar::Scheduler}}
+\doxysubsubsection{Scheduler()}
+{\footnotesize\ttfamily sylar\+::\+Scheduler\+::\+Scheduler (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{threads = {\ttfamily 1},  }\item[{bool}]{use\+\_\+caller = {\ttfamily true},  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em threads} & 线程数量 \\
+\hline
+\mbox{\texttt{ in}}  & {\em use\+\_\+caller} & 是否使用当前调用线程 \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & 协程调度器名称 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1Scheduler_acd54348eec0012357cb2b83a0010a534}} 
+\index{sylar::Scheduler@{sylar::Scheduler}!schedule@{schedule}}
+\index{schedule@{schedule}!sylar::Scheduler@{sylar::Scheduler}}
+\doxysubsubsection{schedule()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Fiber\+Or\+Cb $>$ \\
+void sylar\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{Fiber\+Or\+Cb}]{fc,  }\item[{int}]{thread = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+调度协程 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em fc} & 协程或函数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em thread} & 协程执行的线程id,-\/1标识任意线程 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+% FIG 2
+\mbox{\label{classsylar_1_1Scheduler_ae73f587c00445ca0c05005f80094d2a8}} 
+\index{sylar::Scheduler@{sylar::Scheduler}!schedule@{schedule}}
+\index{schedule@{schedule}!sylar::Scheduler@{sylar::Scheduler}}
+\doxysubsubsection{schedule()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Input\+Iterator $>$ \\
+void sylar\+::\+Scheduler\+::schedule (\begin{DoxyParamCaption}\item[{Input\+Iterator}]{begin,  }\item[{Input\+Iterator}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+批量调度协程 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em begin} & 协程数组的开始 \\
+\hline
+\mbox{\texttt{ in}}  & {\em end} & 协程数组的结束 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+% FIG 3
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ scheduler.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+digraph "sylar::MySQLUtil"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::MySQLUtil\n||+ Query()\l+ Query()\l+ Query()\l+ TryQuery()\l+ TryQuery()\l+ Execute()\l+ Execute()\l+ Execute()\l+ TryExecute()\l+ TryExecute()\l+ TryExecute()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

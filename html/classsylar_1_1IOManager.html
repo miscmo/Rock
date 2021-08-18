@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::IOManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1IOManager.html">IOManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classsylar_1_1IOManager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::IOManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>基于Epoll的IO协程调度器  
+ <a href="classsylar_1_1IOManager.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="iomanager_8h_source.html">iomanager.h</a>&gt;</code></p>
+<div class="dynheader">
+类 sylar::IOManager 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::IOManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a92053b21305a9cd1e0854f60a9ddde7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a> { <a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7faadc83980f9a40fcf08169d6ad2ad23a3">NONE</a> = 0x0, 
+<a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7fa090891b5bdc9b68bfba5a8f37dbf5515">READ</a> = 0x1, 
+<a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7fa5374ec6931815ee5254402a638a9db51">WRITE</a> = 0x4
+ }</td></tr>
+<tr class="memdesc:a92053b21305a9cd1e0854f60a9ddde7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO事件  <a href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">更多...</a><br /></td></tr>
+<tr class="separator:a92053b21305a9cd1e0854f60a9ddde7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840e581e311eba40f92e43c5053e7060"><td class="memItemLeft" align="right" valign="top"><a id="a840e581e311eba40f92e43c5053e7060"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IOManager.html">IOManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a840e581e311eba40f92e43c5053e7060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf0eabb8ce7a492a019575fde00f0bf"><td class="memItemLeft" align="right" valign="top"><a id="abcf0eabb8ce7a492a019575fde00f0bf"></a>
+typedef <a class="el" href="classsylar_1_1RWMutex.html">RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
+<tr class="separator:abcf0eabb8ce7a492a019575fde00f0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1Scheduler"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1Scheduler')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></td></tr>
+<tr class="memitem:ac434e42aaa729f53e15e6c206e459186 inherit pub_types_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ac434e42aaa729f53e15e6c206e459186"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Scheduler.html">Scheduler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ac434e42aaa729f53e15e6c206e459186 inherit pub_types_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9614e712ec344e039e66cc58ac9c1e inherit pub_types_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a6f9614e712ec344e039e66cc58ac9c1e"></a>
+typedef <a class="el" href="classsylar_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MutexType</b></td></tr>
+<tr class="separator:a6f9614e712ec344e039e66cc58ac9c1e inherit pub_types_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1TimerManager"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1TimerManager')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1TimerManager.html">sylar::TimerManager</a></td></tr>
+<tr class="memitem:afba04532d8da0367bf75be0c6dd248ac inherit pub_types_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="afba04532d8da0367bf75be0c6dd248ac"></a>
+typedef <a class="el" href="classsylar_1_1RWMutex.html">RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#afba04532d8da0367bf75be0c6dd248ac">RWMutexType</a></td></tr>
+<tr class="memdesc:afba04532d8da0367bf75be0c6dd248ac inherit pub_types_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">读写锁类型 <br /></td></tr>
+<tr class="separator:afba04532d8da0367bf75be0c6dd248ac inherit pub_types_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afc89b6386f058c60697e6d0ffdf65da7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#afc89b6386f058c60697e6d0ffdf65da7">IOManager</a> (size_t threads=1, bool use_caller=true, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memdesc:afc89b6386f058c60697e6d0ffdf65da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1IOManager.html#afc89b6386f058c60697e6d0ffdf65da7">更多...</a><br /></td></tr>
+<tr class="separator:afc89b6386f058c60697e6d0ffdf65da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fee9eb690cdf0269b57fb7d813e9f7"><td class="memItemLeft" align="right" valign="top"><a id="a58fee9eb690cdf0269b57fb7d813e9f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a58fee9eb690cdf0269b57fb7d813e9f7">~IOManager</a> ()</td></tr>
+<tr class="memdesc:a58fee9eb690cdf0269b57fb7d813e9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a58fee9eb690cdf0269b57fb7d813e9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11db87578175f119af195c313ead7b32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a11db87578175f119af195c313ead7b32">addEvent</a> (int fd, <a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a> event, std::function&lt; void()&gt; cb=nullptr)</td></tr>
+<tr class="memdesc:a11db87578175f119af195c313ead7b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加事件  <a href="classsylar_1_1IOManager.html#a11db87578175f119af195c313ead7b32">更多...</a><br /></td></tr>
+<tr class="separator:a11db87578175f119af195c313ead7b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d9ef80cbaea0b0f5fbef325fd38a9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a75d9ef80cbaea0b0f5fbef325fd38a9d">delEvent</a> (int fd, <a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a> event)</td></tr>
+<tr class="memdesc:a75d9ef80cbaea0b0f5fbef325fd38a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除事件  <a href="classsylar_1_1IOManager.html#a75d9ef80cbaea0b0f5fbef325fd38a9d">更多...</a><br /></td></tr>
+<tr class="separator:a75d9ef80cbaea0b0f5fbef325fd38a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3939d465df257f6e591aa405f24f7c3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a3939d465df257f6e591aa405f24f7c3a">cancelEvent</a> (int fd, <a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a> event)</td></tr>
+<tr class="memdesc:a3939d465df257f6e591aa405f24f7c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消事件  <a href="classsylar_1_1IOManager.html#a3939d465df257f6e591aa405f24f7c3a">更多...</a><br /></td></tr>
+<tr class="separator:a3939d465df257f6e591aa405f24f7c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be82a8ec8ce0653e5a90bc3a2d4450d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a4be82a8ec8ce0653e5a90bc3a2d4450d">cancelAll</a> (int fd)</td></tr>
+<tr class="memdesc:a4be82a8ec8ce0653e5a90bc3a2d4450d"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消所有事件  <a href="classsylar_1_1IOManager.html#a4be82a8ec8ce0653e5a90bc3a2d4450d">更多...</a><br /></td></tr>
+<tr class="separator:a4be82a8ec8ce0653e5a90bc3a2d4450d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1Scheduler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1Scheduler')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></td></tr>
+<tr class="memitem:a91af0820b085ae59c9e0feddb80c5ec4 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a91af0820b085ae59c9e0feddb80c5ec4">Scheduler</a> (size_t threads=1, bool use_caller=true, const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a91af0820b085ae59c9e0feddb80c5ec4 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1Scheduler.html#a91af0820b085ae59c9e0feddb80c5ec4">更多...</a><br /></td></tr>
+<tr class="separator:a91af0820b085ae59c9e0feddb80c5ec4 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d96648576115a7cc0b4602190a390d1 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a5d96648576115a7cc0b4602190a390d1"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a5d96648576115a7cc0b4602190a390d1">~Scheduler</a> ()</td></tr>
+<tr class="memdesc:a5d96648576115a7cc0b4602190a390d1 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a5d96648576115a7cc0b4602190a390d1 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d153fbd07ba72cfb57e8534f97a53d3 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a9d153fbd07ba72cfb57e8534f97a53d3"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a9d153fbd07ba72cfb57e8534f97a53d3">getName</a> () const</td></tr>
+<tr class="memdesc:a9d153fbd07ba72cfb57e8534f97a53d3 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回协程调度器名称 <br /></td></tr>
+<tr class="separator:a9d153fbd07ba72cfb57e8534f97a53d3 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028c935d19b263bd0c49c5f65201e8b5 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a028c935d19b263bd0c49c5f65201e8b5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a028c935d19b263bd0c49c5f65201e8b5">start</a> ()</td></tr>
+<tr class="memdesc:a028c935d19b263bd0c49c5f65201e8b5 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动协程调度器 <br /></td></tr>
+<tr class="separator:a028c935d19b263bd0c49c5f65201e8b5 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f195d4d6862200f7a979200692d3ef inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="aa1f195d4d6862200f7a979200692d3ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#aa1f195d4d6862200f7a979200692d3ef">stop</a> ()</td></tr>
+<tr class="memdesc:aa1f195d4d6862200f7a979200692d3ef inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止协程调度器 <br /></td></tr>
+<tr class="separator:aa1f195d4d6862200f7a979200692d3ef inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd54348eec0012357cb2b83a0010a534 inherit pub_methods_classsylar_1_1Scheduler"><td class="memTemplParams" colspan="2">template&lt;class FiberOrCb &gt; </td></tr>
+<tr class="memitem:acd54348eec0012357cb2b83a0010a534 inherit pub_methods_classsylar_1_1Scheduler"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#acd54348eec0012357cb2b83a0010a534">schedule</a> (FiberOrCb fc, int thread=-1)</td></tr>
+<tr class="memdesc:acd54348eec0012357cb2b83a0010a534 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">调度协程  <a href="classsylar_1_1Scheduler.html#acd54348eec0012357cb2b83a0010a534">更多...</a><br /></td></tr>
+<tr class="separator:acd54348eec0012357cb2b83a0010a534 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73f587c00445ca0c05005f80094d2a8 inherit pub_methods_classsylar_1_1Scheduler"><td class="memTemplParams" colspan="2">template&lt;class InputIterator &gt; </td></tr>
+<tr class="memitem:ae73f587c00445ca0c05005f80094d2a8 inherit pub_methods_classsylar_1_1Scheduler"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#ae73f587c00445ca0c05005f80094d2a8">schedule</a> (InputIterator begin, InputIterator end)</td></tr>
+<tr class="memdesc:ae73f587c00445ca0c05005f80094d2a8 inherit pub_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量调度协程  <a href="classsylar_1_1Scheduler.html#ae73f587c00445ca0c05005f80094d2a8">更多...</a><br /></td></tr>
+<tr class="separator:ae73f587c00445ca0c05005f80094d2a8 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86628ee28a79b165300eec9c19522913 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a86628ee28a79b165300eec9c19522913"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>switchTo</b> (int thread=-1)</td></tr>
+<tr class="separator:a86628ee28a79b165300eec9c19522913 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae534714b521c1714f960d4429af56006 inherit pub_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ae534714b521c1714f960d4429af56006"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (std::ostream &amp;os)</td></tr>
+<tr class="separator:ae534714b521c1714f960d4429af56006 inherit pub_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1TimerManager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1TimerManager')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1TimerManager.html">sylar::TimerManager</a></td></tr>
+<tr class="memitem:a8d9b6ca1141d8db2d6b4134de57e0138 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="a8d9b6ca1141d8db2d6b4134de57e0138"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a8d9b6ca1141d8db2d6b4134de57e0138">TimerManager</a> ()</td></tr>
+<tr class="memdesc:a8d9b6ca1141d8db2d6b4134de57e0138 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数 <br /></td></tr>
+<tr class="separator:a8d9b6ca1141d8db2d6b4134de57e0138 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0412749adb5dbbe8692aad5d48306e70 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="a0412749adb5dbbe8692aad5d48306e70"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a0412749adb5dbbe8692aad5d48306e70">~TimerManager</a> ()</td></tr>
+<tr class="memdesc:a0412749adb5dbbe8692aad5d48306e70 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a0412749adb5dbbe8692aad5d48306e70 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10eb57e69128959a148910b352345b2f inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsylar_1_1Timer.html#a35a05b231d168320d62b3ee2ba5dcb6a">Timer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a10eb57e69128959a148910b352345b2f">addTimer</a> (uint64_t ms, std::function&lt; void()&gt; cb, bool recurring=false)</td></tr>
+<tr class="memdesc:a10eb57e69128959a148910b352345b2f inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加定时器  <a href="classsylar_1_1TimerManager.html#a10eb57e69128959a148910b352345b2f">更多...</a><br /></td></tr>
+<tr class="separator:a10eb57e69128959a148910b352345b2f inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f3ee669b8fe34e07fbba618e80b807 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsylar_1_1Timer.html#a35a05b231d168320d62b3ee2ba5dcb6a">Timer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a24f3ee669b8fe34e07fbba618e80b807">addConditionTimer</a> (uint64_t ms, std::function&lt; void()&gt; cb, std::weak_ptr&lt; void &gt; weak_cond, bool recurring=false)</td></tr>
+<tr class="memdesc:a24f3ee669b8fe34e07fbba618e80b807 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加条件定时器  <a href="classsylar_1_1TimerManager.html#a24f3ee669b8fe34e07fbba618e80b807">更多...</a><br /></td></tr>
+<tr class="separator:a24f3ee669b8fe34e07fbba618e80b807 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e9ac0428af178d7196cad9c5971195 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="a18e9ac0428af178d7196cad9c5971195"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a18e9ac0428af178d7196cad9c5971195">getNextTimer</a> ()</td></tr>
+<tr class="memdesc:a18e9ac0428af178d7196cad9c5971195 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">到最近一个定时器执行的时间间隔(毫秒) <br /></td></tr>
+<tr class="separator:a18e9ac0428af178d7196cad9c5971195 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85e40a1d3fc4d3ce07037372afbcd28 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#ab85e40a1d3fc4d3ce07037372afbcd28">listExpiredCb</a> (std::vector&lt; std::function&lt; void()&gt; &gt; &amp;cbs)</td></tr>
+<tr class="memdesc:ab85e40a1d3fc4d3ce07037372afbcd28 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取需要执行的定时器的回调函数列表  <a href="classsylar_1_1TimerManager.html#ab85e40a1d3fc4d3ce07037372afbcd28">更多...</a><br /></td></tr>
+<tr class="separator:ab85e40a1d3fc4d3ce07037372afbcd28 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a41364b95f0eb1974fe4082c23bcc47 inherit pub_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="a1a41364b95f0eb1974fe4082c23bcc47"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a1a41364b95f0eb1974fe4082c23bcc47">hasTimer</a> ()</td></tr>
+<tr class="memdesc:a1a41364b95f0eb1974fe4082c23bcc47 inherit pub_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否有定时器 <br /></td></tr>
+<tr class="separator:a1a41364b95f0eb1974fe4082c23bcc47 inherit pub_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a84320322b91d83534bbcc34086d4468c"><td class="memItemLeft" align="right" valign="top"><a id="a84320322b91d83534bbcc34086d4468c"></a>
+static <a class="el" href="classsylar_1_1IOManager.html">IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a84320322b91d83534bbcc34086d4468c">GetThis</a> ()</td></tr>
+<tr class="memdesc:a84320322b91d83534bbcc34086d4468c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前的IOManager <br /></td></tr>
+<tr class="separator:a84320322b91d83534bbcc34086d4468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classsylar_1_1Scheduler"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classsylar_1_1Scheduler')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></td></tr>
+<tr class="memitem:a1a2808b67d1eb43f872e9c7f3890a342 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a1a2808b67d1eb43f872e9c7f3890a342"></a>
+static <a class="el" href="classsylar_1_1Scheduler.html">Scheduler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a1a2808b67d1eb43f872e9c7f3890a342">GetThis</a> ()</td></tr>
+<tr class="memdesc:a1a2808b67d1eb43f872e9c7f3890a342 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前协程调度器 <br /></td></tr>
+<tr class="separator:a1a2808b67d1eb43f872e9c7f3890a342 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976852e92b696bd37af444619cf99468 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a976852e92b696bd37af444619cf99468"></a>
+static <a class="el" href="classsylar_1_1Fiber.html">Fiber</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a976852e92b696bd37af444619cf99468">GetMainFiber</a> ()</td></tr>
+<tr class="memdesc:a976852e92b696bd37af444619cf99468 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前协程调度器的调度协程 <br /></td></tr>
+<tr class="separator:a976852e92b696bd37af444619cf99468 inherit pub_static_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a28895129097dd6e85698bd52aa2f30cd"><td class="memItemLeft" align="right" valign="top"><a id="a28895129097dd6e85698bd52aa2f30cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a28895129097dd6e85698bd52aa2f30cd">tickle</a> () override</td></tr>
+<tr class="memdesc:a28895129097dd6e85698bd52aa2f30cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">通知协程调度器有任务了 <br /></td></tr>
+<tr class="separator:a28895129097dd6e85698bd52aa2f30cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec614100855edd1e48d23afb67468b45"><td class="memItemLeft" align="right" valign="top"><a id="aec614100855edd1e48d23afb67468b45"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#aec614100855edd1e48d23afb67468b45">stopping</a> () override</td></tr>
+<tr class="memdesc:aec614100855edd1e48d23afb67468b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回是否可以停止 <br /></td></tr>
+<tr class="separator:aec614100855edd1e48d23afb67468b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68c334a1b1c0bbd8f016b28f6715c13"><td class="memItemLeft" align="right" valign="top"><a id="ab68c334a1b1c0bbd8f016b28f6715c13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#ab68c334a1b1c0bbd8f016b28f6715c13">idle</a> () override</td></tr>
+<tr class="memdesc:ab68c334a1b1c0bbd8f016b28f6715c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程无任务可调度时执行idle协程 <br /></td></tr>
+<tr class="separator:ab68c334a1b1c0bbd8f016b28f6715c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae440d45abd9ab0667b964fd71126ffb"><td class="memItemLeft" align="right" valign="top"><a id="aae440d45abd9ab0667b964fd71126ffb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#aae440d45abd9ab0667b964fd71126ffb">onTimerInsertedAtFront</a> () override</td></tr>
+<tr class="memdesc:aae440d45abd9ab0667b964fd71126ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">当有新的定时器插入到定时器的首部,执行该函数 <br /></td></tr>
+<tr class="separator:aae440d45abd9ab0667b964fd71126ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887c03f40a7360591ca9b945b7a76714"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a887c03f40a7360591ca9b945b7a76714">contextResize</a> (size_t size)</td></tr>
+<tr class="memdesc:a887c03f40a7360591ca9b945b7a76714"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置socket句柄上下文的容器大小  <a href="classsylar_1_1IOManager.html#a887c03f40a7360591ca9b945b7a76714">更多...</a><br /></td></tr>
+<tr class="separator:a887c03f40a7360591ca9b945b7a76714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc8bc218e13cf197930f8e0b2e9f458"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1IOManager.html#a5cc8bc218e13cf197930f8e0b2e9f458">stopping</a> (uint64_t &amp;timeout)</td></tr>
+<tr class="memdesc:a5cc8bc218e13cf197930f8e0b2e9f458"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否可以停止  <a href="classsylar_1_1IOManager.html#a5cc8bc218e13cf197930f8e0b2e9f458">更多...</a><br /></td></tr>
+<tr class="separator:a5cc8bc218e13cf197930f8e0b2e9f458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classsylar_1_1Scheduler"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classsylar_1_1Scheduler')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></td></tr>
+<tr class="memitem:ac87e22634869414e4b493685cbbf82e2 inherit pro_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ac87e22634869414e4b493685cbbf82e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#ac87e22634869414e4b493685cbbf82e2">run</a> ()</td></tr>
+<tr class="memdesc:ac87e22634869414e4b493685cbbf82e2 inherit pro_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程调度函数 <br /></td></tr>
+<tr class="separator:ac87e22634869414e4b493685cbbf82e2 inherit pro_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab919e867c6b4dac93a6f810551e9def inherit pro_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="aab919e867c6b4dac93a6f810551e9def"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#aab919e867c6b4dac93a6f810551e9def">setThis</a> ()</td></tr>
+<tr class="memdesc:aab919e867c6b4dac93a6f810551e9def inherit pro_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前的协程调度器 <br /></td></tr>
+<tr class="separator:aab919e867c6b4dac93a6f810551e9def inherit pro_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c9dae03a23adeffe04ca2cf6e4f8fd inherit pro_methods_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ac4c9dae03a23adeffe04ca2cf6e4f8fd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#ac4c9dae03a23adeffe04ca2cf6e4f8fd">hasIdleThreads</a> ()</td></tr>
+<tr class="memdesc:ac4c9dae03a23adeffe04ca2cf6e4f8fd inherit pro_methods_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否有空闲线程 <br /></td></tr>
+<tr class="separator:ac4c9dae03a23adeffe04ca2cf6e4f8fd inherit pro_methods_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classsylar_1_1TimerManager"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classsylar_1_1TimerManager')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classsylar_1_1TimerManager.html">sylar::TimerManager</a></td></tr>
+<tr class="memitem:a13866b28bcf8b48d4b62fd5d32897d75 inherit pro_methods_classsylar_1_1TimerManager"><td class="memItemLeft" align="right" valign="top"><a id="a13866b28bcf8b48d4b62fd5d32897d75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1TimerManager.html#a13866b28bcf8b48d4b62fd5d32897d75">addTimer</a> (<a class="el" href="classsylar_1_1Timer.html#a35a05b231d168320d62b3ee2ba5dcb6a">Timer::ptr</a> val, <a class="el" href="classsylar_1_1RWMutex.html#a9a26a5414534775287aac71813ddd672">RWMutexType::WriteLock</a> &amp;lock)</td></tr>
+<tr class="memdesc:a13866b28bcf8b48d4b62fd5d32897d75 inherit pro_methods_classsylar_1_1TimerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">将定时器添加到管理器中 <br /></td></tr>
+<tr class="separator:a13866b28bcf8b48d4b62fd5d32897d75 inherit pro_methods_classsylar_1_1TimerManager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classsylar_1_1Scheduler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1Scheduler')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a></td></tr>
+<tr class="memitem:a14da3ea7c8a253f2bc9a199e7975ef91 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a14da3ea7c8a253f2bc9a199e7975ef91"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a14da3ea7c8a253f2bc9a199e7975ef91">m_threadIds</a></td></tr>
+<tr class="memdesc:a14da3ea7c8a253f2bc9a199e7975ef91 inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程下的线程id数组 <br /></td></tr>
+<tr class="separator:a14da3ea7c8a253f2bc9a199e7975ef91 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bcf2c2c1b89fcd3ee2fec70b42987ce inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a8bcf2c2c1b89fcd3ee2fec70b42987ce"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a8bcf2c2c1b89fcd3ee2fec70b42987ce">m_threadCount</a> = 0</td></tr>
+<tr class="memdesc:a8bcf2c2c1b89fcd3ee2fec70b42987ce inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程数量 <br /></td></tr>
+<tr class="separator:a8bcf2c2c1b89fcd3ee2fec70b42987ce inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837fcf7e9403f859813cf830d2efe306 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a837fcf7e9403f859813cf830d2efe306"></a>
+std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a837fcf7e9403f859813cf830d2efe306">m_activeThreadCount</a> = {0}</td></tr>
+<tr class="memdesc:a837fcf7e9403f859813cf830d2efe306 inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">工作线程数量 <br /></td></tr>
+<tr class="separator:a837fcf7e9403f859813cf830d2efe306 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51cab9237c299fc30f537dc9fd4935db inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a51cab9237c299fc30f537dc9fd4935db"></a>
+std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a51cab9237c299fc30f537dc9fd4935db">m_idleThreadCount</a> = {0}</td></tr>
+<tr class="memdesc:a51cab9237c299fc30f537dc9fd4935db inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲线程数量 <br /></td></tr>
+<tr class="separator:a51cab9237c299fc30f537dc9fd4935db inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40c5cd7c4d39a1bed431781f299b1ee inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ab40c5cd7c4d39a1bed431781f299b1ee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#ab40c5cd7c4d39a1bed431781f299b1ee">m_stopping</a> = true</td></tr>
+<tr class="memdesc:ab40c5cd7c4d39a1bed431781f299b1ee inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否正在停止 <br /></td></tr>
+<tr class="separator:ab40c5cd7c4d39a1bed431781f299b1ee inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857b3c4ea979fe4ccdea1a94dc5c8aae inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="a857b3c4ea979fe4ccdea1a94dc5c8aae"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#a857b3c4ea979fe4ccdea1a94dc5c8aae">m_autoStop</a> = false</td></tr>
+<tr class="memdesc:a857b3c4ea979fe4ccdea1a94dc5c8aae inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否自动停止 <br /></td></tr>
+<tr class="separator:a857b3c4ea979fe4ccdea1a94dc5c8aae inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad798d9881a2285fcb55e0dc3b60708f0 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memItemLeft" align="right" valign="top"><a id="ad798d9881a2285fcb55e0dc3b60708f0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Scheduler.html#ad798d9881a2285fcb55e0dc3b60708f0">m_rootThread</a> = 0</td></tr>
+<tr class="memdesc:ad798d9881a2285fcb55e0dc3b60708f0 inherit pro_attribs_classsylar_1_1Scheduler"><td class="mdescLeft">&#160;</td><td class="mdescRight">主线程id(use_caller) <br /></td></tr>
+<tr class="separator:ad798d9881a2285fcb55e0dc3b60708f0 inherit pro_attribs_classsylar_1_1Scheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>基于Epoll的IO协程调度器 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a92053b21305a9cd1e0854f60a9ddde7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92053b21305a9cd1e0854f60a9ddde7f">&#9670;&nbsp;</a></span>Event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">sylar::IOManager::Event</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IO事件 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a92053b21305a9cd1e0854f60a9ddde7faadc83980f9a40fcf08169d6ad2ad23a3"></a>NONE&#160;</td><td class="fielddoc"><p>无事件 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a92053b21305a9cd1e0854f60a9ddde7fa090891b5bdc9b68bfba5a8f37dbf5515"></a>READ&#160;</td><td class="fielddoc"><p>读事件(EPOLLIN) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a92053b21305a9cd1e0854f60a9ddde7fa5374ec6931815ee5254402a638a9db51"></a>WRITE&#160;</td><td class="fielddoc"><p>写事件(EPOLLOUT) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="afc89b6386f058c60697e6d0ffdf65da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc89b6386f058c60697e6d0ffdf65da7">&#9670;&nbsp;</a></span>IOManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylar::IOManager::IOManager </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>threads</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_caller</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">threads</td><td>线程数量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">use_caller</td><td>是否将调用线程包含进去 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>调度器的名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a11db87578175f119af195c313ead7b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11db87578175f119af195c313ead7b32">&#9670;&nbsp;</a></span>addEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sylar::IOManager::addEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a>&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>cb</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>socket句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>事件类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>事件回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>添加成功返回0,失败返回-1 </dd></dl>
+
+</div>
+</div>
+<a id="a4be82a8ec8ce0653e5a90bc3a2d4450d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be82a8ec8ce0653e5a90bc3a2d4450d">&#9670;&nbsp;</a></span>cancelAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sylar::IOManager::cancelAll </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取消所有事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>socket句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3939d465df257f6e591aa405f24f7c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3939d465df257f6e591aa405f24f7c3a">&#9670;&nbsp;</a></span>cancelEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sylar::IOManager::cancelEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a>&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>取消事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>socket句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>事件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>如果事件存在则触发事件 </dd></dl>
+
+</div>
+</div>
+<a id="a887c03f40a7360591ca9b945b7a76714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887c03f40a7360591ca9b945b7a76714">&#9670;&nbsp;</a></span>contextResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sylar::IOManager::contextResize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置socket句柄上下文的容器大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>容量大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75d9ef80cbaea0b0f5fbef325fd38a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d9ef80cbaea0b0f5fbef325fd38a9d">&#9670;&nbsp;</a></span>delEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sylar::IOManager::delEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1IOManager.html#a92053b21305a9cd1e0854f60a9ddde7f">Event</a>&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>socket句柄 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>事件类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>不会触发事件 </dd></dl>
+
+</div>
+</div>
+<a id="a5cc8bc218e13cf197930f8e0b2e9f458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc8bc218e13cf197930f8e0b2e9f458">&#9670;&nbsp;</a></span>stopping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sylar::IOManager::stopping </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断是否可以停止 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">timeout</td><td>最近要出发的定时器事件间隔 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回是否可以停止 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/<a class="el" href="iomanager_8h_source.html">iomanager.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

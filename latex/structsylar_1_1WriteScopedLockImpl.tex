@@ -1,0 +1,59 @@
+\doxysection{sylar\+::Write\+Scoped\+Lock\+Impl$<$ T $>$ 模板结构体 参考}
+\label{structsylar_1_1WriteScopedLockImpl}\index{sylar::WriteScopedLockImpl$<$ T $>$@{sylar::WriteScopedLockImpl$<$ T $>$}}
+
+
+局部写锁模板实现  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+
+
+sylar\+::Write\+Scoped\+Lock\+Impl$<$ T $>$ 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Write\+Scoped\+Lock\+Impl} (T \&mutex)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1WriteScopedLockImpl_aaadf50e8bf978beda7a30449f334f1a5}} 
+\textbf{ $\sim$\+Write\+Scoped\+Lock\+Impl} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1WriteScopedLockImpl_abe800d800dc1fdf479da3846e363a905}} 
+void \textbf{ lock} ()
+\begin{DoxyCompactList}\small\item\em 上写锁 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1WriteScopedLockImpl_a4c93fa4b52dbadb93234ea782f3640b2}} 
+void \textbf{ unlock} ()
+\begin{DoxyCompactList}\small\item\em 解锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\subsubsection*{template$<$class T$>$\newline
+struct sylar\+::\+Write\+Scoped\+Lock\+Impl$<$ T $>$}
+
+局部写锁模板实现 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{structsylar_1_1WriteScopedLockImpl_a72b1c217844cde6ead5071a968d438f8}} 
+\index{sylar::WriteScopedLockImpl$<$ T $>$@{sylar::WriteScopedLockImpl$<$ T $>$}!WriteScopedLockImpl@{WriteScopedLockImpl}}
+\index{WriteScopedLockImpl@{WriteScopedLockImpl}!sylar::WriteScopedLockImpl$<$ T $>$@{sylar::WriteScopedLockImpl$<$ T $>$}}
+\doxysubsubsection{WriteScopedLockImpl()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\textbf{ sylar\+::\+Write\+Scoped\+Lock\+Impl}$<$ T $>$\+::\textbf{ Write\+Scoped\+Lock\+Impl} (\begin{DoxyParamCaption}\item[{T \&}]{mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em mutex} & 读写锁 \\
+\hline
+\end{DoxyParams}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/mutex.\+h\end{DoxyCompactItemize}

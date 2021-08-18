@@ -1,0 +1,51 @@
+\doxysection{sylar\+::Request类 参考}
+\label{classsylar_1_1Request}\index{sylar::Request@{sylar::Request}}
+
+
+类 sylar\+::Request 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Request 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Request_a9f1b1bd448d20e5bbdceafef72acdd15}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Request} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Request_a688d8af6e6b798611de93b29dce15286}} 
+uint32\+\_\+t {\bfseries get\+Sn} () const
+\item 
+\mbox{\label{classsylar_1_1Request_a535bec5b4e476b64d419cf5b1484606a}} 
+uint32\+\_\+t {\bfseries get\+Cmd} () const
+\item 
+\mbox{\label{classsylar_1_1Request_af82546f37f390f44648574702c5a8470}} 
+void {\bfseries set\+Sn} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1Request_a4d003268e730875b3ab65274ff399cab}} 
+void {\bfseries set\+Cmd} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1Request_a226a110ca3fed51658dc55b5dcd14de9}} 
+virtual bool {\bfseries serialize\+To\+Byte\+Array} (Byte\+Array\+::ptr bytearray) override
+\item 
+\mbox{\label{classsylar_1_1Request_a831cfdf5d4554c336a72956aec5d8998}} 
+virtual bool {\bfseries parse\+From\+Byte\+Array} (Byte\+Array\+::ptr bytearray) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Request_ac290e4cc8d8e53bc4b13a5ea81bea2c8}} 
+uint32\+\_\+t {\bfseries m\+\_\+sn}
+\item 
+\mbox{\label{classsylar_1_1Request_a39cc15cb832768cbf334e4392a76b162}} 
+uint32\+\_\+t {\bfseries m\+\_\+cmd}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ protocol.\+h}\end{DoxyCompactItemize}

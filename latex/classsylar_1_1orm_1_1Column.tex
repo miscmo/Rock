@@ -1,0 +1,117 @@
+\doxysection{sylar\+::orm\+::Column类 参考}
+\label{classsylar_1_1orm_1_1Column}\index{sylar::orm::Column@{sylar::orm::Column}}
+
+
+sylar\+::orm\+::Column 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a12cd105466a923c953cd08156fd9e106}} 
+enum {\bfseries Type} \{ \newline
+{\bfseries T\+Y\+P\+E\+\_\+\+N\+U\+LL} = 0, 
+{\bfseries T\+Y\+P\+E\+\_\+\+I\+N\+T8}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+I\+N\+T16}, 
+\newline
+{\bfseries T\+Y\+P\+E\+\_\+\+U\+I\+N\+T16}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+I\+N\+T32}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+F\+L\+O\+AT}, 
+\newline
+{\bfseries T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+I\+N\+T64}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+U\+I\+N\+T64}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG}, 
+\newline
+{\bfseries T\+Y\+P\+E\+\_\+\+T\+E\+XT}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+B\+L\+OB}, 
+{\bfseries T\+Y\+P\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}
+ \}
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a5007c4472bbfd105d0a392976ff0dd12}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Column} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_ad412ab49ef813255c4f75e961b5b7451}} 
+const std\+::string \& {\bfseries get\+Name} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a2a735d261fe55604cb8cc4251536a59e}} 
+const std\+::string \& {\bfseries get\+Type} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a31e23f0f7c9b533a556106ea2af997b7}} 
+const std\+::string \& {\bfseries get\+Desc} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a912ec8eb5d9f696267c151a977d5ab87}} 
+const std\+::string \& {\bfseries get\+Default} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_ac5908570a4181353503a900c0bd6be06}} 
+std\+::string {\bfseries get\+Default\+Value\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a5b012cf566e9297ded1ed5a360222a53}} 
+std\+::string {\bfseries get\+S\+Q\+Lite3\+Default} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a6ecde439c8f39f147ab45e2067bed3c0}} 
+bool {\bfseries is\+Auto\+Increment} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a5d12e4c1b3c04743a9e7a413c30bb9e1}} 
+Type {\bfseries get\+D\+Type} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a6aca9a9546cfbfbf4569e40fa090c789}} 
+bool {\bfseries init} (const tinyxml2\+::\+X\+M\+L\+Element \&node)
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a76bc96bd0654daac640a4b4d1105928c}} 
+std\+::string {\bfseries get\+Member\+Define} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_adc65018314d0d7f153030152d2a832fa}} 
+std\+::string {\bfseries get\+Get\+Fun\+Define} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a24e811a810782088111ce6fe6a6c5d59}} 
+std\+::string {\bfseries get\+Set\+Fun\+Define} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a022e606eaf9ad0ba0650ff1cacb3430f}} 
+std\+::string {\bfseries get\+Set\+Fun\+Impl} (const std\+::string \&class\+\_\+name, int idx) const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a1b2237ec88340e038f72614922b24f9d}} 
+int {\bfseries get\+Index} () const
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a7b421dab85df998c569b5b62d42a243c}} 
+std\+::string {\bfseries get\+D\+Type\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_aa1c151d4ca53757e1a761593fafced25}} 
+std\+::string {\bfseries get\+S\+Q\+Lite3\+Type\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_ae46edf15df58a186f306fe709621f33d}} 
+std\+::string {\bfseries get\+My\+S\+Q\+L\+Type\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a4a630b1053b70a68c0754817e5197934}} 
+std\+::string {\bfseries get\+Bind\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a59bfd1ba58cf258646fe16fec3b8a070}} 
+std\+::string {\bfseries get\+Get\+String} ()
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_af5d09509449832d577a89522d2000e01}} 
+const std\+::string \& {\bfseries get\+Update} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_acca6fb4808cd3f287ea97596ec956fd2}} 
+static Type {\bfseries Parse\+Type} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_a22ac02bc638d52698c32882b56d26a0d}} 
+static std\+::string {\bfseries Type\+To\+String} (Type type)
+\end{DoxyCompactItemize}
+\doxysubsection*{友元}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1orm_1_1Column_af888815e80064bc9fa1035c6265da86e}} 
+class {\bfseries Table}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/orm/column.\+h\end{DoxyCompactItemize}

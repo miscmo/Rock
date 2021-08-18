@@ -1,0 +1,70 @@
+\doxysection{sylar\+::I\+Redis类 参考}
+\label{classsylar_1_1IRedis}\index{sylar::IRedis@{sylar::IRedis}}
+
+
+类 sylar\+::I\+Redis 继承关系图\+:
+% FIG 0
+
+
+sylar\+::I\+Redis 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1IRedis_a83fa91cdbff37531a99d45e7c54fef7d}} 
+enum {\bfseries Type} \{ {\bfseries R\+E\+D\+IS} = 1, 
+{\bfseries R\+E\+D\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER} = 2, 
+{\bfseries F\+O\+X\+\_\+\+R\+E\+D\+IS} = 3, 
+{\bfseries F\+O\+X\+\_\+\+R\+E\+D\+I\+S\+\_\+\+C\+L\+U\+S\+T\+ER} = 4
+ \}
+\item 
+\mbox{\label{classsylar_1_1IRedis_a55c72ef3acd307e06f800bc5b2a77744}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Redis} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1IRedis_ae39393a23f16665cca782e5eeddae217}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt,...)=0
+\item 
+\mbox{\label{classsylar_1_1IRedis_a07542cad0bd92447b29dd9d58e78c181}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt, va\+\_\+list ap)=0
+\item 
+\mbox{\label{classsylar_1_1IRedis_ae589f5a9666f29e762cf58842339b5c4}} 
+virtual Reply\+Ptr {\bfseries cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)=0
+\item 
+\mbox{\label{classsylar_1_1IRedis_a1c6db949c81958aec7e5eec3b38957f9}} 
+const std\+::string \& {\bfseries get\+Name} () const
+\item 
+\mbox{\label{classsylar_1_1IRedis_ac5e24f1b1302b989524ede2b74cc65bf}} 
+void {\bfseries set\+Name} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1IRedis_a1f03142d41b6423d1d0fcf7306a2e218}} 
+const std\+::string \& {\bfseries get\+Passwd} () const
+\item 
+\mbox{\label{classsylar_1_1IRedis_a30ffee538dea5d89e29ef01d000949c6}} 
+void {\bfseries set\+Passwd} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1IRedis_ac77b39f97c87bc25664d4b102122c504}} 
+Type {\bfseries get\+Type} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1IRedis_a9d919411ab9eca9ae69b59dc1e986940}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\label{classsylar_1_1IRedis_a3e3bc4c54b80f3a13f6bdf9ce353fe1a}} 
+std\+::string {\bfseries m\+\_\+passwd}
+\item 
+\mbox{\label{classsylar_1_1IRedis_a4c7f8994db97ecabca11764f67097926}} 
+Type {\bfseries m\+\_\+type}
+\item 
+\mbox{\label{classsylar_1_1IRedis_ac9e6df88601ae23b1d28a3f2031a6fd3}} 
+bool {\bfseries m\+\_\+log\+Enable}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/redis.\+h\end{DoxyCompactItemize}

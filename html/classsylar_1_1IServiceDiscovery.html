@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::IServiceDiscovery类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1IServiceDiscovery.html">IServiceDiscovery</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classsylar_1_1IServiceDiscovery-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::IServiceDiscovery类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::IServiceDiscovery 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::IServiceDiscovery 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a55223341c4d29e333238487e1382d4e1"><td class="memItemLeft" align="right" valign="top"><a id="a55223341c4d29e333238487e1382d4e1"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IServiceDiscovery.html">IServiceDiscovery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a55223341c4d29e333238487e1382d4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710e41e3881a30957462b44cf1b89e3a"><td class="memItemLeft" align="right" valign="top"><a id="a710e41e3881a30957462b44cf1b89e3a"></a>
+typedef std::function&lt; void(const std::string &amp;domain, const std::string &amp;service,const std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &amp;old_value,const std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &amp;new_value)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>service_callback</b></td></tr>
+<tr class="separator:a710e41e3881a30957462b44cf1b89e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7a3c92db71dd2d98a591856c8f68b420"><td class="memItemLeft" align="right" valign="top"><a id="a7a3c92db71dd2d98a591856c8f68b420"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>registerServer</b> (const std::string &amp;domain, const std::string &amp;service, const std::string &amp;ip_and_port, const std::string &amp;data)</td></tr>
+<tr class="separator:a7a3c92db71dd2d98a591856c8f68b420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8d50f4728405ff84b92de7ae933b27"><td class="memItemLeft" align="right" valign="top"><a id="a8b8d50f4728405ff84b92de7ae933b27"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>queryServer</b> (const std::string &amp;domain, const std::string &amp;service)</td></tr>
+<tr class="separator:a8b8d50f4728405ff84b92de7ae933b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d2c4fe82f97cb4628a079ce63de128"><td class="memItemLeft" align="right" valign="top"><a id="ab7d2c4fe82f97cb4628a079ce63de128"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listServer</b> (std::unordered_map&lt; std::string, std::unordered_map&lt; std::string, std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &gt; &gt; &amp;infos)</td></tr>
+<tr class="separator:ab7d2c4fe82f97cb4628a079ce63de128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7febd2de93055aae0ee3c2821e42f96b"><td class="memItemLeft" align="right" valign="top"><a id="a7febd2de93055aae0ee3c2821e42f96b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listRegisterServer</b> (std::unordered_map&lt; std::string, std::unordered_map&lt; std::string, std::unordered_map&lt; std::string, std::string &gt; &gt; &gt; &amp;infos)</td></tr>
+<tr class="separator:a7febd2de93055aae0ee3c2821e42f96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac976529ac143f7b018b79c4a4a85dc2c"><td class="memItemLeft" align="right" valign="top"><a id="ac976529ac143f7b018b79c4a4a85dc2c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listQueryServer</b> (std::unordered_map&lt; std::string, std::unordered_set&lt; std::string &gt; &gt; &amp;infos)</td></tr>
+<tr class="separator:ac976529ac143f7b018b79c4a4a85dc2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7ce6d8e7bef7f85aa8f8dac90857e0"><td class="memItemLeft" align="right" valign="top"><a id="abb7ce6d8e7bef7f85aa8f8dac90857e0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()=0</td></tr>
+<tr class="separator:abb7ce6d8e7bef7f85aa8f8dac90857e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2160bc3105f33e96dff866194315fef2"><td class="memItemLeft" align="right" valign="top"><a id="a2160bc3105f33e96dff866194315fef2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()=0</td></tr>
+<tr class="separator:a2160bc3105f33e96dff866194315fef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8253e294a59be96240379961494c9018"><td class="memItemLeft" align="right" valign="top"><a id="a8253e294a59be96240379961494c9018"></a>
+service_callback&#160;</td><td class="memItemRight" valign="bottom"><b>getServiceCallback</b> () const</td></tr>
+<tr class="separator:a8253e294a59be96240379961494c9018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd1f5ce7c6f4fcf9ce6d81e15b42fed"><td class="memItemLeft" align="right" valign="top"><a id="a3dd1f5ce7c6f4fcf9ce6d81e15b42fed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setServiceCallback</b> (service_callback v)</td></tr>
+<tr class="separator:a3dd1f5ce7c6f4fcf9ce6d81e15b42fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82c69b0a1807708135dae0b5fcbe840"><td class="memItemLeft" align="right" valign="top"><a id="af82c69b0a1807708135dae0b5fcbe840"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setQueryServer</b> (const std::unordered_map&lt; std::string, std::unordered_set&lt; std::string &gt; &gt; &amp;v)</td></tr>
+<tr class="separator:af82c69b0a1807708135dae0b5fcbe840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:aebfc1430c8c453df69361795eabad2f8"><td class="memItemLeft" align="right" valign="top"><a id="aebfc1430c8c453df69361795eabad2f8"></a>
+<a class="el" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
+<tr class="separator:aebfc1430c8c453df69361795eabad2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34019f45487ddb58f03ad92f9bb14b2b"><td class="memItemLeft" align="right" valign="top"><a id="a34019f45487ddb58f03ad92f9bb14b2b"></a>
+std::unordered_map&lt; std::string, std::unordered_map&lt; std::string,std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_datas</b></td></tr>
+<tr class="separator:a34019f45487ddb58f03ad92f9bb14b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e286ac4bc92fe7ec514cd506ccb845c"><td class="memItemLeft" align="right" valign="top"><a id="a4e286ac4bc92fe7ec514cd506ccb845c"></a>
+std::unordered_map&lt; std::string, std::unordered_map&lt; std::string,std::unordered_map&lt; std::string, std::string &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_registerInfos</b></td></tr>
+<tr class="separator:a4e286ac4bc92fe7ec514cd506ccb845c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd1da061353305ed85be2e03391ec99"><td class="memItemLeft" align="right" valign="top"><a id="addd1da061353305ed85be2e03391ec99"></a>
+std::unordered_map&lt; std::string, std::unordered_set&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_queryInfos</b></td></tr>
+<tr class="separator:addd1da061353305ed85be2e03391ec99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bae38cf2518e02e96a146614536bd6"><td class="memItemLeft" align="right" valign="top"><a id="a76bae38cf2518e02e96a146614536bd6"></a>
+service_callback&#160;</td><td class="memItemRight" valign="bottom"><b>m_cb</b></td></tr>
+<tr class="separator:a76bae38cf2518e02e96a146614536bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/streams/<a class="el" href="service__discovery_8h_source.html">service_discovery.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

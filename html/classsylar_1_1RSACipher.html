@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::RSACipher类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1RSACipher.html">RSACipher</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classsylar_1_1RSACipher-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::RSACipher类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::RSACipher 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ad2ab98a16b2848d1a0c2695c0ca3c7f4"><td class="memItemLeft" align="right" valign="top"><a id="ad2ab98a16b2848d1a0c2695c0ca3c7f4"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1RSACipher.html">RSACipher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ad2ab98a16b2848d1a0c2695c0ca3c7f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab158e87807f3574b9d4e8b2f5877dd61"><td class="memItemLeft" align="right" valign="top"><a id="ab158e87807f3574b9d4e8b2f5877dd61"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>privateEncrypt</b> (const void *from, int flen, void *to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:ab158e87807f3574b9d4e8b2f5877dd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e85cc2fe677895ab6e683c45d5949d8"><td class="memItemLeft" align="right" valign="top"><a id="a1e85cc2fe677895ab6e683c45d5949d8"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>publicEncrypt</b> (const void *from, int flen, void *to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:a1e85cc2fe677895ab6e683c45d5949d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c87c4216780d6e5b6a855f39e98aba"><td class="memItemLeft" align="right" valign="top"><a id="ac8c87c4216780d6e5b6a855f39e98aba"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>privateDecrypt</b> (const void *from, int flen, void *to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:ac8c87c4216780d6e5b6a855f39e98aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed63565fb40850089913c81ac4c7c9bb"><td class="memItemLeft" align="right" valign="top"><a id="aed63565fb40850089913c81ac4c7c9bb"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>publicDecrypt</b> (const void *from, int flen, void *to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:aed63565fb40850089913c81ac4c7c9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aab11385bc6da76924ec283e18bd092"><td class="memItemLeft" align="right" valign="top"><a id="a8aab11385bc6da76924ec283e18bd092"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>privateEncrypt</b> (const void *from, int flen, std::string &amp;to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:a8aab11385bc6da76924ec283e18bd092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972eed3c7be0f053797f90cb4eb25697"><td class="memItemLeft" align="right" valign="top"><a id="a972eed3c7be0f053797f90cb4eb25697"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>publicEncrypt</b> (const void *from, int flen, std::string &amp;to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:a972eed3c7be0f053797f90cb4eb25697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fabe1ede9bc71fc0e97d22a221f0b28"><td class="memItemLeft" align="right" valign="top"><a id="a3fabe1ede9bc71fc0e97d22a221f0b28"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>privateDecrypt</b> (const void *from, int flen, std::string &amp;to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:a3fabe1ede9bc71fc0e97d22a221f0b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a286fad4a3f953abfec147f5dc72c7e31"><td class="memItemLeft" align="right" valign="top"><a id="a286fad4a3f953abfec147f5dc72c7e31"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>publicDecrypt</b> (const void *from, int flen, std::string &amp;to, int padding=RSA_NO_PADDING)</td></tr>
+<tr class="separator:a286fad4a3f953abfec147f5dc72c7e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889e4c31840365a29865bcb32549fa85"><td class="memItemLeft" align="right" valign="top"><a id="a889e4c31840365a29865bcb32549fa85"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPubkeyStr</b> () const</td></tr>
+<tr class="separator:a889e4c31840365a29865bcb32549fa85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfd7eeb45e19a47152905c47910c426"><td class="memItemLeft" align="right" valign="top"><a id="abdfd7eeb45e19a47152905c47910c426"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPrikeyStr</b> () const</td></tr>
+<tr class="separator:abdfd7eeb45e19a47152905c47910c426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c0c45417be3704a59287414b84ef79"><td class="memItemLeft" align="right" valign="top"><a id="a29c0c45417be3704a59287414b84ef79"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getPubRSASize</b> ()</td></tr>
+<tr class="separator:a29c0c45417be3704a59287414b84ef79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef6a300e3ea3510a06fc646d3d4b1517"><td class="memItemLeft" align="right" valign="top"><a id="aef6a300e3ea3510a06fc646d3d4b1517"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getPriRSASize</b> ()</td></tr>
+<tr class="separator:aef6a300e3ea3510a06fc646d3d4b1517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aa501f526c6943d0e5ab1055bd5bb593d"><td class="memItemLeft" align="right" valign="top"><a id="aa501f526c6943d0e5ab1055bd5bb593d"></a>
+static int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateKey</b> (const std::string &amp;pubkey_file, const std::string &amp;prikey_file, uint32_t length=1024)</td></tr>
+<tr class="separator:aa501f526c6943d0e5ab1055bd5bb593d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa176fed31411b28a2c2eaeb489eb0588"><td class="memItemLeft" align="right" valign="top"><a id="aa176fed31411b28a2c2eaeb489eb0588"></a>
+static RSACipher::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (const std::string &amp;pubkey_file, const std::string &amp;prikey_file)</td></tr>
+<tr class="separator:aa176fed31411b28a2c2eaeb489eb0588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/util/<a class="el" href="crypto__util_8h_source.html">crypto_util.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

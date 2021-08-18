@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::SQLite3Stmt类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1SQLite3Stmt.html">SQLite3Stmt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classsylar_1_1SQLite3Stmt-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::SQLite3Stmt类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::SQLite3Stmt 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::SQLite3Stmt 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a1521ef39918be6ca810c0ef503d9c7ba"><td class="memItemLeft" align="right" valign="top"><a id="a1521ef39918be6ca810c0ef503d9c7ba"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>COPY</b> = 1, 
+<b>REF</b> = 2
+ }</td></tr>
+<tr class="separator:a1521ef39918be6ca810c0ef503d9c7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706c145e0210a5d8e3ccc1f326562ce6"><td class="memItemLeft" align="right" valign="top"><a id="a706c145e0210a5d8e3ccc1f326562ce6"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1SQLite3Stmt.html">SQLite3Stmt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a706c145e0210a5d8e3ccc1f326562ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1IStmt"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1IStmt')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1IStmt.html">sylar::IStmt</a></td></tr>
+<tr class="memitem:a431f5717351ec4c837c189fb3c35595b inherit pub_types_classsylar_1_1IStmt"><td class="memItemLeft" align="right" valign="top"><a id="a431f5717351ec4c837c189fb3c35595b"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IStmt.html">IStmt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a431f5717351ec4c837c189fb3c35595b inherit pub_types_classsylar_1_1IStmt"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aeaa5614994ec6797f63365b193690a9c"><td class="memItemLeft" align="right" valign="top"><a id="aeaa5614994ec6797f63365b193690a9c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>prepare</b> (const char *stmt)</td></tr>
+<tr class="separator:aeaa5614994ec6797f63365b193690a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e2aec2dc17903612b5caf2b1e51ca3"><td class="memItemLeft" align="right" valign="top"><a id="a14e2aec2dc17903612b5caf2b1e51ca3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>finish</b> ()</td></tr>
+<tr class="separator:a14e2aec2dc17903612b5caf2b1e51ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7c60d24fd7bd9cd5b57e14b40ad58b"><td class="memItemLeft" align="right" valign="top"><a id="acb7c60d24fd7bd9cd5b57e14b40ad58b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, int32_t value)</td></tr>
+<tr class="separator:acb7c60d24fd7bd9cd5b57e14b40ad58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00346c4883f3c7db79304df8ceebacb8"><td class="memItemLeft" align="right" valign="top"><a id="a00346c4883f3c7db79304df8ceebacb8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, uint32_t value)</td></tr>
+<tr class="separator:a00346c4883f3c7db79304df8ceebacb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93e1888474b04a74b1c52c0cf89acca"><td class="memItemLeft" align="right" valign="top"><a id="aa93e1888474b04a74b1c52c0cf89acca"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, double value)</td></tr>
+<tr class="separator:aa93e1888474b04a74b1c52c0cf89acca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381fe6c6f2c12192c1a22018b9420adf"><td class="memItemLeft" align="right" valign="top"><a id="a381fe6c6f2c12192c1a22018b9420adf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, int64_t value)</td></tr>
+<tr class="separator:a381fe6c6f2c12192c1a22018b9420adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6985b543fa46617a7fc595477a6978b"><td class="memItemLeft" align="right" valign="top"><a id="ac6985b543fa46617a7fc595477a6978b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, uint64_t value)</td></tr>
+<tr class="separator:ac6985b543fa46617a7fc595477a6978b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00726ce9887e600bd5c160041899306"><td class="memItemLeft" align="right" valign="top"><a id="ae00726ce9887e600bd5c160041899306"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, const char *value, Type type=COPY)</td></tr>
+<tr class="separator:ae00726ce9887e600bd5c160041899306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b90a318ffb97f6d9703a5b6a1eaa6e"><td class="memItemLeft" align="right" valign="top"><a id="aa4b90a318ffb97f6d9703a5b6a1eaa6e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, const void *value, int len, Type type=COPY)</td></tr>
+<tr class="separator:aa4b90a318ffb97f6d9703a5b6a1eaa6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5d59ac77df2de11a38ce47f0438c86"><td class="memItemLeft" align="right" valign="top"><a id="a2d5d59ac77df2de11a38ce47f0438c86"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx, const std::string &amp;value, Type type=COPY)</td></tr>
+<tr class="separator:a2d5d59ac77df2de11a38ce47f0438c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28491663c78f690906e3d1c6a1a49606"><td class="memItemLeft" align="right" valign="top"><a id="a28491663c78f690906e3d1c6a1a49606"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (int idx)</td></tr>
+<tr class="separator:a28491663c78f690906e3d1c6a1a49606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2989fa6b0538562bf72c0b944a2f2d6d"><td class="memItemLeft" align="right" valign="top"><a id="a2989fa6b0538562bf72c0b944a2f2d6d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindInt8</b> (int idx, const int8_t &amp;value) override</td></tr>
+<tr class="separator:a2989fa6b0538562bf72c0b944a2f2d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02142187746f279dca93f977c8cf2e92"><td class="memItemLeft" align="right" valign="top"><a id="a02142187746f279dca93f977c8cf2e92"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindUint8</b> (int idx, const uint8_t &amp;value) override</td></tr>
+<tr class="separator:a02142187746f279dca93f977c8cf2e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48be5b8aa732a728e889dcfe66c339e"><td class="memItemLeft" align="right" valign="top"><a id="af48be5b8aa732a728e889dcfe66c339e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindInt16</b> (int idx, const int16_t &amp;value) override</td></tr>
+<tr class="separator:af48be5b8aa732a728e889dcfe66c339e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda84cefea78bd6f85e422f836866354"><td class="memItemLeft" align="right" valign="top"><a id="afda84cefea78bd6f85e422f836866354"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindUint16</b> (int idx, const uint16_t &amp;value) override</td></tr>
+<tr class="separator:afda84cefea78bd6f85e422f836866354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41c6977a64648fe197e30ff26c6131d"><td class="memItemLeft" align="right" valign="top"><a id="ae41c6977a64648fe197e30ff26c6131d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindInt32</b> (int idx, const int32_t &amp;value) override</td></tr>
+<tr class="separator:ae41c6977a64648fe197e30ff26c6131d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba91c5f36194a813fd55a2aede47ba6"><td class="memItemLeft" align="right" valign="top"><a id="a6ba91c5f36194a813fd55a2aede47ba6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindUint32</b> (int idx, const uint32_t &amp;value) override</td></tr>
+<tr class="separator:a6ba91c5f36194a813fd55a2aede47ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c8607084c59e74b5d955cc3a11286e"><td class="memItemLeft" align="right" valign="top"><a id="af6c8607084c59e74b5d955cc3a11286e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindInt64</b> (int idx, const int64_t &amp;value) override</td></tr>
+<tr class="separator:af6c8607084c59e74b5d955cc3a11286e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4853af059aa2bcbded1332fd89cf7aa"><td class="memItemLeft" align="right" valign="top"><a id="ae4853af059aa2bcbded1332fd89cf7aa"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindUint64</b> (int idx, const uint64_t &amp;value) override</td></tr>
+<tr class="separator:ae4853af059aa2bcbded1332fd89cf7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0116d03285255d23037213ec477e5d"><td class="memItemLeft" align="right" valign="top"><a id="aee0116d03285255d23037213ec477e5d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindFloat</b> (int idx, const float &amp;value) override</td></tr>
+<tr class="separator:aee0116d03285255d23037213ec477e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fa39dd0f95e45e4286d2eeb93564ef"><td class="memItemLeft" align="right" valign="top"><a id="a66fa39dd0f95e45e4286d2eeb93564ef"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindDouble</b> (int idx, const double &amp;value) override</td></tr>
+<tr class="separator:a66fa39dd0f95e45e4286d2eeb93564ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559ca012b008e186daeaede7b42d5cb4"><td class="memItemLeft" align="right" valign="top"><a id="a559ca012b008e186daeaede7b42d5cb4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindString</b> (int idx, const char *value) override</td></tr>
+<tr class="separator:a559ca012b008e186daeaede7b42d5cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e2e5ac63fb79283dd15072a78f172b"><td class="memItemLeft" align="right" valign="top"><a id="ac6e2e5ac63fb79283dd15072a78f172b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindString</b> (int idx, const std::string &amp;value) override</td></tr>
+<tr class="separator:ac6e2e5ac63fb79283dd15072a78f172b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e8726e8f2d789dbe0e7edeade99b83"><td class="memItemLeft" align="right" valign="top"><a id="a36e8726e8f2d789dbe0e7edeade99b83"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindBlob</b> (int idx, const void *value, int64_t size) override</td></tr>
+<tr class="separator:a36e8726e8f2d789dbe0e7edeade99b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3dd0fa03c2e3ce3c184669dd69b442"><td class="memItemLeft" align="right" valign="top"><a id="aaf3dd0fa03c2e3ce3c184669dd69b442"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindBlob</b> (int idx, const std::string &amp;value) override</td></tr>
+<tr class="separator:aaf3dd0fa03c2e3ce3c184669dd69b442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c56dda90e11bc80f340384b9ef76b96"><td class="memItemLeft" align="right" valign="top"><a id="a5c56dda90e11bc80f340384b9ef76b96"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindTime</b> (int idx, const time_t &amp;value) override</td></tr>
+<tr class="separator:a5c56dda90e11bc80f340384b9ef76b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97125d443b9a8641347076470474e64e"><td class="memItemLeft" align="right" valign="top"><a id="a97125d443b9a8641347076470474e64e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bindNull</b> (int idx) override</td></tr>
+<tr class="separator:a97125d443b9a8641347076470474e64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26f5c9ca77905ad159a856ada30d06d"><td class="memItemLeft" align="right" valign="top"><a id="ae26f5c9ca77905ad159a856ada30d06d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, int32_t value)</td></tr>
+<tr class="separator:ae26f5c9ca77905ad159a856ada30d06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31c5d928b6e9648b28c8747911d4b25"><td class="memItemLeft" align="right" valign="top"><a id="ac31c5d928b6e9648b28c8747911d4b25"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, uint32_t value)</td></tr>
+<tr class="separator:ac31c5d928b6e9648b28c8747911d4b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a040359149db024fabc76645605c8cb7a"><td class="memItemLeft" align="right" valign="top"><a id="a040359149db024fabc76645605c8cb7a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, double value)</td></tr>
+<tr class="separator:a040359149db024fabc76645605c8cb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0d1d04208b6c21b7ac5a1b2e62d183"><td class="memItemLeft" align="right" valign="top"><a id="a7f0d1d04208b6c21b7ac5a1b2e62d183"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, int64_t value)</td></tr>
+<tr class="separator:a7f0d1d04208b6c21b7ac5a1b2e62d183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42756ceb914ac222e64da6639679b1a2"><td class="memItemLeft" align="right" valign="top"><a id="a42756ceb914ac222e64da6639679b1a2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, uint64_t value)</td></tr>
+<tr class="separator:a42756ceb914ac222e64da6639679b1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b5592d4c3583511f9dd233c13419fb"><td class="memItemLeft" align="right" valign="top"><a id="a01b5592d4c3583511f9dd233c13419fb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, const char *value, Type type=COPY)</td></tr>
+<tr class="separator:a01b5592d4c3583511f9dd233c13419fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9050941a52b242eea26377a8a96d722c"><td class="memItemLeft" align="right" valign="top"><a id="a9050941a52b242eea26377a8a96d722c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, const void *value, int len, Type type=COPY)</td></tr>
+<tr class="separator:a9050941a52b242eea26377a8a96d722c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9256d4799a19db6d186f8f7b84fde475"><td class="memItemLeft" align="right" valign="top"><a id="a9256d4799a19db6d186f8f7b84fde475"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name, const std::string &amp;value, Type type=COPY)</td></tr>
+<tr class="separator:a9256d4799a19db6d186f8f7b84fde475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0243571d7a51f0b2a30a335187be65b6"><td class="memItemLeft" align="right" valign="top"><a id="a0243571d7a51f0b2a30a335187be65b6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> (const char *name)</td></tr>
+<tr class="separator:a0243571d7a51f0b2a30a335187be65b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5a0b18fdc3711b0f942c157936579e8"><td class="memItemLeft" align="right" valign="top"><a id="aa5a0b18fdc3711b0f942c157936579e8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>step</b> ()</td></tr>
+<tr class="separator:aa5a0b18fdc3711b0f942c157936579e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec90affb6bbec9cc67601d61952c961"><td class="memItemLeft" align="right" valign="top"><a id="a5ec90affb6bbec9cc67601d61952c961"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:a5ec90affb6bbec9cc67601d61952c961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4592513b7866be1b70b7000863314764"><td class="memItemLeft" align="right" valign="top"><a id="a4592513b7866be1b70b7000863314764"></a>
+ISQLData::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>query</b> () override</td></tr>
+<tr class="separator:a4592513b7866be1b70b7000863314764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc04aa1130a967c217eb3ecc48f209f2"><td class="memItemLeft" align="right" valign="top"><a id="abc04aa1130a967c217eb3ecc48f209f2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> () override</td></tr>
+<tr class="separator:abc04aa1130a967c217eb3ecc48f209f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b70a54c5a915824e50bbdbfabf4a7a"><td class="memItemLeft" align="right" valign="top"><a id="a37b70a54c5a915824e50bbdbfabf4a7a"></a>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getLastInsertId</b> () override</td></tr>
+<tr class="separator:a37b70a54c5a915824e50bbdbfabf4a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16aecd9e38f42416b89a9dff59d337c"><td class="memItemLeft" align="right" valign="top"><a id="ab16aecd9e38f42416b89a9dff59d337c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getErrno</b> () override</td></tr>
+<tr class="separator:ab16aecd9e38f42416b89a9dff59d337c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dc334426b408a03110e3cc556b7f9b"><td class="memItemLeft" align="right" valign="top"><a id="aa7dc334426b408a03110e3cc556b7f9b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getErrStr</b> () override</td></tr>
+<tr class="separator:aa7dc334426b408a03110e3cc556b7f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac0b47397d966c5f08865658de265ccca"><td class="memItemLeft" align="right" valign="top"><a id="ac0b47397d966c5f08865658de265ccca"></a>
+static SQLite3Stmt::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (SQLite3::ptr db, const char *stmt)</td></tr>
+<tr class="separator:ac0b47397d966c5f08865658de265ccca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a2cb8fa79a54ec3cf88e8ab7e9569de6d"><td class="memItemLeft" align="right" valign="top"><a id="a2cb8fa79a54ec3cf88e8ab7e9569de6d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SQLite3Stmt</b> (SQLite3::ptr db)</td></tr>
+<tr class="separator:a2cb8fa79a54ec3cf88e8ab7e9569de6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a6d5f8829e3ed51084f46c46de079b433"><td class="memItemLeft" align="right" valign="top"><a id="a6d5f8829e3ed51084f46c46de079b433"></a>
+SQLite3::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>m_db</b></td></tr>
+<tr class="separator:a6d5f8829e3ed51084f46c46de079b433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bc9ecce57e054316d1184268a0a509"><td class="memItemLeft" align="right" valign="top"><a id="a86bc9ecce57e054316d1184268a0a509"></a>
+sqlite3_stmt *&#160;</td><td class="memItemRight" valign="bottom"><b>m_stmt</b></td></tr>
+<tr class="separator:a86bc9ecce57e054316d1184268a0a509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a8dac27a03a42a81ddb1d774a1b489733"><td class="memItemLeft" align="right" valign="top"><a id="a8dac27a03a42a81ddb1d774a1b489733"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>SQLite3Data</b></td></tr>
+<tr class="separator:a8dac27a03a42a81ddb1d774a1b489733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/db/<a class="el" href="sqlite3_8h_source.html">sqlite3.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

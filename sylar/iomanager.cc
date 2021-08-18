@@ -352,6 +352,8 @@ void IOManager::idle() {
             } else {
                 next_timeout = MAX_TIMEOUT;
             }
+
+            //惊群问题：加原子锁
             rt = epoll_wait(m_epfd, events, MAX_EVNETS, (int)next_timeout);
             if(rt < 0 && errno == EINTR) {
             } else {
@@ -359,6 +361,7 @@ void IOManager::idle() {
             }
         } while(true);
 
+        //执行到期事件
         std::vector<std::function<void()> > cbs;
         listExpiredCb(cbs);
         if(!cbs.empty()) {

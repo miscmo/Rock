@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::FoxThread类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1FoxThread.html">FoxThread</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classsylar_1_1FoxThread-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::FoxThread类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::FoxThread 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::FoxThread 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a2c644597e57b20371e12c816e6a8aceb"><td class="memItemLeft" align="right" valign="top"><a id="a2c644597e57b20371e12c816e6a8aceb"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1FoxThread.html">FoxThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a2c644597e57b20371e12c816e6a8aceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87b4cef932af77f20bde6d459f901aa"><td class="memItemLeft" align="right" valign="top"><a id="ac87b4cef932af77f20bde6d459f901aa"></a>
+typedef IFoxThread::callback&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b></td></tr>
+<tr class="separator:ac87b4cef932af77f20bde6d459f901aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117887af813374009755cc80e3a86d3d"><td class="memItemLeft" align="right" valign="top"><a id="a117887af813374009755cc80e3a86d3d"></a>
+typedef std::function&lt; void(<a class="el" href="classsylar_1_1FoxThread.html">FoxThread</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>init_cb</b></td></tr>
+<tr class="separator:a117887af813374009755cc80e3a86d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1IFoxThread"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1IFoxThread')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1IFoxThread.html">sylar::IFoxThread</a></td></tr>
+<tr class="memitem:a274ac40eab547b2c0ca2e4639aa7e79f inherit pub_types_classsylar_1_1IFoxThread"><td class="memItemLeft" align="right" valign="top"><a id="a274ac40eab547b2c0ca2e4639aa7e79f"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IFoxThread.html">IFoxThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a274ac40eab547b2c0ca2e4639aa7e79f inherit pub_types_classsylar_1_1IFoxThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb14d5daa107d5cfe832e7603bd7a855 inherit pub_types_classsylar_1_1IFoxThread"><td class="memItemLeft" align="right" valign="top"><a id="aeb14d5daa107d5cfe832e7603bd7a855"></a>
+typedef std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b></td></tr>
+<tr class="separator:aeb14d5daa107d5cfe832e7603bd7a855 inherit pub_types_classsylar_1_1IFoxThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1bbdee5d60beb42d1e34fec4da90f8cf"><td class="memItemLeft" align="right" valign="top"><a id="a1bbdee5d60beb42d1e34fec4da90f8cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FoxThread</b> (const std::string &amp;name=&quot;&quot;, struct event_base *base=NULL)</td></tr>
+<tr class="separator:a1bbdee5d60beb42d1e34fec4da90f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5250c0172d905b1fc36ed8eb7f7876f"><td class="memItemLeft" align="right" valign="top"><a id="aa5250c0172d905b1fc36ed8eb7f7876f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setThis</b> ()</td></tr>
+<tr class="separator:aa5250c0172d905b1fc36ed8eb7f7876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeda4ca852486973a1a0c417710f028a"><td class="memItemLeft" align="right" valign="top"><a id="afeda4ca852486973a1a0c417710f028a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unsetThis</b> ()</td></tr>
+<tr class="separator:afeda4ca852486973a1a0c417710f028a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab4199a243abd0221ffd4243c4404a3"><td class="memItemLeft" align="right" valign="top"><a id="afab4199a243abd0221ffd4243c4404a3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="separator:afab4199a243abd0221ffd4243c4404a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9854df0841f9c8a7ee278207fa190ea"><td class="memItemLeft" align="right" valign="top"><a id="ae9854df0841f9c8a7ee278207fa190ea"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>dispatch</b> (callback cb)</td></tr>
+<tr class="separator:ae9854df0841f9c8a7ee278207fa190ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f549e5d8697c8e39f813f86a4e38ef5"><td class="memItemLeft" align="right" valign="top"><a id="a6f549e5d8697c8e39f813f86a4e38ef5"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>dispatch</b> (uint32_t id, callback cb)</td></tr>
+<tr class="separator:a6f549e5d8697c8e39f813f86a4e38ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0596726f993e8467b118ca363e0e3e22"><td class="memItemLeft" align="right" valign="top"><a id="a0596726f993e8467b118ca363e0e3e22"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>batchDispatch</b> (const std::vector&lt; callback &gt; &amp;cbs)</td></tr>
+<tr class="separator:a0596726f993e8467b118ca363e0e3e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522d348ff3cfbf719c9da5e709d1a9ad"><td class="memItemLeft" align="right" valign="top"><a id="a522d348ff3cfbf719c9da5e709d1a9ad"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>broadcast</b> (callback cb)</td></tr>
+<tr class="separator:a522d348ff3cfbf719c9da5e709d1a9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c16631392affe86db202b5f04e688e"><td class="memItemLeft" align="right" valign="top"><a id="af1c16631392affe86db202b5f04e688e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
+<tr class="separator:af1c16631392affe86db202b5f04e688e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547c1135c01e03a0ec1e1b34d72084e6"><td class="memItemLeft" align="right" valign="top"><a id="a547c1135c01e03a0ec1e1b34d72084e6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="separator:a547c1135c01e03a0ec1e1b34d72084e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91434504c1e5bedb5a6ab3f809dab3ef"><td class="memItemLeft" align="right" valign="top"><a id="a91434504c1e5bedb5a6ab3f809dab3ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStart</b> () const</td></tr>
+<tr class="separator:a91434504c1e5bedb5a6ab3f809dab3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b4fa36411e99fe9b621304d6482298"><td class="memItemLeft" align="right" valign="top"><a id="a86b4fa36411e99fe9b621304d6482298"></a>
+struct event_base *&#160;</td><td class="memItemRight" valign="bottom"><b>getBase</b> ()</td></tr>
+<tr class="separator:a86b4fa36411e99fe9b621304d6482298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc408f6721dd1ec733a3ebd27d6ff53"><td class="memItemLeft" align="right" valign="top"><a id="abcc408f6721dd1ec733a3ebd27d6ff53"></a>
+std::thread::id&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="separator:abcc408f6721dd1ec733a3ebd27d6ff53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc13f526b8db04d51b6d9f198e9b0ff"><td class="memItemLeft" align="right" valign="top"><a id="a2cc13f526b8db04d51b6d9f198e9b0ff"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a2cc13f526b8db04d51b6d9f198e9b0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0052e496eab60edee61f848f83aa17"><td class="memTemplParams" colspan="2"><a id="adc0052e496eab60edee61f848f83aa17"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:adc0052e496eab60edee61f848f83aa17"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getData</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:adc0052e496eab60edee61f848f83aa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a491450135e89b55c97c765a1fac472"><td class="memItemLeft" align="right" valign="top"><a id="a3a491450135e89b55c97c765a1fac472"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (const std::string &amp;name, void *v)</td></tr>
+<tr class="separator:a3a491450135e89b55c97c765a1fac472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed214720bb7636471ab39bbbe4b4a458"><td class="memItemLeft" align="right" valign="top"><a id="aed214720bb7636471ab39bbbe4b4a458"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setInitCb</b> (init_cb v)</td></tr>
+<tr class="separator:aed214720bb7636471ab39bbbe4b4a458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b992ea4d82302d52b0e2652316c6ace"><td class="memItemLeft" align="right" valign="top"><a id="a9b992ea4d82302d52b0e2652316c6ace"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (std::ostream &amp;os)</td></tr>
+<tr class="separator:a9b992ea4d82302d52b0e2652316c6ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f28979a88925bf5149b785ef6fc694"><td class="memItemLeft" align="right" valign="top"><a id="a84f28979a88925bf5149b785ef6fc694"></a>
+virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getTotal</b> ()</td></tr>
+<tr class="separator:a84f28979a88925bf5149b785ef6fc694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:abc254d91b00528c0f5edff2ed0d78f4f"><td class="memItemLeft" align="right" valign="top"><a id="abc254d91b00528c0f5edff2ed0d78f4f"></a>
+static <a class="el" href="classsylar_1_1FoxThread.html">FoxThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetThis</b> ()</td></tr>
+<tr class="separator:abc254d91b00528c0f5edff2ed0d78f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e01636d1dee95c7b9365345b72a60c2"><td class="memItemLeft" align="right" valign="top"><a id="a9e01636d1dee95c7b9365345b72a60c2"></a>
+static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetFoxThreadName</b> ()</td></tr>
+<tr class="separator:a9e01636d1dee95c7b9365345b72a60c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a608e414d0933fd136f71a1300df256bf"><td class="memItemLeft" align="right" valign="top"><a id="a608e414d0933fd136f71a1300df256bf"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllFoxThreadName</b> (std::map&lt; uint64_t, std::string &gt; &amp;names)</td></tr>
+<tr class="separator:a608e414d0933fd136f71a1300df256bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/db/<a class="el" href="fox__thread_8h_source.html">fox_thread.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

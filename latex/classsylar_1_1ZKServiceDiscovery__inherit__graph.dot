@@ -1,0 +1,11 @@
+digraph "sylar::ZKServiceDiscovery"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::ZKServiceDiscovery\n||+ ZKServiceDiscovery()\l+ getSelfInfo()\l+ setSelfInfo()\l+ getSelfData()\l+ setSelfData()\l+ start()\l+ stop()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{sylar::IServiceDiscovery\n|# m_mutex\l# m_datas\l# m_registerInfos\l# m_queryInfos\l# m_cb\l|+ ~IServiceDiscovery()\l+ registerServer()\l+ queryServer()\l+ listServer()\l+ listRegisterServer()\l+ listQueryServer()\l+ start()\l+ stop()\l+ getServiceCallback()\l+ setServiceCallback()\l+ setQueryServer()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1IServiceDiscovery.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{std::enable_shared\l_from_this\< ZKServiceDiscovery \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

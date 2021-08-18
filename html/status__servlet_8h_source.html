@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/http/servlets/status_servlet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li><li class="navelem"><a class="el" href="dir_f02dc2ae36f537734332bb85beb1c493.html">servlets</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">status_servlet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_HTTP_SERVLETS_STATUS_SERVLET_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_HTTP_SERVLETS_STATUS_SERVLET_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="servlet_8h.html">sylar/http/servlet.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>http {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1StatusServlet.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1StatusServlet.html">StatusServlet</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classsylar_1_1http_1_1StatusServlet.html">StatusServlet</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1StatusServlet.html#aa7e8869113be987a288828c861d143fb">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aservlet_8h_html"><div class="ttname"><a href="servlet_8h.html">servlet.h</a></div><div class="ttdoc">Servlet封装</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1StatusServlet_html_aa7e8869113be987a288828c861d143fb"><div class="ttname"><a href="classsylar_1_1http_1_1StatusServlet.html#aa7e8869113be987a288828c861d143fb">sylar::http::StatusServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></div><div class="ttdoc">Servlet封装</div><div class="ttdef"><b>Definition:</b> servlet.h:28</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpResponse_html_a69535456f2042c35c1a2758fc79f08ca"><div class="ttname"><a href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResponse &gt; ptr</div><div class="ttdoc">HTTP响应结构智能指针</div><div class="ttdef"><b>Definition:</b> http.h:586</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1StatusServlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1StatusServlet.html">sylar::http::StatusServlet</a></div><div class="ttdef"><b>Definition:</b> status_servlet.h:9</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

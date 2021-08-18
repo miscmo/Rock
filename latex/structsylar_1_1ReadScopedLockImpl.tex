@@ -1,0 +1,59 @@
+\doxysection{sylar\+::Read\+Scoped\+Lock\+Impl$<$ T $>$ 模板结构体 参考}
+\label{structsylar_1_1ReadScopedLockImpl}\index{sylar::ReadScopedLockImpl$<$ T $>$@{sylar::ReadScopedLockImpl$<$ T $>$}}
+
+
+局部读锁模板实现  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+
+
+sylar\+::Read\+Scoped\+Lock\+Impl$<$ T $>$ 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Read\+Scoped\+Lock\+Impl} (T \&mutex)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1ReadScopedLockImpl_a4f4115cea17667a9e9145bea40ba074c}} 
+\textbf{ $\sim$\+Read\+Scoped\+Lock\+Impl} ()
+\begin{DoxyCompactList}\small\item\em 析构函数,自动释放锁 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1ReadScopedLockImpl_a129aa48ea84ee665b318965eb4cc1c0f}} 
+void \textbf{ lock} ()
+\begin{DoxyCompactList}\small\item\em 上读锁 \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1ReadScopedLockImpl_ac628a0e3211dbaa1544a060702eabb00}} 
+void \textbf{ unlock} ()
+\begin{DoxyCompactList}\small\item\em 释放锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\subsubsection*{template$<$class T$>$\newline
+struct sylar\+::\+Read\+Scoped\+Lock\+Impl$<$ T $>$}
+
+局部读锁模板实现 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{structsylar_1_1ReadScopedLockImpl_aaee63ae9e12ad52469bba1bbba9df10f}} 
+\index{sylar::ReadScopedLockImpl$<$ T $>$@{sylar::ReadScopedLockImpl$<$ T $>$}!ReadScopedLockImpl@{ReadScopedLockImpl}}
+\index{ReadScopedLockImpl@{ReadScopedLockImpl}!sylar::ReadScopedLockImpl$<$ T $>$@{sylar::ReadScopedLockImpl$<$ T $>$}}
+\doxysubsubsection{ReadScopedLockImpl()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\textbf{ sylar\+::\+Read\+Scoped\+Lock\+Impl}$<$ T $>$\+::\textbf{ Read\+Scoped\+Lock\+Impl} (\begin{DoxyParamCaption}\item[{T \&}]{mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em mutex} & 读写锁 \\
+\hline
+\end{DoxyParams}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/mutex.\+h\end{DoxyCompactItemize}

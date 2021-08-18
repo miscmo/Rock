@@ -35,17 +35,17 @@ public:
     };
 private:
     /**
-     * @brief Socket事件上线文类
+     * @brief Socket事件上下文类
      */
     struct FdContext {
         typedef Mutex MutexType;
         /**
-         * @brief 事件上线文类
+         * @brief 事件处理器
          */
         struct EventContext {
-            /// 事件执行的调度器
+            /// 事件执行的调度器，在哪个scheduler上执行该事件
             Scheduler* scheduler = nullptr;
-            /// 事件协程
+            /// 事件关联的协程
             Fiber::ptr fiber;
             /// 事件的回调函数
             std::function<void()> cb;
@@ -54,7 +54,7 @@ private:
         /**
          * @brief 获取事件上下文类
          * @param[in] event 事件类型
-         * @return 返回对应事件的上线文
+         * @return 返回对应事件的上下文
          */
         EventContext& getContext(Event event);
 
@@ -70,9 +70,9 @@ private:
          */
         void triggerEvent(Event event);
 
-        /// 读事件上下文
+        /// 读事件的处理器
         EventContext read;
-        /// 写事件上下文
+        /// 写事件的处理器
         EventContext write;
         /// 事件关联的句柄
         int fd = 0;

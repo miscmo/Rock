@@ -1,0 +1,11 @@
+digraph "sylar::http::HttpResponse::getHeaderAs"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sylar::http::HttpResponse\l::getHeaderAs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="获取响应的头部参数"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sylar::http::getAs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$http_8h.html#a80a3a1218593d2a5e4613d9900c3b387",tooltip="获取Map中的key值,并转成对应类型"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

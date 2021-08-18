@@ -1,0 +1,56 @@
+\doxysection{sylar\+::My\+S\+Q\+L\+Manager类 参考}
+\label{classsylar_1_1MySQLManager}\index{sylar::MySQLManager@{sylar::MySQLManager}}
+
+
+sylar\+::My\+S\+Q\+L\+Manager 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_af7b62d3fc0e5595617a8079f696b6501}} 
+typedef \textbf{ sylar\+::\+Mutex} {\bfseries Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_ace0fb9135079a313bbb93f64028765b8}} 
+My\+S\+Q\+L\+::ptr {\bfseries get} (const std\+::string \&name)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a8c4848a2b72b16b993b94e01f9ac9a2d}} 
+void {\bfseries register\+My\+S\+QL} (const std\+::string \&name, const std\+::map$<$ std\+::string, std\+::string $>$ \&params)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_aeb8fb2d403b075b368f1e70ff2a6e2be}} 
+void {\bfseries check\+Connection} (int sec=30)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_ad2718090e653a09a51427f1c176dde20}} 
+uint32\+\_\+t {\bfseries get\+Max\+Conn} () const
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a486ce961570cf78a80f26741267acd2e}} 
+void {\bfseries set\+Max\+Conn} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a622cb565afc6028e2c48651d03db30b6}} 
+int {\bfseries execute} (const std\+::string \&name, const char $\ast$format,...)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a1b8ddd91cd8f3c20078a5c814603af29}} 
+int {\bfseries execute} (const std\+::string \&name, const char $\ast$format, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a9d4079c921bcf6348bde2bd4c63e9032}} 
+int {\bfseries execute} (const std\+::string \&name, const std\+::string \&sql)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_aedc0208ffbe8e61b3a2fd36d4531af43}} 
+I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const char $\ast$format,...)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a33807e7dbbc7252030890ffa701d88da}} 
+I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const char $\ast$format, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_a19c694bc815387fbb488f8b746a9a068}} 
+I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const std\+::string \&sql)
+\item 
+\mbox{\label{classsylar_1_1MySQLManager_ade128d885cf7a77919aada44ac54b760}} 
+My\+S\+Q\+L\+Transaction\+::ptr {\bfseries open\+Transaction} (const std\+::string \&name, bool auto\+\_\+commit)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/mysql.\+h\end{DoxyCompactItemize}

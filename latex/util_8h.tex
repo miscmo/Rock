@@ -1,0 +1,208 @@
+\doxysection{sylar/util.h 文件参考}
+\label{util_8h}\index{sylar/util.h@{sylar/util.h}}
+
+
+常用的工具函数  
+
+
+{\ttfamily \#include $<$cxxabi.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/syscall.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$jsoncpp/json/json.\+h$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/lexical\+\_\+cast.\+hpp$>$}\newline
+{\ttfamily \#include $<$google/protobuf/message.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}sylar/util/hash\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sylar/util/json\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sylar/util/crypto\+\_\+util.\+h\char`\"{}}\newline
+util.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ sylar\+::\+F\+S\+Util}
+\item 
+class \textbf{ sylar\+::\+Type\+Util}
+\item 
+class \textbf{ sylar\+::\+Atomic}
+\item 
+class \textbf{ sylar\+::\+Shared\+Array$<$ T $>$}
+\item 
+class \textbf{ sylar\+::\+String\+Util}
+\item 
+class \textbf{ sylar\+::\+Speed\+Limit}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{util_8h_a7e8a51657b5b5289d1c530f5914bcee8}} 
+pid\+\_\+t \textbf{ sylar\+::\+Get\+Thread\+Id} ()
+\begin{DoxyCompactList}\small\item\em 返回当前线程的\+ID \end{DoxyCompactList}\item 
+\mbox{\label{util_8h_a4d1957a4a0e354bfbca481338581fc62}} 
+uint32\+\_\+t \textbf{ sylar\+::\+Get\+Fiber\+Id} ()
+\begin{DoxyCompactList}\small\item\em 返回当前协程的\+ID \end{DoxyCompactList}\item 
+void \textbf{ sylar\+::\+Backtrace} (std\+::vector$<$ std\+::string $>$ \&bt, int size=64, int skip=1)
+\begin{DoxyCompactList}\small\item\em 获取当前的调用栈 \end{DoxyCompactList}\item 
+std\+::string \textbf{ sylar\+::\+Backtrace\+To\+String} (int size=64, int skip=2, const std\+::string \&prefix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 获取当前栈信息的字符串 \end{DoxyCompactList}\item 
+\mbox{\label{util_8h_ae39a238868576cbc0c1fac03221e3d60}} 
+uint64\+\_\+t \textbf{ sylar\+::\+Get\+Current\+MS} ()
+\begin{DoxyCompactList}\small\item\em 获取当前时间的毫秒 \end{DoxyCompactList}\item 
+\mbox{\label{util_8h_aa2c597c6caae5df27aa7cc95c75fadfe}} 
+uint64\+\_\+t \textbf{ sylar\+::\+Get\+Current\+US} ()
+\begin{DoxyCompactList}\small\item\em 获取当前时间的微秒 \end{DoxyCompactList}\item 
+\mbox{\label{util_8h_ade7d65909cd0ce7f024ae7593ddc21e9}} 
+std\+::string {\bfseries sylar\+::\+To\+Upper} (const std\+::string \&name)
+\item 
+\mbox{\label{util_8h_a0c9db554dae766cd39a3785fc47dc5b3}} 
+std\+::string {\bfseries sylar\+::\+To\+Lower} (const std\+::string \&name)
+\item 
+\mbox{\label{util_8h_a2a3eab16f42dad7f48ec91a2d15ac6b7}} 
+std\+::string {\bfseries sylar\+::\+Time2\+Str} (time\+\_\+t ts=time(0), const std\+::string \&format=\char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S\char`\"{})
+\item 
+\mbox{\label{util_8h_a4188abb21419d9807897fd545f267dd5}} 
+time\+\_\+t {\bfseries sylar\+::\+Str2\+Time} (const char $\ast$str, const char $\ast$format=\char`\"{}\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S\char`\"{})
+\item 
+\mbox{\label{util_8h_a0887f0c8a09a99d96e28eb0f48410734}} 
+{\footnotesize template$<$class V , class Map , class K $>$ }\\V {\bfseries sylar\+::\+Get\+Param\+Value} (const Map \&m, const K \&k, const V \&def=V())
+\item 
+\mbox{\label{util_8h_a930d2a8cd09664ffc3a3f1099ea31b5f}} 
+{\footnotesize template$<$class V , class Map , class K $>$ }\\bool {\bfseries sylar\+::\+Check\+Get\+Param\+Value} (const Map \&m, const K \&k, V \&v)
+\item 
+\mbox{\label{util_8h_a7b5e13d7b10e3574d38f31a55f152b5a}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries sylar\+::nop} (T $\ast$)
+\item 
+\mbox{\label{util_8h_a34e3cd5f14af5537ac213f46f4693dbb}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries sylar\+::delete\+\_\+array} (T $\ast$v)
+\item 
+\mbox{\label{util_8h_a18a186c29bfe8c19831bed4ffbfe9529}} 
+std\+::string {\bfseries sylar\+::\+Get\+Host\+Name} ()
+\item 
+\mbox{\label{util_8h_ac5d7692ad61ee562f0252ed2554de7f9}} 
+std\+::string {\bfseries sylar\+::\+Get\+I\+Pv4} ()
+\item 
+\mbox{\label{util_8h_abfbde36d46144770347b22dcd3b48690}} 
+bool {\bfseries sylar\+::\+Yaml\+To\+Json} (const Y\+A\+M\+L\+::\+Node \&ynode, Json\+::\+Value \&jnode)
+\item 
+\mbox{\label{util_8h_a61c2ab531fc4c7643ed0448ee39a5a9d}} 
+bool {\bfseries sylar\+::\+Json\+To\+Yaml} (const Json\+::\+Value \&jnode, Y\+A\+M\+L\+::\+Node \&ynode)
+\item 
+\mbox{\label{util_8h_a2ba133bec98e7a279fe30ff590f9d58e}} 
+{\footnotesize template$<$class T $>$ }\\const char $\ast$ {\bfseries sylar\+::\+Type\+To\+Name} ()
+\item 
+\mbox{\label{util_8h_a7546f627a1852b465f2f8c55d6e21de4}} 
+std\+::string {\bfseries sylar\+::\+P\+B\+To\+Json\+String} (const google\+::protobuf\+::\+Message \&message)
+\item 
+\mbox{\label{util_8h_a494a77e064bc3a4b2192bed015608d53}} 
+{\footnotesize template$<$class Iter $>$ }\\std\+::string {\bfseries sylar\+::\+Join} (Iter begin, Iter end, const std\+::string \&tag)
+\item 
+\mbox{\label{util_8h_a558a50ddf2a5c33cd20e78fb48141e3d}} 
+{\footnotesize template$<$class T $>$ }\\int {\bfseries sylar\+::\+Binary\+Search} (const T $\ast$arr, int length, const T \&v)
+\item 
+\mbox{\label{util_8h_ac644f663249bbe5e2b8b31808bc596ac}} 
+bool {\bfseries sylar\+::\+Read\+Fix\+From\+Stream} (std\+::istream \&is, char $\ast$data, const uint64\+\_\+t \&size)
+\item 
+\mbox{\label{util_8h_a3ceeb626bd1b82fffd9c073423872bfe}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Read\+From\+Stream} (std\+::istream \&is, T \&v)
+\item 
+\mbox{\label{util_8h_a126a509864ec9349eb6506507bf7d0ad}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Read\+From\+Stream} (std\+::istream \&is, std\+::vector$<$ T $>$ \&v)
+\item 
+\mbox{\label{util_8h_ac31b72d20cfee498a079d65e6a0125fd}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Write\+To\+Stream} (std\+::ostream \&os, const T \&v)
+\item 
+\mbox{\label{util_8h_ac86d22143c293f59016753f8ac295236}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Write\+To\+Stream} (std\+::ostream \&os, const std\+::vector$<$ T $>$ \&v)
+\item 
+\mbox{\label{util_8h_ac2ed22513e82c90fb875fca0a5f8202d}} 
+bool {\bfseries sylar\+::\+Read\+Fix\+From\+Stream\+With\+Speed} (std\+::istream \&is, char $\ast$data, const uint64\+\_\+t \&size, const uint64\+\_\+t \&speed=-\/1)
+\item 
+\mbox{\label{util_8h_ad53b7841b82f4e45df9917c729241d75}} 
+bool {\bfseries sylar\+::\+Write\+Fix\+To\+Stream\+With\+Speed} (std\+::ostream \&os, const char $\ast$data, const uint64\+\_\+t \&size, const uint64\+\_\+t \&speed=-\/1)
+\item 
+\mbox{\label{util_8h_ad8c62d204dd543edfda00bb2dab7c2fd}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Write\+To\+Stream\+With\+Speed} (std\+::ostream \&os, const T \&v, const uint64\+\_\+t \&speed=-\/1)
+\item 
+\mbox{\label{util_8h_a27cd714cc1e1316cdc53fa30ce94b210}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Write\+To\+Stream\+With\+Speed} (std\+::ostream \&os, const std\+::vector$<$ T $>$ \&v, const uint64\+\_\+t \&speed=-\/1, const uint64\+\_\+t \&min\+\_\+duration\+\_\+ms=10)
+\item 
+\mbox{\label{util_8h_a5c41edcba2d3c946d1d7b5a205b920e2}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Read\+From\+Stream\+With\+Speed} (std\+::istream \&is, const std\+::vector$<$ T $>$ \&v, const uint64\+\_\+t \&speed=-\/1)
+\item 
+\mbox{\label{util_8h_a57c1eb98c2153e980d721cd6cd23c23b}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries sylar\+::\+Read\+From\+Stream\+With\+Speed} (std\+::istream \&is, const T \&v, const uint64\+\_\+t \&speed=-\/1)
+\item 
+\mbox{\label{util_8h_af2adda9aeeb911f27f4c655cbffc43d9}} 
+std\+::string {\bfseries sylar\+::\+Format} (const char $\ast$fmt,...)
+\item 
+\mbox{\label{util_8h_aac7db130a468c337b4f3c748a37b63b7}} 
+std\+::string {\bfseries sylar\+::\+Formatv} (const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\label{util_8h_a38ea265589d7058f6d9d5aa8f1d9c424}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries sylar\+::\+Slice} (std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&dst, const std\+::vector$<$ T $>$ \&src, size\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+常用的工具函数 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/05-\/27 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\label{util_8h_a979537064cb924a4471df38add5686cb}} 
+\index{util.h@{util.h}!Backtrace@{Backtrace}}
+\index{Backtrace@{Backtrace}!util.h@{util.h}}
+\doxysubsubsection{Backtrace()}
+{\footnotesize\ttfamily void sylar\+::\+Backtrace (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{bt,  }\item[{int}]{size = {\ttfamily 64},  }\item[{int}]{skip = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+获取当前的调用栈 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em bt} & 保存调用栈 \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & 最多返回层数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em skip} & 跳过栈顶的层数 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{util_8h_a11e102f2ca9ed35760090afccd9387ff}} 
+\index{util.h@{util.h}!BacktraceToString@{BacktraceToString}}
+\index{BacktraceToString@{BacktraceToString}!util.h@{util.h}}
+\doxysubsubsection{BacktraceToString()}
+{\footnotesize\ttfamily std\+::string sylar\+::\+Backtrace\+To\+String (\begin{DoxyParamCaption}\item[{int}]{size = {\ttfamily 64},  }\item[{int}]{skip = {\ttfamily 2},  }\item[{const std\+::string \&}]{prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+获取当前栈信息的字符串 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em size} & 栈的最大层数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em skip} & 跳过栈顶的层数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em prefix} & 栈信息前输出的内容 \\
+\hline
+\end{DoxyParams}

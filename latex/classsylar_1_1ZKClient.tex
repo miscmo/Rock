@@ -1,0 +1,78 @@
+\doxysection{sylar\+::Z\+K\+Client类 参考}
+\label{classsylar_1_1ZKClient}\index{sylar::ZKClient@{sylar::ZKClient}}
+
+
+类 sylar\+::Z\+K\+Client 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Z\+K\+Client 的协作图\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Event\+Type}
+\item 
+class \textbf{ Flags\+Type}
+\item 
+class \textbf{ State\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ZKClient_aed9fa1d17e21f6470a3f19aad3a0adf7}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Z\+K\+Client} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1ZKClient_aca9a22e51255276b946ef6b47297d862}} 
+typedef std\+::function$<$ void(int type, int stat, const std\+::string \&path, Z\+K\+Client\+::ptr)$>$ {\bfseries watcher\+\_\+callback}
+\item 
+\mbox{\label{classsylar_1_1ZKClient_ad857f4ec88e866e597732f7afd693885}} 
+typedef void($\ast$ {\bfseries log\+\_\+callback}) (const char $\ast$message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a1b9a396a9abf99f97838d93fe9ce4a22}} 
+bool {\bfseries init} (const std\+::string \&hosts, int recv\+\_\+timeout, watcher\+\_\+callback cb, log\+\_\+callback lcb=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a3896c23ca6fb8f9cc5abb49d230bc8c7}} 
+int32\+\_\+t {\bfseries set\+Servers} (const std\+::string \&hosts)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a032a98354c843cbc8a584ffc4df70f3d}} 
+int32\+\_\+t {\bfseries create} (const std\+::string \&path, const std\+::string \&val, std\+::string \&new\+\_\+path, const struct A\+C\+L\+\_\+vector $\ast$acl=\&Z\+O\+O\+\_\+\+O\+P\+E\+N\+\_\+\+A\+C\+L\+\_\+\+U\+N\+S\+A\+FE, int flags=0)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a11bd6e7c63fe4804ba80924566858b6b}} 
+int32\+\_\+t {\bfseries exists} (const std\+::string \&path, bool watch, Stat $\ast$stat=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a8288c18f094bb5fb56700b498cb8607d}} 
+int32\+\_\+t {\bfseries del} (const std\+::string \&path, int version=-\/1)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a2e8b3d4eff63a2b658eaa56350bdb68d}} 
+int32\+\_\+t {\bfseries get} (const std\+::string \&path, std\+::string \&val, bool watch, Stat $\ast$stat=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_ac250dd8e0b808e3dca41e6dc4645ac81}} 
+int32\+\_\+t {\bfseries get\+Config} (std\+::string \&val, bool watch, Stat $\ast$stat=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a31e99bc7e0385b616603e5a92b786c4e}} 
+int32\+\_\+t {\bfseries set} (const std\+::string \&path, const std\+::string \&val, int version=-\/1, Stat $\ast$stat=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a73d30b1eab022fbe5d629e421fcb3b0a}} 
+int32\+\_\+t {\bfseries get\+Children} (const std\+::string \&path, std\+::vector$<$ std\+::string $>$ \&val, bool watch, Stat $\ast$stat=nullptr)
+\item 
+\mbox{\label{classsylar_1_1ZKClient_acf9c49c1a5fd52ed42af553730b04fc5}} 
+int32\+\_\+t {\bfseries close} ()
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a50a7a0ac56e501f34fa27258f671d945}} 
+int32\+\_\+t {\bfseries get\+State} ()
+\item 
+\mbox{\label{classsylar_1_1ZKClient_aee1a013b4d46abbbf6c967d054db2453}} 
+std\+::string {\bfseries get\+Current\+Server} ()
+\item 
+\mbox{\label{classsylar_1_1ZKClient_a70251831f28aec794f7ca62fb03b6234}} 
+bool {\bfseries reconnect} ()
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/zk\+\_\+client.\+h\end{DoxyCompactItemize}

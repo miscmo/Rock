@@ -1,0 +1,61 @@
+\doxysection{sylar\+::Redis类 参考}
+\label{classsylar_1_1Redis}\index{sylar::Redis@{sylar::Redis}}
+
+
+类 sylar\+::Redis 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Redis 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Redis_a7f96de9551a84880d25441f1bf701564}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Redis} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Redis_abac2da86ceb127a16f65bb206a9722f3}} 
+{\bfseries Redis} (const std\+::map$<$ std\+::string, std\+::string $>$ \&conf)
+\item 
+\mbox{\label{classsylar_1_1Redis_a378a61dec8e046093ed1a34ea661166c}} 
+virtual bool {\bfseries reconnect} ()
+\item 
+\mbox{\label{classsylar_1_1Redis_ac378036dde58b5c16ac3a75032fdb4f9}} 
+virtual bool {\bfseries connect} (const std\+::string \&ip, int port, uint64\+\_\+t ms=0)
+\item 
+\mbox{\label{classsylar_1_1Redis_a5c98e5d5135157a7cee2b93f67c52f0b}} 
+virtual bool {\bfseries connect} ()
+\item 
+\mbox{\label{classsylar_1_1Redis_a01cf7b0a4f947ecd44c7c2e0e29a2edc}} 
+virtual bool {\bfseries set\+Timeout} (uint64\+\_\+t ms)
+\item 
+\mbox{\label{classsylar_1_1Redis_a69b73345244472dbfc599981fefc3511}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt,...)
+\item 
+\mbox{\label{classsylar_1_1Redis_a7dda275dc404f45c4fdfc38e4f6916ac}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1Redis_ac95f31582be37f5faf2952508c27dc76}} 
+virtual Reply\+Ptr {\bfseries cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)
+\item 
+\mbox{\label{classsylar_1_1Redis_a52b1616ef18bd3bb47f8f555202c6ddd}} 
+virtual int {\bfseries append\+Cmd} (const char $\ast$fmt,...)
+\item 
+\mbox{\label{classsylar_1_1Redis_a2dad546e67d6444475936a927d8b8bee}} 
+virtual int {\bfseries append\+Cmd} (const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1Redis_a0409ab57d35134c35c0c6b5f5b8600f6}} 
+virtual int {\bfseries append\+Cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)
+\item 
+\mbox{\label{classsylar_1_1Redis_a021e51b2efaa08e314e5511f02d297bd}} 
+virtual Reply\+Ptr {\bfseries get\+Reply} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/redis.\+h\end{DoxyCompactItemize}

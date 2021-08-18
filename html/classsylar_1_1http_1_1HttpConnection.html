@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::http::HttpConnection类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html">HttpConnection</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classsylar_1_1http_1_1HttpConnection-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::http::HttpConnection类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP客户端类  
+ <a href="classsylar_1_1http_1_1HttpConnection.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="http__connection_8h_source.html">http_connection.h</a>&gt;</code></p>
+<div class="dynheader">
+类 sylar::http::HttpConnection 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::http::HttpConnection 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:adb1452e766d3f42e950429300810af23"><td class="memItemLeft" align="right" valign="top"><a id="adb1452e766d3f42e950429300810af23"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1HttpConnection.html">HttpConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">ptr</a></td></tr>
+<tr class="memdesc:adb1452e766d3f42e950429300810af23"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP客户端类智能指针 <br /></td></tr>
+<tr class="separator:adb1452e766d3f42e950429300810af23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a99cc9d12a8054e59ebecdf4a458bbbd3 inherit pub_types_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a99cc9d12a8054e59ebecdf4a458bbbd3"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1SocketStream.html">SocketStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a99cc9d12a8054e59ebecdf4a458bbbd3 inherit pub_types_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="ad9d5c6252a7e22c9f238f5892aae8a4e"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Stream.html">Stream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2a25ae52fb5ff7c6bc1f38bf227187da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a2a25ae52fb5ff7c6bc1f38bf227187da">HttpConnection</a> (Socket::ptr sock, bool owner=true)</td></tr>
+<tr class="memdesc:a2a25ae52fb5ff7c6bc1f38bf227187da"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1http_1_1HttpConnection.html#a2a25ae52fb5ff7c6bc1f38bf227187da">更多...</a><br /></td></tr>
+<tr class="separator:a2a25ae52fb5ff7c6bc1f38bf227187da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1ec3e62917681aae73792d5d41e0e2"><td class="memItemLeft" align="right" valign="top"><a id="afb1ec3e62917681aae73792d5d41e0e2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#afb1ec3e62917681aae73792d5d41e0e2">~HttpConnection</a> ()</td></tr>
+<tr class="memdesc:afb1ec3e62917681aae73792d5d41e0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:afb1ec3e62917681aae73792d5d41e0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e211bcd7cf7b3bb54bd56e398c6511"><td class="memItemLeft" align="right" valign="top"><a id="ab7e211bcd7cf7b3bb54bd56e398c6511"></a>
+<a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">HttpResponse::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#ab7e211bcd7cf7b3bb54bd56e398c6511">recvResponse</a> ()</td></tr>
+<tr class="memdesc:ab7e211bcd7cf7b3bb54bd56e398c6511"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收HTTP响应 <br /></td></tr>
+<tr class="separator:ab7e211bcd7cf7b3bb54bd56e398c6511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e070e43231c968d46cb7d359b14a57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a32e070e43231c968d46cb7d359b14a57">sendRequest</a> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> req)</td></tr>
+<tr class="memdesc:a32e070e43231c968d46cb7d359b14a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a32e070e43231c968d46cb7d359b14a57">更多...</a><br /></td></tr>
+<tr class="separator:a32e070e43231c968d46cb7d359b14a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a376550be0ece546796ee2d0d0426b36d">SocketStream</a> (Socket::ptr sock, bool owner=true)</td></tr>
+<tr class="memdesc:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1SocketStream.html#a376550be0ece546796ee2d0d0426b36d">更多...</a><br /></td></tr>
+<tr class="separator:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a7bbba4ad707a4bc0d21eab4d04edd28f">~SocketStream</a> ()</td></tr>
+<tr class="memdesc:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classsylar_1_1SocketStream.html#a7bbba4ad707a4bc0d21eab4d04edd28f">更多...</a><br /></td></tr>
+<tr class="separator:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a83ceb6fab95c744b1f5d418bd4e4228b">read</a> (void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据  <a href="classsylar_1_1SocketStream.html#a83ceb6fab95c744b1f5d418bd4e4228b">更多...</a><br /></td></tr>
+<tr class="separator:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a390ba1458b59483ce78ff8bd0654e7bd">read</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据  <a href="classsylar_1_1SocketStream.html#a390ba1458b59483ce78ff8bd0654e7bd">更多...</a><br /></td></tr>
+<tr class="separator:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a26cb5f28be39aac14cba7d93a28430e0">write</a> (const void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入数据  <a href="classsylar_1_1SocketStream.html#a26cb5f28be39aac14cba7d93a28430e0">更多...</a><br /></td></tr>
+<tr class="separator:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a11c518ed09bd39d8c39059cc3627474d">write</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入数据  <a href="classsylar_1_1SocketStream.html#a11c518ed09bd39d8c39059cc3627474d">更多...</a><br /></td></tr>
+<tr class="separator:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af354cad43063b30ac167e1ed73bfb549 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="af354cad43063b30ac167e1ed73bfb549"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#af354cad43063b30ac167e1ed73bfb549">close</a> () override</td></tr>
+<tr class="memdesc:af354cad43063b30ac167e1ed73bfb549 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭socket <br /></td></tr>
+<tr class="separator:af354cad43063b30ac167e1ed73bfb549 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3a1f6975f5ce1dd56f317ee55d8e8ab8"></a>
+Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a3a1f6975f5ce1dd56f317ee55d8e8ab8">getSocket</a> () const</td></tr>
+<tr class="memdesc:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Socket类 <br /></td></tr>
+<tr class="separator:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a488ce96a03f795dc9d27e35abd4901c7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a488ce96a03f795dc9d27e35abd4901c7">isConnected</a> () const</td></tr>
+<tr class="memdesc:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回是否连接 <br /></td></tr>
+<tr class="separator:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb705dcbb9cc35d0ab824f0dd5bf7d6b inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="adb705dcbb9cc35d0ab824f0dd5bf7d6b"></a>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getRemoteAddress</b> ()</td></tr>
+<tr class="separator:adb705dcbb9cc35d0ab824f0dd5bf7d6b inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6336032caa25921d41582b517d67ac69 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a6336032caa25921d41582b517d67ac69"></a>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalAddress</b> ()</td></tr>
+<tr class="separator:a6336032caa25921d41582b517d67ac69 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877834b94a234c8568bf45ca18c22336 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a877834b94a234c8568bf45ca18c22336"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getRemoteAddressString</b> ()</td></tr>
+<tr class="separator:a877834b94a234c8568bf45ca18c22336 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad756475d10dd09f011b12ab36a97c679 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ad756475d10dd09f011b12ab36a97c679"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalAddressString</b> ()</td></tr>
+<tr class="separator:ad756475d10dd09f011b12ab36a97c679 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="a67520125cad49bb3fb4835a36ec56762"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">~Stream</a> ()</td></tr>
+<tr class="memdesc:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a> (void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">更多...</a><br /></td></tr>
+<tr class="separator:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">readFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">更多...</a><br /></td></tr>
+<tr class="separator:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a> (const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">更多...</a><br /></td></tr>
+<tr class="separator:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">writeFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">更多...</a><br /></td></tr>
+<tr class="separator:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a694b4db16f7a23f02626eff5ffd5c4e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a694b4db16f7a23f02626eff5ffd5c4e3">DoGet</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a694b4db16f7a23f02626eff5ffd5c4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a694b4db16f7a23f02626eff5ffd5c4e3">更多...</a><br /></td></tr>
+<tr class="separator:a694b4db16f7a23f02626eff5ffd5c4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7561a0ba7edeab60930d81b08ee15fd2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a7561a0ba7edeab60930d81b08ee15fd2">DoGet</a> (<a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a7561a0ba7edeab60930d81b08ee15fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a7561a0ba7edeab60930d81b08ee15fd2">更多...</a><br /></td></tr>
+<tr class="separator:a7561a0ba7edeab60930d81b08ee15fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488acf9e582f69dc2f643a3e9ded0d22"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a488acf9e582f69dc2f643a3e9ded0d22">DoPost</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a488acf9e582f69dc2f643a3e9ded0d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a488acf9e582f69dc2f643a3e9ded0d22">更多...</a><br /></td></tr>
+<tr class="separator:a488acf9e582f69dc2f643a3e9ded0d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1691f5485c6a08402e7f72746fc6f320"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a1691f5485c6a08402e7f72746fc6f320">DoPost</a> (<a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a1691f5485c6a08402e7f72746fc6f320"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a1691f5485c6a08402e7f72746fc6f320">更多...</a><br /></td></tr>
+<tr class="separator:a1691f5485c6a08402e7f72746fc6f320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf656bf16aefcf3c5962e452789309e0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#abf656bf16aefcf3c5962e452789309e0">DoRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:abf656bf16aefcf3c5962e452789309e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnection.html#abf656bf16aefcf3c5962e452789309e0">更多...</a><br /></td></tr>
+<tr class="separator:abf656bf16aefcf3c5962e452789309e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1dde7d817fdbbffe4266dec338a83e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#a4a1dde7d817fdbbffe4266dec338a83e">DoRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, <a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a4a1dde7d817fdbbffe4266dec338a83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnection.html#a4a1dde7d817fdbbffe4266dec338a83e">更多...</a><br /></td></tr>
+<tr class="separator:a4a1dde7d817fdbbffe4266dec338a83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb80e4053a9baac4c18be0c6ef7a545"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnection.html#abeb80e4053a9baac4c18be0c6ef7a545">DoRequest</a> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> req, <a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms)</td></tr>
+<tr class="memdesc:abeb80e4053a9baac4c18be0c6ef7a545"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnection.html#abeb80e4053a9baac4c18be0c6ef7a545">更多...</a><br /></td></tr>
+<tr class="separator:abeb80e4053a9baac4c18be0c6ef7a545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:ab0ebe12cfc12798e7a08d6de4e1c849f"><td class="memItemLeft" align="right" valign="top"><a id="ab0ebe12cfc12798e7a08d6de4e1c849f"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>HttpConnectionPool</b></td></tr>
+<tr class="separator:ab0ebe12cfc12798e7a08d6de4e1c849f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a358b16565b6adfbf882abb54def5c600"></a>
+Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a358b16565b6adfbf882abb54def5c600">m_socket</a></td></tr>
+<tr class="memdesc:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket类 <br /></td></tr>
+<tr class="separator:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a86cc9c7048fa2577499a5084178081ca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a86cc9c7048fa2577499a5084178081ca">m_owner</a></td></tr>
+<tr class="memdesc:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否主控 <br /></td></tr>
+<tr class="separator:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP客户端类 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2a25ae52fb5ff7c6bc1f38bf227187da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a25ae52fb5ff7c6bc1f38bf227187da">&#9670;&nbsp;</a></span>HttpConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylar::http::HttpConnection::HttpConnection </td>
+          <td>(</td>
+          <td class="paramtype">Socket::ptr&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>owner</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sock</td><td>Socket类 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">owner</td><td>是否掌握所有权 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a694b4db16f7a23f02626eff5ffd5c4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694b4db16f7a23f02626eff5ffd5c4e3">&#9670;&nbsp;</a></span>DoGet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoGet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP的GET请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的url </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a7561a0ba7edeab60930d81b08ee15fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7561a0ba7edeab60930d81b08ee15fd2">&#9670;&nbsp;</a></span>DoGet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP的GET请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>URI结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a488acf9e582f69dc2f643a3e9ded0d22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488acf9e582f69dc2f643a3e9ded0d22">&#9670;&nbsp;</a></span>DoPost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoPost </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP的POST请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>请求的url </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a1691f5485c6a08402e7f72746fc6f320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1691f5485c6a08402e7f72746fc6f320">&#9670;&nbsp;</a></span>DoPost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoPost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP的POST请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>URI结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="abf656bf16aefcf3c5962e452789309e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf656bf16aefcf3c5962e452789309e0">&#9670;&nbsp;</a></span>DoRequest() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>请求类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>请求的url </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a4a1dde7d817fdbbffe4266dec338a83e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1dde7d817fdbbffe4266dec338a83e">&#9670;&nbsp;</a></span>DoRequest() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>请求类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>URI结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">headers</td><td>HTTP请求头部参数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">body</td><td>请求消息体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="abeb80e4053a9baac4c18be0c6ef7a545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb80e4053a9baac4c18be0c6ef7a545">&#9670;&nbsp;</a></span>DoRequest() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnection::DoRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a>&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送HTTP请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>请求结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uri</td><td>URI结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>超时时间(毫秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回HTTP结果结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a32e070e43231c968d46cb7d359b14a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e070e43231c968d46cb7d359b14a57">&#9670;&nbsp;</a></span>sendRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sylar::http::HttpConnection::sendRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a>&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送HTTP请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>HTTP请求结构 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/http/<a class="el" href="http__connection_8h_source.html">http_connection.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

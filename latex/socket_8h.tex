@@ -1,0 +1,65 @@
+\doxysection{sylar/socket.h 文件参考}
+\label{socket_8h}\index{sylar/socket.h@{sylar/socket.h}}
+
+
+Socket封装  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/err.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/ssl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}noncopyable.\+h\char`\"{}}\newline
+socket.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ sylar\+::\+Socket}
+\begin{DoxyCompactList}\small\item\em Socket封装类 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+S\+S\+L\+Socket}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ sylar\+::operator$<$$<$} (std\+::ostream \&os, const Socket \&sock)
+\begin{DoxyCompactList}\small\item\em 流式输出socket \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Socket封装 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/06-\/05 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\label{socket_8h_ab6c2c551f9e83e9100c345afb66e83cd}} 
+\index{socket.h@{socket.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!socket.h@{socket.h}}
+\doxysubsubsection{operator$<$$<$()}
+{\footnotesize\ttfamily std\+::ostream\& sylar\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Socket} \&}]{sock }\end{DoxyParamCaption})}
+
+
+
+流式输出socket 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em os} & 输出流 \\
+\hline
+\mbox{\texttt{ in}}  & {\em sock} & Socket类 \\
+\hline
+\end{DoxyParams}

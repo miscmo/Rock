@@ -19,7 +19,7 @@
 #include <vector>
 #include <string>
 #include <iomanip>
-#include <json/json.h>
+#include <jsoncpp/json/json.h>
 #include <yaml-cpp/yaml.h>
 #include <iostream>
 #include <boost/lexical_cast.hpp>

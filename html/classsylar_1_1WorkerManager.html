@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::WorkerManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1WorkerManager.html">WorkerManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1WorkerManager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::WorkerManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::WorkerManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5425403499fa3aff37c5894487878eac"><td class="memItemLeft" align="right" valign="top"><a id="a5425403499fa3aff37c5894487878eac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (Scheduler::ptr s)</td></tr>
+<tr class="separator:a5425403499fa3aff37c5894487878eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb7febbae527ce5c3b5df08632e23c3"><td class="memItemLeft" align="right" valign="top"><a id="a4fb7febbae527ce5c3b5df08632e23c3"></a>
+Scheduler::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:a4fb7febbae527ce5c3b5df08632e23c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8d49e983d37ccba9b3a3044fa34883"><td class="memItemLeft" align="right" valign="top"><a id="aec8d49e983d37ccba9b3a3044fa34883"></a>
+IOManager::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getAsIOManager</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:aec8d49e983d37ccba9b3a3044fa34883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7462da15964682f7fbe718ad89878aba"><td class="memTemplParams" colspan="2"><a id="a7462da15964682f7fbe718ad89878aba"></a>
+template&lt;class FiberOrCb &gt; </td></tr>
+<tr class="memitem:a7462da15964682f7fbe718ad89878aba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>schedule</b> (const std::string &amp;name, FiberOrCb fc, int thread=-1)</td></tr>
+<tr class="separator:a7462da15964682f7fbe718ad89878aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac411c091f6fec125a2a75f3c425ea404"><td class="memTemplParams" colspan="2"><a id="ac411c091f6fec125a2a75f3c425ea404"></a>
+template&lt;class Iter &gt; </td></tr>
+<tr class="memitem:ac411c091f6fec125a2a75f3c425ea404"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>schedule</b> (const std::string &amp;name, Iter begin, Iter end)</td></tr>
+<tr class="separator:ac411c091f6fec125a2a75f3c425ea404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba6d6ad490257080a56a54a528d5e9a"><td class="memItemLeft" align="right" valign="top"><a id="a9ba6d6ad490257080a56a54a528d5e9a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:a9ba6d6ad490257080a56a54a528d5e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3d49b584157bd77f912630a992c7ffc"><td class="memItemLeft" align="right" valign="top"><a id="aa3d49b584157bd77f912630a992c7ffc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (const std::map&lt; std::string, std::map&lt; std::string, std::string &gt; &gt; &amp;v)</td></tr>
+<tr class="separator:aa3d49b584157bd77f912630a992c7ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25062fdd2d54e7c27ff267ae599541e5"><td class="memItemLeft" align="right" valign="top"><a id="a25062fdd2d54e7c27ff267ae599541e5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="separator:a25062fdd2d54e7c27ff267ae599541e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f7e5c9622c2f0605359888dfbb8cac"><td class="memItemLeft" align="right" valign="top"><a id="af9f7e5c9622c2f0605359888dfbb8cac"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStoped</b> () const</td></tr>
+<tr class="separator:af9f7e5c9622c2f0605359888dfbb8cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98cbb2e9f35b33924d4060f30128907"><td class="memItemLeft" align="right" valign="top"><a id="aa98cbb2e9f35b33924d4060f30128907"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (std::ostream &amp;os)</td></tr>
+<tr class="separator:aa98cbb2e9f35b33924d4060f30128907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b70787b7c32e4ace1bf2972d518bd7c"><td class="memItemLeft" align="right" valign="top"><a id="a4b70787b7c32e4ace1bf2972d518bd7c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getCount</b> ()</td></tr>
+<tr class="separator:a4b70787b7c32e4ace1bf2972d518bd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/<a class="el" href="worker_8h_source.html">worker.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

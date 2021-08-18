@@ -1,0 +1,220 @@
+\doxysection{sylar\+::Address类 参考}
+\label{classsylar_1_1Address}\index{sylar::Address@{sylar::Address}}
+
+
+网络地址的基类,抽象类  
+
+
+
+
+{\ttfamily \#include $<$address.\+h$>$}
+
+
+
+类 sylar\+::Address 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Address 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Address_a2b82fb30d49a7f1711673631147cbdf3}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Address} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Address_abffdc6ae0881ed27b792f8579b38d064}} 
+virtual \textbf{ $\sim$\+Address} ()
+\begin{DoxyCompactList}\small\item\em 虚析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a444e5bd34d57b12731f4c376c233e0e9}} 
+int \textbf{ get\+Family} () const
+\begin{DoxyCompactList}\small\item\em 返回协议簇 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a765604df00b6ff2126e65adcd07e3978}} 
+virtual const sockaddr $\ast$ \textbf{ get\+Addr} () const =0
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,只读 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a8986896d6e0dc66e4a009e70b2667eae}} 
+virtual sockaddr $\ast$ \textbf{ get\+Addr} ()=0
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,读写 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a5b631ce2267ce84d8f72425ce9751ee2}} 
+virtual socklen\+\_\+t \textbf{ get\+Addr\+Len} () const =0
+\begin{DoxyCompactList}\small\item\em 返回sockaddr的长度 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a742bad4d1f64bf512c63c47f145314c9}} 
+virtual std\+::ostream \& \textbf{ insert} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em 可读性输出地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_a4901a19b98804592c37083b1d130f770}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em 返回可读性字符串 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_af43392d1f8eb8225dedbf9777ccfe02d}} 
+bool \textbf{ operator$<$} (const \textbf{ Address} \&rhs) const
+\begin{DoxyCompactList}\small\item\em 小于号比较函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_aa5cefbfc8b7bd7f72ec43bdb3ca0f65a}} 
+bool \textbf{ operator==} (const \textbf{ Address} \&rhs) const
+\begin{DoxyCompactList}\small\item\em 等于函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Address_aeddd93523bee6d0b7dc313765027fb31}} 
+bool \textbf{ operator!=} (const \textbf{ Address} \&rhs) const
+\begin{DoxyCompactList}\small\item\em 不等于函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static Address\+::ptr \textbf{ Create} (const sockaddr $\ast$addr, socklen\+\_\+t addrlen)
+\begin{DoxyCompactList}\small\item\em 通过sockaddr指针创建\+Address \end{DoxyCompactList}\item 
+static bool \textbf{ Lookup} (std\+::vector$<$ Address\+::ptr $>$ \&result, const std\+::string \&host, int family=A\+F\+\_\+\+I\+N\+ET, int type=0, int protocol=0)
+\begin{DoxyCompactList}\small\item\em 通过host地址返回对应条件的所有\+Address \end{DoxyCompactList}\item 
+static Address\+::ptr \textbf{ Lookup\+Any} (const std\+::string \&host, int family=A\+F\+\_\+\+I\+N\+ET, int type=0, int protocol=0)
+\begin{DoxyCompactList}\small\item\em 通过host地址返回对应条件的任意\+Address \end{DoxyCompactList}\item 
+static std\+::shared\+\_\+ptr$<$ \textbf{ I\+P\+Address} $>$ \textbf{ Lookup\+Any\+I\+P\+Address} (const std\+::string \&host, int family=A\+F\+\_\+\+I\+N\+ET, int type=0, int protocol=0)
+\begin{DoxyCompactList}\small\item\em 通过host地址返回对应条件的任意\+I\+P\+Address \end{DoxyCompactList}\item 
+static bool \textbf{ Get\+Interface\+Addresses} (std\+::multimap$<$ std\+::string, std\+::pair$<$ Address\+::ptr, uint32\+\_\+t $>$ $>$ \&result, int family=A\+F\+\_\+\+I\+N\+ET)
+\begin{DoxyCompactList}\small\item\em 返回本机所有网卡的$<$网卡名, 地址, 子网掩码位数$>$ \end{DoxyCompactList}\item 
+static bool \textbf{ Get\+Interface\+Addresses} (std\+::vector$<$ std\+::pair$<$ Address\+::ptr, uint32\+\_\+t $>$ $>$ \&result, const std\+::string \&iface, int family=A\+F\+\_\+\+I\+N\+ET)
+\begin{DoxyCompactList}\small\item\em 获取指定网卡的地址和子网掩码位数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+网络地址的基类,抽象类 
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1Address_afcab917da5a65ee1389d5c6866730ef7}} 
+\index{sylar::Address@{sylar::Address}!Create@{Create}}
+\index{Create@{Create}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{Create()}
+{\footnotesize\ttfamily static Address\+::ptr sylar\+::\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const sockaddr $\ast$}]{addr,  }\item[{socklen\+\_\+t}]{addrlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过sockaddr指针创建\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em addr} & sockaddr指针 \\
+\hline
+\mbox{\texttt{ in}}  & {\em addrlen} & sockaddr的长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回和sockaddr相匹配的\+Address,失败返回nullptr 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1Address_a38050d568fa986dd2682960dcd2dd7ed}} 
+\index{sylar::Address@{sylar::Address}!GetInterfaceAddresses@{GetInterfaceAddresses}}
+\index{GetInterfaceAddresses@{GetInterfaceAddresses}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{GetInterfaceAddresses()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool sylar\+::\+Address\+::\+Get\+Interface\+Addresses (\begin{DoxyParamCaption}\item[{std\+::multimap$<$ std\+::string, std\+::pair$<$ Address\+::ptr, uint32\+\_\+t $>$ $>$ \&}]{result,  }\item[{int}]{family = {\ttfamily AF\+\_\+INET} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+返回本机所有网卡的$<$网卡名, 地址, 子网掩码位数$>$ 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em result} & 保存本机所有地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em family} & 协议族(\+A\+F\+\_\+\+I\+N\+T, A\+F\+\_\+\+I\+N\+T6, A\+F\+\_\+\+U\+N\+I\+X) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否获取成功 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1Address_a303a88dd9b049e959da973871a508185}} 
+\index{sylar::Address@{sylar::Address}!GetInterfaceAddresses@{GetInterfaceAddresses}}
+\index{GetInterfaceAddresses@{GetInterfaceAddresses}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{GetInterfaceAddresses()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool sylar\+::\+Address\+::\+Get\+Interface\+Addresses (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ Address\+::ptr, uint32\+\_\+t $>$ $>$ \&}]{result,  }\item[{const std\+::string \&}]{iface,  }\item[{int}]{family = {\ttfamily AF\+\_\+INET} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+获取指定网卡的地址和子网掩码位数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em result} & 保存指定网卡所有地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em iface} & 网卡名称 \\
+\hline
+\mbox{\texttt{ in}}  & {\em family} & 协议族(\+A\+F\+\_\+\+I\+N\+T, A\+F\+\_\+\+I\+N\+T6, A\+F\+\_\+\+U\+N\+I\+X) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否获取成功 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1Address_ad3a83af82a51329d4e1e0a9321be8970}} 
+\index{sylar::Address@{sylar::Address}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{Lookup()}
+{\footnotesize\ttfamily static bool sylar\+::\+Address\+::\+Lookup (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Address\+::ptr $>$ \&}]{result,  }\item[{const std\+::string \&}]{host,  }\item[{int}]{family = {\ttfamily AF\+\_\+INET},  }\item[{int}]{type = {\ttfamily 0},  }\item[{int}]{protocol = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过host地址返回对应条件的所有\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em result} & 保存满足条件的\+Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em host} & 域名,服务器名等.\+举例\+: www.\+sylar.\+top[\+:80] (方括号为可选内容) \\
+\hline
+\mbox{\texttt{ in}}  & {\em family} & 协议族(\+A\+F\+\_\+\+I\+N\+T, A\+F\+\_\+\+I\+N\+T6, A\+F\+\_\+\+U\+N\+I\+X) \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & socketl类型\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M、\+S\+O\+C\+K\+\_\+\+D\+G\+R\+AM 等 \\
+\hline
+\mbox{\texttt{ in}}  & {\em protocol} & 协议,I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+C\+P、\+I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP 等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回是否转换成功 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1Address_a57eeaa6c68307f857d3750790f9ff7c2}} 
+\index{sylar::Address@{sylar::Address}!LookupAny@{LookupAny}}
+\index{LookupAny@{LookupAny}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{LookupAny()}
+{\footnotesize\ttfamily static Address\+::ptr sylar\+::\+Address\+::\+Lookup\+Any (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{family = {\ttfamily AF\+\_\+INET},  }\item[{int}]{type = {\ttfamily 0},  }\item[{int}]{protocol = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过host地址返回对应条件的任意\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em host} & 域名,服务器名等.\+举例\+: www.\+sylar.\+top[\+:80] (方括号为可选内容) \\
+\hline
+\mbox{\texttt{ in}}  & {\em family} & 协议族(\+A\+F\+\_\+\+I\+N\+T, A\+F\+\_\+\+I\+N\+T6, A\+F\+\_\+\+U\+N\+I\+X) \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & socketl类型\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M、\+S\+O\+C\+K\+\_\+\+D\+G\+R\+AM 等 \\
+\hline
+\mbox{\texttt{ in}}  & {\em protocol} & 协议,I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+C\+P、\+I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP 等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回满足条件的任意\+Address,失败返回nullptr 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1Address_afd9a68b292552e5d39d4f5240ca0c88d}} 
+\index{sylar::Address@{sylar::Address}!LookupAnyIPAddress@{LookupAnyIPAddress}}
+\index{LookupAnyIPAddress@{LookupAnyIPAddress}!sylar::Address@{sylar::Address}}
+\doxysubsubsection{LookupAnyIPAddress()}
+{\footnotesize\ttfamily static std\+::shared\+\_\+ptr$<$\textbf{ I\+P\+Address}$>$ sylar\+::\+Address\+::\+Lookup\+Any\+I\+P\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{family = {\ttfamily AF\+\_\+INET},  }\item[{int}]{type = {\ttfamily 0},  }\item[{int}]{protocol = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过host地址返回对应条件的任意\+I\+P\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em host} & 域名,服务器名等.\+举例\+: www.\+sylar.\+top[\+:80] (方括号为可选内容) \\
+\hline
+\mbox{\texttt{ in}}  & {\em family} & 协议族(\+A\+F\+\_\+\+I\+N\+T, A\+F\+\_\+\+I\+N\+T6, A\+F\+\_\+\+U\+N\+I\+X) \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & socketl类型\+S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+A\+M、\+S\+O\+C\+K\+\_\+\+D\+G\+R\+AM 等 \\
+\hline
+\mbox{\texttt{ in}}  & {\em protocol} & 协议,I\+P\+P\+R\+O\+T\+O\+\_\+\+T\+C\+P、\+I\+P\+P\+R\+O\+T\+O\+\_\+\+U\+DP 等 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回满足条件的任意\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ address.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,18 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="sylar::IRedis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1IRedis.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="sylar::FoxRedis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1FoxRedis.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sylar::FoxRedisCluster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1FoxRedisCluster.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sylar::ISyncRedis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ISyncRedis.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sylar::Redis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Redis.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sylar::RedisCluster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RedisCluster.html",tooltip=" "];
+}

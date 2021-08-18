@@ -180,6 +180,7 @@ void TimerManager::addTimer(Timer::ptr val, RWMutexType::WriteLock& lock) {
     lock.unlock();
 
     if(at_front) {
+        //如果插入的定时器是最小的，需要唤醒epoll并修改定时时间
         onTimerInsertedAtFront();
     }
 }

@@ -1,0 +1,68 @@
+\doxysection{sylar\+::Tcp\+Server\+Conf结构体 参考}
+\label{structsylar_1_1TcpServerConf}\index{sylar::TcpServerConf@{sylar::TcpServerConf}}
+
+
+sylar\+::Tcp\+Server\+Conf 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a2d164dd755d897b6a70d065ca9a51961}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Tcp\+Server\+Conf} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a6e2b5786177136e6630c5ca6acb400e3}} 
+bool {\bfseries is\+Valid} () const
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_ae6ebdb656167d8dd12dbf0b767cd0aff}} 
+bool {\bfseries operator==} (const \textbf{ Tcp\+Server\+Conf} \&oth) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a201a773bf05dac13e3fadfe6220e660f}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries address}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a854409c2b782ae2698062e4762b887f3}} 
+int {\bfseries keepalive} = 0
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a1a3eda55e92c48c7c523a9b43d915f3e}} 
+int {\bfseries timeout} = 1000 $\ast$ 2 $\ast$ 60
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a628ed1b1393fe3b1140f6afa8ef91ac5}} 
+int {\bfseries ssl} = 0
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_afedf134d5e66ceb28afa9ef3a3ccdab3}} 
+std\+::string {\bfseries id}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a4020af7912328173b72e0658734f3bb2}} 
+std\+::string \textbf{ type} = \char`\"{}http\char`\"{}
+\begin{DoxyCompactList}\small\item\em 服务器类型，http, ws, rock \end{DoxyCompactList}\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a372d459e5b3e70f3b41aebace2cc4392}} 
+std\+::string {\bfseries name}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_add863264536303ea8de7d5a385ccb620}} 
+std\+::string {\bfseries cert\+\_\+file}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_afec67a52134bb6a5f4204467d930cd13}} 
+std\+::string {\bfseries key\+\_\+file}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_a1c101c984f2b9dda3ee58193f78b783e}} 
+std\+::string {\bfseries accept\+\_\+worker}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_ab21d979c20f20fe74a792b4fb6c11814}} 
+std\+::string {\bfseries io\+\_\+worker}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_ad7d5f585bb5281d67bdd5b4afe50bc54}} 
+std\+::string {\bfseries process\+\_\+worker}
+\item 
+\mbox{\label{structsylar_1_1TcpServerConf_adec6cc3e1283b574139b0cad3fd06897}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries args}
+\end{DoxyCompactItemize}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ tcp\+\_\+server.\+h}\end{DoxyCompactItemize}

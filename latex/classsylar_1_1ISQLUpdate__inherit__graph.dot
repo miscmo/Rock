@@ -1,0 +1,19 @@
+digraph "sylar::ISQLUpdate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::ISQLUpdate\n||+ ~ISQLUpdate()\l+ execute()\l+ execute()\l+ getLastInsertId()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{sylar::IDB\n||+ ~IDB()\l+ prepare()\l+ getErrno()\l+ getErrStr()\l+ openTransaction()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1IDB.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{sylar::MySQL\n||+ MySQL()\l+ connect()\l+ ping()\l+ execute()\l+ execute()\l+ execute()\l+ getLastInsertId()\l+ getMySQL()\l+ getRaw()\l+ getAffectedRows()\l和 12 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1MySQL.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node4 [label="{sylar::SQLite3\n||+ ~SQLite3()\l+ prepare()\l+ getErrno()\l+ getErrStr()\l+ execute()\l+ execute()\l+ execute()\l+ getLastInsertId()\l+ query()\l+ query()\l+ openTransaction()\l+ execStmt()\l+ queryStmt()\l+ close()\l+ getDB()\l+ Create()\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1SQLite3.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node5 [label="{sylar::ITransaction\n||+ ~ITransaction()\l+ begin()\l+ commit()\l+ rollback()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ITransaction.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node6 [label="{sylar::MySQLTransaction\n||+ ~MySQLTransaction()\l+ begin()\l+ commit()\l+ rollback()\l+ execute()\l+ execute()\l+ execute()\l+ getLastInsertId()\l+ getMySQL()\l+ isAutoCommit()\l+ isFinished()\l+ isError()\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1MySQLTransaction.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node7 [label="{sylar::SQLite3Transaction\n||+ SQLite3Transaction()\l+ ~SQLite3Transaction()\l+ begin()\l+ commit()\l+ rollback()\l+ execute()\l+ execute()\l+ getLastInsertId()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1SQLite3Transaction.html",tooltip=" "];
+}

@@ -1,0 +1,95 @@
+\doxysection{httpclient\+\_\+parser结构体 参考}
+\label{structhttpclient__parser}\index{httpclient\_parser@{httpclient\_parser}}
+
+
+{\ttfamily \#include $<$httpclient\+\_\+parser.\+h$>$}
+
+
+
+httpclient\+\_\+parser 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structhttpclient__parser_aa8c90d35a60a527eabf21a09ea3b94e6}} 
+int {\bfseries cs}
+\item 
+\mbox{\label{structhttpclient__parser_a12412a14689d55898c483835c04c23a9}} 
+size\+\_\+t {\bfseries body\+\_\+start}
+\item 
+\mbox{\label{structhttpclient__parser_a5c4e8e59ca2c66eae73bc3be35d2c377}} 
+int {\bfseries content\+\_\+len}
+\item 
+\mbox{\label{structhttpclient__parser_af85c5dc6285fe9d0288cc6c6a1d5fb84}} 
+int {\bfseries status}
+\item 
+\mbox{\label{structhttpclient__parser_a8fbeb08c7c5e648ea0b41f2d6ca3b7bc}} 
+int {\bfseries chunked}
+\item 
+\mbox{\label{structhttpclient__parser_a642b2b2e96a1296a4841d085829da89b}} 
+int {\bfseries chunks\+\_\+done}
+\item 
+\mbox{\label{structhttpclient__parser_a8744b609523b47f757cac65908ff175d}} 
+int {\bfseries close}
+\item 
+\mbox{\label{structhttpclient__parser_aa4b44a0bdc12f9e6bb88b8c13b202bdd}} 
+size\+\_\+t {\bfseries nread}
+\item 
+\mbox{\label{structhttpclient__parser_a9e3461bc5c8307bc6c60f13a3483ef43}} 
+size\+\_\+t {\bfseries mark}
+\item 
+\mbox{\label{structhttpclient__parser_aa4eda478b568c3bfa065e79a76d9e8c9}} 
+size\+\_\+t {\bfseries field\+\_\+start}
+\item 
+\mbox{\label{structhttpclient__parser_a9cbb4c0400d75de2b146efc258d14e71}} 
+size\+\_\+t {\bfseries field\+\_\+len}
+\item 
+\mbox{\label{structhttpclient__parser_a503b652da4b9ab2f54eab657d2d78580}} 
+void $\ast$ {\bfseries data}
+\item 
+\mbox{\label{structhttpclient__parser_ae9794869caf44c859201acd197329a1a}} 
+field\+\_\+cb {\bfseries http\+\_\+field}
+\item 
+\mbox{\label{structhttpclient__parser_ace88a032ee54e559c09034951be47f8e}} 
+element\+\_\+cb {\bfseries reason\+\_\+phrase}
+\item 
+\mbox{\label{structhttpclient__parser_a2513bc5da97ddd91e4d4a6d19d43db72}} 
+element\+\_\+cb {\bfseries status\+\_\+code}
+\item 
+\mbox{\label{structhttpclient__parser_ac333b884bad90b26aec6e05c5a80968b}} 
+element\+\_\+cb {\bfseries chunk\+\_\+size}
+\item 
+\mbox{\label{structhttpclient__parser_ac69d43be3300bba9e349f24ff58f41c2}} 
+element\+\_\+cb {\bfseries http\+\_\+version}
+\item 
+\mbox{\label{structhttpclient__parser_a1438521fba8a12f7e68f6b650997ad39}} 
+element\+\_\+cb {\bfseries header\+\_\+done}
+\item 
+\mbox{\label{structhttpclient__parser_a559d889d8bb1b984d1656f2c6359af78}} 
+element\+\_\+cb {\bfseries last\+\_\+chunk}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Copyright (c) 2010, Zed A. Shaw and Mongrel2 Project Contributors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+: \begin{DoxyVerb}* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+* Neither the name of the Mongrel2 Project, Zed A. Shaw, nor the names
+  of its contributors may be used to endorse or promote products
+  derived from this software without specific prior written
+  permission.
+\end{DoxyVerb}
+
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S
+\+I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/httpclient\+\_\+parser.\+h\end{DoxyCompactItemize}

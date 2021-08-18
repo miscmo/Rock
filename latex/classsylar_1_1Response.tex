@@ -1,0 +1,69 @@
+\doxysection{sylar\+::Response类 参考}
+\label{classsylar_1_1Response}\index{sylar::Response@{sylar::Response}}
+
+
+类 sylar\+::Response 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Response 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Response_afbf48f9d31cd13a406443e82d4a9026d}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Response} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Response_ad76eb320e05be0bfee6e12eb64c0cecf}} 
+uint32\+\_\+t {\bfseries get\+Sn} () const
+\item 
+\mbox{\label{classsylar_1_1Response_a6fd903628861078e7d4c59a04eb688f7}} 
+uint32\+\_\+t {\bfseries get\+Cmd} () const
+\item 
+\mbox{\label{classsylar_1_1Response_ac4dc993f9ab3350dccde9f9604717a1e}} 
+uint32\+\_\+t {\bfseries get\+Result} () const
+\item 
+\mbox{\label{classsylar_1_1Response_a03f6038c2a8ba38e1efbd21aa9ab26fe}} 
+const std\+::string \& {\bfseries get\+Result\+Str} () const
+\item 
+\mbox{\label{classsylar_1_1Response_aea92612ea97b72f22a71da5e4d9a04d4}} 
+void {\bfseries set\+Sn} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1Response_a876fd241b819cfde04c4a856d981dc45}} 
+void {\bfseries set\+Cmd} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1Response_abbac3e05d545281d7dc5f93ad659c78e}} 
+void {\bfseries set\+Result} (uint32\+\_\+t v)
+\item 
+\mbox{\label{classsylar_1_1Response_acc6e076527797c4aa3a08bd00b62f260}} 
+void {\bfseries set\+Result\+Str} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1Response_a77e23d2bfb28e8046728992f17e592d7}} 
+virtual bool {\bfseries serialize\+To\+Byte\+Array} (Byte\+Array\+::ptr bytearray) override
+\item 
+\mbox{\label{classsylar_1_1Response_a014b328ad61b3feeeaf53377c4a487b6}} 
+virtual bool {\bfseries parse\+From\+Byte\+Array} (Byte\+Array\+::ptr bytearray) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Response_ade2da332ee610ec5813a46ae6cc08cd0}} 
+uint32\+\_\+t {\bfseries m\+\_\+sn}
+\item 
+\mbox{\label{classsylar_1_1Response_a7fa96d6fedfbc8b92f8f8f0592358b94}} 
+uint32\+\_\+t {\bfseries m\+\_\+cmd}
+\item 
+\mbox{\label{classsylar_1_1Response_a108986c297bf36041d142899b1d9c304}} 
+uint32\+\_\+t {\bfseries m\+\_\+result}
+\item 
+\mbox{\label{classsylar_1_1Response_a26106857d48ce814f332966f5f9056b0}} 
+std\+::string {\bfseries m\+\_\+result\+Str}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ protocol.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+\doxysection{sylar\+::http\+::Http\+Connection\+Pool类 参考}
+\label{classsylar_1_1http_1_1HttpConnectionPool}\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+
+
+sylar\+::http\+::Http\+Connection\+Pool 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ad409f599e64bd4f9104fbb489d5ca559}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Connection\+Pool} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a67fc08ab4e76220f39d2225f24ffce44}} 
+typedef \textbf{ Mutex} {\bfseries Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a045aa910d746fb138d1100a2508c83a2}} 
+{\bfseries Http\+Connection\+Pool} (const std\+::string \&host, const std\+::string \&vhost, uint32\+\_\+t port, bool is\+\_\+https, uint32\+\_\+t max\+\_\+size, uint32\+\_\+t max\+\_\+alive\+\_\+time, uint32\+\_\+t max\+\_\+request)
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ae61677cedc82af909352e290bdfb5ee2}} 
+\textbf{ Http\+Connection\+::ptr} {\bfseries get\+Connection} ()
+\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Get} (const std\+::string \&url, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P的\+G\+E\+T请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Get} (\textbf{ Uri\+::ptr} uri, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P的\+G\+E\+T请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Post} (const std\+::string \&url, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P的\+P\+O\+S\+T请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Post} (\textbf{ Uri\+::ptr} uri, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P的\+P\+O\+S\+T请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Request} (\textbf{ Http\+Method} method, const std\+::string \&url, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Request} (\textbf{ Http\+Method} method, \textbf{ Uri\+::ptr} uri, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P请求 \end{DoxyCompactList}\item 
+\textbf{ Http\+Result\+::ptr} \textbf{ do\+Request} (\textbf{ Http\+Request\+::ptr} req, uint64\+\_\+t timeout\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em 发送\+H\+T\+T\+P请求 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a19a0fb856b8eb4eabaebcba5c7e163d9}} 
+static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&uri, const std\+::string \&vhost, uint32\+\_\+t max\+\_\+size, uint32\+\_\+t max\+\_\+alive\+\_\+time, uint32\+\_\+t max\+\_\+request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a68ce48ac37128b246b0c7d04f904ad31}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doGet@{doGet}}
+\index{doGet@{doGet}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doGet()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P的\+G\+E\+T请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em url} & 请求的url \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_af231809abe374bfd498486766c7925bf}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doGet@{doGet}}
+\index{doGet@{doGet}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doGet()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P的\+G\+E\+T请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em uri} & U\+R\+I结构体 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a58617111cf236af5849a9f7eaf5e682e}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doPost@{doPost}}
+\index{doPost@{doPost}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doPost()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P的\+P\+O\+S\+T请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em url} & 请求的url \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a32593d1f4f5e111983cd40ba804e6bda}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doPost@{doPost}}
+\index{doPost@{doPost}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doPost()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P的\+P\+O\+S\+T请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em uri} & U\+R\+I结构体 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_aced59271181c7f7f0afd65d2ec4cc6b0}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em method} & 请求类型 \\
+\hline
+\mbox{\texttt{ in}}  & {\em uri} & 请求的url \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ad1c1faa8b6652a17e5189d23f612fd8b}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em method} & 请求类型 \\
+\hline
+\mbox{\texttt{ in}}  & {\em uri} & U\+R\+I结构体 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\mbox{\texttt{ in}}  & {\em headers} & H\+T\+T\+P请求头部参数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em body} & 请求消息体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a8aabb8a66c2f47cff0c10466a7433007}} 
+\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+发送\+H\+T\+T\+P请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em req} & 请求结构体 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回\+H\+T\+T\+P结果结构体 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ http\+\_\+connection.\+h}\end{DoxyCompactItemize}

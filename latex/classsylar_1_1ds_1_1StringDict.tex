@@ -1,0 +1,56 @@
+\doxysection{sylar\+::ds\+::String\+Dict类 参考}
+\label{classsylar_1_1ds_1_1StringDict}\index{sylar::ds::StringDict@{sylar::ds::StringDict}}
+
+
+sylar\+::ds\+::String\+Dict 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a955acbf68c2a491bf03b42548f8159c9}} 
+uint64\+\_\+t {\bfseries update} (const std\+::string \&str)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_ad7ab7429a1fdf2d51306f622bf9067f3}} 
+uint64\+\_\+t {\bfseries update} (const char $\ast$str, const uint32\+\_\+t \&size)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a757dfa0ad4285ef0a2877931ad000da5}} 
+uint64\+\_\+t {\bfseries update} (const char $\ast$str)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a0dbc9e6db4374cd6c2add4c15bc6038a}} 
+std\+::string {\bfseries get} (const uint64\+\_\+t \&id)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a9839f40c1c43505e82d1cf8cc98481be}} 
+\textbf{ Shared\+Array}$<$ char $>$ {\bfseries get\+Raw} (const uint64\+\_\+t \&id, bool duplicate=true)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a52a855311098f9bd7b3fd5e01ca959cf}} 
+bool {\bfseries read\+From} (std\+::istream \&is, uint64\+\_\+t speed=-\/1)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a04f774e6bb5f35d14eacfea5ba8b112b}} 
+bool {\bfseries write\+To} (std\+::ostream \&os, uint64\+\_\+t speed=-\/1)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a45b80c2302000c1a289960d73b14bc79}} 
+std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a0164bbecf3fb1510332a6c3b2e95f9f1}} 
+void {\bfseries foreach} (std\+::function$<$ bool(const uint64\+\_\+t \&k, const char $\ast$v, size\+\_\+t size)$>$ cb)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_a2db25884f00f6c34ef63d8f04f3f2762}} 
+uint64\+\_\+t {\bfseries get\+Total} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_ac8cc88c2da52ee9f50c07f455dcbb564}} 
+static uint64\+\_\+t {\bfseries Get\+ID} (const std\+::string \&str)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_aa796ec96671c7da91fe1e24b188068a6}} 
+static uint64\+\_\+t {\bfseries Get\+ID} (const char $\ast$str, const uint32\+\_\+t \&size)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1StringDict_aef8c9022c1741a0d719d13024b290958}} 
+static uint64\+\_\+t {\bfseries Get\+ID} (const char $\ast$str)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/ds/dict.\+h\end{DoxyCompactItemize}

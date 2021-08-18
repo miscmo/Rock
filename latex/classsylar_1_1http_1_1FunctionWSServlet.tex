@@ -1,0 +1,57 @@
+\doxysection{sylar\+::http\+::Function\+W\+S\+Servlet类 参考}
+\label{classsylar_1_1http_1_1FunctionWSServlet}\index{sylar::http::FunctionWSServlet@{sylar::http::FunctionWSServlet}}
+
+
+类 sylar\+::http\+::Function\+W\+S\+Servlet 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::Function\+W\+S\+Servlet 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_aca0ad02ae09a51869567cab61c51d4f0}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Function\+W\+S\+Servlet} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a496254e3af2c71143d1129b872853910}} 
+typedef std\+::function$<$ int32\+\_\+t(\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header,sylar\+::http\+::\+W\+S\+Session\+::ptr session)$>$ {\bfseries on\+\_\+connect\+\_\+cb}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a000c8a2c572f17739f8900fd094b8556}} 
+typedef std\+::function$<$ int32\+\_\+t(\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header,sylar\+::http\+::\+W\+S\+Session\+::ptr session)$>$ {\bfseries on\+\_\+close\+\_\+cb}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a6bad810dfc329136755f89e2e2da730d}} 
+typedef std\+::function$<$ int32\+\_\+t(\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header,sylar\+::http\+::\+W\+S\+Frame\+Message\+::ptr msg,sylar\+::http\+::\+W\+S\+Session\+::ptr session)$>$ {\bfseries callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a3f0535ee0f6625457d00afdfebd50e6d}} 
+{\bfseries Function\+W\+S\+Servlet} (callback cb, on\+\_\+connect\+\_\+cb connect\+\_\+cb=nullptr, on\+\_\+close\+\_\+cb close\+\_\+cb=nullptr)
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_ad0a3b1de3147023a51b7543e4d643e77}} 
+virtual int32\+\_\+t {\bfseries on\+Connect} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header, sylar\+::http\+::\+W\+S\+Session\+::ptr session) override
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_afccc1f87fc4334bd32ed049b1f19d436}} 
+virtual int32\+\_\+t {\bfseries on\+Close} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header, sylar\+::http\+::\+W\+S\+Session\+::ptr session) override
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a97841a35ba17f341ba97c7f04a993333}} 
+virtual int32\+\_\+t {\bfseries handle} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} header, sylar\+::http\+::\+W\+S\+Frame\+Message\+::ptr msg, sylar\+::http\+::\+W\+S\+Session\+::ptr session) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a664ab97847c75eeb085b9017376757ae}} 
+callback {\bfseries m\+\_\+callback}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_a6c433d836ad2c9306eb49e3b1d864b41}} 
+on\+\_\+connect\+\_\+cb {\bfseries m\+\_\+on\+Connect}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionWSServlet_aeb0297f2637deb7fcbddeb894238a941}} 
+on\+\_\+close\+\_\+cb {\bfseries m\+\_\+on\+Close}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/ws\+\_\+servlet.\+h\end{DoxyCompactItemize}

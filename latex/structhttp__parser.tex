@@ -1,0 +1,74 @@
+\doxysection{http\+\_\+parser结构体 参考}
+\label{structhttp__parser}\index{http\_parser@{http\_parser}}
+
+
+http\+\_\+parser 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{structhttp__parser_a838e6b40f8ccf6d8dc6895d5baa3d152}} 
+int {\bfseries cs}
+\item 
+\mbox{\label{structhttp__parser_a34f1defdc4a957eb898cc927ef1583fd}} 
+size\+\_\+t {\bfseries body\+\_\+start}
+\item 
+\mbox{\label{structhttp__parser_a743be6cfcd6fff98672e18e4753deed4}} 
+int {\bfseries content\+\_\+len}
+\item 
+\mbox{\label{structhttp__parser_a01e12b12525a6c238c0e1b85c74a29f2}} 
+size\+\_\+t {\bfseries nread}
+\item 
+\mbox{\label{structhttp__parser_a95fbc2630c642a6d0226d8d2e40b1cd9}} 
+size\+\_\+t {\bfseries mark}
+\item 
+\mbox{\label{structhttp__parser_aa098b84793bc7237a7ab208cf624b0e9}} 
+size\+\_\+t {\bfseries field\+\_\+start}
+\item 
+\mbox{\label{structhttp__parser_a480bf1bbffd230b6266ef9cb1c67f04c}} 
+size\+\_\+t {\bfseries field\+\_\+len}
+\item 
+\mbox{\label{structhttp__parser_aea179d0f81fd3a298fc76336bd76f51b}} 
+size\+\_\+t {\bfseries query\+\_\+start}
+\item 
+\mbox{\label{structhttp__parser_af5fa708b7b27de2eaa9ecc625c7db4ea}} 
+int {\bfseries xml\+\_\+sent}
+\item 
+\mbox{\label{structhttp__parser_ab7af5024ee5959ae11ce2f736768bea4}} 
+int {\bfseries json\+\_\+sent}
+\item 
+\mbox{\label{structhttp__parser_a7e87ce57b97f60f1fdb7039a8ecb0bca}} 
+void $\ast$ {\bfseries data}
+\item 
+\mbox{\label{structhttp__parser_aa0106a0da9deedb70ae8b980474c2a42}} 
+int {\bfseries uri\+\_\+relaxed}
+\item 
+\mbox{\label{structhttp__parser_a591e56e732c5c40ca88f8c55e3ef27a2}} 
+field\+\_\+cb {\bfseries http\+\_\+field}
+\item 
+\mbox{\label{structhttp__parser_ad151ead9249a3761049ebd71de2a9a22}} 
+element\+\_\+cb {\bfseries request\+\_\+method}
+\item 
+\mbox{\label{structhttp__parser_a6d5771f4b22ca0b13c1e2358e9d9f943}} 
+element\+\_\+cb {\bfseries request\+\_\+uri}
+\item 
+\mbox{\label{structhttp__parser_aedc64c9e0e1bbfcac4d5cf175114202e}} 
+element\+\_\+cb {\bfseries fragment}
+\item 
+\mbox{\label{structhttp__parser_a30164d72a224a3aec419bc8dd3bc4610}} 
+element\+\_\+cb {\bfseries request\+\_\+path}
+\item 
+\mbox{\label{structhttp__parser_ac998351acb4ad85c9d56ef1a64deb653}} 
+element\+\_\+cb {\bfseries query\+\_\+string}
+\item 
+\mbox{\label{structhttp__parser_a1af10c0a58337a513ef96fe31f215965}} 
+element\+\_\+cb {\bfseries http\+\_\+version}
+\item 
+\mbox{\label{structhttp__parser_ad27ef87bc731db897092d8981787957b}} 
+element\+\_\+cb {\bfseries header\+\_\+done}
+\end{DoxyCompactItemize}
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/http11\+\_\+parser.\+h\end{DoxyCompactItemize}

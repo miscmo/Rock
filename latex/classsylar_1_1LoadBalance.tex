@@ -1,0 +1,69 @@
+\doxysection{sylar\+::Load\+Balance类 参考}
+\label{classsylar_1_1LoadBalance}\index{sylar::LoadBalance@{sylar::LoadBalance}}
+
+
+类 sylar\+::Load\+Balance 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Load\+Balance 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a250b9829030b7adb236fddb1617d80e2}} 
+typedef \textbf{ sylar\+::\+R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a50bb7e71bc858743f5cc39907711607f}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Load\+Balance} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_af493c0bc679c4264a633e34e10e15e9e}} 
+void {\bfseries add} (Load\+Balance\+Item\+::ptr v)
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a73f1db8e68b6b49fd144ced640926fba}} 
+void {\bfseries del} (Load\+Balance\+Item\+::ptr v)
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_af8058dff27badd4ce3f4427319aa1909}} 
+void {\bfseries set} (const std\+::vector$<$ Load\+Balance\+Item\+::ptr $>$ \&vs)
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a79ca7d841eb52c126c121e9b65c17b88}} 
+Load\+Balance\+Item\+::ptr {\bfseries get\+By\+Id} (uint64\+\_\+t id)
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a126d70f7369419963aa8a56132d6d54b}} 
+void {\bfseries update} (const std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Load\+Balance\+Item\+::ptr $>$ \&adds, std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Load\+Balance\+Item\+::ptr $>$ \&dels)
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a537624330a8ab35c0bdd69982b205242}} 
+void {\bfseries init} ()
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a8f98fa9607a3f80aa1d29d47e1815ebe}} 
+std\+::string {\bfseries status\+String} (const std\+::string \&prefix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a82f9093b77d638aadef1b3d94838f8d9}} 
+virtual void {\bfseries init\+Nolock} ()=0
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a95bdc102676e1293aa4a8c000756a07a}} 
+void {\bfseries check\+Init} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_a0bb141ab056239ef4b38600805b754be}} 
+\textbf{ R\+W\+Mutex\+Type} {\bfseries m\+\_\+mutex}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_ae16202f98e659571869c2651551b78b9}} 
+std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Load\+Balance\+Item\+::ptr $>$ {\bfseries m\+\_\+datas}
+\item 
+\mbox{\label{classsylar_1_1LoadBalance_aaca4701442aead53932d8937d9d26ccb}} 
+uint64\+\_\+t {\bfseries m\+\_\+last\+Init\+Time} = 0
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}

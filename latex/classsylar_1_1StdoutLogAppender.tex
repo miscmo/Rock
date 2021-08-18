@@ -1,0 +1,43 @@
+\doxysection{sylar\+::Stdout\+Log\+Appender类 参考}
+\label{classsylar_1_1StdoutLogAppender}\index{sylar::StdoutLogAppender@{sylar::StdoutLogAppender}}
+
+
+输出到控制台的\+Appender  
+
+
+
+
+{\ttfamily \#include $<$log.\+h$>$}
+
+
+
+类 sylar\+::Stdout\+Log\+Appender 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Stdout\+Log\+Appender 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1StdoutLogAppender_a76acd48873c187b8f2bed7759ed6254e}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Stdout\+Log\+Appender} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1StdoutLogAppender_a757e048e7a3ef22cf51a1bd39e69a4f8}} 
+void {\bfseries log} (Logger\+::ptr logger, \textbf{ Log\+Level\+::\+Level} level, Log\+Event\+::ptr event) override
+\item 
+\mbox{\label{classsylar_1_1StdoutLogAppender_abf908e01cdd38cb8b84005a761154638}} 
+std\+::string \textbf{ to\+Yaml\+String} () override
+\begin{DoxyCompactList}\small\item\em 将日志输出目标的配置转成\+Y\+A\+ML String \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+输出到控制台的\+Appender 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ log.\+h}\end{DoxyCompactItemize}

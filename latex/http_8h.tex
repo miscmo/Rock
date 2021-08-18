@@ -1,0 +1,261 @@
+\doxysection{sylar/http/http.h 文件参考}
+\label{http_8h}\index{sylar/http/http.h@{sylar/http/http.h}}
+
+
+H\+T\+T\+P定义结构体封装  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$boost/lexical\+\_\+cast.\+hpp$>$}\newline
+http.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ sylar\+::http\+::\+Case\+Insensitive\+Less}
+\begin{DoxyCompactList}\small\item\em 忽略大小写比较仿函数 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::http\+::\+Http\+Request}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P请求结构 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::http\+::\+Http\+Response}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P响应结构体 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{http_8h_a062873fd30d66c26468d4f1bd73e2976}} 
+\#define {\bfseries H\+T\+T\+P\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+M\+AP}(XX)
+\item 
+\mbox{\label{http_8h_acbba37710a56ceabef05d8e3e7ed5939}} 
+\#define {\bfseries H\+T\+T\+P\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+AP}(XX)
+\item 
+\mbox{\label{http_8h_a001751e2abb71763b08651bec986b6f7}} 
+\#define {\bfseries XX}(num,  name,  string)~name = num,
+\item 
+\mbox{\label{http_8h_a2b0ee7714b452bc90aa69d6fac7cb69f}} 
+\#define {\bfseries XX}(code,  name,  desc)~name = code,
+\end{DoxyCompactItemize}
+\doxysubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{http_8h_ae6e414e88664e23d4e83cb6cd91b477e}} 
+enum \textbf{ sylar\+::http\+::\+Http\+Method} \{ {\bfseries XX}, 
+{\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+M\+E\+T\+H\+OD}
+ \}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
+\mbox{\label{http_8h_a5200eca685ab9ffeb9a63236b8253332}} 
+enum \textbf{ sylar\+::http\+::\+Http\+Status} \{ {\bfseries XX}
+ \}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P状态枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+Http\+Method \textbf{ sylar\+::http\+::\+String\+To\+Http\+Method} (const std\+::string \&m)
+\begin{DoxyCompactList}\small\item\em 将字符串方法名转成\+H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
+Http\+Method \textbf{ sylar\+::http\+::\+Chars\+To\+Http\+Method} (const char $\ast$m)
+\begin{DoxyCompactList}\small\item\em 将字符串指针转换成\+H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ sylar\+::http\+::\+Http\+Method\+To\+String} (const Http\+Method \&m)
+\begin{DoxyCompactList}\small\item\em 将\+H\+T\+T\+P方法枚举转换成字符串 \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ sylar\+::http\+::\+Http\+Status\+To\+String} (const Http\+Status \&s)
+\begin{DoxyCompactList}\small\item\em 将\+H\+T\+T\+P状态枚举转换成字符串 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Map\+Type , class T $>$ }\\bool \textbf{ sylar\+::http\+::check\+Get\+As} (const Map\+Type \&m, const std\+::string \&key, T \&val, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取\+Map中的key值,并转成对应类型,返回是否成功 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Map\+Type , class T $>$ }\\T \textbf{ sylar\+::http\+::get\+As} (const Map\+Type \&m, const std\+::string \&key, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取\+Map中的key值,并转成对应类型 \end{DoxyCompactList}\item 
+std\+::ostream \& \textbf{ sylar\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Request \&req)
+\begin{DoxyCompactList}\small\item\em 流式输出\+Http\+Request \end{DoxyCompactList}\item 
+std\+::ostream \& \textbf{ sylar\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Response \&rsp)
+\begin{DoxyCompactList}\small\item\em 流式输出\+Http\+Response \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+H\+T\+T\+P定义结构体封装 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{函数说明}
+\mbox{\label{http_8h_ad509430dc4d5bf1a95c695be7d5777b5}} 
+\index{http.h@{http.h}!CharsToHttpMethod@{CharsToHttpMethod}}
+\index{CharsToHttpMethod@{CharsToHttpMethod}!http.h@{http.h}}
+\doxysubsubsection{CharsToHttpMethod()}
+{\footnotesize\ttfamily Http\+Method sylar\+::http\+::\+Chars\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const char $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+将字符串指针转换成\+H\+T\+T\+P方法枚举 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & 字符串方法枚举 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+H\+T\+T\+P方法枚举 
+\end{DoxyReturn}
+\mbox{\label{http_8h_ae706fa797ef4b8066246dccc0a905f46}} 
+\index{http.h@{http.h}!checkGetAs@{checkGetAs}}
+\index{checkGetAs@{checkGetAs}!http.h@{http.h}}
+\doxysubsubsection{checkGetAs()}
+{\footnotesize\ttfamily template$<$class Map\+Type , class T $>$ \\
+bool sylar\+::http\+::check\+Get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
+
+
+
+获取\+Map中的key值,并转成对应类型,返回是否成功 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & Map数据结构 \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 保存转换后的值 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em true} & 转换成功, val 为对应的值 \\
+\hline
+{\em false} & 不存在或者转换失败 val = def \\
+\hline
+\end{DoxyRetVals}
+函数调用图\+:
+% FIG 2
+\mbox{\label{http_8h_a80a3a1218593d2a5e4613d9900c3b387}} 
+\index{http.h@{http.h}!getAs@{getAs}}
+\index{getAs@{getAs}!http.h@{http.h}}
+\doxysubsubsection{getAs()}
+{\footnotesize\ttfamily template$<$class Map\+Type , class T $>$ \\
+T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
+
+
+
+获取\+Map中的key值,并转成对应类型 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & Map数据结构 \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回对应的值,否则返回默认值 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 3
+\mbox{\label{http_8h_a7975f0a126c5310506a757e0bd8c8a55}} 
+\index{http.h@{http.h}!HttpMethodToString@{HttpMethodToString}}
+\index{HttpMethodToString@{HttpMethodToString}!http.h@{http.h}}
+\doxysubsubsection{HttpMethodToString()}
+{\footnotesize\ttfamily const char$\ast$ sylar\+::http\+::\+Http\+Method\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Method} \&}]{m }\end{DoxyParamCaption})}
+
+
+
+将\+H\+T\+T\+P方法枚举转换成字符串 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & H\+T\+T\+P方法枚举 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串 
+\end{DoxyReturn}
+\mbox{\label{http_8h_a07c12349237c113d848876a58df50796}} 
+\index{http.h@{http.h}!HttpStatusToString@{HttpStatusToString}}
+\index{HttpStatusToString@{HttpStatusToString}!http.h@{http.h}}
+\doxysubsubsection{HttpStatusToString()}
+{\footnotesize\ttfamily const char$\ast$ sylar\+::http\+::\+Http\+Status\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Status} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+将\+H\+T\+T\+P状态枚举转换成字符串 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & H\+T\+T\+P状态枚举 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+字符串 
+\end{DoxyReturn}
+\mbox{\label{http_8h_aa81ae3fe4fac399d5d85017ce8ba4a3b}} 
+\index{http.h@{http.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!http.h@{http.h}}
+\doxysubsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Request} \&}]{req }\end{DoxyParamCaption})}
+
+
+
+流式输出\+Http\+Request 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em os} & 输出流 \\
+\hline
+\mbox{\texttt{ in}}  & {\em req} & H\+T\+T\+P请求 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+输出流 
+\end{DoxyReturn}
+\mbox{\label{http_8h_a4821bfcba891b2f43046b4fe92ee89c3}} 
+\index{http.h@{http.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!http.h@{http.h}}
+\doxysubsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Response} \&}]{rsp }\end{DoxyParamCaption})}
+
+
+
+流式输出\+Http\+Response 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em os} & 输出流 \\
+\hline
+\mbox{\texttt{ in}}  & {\em rsp} & H\+T\+T\+P响应 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+输出流 
+\end{DoxyReturn}
+\mbox{\label{http_8h_a6d0898c57921cf8936a666504ccae688}} 
+\index{http.h@{http.h}!StringToHttpMethod@{StringToHttpMethod}}
+\index{StringToHttpMethod@{StringToHttpMethod}!http.h@{http.h}}
+\doxysubsubsection{StringToHttpMethod()}
+{\footnotesize\ttfamily Http\+Method sylar\+::http\+::\+String\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{m }\end{DoxyParamCaption})}
+
+
+
+将字符串方法名转成\+H\+T\+T\+P方法枚举 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em m} & H\+T\+T\+P方法 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+H\+T\+T\+P方法枚举 
+\end{DoxyReturn}

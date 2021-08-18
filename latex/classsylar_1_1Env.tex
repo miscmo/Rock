@@ -1,0 +1,65 @@
+\doxysection{sylar\+::Env类 参考}
+\label{classsylar_1_1Env}\index{sylar::Env@{sylar::Env}}
+
+
+sylar\+::Env 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Env_aacf5f4505caef3dd30b6614d77c8bcb4}} 
+typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Env_ae84e486268e4fc7acc6c4312dcbcf7fa}} 
+bool {\bfseries init} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\label{classsylar_1_1Env_a96196f29d551abefbd9c3f663bf3b1e6}} 
+void {\bfseries add} (const std\+::string \&key, const std\+::string \&val)
+\item 
+\mbox{\label{classsylar_1_1Env_a2ca4241f426dcb79adfc40a891fbd2c8}} 
+bool {\bfseries has} (const std\+::string \&key)
+\item 
+\mbox{\label{classsylar_1_1Env_aaa41d2aaf4ee8e994ffad122180b9e58}} 
+void {\bfseries del} (const std\+::string \&key)
+\item 
+\mbox{\label{classsylar_1_1Env_a80e94aa5618be62ec8d77ee7d997b51f}} 
+std\+::string {\bfseries get} (const std\+::string \&key, const std\+::string \&default\+\_\+value=\char`\"{}\char`\"{})
+\item 
+\mbox{\label{classsylar_1_1Env_af7d08aa5e5c8e1419d75040974eb9d95}} 
+void {\bfseries add\+Help} (const std\+::string \&key, const std\+::string \&desc)
+\item 
+\mbox{\label{classsylar_1_1Env_a1c67fe8fc40f4103bae88570a313f872}} 
+void {\bfseries remove\+Help} (const std\+::string \&key)
+\item 
+\mbox{\label{classsylar_1_1Env_aaf3efb80705b51ffafe80e349cdc3790}} 
+void {\bfseries print\+Help} ()
+\item 
+\mbox{\label{classsylar_1_1Env_a5adc9ff34d9d60726382fab8a1ad4a6f}} 
+const std\+::string \& {\bfseries get\+Exe} () const
+\item 
+\mbox{\label{classsylar_1_1Env_a3e887d57015680148e703049341baec1}} 
+const std\+::string \& {\bfseries get\+Cwd} () const
+\item 
+\mbox{\label{classsylar_1_1Env_ad62b3f517f5ec376b4b1992c25fa440e}} 
+bool {\bfseries set\+Env} (const std\+::string \&key, const std\+::string \&val)
+\item 
+\mbox{\label{classsylar_1_1Env_a92d1bdd336ce1e1103437c238c37d28c}} 
+std\+::string {\bfseries get\+Env} (const std\+::string \&key, const std\+::string \&default\+\_\+value=\char`\"{}\char`\"{})
+\item 
+\mbox{\label{classsylar_1_1Env_a7769968b966a7accce2096508e74d2bb}} 
+std\+::string {\bfseries get\+Absolute\+Path} (const std\+::string \&path) const
+\item 
+\mbox{\label{classsylar_1_1Env_a1e91b4dfaeaa789a599d78fd1ee80293}} 
+std\+::string {\bfseries get\+Absolute\+Work\+Path} (const std\+::string \&path) const
+\item 
+\mbox{\label{classsylar_1_1Env_a14be86ed6c13577d283e12ca3ba2e7bb}} 
+std\+::string {\bfseries get\+Config\+Path} ()
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/env.\+h\end{DoxyCompactItemize}

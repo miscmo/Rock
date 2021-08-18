@@ -1,0 +1,455 @@
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[twoside]{book}
+
+%% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+\usepackage{ifthen}
+\ifx\requestedLaTeXdate\undefined
+\usepackage{array}
+\else
+\usepackage{array}[=2016-10-06]
+\fi
+%%
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+\usepackage{ifpdf,ifxetex}
+
+% NLS support packages
+\usepackage{CJKutf8}
+
+% Font selection
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Arguments of doxygenemoji:
+% 1) ':<text>:' form of the emoji, already "LaTeX"-escaped
+% 2) file with the name of the emoji without the .png extension
+% in case image exist use this otherwise use the ':<text>:' form
+\newcommand{\doxygenemoji}[2]{%
+  \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+}
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+\newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+\doxynormalparskip
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+\makeatletter
+\newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 制作者 Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 制作者 Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+\usepackage{etoc}
+\etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+\renewcommand{\numberline}[1]{#1~}
+%===== C O N T E N T S =====
+
+\begin{document}
+\begin{CJK}{UTF8}{min}
+
+% Titlepage & ToC
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large sylar }\\
+\vspace*{1cm}
+{\large 制作者 Doxygen 1.8.17}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+
+%--- Begin generated contents ---
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{类索引}
+\input{annotated}
+\chapter{文件索引}
+\input{files}
+\chapter{类说明}
+\input{classsylar_1_1Address}
+\input{classsylar_1_1Application}
+\input{classsylar_1_1ds_1_1Array}
+\input{structarray__container__s}
+\input{classsylar_1_1AsyncSocketStream}
+\input{classsylar_1_1AsyncSocketStreamManager}
+\input{classsylar_1_1Atomic}
+\input{classsylar_1_1ds_1_1Bitmap}
+\input{structbitset__container__s}
+\input{classsylar_1_1ByteArray}
+\input{classsylar_1_1ds_1_1CacheStatus}
+\input{structsylar_1_1http_1_1CaseInsensitiveLess}
+\input{classsylar_1_1CASLock}
+\input{classsylar_1_1orm_1_1Column}
+\input{classsylar_1_1Config}
+\input{classsylar_1_1http_1_1ConfigServlet}
+\input{classsylar_1_1ConfigVar}
+\input{classsylar_1_1ConfigVarBase}
+\input{classsylar_1_1CryptoUtil}
+\input{structsylar_1_1AsyncSocketStream_1_1Ctx}
+\input{classsylar_1_1ds_1_1Dict}
+\input{classsylar_1_1EMail}
+\input{classsylar_1_1EMailEntity}
+\input{classsylar_1_1Env}
+\input{structsylar_1_1IOManager_1_1FdContext_1_1EventContext}
+\input{classsylar_1_1ZKClient_1_1EventType}
+\input{classsylar_1_1FairLoadBalanceItem}
+\input{classsylar_1_1FdCtx}
+\input{classsylar_1_1FdManager}
+\input{classsylar_1_1Fiber}
+\input{classsylar_1_1FiberSemaphore}
+\input{classsylar_1_1FileLogAppender}
+\input{classsylar_1_1ZKClient_1_1FlagsType}
+\input{classsylar_1_1LogFormatter_1_1FormatItem}
+\input{classsylar_1_1FoxRedis}
+\input{classsylar_1_1FoxRedisCluster}
+\input{classsylar_1_1FoxThread}
+\input{classsylar_1_1FoxThreadManager}
+\input{classsylar_1_1FoxThreadPool}
+\input{classsylar_1_1FSUtil}
+\input{classsylar_1_1http_1_1FunctionServlet}
+\input{classsylar_1_1http_1_1FunctionWSServlet}
+\input{classsylar_1_1ds_1_1HashLruCache}
+\input{classsylar_1_1ds_1_1HashMap}
+\input{classsylar_1_1ds_1_1HashMultimap}
+\input{classsylar_1_1ds_1_1HashTimedCache}
+\input{classsylar_1_1ds_1_1HashTimedLruCache}
+\input{classsylar_1_1HolderStats}
+\input{classsylar_1_1HolderStatsSet}
+\input{classsylar_1_1http_1_1HoldServletCreator}
+\input{structhttp__parser}
+\input{structhttpclient__parser}
+\input{classsylar_1_1http_1_1HttpConnection}
+\input{classsylar_1_1http_1_1HttpConnectionPool}
+\input{classsylar_1_1http_1_1HttpRequest}
+\input{classsylar_1_1http_1_1HttpRequestParser}
+\input{classsylar_1_1http_1_1HttpResponse}
+\input{classsylar_1_1http_1_1HttpResponseParser}
+\input{structsylar_1_1http_1_1HttpResult}
+\input{classsylar_1_1http_1_1HttpServer}
+\input{classsylar_1_1http_1_1HttpSession}
+\input{classsylar_1_1IDB}
+\input{classsylar_1_1IFoxThread}
+\input{classsylar_1_1ILoadBalance}
+\input{classsylar_1_1orm_1_1Index}
+\input{classsylar_1_1IOManager}
+\input{classsylar_1_1IPAddress}
+\input{classsylar_1_1IPv4Address}
+\input{classsylar_1_1IPv6Address}
+\input{classsylar_1_1IRedis}
+\input{classsylar_1_1IServiceDiscovery}
+\input{classsylar_1_1http_1_1IServletCreator}
+\input{classsylar_1_1ISQLData}
+\input{classsylar_1_1ISQLQuery}
+\input{classsylar_1_1ISQLUpdate}
+\input{classsylar_1_1IStmt}
+\input{classsylar_1_1ISyncRedis}
+\input{classsylar_1_1ds_1_1Bitmap_1_1iterator}
+\input{classsylar_1_1ds_1_1Bitmap_1_1iterator__base}
+\input{classsylar_1_1ds_1_1Bitmap_1_1iterator__reverse}
+\input{classsylar_1_1ITransaction}
+\input{structsylar_1_1ds_1_1Ivt}
+\input{classsylar_1_1JsonUtil}
+\input{classsylar_1_1LexicalCast}
+\input{classsylar_1_1LexicalCast_3_01std_1_1list_3_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1map_3_01std_1_1string_00_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1set_3_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1list_3_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1map_3_01std_1_1string_00_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1set_3_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1unordered__map_3_01std_1_1string_00_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1unordered__set_3_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01std_1_1vector_3_01T_01_4_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1string_00_01TcpServerConf_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1unordered__map_3_01std_1_1string_00_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1unordered__set_3_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01std_1_1vector_3_01T_01_4_00_01std_1_1string_01_4}
+\input{classsylar_1_1LexicalCast_3_01TcpServerConf_00_01std_1_1string_01_4}
+\input{classsylar_1_1Library}
+\input{classsylar_1_1LoadBalance}
+\input{classsylar_1_1LoadBalanceItem}
+\input{classsylar_1_1LogAppender}
+\input{classsylar_1_1LogEvent}
+\input{classsylar_1_1LogEventWrap}
+\input{classsylar_1_1LogFormatter}
+\input{classsylar_1_1Logger}
+\input{classsylar_1_1LoggerManager}
+\input{classsylar_1_1LogLevel}
+\input{classsylar_1_1ds_1_1LruCache}
+\input{classsylar_1_1Message}
+\input{classsylar_1_1MessageDecoder}
+\input{classsylar_1_1Module}
+\input{classsylar_1_1ModuleManager}
+\input{structsylar_1_1ds_1_1MultiPair}
+\input{classsylar_1_1ds_1_1Murmur3Hash}
+\input{classsylar_1_1ds_1_1Murmur3Hash64}
+\input{classsylar_1_1ds_1_1Murmur3Hash64_3_01std_1_1string_00_01seed_00_01seed2_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash64_3_01std_1_1vector_3_01T_01_4_00_01seed_00_01seed2_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01int32__t_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01int64__t_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01Pair_3_01K_00_01V_01_4_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01std_1_1string_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01std_1_1vector_3_01T_01_4_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01uint32__t_00_01seed_01_4}
+\input{classsylar_1_1ds_1_1Murmur3Hash_3_01uint64__t_00_01seed_01_4}
+\input{classsylar_1_1Mutex}
+\input{classsylar_1_1MySQL}
+\input{classsylar_1_1MySQLManager}
+\input{classsylar_1_1MySQLRes}
+\input{classsylar_1_1MySQLStmt}
+\input{classsylar_1_1MySQLStmtRes}
+\input{structsylar_1_1MySQLTime}
+\input{classsylar_1_1MySQLTransaction}
+\input{classsylar_1_1MySQLUtil}
+\input{classsylar_1_1ns_1_1NameServerModule}
+\input{structsylar_1_1ByteArray_1_1Node}
+\input{classsylar_1_1ns_1_1Node}
+\input{classsylar_1_1ns_1_1NodeInfo}
+\input{classsylar_1_1Noncopyable}
+\input{classsylar_1_1http_1_1NotFoundServlet}
+\input{classsylar_1_1Notify}
+\input{classsylar_1_1ns_1_1NotifyMessage}
+\input{classsylar_1_1ns_1_1NSClient}
+\input{classsylar_1_1ns_1_1NSClientInfo}
+\input{classsylar_1_1ns_1_1NSDomain}
+\input{classsylar_1_1ns_1_1NSDomainSet}
+\input{classsylar_1_1ns_1_1NSNode}
+\input{classsylar_1_1ns_1_1NSNodeSet}
+\input{classsylar_1_1NullMutex}
+\input{classsylar_1_1NullRWMutex}
+\input{structsylar_1_1ds_1_1Pair}
+\input{classsylar_1_1ds_1_1PrimeGenerator}
+\input{structsylar_1_1ProcessInfo}
+\input{classsylar_1_1ns_1_1QueryRequest}
+\input{classsylar_1_1ns_1_1QueryResponse}
+\input{classsylar_1_1ds_1_1RandomStringGenerator}
+\input{structsylar_1_1ReadScopedLockImpl}
+\input{classsylar_1_1Redis}
+\input{classsylar_1_1RedisCluster}
+\input{classsylar_1_1RedisManager}
+\input{classsylar_1_1RedisUtil}
+\input{classsylar_1_1ns_1_1RegisterInfo}
+\input{classsylar_1_1ns_1_1RegisterRequest}
+\input{classsylar_1_1Request}
+\input{classsylar_1_1Response}
+\input{structrle16__s}
+\input{structroaring__array__s}
+\input{structroaring__bitmap__s}
+\input{structroaring__statistics__s}
+\input{structroaring__uint32__iterator__s}
+\input{classsylar_1_1ds_1_1RoaringBitmap}
+\input{classsylar_1_1RockBody}
+\input{classsylar_1_1RockConnection}
+\input{structsylar_1_1RockStream_1_1RockCtx}
+\input{classsylar_1_1RockMessageDecoder}
+\input{classsylar_1_1RockModule}
+\input{structsylar_1_1RockMsgHeader}
+\input{classsylar_1_1RockNotify}
+\input{classsylar_1_1RockRequest}
+\input{classsylar_1_1RockResponse}
+\input{structsylar_1_1RockResult}
+\input{classsylar_1_1RockSDLoadBalance}
+\input{structsylar_1_1RockStream_1_1RockSendCtx}
+\input{classsylar_1_1RockServer}
+\input{classsylar_1_1RockSession}
+\input{classsylar_1_1RockStream}
+\input{classsylar_1_1RoundRobinLoadBalance}
+\input{classsylar_1_1RSACipher}
+\input{structrun__container__s}
+\input{classsylar_1_1RWMutex}
+\input{classsylar_1_1Scheduler}
+\input{classsylar_1_1SchedulerSwitcher}
+\input{structsylar_1_1ScopedLockImpl}
+\input{classsylar_1_1SDLoadBalance}
+\input{classsylar_1_1Semaphore}
+\input{structsylar_1_1AsyncSocketStream_1_1SendCtx}
+\input{classsylar_1_1ServiceItemInfo}
+\input{classsylar_1_1http_1_1Servlet}
+\input{classsylar_1_1http_1_1ServletCreator}
+\input{classsylar_1_1http_1_1ServletDispatch}
+\input{classsylar_1_1http_1_1SessionData}
+\input{classsylar_1_1http_1_1SessionDataManager}
+\input{structshared__container__s}
+\input{classsylar_1_1SharedArray}
+\input{classsylar_1_1Singleton}
+\input{classsylar_1_1SingletonPtr}
+\input{classsylar_1_1SmtpClient}
+\input{structsylar_1_1SmtpResult}
+\input{classsylar_1_1Socket}
+\input{classsylar_1_1SocketStream}
+\input{classsylar_1_1SpeedLimit}
+\input{classsylar_1_1Spinlock}
+\input{classsylar_1_1SQLite3}
+\input{classsylar_1_1SQLite3Data}
+\input{classsylar_1_1SQLite3Manager}
+\input{classsylar_1_1SQLite3Stmt}
+\input{classsylar_1_1SQLite3Transaction}
+\input{classsylar_1_1SSLSocket}
+\input{classsylar_1_1ZKClient_1_1StateType}
+\input{classsylar_1_1http_1_1StatusServlet}
+\input{classsylar_1_1StdoutLogAppender}
+\input{classsylar_1_1Stream}
+\input{classsylar_1_1ds_1_1StringDict}
+\input{classsylar_1_1StringUtil}
+\input{classsylar_1_1orm_1_1Table}
+\input{structprotobuf__sylar__2fns__2fns__5fprotobuf__2eproto_1_1TableStruct}
+\input{classsylar_1_1TcpServer}
+\input{structsylar_1_1TcpServerConf}
+\input{classsylar_1_1Thread}
+\input{classsylar_1_1ds_1_1TimedCache}
+\input{classsylar_1_1ds_1_1TimedLruCache}
+\input{classsylar_1_1Timer}
+\input{classsylar_1_1TimerManager}
+\input{classsylar_1_1TypeUtil}
+\input{classsylar_1_1UnixAddress}
+\input{classsylar_1_1UnknownAddress}
+\input{classsylar_1_1Uri}
+\input{classsylar_1_1WeightLoadBalance}
+\input{classsylar_1_1WorkerGroup}
+\input{classsylar_1_1WorkerManager}
+\input{structsylar_1_1WriteScopedLockImpl}
+\input{classsylar_1_1http_1_1WSConnection}
+\input{structsylar_1_1http_1_1WSFrameHead}
+\input{classsylar_1_1http_1_1WSFrameMessage}
+\input{classsylar_1_1http_1_1WSServer}
+\input{classsylar_1_1http_1_1WSServlet}
+\input{classsylar_1_1http_1_1WSServletDispatch}
+\input{classsylar_1_1http_1_1WSSession}
+\input{classsylar_1_1ZKClient}
+\input{classsylar_1_1ZKServiceDiscovery}
+\input{classsylar_1_1ZlibStream}
+\chapter{文件说明}
+\input{address_8h}
+\input{bytearray_8h}
+\input{config_8h}
+\input{sqlite3_8h}
+\input{util_8h}
+\input{endian_8h}
+\input{fd__manager_8h}
+\input{fiber_8h}
+\input{hook_8h}
+\input{http_8h}
+\input{http__connection_8h}
+\input{http__parser_8h}
+\input{http__server_8h}
+\input{http__session_8h}
+\input{servlet_8h}
+\input{iomanager_8h}
+\input{log_8h}
+\input{macro_8h}
+\input{noncopyable_8h}
+\input{protocol_8h}
+\input{scheduler_8h}
+\input{singleton_8h}
+\input{socket_8h}
+\input{stream_8h}
+\input{socket__stream_8h}
+\input{sylar_8h}
+\input{tcp__server_8h}
+\input{thread_8h}
+\input{timer_8h}
+\input{uri_8h}
+\input{crypto__util_8h}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\end{CJK}
+\end{document}

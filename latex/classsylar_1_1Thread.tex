@@ -1,0 +1,99 @@
+\doxysection{sylar\+::Thread类 参考}
+\label{classsylar_1_1Thread}\index{sylar::Thread@{sylar::Thread}}
+
+
+线程类  
+
+
+
+
+{\ttfamily \#include $<$thread.\+h$>$}
+
+
+
+类 sylar\+::Thread 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Thread 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Thread_ac3f80069fd34a46d43f3deb182d0862a}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Thread} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em 线程智能指针类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Thread} (std\+::function$<$ void()$>$ cb, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Thread_ae03879c4a90c8cbd70f22bb5af6e551d}} 
+\textbf{ $\sim$\+Thread} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Thread_ac4cce4866ea05e18c198006933398b60}} 
+pid\+\_\+t \textbf{ get\+Id} () const
+\begin{DoxyCompactList}\small\item\em 线程\+ID \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Thread_a7652aca44db5914881356dcd9d161e47}} 
+const std\+::string \& \textbf{ get\+Name} () const
+\begin{DoxyCompactList}\small\item\em 线程名称 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Thread_a51e83a092b106aa490dfc4ffdc47fa3d}} 
+void \textbf{ join} ()
+\begin{DoxyCompactList}\small\item\em 等待线程执行完成 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Thread_aba843e09667e9aff3123d16f6139454c}} 
+static \textbf{ Thread} $\ast$ \textbf{ Get\+This} ()
+\begin{DoxyCompactList}\small\item\em 获取当前的线程指针 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Thread_a6594a6c80a6494d8b1427cb8928c5d2f}} 
+static const std\+::string \& \textbf{ Get\+Name} ()
+\begin{DoxyCompactList}\small\item\em 获取当前的线程名称 \end{DoxyCompactList}\item 
+static void \textbf{ Set\+Name} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 设置当前线程名称 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+线程类 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1Thread_a21423020cfee611288713ec0fd4e5db6}} 
+\index{sylar::Thread@{sylar::Thread}!Thread@{Thread}}
+\index{Thread@{Thread}!sylar::Thread@{sylar::Thread}}
+\doxysubsubsection{Thread()}
+{\footnotesize\ttfamily sylar\+::\+Thread\+::\+Thread (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em cb} & 线程执行函数 \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & 线程名称 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1Thread_a49d86dcdd854cd850a54427c6b4f894c}} 
+\index{sylar::Thread@{sylar::Thread}!SetName@{SetName}}
+\index{SetName@{SetName}!sylar::Thread@{sylar::Thread}}
+\doxysubsubsection{SetName()}
+{\footnotesize\ttfamily static void sylar\+::\+Thread\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+设置当前线程名称 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em name} & 线程名称 \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ thread.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\doxysection{sylar\+::http\+::Function\+Servlet类 参考}
+\label{classsylar_1_1http_1_1FunctionServlet}\index{sylar::http::FunctionServlet@{sylar::http::FunctionServlet}}
+
+
+函数式\+Servlet  
+
+
+
+
+{\ttfamily \#include $<$servlet.\+h$>$}
+
+
+
+类 sylar\+::http\+::Function\+Servlet 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::Function\+Servlet 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionServlet_aa9e2497f50ac1a76934483cfdec7d8c1}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Function\+Servlet} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em 智能指针类型定义 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1FunctionServlet_a1c69f955718605e8ef091a9bae9e84a8}} 
+typedef std\+::function$<$ int32\+\_\+t(\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ sylar\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ sylar\+::http\+::\+Http\+Session\+::ptr} session)$>$ \textbf{ callback}
+\begin{DoxyCompactList}\small\item\em 函数回调类型定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Function\+Servlet} (\textbf{ callback} cb)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ handle} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ sylar\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ sylar\+::http\+::\+Http\+Session\+::ptr} session) override
+\begin{DoxyCompactList}\small\item\em 处理请求 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+函数式\+Servlet 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1http_1_1FunctionServlet_aa6ac85f30751a413d8d7461e73d84322}} 
+\index{sylar::http::FunctionServlet@{sylar::http::FunctionServlet}!FunctionServlet@{FunctionServlet}}
+\index{FunctionServlet@{FunctionServlet}!sylar::http::FunctionServlet@{sylar::http::FunctionServlet}}
+\doxysubsubsection{FunctionServlet()}
+{\footnotesize\ttfamily sylar\+::http\+::\+Function\+Servlet\+::\+Function\+Servlet (\begin{DoxyParamCaption}\item[{\textbf{ callback}}]{cb }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em cb} & 回调函数 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1FunctionServlet_a5afa1dadb1a31c0ba295de6736c191db}} 
+\index{sylar::http::FunctionServlet@{sylar::http::FunctionServlet}!handle@{handle}}
+\index{handle@{handle}!sylar::http::FunctionServlet@{sylar::http::FunctionServlet}}
+\doxysubsubsection{handle()}
+{\footnotesize\ttfamily virtual int32\+\_\+t sylar\+::http\+::\+Function\+Servlet\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+处理请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em request} & H\+T\+T\+P请求 \\
+\hline
+\mbox{\texttt{ in}}  & {\em response} & H\+T\+T\+P响应 \\
+\hline
+\mbox{\texttt{ in}}  & {\em session} & H\+T\+T\+P连接 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否处理成功 
+\end{DoxyReturn}
+
+
+实现了 \textbf{ sylar\+::http\+::\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}

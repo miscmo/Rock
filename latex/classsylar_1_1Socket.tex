@@ -1,0 +1,745 @@
+\doxysection{sylar\+::Socket类 参考}
+\label{classsylar_1_1Socket}\index{sylar::Socket@{sylar::Socket}}
+
+
+Socket封装类  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+类 sylar\+::Socket 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Socket 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Type} \{ \textbf{ T\+CP} = S\+O\+C\+K\+\_\+\+S\+T\+R\+E\+AM, 
+\textbf{ U\+DP} = S\+O\+C\+K\+\_\+\+D\+G\+R\+AM
+ \}
+\begin{DoxyCompactList}\small\item\em Socket类型 \end{DoxyCompactList}\item 
+enum \textbf{ Family} \{ \textbf{ I\+Pv4} = A\+F\+\_\+\+I\+N\+ET, 
+\textbf{ I\+Pv6} = A\+F\+\_\+\+I\+N\+E\+T6, 
+\textbf{ U\+N\+IX} = A\+F\+\_\+\+U\+N\+IX
+ \}
+\begin{DoxyCompactList}\small\item\em Socket协议簇 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a8c72b9a4bf41e82644d6905d9a676bba}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Socket} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1Socket_aa874a0bd3c6cc809d978bbaf51240a81}} 
+typedef std\+::weak\+\_\+ptr$<$ \textbf{ Socket} $>$ {\bfseries weak\+\_\+ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Socket} (int family, int type, int protocol=0)
+\begin{DoxyCompactList}\small\item\em Socket构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_abf7b37e04c57b86fbfb061b7e488c8a0}} 
+virtual \textbf{ $\sim$\+Socket} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a889c0f673a364d7b38f663f9348989f3}} 
+int64\+\_\+t \textbf{ get\+Send\+Timeout} ()
+\begin{DoxyCompactList}\small\item\em 获取发送超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a7b9a47ba9b10ba1e9d9ef8fbd89cace6}} 
+void \textbf{ set\+Send\+Timeout} (int64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置发送超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a557d5c5d77aebadeddccb08989be6bf9}} 
+int64\+\_\+t \textbf{ get\+Recv\+Timeout} ()
+\begin{DoxyCompactList}\small\item\em 获取接受超时时间(毫秒) \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_ab0bdec399a87f8bf61c3993bd03bb218}} 
+void \textbf{ set\+Recv\+Timeout} (int64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置接受超时时间(毫秒) \end{DoxyCompactList}\item 
+bool \textbf{ get\+Option} (int level, int option, void $\ast$result, socklen\+\_\+t $\ast$len)
+\begin{DoxyCompactList}\small\item\em 获取sockopt \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ get\+Option} (int level, int option, T \&result)
+\begin{DoxyCompactList}\small\item\em 获取sockopt模板 \end{DoxyCompactList}\item 
+bool \textbf{ set\+Option} (int level, int option, const void $\ast$result, socklen\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em 设置sockopt \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ set\+Option} (int level, int option, const T \&value)
+\begin{DoxyCompactList}\small\item\em 设置sockopt模板 \end{DoxyCompactList}\item 
+virtual Socket\+::ptr \textbf{ accept} ()
+\begin{DoxyCompactList}\small\item\em 接收connect链接 \end{DoxyCompactList}\item 
+virtual bool \textbf{ bind} (const Address\+::ptr addr)
+\begin{DoxyCompactList}\small\item\em 绑定地址 \end{DoxyCompactList}\item 
+virtual bool \textbf{ connect} (const Address\+::ptr addr, uint64\+\_\+t timeout\+\_\+ms=-\/1)
+\begin{DoxyCompactList}\small\item\em 连接地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_ac011a045fab09c6dd331ae760e54b3d9}} 
+virtual bool {\bfseries reconnect} (uint64\+\_\+t timeout\+\_\+ms=-\/1)
+\item 
+virtual bool \textbf{ listen} (int backlog=S\+O\+M\+A\+X\+C\+O\+NN)
+\begin{DoxyCompactList}\small\item\em 监听socket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_aa2414452cf6e34ae9d7e714fecf5749a}} 
+virtual bool \textbf{ close} ()
+\begin{DoxyCompactList}\small\item\em 关闭socket \end{DoxyCompactList}\item 
+virtual int \textbf{ send} (const void $\ast$buffer, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ send} (const iovec $\ast$buffers, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ send\+To} (const void $\ast$buffer, size\+\_\+t length, const Address\+::ptr to, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ send\+To} (const iovec $\ast$buffers, size\+\_\+t length, const Address\+::ptr to, int flags=0)
+\begin{DoxyCompactList}\small\item\em 发送数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ recv} (void $\ast$buffer, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ recv} (iovec $\ast$buffers, size\+\_\+t length, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ recv\+From} (void $\ast$buffer, size\+\_\+t length, Address\+::ptr from, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ recv\+From} (iovec $\ast$buffers, size\+\_\+t length, Address\+::ptr from, int flags=0)
+\begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a5dda94c9aeadaca0eb2cdef0ad5a6f9f}} 
+Address\+::ptr \textbf{ get\+Remote\+Address} ()
+\begin{DoxyCompactList}\small\item\em 获取远端地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a0a0f6a81c99fb7644afe5046f84f5d29}} 
+Address\+::ptr \textbf{ get\+Local\+Address} ()
+\begin{DoxyCompactList}\small\item\em 获取本地地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a71b422f6793ce03a4207de9f36576c58}} 
+int \textbf{ get\+Family} () const
+\begin{DoxyCompactList}\small\item\em 获取协议簇 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_acf47e95058c48eb50ac87ca841ffa7bd}} 
+int \textbf{ get\+Type} () const
+\begin{DoxyCompactList}\small\item\em 获取类型 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a011edf15dd491cf8b2cd259e980c7057}} 
+int \textbf{ get\+Protocol} () const
+\begin{DoxyCompactList}\small\item\em 获取协议 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a4eaf883907617a351d3a7d9c6471839d}} 
+bool \textbf{ is\+Connected} () const
+\begin{DoxyCompactList}\small\item\em 返回是否连接 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a86d7b7034c6ee0462dbe6af951c078e6}} 
+bool \textbf{ is\+Valid} () const
+\begin{DoxyCompactList}\small\item\em 是否有效(m\+\_\+sock != -\/1) \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_abc7a4496b05868f69ba1feace4a6d233}} 
+int \textbf{ get\+Error} ()
+\begin{DoxyCompactList}\small\item\em 返回\+Socket错误 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_adcb5a7e190205a7c71f22943708289a6}} 
+virtual std\+::ostream \& \textbf{ dump} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em 输出信息到流中 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_af440f45a18368c76ac8fd6f34ccdb641}} 
+virtual std\+::string {\bfseries to\+String} () const
+\item 
+\mbox{\label{classsylar_1_1Socket_affe4cfcb71216c5e5491de1f65ede86e}} 
+int \textbf{ get\+Socket} () const
+\begin{DoxyCompactList}\small\item\em 返回socket句柄 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a87b12962d326b19ed7d9b5bd660fe242}} 
+bool \textbf{ cancel\+Read} ()
+\begin{DoxyCompactList}\small\item\em 取消读 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_afd5fb9a5cf6fa564a8007fb25edbbcf1}} 
+bool \textbf{ cancel\+Write} ()
+\begin{DoxyCompactList}\small\item\em 取消写 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a6cb212d4cd1ff1ce63bc03dc27ea41bc}} 
+bool \textbf{ cancel\+Accept} ()
+\begin{DoxyCompactList}\small\item\em 取消accept \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a67bbd88370cb11fccb77ad962b6bb468}} 
+bool \textbf{ cancel\+All} ()
+\begin{DoxyCompactList}\small\item\em 取消所有事件 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static Socket\+::ptr \textbf{ Create\+T\+CP} (sylar\+::\+Address\+::ptr address)
+\begin{DoxyCompactList}\small\item\em 创建\+T\+CP \doxyref{Socket}{p.}{classsylar_1_1Socket}(满足地址类型) \end{DoxyCompactList}\item 
+static Socket\+::ptr \textbf{ Create\+U\+DP} (sylar\+::\+Address\+::ptr address)
+\begin{DoxyCompactList}\small\item\em 创建\+U\+DP \doxyref{Socket}{p.}{classsylar_1_1Socket}(满足地址类型) \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a9dc86da1143eec39943f3d0ef8f0ce0f}} 
+static Socket\+::ptr \textbf{ Create\+T\+C\+P\+Socket} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv4的\+T\+CP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a1e412ee5ccc035a61e92287d2c6e920d}} 
+static Socket\+::ptr \textbf{ Create\+U\+D\+P\+Socket} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv4的\+U\+DP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a87454bd49d00a311f9306b4b009e664b}} 
+static Socket\+::ptr \textbf{ Create\+T\+C\+P\+Socket6} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv6的\+T\+CP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a9a56ebc1dc797a36130fd014db90731f}} 
+static Socket\+::ptr \textbf{ Create\+U\+D\+P\+Socket6} ()
+\begin{DoxyCompactList}\small\item\em 创建\+I\+Pv6的\+U\+DP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_aa92b2914dbdc7a7cde33c4c49360957b}} 
+static Socket\+::ptr \textbf{ Create\+Unix\+T\+C\+P\+Socket} ()
+\begin{DoxyCompactList}\small\item\em 创建\+Unix的\+T\+CP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_ae136d494658548c395d12aff7807af29}} 
+static Socket\+::ptr \textbf{ Create\+Unix\+U\+D\+P\+Socket} ()
+\begin{DoxyCompactList}\small\item\em 创建\+Unix的\+U\+DP \doxyref{Socket}{p.}{classsylar_1_1Socket} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Socket_af10ea76d3a586f6ac71fc7593cf57c8f}} 
+void \textbf{ init\+Sock} ()
+\begin{DoxyCompactList}\small\item\em 初始化socket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a77c251c1e5bb0eceaad8493b90a04b6a}} 
+void \textbf{ new\+Sock} ()
+\begin{DoxyCompactList}\small\item\em 创建socket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a00c9b39975e21c6b6f08018c2e1fe7ec}} 
+virtual bool \textbf{ init} (int sock)
+\begin{DoxyCompactList}\small\item\em 初始化sock \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Socket_a1c938fdb33ca71386ea97408cf3d59b8}} 
+int \textbf{ m\+\_\+sock}
+\begin{DoxyCompactList}\small\item\em socket句柄 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a55ff16b76c9ce6d0f899b3aab5f8b6a8}} 
+int \textbf{ m\+\_\+family}
+\begin{DoxyCompactList}\small\item\em 协议簇 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a8a6f18189faa650c3b534d5b7e4a0843}} 
+int \textbf{ m\+\_\+type}
+\begin{DoxyCompactList}\small\item\em 类型 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_a6dcdf4ee9486a0274def42ff5ba188f3}} 
+int \textbf{ m\+\_\+protocol}
+\begin{DoxyCompactList}\small\item\em 协议 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_aec6303472f8d128b8aec57cd9ef124fe}} 
+bool \textbf{ m\+\_\+is\+Connected}
+\begin{DoxyCompactList}\small\item\em 是否连接 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_acc79b0b9176cdef334e588a6cb730c3f}} 
+Address\+::ptr \textbf{ m\+\_\+local\+Address}
+\begin{DoxyCompactList}\small\item\em 本地地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Socket_ad45afa01a968433fd24c6b6c6715fabb}} 
+Address\+::ptr \textbf{ m\+\_\+remote\+Address}
+\begin{DoxyCompactList}\small\item\em 远端地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Socket封装类 
+
+\doxysubsection{成员枚举类型说明}
+\mbox{\label{classsylar_1_1Socket_ae9cdb560b0d6c8dff762180e9643d280}} 
+\index{sylar::Socket@{sylar::Socket}!Family@{Family}}
+\index{Family@{Family}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{Family}
+{\footnotesize\ttfamily enum \textbf{ sylar\+::\+Socket\+::\+Family}}
+
+
+
+Socket协议簇 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IPv4@{IPv4}!sylar::Socket@{sylar::Socket}}\index{sylar::Socket@{sylar::Socket}!IPv4@{IPv4}}}\mbox{\label{classsylar_1_1Socket_ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0}} 
+I\+Pv4&I\+Pv4 socket \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IPv6@{IPv6}!sylar::Socket@{sylar::Socket}}\index{sylar::Socket@{sylar::Socket}!IPv6@{IPv6}}}\mbox{\label{classsylar_1_1Socket_ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35}} 
+I\+Pv6&I\+Pv6 socket \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIX@{UNIX}!sylar::Socket@{sylar::Socket}}\index{sylar::Socket@{sylar::Socket}!UNIX@{UNIX}}}\mbox{\label{classsylar_1_1Socket_ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259}} 
+U\+N\+IX&Unix socket \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\label{classsylar_1_1Socket_a1800cc78da1f58204b5f3778679d0628}} 
+\index{sylar::Socket@{sylar::Socket}!Type@{Type}}
+\index{Type@{Type}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{Type}
+{\footnotesize\ttfamily enum \textbf{ sylar\+::\+Socket\+::\+Type}}
+
+
+
+Socket类型 
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TCP@{TCP}!sylar::Socket@{sylar::Socket}}\index{sylar::Socket@{sylar::Socket}!TCP@{TCP}}}\mbox{\label{classsylar_1_1Socket_a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6}} 
+T\+CP&T\+C\+P类型 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UDP@{UDP}!sylar::Socket@{sylar::Socket}}\index{sylar::Socket@{sylar::Socket}!UDP@{UDP}}}\mbox{\label{classsylar_1_1Socket_a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f}} 
+U\+DP&U\+D\+P类型 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1Socket_ad7d10ddda988d74a39f8ea80023933c6}} 
+\index{sylar::Socket@{sylar::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{Socket()}
+{\footnotesize\ttfamily sylar\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{int}]{family,  }\item[{int}]{type,  }\item[{int}]{protocol = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Socket构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em family} & 协议簇 \\
+\hline
+\mbox{\texttt{ in}}  & {\em type} & 类型 \\
+\hline
+\mbox{\texttt{ in}}  & {\em protocol} & 协议 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1Socket_aa8671aebd2450ea097d8820416d5237f}} 
+\index{sylar::Socket@{sylar::Socket}!accept@{accept}}
+\index{accept@{accept}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{accept()}
+{\footnotesize\ttfamily virtual Socket\+::ptr sylar\+::\+Socket\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接收connect链接 
+
+\begin{DoxyReturn}{返回}
+成功返回新连接的socket,失败返回nullptr 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{前置条件}
+Socket必须 bind , listen 成功 
+\end{DoxyPrecond}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_afecbb66a11644b6215b319c86aea6a3a} 重载.
+
+\mbox{\label{classsylar_1_1Socket_ae6b4769ae79789ee9b36373c720dc915}} 
+\index{sylar::Socket@{sylar::Socket}!bind@{bind}}
+\index{bind@{bind}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{bind()}
+{\footnotesize\ttfamily virtual bool sylar\+::\+Socket\+::bind (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+绑定地址 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em addr} & 地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否绑定成功 
+\end{DoxyReturn}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a0d2bec8689cb32f67a60b7edeb1dcf71} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a918c0f55dbfdfcd1e27a8e800b297a24}} 
+\index{sylar::Socket@{sylar::Socket}!connect@{connect}}
+\index{connect@{connect}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{connect()}
+{\footnotesize\ttfamily virtual bool sylar\+::\+Socket\+::connect (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+连接地址 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em addr} & 目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & 超时时间(毫秒) \\
+\hline
+\end{DoxyParams}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_af80ab931d1a8e01306311285ef036df8} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a880530342b59695723480c6ac8fe7f89}} 
+\index{sylar::Socket@{sylar::Socket}!CreateTCP@{CreateTCP}}
+\index{CreateTCP@{CreateTCP}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{CreateTCP()}
+{\footnotesize\ttfamily static Socket\+::ptr sylar\+::\+Socket\+::\+Create\+T\+CP (\begin{DoxyParamCaption}\item[{sylar\+::\+Address\+::ptr}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+创建\+T\+CP \doxyref{Socket}{p.}{classsylar_1_1Socket}(满足地址类型) 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em address} & 地址 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1Socket_a746675af41ed7260af2df8ef0916afc8}} 
+\index{sylar::Socket@{sylar::Socket}!CreateUDP@{CreateUDP}}
+\index{CreateUDP@{CreateUDP}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{CreateUDP()}
+{\footnotesize\ttfamily static Socket\+::ptr sylar\+::\+Socket\+::\+Create\+U\+DP (\begin{DoxyParamCaption}\item[{sylar\+::\+Address\+::ptr}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+创建\+U\+DP \doxyref{Socket}{p.}{classsylar_1_1Socket}(满足地址类型) 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em address} & 地址 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1Socket_add5ddd190ab14ceb7dad07dff5a472d7}} 
+\index{sylar::Socket@{sylar::Socket}!getOption@{getOption}}
+\index{getOption@{getOption}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{getOption()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::\+Socket\+::get\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{T \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取sockopt模板 
+
+\begin{DoxySeeAlso}{参见}
+getsockopt 
+\end{DoxySeeAlso}
+函数调用图\+:
+% FIG 2
+\mbox{\label{classsylar_1_1Socket_ab058fddd5ef08e56957989a36df2463c}} 
+\index{sylar::Socket@{sylar::Socket}!getOption@{getOption}}
+\index{getOption@{getOption}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{getOption()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool sylar\+::\+Socket\+::get\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{void $\ast$}]{result,  }\item[{socklen\+\_\+t $\ast$}]{len }\end{DoxyParamCaption})}
+
+
+
+获取sockopt 
+
+\begin{DoxySeeAlso}{参见}
+getsockopt 
+\end{DoxySeeAlso}
+\mbox{\label{classsylar_1_1Socket_a834b6645daaeec36b35582514118929f}} 
+\index{sylar::Socket@{sylar::Socket}!listen@{listen}}
+\index{listen@{listen}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{listen()}
+{\footnotesize\ttfamily virtual bool sylar\+::\+Socket\+::listen (\begin{DoxyParamCaption}\item[{int}]{backlog = {\ttfamily SOMAXCONN} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+监听socket 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em backlog} & 未完成连接队列的最大长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回监听是否成功 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{前置条件}
+必须先 bind 成功 
+\end{DoxyPrecond}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_afdafa044aec7e161e308fe6ac22d7032} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a78dd52bd532befe374e9b3efb6af3bee}} 
+\index{sylar::Socket@{sylar::Socket}!recv@{recv}}
+\index{recv@{recv}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{recv()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::recv (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffers} & 接收数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小(iovec数组长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_aa09cbf574c6a896d9438980b5fdfe1b5} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a9c9fcf7f10dc2aa792ab4a153af66ccb}} 
+\index{sylar::Socket@{sylar::Socket}!recv@{recv}}
+\index{recv@{recv}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{recv()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::recv (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a32d1c1ea43ef650864d1c3caa4ebaa1e} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a65b6ac9ea74b621c5e11fe9665f25502}} 
+\index{sylar::Socket@{sylar::Socket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{recvFrom()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffers} & 接收数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小(iovec数组长度) \\
+\hline
+\mbox{\texttt{ out}}  & {\em from} & 发送端地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_ad24a65df3344ba7365a438ec363494b9} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a5e3e43ad94c153db6080b768940f4b2a}} 
+\index{sylar::Socket@{sylar::Socket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{recvFrom()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+接受数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\mbox{\texttt{ out}}  & {\em from} & 发送端地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 接收到对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a0b8d04fbf9a28eb80055adb78c390f28} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a5d5166f9884951885753598b1a9a3d53}} 
+\index{sylar::Socket@{sylar::Socket}!send@{send}}
+\index{send@{send}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{send()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::send (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffers} & 待发送数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度(iovec长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a251b229f5ca5d3229e4586a11485f659} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a10d250f5b6f476e99b1a204db60925ca}} 
+\index{sylar::Socket@{sylar::Socket}!send@{send}}
+\index{send@{send}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{send()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::send (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffer} & 待发送数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a046a3616b1afb59d81100c862bde939d} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a5ca79cde27053f8fa17d59206aa3bdcf}} 
+\index{sylar::Socket@{sylar::Socket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{sendTo()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffers} & 待发送数据的内存(iovec数组) \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度(iovec长度) \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & 发送的目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a6f140f9f8a6217adbc5b823803b7ddfb} 重载.
+
+\mbox{\label{classsylar_1_1Socket_a96bb0a4fbc86e6aed2f378a4c4119e4d}} 
+\index{sylar::Socket@{sylar::Socket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{sendTo()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+发送数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffer} & 待发送数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 待发送数据的长度 \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & 发送的目标地址 \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & 标志字 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 发送成功对应大小的数据 \\
+\hline
+{\em =0} & socket被关闭 \\
+\hline
+{\em $<$0} & socket出错 \\
+\hline
+\end{DoxyRetVals}
+
+
+被 \textbf{ sylar\+::\+S\+S\+L\+Socket} \doxyref{}{p.}{classsylar_1_1SSLSocket_a3ff1c8ec11526bb404f6a9ca935865f2} 重载.
+
+\mbox{\label{classsylar_1_1Socket_ab5742dc60c85aedf9e25adee99e32a8e}} 
+\index{sylar::Socket@{sylar::Socket}!setOption@{setOption}}
+\index{setOption@{setOption}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{setOption()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::\+Socket\+::set\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置sockopt模板 
+
+\begin{DoxySeeAlso}{参见}
+setsockopt 
+\end{DoxySeeAlso}
+函数调用图\+:
+% FIG 3
+\mbox{\label{classsylar_1_1Socket_a45566852ee9ecf920a4216b399466516}} 
+\index{sylar::Socket@{sylar::Socket}!setOption@{setOption}}
+\index{setOption@{setOption}!sylar::Socket@{sylar::Socket}}
+\doxysubsubsection{setOption()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool sylar\+::\+Socket\+::set\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option,  }\item[{const void $\ast$}]{result,  }\item[{socklen\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+设置sockopt 
+
+\begin{DoxySeeAlso}{参见}
+setsockopt 
+\end{DoxySeeAlso}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ socket.\+h}\end{DoxyCompactItemize}

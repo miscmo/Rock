@@ -1,0 +1,87 @@
+\doxysection{sylar\+::S\+Q\+Lite3类 参考}
+\label{classsylar_1_1SQLite3}\index{sylar::SQLite3@{sylar::SQLite3}}
+
+
+类 sylar\+::S\+Q\+Lite3 继承关系图\+:
+% FIG 0
+
+
+sylar\+::S\+Q\+Lite3 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SQLite3_ac5c16780f6e05382173c23bd7377983e}} 
+enum {\bfseries Flags} \{ {\bfseries R\+E\+A\+D\+O\+N\+LY} = S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY, 
+{\bfseries R\+E\+A\+D\+W\+R\+I\+TE} = S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE, 
+{\bfseries C\+R\+E\+A\+TE} = S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE
+ \}
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a64903b50328132f42f6fd39acf7ba44e}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ S\+Q\+Lite3} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a463930faf30ba5743cfccb8ee5cf5821}} 
+I\+Stmt\+::ptr {\bfseries prepare} (const std\+::string \&stmt) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a18b8d215df631441fc4e6692539e6cf6}} 
+int {\bfseries get\+Errno} () override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a12c730a995f55208ab34a874311338a1}} 
+std\+::string {\bfseries get\+Err\+Str} () override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_aa505ba11f72c72b9855b443f85a1888c}} 
+int {\bfseries execute} (const char $\ast$format,...) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a6bb3a3a3e3635ecf41796de703c3b82a}} 
+int {\bfseries execute} (const char $\ast$format, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a3765788d11203080a90493f53fd39707}} 
+int {\bfseries execute} (const std\+::string \&sql) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_ad42998eecf71b40db1f5351471f1a860}} 
+int64\+\_\+t {\bfseries get\+Last\+Insert\+Id} () override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a8e85b0f4331be5a56b6ba4839d1d2484}} 
+I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const char $\ast$format,...) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_ad1fc9047e102cc450a60ea07d4e7a683}} 
+I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&sql) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a0cee4c40af077118641a06ad83310a0d}} 
+I\+Transaction\+::ptr {\bfseries open\+Transaction} (bool auto\+\_\+commit=false) override
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a48341db655e1c2133008a306fb549a2a}} 
+{\footnotesize template$<$typename... Args$>$ }\\int {\bfseries exec\+Stmt} (const char $\ast$stmt, Args \&\&... args)
+\item 
+\mbox{\label{classsylar_1_1SQLite3_ace697b8ca3c37be20db25a3cae2603c1}} 
+{\footnotesize template$<$class... Args$>$ }\\I\+S\+Q\+L\+Data\+::ptr {\bfseries query\+Stmt} (const char $\ast$stmt, const Args \&... args)
+\item 
+\mbox{\label{classsylar_1_1SQLite3_afd316e8f50936219ba3264c32bed1990}} 
+int {\bfseries close} ()
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a4993982e3ea61d3029a0df8caf7ae5db}} 
+sqlite3 $\ast$ {\bfseries get\+DB} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a1652077cb11fae4e1ec4d5c88bf4438c}} 
+static S\+Q\+Lite3\+::ptr {\bfseries Create} (sqlite3 $\ast$db)
+\item 
+\mbox{\label{classsylar_1_1SQLite3_a32234705ba15c92871b5ae1887594c70}} 
+static S\+Q\+Lite3\+::ptr {\bfseries Create} (const std\+::string \&dbname, int flags=R\+E\+A\+D\+W\+R\+I\+TE$\vert$C\+R\+E\+A\+TE)
+\end{DoxyCompactItemize}
+\doxysubsection*{友元}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SQLite3_ab11a4cddddc5307c9240a5c2e72515f8}} 
+class {\bfseries S\+Q\+Lite3\+Manager}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/\textbf{ sqlite3.\+h}\end{DoxyCompactItemize}

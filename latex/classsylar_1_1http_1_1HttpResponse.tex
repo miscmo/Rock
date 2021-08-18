@@ -1,0 +1,369 @@
+\doxysection{sylar\+::http\+::Http\+Response类 参考}
+\label{classsylar_1_1http_1_1HttpResponse}\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+
+
+H\+T\+T\+P响应结构体  
+
+
+
+
+{\ttfamily \#include $<$http.\+h$>$}
+
+
+
+sylar\+::http\+::Http\+Response 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a69535456f2042c35c1a2758fc79f08ca}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Response} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P响应结构智能指针 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a8efe900b99a15b712a05b2002b1e5642}} 
+typedef std\+::map$<$ std\+::string, std\+::string, \textbf{ Case\+Insensitive\+Less} $>$ \textbf{ Map\+Type}
+\begin{DoxyCompactList}\small\item\em Map\+Type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Http\+Response} (uint8\+\_\+t version=0x11, bool close=true)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\textbf{ Http\+Status} \textbf{ get\+Status} () const
+\begin{DoxyCompactList}\small\item\em 返回响应状态 \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ get\+Version} () const
+\begin{DoxyCompactList}\small\item\em 返回响应版本 \end{DoxyCompactList}\item 
+const std\+::string \& \textbf{ get\+Body} () const
+\begin{DoxyCompactList}\small\item\em 返回响应消息体 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a1cf12f22b907c03461acb804848488d0}} 
+const std\+::string \& \textbf{ get\+Reason} () const
+\begin{DoxyCompactList}\small\item\em 返回响应原因 \end{DoxyCompactList}\item 
+const \textbf{ Map\+Type} \& \textbf{ get\+Headers} () const
+\begin{DoxyCompactList}\small\item\em 返回响应头部\+M\+AP \end{DoxyCompactList}\item 
+void \textbf{ set\+Status} (\textbf{ Http\+Status} v)
+\begin{DoxyCompactList}\small\item\em 设置响应状态 \end{DoxyCompactList}\item 
+void \textbf{ set\+Version} (uint8\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置响应版本 \end{DoxyCompactList}\item 
+void \textbf{ set\+Body} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置响应消息体 \end{DoxyCompactList}\item 
+void \textbf{ set\+Reason} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置响应原因 \end{DoxyCompactList}\item 
+void \textbf{ set\+Headers} (const \textbf{ Map\+Type} \&v)
+\begin{DoxyCompactList}\small\item\em 设置响应头部\+M\+AP \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a8dafe5894fe21cbe4acd4aaf746fac77}} 
+bool \textbf{ is\+Close} () const
+\begin{DoxyCompactList}\small\item\em 是否自动关闭 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_ab619bd30856dad9bf00496c476c6dbb0}} 
+void \textbf{ set\+Close} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置是否自动关闭 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a820f27d163fdcad6e1fefb8da800fb10}} 
+bool \textbf{ is\+Websocket} () const
+\begin{DoxyCompactList}\small\item\em 是否websocket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_aa93fa78261cd3ec65e864135f5468d24}} 
+void \textbf{ set\+Websocket} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置是否websocket \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Header} (const std\+::string \&key, const std\+::string \&def=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em 获取响应头部参数 \end{DoxyCompactList}\item 
+void \textbf{ set\+Header} (const std\+::string \&key, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em 设置响应头部参数 \end{DoxyCompactList}\item 
+void \textbf{ del\+Header} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 删除响应头部参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ check\+Get\+Header\+As} (const std\+::string \&key, T \&val, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 检查并获取响应头部参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \textbf{ get\+Header\+As} (const std\+::string \&key, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取响应的头部参数 \end{DoxyCompactList}\item 
+std\+::ostream \& \textbf{ dump} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em 序列化输出到流 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a47be5e57bd4d605c1cc18e357e5b0928}} 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em 转成字符串 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_ab9b49d253e9615616448814001147ff2}} 
+void {\bfseries set\+Redirect} (const std\+::string \&uri)
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_ae9f7153a05ff22c3445aee13d3d636ca}} 
+void {\bfseries set\+Cookie} (const std\+::string \&key, const std\+::string \&val, time\+\_\+t expired=0, const std\+::string \&path=\char`\"{}\char`\"{}, const std\+::string \&domain=\char`\"{}\char`\"{}, bool secure=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+H\+T\+T\+P响应结构体 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_acc3fcf3c92497e58fcf81ff66a316777}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!HttpResponse@{HttpResponse}}
+\index{HttpResponse@{HttpResponse}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{HttpResponse()}
+{\footnotesize\ttfamily sylar\+::http\+::\+Http\+Response\+::\+Http\+Response (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{version = {\ttfamily 0x11},  }\item[{bool}]{close = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em version} & 版本 \\
+\hline
+\mbox{\texttt{ in}}  & {\em close} & 是否自动关闭 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a67612b8fdc89dd9ccf1e036efe56547a}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!checkGetHeaderAs@{checkGetHeaderAs}}
+\index{checkGetHeaderAs@{checkGetHeaderAs}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{checkGetHeaderAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::http\+::\+Http\+Response\+::check\+Get\+Header\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查并获取响应头部参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 值类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 值 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回true,否则失败val=def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 1
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_ad2391cd613de35676b0f0c371a950efc}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!delHeader@{delHeader}}
+\index{delHeader@{delHeader}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{delHeader()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::del\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+删除响应头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a6429579c52c7ea21314ef788b453fb3b}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!dump@{dump}}
+\index{dump@{dump}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{dump()}
+{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::\+Http\+Response\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+序列化输出到流 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em os} & 输出流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+输出流 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a43c5373b30e30876795c89064c267812}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getBody@{getBody}}
+\index{getBody@{getBody}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getBody()}
+{\footnotesize\ttfamily const std\+::string\& sylar\+::http\+::\+Http\+Response\+::get\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回响应消息体 
+
+\begin{DoxyReturn}{返回}
+消息体 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a3686f527a7e230649edf8b4c3ce6ef19}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getHeader()}
+{\footnotesize\ttfamily std\+::string sylar\+::http\+::\+Http\+Response\+::get\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{def = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+获取响应头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在返回对应值,否则返回def 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a47ed35035564d952cf8a086dee38f350}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getHeaderAs@{getHeaderAs}}
+\index{getHeaderAs@{getHeaderAs}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getHeaderAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T sylar\+::http\+::\+Http\+Response\+::get\+Header\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取响应的头部参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回对应的值,否则返回def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 2
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a21070c5715b45737a0dd2e536393e07d}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getHeaders()}
+{\footnotesize\ttfamily const \textbf{ Map\+Type}\& sylar\+::http\+::\+Http\+Response\+::get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回响应头部\+M\+AP 
+
+\begin{DoxyReturn}{返回}
+M\+AP 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a0729ba3c4b7583e96ed238b3f6ff0d5a}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getStatus()}
+{\footnotesize\ttfamily \textbf{ Http\+Status} sylar\+::http\+::\+Http\+Response\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回响应状态 
+
+\begin{DoxyReturn}{返回}
+请求状态 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a066b8a85e5fe1011c6cf248fc0a15a23}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!getVersion@{getVersion}}
+\index{getVersion@{getVersion}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{getVersion()}
+{\footnotesize\ttfamily uint8\+\_\+t sylar\+::http\+::\+Http\+Response\+::get\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回响应版本 
+
+\begin{DoxyReturn}{返回}
+版本 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_af6e990ef51efaf19b784b15bfe8b510f}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setBody@{setBody}}
+\index{setBody@{setBody}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setBody()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Body (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置响应消息体 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 消息体 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_ac2937471901b99ae8a2e0c14e3356ffe}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setHeader()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+设置响应头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & 值 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_aa4bdeaacd3239d32d5a61cd6c10cea3f}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setHeaders()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Headers (\begin{DoxyParamCaption}\item[{const \textbf{ Map\+Type} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置响应头部\+M\+AP 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & M\+AP \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_acd480ebba601032d5aae3568da9e4af2}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setReason@{setReason}}
+\index{setReason@{setReason}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setReason()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Reason (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置响应原因 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 原因 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a7f7d3023abe1d421bc862b5239b1b8a8}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setStatus()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Status (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Status}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置响应状态 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 响应状态 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpResponse_a121e04adeedb062d44cce2848c951601}} 
+\index{sylar::http::HttpResponse@{sylar::http::HttpResponse}!setVersion@{setVersion}}
+\index{setVersion@{setVersion}!sylar::http::HttpResponse@{sylar::http::HttpResponse}}
+\doxysubsubsection{setVersion()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+::set\+Version (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置响应版本 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 版本 \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ http.\+h}\end{DoxyCompactItemize}

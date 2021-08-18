@@ -1,0 +1,7 @@
+digraph "sylar::http::HttpRequest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::http::HttpRequest\n||+ HttpRequest()\l+ createResponse()\l+ getMethod()\l+ getVersion()\l+ getPath()\l+ getQuery()\l+ getBody()\l+ getHeaders()\l+ getParams()\l+ getCookies()\l和 38 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="HTTP请求结构"];
+}

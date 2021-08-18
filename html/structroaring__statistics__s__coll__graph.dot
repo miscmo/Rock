@@ -1,0 +1,7 @@
+digraph "roaring_statistics_s"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{roaring_statistics_s\n|+ n_containers\l+ n_array_containers\l+ n_run_containers\l+ n_bitset_containers\l+ n_values_array_containers\l+ n_values_run_containers\l+ n_values_bitset_containers\l+ n_bytes_array_containers\l+ n_bytes_run_containers\l+ n_bytes_bitset_containers\l+ max_value\l+ min_value\l+ sum_value\l+ cardinality\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

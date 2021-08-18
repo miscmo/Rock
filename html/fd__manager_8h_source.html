@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/fd_manager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fd_manager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fd__manager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __FD_MANAGER_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __FD_MANAGER_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="thread_8h.html">thread.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="singleton_8h.html">singleton.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1FdCtx.html">FdCtx</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;FdCtx&gt; {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FdCtx&gt; ptr;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classsylar_1_1FdCtx.html#a0247f0cc674433bdc1987a06fe48fb34">FdCtx</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classsylar_1_1FdCtx.html#ae671c614e53af7c5ceb40e8dfc0a45e1">~FdCtx</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#ab228b84fc49eac70fdcfaa01a3189b14">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1FdCtx.html#ab228b84fc49eac70fdcfaa01a3189b14">isInit</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isInit;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#af9986ca313fb63a68bbf73f15adfb2ff">   44</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1FdCtx.html#af9986ca313fb63a68bbf73f15adfb2ff">isSocket</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isSocket;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#a46f8a7b8409c76bba7a90692de85a297">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1FdCtx.html#a46f8a7b8409c76bba7a90692de85a297">isClose</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_isClosed;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#a56adbad167928b7090e3b1f457dac872">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1FdCtx.html#a56adbad167928b7090e3b1f457dac872">setUserNonblock</a>(<span class="keywordtype">bool</span> v) { m_userNonblock = v;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#af09ed2a6e534b1e412940916a18751f3">   60</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1FdCtx.html#af09ed2a6e534b1e412940916a18751f3">getUserNonblock</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_userNonblock;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#a5f7e4ed23abe670aae201220ccf03e96">   66</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1FdCtx.html#a5f7e4ed23abe670aae201220ccf03e96">setSysNonblock</a>(<span class="keywordtype">bool</span> v) { m_sysNonblock = v;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classsylar_1_1FdCtx.html#ada4c4bf0d7d76e7be1ef5e6457dd3983">   71</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1FdCtx.html#ada4c4bf0d7d76e7be1ef5e6457dd3983">getSysNonblock</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_sysNonblock;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1FdCtx.html#aa6d966aa221131dd9397d097052debbe">setTimeout</a>(<span class="keywordtype">int</span> type, uint64_t v);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uint64_t <a class="code" href="classsylar_1_1FdCtx.html#a794e1f791e88e19005af78565fd665e7">getTimeout</a>(<span class="keywordtype">int</span> type);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> init();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> m_isInit: 1;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> m_isSocket: 1;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> m_sysNonblock: 1;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> m_userNonblock: 1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> m_isClosed: 1;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> m_fd;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    uint64_t m_recvTimeout;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    uint64_t m_sendTimeout;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classsylar_1_1FdManager.html">  113</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1FdManager.html">FdManager</a> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classsylar_1_1RWMutex.html">RWMutex</a> <a class="code" href="classsylar_1_1RWMutex.html">RWMutexType</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="classsylar_1_1FdManager.html#ae67fab65b64443548da58f81a83f5054">FdManager</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    FdCtx::ptr <a class="code" href="classsylar_1_1FdManager.html#a957e988b2a77ba591e004c2dafbb7694">get</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">bool</span> auto_create = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1FdManager.html#ac5d16d0785629e429c9291fdc0dc4c5b">del</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">RWMutexType</a> m_mutex;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    std::vector&lt;FdCtx::ptr&gt; m_datas;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="fd__manager_8h.html#a3da2e571c42902c25594a085714d48f6">  142</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classsylar_1_1Singleton.html">Singleton&lt;FdManager&gt;</a> <a class="code" href="classsylar_1_1Singleton.html">FdMgr</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_ada4c4bf0d7d76e7be1ef5e6457dd3983"><div class="ttname"><a href="classsylar_1_1FdCtx.html#ada4c4bf0d7d76e7be1ef5e6457dd3983">sylar::FdCtx::getSysNonblock</a></div><div class="ttdeci">bool getSysNonblock() const</div><div class="ttdoc">获取系统非阻塞</div><div class="ttdef"><b>Definition:</b> fd_manager.h:71</div></div>
+<div class="ttc" id="aclasssylar_1_1FdManager_html_ae67fab65b64443548da58f81a83f5054"><div class="ttname"><a href="classsylar_1_1FdManager.html#ae67fab65b64443548da58f81a83f5054">sylar::FdManager::FdManager</a></div><div class="ttdeci">FdManager()</div><div class="ttdoc">无参构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_ab228b84fc49eac70fdcfaa01a3189b14"><div class="ttname"><a href="classsylar_1_1FdCtx.html#ab228b84fc49eac70fdcfaa01a3189b14">sylar::FdCtx::isInit</a></div><div class="ttdeci">bool isInit() const</div><div class="ttdoc">是否初始化完成</div><div class="ttdef"><b>Definition:</b> fd_manager.h:39</div></div>
+<div class="ttc" id="aclasssylar_1_1FdManager_html_ac5d16d0785629e429c9291fdc0dc4c5b"><div class="ttname"><a href="classsylar_1_1FdManager.html#ac5d16d0785629e429c9291fdc0dc4c5b">sylar::FdManager::del</a></div><div class="ttdeci">void del(int fd)</div><div class="ttdoc">删除文件句柄类</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html"><div class="ttname"><a href="classsylar_1_1FdCtx.html">sylar::FdCtx</a></div><div class="ttdoc">文件句柄上下文类</div><div class="ttdef"><b>Definition:</b> fd_manager.h:24</div></div>
+<div class="ttc" id="asingleton_8h_html"><div class="ttname"><a href="singleton_8h.html">singleton.h</a></div><div class="ttdoc">单例模式封装</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_a56adbad167928b7090e3b1f457dac872"><div class="ttname"><a href="classsylar_1_1FdCtx.html#a56adbad167928b7090e3b1f457dac872">sylar::FdCtx::setUserNonblock</a></div><div class="ttdeci">void setUserNonblock(bool v)</div><div class="ttdoc">设置用户主动设置非阻塞</div><div class="ttdef"><b>Definition:</b> fd_manager.h:55</div></div>
+<div class="ttc" id="aclasssylar_1_1FdManager_html_a957e988b2a77ba591e004c2dafbb7694"><div class="ttname"><a href="classsylar_1_1FdManager.html#a957e988b2a77ba591e004c2dafbb7694">sylar::FdManager::get</a></div><div class="ttdeci">FdCtx::ptr get(int fd, bool auto_create=false)</div><div class="ttdoc">获取/创建文件句柄类FdCtx</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_a5f7e4ed23abe670aae201220ccf03e96"><div class="ttname"><a href="classsylar_1_1FdCtx.html#a5f7e4ed23abe670aae201220ccf03e96">sylar::FdCtx::setSysNonblock</a></div><div class="ttdeci">void setSysNonblock(bool v)</div><div class="ttdoc">设置系统非阻塞</div><div class="ttdef"><b>Definition:</b> fd_manager.h:66</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_a46f8a7b8409c76bba7a90692de85a297"><div class="ttname"><a href="classsylar_1_1FdCtx.html#a46f8a7b8409c76bba7a90692de85a297">sylar::FdCtx::isClose</a></div><div class="ttdeci">bool isClose() const</div><div class="ttdoc">是否已关闭</div><div class="ttdef"><b>Definition:</b> fd_manager.h:49</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_af09ed2a6e534b1e412940916a18751f3"><div class="ttname"><a href="classsylar_1_1FdCtx.html#af09ed2a6e534b1e412940916a18751f3">sylar::FdCtx::getUserNonblock</a></div><div class="ttdeci">bool getUserNonblock() const</div><div class="ttdoc">获取是否用户主动设置的非阻塞</div><div class="ttdef"><b>Definition:</b> fd_manager.h:60</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_aa6d966aa221131dd9397d097052debbe"><div class="ttname"><a href="classsylar_1_1FdCtx.html#aa6d966aa221131dd9397d097052debbe">sylar::FdCtx::setTimeout</a></div><div class="ttdeci">void setTimeout(int type, uint64_t v)</div><div class="ttdoc">设置超时时间</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_a794e1f791e88e19005af78565fd665e7"><div class="ttname"><a href="classsylar_1_1FdCtx.html#a794e1f791e88e19005af78565fd665e7">sylar::FdCtx::getTimeout</a></div><div class="ttdeci">uint64_t getTimeout(int type)</div><div class="ttdoc">获取超时时间</div></div>
+<div class="ttc" id="aclasssylar_1_1Singleton_html"><div class="ttname"><a href="classsylar_1_1Singleton.html">sylar::Singleton</a></div><div class="ttdoc">单例模式封装类</div><div class="ttdef"><b>Definition:</b> singleton.h:40</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_af9986ca313fb63a68bbf73f15adfb2ff"><div class="ttname"><a href="classsylar_1_1FdCtx.html#af9986ca313fb63a68bbf73f15adfb2ff">sylar::FdCtx::isSocket</a></div><div class="ttdeci">bool isSocket() const</div><div class="ttdoc">是否socket</div><div class="ttdef"><b>Definition:</b> fd_manager.h:44</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_a0247f0cc674433bdc1987a06fe48fb34"><div class="ttname"><a href="classsylar_1_1FdCtx.html#a0247f0cc674433bdc1987a06fe48fb34">sylar::FdCtx::FdCtx</a></div><div class="ttdeci">FdCtx(int fd)</div><div class="ttdoc">通过文件句柄构造FdCtx</div></div>
+<div class="ttc" id="aclasssylar_1_1FdCtx_html_ae671c614e53af7c5ceb40e8dfc0a45e1"><div class="ttname"><a href="classsylar_1_1FdCtx.html#ae671c614e53af7c5ceb40e8dfc0a45e1">sylar::FdCtx::~FdCtx</a></div><div class="ttdeci">~FdCtx()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="athread_8h_html"><div class="ttname"><a href="thread_8h.html">thread.h</a></div><div class="ttdoc">线程相关的封装</div></div>
+<div class="ttc" id="aclasssylar_1_1FdManager_html"><div class="ttname"><a href="classsylar_1_1FdManager.html">sylar::FdManager</a></div><div class="ttdoc">文件句柄管理类</div><div class="ttdef"><b>Definition:</b> fd_manager.h:113</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

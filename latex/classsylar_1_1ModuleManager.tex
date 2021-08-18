@@ -1,0 +1,50 @@
+\doxysection{sylar\+::Module\+Manager类 参考}
+\label{classsylar_1_1ModuleManager}\index{sylar::ModuleManager@{sylar::ModuleManager}}
+
+
+sylar\+::Module\+Manager 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a205e6691bcdb1232cba34c61282de7f6}} 
+typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a0a4dc00b0067c50ea899668a7935e430}} 
+void {\bfseries add} (Module\+::ptr m)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_ace179423de63e4be7c4462f31b34dc27}} 
+void {\bfseries del} (const std\+::string \&name)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a20af28aefb6f9555d1fc5ae62dbbb328}} 
+void {\bfseries del\+All} ()
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_ad1d02803a6d194de928feb2e78e10c8e}} 
+void {\bfseries init} ()
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a68b947cd251c320ab0743dcabdb2f221}} 
+Module\+::ptr {\bfseries get} (const std\+::string \&name)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_aaf2b7f5742382c409d6ee59f115f6ca7}} 
+void {\bfseries on\+Connect} (Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a313668d2c4403cc0107fa403935825cd}} 
+void {\bfseries on\+Disconnect} (Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a60e29fea5482f4498837abc8dac3a8df}} 
+void {\bfseries list\+All} (std\+::vector$<$ Module\+::ptr $>$ \&ms)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_a23059e215b9ffa4147c770996bae6509}} 
+void {\bfseries list\+By\+Type} (uint32\+\_\+t type, std\+::vector$<$ Module\+::ptr $>$ \&ms)
+\item 
+\mbox{\label{classsylar_1_1ModuleManager_ad49e4b491be38494c4a4659a379a6cb7}} 
+void {\bfseries foreach} (uint32\+\_\+t type, std\+::function$<$ void(Module\+::ptr)$>$ cb)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/module.\+h\end{DoxyCompactItemize}

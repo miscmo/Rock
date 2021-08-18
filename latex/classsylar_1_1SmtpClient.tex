@@ -1,0 +1,37 @@
+\doxysection{sylar\+::Smtp\+Client类 参考}
+\label{classsylar_1_1SmtpClient}\index{sylar::SmtpClient@{sylar::SmtpClient}}
+
+
+类 sylar\+::Smtp\+Client 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Smtp\+Client 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SmtpClient_ab62244df7e7a3aa23e5a9294c3651c0e}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Smtp\+Client} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SmtpClient_a2ec8aaa390e881e245db83482216ce5f}} 
+Smtp\+Result\+::ptr {\bfseries send} (E\+Mail\+::ptr email, int64\+\_\+t timeout\+\_\+ms=1000, bool debug=false)
+\item 
+\mbox{\label{classsylar_1_1SmtpClient_aef15ce7f4fb4059999f39988b421300c}} 
+std\+::string {\bfseries get\+Debug\+Info} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1SmtpClient_ab83931e46871a5888592c3b19df36ca8}} 
+static Smtp\+Client\+::ptr {\bfseries Create} (const std\+::string \&host, uint32\+\_\+t port, bool ssl=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/email/smtp.\+h\end{DoxyCompactItemize}

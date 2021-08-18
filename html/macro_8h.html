@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/macro.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">macro.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>常用宏的封装  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="log_8h_source.html">log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+macro.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+</div>
+<p><a href="macro_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:aaf0cf5c7522dc07497c5278d5902951c"><td class="memItemLeft" align="right" valign="top"><a id="aaf0cf5c7522dc07497c5278d5902951c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYLAR_LIKELY</b>(x)&#160;&#160;&#160;(x)</td></tr>
+<tr class="separator:aaf0cf5c7522dc07497c5278d5902951c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977d7654fdb6aa5fcf6764a3ec800bbb"><td class="memItemLeft" align="right" valign="top"><a id="a977d7654fdb6aa5fcf6764a3ec800bbb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYLAR_UNLIKELY</b>(x)&#160;&#160;&#160;(x)</td></tr>
+<tr class="separator:a977d7654fdb6aa5fcf6764a3ec800bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2348af23f3f851e5d82627eff1ee44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro_8h.html#a8a2348af23f3f851e5d82627eff1ee44">SYLAR_ASSERT</a>(x)</td></tr>
+<tr class="memdesc:a8a2348af23f3f851e5d82627eff1ee44"><td class="mdescLeft">&#160;</td><td class="mdescRight">断言宏封装  <a href="macro_8h.html#a8a2348af23f3f851e5d82627eff1ee44">更多...</a><br /></td></tr>
+<tr class="separator:a8a2348af23f3f851e5d82627eff1ee44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d827e5ee32bdf91a8c67a846c2208fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro_8h.html#a1d827e5ee32bdf91a8c67a846c2208fb">SYLAR_ASSERT2</a>(x,  w)</td></tr>
+<tr class="memdesc:a1d827e5ee32bdf91a8c67a846c2208fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">断言宏封装  <a href="macro_8h.html#a1d827e5ee32bdf91a8c67a846c2208fb">更多...</a><br /></td></tr>
+<tr class="separator:a1d827e5ee32bdf91a8c67a846c2208fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>常用宏的封装 </p>
+<dl class="section author"><dt>作者</dt><dd>sylar.yin @email <a href="#" onclick="location.href='mai'+'lto:'+'564'+'62'+'827'+'6@'+'qq.'+'co'+'m'; return false;">56462<span style="display: none;">.nosp@m.</span>8276<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2019-06-01 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top) </dd></dl>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="a8a2348af23f3f851e5d82627eff1ee44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2348af23f3f851e5d82627eff1ee44">&#9670;&nbsp;</a></span>SYLAR_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYLAR_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(SYLAR_UNLIKELY(!(x))) { \</div>
+<div class="line">        SYLAR_LOG_ERROR(<a class="code" href="log_8h.html#af752fd33828eb554b0281ed98544fe79">SYLAR_LOG_ROOT</a>()) &lt;&lt; <span class="stringliteral">&quot;ASSERTION: &quot;</span> #x \</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;\nbacktrace:\n&quot;</span> \</div>
+<div class="line">            &lt;&lt; <a class="code" href="util_8h.html#a11e102f2ca9ed35760090afccd9387ff">sylar::BacktraceToString</a>(100, 2, <span class="stringliteral">&quot;    &quot;</span>); \</div>
+<div class="line">        assert(x); \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>断言宏封装 </p>
+
+</div>
+</div>
+<a id="a1d827e5ee32bdf91a8c67a846c2208fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d827e5ee32bdf91a8c67a846c2208fb">&#9670;&nbsp;</a></span>SYLAR_ASSERT2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYLAR_ASSERT2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">w&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(SYLAR_UNLIKELY(!(x))) { \</div>
+<div class="line">        SYLAR_LOG_ERROR(<a class="code" href="log_8h.html#af752fd33828eb554b0281ed98544fe79">SYLAR_LOG_ROOT</a>()) &lt;&lt; <span class="stringliteral">&quot;ASSERTION: &quot;</span> #x \</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span> &lt;&lt; w \</div>
+<div class="line">            &lt;&lt; <span class="stringliteral">&quot;\nbacktrace:\n&quot;</span> \</div>
+<div class="line">            &lt;&lt; <a class="code" href="util_8h.html#a11e102f2ca9ed35760090afccd9387ff">sylar::BacktraceToString</a>(100, 2, <span class="stringliteral">&quot;    &quot;</span>); \</div>
+<div class="line">        assert(x); \</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>断言宏封装 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="alog_8h_html_af752fd33828eb554b0281ed98544fe79"><div class="ttname"><a href="log_8h.html#af752fd33828eb554b0281ed98544fe79">SYLAR_LOG_ROOT</a></div><div class="ttdeci">#define SYLAR_LOG_ROOT()</div><div class="ttdoc">获取主日志器</div><div class="ttdef"><b>Definition:</b> log.h:96</div></div>
+<div class="ttc" id="autil_8h_html_a11e102f2ca9ed35760090afccd9387ff"><div class="ttname"><a href="util_8h.html#a11e102f2ca9ed35760090afccd9387ff">sylar::BacktraceToString</a></div><div class="ttdeci">std::string BacktraceToString(int size=64, int skip=2, const std::string &amp;prefix=&quot;&quot;)</div><div class="ttdoc">获取当前栈信息的字符串</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

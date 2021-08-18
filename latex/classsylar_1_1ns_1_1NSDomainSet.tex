@@ -1,0 +1,44 @@
+\doxysection{sylar\+::ns\+::N\+S\+Domain\+Set类 参考}
+\label{classsylar_1_1ns_1_1NSDomainSet}\index{sylar::ns::NSDomainSet@{sylar::ns::NSDomainSet}}
+
+
+sylar\+::ns\+::N\+S\+Domain\+Set 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a28cd607c329775cf5f01196352a959c2}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ N\+S\+Domain\+Set} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a1861dc87b9fd4700f0ad3ac3205136d4}} 
+void {\bfseries add} (N\+S\+Domain\+::ptr info)
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a228fd4776cb189e3cc59e35f472ffa3c}} 
+void {\bfseries del} (const std\+::string \&domain)
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a6ceb16ad916e622b75145b09bbe37f2b}} 
+N\+S\+Domain\+::ptr {\bfseries get} (const std\+::string \&domain, bool auto\+\_\+create=false)
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_aa2987681d53d0fbc991ea7b12f0f2272}} 
+void {\bfseries del} (const std\+::string \&domain, uint32\+\_\+t cmd, uint64\+\_\+t id)
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_adc3ba47ca645f0f3376a73b53606777b}} 
+void {\bfseries list\+All} (std\+::vector$<$ N\+S\+Domain\+::ptr $>$ \&infos)
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a7a7b3e6565d79c8d2c23327ed0367872}} 
+std\+::ostream \& {\bfseries dump} (std\+::ostream \&os, const std\+::string \&prefix=\char`\"{}\char`\"{})
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a4635ae2d73e51c9b5b5f2e78d7508c03}} 
+std\+::string {\bfseries to\+String} (const std\+::string \&prefix=\char`\"{}\char`\"{})
+\item 
+\mbox{\label{classsylar_1_1ns_1_1NSDomainSet_a20b1675f2d513a18da0c3ce1e0cd96b3}} 
+void {\bfseries swap} (\textbf{ N\+S\+Domain\+Set} \&ds)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/ns/ns\+\_\+protocol.\+h\end{DoxyCompactItemize}

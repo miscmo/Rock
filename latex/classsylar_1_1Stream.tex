@@ -1,0 +1,309 @@
+\doxysection{sylar\+::Stream类 参考}
+\label{classsylar_1_1Stream}\index{sylar::Stream@{sylar::Stream}}
+
+
+流结构  
+
+
+
+
+{\ttfamily \#include $<$stream.\+h$>$}
+
+
+
+类 sylar\+::Stream 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Stream 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Stream_ad9d5c6252a7e22c9f238f5892aae8a4e}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Stream} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Stream_a67520125cad49bb3fb4835a36ec56762}} 
+virtual \textbf{ $\sim$\+Stream} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+virtual int \textbf{ read} (void $\ast$buffer, size\+\_\+t length)=0
+\begin{DoxyCompactList}\small\item\em 读数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ read} (Byte\+Array\+::ptr ba, size\+\_\+t length)=0
+\begin{DoxyCompactList}\small\item\em 读数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ read\+Fix\+Size} (void $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 读固定长度的数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ read\+Fix\+Size} (Byte\+Array\+::ptr ba, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 读固定长度的数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ write} (const void $\ast$buffer, size\+\_\+t length)=0
+\begin{DoxyCompactList}\small\item\em 写数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ write} (Byte\+Array\+::ptr ba, size\+\_\+t length)=0
+\begin{DoxyCompactList}\small\item\em 写数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ write\+Fix\+Size} (const void $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 写固定长度的数据 \end{DoxyCompactList}\item 
+virtual int \textbf{ write\+Fix\+Size} (Byte\+Array\+::ptr ba, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 写固定长度的数据 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1Stream_a21f37afb067c11f727b4fb04195916bb}} 
+virtual void \textbf{ close} ()=0
+\begin{DoxyCompactList}\small\item\em 关闭流 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+流结构 
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1Stream_a3eff9c660adf8339885e91f06daddae1}} 
+\index{sylar::Stream@{sylar::Stream}!read@{read}}
+\index{read@{read}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+读数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em ba} & 接收数据的\+Byte\+Array \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回接收到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+
+
+在 \textbf{ sylar\+::\+Socket\+Stream} \doxyref{}{p.}{classsylar_1_1SocketStream_a390ba1458b59483ce78ff8bd0654e7bd} , 以及 \textbf{ sylar\+::\+Zlib\+Stream} \doxyref{}{p.}{classsylar_1_1ZlibStream_a4d704a5c7ef1818e2d813b5a2f3e74d9} 内被实现.
+
+\mbox{\label{classsylar_1_1Stream_a0901dfdec95a25aee92b0d82360b4e13}} 
+\index{sylar::Stream@{sylar::Stream}!read@{read}}
+\index{read@{read}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+读数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回接收到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+
+
+在 \textbf{ sylar\+::\+Zlib\+Stream} \doxyref{}{p.}{classsylar_1_1ZlibStream_a49d8f30f74be95410ffbdb372789d014} , 以及 \textbf{ sylar\+::\+Socket\+Stream} \doxyref{}{p.}{classsylar_1_1SocketStream_a83ceb6fab95c744b1f5d418bd4e4228b} 内被实现.
+
+\mbox{\label{classsylar_1_1Stream_aafdb99e24919b64b137e9fa605e3fcbc}} 
+\index{sylar::Stream@{sylar::Stream}!readFixSize@{readFixSize}}
+\index{readFixSize@{readFixSize}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{readFixSize()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::read\+Fix\+Size (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+读固定长度的数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em ba} & 接收数据的\+Byte\+Array \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回接收到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{classsylar_1_1Stream_a88ed2d9006b3870cc4d2174f207d5fcb}} 
+\index{sylar::Stream@{sylar::Stream}!readFixSize@{readFixSize}}
+\index{readFixSize@{readFixSize}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{readFixSize()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::read\+Fix\+Size (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+读固定长度的数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ out}}  & {\em buffer} & 接收数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 接收数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回接收到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{classsylar_1_1Stream_a3fb968a29622bcf27913b20633895a97}} 
+\index{sylar::Stream@{sylar::Stream}!write@{write}}
+\index{write@{write}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+写数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em ba} & 写数据的\+Byte\+Array \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 写入数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回写入到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+
+
+在 \textbf{ sylar\+::\+Socket\+Stream} \doxyref{}{p.}{classsylar_1_1SocketStream_a11c518ed09bd39d8c39059cc3627474d} , 以及 \textbf{ sylar\+::\+Zlib\+Stream} \doxyref{}{p.}{classsylar_1_1ZlibStream_a74e042190e2c84f1f66b5c845613446d} 内被实现.
+
+\mbox{\label{classsylar_1_1Stream_a3f228e40abdf4462268b871614e9d5a1}} 
+\index{sylar::Stream@{sylar::Stream}!write@{write}}
+\index{write@{write}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+写数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffer} & 写数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 写入数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回写入到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+
+
+在 \textbf{ sylar\+::\+Socket\+Stream} \doxyref{}{p.}{classsylar_1_1SocketStream_a26cb5f28be39aac14cba7d93a28430e0} , 以及 \textbf{ sylar\+::\+Zlib\+Stream} \doxyref{}{p.}{classsylar_1_1ZlibStream_a73933d8cce7af3657d7b4a3903451920} 内被实现.
+
+\mbox{\label{classsylar_1_1Stream_a8ea8f46776f5ff4584e8e1ccc95945df}} 
+\index{sylar::Stream@{sylar::Stream}!writeFixSize@{writeFixSize}}
+\index{writeFixSize@{writeFixSize}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{writeFixSize()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::write\+Fix\+Size (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+写固定长度的数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em ba} & 写数据的\+Byte\+Array \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 写入数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回写入到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\label{classsylar_1_1Stream_a3409defd81c7adc25645ef7dee2878c4}} 
+\index{sylar::Stream@{sylar::Stream}!writeFixSize@{writeFixSize}}
+\index{writeFixSize@{writeFixSize}!sylar::Stream@{sylar::Stream}}
+\doxysubsubsection{writeFixSize()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int sylar\+::\+Stream\+::write\+Fix\+Size (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+写固定长度的数据 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em buffer} & 写数据的内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & 写入数据的内存大小 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{返回值}
+{\em $>$0} & 返回写入到的数据的实际大小 \\
+\hline
+{\em =0} & 被关闭 \\
+\hline
+{\em $<$0} & 出现流错误 \\
+\hline
+\end{DoxyRetVals}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ stream.\+h}\end{DoxyCompactItemize}

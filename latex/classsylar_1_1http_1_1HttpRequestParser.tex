@@ -1,0 +1,125 @@
+\doxysection{sylar\+::http\+::Http\+Request\+Parser类 参考}
+\label{classsylar_1_1http_1_1HttpRequestParser}\index{sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}}
+
+
+H\+T\+T\+P请求解析类  
+
+
+
+
+{\ttfamily \#include $<$http\+\_\+parser.\+h$>$}
+
+
+
+sylar\+::http\+::Http\+Request\+Parser 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a11aab8b5ba2fc529782d0f957f39f143}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Request\+Parser} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P解析类的智能指针 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_af3b698fd818508e8c1d3cbacf1f09904}} 
+\textbf{ Http\+Request\+Parser} ()
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+size\+\_\+t \textbf{ execute} (char $\ast$data, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em 解析协议 \end{DoxyCompactList}\item 
+int \textbf{ is\+Finished} ()
+\begin{DoxyCompactList}\small\item\em 是否解析完成 \end{DoxyCompactList}\item 
+int \textbf{ has\+Error} ()
+\begin{DoxyCompactList}\small\item\em 是否有错误 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a2cc8f2543a48df9f82655a370e1103cb}} 
+\textbf{ Http\+Request\+::ptr} \textbf{ get\+Data} () const
+\begin{DoxyCompactList}\small\item\em 返回\+Http\+Request结构体 \end{DoxyCompactList}\item 
+void \textbf{ set\+Error} (int v)
+\begin{DoxyCompactList}\small\item\em 设置错误 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_ada8b1f9d6a04bd608e5d0a4fc5ba2972}} 
+uint64\+\_\+t \textbf{ get\+Content\+Length} ()
+\begin{DoxyCompactList}\small\item\em 获取消息体长度 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a8660406c5ebc9073d61bbc3824b64bcd}} 
+const \textbf{ http\+\_\+parser} \& \textbf{ get\+Parser} () const
+\begin{DoxyCompactList}\small\item\em 获取http\+\_\+parser结构体 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a972ac8ce912a14a3d61ee76fc9f26a3c}} 
+static uint64\+\_\+t \textbf{ Get\+Http\+Request\+Buffer\+Size} ()
+\begin{DoxyCompactList}\small\item\em 返回\+Http\+Request协议解析的缓存大小 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_ae2f1ba2eee7d673c787bcecf0ad58664}} 
+static uint64\+\_\+t \textbf{ Get\+Http\+Request\+Max\+Body\+Size} ()
+\begin{DoxyCompactList}\small\item\em 返回\+Http\+Request协议的最大消息体大小 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+H\+T\+T\+P请求解析类 
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a74bd07f8c2f84b73cae920186c18dc97}} 
+\index{sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}!execute@{execute}}
+\index{execute@{execute}!sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}}
+\doxysubsubsection{execute()}
+{\footnotesize\ttfamily size\+\_\+t sylar\+::http\+::\+Http\+Request\+Parser\+::execute (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+解析协议 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em data} & 协议文本内存 \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & 协议文本内存长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回实际解析的长度,并且将已解析的数据移除 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_ab795a9dde3b15d10e284a452fa715a7b}} 
+\index{sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}!hasError@{hasError}}
+\index{hasError@{hasError}!sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}}
+\doxysubsubsection{hasError()}
+{\footnotesize\ttfamily int sylar\+::http\+::\+Http\+Request\+Parser\+::has\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+是否有错误 
+
+\begin{DoxyReturn}{返回}
+是否有错误 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_a1650457278166bce425802c02efe0e98}} 
+\index{sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}}
+\doxysubsubsection{isFinished()}
+{\footnotesize\ttfamily int sylar\+::http\+::\+Http\+Request\+Parser\+::is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+是否解析完成 
+
+\begin{DoxyReturn}{返回}
+是否解析完成 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequestParser_ab5e9986cd0098607c5ec98ee73e90eb7}} 
+\index{sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}!setError@{setError}}
+\index{setError@{setError}!sylar::http::HttpRequestParser@{sylar::http::HttpRequestParser}}
+\doxysubsubsection{setError()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+Parser\+::set\+Error (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置错误 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 错误值 \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ http\+\_\+parser.\+h}\end{DoxyCompactItemize}

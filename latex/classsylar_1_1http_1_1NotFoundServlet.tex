@@ -1,0 +1,71 @@
+\doxysection{sylar\+::http\+::Not\+Found\+Servlet类 参考}
+\label{classsylar_1_1http_1_1NotFoundServlet}\index{sylar::http::NotFoundServlet@{sylar::http::NotFoundServlet}}
+
+
+\doxyref{Not\+Found\+Servlet}{p.}{classsylar_1_1http_1_1NotFoundServlet}(默认返回404)  
+
+
+
+
+{\ttfamily \#include $<$servlet.\+h$>$}
+
+
+
+类 sylar\+::http\+::Not\+Found\+Servlet 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::Not\+Found\+Servlet 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1NotFoundServlet_a5d3d492594fca5e7506f1cd142dfbd82}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Not\+Found\+Servlet} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em 智能指针类型定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1NotFoundServlet_a63db01479ef9b4411aec7160678536e8}} 
+\textbf{ Not\+Found\+Servlet} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+virtual int32\+\_\+t \textbf{ handle} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ sylar\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ sylar\+::http\+::\+Http\+Session\+::ptr} session) override
+\begin{DoxyCompactList}\small\item\em 处理请求 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+\doxyref{Not\+Found\+Servlet}{p.}{classsylar_1_1http_1_1NotFoundServlet}(默认返回404) 
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1NotFoundServlet_ace03ccc4be4f07d990a86b4babd34c60}} 
+\index{sylar::http::NotFoundServlet@{sylar::http::NotFoundServlet}!handle@{handle}}
+\index{handle@{handle}!sylar::http::NotFoundServlet@{sylar::http::NotFoundServlet}}
+\doxysubsubsection{handle()}
+{\footnotesize\ttfamily virtual int32\+\_\+t sylar\+::http\+::\+Not\+Found\+Servlet\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+处理请求 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em request} & H\+T\+T\+P请求 \\
+\hline
+\mbox{\texttt{ in}}  & {\em response} & H\+T\+T\+P响应 \\
+\hline
+\mbox{\texttt{ in}}  & {\em session} & H\+T\+T\+P连接 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否处理成功 
+\end{DoxyReturn}
+
+
+实现了 \textbf{ sylar\+::http\+::\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}

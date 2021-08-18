@@ -1,0 +1,37 @@
+digraph "sylar/http/http_session.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="sylar/http/http_session.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="HTTPSession封装"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sylar/http/http_server.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$http__server_8h.html",tooltip="HTTP服务器封装"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sylar/application.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$application_8h_source.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sylar/sylar.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sylar_8h.html",tooltip="sylar头文件"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sylar/http/servlet.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$servlet_8h.html",tooltip="Servlet封装"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sylar/http/servlets\l/config_servlet.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$config__servlet_8h_source.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sylar/http/servlets\l/status_servlet.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$status__servlet_8h_source.html",tooltip=" "];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sylar/http/ws_servlet.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ws__servlet_8h_source.html",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sylar/http/ws_server.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ws__server_8h_source.html",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="sylar/http/ws_session.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ws__session_8h_source.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="sylar/http/ws_connection.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ws__connection_8h_source.html",tooltip=" "];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

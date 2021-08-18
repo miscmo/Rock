@@ -1,0 +1,102 @@
+\doxysection{sylar\+::My\+S\+Q\+L\+Stmt\+Res类 参考}
+\label{classsylar_1_1MySQLStmtRes}\index{sylar::MySQLStmtRes@{sylar::MySQLStmtRes}}
+
+
+类 sylar\+::My\+S\+Q\+L\+Stmt\+Res 继承关系图\+:
+% FIG 0
+
+
+sylar\+::My\+S\+Q\+L\+Stmt\+Res 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a24ef08489f12159fd7b68550f34476e9}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+Q\+L\+Stmt\+Res} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_af4fdafd1a152930b441790ffff4c1a59}} 
+int {\bfseries get\+Errno} () const
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a25485e4023037b6385c88759929716b2}} 
+const std\+::string \& {\bfseries get\+Err\+Str} () const
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a7a82aa4fb945e87fa9a1365052e853c5}} 
+int {\bfseries get\+Data\+Count} () override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a5d85fdacf305eb949c2add127e452d2e}} 
+int {\bfseries get\+Column\+Count} () override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a83373995ba5983134b4794dd3d3edc80}} 
+int {\bfseries get\+Column\+Bytes} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a47a207777f50beb1f55f9e8f3cc2c671}} 
+int {\bfseries get\+Column\+Type} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a3da02ffc0f83eb1fa34811a0fdbee13f}} 
+std\+::string {\bfseries get\+Column\+Name} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a0a785cb985ff6c5a03bb709b1720eb00}} 
+bool {\bfseries is\+Null} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_ae94f5fc3a192b35e240ae3b50ef8c4aa}} 
+int8\+\_\+t {\bfseries get\+Int8} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a1ed4d2cbc1d99e8cd899dc3a1dccee94}} 
+uint8\+\_\+t {\bfseries get\+Uint8} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_ace15aefac92d3d8e3c066adda0550b9e}} 
+int16\+\_\+t {\bfseries get\+Int16} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_adb71eb54212c8b66de449f3d33b128b5}} 
+uint16\+\_\+t {\bfseries get\+Uint16} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a924694792a876d406d60d212cb5bc755}} 
+int32\+\_\+t {\bfseries get\+Int32} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a72bd385104ad698b5704dd54d7708415}} 
+uint32\+\_\+t {\bfseries get\+Uint32} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_ae5c5e647b576c5a5fd14bc5ed151f7bb}} 
+int64\+\_\+t {\bfseries get\+Int64} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a6a4b4d3493962fa4b13a1bea38232605}} 
+uint64\+\_\+t {\bfseries get\+Uint64} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_ac4549d7688329a1fb547bee7bd59864b}} 
+float {\bfseries get\+Float} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a8028b0297da7893c8d031df795071959}} 
+double {\bfseries get\+Double} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_acd95933cb3d58d7fddb4a9400eb57ae2}} 
+std\+::string {\bfseries get\+String} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a30529ad9fc54ffa3f721efc48bee90b6}} 
+std\+::string {\bfseries get\+Blob} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a83fa062d38aa9c6645b38d2730077582}} 
+time\+\_\+t {\bfseries get\+Time} (int idx) override
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a929969d0abfb73b55fcc828e9f76b6af}} 
+bool {\bfseries next} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_a75fc311affc50bdf45b82b762891df6c}} 
+static My\+S\+Q\+L\+Stmt\+Res\+::ptr {\bfseries Create} (std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+Q\+L\+Stmt} $>$ stmt)
+\end{DoxyCompactItemize}
+\doxysubsection*{友元}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1MySQLStmtRes_afa7434f9db13b0cd7a23b4f34d258ce3}} 
+class {\bfseries My\+S\+Q\+L\+Stmt}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/mysql.\+h\end{DoxyCompactItemize}

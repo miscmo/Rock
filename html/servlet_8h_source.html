@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/http/servlet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">servlet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="servlet_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_HTTP_SERVLET_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_HTTP_SERVLET_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http_8h.html">http.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http__session_8h.html">http_session.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="thread_8h.html">sylar/thread.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">sylar/util.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>http {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">   31</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Servlet&gt; <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">   37</a></span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a>(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        :<a class="code" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a>(name) {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">   43</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">~Servlet</a>() {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1Servlet.html#abf60c9694dfc14bb0f2c2b1ff3bde5e1">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                   </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">   59</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a>;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">   62</a></span>&#160;    std::string <a class="code" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1FunctionServlet.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1FunctionServlet.html">FunctionServlet</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1FunctionServlet.html#aa9e2497f50ac1a76934483cfdec7d8c1">   71</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FunctionServlet&gt; <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#aa9e2497f50ac1a76934483cfdec7d8c1">ptr</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">   75</a></span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session)&gt; <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">callback</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#aa6ac85f30751a413d8d7461e73d84322">FunctionServlet</a>(<a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">callback</a> cb);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a5afa1dadb1a31c0ba295de6736c191db">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">callback</a> m_cb;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1IServletCreator.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1IServletCreator.html">IServletCreator</a> {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;IServletCreator&gt; ptr;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classsylar_1_1http_1_1IServletCreator.html">IServletCreator</a>() {}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> get() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> std::string getName() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1HoldServletCreator.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1HoldServletCreator.html">HoldServletCreator</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1IServletCreator.html">IServletCreator</a> {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;HoldServletCreator&gt; ptr;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classsylar_1_1http_1_1HoldServletCreator.html">HoldServletCreator</a>(<a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> slt)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        :m_servlet(slt) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> get()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> m_servlet;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    std::string getName()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> m_servlet-&gt;getName();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> m_servlet;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletCreator.html">  118</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1ServletCreator.html">ServletCreator</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1IServletCreator.html">IServletCreator</a> {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;ServletCreator&gt; ptr;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classsylar_1_1http_1_1ServletCreator.html">ServletCreator</a>() {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> get()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a>(<span class="keyword">new</span> T);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    std::string getName()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">return</span> TypeToName&lt;T&gt;();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletDispatch.html">  137</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1ServletDispatch.html">ServletDispatch</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletDispatch.html#abf8a9874e26a0728a0452580c5c6d722">  140</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;ServletDispatch&gt; <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#abf8a9874e26a0728a0452580c5c6d722">ptr</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletDispatch.html#a86361c13fcc1aa8a2d378a07164c8a6d">  142</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classsylar_1_1RWMutex.html">RWMutex</a> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a86361c13fcc1aa8a2d378a07164c8a6d">RWMutexType</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a6055e6abbc0bef6b6de99e28a495397b">ServletDispatch</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#ad32337b5a0c681b54388f70fd885d236">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a22632b0c002ad063bed2f3b1ea7430d8">addServlet</a>(<span class="keyword">const</span> std::string&amp; uri, <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> slt);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a22632b0c002ad063bed2f3b1ea7430d8">addServlet</a>(<span class="keyword">const</span> std::string&amp; uri, <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">FunctionServlet::callback</a> cb);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#aafd8071eeafa5f86fe051b869743cb91">addGlobServlet</a>(<span class="keyword">const</span> std::string&amp; uri, <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> slt);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#aafd8071eeafa5f86fe051b869743cb91">addGlobServlet</a>(<span class="keyword">const</span> std::string&amp; uri, <a class="code" href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">FunctionServlet::callback</a> cb);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> addServletCreator(<span class="keyword">const</span> std::string&amp; uri, IServletCreator::ptr creator);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">void</span> addGlobServletCreator(<span class="keyword">const</span> std::string&amp; uri, IServletCreator::ptr creator);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> addServletCreator(<span class="keyword">const</span> std::string&amp; uri) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        addServletCreator(uri, std::make_shared&lt;<a class="code" href="classsylar_1_1http_1_1ServletCreator.html">ServletCreator&lt;T&gt;</a> &gt;());</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> addGlobServletCreator(<span class="keyword">const</span> std::string&amp; uri) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        addGlobServletCreator(uri, std::make_shared&lt;<a class="code" href="classsylar_1_1http_1_1ServletCreator.html">ServletCreator&lt;T&gt;</a> &gt;());</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a03c49fe9bf9dc39bb73563e8efca0e63">delServlet</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a9c5554445aacd6f2386df542312b4380">delGlobServlet</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletDispatch.html#a6a05d0141ef5b36ddf16d0cd7e04426b">  208</a></span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a6a05d0141ef5b36ddf16d0cd7e04426b">getDefault</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_default;}</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1ServletDispatch.html#a0167382eb502737cadc10ac531623b7d">  214</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a0167382eb502737cadc10ac531623b7d">setDefault</a>(<a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> v) { m_default = v;}</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a148bdfe3dc74bbc55b5b86893ddb130b">getServlet</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a7b5bdb57af2637a72524cdec5dbf04c2">getGlobServlet</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a13ee79301fb4a3ad973e10f5a83be308">getMatchedServlet</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">void</span> listAllServletCreator(std::map&lt;std::string, IServletCreator::ptr&gt;&amp; infos);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">void</span> listAllGlobServletCreator(std::map&lt;std::string, IServletCreator::ptr&gt;&amp; infos);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html#a86361c13fcc1aa8a2d378a07164c8a6d">RWMutexType</a> m_mutex;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    std::unordered_map&lt;std::string, IServletCreator::ptr&gt; m_datas;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    std::vector&lt;std::pair&lt;std::string, IServletCreator::ptr&gt; &gt; m_globs;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">Servlet::ptr</a> m_default;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1NotFoundServlet.html">  256</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1NotFoundServlet.html">NotFoundServlet</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1NotFoundServlet.html#a5d3d492594fca5e7506f1cd142dfbd82">  259</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NotFoundServlet&gt; <a class="code" href="classsylar_1_1http_1_1NotFoundServlet.html#a5d3d492594fca5e7506f1cd142dfbd82">ptr</a>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="classsylar_1_1http_1_1NotFoundServlet.html#a63db01479ef9b4411aec7160678536e8">NotFoundServlet</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1NotFoundServlet.html#ace03ccc4be4f07d990a86b4babd34c60">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    std::string m_name;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    std::string m_content;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;};</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_a77cde49edee5158fd7259c9a01c0b7b1"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">sylar::http::Servlet::~Servlet</a></div><div class="ttdeci">virtual ~Servlet()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>Definition:</b> servlet.h:43</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a86361c13fcc1aa8a2d378a07164c8a6d"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a86361c13fcc1aa8a2d378a07164c8a6d">sylar::http::ServletDispatch::RWMutexType</a></div><div class="ttdeci">RWMutex RWMutexType</div><div class="ttdoc">读写锁类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:142</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a6a05d0141ef5b36ddf16d0cd7e04426b"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a6a05d0141ef5b36ddf16d0cd7e04426b">sylar::http::ServletDispatch::getDefault</a></div><div class="ttdeci">Servlet::ptr getDefault() const</div><div class="ttdoc">返回默认servlet</div><div class="ttdef"><b>Definition:</b> servlet.h:208</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a03c49fe9bf9dc39bb73563e8efca0e63"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a03c49fe9bf9dc39bb73563e8efca0e63">sylar::http::ServletDispatch::delServlet</a></div><div class="ttdeci">void delServlet(const std::string &amp;uri)</div><div class="ttdoc">删除servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1NotFoundServlet_html_ace03ccc4be4f07d990a86b4babd34c60"><div class="ttname"><a href="classsylar_1_1http_1_1NotFoundServlet.html#ace03ccc4be4f07d990a86b4babd34c60">sylar::http::NotFoundServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a7b5bdb57af2637a72524cdec5dbf04c2"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a7b5bdb57af2637a72524cdec5dbf04c2">sylar::http::ServletDispatch::getGlobServlet</a></div><div class="ttdeci">Servlet::ptr getGlobServlet(const std::string &amp;uri)</div><div class="ttdoc">通过uri获取模糊匹配servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1IServletCreator_html"><div class="ttname"><a href="classsylar_1_1http_1_1IServletCreator.html">sylar::http::IServletCreator</a></div><div class="ttdef"><b>Definition:</b> servlet.h:91</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1NotFoundServlet_html_a63db01479ef9b4411aec7160678536e8"><div class="ttname"><a href="classsylar_1_1http_1_1NotFoundServlet.html#a63db01479ef9b4411aec7160678536e8">sylar::http::NotFoundServlet::NotFoundServlet</a></div><div class="ttdeci">NotFoundServlet(const std::string &amp;name)</div><div class="ttdoc">构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_abf8a9874e26a0728a0452580c5c6d722"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#abf8a9874e26a0728a0452580c5c6d722">sylar::http::ServletDispatch::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ServletDispatch &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:140</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1NotFoundServlet_html_a5d3d492594fca5e7506f1cd142dfbd82"><div class="ttname"><a href="classsylar_1_1http_1_1NotFoundServlet.html#a5d3d492594fca5e7506f1cd142dfbd82">sylar::http::NotFoundServlet::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; NotFoundServlet &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:259</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1FunctionServlet_html_a5afa1dadb1a31c0ba295de6736c191db"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionServlet.html#a5afa1dadb1a31c0ba295de6736c191db">sylar::http::FunctionServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_ad32337b5a0c681b54388f70fd885d236"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#ad32337b5a0c681b54388f70fd885d236">sylar::http::ServletDispatch::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a6055e6abbc0bef6b6de99e28a495397b"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a6055e6abbc0bef6b6de99e28a495397b">sylar::http::ServletDispatch::ServletDispatch</a></div><div class="ttdeci">ServletDispatch()</div><div class="ttdoc">构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html">sylar::http::ServletDispatch</a></div><div class="ttdoc">Servlet分发器</div><div class="ttdef"><b>Definition:</b> servlet.h:137</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1NotFoundServlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1NotFoundServlet.html">sylar::http::NotFoundServlet</a></div><div class="ttdoc">NotFoundServlet(默认返回404)</div><div class="ttdef"><b>Definition:</b> servlet.h:256</div></div>
+<div class="ttc" id="ahttp__session_8h_html"><div class="ttname"><a href="http__session_8h.html">http_session.h</a></div><div class="ttdoc">HTTPSession封装</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1FunctionServlet_html_aa6ac85f30751a413d8d7461e73d84322"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionServlet.html#aa6ac85f30751a413d8d7461e73d84322">sylar::http::FunctionServlet::FunctionServlet</a></div><div class="ttdeci">FunctionServlet(callback cb)</div><div class="ttdoc">构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletCreator_html"><div class="ttname"><a href="classsylar_1_1http_1_1ServletCreator.html">sylar::http::ServletCreator</a></div><div class="ttdef"><b>Definition:</b> servlet.h:118</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_af80c04c87c587133b721c017f22922d3"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">sylar::http::Servlet::Servlet</a></div><div class="ttdeci">Servlet(const std::string &amp;name)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition:</b> servlet.h:37</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_aa7f018f7eee599cf1c2d3ac3591b538e"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">sylar::http::Servlet::m_name</a></div><div class="ttdeci">std::string m_name</div><div class="ttdoc">名称</div><div class="ttdef"><b>Definition:</b> servlet.h:62</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1FunctionServlet_html_a1c69f955718605e8ef091a9bae9e84a8"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionServlet.html#a1c69f955718605e8ef091a9bae9e84a8">sylar::http::FunctionServlet::callback</a></div><div class="ttdeci">std::function&lt; int32_t(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session)&gt; callback</div><div class="ttdoc">函数回调类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:75</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_af428473e4ff0e3dbe411ba95d8dd749f"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">sylar::http::Servlet::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Servlet &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:31</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></div><div class="ttdoc">Servlet封装</div><div class="ttdef"><b>Definition:</b> servlet.h:28</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_aaf499b23f91cbe4227e6dfc79724bf9c"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">sylar::http::Servlet::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdoc">返回Servlet名称</div><div class="ttdef"><b>Definition:</b> servlet.h:59</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a13ee79301fb4a3ad973e10f5a83be308"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a13ee79301fb4a3ad973e10f5a83be308">sylar::http::ServletDispatch::getMatchedServlet</a></div><div class="ttdeci">Servlet::ptr getMatchedServlet(const std::string &amp;uri)</div><div class="ttdoc">通过uri获取servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a148bdfe3dc74bbc55b5b86893ddb130b"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a148bdfe3dc74bbc55b5b86893ddb130b">sylar::http::ServletDispatch::getServlet</a></div><div class="ttdeci">Servlet::ptr getServlet(const std::string &amp;uri)</div><div class="ttdoc">通过uri获取servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a9c5554445aacd6f2386df542312b4380"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a9c5554445aacd6f2386df542312b4380">sylar::http::ServletDispatch::delGlobServlet</a></div><div class="ttdeci">void delGlobServlet(const std::string &amp;uri)</div><div class="ttdoc">删除模糊匹配servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HoldServletCreator_html"><div class="ttname"><a href="classsylar_1_1http_1_1HoldServletCreator.html">sylar::http::HoldServletCreator</a></div><div class="ttdef"><b>Definition:</b> servlet.h:99</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1FunctionServlet_html_aa9e2497f50ac1a76934483cfdec7d8c1"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionServlet.html#aa9e2497f50ac1a76934483cfdec7d8c1">sylar::http::FunctionServlet::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; FunctionServlet &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:71</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_aafd8071eeafa5f86fe051b869743cb91"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#aafd8071eeafa5f86fe051b869743cb91">sylar::http::ServletDispatch::addGlobServlet</a></div><div class="ttdeci">void addGlobServlet(const std::string &amp;uri, Servlet::ptr slt)</div><div class="ttdoc">添加模糊匹配servlet</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1HttpResponse_html_a69535456f2042c35c1a2758fc79f08ca"><div class="ttname"><a href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResponse &gt; ptr</div><div class="ttdoc">HTTP响应结构智能指针</div><div class="ttdef"><b>Definition:</b> http.h:586</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a22632b0c002ad063bed2f3b1ea7430d8"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a22632b0c002ad063bed2f3b1ea7430d8">sylar::http::ServletDispatch::addServlet</a></div><div class="ttdeci">void addServlet(const std::string &amp;uri, Servlet::ptr slt)</div><div class="ttdoc">添加servlet</div></div>
+<div class="ttc" id="athread_8h_html"><div class="ttname"><a href="thread_8h.html">thread.h</a></div><div class="ttdoc">线程相关的封装</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html_a0167382eb502737cadc10ac531623b7d"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html#a0167382eb502737cadc10ac531623b7d">sylar::http::ServletDispatch::setDefault</a></div><div class="ttdeci">void setDefault(Servlet::ptr v)</div><div class="ttdoc">设置默认servlet</div><div class="ttdef"><b>Definition:</b> servlet.h:214</div></div>
+<div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">常用的工具函数</div></div>
+<div class="ttc" id="ahttp_8h_html"><div class="ttname"><a href="http_8h.html">http.h</a></div><div class="ttdoc">HTTP定义结构体封装</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_abf60c9694dfc14bb0f2c2b1ff3bde5e1"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#abf60c9694dfc14bb0f2c2b1ff3bde5e1">sylar::http::Servlet::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session)=0</div><div class="ttdoc">处理请求</div></div>
+<div class="ttc" id="aclasssylar_1_1http_1_1FunctionServlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionServlet.html">sylar::http::FunctionServlet</a></div><div class="ttdoc">函数式Servlet</div><div class="ttdef"><b>Definition:</b> servlet.h:68</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

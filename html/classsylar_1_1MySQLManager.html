@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::MySQLManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1MySQLManager.html">MySQLManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1MySQLManager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::MySQLManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::MySQLManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:af7b62d3fc0e5595617a8079f696b6501"><td class="memItemLeft" align="right" valign="top"><a id="af7b62d3fc0e5595617a8079f696b6501"></a>
+typedef <a class="el" href="classsylar_1_1Mutex.html">sylar::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MutexType</b></td></tr>
+<tr class="separator:af7b62d3fc0e5595617a8079f696b6501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ace0fb9135079a313bbb93f64028765b8"><td class="memItemLeft" align="right" valign="top"><a id="ace0fb9135079a313bbb93f64028765b8"></a>
+MySQL::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const std::string &amp;name)</td></tr>
+<tr class="separator:ace0fb9135079a313bbb93f64028765b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4848a2b72b16b993b94e01f9ac9a2d"><td class="memItemLeft" align="right" valign="top"><a id="a8c4848a2b72b16b993b94e01f9ac9a2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>registerMySQL</b> (const std::string &amp;name, const std::map&lt; std::string, std::string &gt; &amp;params)</td></tr>
+<tr class="separator:a8c4848a2b72b16b993b94e01f9ac9a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8fb2d403b075b368f1e70ff2a6e2be"><td class="memItemLeft" align="right" valign="top"><a id="aeb8fb2d403b075b368f1e70ff2a6e2be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkConnection</b> (int sec=30)</td></tr>
+<tr class="separator:aeb8fb2d403b075b368f1e70ff2a6e2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2718090e653a09a51427f1c176dde20"><td class="memItemLeft" align="right" valign="top"><a id="ad2718090e653a09a51427f1c176dde20"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxConn</b> () const</td></tr>
+<tr class="separator:ad2718090e653a09a51427f1c176dde20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486ce961570cf78a80f26741267acd2e"><td class="memItemLeft" align="right" valign="top"><a id="a486ce961570cf78a80f26741267acd2e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxConn</b> (uint32_t v)</td></tr>
+<tr class="separator:a486ce961570cf78a80f26741267acd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622cb565afc6028e2c48651d03db30b6"><td class="memItemLeft" align="right" valign="top"><a id="a622cb565afc6028e2c48651d03db30b6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const std::string &amp;name, const char *format,...)</td></tr>
+<tr class="separator:a622cb565afc6028e2c48651d03db30b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8ddd91cd8f3c20078a5c814603af29"><td class="memItemLeft" align="right" valign="top"><a id="a1b8ddd91cd8f3c20078a5c814603af29"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const std::string &amp;name, const char *format, va_list ap)</td></tr>
+<tr class="separator:a1b8ddd91cd8f3c20078a5c814603af29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4079c921bcf6348bde2bd4c63e9032"><td class="memItemLeft" align="right" valign="top"><a id="a9d4079c921bcf6348bde2bd4c63e9032"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const std::string &amp;name, const std::string &amp;sql)</td></tr>
+<tr class="separator:a9d4079c921bcf6348bde2bd4c63e9032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc0208ffbe8e61b3a2fd36d4531af43"><td class="memItemLeft" align="right" valign="top"><a id="aedc0208ffbe8e61b3a2fd36d4531af43"></a>
+ISQLData::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>query</b> (const std::string &amp;name, const char *format,...)</td></tr>
+<tr class="separator:aedc0208ffbe8e61b3a2fd36d4531af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33807e7dbbc7252030890ffa701d88da"><td class="memItemLeft" align="right" valign="top"><a id="a33807e7dbbc7252030890ffa701d88da"></a>
+ISQLData::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>query</b> (const std::string &amp;name, const char *format, va_list ap)</td></tr>
+<tr class="separator:a33807e7dbbc7252030890ffa701d88da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c694bc815387fbb488f8b746a9a068"><td class="memItemLeft" align="right" valign="top"><a id="a19c694bc815387fbb488f8b746a9a068"></a>
+ISQLData::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>query</b> (const std::string &amp;name, const std::string &amp;sql)</td></tr>
+<tr class="separator:a19c694bc815387fbb488f8b746a9a068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade128d885cf7a77919aada44ac54b760"><td class="memItemLeft" align="right" valign="top"><a id="ade128d885cf7a77919aada44ac54b760"></a>
+MySQLTransaction::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>openTransaction</b> (const std::string &amp;name, bool auto_commit)</td></tr>
+<tr class="separator:ade128d885cf7a77919aada44ac54b760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/db/<a class="el" href="mysql_8h_source.html">mysql.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

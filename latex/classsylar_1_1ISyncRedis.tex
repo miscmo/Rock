@@ -1,0 +1,60 @@
+\doxysection{sylar\+::I\+Sync\+Redis类 参考}
+\label{classsylar_1_1ISyncRedis}\index{sylar::ISyncRedis@{sylar::ISyncRedis}}
+
+
+类 sylar\+::I\+Sync\+Redis 继承关系图\+:
+% FIG 0
+
+
+sylar\+::I\+Sync\+Redis 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a3584598d982c7edd6ff5eb8d51f111d6}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Sync\+Redis} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_aa23d5a427ec39a4ac8a199aa8579a1f4}} 
+virtual bool {\bfseries reconnect} ()=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a6ca0516edf0100eaab868775c36799d6}} 
+virtual bool {\bfseries connect} (const std\+::string \&ip, int port, uint64\+\_\+t ms=0)=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a0cd8ddf05c7217ab67ee653f74a6d354}} 
+virtual bool {\bfseries connect} ()=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_ac205203e050bffa3a83a45aec73ce7bc}} 
+virtual bool {\bfseries set\+Timeout} (uint64\+\_\+t ms)=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a3975546d1decdd2f961bf51c5c9d9e07}} 
+virtual int {\bfseries append\+Cmd} (const char $\ast$fmt,...)=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_aa996ba66318bb90a0bc794f121c5273f}} 
+virtual int {\bfseries append\+Cmd} (const char $\ast$fmt, va\+\_\+list ap)=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a15d2c8714dbc504a7cfb85e36826abce}} 
+virtual int {\bfseries append\+Cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a6b7f5a4b1aea539febe3ffe265301d71}} 
+virtual Reply\+Ptr {\bfseries get\+Reply} ()=0
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a9ab4a37b467c9ee7d65066710ac7c16b}} 
+uint64\+\_\+t {\bfseries get\+Last\+Active\+Time} () const
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_add98e395731ec39539afe42dbd9a4997}} 
+void {\bfseries set\+Last\+Active\+Time} (uint64\+\_\+t v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ISyncRedis_a266a67b1997fdcc669a89ac1884e3a83}} 
+uint64\+\_\+t {\bfseries m\+\_\+last\+Active\+Time}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/redis.\+h\end{DoxyCompactItemize}

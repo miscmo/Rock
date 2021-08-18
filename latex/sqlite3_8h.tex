@@ -1,0 +1,83 @@
+\doxysection{sylar/db/sqlite3.h 文件参考}
+\label{sqlite3_8h}\index{sylar/db/sqlite3.h@{sylar/db/sqlite3.h}}
+
+
+S\+Q\+Lite3封装  
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}sylar/noncopyable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sylar/mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sylar/singleton.\+h\char`\"{}}\newline
+sqlite3.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ sylar\+::\+S\+Q\+Lite3}
+\item 
+class \textbf{ sylar\+::\+S\+Q\+Lite3\+Data}
+\item 
+class \textbf{ sylar\+::\+S\+Q\+Lite3\+Stmt}
+\item 
+class \textbf{ sylar\+::\+S\+Q\+Lite3\+Transaction}
+\item 
+class \textbf{ sylar\+::\+S\+Q\+Lite3\+Manager}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries XX}(type,  type2)
+\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{sqlite3_8h_ae3a9188157304e8a3f76c79ddc825177}} 
+typedef \textbf{ sylar\+::\+Singleton}$<$ S\+Q\+Lite3\+Manager $>$ {\bfseries sylar\+::\+S\+Q\+Lite3\+Mgr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+S\+Q\+Lite3封装 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/07-\/07 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\label{sqlite3_8h_a095988a441f0060d8bdadb990b3c2237}} 
+\index{sqlite3.h@{sqlite3.h}!XX@{XX}}
+\index{XX@{XX}!sqlite3.h@{sqlite3.h}}
+\doxysubsubsection{XX}
+{\footnotesize\ttfamily \#define XX(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{type2 }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t} N, \textcolor{keyword}{typename}... Tail> \(\backslash\)}
+\DoxyCodeLine{struct SQLite3Binder<N, type, Tail...> \{ \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keywordtype}{int} Bind(SQLite3Stmt::ptr stmt \(\backslash\)}
+\DoxyCodeLine{                    , \textcolor{keyword}{const} type2\& value \(\backslash\)}
+\DoxyCodeLine{                    , \textcolor{keyword}{const} Tail\&... tail) \{ \(\backslash\)}
+\DoxyCodeLine{        int rt = stmt-\/>bind(N, value); \(\backslash\)}
+\DoxyCodeLine{        if(rt != SQLITE\_OK) \{ \(\backslash\)}
+\DoxyCodeLine{            return rt; \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{        return SQLite3Binder<N + 1, Tail...>::Bind(stmt, tail...); \(\backslash\)}
+\DoxyCodeLine{    \} \(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}

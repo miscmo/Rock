@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::ds::HashLruCache&lt; K, V, MutexType, Hash &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>ds</b></li><li class="navelem"><a class="el" href="classsylar_1_1ds_1_1HashLruCache.html">HashLruCache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1ds_1_1HashLruCache-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::ds::HashLruCache&lt; K, V, MutexType, Hash &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::ds::HashLruCache&lt; K, V, MutexType, Hash &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:af63f0b6b3a81e92e83c8c1708e7eca03"><td class="memItemLeft" align="right" valign="top"><a id="af63f0b6b3a81e92e83c8c1708e7eca03"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1ds_1_1HashLruCache.html">HashLruCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:af63f0b6b3a81e92e83c8c1708e7eca03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443b13a26e5986e984fbff5e18d43313"><td class="memItemLeft" align="right" valign="top"><a id="a443b13a26e5986e984fbff5e18d43313"></a>
+typedef <a class="el" href="classsylar_1_1ds_1_1LruCache.html">LruCache</a>&lt; K, V, MutexType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cache_type</b></td></tr>
+<tr class="separator:a443b13a26e5986e984fbff5e18d43313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1429f2d78598fd69079ce418085d69e3"><td class="memItemLeft" align="right" valign="top"><a id="a1429f2d78598fd69079ce418085d69e3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HashLruCache</b> (size_t bucket, size_t max_size, size_t elasticity)</td></tr>
+<tr class="separator:a1429f2d78598fd69079ce418085d69e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef0dd2a43349ea8886d75c59f8fdde4"><td class="memItemLeft" align="right" valign="top"><a id="a2ef0dd2a43349ea8886d75c59f8fdde4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const K &amp;k, const V &amp;v)</td></tr>
+<tr class="separator:a2ef0dd2a43349ea8886d75c59f8fdde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ae6898896a6b162f08969ca6ab2523"><td class="memItemLeft" align="right" valign="top"><a id="ad4ae6898896a6b162f08969ca6ab2523"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const K &amp;k, V &amp;v)</td></tr>
+<tr class="separator:ad4ae6898896a6b162f08969ca6ab2523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684f4829721dc371ed5cb374751596d9"><td class="memItemLeft" align="right" valign="top"><a id="a684f4829721dc371ed5cb374751596d9"></a>
+V&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const K &amp;k)</td></tr>
+<tr class="separator:a684f4829721dc371ed5cb374751596d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76df8c9a89759a8ff4b1ed9ef2c571cf"><td class="memItemLeft" align="right" valign="top"><a id="a76df8c9a89759a8ff4b1ed9ef2c571cf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (const K &amp;k)</td></tr>
+<tr class="separator:a76df8c9a89759a8ff4b1ed9ef2c571cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d410c46f9a3a8ed1f4682665d23e91a"><td class="memItemLeft" align="right" valign="top"><a id="a4d410c46f9a3a8ed1f4682665d23e91a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (const K &amp;k)</td></tr>
+<tr class="separator:a4d410c46f9a3a8ed1f4682665d23e91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc8ff921a01ae2cc66c2af809debf87"><td class="memItemLeft" align="right" valign="top"><a id="a5dc8ff921a01ae2cc66c2af809debf87"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="separator:a5dc8ff921a01ae2cc66c2af809debf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d33a80dbc3ca6a64544a4a422ad3a2"><td class="memItemLeft" align="right" valign="top"><a id="aa2d33a80dbc3ca6a64544a4a422ad3a2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> ()</td></tr>
+<tr class="separator:aa2d33a80dbc3ca6a64544a4a422ad3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fba6fdd4453f1ad73099890ff8d6724"><td class="memItemLeft" align="right" valign="top"><a id="a8fba6fdd4453f1ad73099890ff8d6724"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:a8fba6fdd4453f1ad73099890ff8d6724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f1efc3b10c63330b0d054ec794a5d8"><td class="memItemLeft" align="right" valign="top"><a id="a32f1efc3b10c63330b0d054ec794a5d8"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxSize</b> () const</td></tr>
+<tr class="separator:a32f1efc3b10c63330b0d054ec794a5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ea4e89ccbfc3d2b446cc51e141550d"><td class="memItemLeft" align="right" valign="top"><a id="ad8ea4e89ccbfc3d2b446cc51e141550d"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getElasticity</b> () const</td></tr>
+<tr class="separator:ad8ea4e89ccbfc3d2b446cc51e141550d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab7ccef86a6ebc8b1de00b49f419cb25"><td class="memItemLeft" align="right" valign="top"><a id="aab7ccef86a6ebc8b1de00b49f419cb25"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxAllowedSize</b> () const</td></tr>
+<tr class="separator:aab7ccef86a6ebc8b1de00b49f419cb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c681194fa0ad1f03314c5b164d5abf9"><td class="memItemLeft" align="right" valign="top"><a id="a2c681194fa0ad1f03314c5b164d5abf9"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getBucket</b> () const</td></tr>
+<tr class="separator:a2c681194fa0ad1f03314c5b164d5abf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1992b54480a193d4680af9b92a3a096"><td class="memItemLeft" align="right" valign="top"><a id="ae1992b54480a193d4680af9b92a3a096"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxSize</b> (const size_t &amp;v)</td></tr>
+<tr class="separator:ae1992b54480a193d4680af9b92a3a096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ea87a5b8050b85bf1d1a920fdea1d4"><td class="memItemLeft" align="right" valign="top"><a id="ab5ea87a5b8050b85bf1d1a920fdea1d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setElasticity</b> (const size_t &amp;v)</td></tr>
+<tr class="separator:ab5ea87a5b8050b85bf1d1a920fdea1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac7732db52bab33c5aff8badc501111"><td class="memTemplParams" colspan="2"><a id="a9ac7732db52bab33c5aff8badc501111"></a>
+template&lt;class F &gt; </td></tr>
+<tr class="memitem:a9ac7732db52bab33c5aff8badc501111"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>foreach</b> (F &amp;f)</td></tr>
+<tr class="separator:a9ac7732db52bab33c5aff8badc501111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d9f904b588ba8e0f80fb0a4ce05e2a"><td class="memItemLeft" align="right" valign="top"><a id="ae3d9f904b588ba8e0f80fb0a4ce05e2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPruneCallback</b> (typename cache_type::prune_callback cb)</td></tr>
+<tr class="separator:ae3d9f904b588ba8e0f80fb0a4ce05e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2046c3c4089e97c198e800acc0479b20"><td class="memItemLeft" align="right" valign="top"><a id="a2046c3c4089e97c198e800acc0479b20"></a>
+<a class="el" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> ()</td></tr>
+<tr class="separator:a2046c3c4089e97c198e800acc0479b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5868c09a1a38dbf7499a6035c5b5e6"><td class="memItemLeft" align="right" valign="top"><a id="a4d5868c09a1a38dbf7499a6035c5b5e6"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toStatusString</b> ()</td></tr>
+<tr class="separator:a4d5868c09a1a38dbf7499a6035c5b5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/ds/<a class="el" href="lru__cache_8h_source.html">lru_cache.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

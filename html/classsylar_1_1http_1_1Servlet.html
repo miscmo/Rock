@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::http::Servlet类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classsylar_1_1http_1_1Servlet.html">Servlet</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classsylar_1_1http_1_1Servlet-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::http::Servlet类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Servlet封装  
+ <a href="classsylar_1_1http_1_1Servlet.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="servlet_8h_source.html">servlet.h</a>&gt;</code></p>
+<div class="dynheader">
+类 sylar::http::Servlet 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::http::Servlet 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:af428473e4ff0e3dbe411ba95d8dd749f"><td class="memItemLeft" align="right" valign="top"><a id="af428473e4ff0e3dbe411ba95d8dd749f"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a></td></tr>
+<tr class="memdesc:af428473e4ff0e3dbe411ba95d8dd749f"><td class="mdescLeft">&#160;</td><td class="mdescRight">智能指针类型定义 <br /></td></tr>
+<tr class="separator:af428473e4ff0e3dbe411ba95d8dd749f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af80c04c87c587133b721c017f22922d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:af80c04c87c587133b721c017f22922d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">更多...</a><br /></td></tr>
+<tr class="separator:af80c04c87c587133b721c017f22922d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cde49edee5158fd7259c9a01c0b7b1"><td class="memItemLeft" align="right" valign="top"><a id="a77cde49edee5158fd7259c9a01c0b7b1"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">~Servlet</a> ()</td></tr>
+<tr class="memdesc:a77cde49edee5158fd7259c9a01c0b7b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a77cde49edee5158fd7259c9a01c0b7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf60c9694dfc14bb0f2c2b1ff3bde5e1"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#abf60c9694dfc14bb0f2c2b1ff3bde5e1">handle</a> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request, <a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response, <a class="el" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session)=0</td></tr>
+<tr class="memdesc:abf60c9694dfc14bb0f2c2b1ff3bde5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理请求  <a href="classsylar_1_1http_1_1Servlet.html#abf60c9694dfc14bb0f2c2b1ff3bde5e1">更多...</a><br /></td></tr>
+<tr class="separator:abf60c9694dfc14bb0f2c2b1ff3bde5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf499b23f91cbe4227e6dfc79724bf9c"><td class="memItemLeft" align="right" valign="top"><a id="aaf499b23f91cbe4227e6dfc79724bf9c"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">getName</a> () const</td></tr>
+<tr class="memdesc:aaf499b23f91cbe4227e6dfc79724bf9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Servlet名称 <br /></td></tr>
+<tr class="separator:aaf499b23f91cbe4227e6dfc79724bf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:aa7f018f7eee599cf1c2d3ac3591b538e"><td class="memItemLeft" align="right" valign="top"><a id="aa7f018f7eee599cf1c2d3ac3591b538e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a></td></tr>
+<tr class="memdesc:aa7f018f7eee599cf1c2d3ac3591b538e"><td class="mdescLeft">&#160;</td><td class="mdescRight">名称 <br /></td></tr>
+<tr class="separator:aa7f018f7eee599cf1c2d3ac3591b538e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Servlet封装 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="af80c04c87c587133b721c017f22922d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80c04c87c587133b721c017f22922d3">&#9670;&nbsp;</a></span>Servlet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylar::http::Servlet::Servlet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="abf60c9694dfc14bb0f2c2b1ff3bde5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf60c9694dfc14bb0f2c2b1ff3bde5e1">&#9670;&nbsp;</a></span>handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t sylar::http::Servlet::handle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a>&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a>&#160;</td>
+          <td class="paramname"><em>response</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a>&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>HTTP请求 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>HTTP响应 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">session</td><td>HTTP连接 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否处理成功 </dd></dl>
+
+<p>在 <a class="el" href="classsylar_1_1http_1_1NotFoundServlet.html#ace03ccc4be4f07d990a86b4babd34c60">sylar::http::NotFoundServlet</a>, <a class="el" href="classsylar_1_1http_1_1ServletDispatch.html#ad32337b5a0c681b54388f70fd885d236">sylar::http::ServletDispatch</a>, <a class="el" href="classsylar_1_1http_1_1FunctionServlet.html#a5afa1dadb1a31c0ba295de6736c191db">sylar::http::FunctionServlet</a>, <a class="el" href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">sylar::http::WSServlet</a>, <a class="el" href="classsylar_1_1http_1_1ConfigServlet.html#a4cd3fc101cd59db29385ad0678c40f94">sylar::http::ConfigServlet</a> , 以及 <a class="el" href="classsylar_1_1http_1_1StatusServlet.html#aa7e8869113be987a288828c861d143fb">sylar::http::StatusServlet</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/http/<a class="el" href="servlet_8h_source.html">servlet.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

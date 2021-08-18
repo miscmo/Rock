@@ -1,0 +1,135 @@
+\doxysection{sylar\+::Fd\+Ctx类 参考}
+\label{classsylar_1_1FdCtx}\index{sylar::FdCtx@{sylar::FdCtx}}
+
+
+文件句柄上下文类  
+
+
+
+
+{\ttfamily \#include $<$fd\+\_\+manager.\+h$>$}
+
+
+
+类 sylar\+::Fd\+Ctx 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Fd\+Ctx 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1FdCtx_aa98d2110e1d1e14962f1e99dfa30f63e}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fd\+Ctx} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1FdCtx_a0247f0cc674433bdc1987a06fe48fb34}} 
+\textbf{ Fd\+Ctx} (int fd)
+\begin{DoxyCompactList}\small\item\em 通过文件句柄构造\+Fd\+Ctx \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_ae671c614e53af7c5ceb40e8dfc0a45e1}} 
+\textbf{ $\sim$\+Fd\+Ctx} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_ab228b84fc49eac70fdcfaa01a3189b14}} 
+bool \textbf{ is\+Init} () const
+\begin{DoxyCompactList}\small\item\em 是否初始化完成 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_af9986ca313fb63a68bbf73f15adfb2ff}} 
+bool \textbf{ is\+Socket} () const
+\begin{DoxyCompactList}\small\item\em 是否socket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_a46f8a7b8409c76bba7a90692de85a297}} 
+bool \textbf{ is\+Close} () const
+\begin{DoxyCompactList}\small\item\em 是否已关闭 \end{DoxyCompactList}\item 
+void \textbf{ set\+User\+Nonblock} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置用户主动设置非阻塞 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_af09ed2a6e534b1e412940916a18751f3}} 
+bool \textbf{ get\+User\+Nonblock} () const
+\begin{DoxyCompactList}\small\item\em 获取是否用户主动设置的非阻塞 \end{DoxyCompactList}\item 
+void \textbf{ set\+Sys\+Nonblock} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置系统非阻塞 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1FdCtx_ada4c4bf0d7d76e7be1ef5e6457dd3983}} 
+bool \textbf{ get\+Sys\+Nonblock} () const
+\begin{DoxyCompactList}\small\item\em 获取系统非阻塞 \end{DoxyCompactList}\item 
+void \textbf{ set\+Timeout} (int type, uint64\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置超时时间 \end{DoxyCompactList}\item 
+uint64\+\_\+t \textbf{ get\+Timeout} (int type)
+\begin{DoxyCompactList}\small\item\em 获取超时时间 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+文件句柄上下文类 
+
+管理文件句柄类型(是否socket) 是否阻塞,是否关闭,读/写超时时间 
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1FdCtx_a794e1f791e88e19005af78565fd665e7}} 
+\index{sylar::FdCtx@{sylar::FdCtx}!getTimeout@{getTimeout}}
+\index{getTimeout@{getTimeout}!sylar::FdCtx@{sylar::FdCtx}}
+\doxysubsubsection{getTimeout()}
+{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Fd\+Ctx\+::get\+Timeout (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+获取超时时间 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em type} & 类型\+S\+O\+\_\+\+R\+C\+V\+T\+I\+M\+EO(读超时), S\+O\+\_\+\+S\+N\+D\+T\+I\+M\+EO(写超时) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+超时时间毫秒 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1FdCtx_a5f7e4ed23abe670aae201220ccf03e96}} 
+\index{sylar::FdCtx@{sylar::FdCtx}!setSysNonblock@{setSysNonblock}}
+\index{setSysNonblock@{setSysNonblock}!sylar::FdCtx@{sylar::FdCtx}}
+\doxysubsubsection{setSysNonblock()}
+{\footnotesize\ttfamily void sylar\+::\+Fd\+Ctx\+::set\+Sys\+Nonblock (\begin{DoxyParamCaption}\item[{bool}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置系统非阻塞 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 是否阻塞 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1FdCtx_aa6d966aa221131dd9397d097052debbe}} 
+\index{sylar::FdCtx@{sylar::FdCtx}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!sylar::FdCtx@{sylar::FdCtx}}
+\doxysubsubsection{setTimeout()}
+{\footnotesize\ttfamily void sylar\+::\+Fd\+Ctx\+::set\+Timeout (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{uint64\+\_\+t}]{v }\end{DoxyParamCaption})}
+
+
+
+设置超时时间 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em type} & 类型\+S\+O\+\_\+\+R\+C\+V\+T\+I\+M\+EO(读超时), S\+O\+\_\+\+S\+N\+D\+T\+I\+M\+EO(写超时) \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & 时间毫秒 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1FdCtx_a56adbad167928b7090e3b1f457dac872}} 
+\index{sylar::FdCtx@{sylar::FdCtx}!setUserNonblock@{setUserNonblock}}
+\index{setUserNonblock@{setUserNonblock}!sylar::FdCtx@{sylar::FdCtx}}
+\doxysubsubsection{setUserNonblock()}
+{\footnotesize\ttfamily void sylar\+::\+Fd\+Ctx\+::set\+User\+Nonblock (\begin{DoxyParamCaption}\item[{bool}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置用户主动设置非阻塞 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 是否阻塞 \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ fd\+\_\+manager.\+h}\end{DoxyCompactItemize}

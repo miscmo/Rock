@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::RockSession类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1RockSession.html">RockSession</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1RockSession-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::RockSession类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::RockSession 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::RockSession 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aaa538a428ca62b15876d9555ff72da35"><td class="memItemLeft" align="right" valign="top"><a id="aaa538a428ca62b15876d9555ff72da35"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1RockSession.html">RockSession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:aaa538a428ca62b15876d9555ff72da35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1RockStream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1RockStream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1RockStream.html">sylar::RockStream</a></td></tr>
+<tr class="memitem:a35ca6f42fa1e263126eff283dab5bb89 inherit pub_types_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a35ca6f42fa1e263126eff283dab5bb89"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1RockStream.html">RockStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a35ca6f42fa1e263126eff283dab5bb89 inherit pub_types_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2babd4483426b863e5ff54a4198c59e inherit pub_types_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="ae2babd4483426b863e5ff54a4198c59e"></a>
+typedef std::function&lt; bool(sylar::RockRequest::ptr,sylar::RockResponse::ptr,sylar::RockStream::ptr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>request_handler</b></td></tr>
+<tr class="separator:ae2babd4483426b863e5ff54a4198c59e inherit pub_types_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0981291fb8c65368abf2ad11baf4cbb6 inherit pub_types_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a0981291fb8c65368abf2ad11baf4cbb6"></a>
+typedef std::function&lt; bool(sylar::RockNotify::ptr,sylar::RockStream::ptr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>notify_handler</b></td></tr>
+<tr class="separator:a0981291fb8c65368abf2ad11baf4cbb6 inherit pub_types_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1AsyncSocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1AsyncSocketStream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1AsyncSocketStream.html">sylar::AsyncSocketStream</a></td></tr>
+<tr class="memitem:a6ff095ff3f1b2377c4ec18ed98034f5f inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a6ff095ff3f1b2377c4ec18ed98034f5f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> { <b>OK</b> = 0, 
+<b>TIMEOUT</b> = -1, 
+<b>IO_ERROR</b> = -2, 
+<b>NOT_CONNECT</b> = -3
+ }</td></tr>
+<tr class="separator:a6ff095ff3f1b2377c4ec18ed98034f5f inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b640080eb2b2d3fd20197214ea3483 inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a17b640080eb2b2d3fd20197214ea3483"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1AsyncSocketStream.html">AsyncSocketStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a17b640080eb2b2d3fd20197214ea3483 inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae44b91bb46c699a55459c28ba96c6ca inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="aae44b91bb46c699a55459c28ba96c6ca"></a>
+typedef <a class="el" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
+<tr class="separator:aae44b91bb46c699a55459c28ba96c6ca inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc20f461ade6b2ca73cc132ab5e0ca8 inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a1dc20f461ade6b2ca73cc132ab5e0ca8"></a>
+typedef std::function&lt; bool(AsyncSocketStream::ptr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>connect_callback</b></td></tr>
+<tr class="separator:a1dc20f461ade6b2ca73cc132ab5e0ca8 inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0d83640f13a49cdbc80b5637dd3f6b inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a5d0d83640f13a49cdbc80b5637dd3f6b"></a>
+typedef std::function&lt; void(AsyncSocketStream::ptr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect_callback</b></td></tr>
+<tr class="separator:a5d0d83640f13a49cdbc80b5637dd3f6b inherit pub_types_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a99cc9d12a8054e59ebecdf4a458bbbd3 inherit pub_types_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a99cc9d12a8054e59ebecdf4a458bbbd3"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1SocketStream.html">SocketStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a99cc9d12a8054e59ebecdf4a458bbbd3 inherit pub_types_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="ad9d5c6252a7e22c9f238f5892aae8a4e"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Stream.html">Stream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ad9d5c6252a7e22c9f238f5892aae8a4e inherit pub_types_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2d11f7b27e95361e19b3456ee8c66825"><td class="memItemLeft" align="right" valign="top"><a id="a2d11f7b27e95361e19b3456ee8c66825"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RockSession</b> (Socket::ptr sock)</td></tr>
+<tr class="separator:a2d11f7b27e95361e19b3456ee8c66825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1RockStream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1RockStream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1RockStream.html">sylar::RockStream</a></td></tr>
+<tr class="memitem:af031707c422844684d6c0eaef116458c inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="af031707c422844684d6c0eaef116458c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RockStream</b> (Socket::ptr sock)</td></tr>
+<tr class="separator:af031707c422844684d6c0eaef116458c inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af038dc07322e47cba567250dc1cb8b0c inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="af038dc07322e47cba567250dc1cb8b0c"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>sendMessage</b> (Message::ptr msg)</td></tr>
+<tr class="separator:af038dc07322e47cba567250dc1cb8b0c inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24e3eb8e4fcb0454e0c48a0d61b818c inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="ac24e3eb8e4fcb0454e0c48a0d61b818c"></a>
+RockResult::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>request</b> (RockRequest::ptr req, uint32_t timeout_ms)</td></tr>
+<tr class="separator:ac24e3eb8e4fcb0454e0c48a0d61b818c inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eba2a11c14fe090749b2960326dead0 inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a4eba2a11c14fe090749b2960326dead0"></a>
+request_handler&#160;</td><td class="memItemRight" valign="bottom"><b>getRequestHandler</b> () const</td></tr>
+<tr class="separator:a4eba2a11c14fe090749b2960326dead0 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833e20ed2560551474c16149e3f14828 inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a833e20ed2560551474c16149e3f14828"></a>
+notify_handler&#160;</td><td class="memItemRight" valign="bottom"><b>getNotifyHandler</b> () const</td></tr>
+<tr class="separator:a833e20ed2560551474c16149e3f14828 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7178a7e0ea1da7e1b927d1fea01d5787 inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a7178a7e0ea1da7e1b927d1fea01d5787"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRequestHandler</b> (request_handler v)</td></tr>
+<tr class="separator:a7178a7e0ea1da7e1b927d1fea01d5787 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b38593dcc57927d4473ecc4e3fd2a5 inherit pub_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a49b38593dcc57927d4473ecc4e3fd2a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNotifyHandler</b> (notify_handler v)</td></tr>
+<tr class="separator:a49b38593dcc57927d4473ecc4e3fd2a5 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af502199c149b7db559588d2f974e3b27 inherit pub_methods_classsylar_1_1RockStream"><td class="memTemplParams" colspan="2"><a id="af502199c149b7db559588d2f974e3b27"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:af502199c149b7db559588d2f974e3b27 inherit pub_methods_classsylar_1_1RockStream"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setData</b> (const T &amp;v)</td></tr>
+<tr class="separator:af502199c149b7db559588d2f974e3b27 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c09776dbac455b3daf5d0a87a51b413 inherit pub_methods_classsylar_1_1RockStream"><td class="memTemplParams" colspan="2"><a id="a2c09776dbac455b3daf5d0a87a51b413"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a2c09776dbac455b3daf5d0a87a51b413 inherit pub_methods_classsylar_1_1RockStream"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getData</b> ()</td></tr>
+<tr class="separator:a2c09776dbac455b3daf5d0a87a51b413 inherit pub_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1AsyncSocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1AsyncSocketStream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1AsyncSocketStream.html">sylar::AsyncSocketStream</a></td></tr>
+<tr class="memitem:a018e7a32a3e1daaba2914743b9a04653 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a018e7a32a3e1daaba2914743b9a04653"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AsyncSocketStream</b> (Socket::ptr sock, bool owner=true)</td></tr>
+<tr class="separator:a018e7a32a3e1daaba2914743b9a04653 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490a26ce8da74f069f6170931de75b19 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a490a26ce8da74f069f6170931de75b19"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="separator:a490a26ce8da74f069f6170931de75b19 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2113456ea902ac258022235c3b7874c6 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a2113456ea902ac258022235c3b7874c6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1AsyncSocketStream.html#a2113456ea902ac258022235c3b7874c6">close</a> () override</td></tr>
+<tr class="memdesc:a2113456ea902ac258022235c3b7874c6 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭socket <br /></td></tr>
+<tr class="separator:a2113456ea902ac258022235c3b7874c6 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3332485eb4e9c97a5245f8ee67d48e51 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3332485eb4e9c97a5245f8ee67d48e51"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorker</b> (<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *v)</td></tr>
+<tr class="separator:a3332485eb4e9c97a5245f8ee67d48e51 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01c64c4ac8bf097f7b027995d92f76e inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ab01c64c4ac8bf097f7b027995d92f76e"></a>
+<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getWorker</b> () const</td></tr>
+<tr class="separator:ab01c64c4ac8bf097f7b027995d92f76e inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ff261aa884ecab90df99642e9c96c0 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a00ff261aa884ecab90df99642e9c96c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setIOManager</b> (<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *v)</td></tr>
+<tr class="separator:a00ff261aa884ecab90df99642e9c96c0 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e7d82607bbc417754e36dee3c87237 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a11e7d82607bbc417754e36dee3c87237"></a>
+<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getIOManager</b> () const</td></tr>
+<tr class="separator:a11e7d82607bbc417754e36dee3c87237 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687630130e1efc278ba30b7eb0892584 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a687630130e1efc278ba30b7eb0892584"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAutoConnect</b> () const</td></tr>
+<tr class="separator:a687630130e1efc278ba30b7eb0892584 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575329fa693222c33bceccb8c71f5f35 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a575329fa693222c33bceccb8c71f5f35"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAutoConnect</b> (bool v)</td></tr>
+<tr class="separator:a575329fa693222c33bceccb8c71f5f35 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be5dd46403f7b2e8c520277e075e4e2 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3be5dd46403f7b2e8c520277e075e4e2"></a>
+connect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>getConnectCb</b> () const</td></tr>
+<tr class="separator:a3be5dd46403f7b2e8c520277e075e4e2 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940e35035732538ea2d9b6742a414113 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a940e35035732538ea2d9b6742a414113"></a>
+disconnect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>getDisconnectCb</b> () const</td></tr>
+<tr class="separator:a940e35035732538ea2d9b6742a414113 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad5d9e267f9ee29f7c662272362b993 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="adad5d9e267f9ee29f7c662272362b993"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnectCb</b> (connect_callback v)</td></tr>
+<tr class="separator:adad5d9e267f9ee29f7c662272362b993 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e35c08119e2d3789f48c914d350795 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a01e35c08119e2d3789f48c914d350795"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisconnectCb</b> (disconnect_callback v)</td></tr>
+<tr class="separator:a01e35c08119e2d3789f48c914d350795 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d81803012f4e50639af4e0a7558775 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplParams" colspan="2"><a id="ac3d81803012f4e50639af4e0a7558775"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ac3d81803012f4e50639af4e0a7558775 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setData</b> (const T &amp;v)</td></tr>
+<tr class="separator:ac3d81803012f4e50639af4e0a7558775 inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcf1564eed12eaf45f0ffb00ad8f9eb inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplParams" colspan="2"><a id="a3dcf1564eed12eaf45f0ffb00ad8f9eb"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3dcf1564eed12eaf45f0ffb00ad8f9eb inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getData</b> () const</td></tr>
+<tr class="separator:a3dcf1564eed12eaf45f0ffb00ad8f9eb inherit pub_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a376550be0ece546796ee2d0d0426b36d">SocketStream</a> (Socket::ptr sock, bool owner=true)</td></tr>
+<tr class="memdesc:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1SocketStream.html#a376550be0ece546796ee2d0d0426b36d">更多...</a><br /></td></tr>
+<tr class="separator:a376550be0ece546796ee2d0d0426b36d inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a7bbba4ad707a4bc0d21eab4d04edd28f">~SocketStream</a> ()</td></tr>
+<tr class="memdesc:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classsylar_1_1SocketStream.html#a7bbba4ad707a4bc0d21eab4d04edd28f">更多...</a><br /></td></tr>
+<tr class="separator:a7bbba4ad707a4bc0d21eab4d04edd28f inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a83ceb6fab95c744b1f5d418bd4e4228b">read</a> (void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据  <a href="classsylar_1_1SocketStream.html#a83ceb6fab95c744b1f5d418bd4e4228b">更多...</a><br /></td></tr>
+<tr class="separator:a83ceb6fab95c744b1f5d418bd4e4228b inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a390ba1458b59483ce78ff8bd0654e7bd">read</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据  <a href="classsylar_1_1SocketStream.html#a390ba1458b59483ce78ff8bd0654e7bd">更多...</a><br /></td></tr>
+<tr class="separator:a390ba1458b59483ce78ff8bd0654e7bd inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a26cb5f28be39aac14cba7d93a28430e0">write</a> (const void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入数据  <a href="classsylar_1_1SocketStream.html#a26cb5f28be39aac14cba7d93a28430e0">更多...</a><br /></td></tr>
+<tr class="separator:a26cb5f28be39aac14cba7d93a28430e0 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a11c518ed09bd39d8c39059cc3627474d">write</a> (ByteArray::ptr ba, size_t length) override</td></tr>
+<tr class="memdesc:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入数据  <a href="classsylar_1_1SocketStream.html#a11c518ed09bd39d8c39059cc3627474d">更多...</a><br /></td></tr>
+<tr class="separator:a11c518ed09bd39d8c39059cc3627474d inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3a1f6975f5ce1dd56f317ee55d8e8ab8"></a>
+Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a3a1f6975f5ce1dd56f317ee55d8e8ab8">getSocket</a> () const</td></tr>
+<tr class="memdesc:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Socket类 <br /></td></tr>
+<tr class="separator:a3a1f6975f5ce1dd56f317ee55d8e8ab8 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a488ce96a03f795dc9d27e35abd4901c7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a488ce96a03f795dc9d27e35abd4901c7">isConnected</a> () const</td></tr>
+<tr class="memdesc:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回是否连接 <br /></td></tr>
+<tr class="separator:a488ce96a03f795dc9d27e35abd4901c7 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb705dcbb9cc35d0ab824f0dd5bf7d6b inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="adb705dcbb9cc35d0ab824f0dd5bf7d6b"></a>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getRemoteAddress</b> ()</td></tr>
+<tr class="separator:adb705dcbb9cc35d0ab824f0dd5bf7d6b inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6336032caa25921d41582b517d67ac69 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a6336032caa25921d41582b517d67ac69"></a>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalAddress</b> ()</td></tr>
+<tr class="separator:a6336032caa25921d41582b517d67ac69 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877834b94a234c8568bf45ca18c22336 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a877834b94a234c8568bf45ca18c22336"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getRemoteAddressString</b> ()</td></tr>
+<tr class="separator:a877834b94a234c8568bf45ca18c22336 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad756475d10dd09f011b12ab36a97c679 inherit pub_methods_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ad756475d10dd09f011b12ab36a97c679"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalAddressString</b> ()</td></tr>
+<tr class="separator:ad756475d10dd09f011b12ab36a97c679 inherit pub_methods_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1Stream.html">sylar::Stream</a></td></tr>
+<tr class="memitem:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top"><a id="a67520125cad49bb3fb4835a36ec56762"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">~Stream</a> ()</td></tr>
+<tr class="memdesc:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a67520125cad49bb3fb4835a36ec56762 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a> (void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">更多...</a><br /></td></tr>
+<tr class="separator:a88ed2d9006b3870cc4d2174f207d5fcb inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">readFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">读固定长度的数据  <a href="classsylar_1_1Stream.html#aafdb99e24919b64b137e9fa605e3fcbc">更多...</a><br /></td></tr>
+<tr class="separator:aafdb99e24919b64b137e9fa605e3fcbc inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a> (const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">更多...</a><br /></td></tr>
+<tr class="separator:a3409defd81c7adc25645ef7dee2878c4 inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">writeFixSize</a> (ByteArray::ptr ba, size_t length)</td></tr>
+<tr class="memdesc:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">写固定长度的数据  <a href="classsylar_1_1Stream.html#a8ea8f46776f5ff4584e8e1ccc95945df">更多...</a><br /></td></tr>
+<tr class="separator:a8ea8f46776f5ff4584e8e1ccc95945df inherit pub_methods_classsylar_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classsylar_1_1RockStream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classsylar_1_1RockStream')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classsylar_1_1RockStream.html">sylar::RockStream</a></td></tr>
+<tr class="memitem:ac60c54e6e3c59340e25a2f15c338cf15 inherit pro_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="ac60c54e6e3c59340e25a2f15c338cf15"></a>
+virtual Ctx::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>doRecv</b> () override</td></tr>
+<tr class="separator:ac60c54e6e3c59340e25a2f15c338cf15 inherit pro_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e18bcb0270d1f844d7e37617642796 inherit pro_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a94e18bcb0270d1f844d7e37617642796"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>handleRequest</b> (sylar::RockRequest::ptr req)</td></tr>
+<tr class="separator:a94e18bcb0270d1f844d7e37617642796 inherit pro_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a6b21a925ee1f837319d0abb642a2e inherit pro_methods_classsylar_1_1RockStream"><td class="memItemLeft" align="right" valign="top"><a id="a88a6b21a925ee1f837319d0abb642a2e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>handleNotify</b> (sylar::RockNotify::ptr nty)</td></tr>
+<tr class="separator:a88a6b21a925ee1f837319d0abb642a2e inherit pro_methods_classsylar_1_1RockStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classsylar_1_1AsyncSocketStream"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classsylar_1_1AsyncSocketStream')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classsylar_1_1AsyncSocketStream.html">sylar::AsyncSocketStream</a></td></tr>
+<tr class="memitem:a9a49815f97bb7d8290ae3861ff935ed6 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a9a49815f97bb7d8290ae3861ff935ed6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>doRead</b> ()</td></tr>
+<tr class="separator:a9a49815f97bb7d8290ae3861ff935ed6 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8836312d68b4b44271fe95d701f827 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a4b8836312d68b4b44271fe95d701f827"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>doWrite</b> ()</td></tr>
+<tr class="separator:a4b8836312d68b4b44271fe95d701f827 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99f371cd63d30811cf051fa22bc8630 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ac99f371cd63d30811cf051fa22bc8630"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>startRead</b> ()</td></tr>
+<tr class="separator:ac99f371cd63d30811cf051fa22bc8630 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12377bfa8994332fb67225a379ee3be9 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a12377bfa8994332fb67225a379ee3be9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>startWrite</b> ()</td></tr>
+<tr class="separator:a12377bfa8994332fb67225a379ee3be9 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed84e01f00abfdc5680152ebddb60e2c inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="aed84e01f00abfdc5680152ebddb60e2c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onTimeOut</b> (Ctx::ptr ctx)</td></tr>
+<tr class="separator:aed84e01f00abfdc5680152ebddb60e2c inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99d7e4a7443eb536df0e02b977fb5e8 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ab99d7e4a7443eb536df0e02b977fb5e8"></a>
+Ctx::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getCtx</b> (uint32_t sn)</td></tr>
+<tr class="separator:ab99d7e4a7443eb536df0e02b977fb5e8 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad102dff38e70b9f1f7a352acea008be9 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ad102dff38e70b9f1f7a352acea008be9"></a>
+Ctx::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>getAndDelCtx</b> (uint32_t sn)</td></tr>
+<tr class="separator:ad102dff38e70b9f1f7a352acea008be9 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e458f6a9b6247c1a4d1d39627199d9d inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplParams" colspan="2"><a id="a7e458f6a9b6247c1a4d1d39627199d9d"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a7e458f6a9b6247c1a4d1d39627199d9d inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getCtxAs</b> (uint32_t sn)</td></tr>
+<tr class="separator:a7e458f6a9b6247c1a4d1d39627199d9d inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4507a0564933f4173e987bb41a1e3b inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplParams" colspan="2"><a id="afd4507a0564933f4173e987bb41a1e3b"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:afd4507a0564933f4173e987bb41a1e3b inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAndDelCtxAs</b> (uint32_t sn)</td></tr>
+<tr class="separator:afd4507a0564933f4173e987bb41a1e3b inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18453dabacae674893bce18472ee3260 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a18453dabacae674893bce18472ee3260"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>addCtx</b> (Ctx::ptr ctx)</td></tr>
+<tr class="separator:a18453dabacae674893bce18472ee3260 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ad7c2e2fe53a685396cc7adfa79995 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a78ad7c2e2fe53a685396cc7adfa79995"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (SendCtx::ptr ctx)</td></tr>
+<tr class="separator:a78ad7c2e2fe53a685396cc7adfa79995 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49573aa476e713fdfe038fd5f1edc8e0 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a49573aa476e713fdfe038fd5f1edc8e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>innerClose</b> ()</td></tr>
+<tr class="separator:a49573aa476e713fdfe038fd5f1edc8e0 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579c6e86eff9e95799996d989fdde311 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a579c6e86eff9e95799996d989fdde311"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>waitFiber</b> ()</td></tr>
+<tr class="separator:a579c6e86eff9e95799996d989fdde311 inherit pro_methods_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classsylar_1_1AsyncSocketStream"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1AsyncSocketStream')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1AsyncSocketStream.html">sylar::AsyncSocketStream</a></td></tr>
+<tr class="memitem:a153bbaf75db8fcdd7556c5fb409128e6 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a153bbaf75db8fcdd7556c5fb409128e6"></a>
+<a class="el" href="classsylar_1_1FiberSemaphore.html">sylar::FiberSemaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_sem</b></td></tr>
+<tr class="separator:a153bbaf75db8fcdd7556c5fb409128e6 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afd8b1a3def701c9c36904f7970410b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a8afd8b1a3def701c9c36904f7970410b"></a>
+<a class="el" href="classsylar_1_1FiberSemaphore.html">sylar::FiberSemaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_waitSem</b></td></tr>
+<tr class="separator:a8afd8b1a3def701c9c36904f7970410b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43334f7432e2e833189e9336a95bd34b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a43334f7432e2e833189e9336a95bd34b"></a>
+<a class="el" href="classsylar_1_1RWMutex.html">RWMutexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_queueMutex</b></td></tr>
+<tr class="separator:a43334f7432e2e833189e9336a95bd34b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2e330d38a4cf74175867a0e3e11dc90 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ac2e330d38a4cf74175867a0e3e11dc90"></a>
+std::list&lt; SendCtx::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_queue</b></td></tr>
+<tr class="separator:ac2e330d38a4cf74175867a0e3e11dc90 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d5fa31596ca259d921888309776546 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a29d5fa31596ca259d921888309776546"></a>
+<a class="el" href="classsylar_1_1RWMutex.html">RWMutexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
+<tr class="separator:a29d5fa31596ca259d921888309776546 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be28b47da6026de966104fc1fffe600 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a7be28b47da6026de966104fc1fffe600"></a>
+std::unordered_map&lt; uint32_t, Ctx::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_ctxs</b></td></tr>
+<tr class="separator:a7be28b47da6026de966104fc1fffe600 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3472b13ce813c9aa2855ceca2d24ff2c inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3472b13ce813c9aa2855ceca2d24ff2c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_sn</b></td></tr>
+<tr class="separator:a3472b13ce813c9aa2855ceca2d24ff2c inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7aee40e124a7792ee524d8605646de9 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ac7aee40e124a7792ee524d8605646de9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_autoConnect</b></td></tr>
+<tr class="separator:ac7aee40e124a7792ee524d8605646de9 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f929747af09390f08052343a2415e9e inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a3f929747af09390f08052343a2415e9e"></a>
+<a class="el" href="classsylar_1_1Timer.html#a35a05b231d168320d62b3ee2ba5dcb6a">sylar::Timer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_timer</b></td></tr>
+<tr class="separator:a3f929747af09390f08052343a2415e9e inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5688bb418dd829d01d972cdb12c007 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a6f5688bb418dd829d01d972cdb12c007"></a>
+<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_iomanager</b></td></tr>
+<tr class="separator:a6f5688bb418dd829d01d972cdb12c007 inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8feb7ecc817164611bf398adef4732dc inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a8feb7ecc817164611bf398adef4732dc"></a>
+<a class="el" href="classsylar_1_1IOManager.html">sylar::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_worker</b></td></tr>
+<tr class="separator:a8feb7ecc817164611bf398adef4732dc inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06dabea082f4f5d1b5d897b71ed276b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="aa06dabea082f4f5d1b5d897b71ed276b"></a>
+connect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>m_connectCb</b></td></tr>
+<tr class="separator:aa06dabea082f4f5d1b5d897b71ed276b inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d79e081fa9d67aab3fda8e01a215ee inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a92d79e081fa9d67aab3fda8e01a215ee"></a>
+disconnect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>m_disconnectCb</b></td></tr>
+<tr class="separator:a92d79e081fa9d67aab3fda8e01a215ee inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace35164cb1e999b89fc2e37fa97b6fac inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memItemLeft" align="right" valign="top"><a id="ace35164cb1e999b89fc2e37fa97b6fac"></a>
+boost::any&#160;</td><td class="memItemRight" valign="bottom"><b>m_data</b></td></tr>
+<tr class="separator:ace35164cb1e999b89fc2e37fa97b6fac inherit pro_attribs_classsylar_1_1AsyncSocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classsylar_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1SocketStream.html">sylar::SocketStream</a></td></tr>
+<tr class="memitem:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a358b16565b6adfbf882abb54def5c600"></a>
+Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a358b16565b6adfbf882abb54def5c600">m_socket</a></td></tr>
+<tr class="memdesc:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket类 <br /></td></tr>
+<tr class="separator:a358b16565b6adfbf882abb54def5c600 inherit pro_attribs_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="memItemLeft" align="right" valign="top"><a id="a86cc9c7048fa2577499a5084178081ca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1SocketStream.html#a86cc9c7048fa2577499a5084178081ca">m_owner</a></td></tr>
+<tr class="memdesc:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否主控 <br /></td></tr>
+<tr class="separator:a86cc9c7048fa2577499a5084178081ca inherit pro_attribs_classsylar_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/rock/<a class="el" href="rock__stream_8h_source.html">rock_stream.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

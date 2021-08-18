@@ -1,0 +1,61 @@
+\doxysection{sylar\+::Fox\+Redis类 参考}
+\label{classsylar_1_1FoxRedis}\index{sylar::FoxRedis@{sylar::FoxRedis}}
+
+
+类 sylar\+::Fox\+Redis 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Fox\+Redis 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a7bdb178cfcc1f8fb0ebf8edb4d600b69}} 
+enum {\bfseries S\+T\+A\+T\+US} \{ {\bfseries U\+N\+C\+O\+N\+N\+E\+C\+T\+ED} = 0, 
+{\bfseries C\+O\+N\+N\+E\+C\+T\+I\+NG} = 1, 
+{\bfseries C\+O\+N\+N\+E\+C\+T\+ED} = 2
+ \}
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a75464feff540d155b66f6d03d7d6bc6f}} 
+enum {\bfseries R\+E\+S\+U\+LT} \{ \newline
+{\bfseries OK} = 0, 
+{\bfseries T\+I\+M\+E\+\_\+\+O\+UT} = 1, 
+{\bfseries C\+O\+N\+N\+E\+C\+T\+\_\+\+E\+RR} = 2, 
+{\bfseries C\+M\+D\+\_\+\+E\+RR} = 3, 
+\newline
+{\bfseries R\+E\+P\+L\+Y\+\_\+\+N\+U\+LL} = 4, 
+{\bfseries R\+E\+P\+L\+Y\+\_\+\+E\+RR} = 5, 
+{\bfseries I\+N\+I\+T\+\_\+\+E\+RR} = 6
+ \}
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a75974da59054c8fd58382756df95d6f1}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fox\+Redis} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a15ea80274d1389067a5169d2dc56cfb7}} 
+{\bfseries Fox\+Redis} (\textbf{ sylar\+::\+Fox\+Thread} $\ast$thr, const std\+::map$<$ std\+::string, std\+::string $>$ \&conf)
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a6d24307af4cf8bb5a3d5514afc53cbf6}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt,...)
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a6ea8776c846a9aca53fe50f4175e129d}} 
+virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a8772ff77cebc92e1e147c301b69927e6}} 
+virtual Reply\+Ptr {\bfseries cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_a817f41f26598ee2dbaa23a56c9e144e2}} 
+bool {\bfseries init} ()
+\item 
+\mbox{\label{classsylar_1_1FoxRedis_ac210846d3252a9f3ac2dcb33ff7c3804}} 
+int {\bfseries get\+Ctx\+Count} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/db/redis.\+h\end{DoxyCompactItemize}

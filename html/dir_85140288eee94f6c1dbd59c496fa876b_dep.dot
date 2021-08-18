@@ -1,0 +1,23 @@
+digraph "sylar" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_85140288eee94f6c1dbd59c496fa876b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_85140288eee94f6c1dbd59c496fa876b.html"];
+    dir_85140288eee94f6c1dbd59c496fa876b [shape=plaintext label="sylar"];
+    dir_e90341037f5a9ae22e89e5ac06c7e14d [shape=box label="db" color="black" fillcolor="white" style="filled" URL="dir_e90341037f5a9ae22e89e5ac06c7e14d.html"];
+    dir_5d8a758f8eaae8cfc76012487c772dae [shape=box label="ds" color="black" fillcolor="white" style="filled" URL="dir_5d8a758f8eaae8cfc76012487c772dae.html"];
+    dir_8841f1e26055b2780232e7b8a02e35c6 [shape=box label="email" color="black" fillcolor="white" style="filled" URL="dir_8841f1e26055b2780232e7b8a02e35c6.html"];
+    dir_5fdfbf8b0b8272587873e17fac938b86 [shape=box label="http" color="red" fillcolor="white" style="filled" URL="dir_5fdfbf8b0b8272587873e17fac938b86.html"];
+    dir_14cb8fc44d7a95761043055eb210fa06 [shape=box label="ns" color="black" fillcolor="white" style="filled" URL="dir_14cb8fc44d7a95761043055eb210fa06.html"];
+    dir_69f70a35be3d0c6907160a79b296b2b5 [shape=box label="orm" color="black" fillcolor="white" style="filled" URL="dir_69f70a35be3d0c6907160a79b296b2b5.html"];
+    dir_85bef477dd70a83b232fc3b9b16e7c18 [shape=box label="rock" color="black" fillcolor="white" style="filled" URL="dir_85bef477dd70a83b232fc3b9b16e7c18.html"];
+    dir_5fecf1443bd42aaf252383bf16ba653f [shape=box label="streams" color="black" fillcolor="white" style="filled" URL="dir_5fecf1443bd42aaf252383bf16ba653f.html"];
+    dir_d6567d38531f9bb3455fc97815cbd7bc [shape=box label="util" color="black" fillcolor="white" style="filled" URL="dir_d6567d38531f9bb3455fc97815cbd7bc.html"];
+  }
+  dir_5fdfbf8b0b8272587873e17fac938b86->dir_5fecf1443bd42aaf252383bf16ba653f [headlabel="2", labeldistance=1.5 headhref="dir_000005_000009.html"];
+  dir_85140288eee94f6c1dbd59c496fa876b->dir_5fdfbf8b0b8272587873e17fac938b86 [headlabel="7", labeldistance=1.5 headhref="dir_000000_000005.html"];
+  dir_85140288eee94f6c1dbd59c496fa876b->dir_d6567d38531f9bb3455fc97815cbd7bc [headlabel="2", labeldistance=1.5 headhref="dir_000000_000010.html"];
+  dir_85140288eee94f6c1dbd59c496fa876b->dir_e90341037f5a9ae22e89e5ac06c7e14d [headlabel="1", labeldistance=1.5 headhref="dir_000000_000001.html"];
+  dir_8841f1e26055b2780232e7b8a02e35c6->dir_5fecf1443bd42aaf252383bf16ba653f [headlabel="1", labeldistance=1.5 headhref="dir_000004_000009.html"];
+}

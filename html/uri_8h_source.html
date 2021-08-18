@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/uri.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">uri.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="uri_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_URI_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_URI_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="address_8h.html">address.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     foo://user@sylar.com:8042/over/there?name=ferret#nose</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">       \_/   \______________/\_________/ \_________/ \__/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">        |           |            |            |        |</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     scheme     authority       path        query   fragment</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1Uri.html">Uri</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">   32</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Uri&gt; <a class="code" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">ptr</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> <a class="code" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> <a class="code" href="classsylar_1_1Uri.html#a61d7171fbfd25a921ca4f1653bdb9bd5">Create</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classsylar_1_1Uri.html#a8addf5ca05567e11493118994bb0ba65">Uri</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a36a91daff02b959e68f41bdd7b1cb990">   49</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a36a91daff02b959e68f41bdd7b1cb990">getScheme</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_scheme;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a2bb8af22125a67b082e7ab42065aa8bf">   54</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a2bb8af22125a67b082e7ab42065aa8bf">getUserinfo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_userinfo;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a66adea89c81ede2bbeba787e9fdbeb29">   59</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a66adea89c81ede2bbeba787e9fdbeb29">getHost</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_host;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a7b965a351bdc1858ab661991ab9abfbb">getPath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a864e01f0c76c834e217049484d2d0c4d">   69</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a864e01f0c76c834e217049484d2d0c4d">getQuery</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_query;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a7759e472029f56cc40176a62acfc72af">   74</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Uri.html#a7759e472029f56cc40176a62acfc72af">getFragment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_fragment;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    int32_t <a class="code" href="classsylar_1_1Uri.html#aea97d114a1cadc15d285c4d9dd5ce4c4">getPort</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#af6e9ebe16f26666409264b6c0d32006a">   85</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#af6e9ebe16f26666409264b6c0d32006a">setScheme</a>(<span class="keyword">const</span> std::string&amp; v) { m_scheme = v;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a42f828ed54d0104e0f4fbe7cca5191da">   91</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#a42f828ed54d0104e0f4fbe7cca5191da">setUserinfo</a>(<span class="keyword">const</span> std::string&amp; v) { m_userinfo = v;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#afeb21de1273024ee618a830cca58f829">   97</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#afeb21de1273024ee618a830cca58f829">setHost</a>(<span class="keyword">const</span> std::string&amp; v) { m_host = v;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a7a86ff3b459e9326d10f07d810b08803">  103</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#a7a86ff3b459e9326d10f07d810b08803">setPath</a>(<span class="keyword">const</span> std::string&amp; v) { m_path = v;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a19ee064e91e25891fc9a3b3b13da2352">  109</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#a19ee064e91e25891fc9a3b3b13da2352">setQuery</a>(<span class="keyword">const</span> std::string&amp; v) { m_query = v;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#a08a04e6e31f3f09ac8ba6e6e3949ebb8">  115</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#a08a04e6e31f3f09ac8ba6e6e3949ebb8">setFragment</a>(<span class="keyword">const</span> std::string&amp; v) { m_fragment = v;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classsylar_1_1Uri.html#ad13899323fbec77f2eaf4315fe115bab">  121</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Uri.html#ad13899323fbec77f2eaf4315fe115bab">setPort</a>(int32_t v) { m_port = v;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::ostream&amp; <a class="code" href="classsylar_1_1Uri.html#ab7883cb6e6607b84f49dd73a7e06fab4">dump</a>(std::ostream&amp; os) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    std::string <a class="code" href="classsylar_1_1Uri.html#a40cae37791e62f074ba921411c709aed">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    Address::ptr <a class="code" href="classsylar_1_1Uri.html#a5e69200edb9d9ea33df6d95f3d74dd5d">createAddress</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">bool</span> isDefaultPort() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    std::string m_scheme;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    std::string m_userinfo;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    std::string m_host;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    std::string m_path;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    std::string m_query;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::string m_fragment;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    int32_t m_port;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1Uri_html_a40cae37791e62f074ba921411c709aed"><div class="ttname"><a href="classsylar_1_1Uri.html#a40cae37791e62f074ba921411c709aed">sylar::Uri::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">转成字符串</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_ad13899323fbec77f2eaf4315fe115bab"><div class="ttname"><a href="classsylar_1_1Uri.html#ad13899323fbec77f2eaf4315fe115bab">sylar::Uri::setPort</a></div><div class="ttdeci">void setPort(int32_t v)</div><div class="ttdoc">设置端口号</div><div class="ttdef"><b>Definition:</b> uri.h:121</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_ab7883cb6e6607b84f49dd73a7e06fab4"><div class="ttname"><a href="classsylar_1_1Uri.html#ab7883cb6e6607b84f49dd73a7e06fab4">sylar::Uri::dump</a></div><div class="ttdeci">std::ostream &amp; dump(std::ostream &amp;os) const</div><div class="ttdoc">序列化到输出流</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a5e69200edb9d9ea33df6d95f3d74dd5d"><div class="ttname"><a href="classsylar_1_1Uri.html#a5e69200edb9d9ea33df6d95f3d74dd5d">sylar::Uri::createAddress</a></div><div class="ttdeci">Address::ptr createAddress() const</div><div class="ttdoc">获取Address</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a19ee064e91e25891fc9a3b3b13da2352"><div class="ttname"><a href="classsylar_1_1Uri.html#a19ee064e91e25891fc9a3b3b13da2352">sylar::Uri::setQuery</a></div><div class="ttdeci">void setQuery(const std::string &amp;v)</div><div class="ttdoc">设置查询条件</div><div class="ttdef"><b>Definition:</b> uri.h:109</div></div>
+<div class="ttc" id="aaddress_8h_html"><div class="ttname"><a href="address_8h.html">address.h</a></div><div class="ttdoc">网络地址的封装(IPv4,IPv6,Unix)</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a7759e472029f56cc40176a62acfc72af"><div class="ttname"><a href="classsylar_1_1Uri.html#a7759e472029f56cc40176a62acfc72af">sylar::Uri::getFragment</a></div><div class="ttdeci">const std::string &amp; getFragment() const</div><div class="ttdoc">返回fragment</div><div class="ttdef"><b>Definition:</b> uri.h:74</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_afeb21de1273024ee618a830cca58f829"><div class="ttname"><a href="classsylar_1_1Uri.html#afeb21de1273024ee618a830cca58f829">sylar::Uri::setHost</a></div><div class="ttdeci">void setHost(const std::string &amp;v)</div><div class="ttdoc">设置host信息</div><div class="ttdef"><b>Definition:</b> uri.h:97</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a08a04e6e31f3f09ac8ba6e6e3949ebb8"><div class="ttname"><a href="classsylar_1_1Uri.html#a08a04e6e31f3f09ac8ba6e6e3949ebb8">sylar::Uri::setFragment</a></div><div class="ttdeci">void setFragment(const std::string &amp;v)</div><div class="ttdoc">设置fragment</div><div class="ttdef"><b>Definition:</b> uri.h:115</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a7b965a351bdc1858ab661991ab9abfbb"><div class="ttname"><a href="classsylar_1_1Uri.html#a7b965a351bdc1858ab661991ab9abfbb">sylar::Uri::getPath</a></div><div class="ttdeci">const std::string &amp; getPath() const</div><div class="ttdoc">返回路径</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a8addf5ca05567e11493118994bb0ba65"><div class="ttname"><a href="classsylar_1_1Uri.html#a8addf5ca05567e11493118994bb0ba65">sylar::Uri::Uri</a></div><div class="ttdeci">Uri()</div><div class="ttdoc">构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a6dfcd7add35add7675e21e8f23b4f262"><div class="ttname"><a href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">sylar::Uri::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Uri &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> uri.h:32</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a66adea89c81ede2bbeba787e9fdbeb29"><div class="ttname"><a href="classsylar_1_1Uri.html#a66adea89c81ede2bbeba787e9fdbeb29">sylar::Uri::getHost</a></div><div class="ttdeci">const std::string &amp; getHost() const</div><div class="ttdoc">返回host</div><div class="ttdef"><b>Definition:</b> uri.h:59</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a42f828ed54d0104e0f4fbe7cca5191da"><div class="ttname"><a href="classsylar_1_1Uri.html#a42f828ed54d0104e0f4fbe7cca5191da">sylar::Uri::setUserinfo</a></div><div class="ttdeci">void setUserinfo(const std::string &amp;v)</div><div class="ttdoc">设置用户信息</div><div class="ttdef"><b>Definition:</b> uri.h:91</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a7a86ff3b459e9326d10f07d810b08803"><div class="ttname"><a href="classsylar_1_1Uri.html#a7a86ff3b459e9326d10f07d810b08803">sylar::Uri::setPath</a></div><div class="ttdeci">void setPath(const std::string &amp;v)</div><div class="ttdoc">设置路径</div><div class="ttdef"><b>Definition:</b> uri.h:103</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html"><div class="ttname"><a href="classsylar_1_1Uri.html">sylar::Uri</a></div><div class="ttdoc">URI类</div><div class="ttdef"><b>Definition:</b> uri.h:29</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a61d7171fbfd25a921ca4f1653bdb9bd5"><div class="ttname"><a href="classsylar_1_1Uri.html#a61d7171fbfd25a921ca4f1653bdb9bd5">sylar::Uri::Create</a></div><div class="ttdeci">static Uri::ptr Create(const std::string &amp;uri)</div><div class="ttdoc">创建Uri对象</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_af6e9ebe16f26666409264b6c0d32006a"><div class="ttname"><a href="classsylar_1_1Uri.html#af6e9ebe16f26666409264b6c0d32006a">sylar::Uri::setScheme</a></div><div class="ttdeci">void setScheme(const std::string &amp;v)</div><div class="ttdoc">设置scheme</div><div class="ttdef"><b>Definition:</b> uri.h:85</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_aea97d114a1cadc15d285c4d9dd5ce4c4"><div class="ttname"><a href="classsylar_1_1Uri.html#aea97d114a1cadc15d285c4d9dd5ce4c4">sylar::Uri::getPort</a></div><div class="ttdeci">int32_t getPort() const</div><div class="ttdoc">返回端口</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a864e01f0c76c834e217049484d2d0c4d"><div class="ttname"><a href="classsylar_1_1Uri.html#a864e01f0c76c834e217049484d2d0c4d">sylar::Uri::getQuery</a></div><div class="ttdeci">const std::string &amp; getQuery() const</div><div class="ttdoc">返回查询条件</div><div class="ttdef"><b>Definition:</b> uri.h:69</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a2bb8af22125a67b082e7ab42065aa8bf"><div class="ttname"><a href="classsylar_1_1Uri.html#a2bb8af22125a67b082e7ab42065aa8bf">sylar::Uri::getUserinfo</a></div><div class="ttdeci">const std::string &amp; getUserinfo() const</div><div class="ttdoc">返回用户信息</div><div class="ttdef"><b>Definition:</b> uri.h:54</div></div>
+<div class="ttc" id="aclasssylar_1_1Uri_html_a36a91daff02b959e68f41bdd7b1cb990"><div class="ttname"><a href="classsylar_1_1Uri.html#a36a91daff02b959e68f41bdd7b1cb990">sylar::Uri::getScheme</a></div><div class="ttdeci">const std::string &amp; getScheme() const</div><div class="ttdoc">返回scheme</div><div class="ttdef"><b>Definition:</b> uri.h:49</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

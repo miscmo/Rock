@@ -1,0 +1,52 @@
+\doxysection{sylar\+::http\+::W\+S\+Connection类 参考}
+\label{classsylar_1_1http_1_1WSConnection}\index{sylar::http::WSConnection@{sylar::http::WSConnection}}
+
+
+类 sylar\+::http\+::W\+S\+Connection 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::W\+S\+Connection 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_a88cf3cd7ac0351a9f766231d1730aa08}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ W\+S\+Connection} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_ab0f8983c6d52247fcad890940d89217e}} 
+{\bfseries W\+S\+Connection} (Socket\+::ptr sock, bool owner=true)
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_a503b9bc70aaab35848a345c92a5e69cd}} 
+W\+S\+Frame\+Message\+::ptr {\bfseries recv\+Message} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_afb79b5af4625012aae6951d3d5bd0535}} 
+int32\+\_\+t {\bfseries send\+Message} (W\+S\+Frame\+Message\+::ptr msg, bool fin=true)
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_a73e5135caef7fb832b277c31a16d4926}} 
+int32\+\_\+t {\bfseries send\+Message} (const std\+::string \&msg, int32\+\_\+t opcode=\textbf{ W\+S\+Frame\+Head\+::\+T\+E\+X\+T\+\_\+\+F\+R\+A\+ME}, bool fin=true)
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_acc6a2c24f3b49d9b50bd1448e6ec47bc}} 
+int32\+\_\+t {\bfseries ping} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_ac7948c0c1e3aacc4b9b761e685c7c882}} 
+int32\+\_\+t {\bfseries pong} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_ab8ba70043b9640f31a8852f64af23ef7}} 
+static std\+::pair$<$ \textbf{ Http\+Result\+::ptr}, W\+S\+Connection\+::ptr $>$ {\bfseries Create} (const std\+::string \&url, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\})
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSConnection_a40d9dde99dea82f7f04686d086a2d36a}} 
+static std\+::pair$<$ \textbf{ Http\+Result\+::ptr}, W\+S\+Connection\+::ptr $>$ {\bfseries Create} (\textbf{ Uri\+::ptr} uri, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\})
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/ws\+\_\+connection.\+h\end{DoxyCompactItemize}

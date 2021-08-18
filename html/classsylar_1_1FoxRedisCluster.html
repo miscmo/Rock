@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::FoxRedisCluster类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1FoxRedisCluster.html">FoxRedisCluster</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1FoxRedisCluster-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::FoxRedisCluster类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 sylar::FoxRedisCluster 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::FoxRedisCluster 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aaf8a0dcb6cfafabcdc571d726a8868ac"><td class="memItemLeft" align="right" valign="top"><a id="aaf8a0dcb6cfafabcdc571d726a8868ac"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>STATUS</b> { <b>UNCONNECTED</b> = 0, 
+<b>CONNECTING</b> = 1, 
+<b>CONNECTED</b> = 2
+ }</td></tr>
+<tr class="separator:aaf8a0dcb6cfafabcdc571d726a8868ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c5e29ed0a808befb99b5f17c391385"><td class="memItemLeft" align="right" valign="top"><a id="a92c5e29ed0a808befb99b5f17c391385"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>RESULT</b> { <br />
+&#160;&#160;<b>OK</b> = 0, 
+<b>TIME_OUT</b> = 1, 
+<b>CONNECT_ERR</b> = 2, 
+<b>CMD_ERR</b> = 3, 
+<br />
+&#160;&#160;<b>REPLY_NULL</b> = 4, 
+<b>REPLY_ERR</b> = 5, 
+<b>INIT_ERR</b> = 6
+<br />
+ }</td></tr>
+<tr class="separator:a92c5e29ed0a808befb99b5f17c391385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac434c31ed096ca73de4070406e028a2c"><td class="memItemLeft" align="right" valign="top"><a id="ac434c31ed096ca73de4070406e028a2c"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1FoxRedisCluster.html">FoxRedisCluster</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:ac434c31ed096ca73de4070406e028a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsylar_1_1IRedis"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1IRedis')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1IRedis.html">sylar::IRedis</a></td></tr>
+<tr class="memitem:a83fa91cdbff37531a99d45e7c54fef7d inherit pub_types_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a83fa91cdbff37531a99d45e7c54fef7d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>REDIS</b> = 1, 
+<b>REDIS_CLUSTER</b> = 2, 
+<b>FOX_REDIS</b> = 3, 
+<b>FOX_REDIS_CLUSTER</b> = 4
+ }</td></tr>
+<tr class="separator:a83fa91cdbff37531a99d45e7c54fef7d inherit pub_types_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c72ef3acd307e06f800bc5b2a77744 inherit pub_types_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a55c72ef3acd307e06f800bc5b2a77744"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IRedis.html">IRedis</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a55c72ef3acd307e06f800bc5b2a77744 inherit pub_types_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad4f2cccf0a2d5d00c9e7f8e698ee8fa1"><td class="memItemLeft" align="right" valign="top"><a id="ad4f2cccf0a2d5d00c9e7f8e698ee8fa1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FoxRedisCluster</b> (<a class="el" href="classsylar_1_1FoxThread.html">sylar::FoxThread</a> *thr, const std::map&lt; std::string, std::string &gt; &amp;conf)</td></tr>
+<tr class="separator:ad4f2cccf0a2d5d00c9e7f8e698ee8fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450716c955d30543593b13f73133851b"><td class="memItemLeft" align="right" valign="top"><a id="a450716c955d30543593b13f73133851b"></a>
+virtual ReplyPtr&#160;</td><td class="memItemRight" valign="bottom"><b>cmd</b> (const char *fmt,...)</td></tr>
+<tr class="separator:a450716c955d30543593b13f73133851b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e168fd2aab7ba6c14a317dc51b4238a"><td class="memItemLeft" align="right" valign="top"><a id="a3e168fd2aab7ba6c14a317dc51b4238a"></a>
+virtual ReplyPtr&#160;</td><td class="memItemRight" valign="bottom"><b>cmd</b> (const char *fmt, va_list ap)</td></tr>
+<tr class="separator:a3e168fd2aab7ba6c14a317dc51b4238a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aec10283911c17369e55f4a5c40ebaf"><td class="memItemLeft" align="right" valign="top"><a id="a1aec10283911c17369e55f4a5c40ebaf"></a>
+virtual ReplyPtr&#160;</td><td class="memItemRight" valign="bottom"><b>cmd</b> (const std::vector&lt; std::string &gt; &amp;argv)</td></tr>
+<tr class="separator:a1aec10283911c17369e55f4a5c40ebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18685ca96b530abe7bdc31700e26de58"><td class="memItemLeft" align="right" valign="top"><a id="a18685ca96b530abe7bdc31700e26de58"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getCtxCount</b> () const</td></tr>
+<tr class="separator:a18685ca96b530abe7bdc31700e26de58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccbfa6d490834ed09748cdd768cd603"><td class="memItemLeft" align="right" valign="top"><a id="aeccbfa6d490834ed09748cdd768cd603"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
+<tr class="separator:aeccbfa6d490834ed09748cdd768cd603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsylar_1_1IRedis"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1IRedis')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1IRedis.html">sylar::IRedis</a></td></tr>
+<tr class="memitem:a1c6db949c81958aec7e5eec3b38957f9 inherit pub_methods_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a1c6db949c81958aec7e5eec3b38957f9"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
+<tr class="separator:a1c6db949c81958aec7e5eec3b38957f9 inherit pub_methods_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e24f1b1302b989524ede2b74cc65bf inherit pub_methods_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="ac5e24f1b1302b989524ede2b74cc65bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (const std::string &amp;v)</td></tr>
+<tr class="separator:ac5e24f1b1302b989524ede2b74cc65bf inherit pub_methods_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f03142d41b6423d1d0fcf7306a2e218 inherit pub_methods_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a1f03142d41b6423d1d0fcf7306a2e218"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPasswd</b> () const</td></tr>
+<tr class="separator:a1f03142d41b6423d1d0fcf7306a2e218 inherit pub_methods_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ffee538dea5d89e29ef01d000949c6 inherit pub_methods_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a30ffee538dea5d89e29ef01d000949c6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPasswd</b> (const std::string &amp;v)</td></tr>
+<tr class="separator:a30ffee538dea5d89e29ef01d000949c6 inherit pub_methods_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77b39f97c87bc25664d4b102122c504 inherit pub_methods_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="ac77b39f97c87bc25664d4b102122c504"></a>
+Type&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const</td></tr>
+<tr class="separator:ac77b39f97c87bc25664d4b102122c504 inherit pub_methods_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classsylar_1_1IRedis"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1IRedis')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1IRedis.html">sylar::IRedis</a></td></tr>
+<tr class="memitem:a9d919411ab9eca9ae69b59dc1e986940 inherit pro_attribs_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a9d919411ab9eca9ae69b59dc1e986940"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="separator:a9d919411ab9eca9ae69b59dc1e986940 inherit pro_attribs_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3bc4c54b80f3a13f6bdf9ce353fe1a inherit pro_attribs_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a3e3bc4c54b80f3a13f6bdf9ce353fe1a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_passwd</b></td></tr>
+<tr class="separator:a3e3bc4c54b80f3a13f6bdf9ce353fe1a inherit pro_attribs_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7f8994db97ecabca11764f67097926 inherit pro_attribs_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="a4c7f8994db97ecabca11764f67097926"></a>
+Type&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b></td></tr>
+<tr class="separator:a4c7f8994db97ecabca11764f67097926 inherit pro_attribs_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e6df88601ae23b1d28a3f2031a6fd3 inherit pro_attribs_classsylar_1_1IRedis"><td class="memItemLeft" align="right" valign="top"><a id="ac9e6df88601ae23b1d28a3f2031a6fd3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_logEnable</b></td></tr>
+<tr class="separator:ac9e6df88601ae23b1d28a3f2031a6fd3 inherit pro_attribs_classsylar_1_1IRedis"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/db/<a class="el" href="redis_8h_source.html">redis.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

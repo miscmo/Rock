@@ -39,6 +39,7 @@ Thread::Thread(std::function<void()> cb, const std::string& name)
             << " name=" << name;
         throw std::logic_error("pthread_create error");
     }
+    //等待run方法跑完，Thread才算创建成功
     m_semaphore.wait();
 }
 

@@ -1,0 +1,104 @@
+\doxysection{sylar\+::ds\+::Array$<$ T $>$ 模板类 参考}
+\label{classsylar_1_1ds_1_1Array}\index{sylar::ds::Array$<$ T $>$@{sylar::ds::Array$<$ T $>$}}
+
+
+sylar\+::ds\+::Array$<$ T $>$ 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ac69fa843d17122a6796494dcc77082d2}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Array} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ad0c8ebc898fac7ddbd5cfec116f2083d}} 
+{\bfseries Array} (const uint64\+\_\+t size=0)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ae67aa2bf1a25d0ac6e885c186829f93d}} 
+{\bfseries Array} (const T $\ast$data, const uint64\+\_\+t size, bool copy)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a707c51c9021be7351622b76c9e237446}} 
+T \& {\bfseries at} (uint64\+\_\+t idx)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a764b6e31b9aa628aef4876fed5a57252}} 
+const T \& {\bfseries at} (uint64\+\_\+t idx) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a11e084771f98b13413dcf17a06b1e6be}} 
+T \& {\bfseries operator[$\,$]} (uint64\+\_\+t idx)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_aa5e1d513214e188f62062c79635a5fa1}} 
+const T \& {\bfseries operator[$\,$]} (uint64\+\_\+t idx) const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_aceede560cea006d7aa2ae128e269afca}} 
+void {\bfseries set} (uint64\+\_\+t idx, const T \&v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_afc70a5a87942a06e2d1a3f0131625623}} 
+const T \& {\bfseries get} (uint64\+\_\+t idx)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ac284fe5b159fdb472a0193099307de49}} 
+const T $\ast$ {\bfseries begin} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a7024a34f86c9097fe295acd0e99c285a}} 
+T $\ast$ {\bfseries begin} ()
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_afd60eda1f1403ac3412a311275f03af4}} 
+const T $\ast$ {\bfseries end} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a834cb858ebeea0498ae194da18a62b64}} 
+T $\ast$ {\bfseries end} ()
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ad2aa4e328d261abc50dcad13b487f571}} 
+const T $\ast$ {\bfseries data} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a0af559c7d8e7418eaf1d671eaad4239a}} 
+T $\ast$ {\bfseries data} ()
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_adaa9989f669e75b8cf4fce061f494985}} 
+uint64\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a95cb175c306e25d834612ce1054160d4}} 
+bool {\bfseries is\+Sorted} ()
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a7e480c8bd9510c3eee6747a34095cd26}} 
+bool {\bfseries is\+Sorted} (std\+::function$<$ bool(const T \&, const T \&)$>$ cb)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a51205fc5c95f693f1c99e74ddffc9854}} 
+void {\bfseries sort} ()
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ae1c88e349a5bf156ee020702a9c8555f}} 
+void {\bfseries sort} (std\+::function$<$ bool(const T \&, const T \&)$>$ cmp)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a0e4ae087ade8145bb746619cdfbf1b19}} 
+int64\+\_\+t {\bfseries exists} (const T \&v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_af04d36e4db08ffb9490da236e01fb68c}} 
+int64\+\_\+t {\bfseries exists} (const T \&v, std\+::function$<$ bool(const T \&, const T \&)$>$ cmp)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ae2f999ce15d64e040e61b13376fb7852}} 
+bool {\bfseries insert} (int64\+\_\+t idx, const T \&v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ab5e58efcf098175c7ba9f1a11805124b}} 
+bool {\bfseries insert} (const T \&v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a25a03ac886eaee73d9bcc46057581b36}} 
+bool {\bfseries insert} (const T \&v, std\+::function$<$ bool(const T \&, const T \&)$>$ cmp)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ad919ccd494b130c7970eff58130f382d}} 
+bool {\bfseries erase} (int64\+\_\+t idx)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_abc3a91a02d6fdce0ec94ee7fc0440f25}} 
+void {\bfseries append} (const T \&v)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_a395b9844f989a9e5c1a495a26f628f5c}} 
+bool {\bfseries write\+To} (std\+::ostream \&os, uint64\+\_\+t speed=-\/1)
+\item 
+\mbox{\label{classsylar_1_1ds_1_1Array_ac139a74ecee076e0c2e32f2ff62923e3}} 
+bool {\bfseries read\+From} (std\+::istream \&is, uint64\+\_\+t speed=-\/1)
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/ds/array.\+h\end{DoxyCompactItemize}

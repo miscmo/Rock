@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::AsyncSocketStreamManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1AsyncSocketStreamManager.html">AsyncSocketStreamManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1AsyncSocketStreamManager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::AsyncSocketStreamManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::AsyncSocketStreamManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aab50b5774a7d6a1c53d9a68b7e5fd4e2"><td class="memItemLeft" align="right" valign="top"><a id="aab50b5774a7d6a1c53d9a68b7e5fd4e2"></a>
+typedef <a class="el" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
+<tr class="separator:aab50b5774a7d6a1c53d9a68b7e5fd4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c36a84b7160bff8f65a8cd62a073bcb"><td class="memItemLeft" align="right" valign="top"><a id="a2c36a84b7160bff8f65a8cd62a073bcb"></a>
+typedef AsyncSocketStream::connect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>connect_callback</b></td></tr>
+<tr class="separator:a2c36a84b7160bff8f65a8cd62a073bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c2dbbf17a0358ce7950f53927bf05c"><td class="memItemLeft" align="right" valign="top"><a id="ae4c2dbbf17a0358ce7950f53927bf05c"></a>
+typedef AsyncSocketStream::disconnect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect_callback</b></td></tr>
+<tr class="separator:ae4c2dbbf17a0358ce7950f53927bf05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:acacff08474153ab3f94290399670d786"><td class="memItemLeft" align="right" valign="top"><a id="acacff08474153ab3f94290399670d786"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (AsyncSocketStream::ptr stream)</td></tr>
+<tr class="separator:acacff08474153ab3f94290399670d786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20934d6a06374d96ed46780fa70baa69"><td class="memItemLeft" align="right" valign="top"><a id="a20934d6a06374d96ed46780fa70baa69"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:a20934d6a06374d96ed46780fa70baa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6974bd18cd238e79ac4d977aa41374"><td class="memItemLeft" align="right" valign="top"><a id="a9b6974bd18cd238e79ac4d977aa41374"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnection</b> (const std::vector&lt; AsyncSocketStream::ptr &gt; &amp;streams)</td></tr>
+<tr class="separator:a9b6974bd18cd238e79ac4d977aa41374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724b531729e81de46255d1027fcaec85"><td class="memItemLeft" align="right" valign="top"><a id="a724b531729e81de46255d1027fcaec85"></a>
+AsyncSocketStream::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
+<tr class="separator:a724b531729e81de46255d1027fcaec85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa0146fca9aff53e9e7acb590e5b0a4"><td class="memTemplParams" colspan="2"><a id="a6fa0146fca9aff53e9e7acb590e5b0a4"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6fa0146fca9aff53e9e7acb590e5b0a4"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAs</b> ()</td></tr>
+<tr class="separator:a6fa0146fca9aff53e9e7acb590e5b0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26700aef70f5dd9c01de842305a08ad"><td class="memItemLeft" align="right" valign="top"><a id="af26700aef70f5dd9c01de842305a08ad"></a>
+connect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>getConnectCb</b> () const</td></tr>
+<tr class="separator:af26700aef70f5dd9c01de842305a08ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288f5fafe806163155912f8ffdb0c08d"><td class="memItemLeft" align="right" valign="top"><a id="a288f5fafe806163155912f8ffdb0c08d"></a>
+disconnect_callback&#160;</td><td class="memItemRight" valign="bottom"><b>getDisconnectCb</b> () const</td></tr>
+<tr class="separator:a288f5fafe806163155912f8ffdb0c08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a92d7f90f6ac1b725b7f53abc3530e"><td class="memItemLeft" align="right" valign="top"><a id="a79a92d7f90f6ac1b725b7f53abc3530e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setConnectCb</b> (connect_callback v)</td></tr>
+<tr class="separator:a79a92d7f90f6ac1b725b7f53abc3530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a900c0d724bf060b9b990a892e07ab4cb"><td class="memItemLeft" align="right" valign="top"><a id="a900c0d724bf060b9b990a892e07ab4cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDisconnectCb</b> (disconnect_callback v)</td></tr>
+<tr class="separator:a900c0d724bf060b9b990a892e07ab4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/streams/<a class="el" href="async__socket__stream_8h_source.html">async_socket_stream.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

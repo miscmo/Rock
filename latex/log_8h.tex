@@ -1,0 +1,148 @@
+\doxysection{sylar/log.h 文件参考}
+\label{log_8h}\index{sylar/log.h@{sylar/log.h}}
+
+
+日志模块封装  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}singleton.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+log.\+h 的引用(Include)关系图\+:
+% FIG 0
+此图展示该文件直接或间接的被哪些文件引用了\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ sylar\+::\+Log\+Level}
+\begin{DoxyCompactList}\small\item\em 日志级别 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Log\+Event}
+\begin{DoxyCompactList}\small\item\em 日志事件 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Log\+Event\+Wrap}
+\begin{DoxyCompactList}\small\item\em 日志事件包装器 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Log\+Formatter}
+\begin{DoxyCompactList}\small\item\em 日志格式化 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Log\+Formatter\+::\+Format\+Item}
+\begin{DoxyCompactList}\small\item\em 日志内容项格式化 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Log\+Appender}
+\begin{DoxyCompactList}\small\item\em 日志输出目标 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Logger}
+\begin{DoxyCompactList}\small\item\em 日志器 \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Stdout\+Log\+Appender}
+\begin{DoxyCompactList}\small\item\em 输出到控制台的\+Appender \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+File\+Log\+Appender}
+\begin{DoxyCompactList}\small\item\em 输出到文件的\+Appender \end{DoxyCompactList}\item 
+class \textbf{ sylar\+::\+Logger\+Manager}
+\begin{DoxyCompactList}\small\item\em 日志器管理类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger,  level)
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别level的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a2beb50689fe10891219ff841fecad904}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+D\+E\+B\+UG}(logger)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+D\+E\+B\+UG})
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别debug的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a0cfea58ee3be21deb892e4a806fc4e0f}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+I\+N\+FO}(logger)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+I\+N\+FO})
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别info的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a98ff65f84925c147be96dd911df2fb5e}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+W\+A\+RN}(logger)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+W\+A\+RN})
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别warn的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a9dfd5249e7f9c2854da1369fb355364f}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+E\+R\+R\+OR}(logger)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+E\+R\+R\+OR})
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别error的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a1b99b0ae5658564cba6ea78b9c44070d}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+A\+T\+AL}(logger)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+F\+A\+T\+AL})
+\begin{DoxyCompactList}\small\item\em 使用流式方式将日志级别fatal的日志写入到logger \end{DoxyCompactList}\item 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger,  level,  fmt, ...)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别level的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a231a250f16a67a2b419b589021636885}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+D\+E\+B\+UG}(logger,  fmt, ...)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+D\+E\+B\+UG}, fmt, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别debug的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a951b4acd60849055e8d8941ef92331b5}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+I\+N\+FO}(logger,  fmt, ...)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+I\+N\+FO}, fmt, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别info的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a0d83e9fce3af74fd0163b36fefeafbec}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+W\+A\+RN}(logger,  fmt, ...)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+W\+A\+RN}, fmt, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别warn的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a163307f64430c88a4cad1e4ee3a7cb15}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+E\+R\+R\+OR}(logger,  fmt, ...)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+E\+R\+R\+OR}, fmt, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别error的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_af4c701038139125c87edc8e113e92565}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+F\+A\+T\+AL}(logger,  fmt, ...)~\textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL}(logger, \textbf{ sylar\+::\+Log\+Level\+::\+F\+A\+T\+AL}, fmt, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em 使用格式化方式将日志级别fatal的日志写入到logger \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_af752fd33828eb554b0281ed98544fe79}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+R\+O\+OT}()~\textbf{ sylar\+::\+Logger\+Mgr\+::\+Get\+Instance}()-\/$>$get\+Root()
+\begin{DoxyCompactList}\small\item\em 获取主日志器 \end{DoxyCompactList}\item 
+\mbox{\label{log_8h_a1e080e5eff9c67a3825e59c7d2877f78}} 
+\#define \textbf{ S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+N\+A\+ME}(name)~\textbf{ sylar\+::\+Logger\+Mgr\+::\+Get\+Instance}()-\/$>$get\+Logger(name)
+\begin{DoxyCompactList}\small\item\em 获取name的日志器 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{log_8h_a4a808333871328d8fc38e2504000a6fc}} 
+typedef \textbf{ sylar\+::\+Singleton}$<$ Logger\+Manager $>$ \textbf{ sylar\+::\+Logger\+Mgr}
+\begin{DoxyCompactList}\small\item\em 日志器管理类单例模式 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+日志模块封装 
+
+\begin{DoxyAuthor}{作者}
+sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+2019-\/05-\/23 
+\end{DoxyDate}
+\begin{DoxyCopyright}{版权所有}
+Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+\end{DoxyCopyright}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\label{log_8h_ae918d318a5b900d950f3451925abb536}} 
+\index{log.h@{log.h}!SYLAR\_LOG\_FMT\_LEVEL@{SYLAR\_LOG\_FMT\_LEVEL}}
+\index{SYLAR\_LOG\_FMT\_LEVEL@{SYLAR\_LOG\_FMT\_LEVEL}!log.h@{log.h}}
+\doxysubsubsection{SYLAR\_LOG\_FMT\_LEVEL}
+{\footnotesize\ttfamily \#define S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+F\+M\+T\+\_\+\+L\+E\+V\+EL(\begin{DoxyParamCaption}\item[{}]{logger,  }\item[{}]{level,  }\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(logger-\/>getLevel() <= level) \(\backslash\)}
+\DoxyCodeLine{        sylar::LogEventWrap(sylar::LogEvent::ptr(\textcolor{keyword}{new} sylar::LogEvent(logger, level, \(\backslash\)}
+\DoxyCodeLine{                        \_\_FILE\_\_, \_\_LINE\_\_, 0, sylar::GetThreadId(),\(\backslash\)}
+\DoxyCodeLine{                sylar::GetFiberId(), time(0), sylar::Thread::GetName()))).getEvent()-\/>format(fmt, \_\_VA\_ARGS\_\_)}
+
+\end{DoxyCode}
+
+
+使用格式化方式将日志级别level的日志写入到logger 
+
+\mbox{\label{log_8h_a797348bb17a64785dd5e4f1282c66028}} 
+\index{log.h@{log.h}!SYLAR\_LOG\_LEVEL@{SYLAR\_LOG\_LEVEL}}
+\index{SYLAR\_LOG\_LEVEL@{SYLAR\_LOG\_LEVEL}!log.h@{log.h}}
+\doxysubsubsection{SYLAR\_LOG\_LEVEL}
+{\footnotesize\ttfamily \#define S\+Y\+L\+A\+R\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL(\begin{DoxyParamCaption}\item[{}]{logger,  }\item[{}]{level }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(logger-\/>getLevel() <= level) \(\backslash\)}
+\DoxyCodeLine{        sylar::LogEventWrap(sylar::LogEvent::ptr(\textcolor{keyword}{new} sylar::LogEvent(logger, level, \(\backslash\)}
+\DoxyCodeLine{                        \_\_FILE\_\_, \_\_LINE\_\_, 0, sylar::GetThreadId(),\(\backslash\)}
+\DoxyCodeLine{                sylar::GetFiberId(), time(0), sylar::Thread::GetName()))).getSS()}
+
+\end{DoxyCode}
+
+
+使用流式方式将日志级别level的日志写入到logger 
+

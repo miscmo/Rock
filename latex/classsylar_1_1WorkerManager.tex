@@ -1,0 +1,47 @@
+\doxysection{sylar\+::Worker\+Manager类 参考}
+\label{classsylar_1_1WorkerManager}\index{sylar::WorkerManager@{sylar::WorkerManager}}
+
+
+sylar\+::Worker\+Manager 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a5425403499fa3aff37c5894487878eac}} 
+void {\bfseries add} (Scheduler\+::ptr s)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a4fb7febbae527ce5c3b5df08632e23c3}} 
+Scheduler\+::ptr {\bfseries get} (const std\+::string \&name)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_aec8d49e983d37ccba9b3a3044fa34883}} 
+I\+O\+Manager\+::ptr {\bfseries get\+As\+I\+O\+Manager} (const std\+::string \&name)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a7462da15964682f7fbe718ad89878aba}} 
+{\footnotesize template$<$class Fiber\+Or\+Cb $>$ }\\void {\bfseries schedule} (const std\+::string \&name, Fiber\+Or\+Cb fc, int thread=-\/1)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_ac411c091f6fec125a2a75f3c425ea404}} 
+{\footnotesize template$<$class Iter $>$ }\\void {\bfseries schedule} (const std\+::string \&name, Iter begin, Iter end)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a9ba6d6ad490257080a56a54a528d5e9a}} 
+bool {\bfseries init} ()
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_aa3d49b584157bd77f912630a992c7ffc}} 
+bool {\bfseries init} (const std\+::map$<$ std\+::string, std\+::map$<$ std\+::string, std\+::string $>$ $>$ \&v)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a25062fdd2d54e7c27ff267ae599541e5}} 
+void {\bfseries stop} ()
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_af9f7e5c9622c2f0605359888dfbb8cac}} 
+bool {\bfseries is\+Stoped} () const
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_aa98cbb2e9f35b33924d4060f30128907}} 
+std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
+\item 
+\mbox{\label{classsylar_1_1WorkerManager_a4b70787b7c32e4ace1bf2972d518bd7c}} 
+uint32\+\_\+t {\bfseries get\+Count} ()
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/worker.\+h\end{DoxyCompactItemize}

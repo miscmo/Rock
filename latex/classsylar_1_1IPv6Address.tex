@@ -1,0 +1,191 @@
+\doxysection{sylar\+::I\+Pv6\+Address类 参考}
+\label{classsylar_1_1IPv6Address}\index{sylar::IPv6Address@{sylar::IPv6Address}}
+
+
+I\+Pv6地址  
+
+
+
+
+{\ttfamily \#include $<$address.\+h$>$}
+
+
+
+类 sylar\+::I\+Pv6\+Address 继承关系图\+:
+% FIG 0
+
+
+sylar\+::I\+Pv6\+Address 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1IPv6Address_a9e8938241f75b8661e52bc9b77597dec}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Pv6\+Address} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1IPv6Address_a5b665e73f6675cc99c4a741011c1bc88}} 
+\textbf{ I\+Pv6\+Address} ()
+\begin{DoxyCompactList}\small\item\em 无参构造函数 \end{DoxyCompactList}\item 
+\textbf{ I\+Pv6\+Address} (const sockaddr\+\_\+in6 \&address)
+\begin{DoxyCompactList}\small\item\em 通过sockaddr\+\_\+in6构造\+I\+Pv6\+Address \end{DoxyCompactList}\item 
+\textbf{ I\+Pv6\+Address} (const uint8\+\_\+t address[16], uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 通过\+I\+Pv6二进制地址构造\+I\+Pv6\+Address \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a0a962019d7afe7e45dfdfc9bdb757ed2}} 
+const sockaddr $\ast$ \textbf{ get\+Addr} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,只读 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a4660a17e418f5d6f504dc54507d72bcc}} 
+sockaddr $\ast$ \textbf{ get\+Addr} () override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr指针,读写 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a558e383f69e4aea29d37ef2c9c0ac419}} 
+socklen\+\_\+t \textbf{ get\+Addr\+Len} () const override
+\begin{DoxyCompactList}\small\item\em 返回sockaddr的长度 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a2c881ca0dfac806c9f71e9271824ba54}} 
+std\+::ostream \& \textbf{ insert} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em 可读性输出地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \textbf{ broadcast\+Address} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的广播地址 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \textbf{ netword\+Address} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取该地址的网段 \end{DoxyCompactList}\item 
+I\+P\+Address\+::ptr \textbf{ subnet\+Mask} (uint32\+\_\+t prefix\+\_\+len) override
+\begin{DoxyCompactList}\small\item\em 获取子网掩码地址 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a0e18ea58da07609434dacc48177d6ff4}} 
+uint32\+\_\+t \textbf{ get\+Port} () const override
+\begin{DoxyCompactList}\small\item\em 返回端口号 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1IPv6Address_a3fa224a121e30176ff67b85d6911da61}} 
+void \textbf{ set\+Port} (uint16\+\_\+t v) override
+\begin{DoxyCompactList}\small\item\em 设置端口号 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Pv6\+Address\+::ptr \textbf{ Create} (const char $\ast$address, uint16\+\_\+t port=0)
+\begin{DoxyCompactList}\small\item\em 通过\+I\+Pv6地址字符串构造\+I\+Pv6\+Address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+I\+Pv6地址 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1IPv6Address_a0f5ca71b527152574c36274e7a203f72}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!IPv6Address@{IPv6Address}}
+\index{IPv6Address@{IPv6Address}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{IPv6Address()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sylar\+::\+I\+Pv6\+Address\+::\+I\+Pv6\+Address (\begin{DoxyParamCaption}\item[{const sockaddr\+\_\+in6 \&}]{address }\end{DoxyParamCaption})}
+
+
+
+通过sockaddr\+\_\+in6构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em address} & sockaddr\+\_\+in6结构体 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1IPv6Address_aabd473ea633c70ae9142e799a6ae8d89}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!IPv6Address@{IPv6Address}}
+\index{IPv6Address@{IPv6Address}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{IPv6Address()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sylar\+::\+I\+Pv6\+Address\+::\+I\+Pv6\+Address (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{address[16],  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+通过\+I\+Pv6二进制地址构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em address} & I\+Pv6二进制地址 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1IPv6Address_a5b89d863332102f1a0328c885ee11394}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!broadcastAddress@{broadcastAddress}}
+\index{broadcastAddress@{broadcastAddress}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{broadcastAddress()}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr sylar\+::\+I\+Pv6\+Address\+::broadcast\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的广播地址 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+实现了 \textbf{ sylar\+::\+I\+P\+Address} \doxyref{}{p.}{classsylar_1_1IPAddress_a49d8c17af40e1a300f0edfcfe7271146}.
+
+\mbox{\label{classsylar_1_1IPv6Address_af61434d1d6f923b5d3908aee78d2aaff}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!Create@{Create}}
+\index{Create@{Create}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{Create()}
+{\footnotesize\ttfamily static I\+Pv6\+Address\+::ptr sylar\+::\+I\+Pv6\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address,  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+通过\+I\+Pv6地址字符串构造\+I\+Pv6\+Address 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em address} & I\+Pv6地址字符串 \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1IPv6Address_a48f3ca938dd2c6634388e61ca3f9dc6c}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!networdAddress@{networdAddress}}
+\index{networdAddress@{networdAddress}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{networdAddress()}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr sylar\+::\+I\+Pv6\+Address\+::netword\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取该地址的网段 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+实现了 \textbf{ sylar\+::\+I\+P\+Address} \doxyref{}{p.}{classsylar_1_1IPAddress_af14294f8c7309ab766564d8dafcf1bfc}.
+
+\mbox{\label{classsylar_1_1IPv6Address_ab8843278b5104114697f026ed37051b5}} 
+\index{sylar::IPv6Address@{sylar::IPv6Address}!subnetMask@{subnetMask}}
+\index{subnetMask@{subnetMask}!sylar::IPv6Address@{sylar::IPv6Address}}
+\doxysubsubsection{subnetMask()}
+{\footnotesize\ttfamily I\+P\+Address\+::ptr sylar\+::\+I\+Pv6\+Address\+::subnet\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+获取子网掩码地址 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em prefix\+\_\+len} & 子网掩码位数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+调用成功返回\+I\+P\+Address,失败返回nullptr 
+\end{DoxyReturn}
+
+
+实现了 \textbf{ sylar\+::\+I\+P\+Address} \doxyref{}{p.}{classsylar_1_1IPAddress_a26ff22c5694f765058e0e9abb0be3414}.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/\textbf{ address.\+h}\end{DoxyCompactItemize}

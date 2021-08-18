@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::http::WSFrameHead结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="structsylar_1_1http_1_1WSFrameHead.html">WSFrameHead</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structsylar_1_1http_1_1WSFrameHead-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::http::WSFrameHead结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::http::WSFrameHead 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a67fe35286cb8e171bb486f02f56d76cd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">OPCODE</a> { <br />
+&#160;&#160;<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">CONTINUE</a> = 0, 
+<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">TEXT_FRAME</a> = 1, 
+<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">BIN_FRAME</a> = 2, 
+<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">CLOSE</a> = 8, 
+<br />
+&#160;&#160;<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">PING</a> = 0x9, 
+<a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">PONG</a> = 0xA
+<br />
+ }</td></tr>
+<tr class="separator:a67fe35286cb8e171bb486f02f56d76cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5006051c74165cb60990dfdc91d2f6c0"><td class="memItemLeft" align="right" valign="top"><a id="a5006051c74165cb60990dfdc91d2f6c0"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
+<tr class="separator:a5006051c74165cb60990dfdc91d2f6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:abfc37a0bf47b2059b3dab4608f858d48"><td class="memItemLeft" align="right" valign="top"><a id="abfc37a0bf47b2059b3dab4608f858d48"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>opcode</b>: 4</td></tr>
+<tr class="separator:abfc37a0bf47b2059b3dab4608f858d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f282dea23b1b67a4d1012eb8a81779f"><td class="memItemLeft" align="right" valign="top"><a id="a6f282dea23b1b67a4d1012eb8a81779f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rsv3</b>: 1</td></tr>
+<tr class="separator:a6f282dea23b1b67a4d1012eb8a81779f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccb4c984108b5e9aa02fa8c5a3bcb99"><td class="memItemLeft" align="right" valign="top"><a id="a8ccb4c984108b5e9aa02fa8c5a3bcb99"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rsv2</b>: 1</td></tr>
+<tr class="separator:a8ccb4c984108b5e9aa02fa8c5a3bcb99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf9630ce3cce70abecd7180382cf91e"><td class="memItemLeft" align="right" valign="top"><a id="a0cf9630ce3cce70abecd7180382cf91e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>rsv1</b>: 1</td></tr>
+<tr class="separator:a0cf9630ce3cce70abecd7180382cf91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfbb36965b5d721c0d2dc06a0f13ae0"><td class="memItemLeft" align="right" valign="top"><a id="adbfbb36965b5d721c0d2dc06a0f13ae0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>fin</b>: 1</td></tr>
+<tr class="separator:adbfbb36965b5d721c0d2dc06a0f13ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29fdb72ecbee094593925c9bd329758"><td class="memItemLeft" align="right" valign="top"><a id="ad29fdb72ecbee094593925c9bd329758"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>payload</b>: 7</td></tr>
+<tr class="separator:ad29fdb72ecbee094593925c9bd329758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04397159f7b5dbbd16c0471a7927c50"><td class="memItemLeft" align="right" valign="top"><a id="ae04397159f7b5dbbd16c0471a7927c50"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mask</b>: 1</td></tr>
+<tr class="separator:ae04397159f7b5dbbd16c0471a7927c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a67fe35286cb8e171bb486f02f56d76cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67fe35286cb8e171bb486f02f56d76cd">&#9670;&nbsp;</a></span>OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">sylar::http::WSFrameHead::OPCODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245"></a>CONTINUE&#160;</td><td class="fielddoc"><p>数据分片帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45"></a>TEXT_FRAME&#160;</td><td class="fielddoc"><p>文本帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11"></a>BIN_FRAME&#160;</td><td class="fielddoc"><p>二进制帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be"></a>CLOSE&#160;</td><td class="fielddoc"><p>断开连接 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613"></a>PING&#160;</td><td class="fielddoc"><p>PING </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae"></a>PONG&#160;</td><td class="fielddoc"><p>PONG </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>sylar/http/<a class="el" href="ws__session_8h_source.html">ws_session.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

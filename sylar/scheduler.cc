@@ -7,6 +7,7 @@ namespace sylar {
 
 static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
+//thread_local：每个线程拥有独立的变量存储空间，每个变量的生命周期和线程的生命周期相同
 static thread_local Scheduler* t_scheduler = nullptr;
 static thread_local Fiber* t_scheduler_fiber = nullptr;
 
@@ -48,6 +49,7 @@ Fiber* Scheduler::GetMainFiber() {
     return t_scheduler_fiber;
 }
 
+//创建线程池
 void Scheduler::start() {
     MutexType::Lock lock(m_mutex);
     if(!m_stopping) {
@@ -155,6 +157,7 @@ void Scheduler::run() {
             while(it != m_fibers.end()) {
                 if(it->thread != -1 && it->thread != sylar::GetThreadId()) {
                     ++it;
+                    //有协程任务，但是不属于当前线程执行，通知调度器的其他线程执行
                     tickle_me = true;
                     continue;
                 }
@@ -171,18 +174,24 @@ void Scheduler::run() {
                 is_active = true;
                 break;
             }
+            //有不属于当前线程的协程任务或者有更多的协程任务还没有执行，通知调度器
             tickle_me |= it != m_fibers.end();
         }
 
+        //也就是说，我当前线程已经取到一个协程任务准备执行，但是协程队列中还有其他协程任务等待执行，
+        //要通知调度器调用其他线程执行协程任务
         if(tickle_me) {
             tickle();
         }
 
+        //执行取到的协程任务
         if(ft.fiber && (ft.fiber->getState() != Fiber::TERM
                         && ft.fiber->getState() != Fiber::EXCEPT)) {
+            //切换到任务协程
             ft.fiber->swapIn();
             --m_activeThreadCount;
 
+            //如果执行结果为ready，重新放入协程队列
             if(ft.fiber->getState() == Fiber::READY) {
                 schedule(ft.fiber);
             } else if(ft.fiber->getState() != Fiber::TERM

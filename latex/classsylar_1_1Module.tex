@@ -1,0 +1,111 @@
+\doxysection{sylar\+::Module类 参考}
+\label{classsylar_1_1Module}\index{sylar::Module@{sylar::Module}}
+
+
+{\ttfamily \#include $<$module.\+h$>$}
+
+
+
+类 sylar\+::Module 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Module 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Module_aa627f4e12c736a42d2012adeeda1e732}} 
+enum {\bfseries Type} \{ {\bfseries M\+O\+D\+U\+LE} = 0, 
+{\bfseries R\+O\+CK} = 1
+ \}
+\item 
+\mbox{\label{classsylar_1_1Module_a077f53e55315b4b6fae721361c93960a}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Module} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Module_a42b8a1bf5050769410c1b753606e1c56}} 
+{\bfseries Module} (const std\+::string \&name, const std\+::string \&version, const std\+::string \&filename, uint32\+\_\+t type=M\+O\+D\+U\+LE)
+\item 
+\mbox{\label{classsylar_1_1Module_abd5d2e43a1cbeb3a3da88cd83ac94f05}} 
+virtual void {\bfseries on\+Before\+Args\+Parse} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\label{classsylar_1_1Module_a9564f241e40294ef520defeecdf86212}} 
+virtual void {\bfseries on\+After\+Args\+Parse} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\label{classsylar_1_1Module_a2e2217bb4106b4821c781078ba909e54}} 
+virtual bool {\bfseries on\+Load} ()
+\item 
+\mbox{\label{classsylar_1_1Module_a4c5ab3062cb953237246f44d87222b5d}} 
+virtual bool {\bfseries on\+Unload} ()
+\item 
+\mbox{\label{classsylar_1_1Module_af94a3422f3ee1b8d1767ac0287d49866}} 
+virtual bool {\bfseries on\+Connect} (sylar\+::\+Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1Module_a82fd98b1a580b247f1a843a859dc1b19}} 
+virtual bool {\bfseries on\+Disconnect} (sylar\+::\+Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1Module_a036acd752c94c00b2c326ad229491bc0}} 
+virtual bool {\bfseries on\+Server\+Ready} ()
+\item 
+\mbox{\label{classsylar_1_1Module_ac37980ef186532fb54e8682a5623b43b}} 
+virtual bool {\bfseries on\+Server\+Up} ()
+\item 
+\mbox{\label{classsylar_1_1Module_aaa18b0f8a7abbe8fa8c6b9deeca05a6f}} 
+virtual bool {\bfseries handle\+Request} (sylar\+::\+Message\+::ptr req, sylar\+::\+Message\+::ptr rsp, sylar\+::\+Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1Module_a07512a918faf5a3904fe0aa691f5cc3f}} 
+virtual bool {\bfseries handle\+Notify} (sylar\+::\+Message\+::ptr notify, sylar\+::\+Stream\+::ptr stream)
+\item 
+\mbox{\label{classsylar_1_1Module_a09afbb4a242d7d4f5ce5abcd318b98ba}} 
+virtual std\+::string {\bfseries status\+String} ()
+\item 
+\mbox{\label{classsylar_1_1Module_ad7d313338806fbc318ceda06692847e7}} 
+const std\+::string \& {\bfseries get\+Name} () const
+\item 
+\mbox{\label{classsylar_1_1Module_abff0ff1773d4bb7b0c5b1186cf59f126}} 
+const std\+::string \& {\bfseries get\+Version} () const
+\item 
+\mbox{\label{classsylar_1_1Module_abae501da27eba1ef3906094085bab2b6}} 
+const std\+::string \& {\bfseries get\+Filename} () const
+\item 
+\mbox{\label{classsylar_1_1Module_ad588accb46c543d725cc605c452bebb9}} 
+const std\+::string \& {\bfseries get\+Id} () const
+\item 
+\mbox{\label{classsylar_1_1Module_a73b863e77f047d5cbd548bf00c02cc2b}} 
+void {\bfseries set\+Filename} (const std\+::string \&v)
+\item 
+\mbox{\label{classsylar_1_1Module_ae700720ba0a7f779d80d3078aa6c55dd}} 
+uint32\+\_\+t {\bfseries get\+Type} () const
+\item 
+\mbox{\label{classsylar_1_1Module_aa3036409242a021c178145df604812a3}} 
+void {\bfseries register\+Service} (const std\+::string \&server\+\_\+type, const std\+::string \&domain, const std\+::string \&service)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1Module_aee5511f76d4fc63a458dceb805781974}} 
+std\+::string {\bfseries m\+\_\+name}
+\item 
+\mbox{\label{classsylar_1_1Module_ac83971a09cae36e405457ee4d629e798}} 
+std\+::string {\bfseries m\+\_\+version}
+\item 
+\mbox{\label{classsylar_1_1Module_a0f6dfec7a140d0109d009377994095e9}} 
+std\+::string {\bfseries m\+\_\+filename}
+\item 
+\mbox{\label{classsylar_1_1Module_a4de4e17717963119c49a9de5c6d4a461}} 
+std\+::string {\bfseries m\+\_\+id}
+\item 
+\mbox{\label{classsylar_1_1Module_a221e973dc73c4b895edab081c4ab0794}} 
+uint32\+\_\+t {\bfseries m\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+extern \char`\"{}\+C\char`\"{} \{ Module$\ast$ Create\+Module() \{ return XX; \} void Destory\+Module(\+Module$\ast$ ptr) \{ delete ptr; \} \} 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/module.\+h\end{DoxyCompactItemize}

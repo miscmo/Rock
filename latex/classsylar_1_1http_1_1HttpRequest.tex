@@ -1,0 +1,728 @@
+\doxysection{sylar\+::http\+::Http\+Request类 参考}
+\label{classsylar_1_1http_1_1HttpRequest}\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+
+
+H\+T\+T\+P请求结构  
+
+
+
+
+{\ttfamily \#include $<$http.\+h$>$}
+
+
+
+sylar\+::http\+::Http\+Request 的协作图\+:
+% FIG 0
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a04b3c9ae1818394b618e602b3ba835b8}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Request} $>$ \textbf{ ptr}
+\begin{DoxyCompactList}\small\item\em H\+T\+T\+P请求的智能指针 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aecbdb1a4e9aa2025d125fa62fc1ddce1}} 
+typedef std\+::map$<$ std\+::string, std\+::string, \textbf{ Case\+Insensitive\+Less} $>$ \textbf{ Map\+Type}
+\begin{DoxyCompactList}\small\item\em M\+A\+P结构 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Http\+Request} (uint8\+\_\+t version=0x11, bool close=true)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a9e524c4c25430d0492f3ee6e31b29916}} 
+std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Response} $>$ {\bfseries create\+Response} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a453c73a7d08cf8cead4cea5bcde48d6d}} 
+\textbf{ Http\+Method} \textbf{ get\+Method} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P方法 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a06cae946f7ef98446c730e5e2fa8b71f}} 
+uint8\+\_\+t \textbf{ get\+Version} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P版本 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a604be50e2d3ab623016ea3e098aa91d3}} 
+const std\+::string \& \textbf{ get\+Path} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的路径 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6227560a0c0e141b92c013e364dbc50f}} 
+const std\+::string \& \textbf{ get\+Query} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的查询参数 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a327f019900b91f764c7072f5661a997d}} 
+const std\+::string \& \textbf{ get\+Body} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的消息体 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6d3a5d809cc44b372b1f8d8f8976a6c7}} 
+const \textbf{ Map\+Type} \& \textbf{ get\+Headers} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的消息头\+M\+AP \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_ac9491f672750704507f063cdf1097a83}} 
+const \textbf{ Map\+Type} \& \textbf{ get\+Params} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的参数\+M\+AP \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a2acc260ebafe78b0ad831b3151d7538e}} 
+const \textbf{ Map\+Type} \& \textbf{ get\+Cookies} () const
+\begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P请求的cookie M\+AP \end{DoxyCompactList}\item 
+void \textbf{ set\+Method} (\textbf{ Http\+Method} v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的方法名 \end{DoxyCompactList}\item 
+void \textbf{ set\+Version} (uint8\+\_\+t v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的协议版本 \end{DoxyCompactList}\item 
+void \textbf{ set\+Path} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的路径 \end{DoxyCompactList}\item 
+void \textbf{ set\+Query} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的查询参数 \end{DoxyCompactList}\item 
+void \textbf{ set\+Fragment} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的\+Fragment \end{DoxyCompactList}\item 
+void \textbf{ set\+Body} (const std\+::string \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的消息体 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a30ebfdd3d7d9d3ca7b06012f44ec4b68}} 
+bool \textbf{ is\+Close} () const
+\begin{DoxyCompactList}\small\item\em 是否自动关闭 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aaf1d486013d0add2cf1578544c97ac96}} 
+void \textbf{ set\+Close} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置是否自动关闭 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6dfd96e715ff46d8de52c7eb586397b7}} 
+bool \textbf{ is\+Websocket} () const
+\begin{DoxyCompactList}\small\item\em 是否websocket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a960e0f2f8038683b5893cb037c401ed8}} 
+void \textbf{ set\+Websocket} (bool v)
+\begin{DoxyCompactList}\small\item\em 设置是否websocket \end{DoxyCompactList}\item 
+void \textbf{ set\+Headers} (const \textbf{ Map\+Type} \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的头部\+M\+AP \end{DoxyCompactList}\item 
+void \textbf{ set\+Params} (const \textbf{ Map\+Type} \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的参数\+M\+AP \end{DoxyCompactList}\item 
+void \textbf{ set\+Cookies} (const \textbf{ Map\+Type} \&v)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的\+Cookie M\+AP \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Header} (const std\+::string \&key, const std\+::string \&def=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的头部参数 \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Param} (const std\+::string \&key, const std\+::string \&def=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的请求参数 \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Cookie} (const std\+::string \&key, const std\+::string \&def=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的\+Cookie参数 \end{DoxyCompactList}\item 
+void \textbf{ set\+Header} (const std\+::string \&key, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的头部参数 \end{DoxyCompactList}\item 
+void \textbf{ set\+Param} (const std\+::string \&key, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的请求参数 \end{DoxyCompactList}\item 
+void \textbf{ set\+Cookie} (const std\+::string \&key, const std\+::string \&val)
+\begin{DoxyCompactList}\small\item\em 设置\+H\+T\+T\+P请求的\+Cookie参数 \end{DoxyCompactList}\item 
+void \textbf{ del\+Header} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 删除\+H\+T\+T\+P请求的头部参数 \end{DoxyCompactList}\item 
+void \textbf{ del\+Param} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 删除\+H\+T\+T\+P请求的请求参数 \end{DoxyCompactList}\item 
+void \textbf{ del\+Cookie} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em 删除\+H\+T\+T\+P请求的\+Cookie参数 \end{DoxyCompactList}\item 
+bool \textbf{ has\+Header} (const std\+::string \&key, std\+::string $\ast$val=nullptr)
+\begin{DoxyCompactList}\small\item\em 判断\+H\+T\+T\+P请求的头部参数是否存在 \end{DoxyCompactList}\item 
+bool \textbf{ has\+Param} (const std\+::string \&key, std\+::string $\ast$val=nullptr)
+\begin{DoxyCompactList}\small\item\em 判断\+H\+T\+T\+P请求的请求参数是否存在 \end{DoxyCompactList}\item 
+bool \textbf{ has\+Cookie} (const std\+::string \&key, std\+::string $\ast$val=nullptr)
+\begin{DoxyCompactList}\small\item\em 判断\+H\+T\+T\+P请求的\+Cookie参数是否存在 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ check\+Get\+Header\+As} (const std\+::string \&key, T \&val, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 检查并获取\+H\+T\+T\+P请求的头部参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \textbf{ get\+Header\+As} (const std\+::string \&key, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的头部参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ check\+Get\+Param\+As} (const std\+::string \&key, T \&val, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 检查并获取\+H\+T\+T\+P请求的请求参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \textbf{ get\+Param\+As} (const std\+::string \&key, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的请求参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \textbf{ check\+Get\+Cookie\+As} (const std\+::string \&key, T \&val, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 检查并获取\+H\+T\+T\+P请求的\+Cookie参数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \textbf{ get\+Cookie\+As} (const std\+::string \&key, const T \&def=T())
+\begin{DoxyCompactList}\small\item\em 获取\+H\+T\+T\+P请求的\+Cookie参数 \end{DoxyCompactList}\item 
+std\+::ostream \& \textbf{ dump} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em 序列化输出到流中 \end{DoxyCompactList}\item 
+std\+::string \textbf{ to\+String} () const
+\begin{DoxyCompactList}\small\item\em 转成字符串类型 \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a391cf3c932f095f390f7b0c535cca7c9}} 
+void {\bfseries init} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a9ec2a1294f3ad38573d1bb9e0f3f8e4c}} 
+void {\bfseries init\+Param} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a4b0d927425fc97ecdc76d494890ed11d}} 
+void {\bfseries init\+Query\+Param} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a761c7664fae782854b91cc5ff7a67a7c}} 
+void {\bfseries init\+Body\+Param} ()
+\item 
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a817303153d3154a04a92bd353f2d35cf}} 
+void {\bfseries init\+Cookies} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+H\+T\+T\+P请求结构 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a9fad2fd825152431bd8522548db6a343}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!HttpRequest@{HttpRequest}}
+\index{HttpRequest@{HttpRequest}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{HttpRequest()}
+{\footnotesize\ttfamily sylar\+::http\+::\+Http\+Request\+::\+Http\+Request (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{version = {\ttfamily 0x11},  }\item[{bool}]{close = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em version} & 版本 \\
+\hline
+\mbox{\texttt{ in}}  & {\em close} & 是否keepalive \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a7490ec5813fe460cfab1252c9e68f483}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!checkGetCookieAs@{checkGetCookieAs}}
+\index{checkGetCookieAs@{checkGetCookieAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{checkGetCookieAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::http\+::\+Http\+Request\+::check\+Get\+Cookie\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查并获取\+H\+T\+T\+P请求的\+Cookie参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 返回值 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回true,否则失败val=def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 1
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a7c8d94c5186d2feb26ab2468066356ba}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!checkGetHeaderAs@{checkGetHeaderAs}}
+\index{checkGetHeaderAs@{checkGetHeaderAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{checkGetHeaderAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::http\+::\+Http\+Request\+::check\+Get\+Header\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查并获取\+H\+T\+T\+P请求的头部参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 返回值 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回true,否则失败val=def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 2
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6c37c171d619e4f50ee7ab3d339ff142}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!checkGetParamAs@{checkGetParamAs}}
+\index{checkGetParamAs@{checkGetParamAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{checkGetParamAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool sylar\+::http\+::\+Http\+Request\+::check\+Get\+Param\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+检查并获取\+H\+T\+T\+P请求的请求参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 返回值 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回true,否则失败val=def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 3
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_ad30a5526c8e2c9433483ed5138de41e2}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!delCookie@{delCookie}}
+\index{delCookie@{delCookie}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{delCookie()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::del\+Cookie (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+删除\+H\+T\+T\+P请求的\+Cookie参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aa77d7e1b703229400855c6e603837bcd}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!delHeader@{delHeader}}
+\index{delHeader@{delHeader}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{delHeader()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::del\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+删除\+H\+T\+T\+P请求的头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aaf835fa074f8f595b104fe4c064b4e16}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!delParam@{delParam}}
+\index{delParam@{delParam}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{delParam()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::del\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+删除\+H\+T\+T\+P请求的请求参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a48ffdc7c1652ae7657e7d71855a30ec1}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!dump@{dump}}
+\index{dump@{dump}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{dump()}
+{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::\+Http\+Request\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+序列化输出到流中 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in,out}}  & {\em os} & 输出流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+输出流 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_afd52e5aef208e78cae6fb254b6223c26}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getCookie@{getCookie}}
+\index{getCookie@{getCookie}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getCookie()}
+{\footnotesize\ttfamily std\+::string sylar\+::http\+::\+Http\+Request\+::get\+Cookie (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{def = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+获取\+H\+T\+T\+P请求的\+Cookie参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在则返回对应值,否则返回默认值 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6522832937dc5b8d5c7d6c4c55fc7c61}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getCookieAs@{getCookieAs}}
+\index{getCookieAs@{getCookieAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getCookieAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T sylar\+::http\+::\+Http\+Request\+::get\+Cookie\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取\+H\+T\+T\+P请求的\+Cookie参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回对应的值,否则返回def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 4
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a30010fd520c46200b7ecbe2f0d2349fd}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getHeader()}
+{\footnotesize\ttfamily std\+::string sylar\+::http\+::\+Http\+Request\+::get\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{def = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+获取\+H\+T\+T\+P请求的头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在则返回对应值,否则返回默认值 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a4fd6aaa5d84e032187899870aadf1381}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getHeaderAs@{getHeaderAs}}
+\index{getHeaderAs@{getHeaderAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getHeaderAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T sylar\+::http\+::\+Http\+Request\+::get\+Header\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取\+H\+T\+T\+P请求的头部参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回对应的值,否则返回def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 5
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aba245289ab5fa14295a0c0eefeb35caf}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getParam@{getParam}}
+\index{getParam@{getParam}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getParam()}
+{\footnotesize\ttfamily std\+::string sylar\+::http\+::\+Http\+Request\+::get\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{def = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+获取\+H\+T\+T\+P请求的请求参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在则返回对应值,否则返回默认值 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a66665303d8ebdcda8648d55504d664de}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!getParamAs@{getParamAs}}
+\index{getParamAs@{getParamAs}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{getParamAs()}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T sylar\+::http\+::\+Http\+Request\+::get\+Param\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获取\+H\+T\+T\+P请求的请求参数 
+
+
+\begin{DoxyTemplParams}{模板参数}
+{\em T} & 转换类型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em def} & 默认值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果存在且转换成功返回对应的值,否则返回def 
+\end{DoxyReturn}
+函数调用图\+:
+% FIG 6
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a6f30a48f44fde302fc51394e93312c06}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!hasCookie@{hasCookie}}
+\index{hasCookie@{hasCookie}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{hasCookie()}
+{\footnotesize\ttfamily bool sylar\+::http\+::\+Http\+Request\+::has\+Cookie (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{std\+::string $\ast$}]{val = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+判断\+H\+T\+T\+P请求的\+Cookie参数是否存在 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 如果存在,val非空则赋值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否存在 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a1cae7b666110bbfb861d5c1b49520820}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!hasHeader@{hasHeader}}
+\index{hasHeader@{hasHeader}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{hasHeader()}
+{\footnotesize\ttfamily bool sylar\+::http\+::\+Http\+Request\+::has\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{std\+::string $\ast$}]{val = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+判断\+H\+T\+T\+P请求的头部参数是否存在 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 如果存在,val非空则赋值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否存在 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a7fbee73375876ae9b7f385ffcfcfd159}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!hasParam@{hasParam}}
+\index{hasParam@{hasParam}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{hasParam()}
+{\footnotesize\ttfamily bool sylar\+::http\+::\+Http\+Request\+::has\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{std\+::string $\ast$}]{val = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+判断\+H\+T\+T\+P请求的请求参数是否存在 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ out}}  & {\em val} & 如果存在,val非空则赋值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+是否存在 
+\end{DoxyReturn}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_af2919122c7b98c7279bc4b264616085e}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setBody@{setBody}}
+\index{setBody@{setBody}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setBody()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Body (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的消息体 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 消息体 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a8ea1abb0e973f82fe82cbbec4bb0f9f4}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setCookie@{setCookie}}
+\index{setCookie@{setCookie}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setCookie()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Cookie (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+设置\+H\+T\+T\+P请求的\+Cookie参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & 值 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a5223fdbffcc3c570a9fa4dbeda98e67c}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setCookies@{setCookies}}
+\index{setCookies@{setCookies}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setCookies()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Cookies (\begin{DoxyParamCaption}\item[{const \textbf{ Map\+Type} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的\+Cookie M\+AP 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & map \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a535093b8e2fd798c0e647db3469bde95}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setFragment@{setFragment}}
+\index{setFragment@{setFragment}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setFragment()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Fragment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的\+Fragment 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & fragment \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a33772d73b0cb6a8babc3d1e6245dc407}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setHeader()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+设置\+H\+T\+T\+P请求的头部参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & 值 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aad5c16c2dc9256dc369a07bfed644428}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setHeaders()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Headers (\begin{DoxyParamCaption}\item[{const \textbf{ Map\+Type} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的头部\+M\+AP 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & map \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_acee557f4d95c401b6bf81363a5f156d8}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setMethod@{setMethod}}
+\index{setMethod@{setMethod}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setMethod()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Method (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的方法名 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & H\+T\+T\+P请求 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a61c7e6c57de990f1ca2f54b0101f0795}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setParam@{setParam}}
+\index{setParam@{setParam}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setParam()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+设置\+H\+T\+T\+P请求的请求参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em key} & 关键字 \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & 值 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a90d205522a9849d49b73483e10195144}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setParams@{setParams}}
+\index{setParams@{setParams}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setParams()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Params (\begin{DoxyParamCaption}\item[{const \textbf{ Map\+Type} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的参数\+M\+AP 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & map \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_aa1ecf6f987f4e0bd8f0438cdaa9a4d55}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setPath@{setPath}}
+\index{setPath@{setPath}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setPath()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的路径 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 请求路径 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a65759ca0390f7d0fe5a6a6f777078723}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setQuery@{setQuery}}
+\index{setQuery@{setQuery}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setQuery()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Query (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的查询参数 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 查询参数 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a76f90aeec34b25ae36ad3d856cac2690}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!setVersion@{setVersion}}
+\index{setVersion@{setVersion}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{setVersion()}
+{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Request\+::set\+Version (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置\+H\+T\+T\+P请求的协议版本 
+
+
+\begin{DoxyParams}[1]{参数}
+\mbox{\texttt{ in}}  & {\em v} & 协议版本0x11, 0x10 \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classsylar_1_1http_1_1HttpRequest_a88943550c7915567e0ead5dfed2cb795}} 
+\index{sylar::http::HttpRequest@{sylar::http::HttpRequest}!toString@{toString}}
+\index{toString@{toString}!sylar::http::HttpRequest@{sylar::http::HttpRequest}}
+\doxysubsubsection{toString()}
+{\footnotesize\ttfamily std\+::string sylar\+::http\+::\+Http\+Request\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+转成字符串类型 
+
+\begin{DoxyReturn}{返回}
+字符串 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/\textbf{ http.\+h}\end{DoxyCompactItemize}

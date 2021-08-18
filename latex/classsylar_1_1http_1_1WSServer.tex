@@ -1,0 +1,45 @@
+\doxysection{sylar\+::http\+::W\+S\+Server类 参考}
+\label{classsylar_1_1http_1_1WSServer}\index{sylar::http::WSServer@{sylar::http::WSServer}}
+
+
+类 sylar\+::http\+::W\+S\+Server 继承关系图\+:
+% FIG 0
+
+
+sylar\+::http\+::W\+S\+Server 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_a2b1d701c04ffab576666e1bc7ad84267}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ W\+S\+Server} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_ab0792f42e236a810b2993aff74f83c2c}} 
+{\bfseries W\+S\+Server} (\textbf{ sylar\+::\+I\+O\+Manager} $\ast$worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$io\+\_\+worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$accept\+\_\+worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}())
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_a8c923d7c5eb8fe186f0da60966bbd652}} 
+W\+S\+Servlet\+Dispatch\+::ptr {\bfseries get\+W\+S\+Servlet\+Dispatch} () const
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_a220960deef7b5143255da7c18b895316}} 
+void {\bfseries set\+W\+S\+Servlet\+Dispatch} (W\+S\+Servlet\+Dispatch\+::ptr v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_aab5b47d09ad26cf7c6330039a0c141ca}} 
+virtual void \textbf{ handle\+Client} (Socket\+::ptr client) override
+\begin{DoxyCompactList}\small\item\em 处理新连接的\+Socket类 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1http_1_1WSServer_a9c0eb1c7120a1c39f61bf7cc9082b615}} 
+W\+S\+Servlet\+Dispatch\+::ptr {\bfseries m\+\_\+dispatch}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/http/ws\+\_\+server.\+h\end{DoxyCompactItemize}

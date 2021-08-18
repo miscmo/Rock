@@ -1,0 +1,21 @@
+digraph "sylar::RockStream"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::RockStream\n||+ RockStream()\l+ ~RockStream()\l+ sendMessage()\l+ request()\l+ getRequestHandler()\l+ getNotifyHandler()\l+ setRequestHandler()\l+ setNotifyHandler()\l+ setData()\l+ getData()\l# doRecv()\l# handleRequest()\l# handleNotify()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node2 [label="{sylar::AsyncSocketStream\n|# m_sem\l# m_waitSem\l# m_queueMutex\l# m_queue\l# m_mutex\l# m_ctxs\l# m_sn\l# m_autoConnect\l# m_timer\l# m_iomanager\l# m_worker\l# m_connectCb\l# m_disconnectCb\l# m_data\l|+ AsyncSocketStream()\l+ start()\l+ close()\l+ setWorker()\l+ getWorker()\l+ setIOManager()\l+ getIOManager()\l+ isAutoConnect()\l+ setAutoConnect()\l+ getConnectCb()\l+ getDisconnectCb()\l+ setConnectCb()\l+ setDisconnectCb()\l+ setData()\l+ getData()\l# doRead()\l# doWrite()\l# startRead()\l# startWrite()\l# onTimeOut()\l# doRecv()\l# getCtx()\l# getAndDelCtx()\l# getCtxAs()\l# getAndDelCtxAs()\l# addCtx()\l# enqueue()\l# innerClose()\l# waitFiber()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1AsyncSocketStream.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node3 [label="{sylar::SocketStream\n|# m_socket\l# m_owner\l|+ SocketStream()\l+ ~SocketStream()\l+ read()\l+ read()\l+ write()\l+ write()\l+ close()\l+ getSocket()\l+ isConnected()\l+ getRemoteAddress()\l+ getLocalAddress()\l+ getRemoteAddressString()\l+ getLocalAddressString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1SocketStream.html",tooltip="Socket流"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node4 [label="{sylar::Stream\n||+ ~Stream()\l+ read()\l+ read()\l+ readFixSize()\l+ readFixSize()\l+ write()\l+ write()\l+ writeFixSize()\l+ writeFixSize()\l+ close()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Stream.html",tooltip="流结构"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node5 [label="{std::enable_shared\l_from_this\< AsyncSocketStream \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node6 [label="{sylar::RockConnection\n||+ RockConnection()\l+ connect()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RockConnection.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node7 [label="{sylar::ns::NSClient\n||+ NSClient()\l+ ~NSClient()\l+ getQueryDomains()\l+ setQueryDomains()\l+ addQueryDomain()\l+ delQueryDomain()\l+ hasQueryDomain()\l+ query()\l+ init()\l+ uninit()\l+ getDomains()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1NSClient.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
+  Node8 [label="{sylar::RockSession\n||+ RockSession()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RockSession.html",tooltip=" "];
+}

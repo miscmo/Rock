@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar/socket.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">socket.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="socket_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_SOCKET_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_SOCKET_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;netinet/tcp.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;openssl/err.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;openssl/ssl.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="address_8h.html">address.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="noncopyable_8h.html">noncopyable.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1Socket.html">Socket</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Socket&gt;, <a class="code" href="classsylar_1_1Noncopyable.html">Noncopyable</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Socket&gt; ptr;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">typedef</span> std::weak_ptr&lt;Socket&gt; weak_ptr;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">   34</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">Type</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6">   36</a></span>&#160;        <a class="code" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6">TCP</a> = SOCK_STREAM,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f">   38</a></span>&#160;        <a class="code" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f">UDP</a> = SOCK_DGRAM</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">   44</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">Family</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0">   46</a></span>&#160;        <a class="code" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0">IPv4</a> = AF_INET,</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35">   48</a></span>&#160;        <a class="code" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35">IPv6</a> = AF_INET6,</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259">   50</a></span>&#160;        <a class="code" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259">UNIX</a> = AF_UNIX,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">CreateTCP</a>(sylar::Address::ptr address);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">CreateUDP</a>(sylar::Address::ptr address);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a9dc86da1143eec39943f3d0ef8f0ce0f">CreateTCPSocket</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a1e412ee5ccc035a61e92287d2c6e920d">CreateUDPSocket</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a87454bd49d00a311f9306b4b009e664b">CreateTCPSocket6</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#a9a56ebc1dc797a36130fd014db90731f">CreateUDPSocket6</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#aa92b2914dbdc7a7cde33c4c49360957b">CreateUnixTCPSocket</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">static</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#ae136d494658548c395d12aff7807af29">CreateUnixUDPSocket</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classsylar_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">Socket</a>(<span class="keywordtype">int</span> family, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> protocol = 0);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsylar_1_1Socket.html#abf7b37e04c57b86fbfb061b7e488c8a0">~Socket</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    int64_t <a class="code" href="classsylar_1_1Socket.html#a889c0f673a364d7b38f663f9348989f3">getSendTimeout</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Socket.html#a7b9a47ba9b10ba1e9d9ef8fbd89cace6">setSendTimeout</a>(int64_t v);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    int64_t <a class="code" href="classsylar_1_1Socket.html#a557d5c5d77aebadeddccb08989be6bf9">getRecvTimeout</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Socket.html#ab0bdec399a87f8bf61c3993bd03bb218">setRecvTimeout</a>(int64_t v);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">getOption</a>(<span class="keywordtype">int</span> level, <span class="keywordtype">int</span> option, <span class="keywordtype">void</span>* result, socklen_t* len);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">  137</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">getOption</a>(<span class="keywordtype">int</span> level, <span class="keywordtype">int</span> option, T&amp; result) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        socklen_t length = <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">getOption</a>(level, option, &amp;result, &amp;length);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a45566852ee9ecf920a4216b399466516">setOption</a>(<span class="keywordtype">int</span> level, <span class="keywordtype">int</span> option, <span class="keyword">const</span> <span class="keywordtype">void</span>* result, socklen_t len);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">  151</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">setOption</a>(<span class="keywordtype">int</span> level, <span class="keywordtype">int</span> option, <span class="keyword">const</span> T&amp; value) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#a45566852ee9ecf920a4216b399466516">setOption</a>(level, option, &amp;value, <span class="keyword">sizeof</span>(T));</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">virtual</span> Socket::ptr <a class="code" href="classsylar_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">accept</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">bind</a>(<span class="keyword">const</span> Address::ptr addr);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">connect</a>(<span class="keyword">const</span> Address::ptr addr, uint64_t timeout_ms = -1);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> reconnect(uint64_t timeout_ms = -1);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a834b6645daaeec36b35582514118929f">listen</a>(<span class="keywordtype">int</span> backlog = SOMAXCONN);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#aa2414452cf6e34ae9d7e714fecf5749a">close</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">send</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">send</a>(<span class="keyword">const</span> iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">sendTo</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keyword">const</span> Address::ptr to, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">sendTo</a>(<span class="keyword">const</span> iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keyword">const</span> Address::ptr to, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">recv</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">recv</a>(iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">recvFrom</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, Address::ptr from, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">recvFrom</a>(iovec* buffers, <span class="keywordtype">size_t</span> length, Address::ptr from, <span class="keywordtype">int</span> flags = 0);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    Address::ptr <a class="code" href="classsylar_1_1Socket.html#a5dda94c9aeadaca0eb2cdef0ad5a6f9f">getRemoteAddress</a>();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    Address::ptr <a class="code" href="classsylar_1_1Socket.html#a0a0f6a81c99fb7644afe5046f84f5d29">getLocalAddress</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a71b422f6793ce03a4207de9f36576c58">  304</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a71b422f6793ce03a4207de9f36576c58">getFamily</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">m_family</a>;}</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#acf47e95058c48eb50ac87ca841ffa7bd">  309</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#acf47e95058c48eb50ac87ca841ffa7bd">getType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">m_type</a>;}</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a011edf15dd491cf8b2cd259e980c7057">  314</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a011edf15dd491cf8b2cd259e980c7057">getProtocol</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">m_protocol</a>;}</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a4eaf883907617a351d3a7d9c6471839d">  319</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a4eaf883907617a351d3a7d9c6471839d">isConnected</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">m_isConnected</a>;}</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a86d7b7034c6ee0462dbe6af951c078e6">isValid</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#abc7a4496b05868f69ba1feace4a6d233">getError</a>();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keyword">virtual</span> std::ostream&amp; <a class="code" href="classsylar_1_1Socket.html#adcb5a7e190205a7c71f22943708289a6">dump</a>(std::ostream&amp; os) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keyword">virtual</span> std::string toString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#affe4cfcb71216c5e5491de1f65ede86e">  341</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#affe4cfcb71216c5e5491de1f65ede86e">getSocket</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">m_sock</a>;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a87b12962d326b19ed7d9b5bd660fe242">cancelRead</a>();</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#afd5fb9a5cf6fa564a8007fb25edbbcf1">cancelWrite</a>();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a6cb212d4cd1ff1ce63bc03dc27ea41bc">cancelAccept</a>();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a67bbd88370cb11fccb77ad962b6bb468">cancelAll</a>();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Socket.html#af10ea76d3a586f6ac71fc7593cf57c8f">initSock</a>();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Socket.html#a77c251c1e5bb0eceaad8493b90a04b6a">newSock</a>();</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#a00c9b39975e21c6b6f08018c2e1fe7ec">init</a>(<span class="keywordtype">int</span> sock);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">  379</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">m_sock</a>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">  381</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">m_family</a>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">  383</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">m_type</a>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">  385</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">m_protocol</a>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">  387</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">m_isConnected</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#acc79b0b9176cdef334e588a6cb730c3f">  389</a></span>&#160;    Address::ptr <a class="code" href="classsylar_1_1Socket.html#acc79b0b9176cdef334e588a6cb730c3f">m_localAddress</a>;</div>
+<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="classsylar_1_1Socket.html#ad45afa01a968433fd24c6b6c6715fabb">  391</a></span>&#160;    Address::ptr <a class="code" href="classsylar_1_1Socket.html#ad45afa01a968433fd24c6b6c6715fabb">m_remoteAddress</a>;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;};</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno"><a class="line" href="classsylar_1_1SSLSocket.html">  394</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1SSLSocket.html">SSLSocket</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1Socket.html">Socket</a> {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;SSLSocket&gt; ptr;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keyword">static</span> SSLSocket::ptr CreateTCP(sylar::Address::ptr address);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keyword">static</span> SSLSocket::ptr CreateTCPSocket();</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keyword">static</span> SSLSocket::ptr CreateTCPSocket6();</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="classsylar_1_1SSLSocket.html">SSLSocket</a>(<span class="keywordtype">int</span> family, <span class="keywordtype">int</span> type, <span class="keywordtype">int</span> protocol = 0);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">virtual</span> Socket::ptr <a class="code" href="classsylar_1_1SSLSocket.html#afecbb66a11644b6215b319c86aea6a3a">accept</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1SSLSocket.html#a0d2bec8689cb32f67a60b7edeb1dcf71">bind</a>(<span class="keyword">const</span> Address::ptr addr) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1SSLSocket.html#af80ab931d1a8e01306311285ef036df8">connect</a>(<span class="keyword">const</span> Address::ptr addr, uint64_t timeout_ms = -1) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1SSLSocket.html#afdafa044aec7e161e308fe6ac22d7032">listen</a>(<span class="keywordtype">int</span> backlog = SOMAXCONN) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1SSLSocket.html#a63026bfc275903ccd28825b15901ae8c">close</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a046a3616b1afb59d81100c862bde939d">send</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a046a3616b1afb59d81100c862bde939d">send</a>(<span class="keyword">const</span> iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a3ff1c8ec11526bb404f6a9ca935865f2">sendTo</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keyword">const</span> Address::ptr to, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a3ff1c8ec11526bb404f6a9ca935865f2">sendTo</a>(<span class="keyword">const</span> iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keyword">const</span> Address::ptr to, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a32d1c1ea43ef650864d1c3caa4ebaa1e">recv</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a32d1c1ea43ef650864d1c3caa4ebaa1e">recv</a>(iovec* buffers, <span class="keywordtype">size_t</span> length, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a0b8d04fbf9a28eb80055adb78c390f28">recvFrom</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length, Address::ptr from, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1SSLSocket.html#a0b8d04fbf9a28eb80055adb78c390f28">recvFrom</a>(iovec* buffers, <span class="keywordtype">size_t</span> length, Address::ptr from, <span class="keywordtype">int</span> flags = 0) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordtype">bool</span> loadCertificates(<span class="keyword">const</span> std::string&amp; cert_file, <span class="keyword">const</span> std::string&amp; key_file);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keyword">virtual</span> std::ostream&amp; <a class="code" href="classsylar_1_1SSLSocket.html#af38deef2aa3cd5280f9ec9e7501acd3b">dump</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classsylar_1_1SSLSocket.html#a1dd76359b68c833b41bd8390d6733d22">init</a>(<span class="keywordtype">int</span> sock) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    std::shared_ptr&lt;SSL_CTX&gt; m_ctx;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    std::shared_ptr&lt;SSL&gt; m_ssl;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;};</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;std::ostream&amp; <a class="code" href="address_8h.html#a316eaa24e5371235424a99abc43010cb">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classsylar_1_1Socket.html">Socket</a>&amp; sock);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae6b4769ae79789ee9b36373c720dc915"><div class="ttname"><a href="classsylar_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">sylar::Socket::bind</a></div><div class="ttdeci">virtual bool bind(const Address::ptr addr)</div><div class="ttdoc">绑定地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a0a0f6a81c99fb7644afe5046f84f5d29"><div class="ttname"><a href="classsylar_1_1Socket.html#a0a0f6a81c99fb7644afe5046f84f5d29">sylar::Socket::getLocalAddress</a></div><div class="ttdeci">Address::ptr getLocalAddress()</div><div class="ttdoc">获取本地地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_acf47e95058c48eb50ac87ca841ffa7bd"><div class="ttname"><a href="classsylar_1_1Socket.html#acf47e95058c48eb50ac87ca841ffa7bd">sylar::Socket::getType</a></div><div class="ttdeci">int getType() const</div><div class="ttdoc">获取类型</div><div class="ttdef"><b>Definition:</b> socket.h:309</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_afd5fb9a5cf6fa564a8007fb25edbbcf1"><div class="ttname"><a href="classsylar_1_1Socket.html#afd5fb9a5cf6fa564a8007fb25edbbcf1">sylar::Socket::cancelWrite</a></div><div class="ttdeci">bool cancelWrite()</div><div class="ttdoc">取消写</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html"><div class="ttname"><a href="classsylar_1_1SSLSocket.html">sylar::SSLSocket</a></div><div class="ttdef"><b>Definition:</b> socket.h:394</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a1e412ee5ccc035a61e92287d2c6e920d"><div class="ttname"><a href="classsylar_1_1Socket.html#a1e412ee5ccc035a61e92287d2c6e920d">sylar::Socket::CreateUDPSocket</a></div><div class="ttdeci">static Socket::ptr CreateUDPSocket()</div><div class="ttdoc">创建IPv4的UDP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a7b9a47ba9b10ba1e9d9ef8fbd89cace6"><div class="ttname"><a href="classsylar_1_1Socket.html#a7b9a47ba9b10ba1e9d9ef8fbd89cace6">sylar::Socket::setSendTimeout</a></div><div class="ttdeci">void setSendTimeout(int64_t v)</div><div class="ttdoc">设置发送超时时间(毫秒)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a67bbd88370cb11fccb77ad962b6bb468"><div class="ttname"><a href="classsylar_1_1Socket.html#a67bbd88370cb11fccb77ad962b6bb468">sylar::Socket::cancelAll</a></div><div class="ttdeci">bool cancelAll()</div><div class="ttdoc">取消所有事件</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_af38deef2aa3cd5280f9ec9e7501acd3b"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#af38deef2aa3cd5280f9ec9e7501acd3b">sylar::SSLSocket::dump</a></div><div class="ttdeci">virtual std::ostream &amp; dump(std::ostream &amp;os) const override</div><div class="ttdoc">输出信息到流中</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a45566852ee9ecf920a4216b399466516"><div class="ttname"><a href="classsylar_1_1Socket.html#a45566852ee9ecf920a4216b399466516">sylar::Socket::setOption</a></div><div class="ttdeci">bool setOption(int level, int option, const void *result, socklen_t len)</div><div class="ttdoc">设置sockopt</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259"><div class="ttname"><a href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259">sylar::Socket::UNIX</a></div><div class="ttdeci">@ UNIX</div><div class="ttdoc">Unix socket</div><div class="ttdef"><b>Definition:</b> socket.h:50</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_add5ddd190ab14ceb7dad07dff5a472d7"><div class="ttname"><a href="classsylar_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">sylar::Socket::getOption</a></div><div class="ttdeci">bool getOption(int level, int option, T &amp;result)</div><div class="ttdoc">获取sockopt模板</div><div class="ttdef"><b>Definition:</b> socket.h:137</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ab058fddd5ef08e56957989a36df2463c"><div class="ttname"><a href="classsylar_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">sylar::Socket::getOption</a></div><div class="ttdeci">bool getOption(int level, int option, void *result, socklen_t *len)</div><div class="ttdoc">获取sockopt</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a9dc86da1143eec39943f3d0ef8f0ce0f"><div class="ttname"><a href="classsylar_1_1Socket.html#a9dc86da1143eec39943f3d0ef8f0ce0f">sylar::Socket::CreateTCPSocket</a></div><div class="ttdeci">static Socket::ptr CreateTCPSocket()</div><div class="ttdoc">创建IPv4的TCP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a3ff1c8ec11526bb404f6a9ca935865f2"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a3ff1c8ec11526bb404f6a9ca935865f2">sylar::SSLSocket::sendTo</a></div><div class="ttdeci">virtual int sendTo(const void *buffer, size_t length, const Address::ptr to, int flags=0) override</div><div class="ttdoc">发送数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35"><div class="ttname"><a href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35">sylar::Socket::IPv6</a></div><div class="ttdeci">@ IPv6</div><div class="ttdoc">IPv6 socket</div><div class="ttdef"><b>Definition:</b> socket.h:48</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_adcb5a7e190205a7c71f22943708289a6"><div class="ttname"><a href="classsylar_1_1Socket.html#adcb5a7e190205a7c71f22943708289a6">sylar::Socket::dump</a></div><div class="ttdeci">virtual std::ostream &amp; dump(std::ostream &amp;os) const</div><div class="ttdoc">输出信息到流中</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a10d250f5b6f476e99b1a204db60925ca"><div class="ttname"><a href="classsylar_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">sylar::Socket::send</a></div><div class="ttdeci">virtual int send(const void *buffer, size_t length, int flags=0)</div><div class="ttdoc">发送数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f"><div class="ttname"><a href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f">sylar::Socket::UDP</a></div><div class="ttdeci">@ UDP</div><div class="ttdoc">UDP类型</div><div class="ttdef"><b>Definition:</b> socket.h:38</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_abc7a4496b05868f69ba1feace4a6d233"><div class="ttname"><a href="classsylar_1_1Socket.html#abc7a4496b05868f69ba1feace4a6d233">sylar::Socket::getError</a></div><div class="ttdeci">int getError()</div><div class="ttdoc">返回Socket错误</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a6dcdf4ee9486a0274def42ff5ba188f3"><div class="ttname"><a href="classsylar_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">sylar::Socket::m_protocol</a></div><div class="ttdeci">int m_protocol</div><div class="ttdoc">协议</div><div class="ttdef"><b>Definition:</b> socket.h:385</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a77c251c1e5bb0eceaad8493b90a04b6a"><div class="ttname"><a href="classsylar_1_1Socket.html#a77c251c1e5bb0eceaad8493b90a04b6a">sylar::Socket::newSock</a></div><div class="ttdeci">void newSock()</div><div class="ttdoc">创建socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6"><div class="ttname"><a href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6">sylar::Socket::TCP</a></div><div class="ttdeci">@ TCP</div><div class="ttdoc">TCP类型</div><div class="ttdef"><b>Definition:</b> socket.h:36</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_aec6303472f8d128b8aec57cd9ef124fe"><div class="ttname"><a href="classsylar_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">sylar::Socket::m_isConnected</a></div><div class="ttdeci">bool m_isConnected</div><div class="ttdoc">是否连接</div><div class="ttdef"><b>Definition:</b> socket.h:387</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a834b6645daaeec36b35582514118929f"><div class="ttname"><a href="classsylar_1_1Socket.html#a834b6645daaeec36b35582514118929f">sylar::Socket::listen</a></div><div class="ttdeci">virtual bool listen(int backlog=SOMAXCONN)</div><div class="ttdoc">监听socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a00c9b39975e21c6b6f08018c2e1fe7ec"><div class="ttname"><a href="classsylar_1_1Socket.html#a00c9b39975e21c6b6f08018c2e1fe7ec">sylar::Socket::init</a></div><div class="ttdeci">virtual bool init(int sock)</div><div class="ttdoc">初始化sock</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a96bb0a4fbc86e6aed2f378a4c4119e4d"><div class="ttname"><a href="classsylar_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">sylar::Socket::sendTo</a></div><div class="ttdeci">virtual int sendTo(const void *buffer, size_t length, const Address::ptr to, int flags=0)</div><div class="ttdoc">发送数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a5dda94c9aeadaca0eb2cdef0ad5a6f9f"><div class="ttname"><a href="classsylar_1_1Socket.html#a5dda94c9aeadaca0eb2cdef0ad5a6f9f">sylar::Socket::getRemoteAddress</a></div><div class="ttdeci">Address::ptr getRemoteAddress()</div><div class="ttdoc">获取远端地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a889c0f673a364d7b38f663f9348989f3"><div class="ttname"><a href="classsylar_1_1Socket.html#a889c0f673a364d7b38f663f9348989f3">sylar::Socket::getSendTimeout</a></div><div class="ttdeci">int64_t getSendTimeout()</div><div class="ttdoc">获取发送超时时间(毫秒)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae136d494658548c395d12aff7807af29"><div class="ttname"><a href="classsylar_1_1Socket.html#ae136d494658548c395d12aff7807af29">sylar::Socket::CreateUnixUDPSocket</a></div><div class="ttdeci">static Socket::ptr CreateUnixUDPSocket()</div><div class="ttdoc">创建Unix的UDP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_aa2414452cf6e34ae9d7e714fecf5749a"><div class="ttname"><a href="classsylar_1_1Socket.html#aa2414452cf6e34ae9d7e714fecf5749a">sylar::Socket::close</a></div><div class="ttdeci">virtual bool close()</div><div class="ttdoc">关闭socket</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_af80ab931d1a8e01306311285ef036df8"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#af80ab931d1a8e01306311285ef036df8">sylar::SSLSocket::connect</a></div><div class="ttdeci">virtual bool connect(const Address::ptr addr, uint64_t timeout_ms=-1) override</div><div class="ttdoc">连接地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a557d5c5d77aebadeddccb08989be6bf9"><div class="ttname"><a href="classsylar_1_1Socket.html#a557d5c5d77aebadeddccb08989be6bf9">sylar::Socket::getRecvTimeout</a></div><div class="ttdeci">int64_t getRecvTimeout()</div><div class="ttdoc">获取接受超时时间(毫秒)</div></div>
+<div class="ttc" id="aaddress_8h_html"><div class="ttname"><a href="address_8h.html">address.h</a></div><div class="ttdoc">网络地址的封装(IPv4,IPv6,Unix)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ab5742dc60c85aedf9e25adee99e32a8e"><div class="ttname"><a href="classsylar_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">sylar::Socket::setOption</a></div><div class="ttdeci">bool setOption(int level, int option, const T &amp;value)</div><div class="ttdoc">设置sockopt模板</div><div class="ttdef"><b>Definition:</b> socket.h:151</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_abf7b37e04c57b86fbfb061b7e488c8a0"><div class="ttname"><a href="classsylar_1_1Socket.html#abf7b37e04c57b86fbfb061b7e488c8a0">sylar::Socket::~Socket</a></div><div class="ttdeci">virtual ~Socket()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0"><div class="ttname"><a href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0">sylar::Socket::IPv4</a></div><div class="ttdeci">@ IPv4</div><div class="ttdoc">IPv4 socket</div><div class="ttdef"><b>Definition:</b> socket.h:46</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_aa8671aebd2450ea097d8820416d5237f"><div class="ttname"><a href="classsylar_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">sylar::Socket::accept</a></div><div class="ttdeci">virtual Socket::ptr accept()</div><div class="ttdoc">接收connect链接</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a880530342b59695723480c6ac8fe7f89"><div class="ttname"><a href="classsylar_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">sylar::Socket::CreateTCP</a></div><div class="ttdeci">static Socket::ptr CreateTCP(sylar::Address::ptr address)</div><div class="ttdoc">创建TCP Socket(满足地址类型)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a9a56ebc1dc797a36130fd014db90731f"><div class="ttname"><a href="classsylar_1_1Socket.html#a9a56ebc1dc797a36130fd014db90731f">sylar::Socket::CreateUDPSocket6</a></div><div class="ttdeci">static Socket::ptr CreateUDPSocket6()</div><div class="ttdoc">创建IPv6的UDP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_affe4cfcb71216c5e5491de1f65ede86e"><div class="ttname"><a href="classsylar_1_1Socket.html#affe4cfcb71216c5e5491de1f65ede86e">sylar::Socket::getSocket</a></div><div class="ttdeci">int getSocket() const</div><div class="ttdoc">返回socket句柄</div><div class="ttdef"><b>Definition:</b> socket.h:341</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a8a6f18189faa650c3b534d5b7e4a0843"><div class="ttname"><a href="classsylar_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">sylar::Socket::m_type</a></div><div class="ttdeci">int m_type</div><div class="ttdoc">类型</div><div class="ttdef"><b>Definition:</b> socket.h:383</div></div>
+<div class="ttc" id="aclasssylar_1_1Noncopyable_html"><div class="ttname"><a href="classsylar_1_1Noncopyable.html">sylar::Noncopyable</a></div><div class="ttdoc">对象无法拷贝,赋值</div><div class="ttdef"><b>Definition:</b> noncopyable.h:17</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a918c0f55dbfdfcd1e27a8e800b297a24"><div class="ttname"><a href="classsylar_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">sylar::Socket::connect</a></div><div class="ttdeci">virtual bool connect(const Address::ptr addr, uint64_t timeout_ms=-1)</div><div class="ttdoc">连接地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a87454bd49d00a311f9306b4b009e664b"><div class="ttname"><a href="classsylar_1_1Socket.html#a87454bd49d00a311f9306b4b009e664b">sylar::Socket::CreateTCPSocket6</a></div><div class="ttdeci">static Socket::ptr CreateTCPSocket6()</div><div class="ttdoc">创建IPv6的TCP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a011edf15dd491cf8b2cd259e980c7057"><div class="ttname"><a href="classsylar_1_1Socket.html#a011edf15dd491cf8b2cd259e980c7057">sylar::Socket::getProtocol</a></div><div class="ttdeci">int getProtocol() const</div><div class="ttdoc">获取协议</div><div class="ttdef"><b>Definition:</b> socket.h:314</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a1800cc78da1f58204b5f3778679d0628"><div class="ttname"><a href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">sylar::Socket::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Socket类型</div><div class="ttdef"><b>Definition:</b> socket.h:34</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a71b422f6793ce03a4207de9f36576c58"><div class="ttname"><a href="classsylar_1_1Socket.html#a71b422f6793ce03a4207de9f36576c58">sylar::Socket::getFamily</a></div><div class="ttdeci">int getFamily() const</div><div class="ttdoc">获取协议簇</div><div class="ttdef"><b>Definition:</b> socket.h:304</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a9c9fcf7f10dc2aa792ab4a153af66ccb"><div class="ttname"><a href="classsylar_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">sylar::Socket::recv</a></div><div class="ttdeci">virtual int recv(void *buffer, size_t length, int flags=0)</div><div class="ttdoc">接受数据</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a1dd76359b68c833b41bd8390d6733d22"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a1dd76359b68c833b41bd8390d6733d22">sylar::SSLSocket::init</a></div><div class="ttdeci">virtual bool init(int sock) override</div><div class="ttdoc">初始化sock</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a86d7b7034c6ee0462dbe6af951c078e6"><div class="ttname"><a href="classsylar_1_1Socket.html#a86d7b7034c6ee0462dbe6af951c078e6">sylar::Socket::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdoc">是否有效(m_sock != -1)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ad45afa01a968433fd24c6b6c6715fabb"><div class="ttname"><a href="classsylar_1_1Socket.html#ad45afa01a968433fd24c6b6c6715fabb">sylar::Socket::m_remoteAddress</a></div><div class="ttdeci">Address::ptr m_remoteAddress</div><div class="ttdoc">远端地址</div><div class="ttdef"><b>Definition:</b> socket.h:391</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a0b8d04fbf9a28eb80055adb78c390f28"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a0b8d04fbf9a28eb80055adb78c390f28">sylar::SSLSocket::recvFrom</a></div><div class="ttdeci">virtual int recvFrom(void *buffer, size_t length, Address::ptr from, int flags=0) override</div><div class="ttdoc">接受数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a746675af41ed7260af2df8ef0916afc8"><div class="ttname"><a href="classsylar_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">sylar::Socket::CreateUDP</a></div><div class="ttdeci">static Socket::ptr CreateUDP(sylar::Address::ptr address)</div><div class="ttdoc">创建UDP Socket(满足地址类型)</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_afdafa044aec7e161e308fe6ac22d7032"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#afdafa044aec7e161e308fe6ac22d7032">sylar::SSLSocket::listen</a></div><div class="ttdeci">virtual bool listen(int backlog=SOMAXCONN) override</div><div class="ttdoc">监听socket</div></div>
+<div class="ttc" id="aaddress_8h_html_a316eaa24e5371235424a99abc43010cb"><div class="ttname"><a href="address_8h.html#a316eaa24e5371235424a99abc43010cb">sylar::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Address &amp;addr)</div><div class="ttdoc">流式输出Address</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ae9cdb560b0d6c8dff762180e9643d280"><div class="ttname"><a href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">sylar::Socket::Family</a></div><div class="ttdeci">Family</div><div class="ttdoc">Socket协议簇</div><div class="ttdef"><b>Definition:</b> socket.h:44</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a5e3e43ad94c153db6080b768940f4b2a"><div class="ttname"><a href="classsylar_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">sylar::Socket::recvFrom</a></div><div class="ttdeci">virtual int recvFrom(void *buffer, size_t length, Address::ptr from, int flags=0)</div><div class="ttdoc">接受数据</div></div>
+<div class="ttc" id="anoncopyable_8h_html"><div class="ttname"><a href="noncopyable_8h.html">noncopyable.h</a></div><div class="ttdoc">不可拷贝对象封装</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ab0bdec399a87f8bf61c3993bd03bb218"><div class="ttname"><a href="classsylar_1_1Socket.html#ab0bdec399a87f8bf61c3993bd03bb218">sylar::Socket::setRecvTimeout</a></div><div class="ttdeci">void setRecvTimeout(int64_t v)</div><div class="ttdoc">设置接受超时时间(毫秒)</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a87b12962d326b19ed7d9b5bd660fe242"><div class="ttname"><a href="classsylar_1_1Socket.html#a87b12962d326b19ed7d9b5bd660fe242">sylar::Socket::cancelRead</a></div><div class="ttdeci">bool cancelRead()</div><div class="ttdoc">取消读</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a4eaf883907617a351d3a7d9c6471839d"><div class="ttname"><a href="classsylar_1_1Socket.html#a4eaf883907617a351d3a7d9c6471839d">sylar::Socket::isConnected</a></div><div class="ttdeci">bool isConnected() const</div><div class="ttdoc">返回是否连接</div><div class="ttdef"><b>Definition:</b> socket.h:319</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a0d2bec8689cb32f67a60b7edeb1dcf71"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a0d2bec8689cb32f67a60b7edeb1dcf71">sylar::SSLSocket::bind</a></div><div class="ttdeci">virtual bool bind(const Address::ptr addr) override</div><div class="ttdoc">绑定地址</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a6cb212d4cd1ff1ce63bc03dc27ea41bc"><div class="ttname"><a href="classsylar_1_1Socket.html#a6cb212d4cd1ff1ce63bc03dc27ea41bc">sylar::Socket::cancelAccept</a></div><div class="ttdeci">bool cancelAccept()</div><div class="ttdoc">取消accept</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_acc79b0b9176cdef334e588a6cb730c3f"><div class="ttname"><a href="classsylar_1_1Socket.html#acc79b0b9176cdef334e588a6cb730c3f">sylar::Socket::m_localAddress</a></div><div class="ttdeci">Address::ptr m_localAddress</div><div class="ttdoc">本地地址</div><div class="ttdef"><b>Definition:</b> socket.h:389</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_afecbb66a11644b6215b319c86aea6a3a"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#afecbb66a11644b6215b319c86aea6a3a">sylar::SSLSocket::accept</a></div><div class="ttdeci">virtual Socket::ptr accept() override</div><div class="ttdoc">接收connect链接</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_aa92b2914dbdc7a7cde33c4c49360957b"><div class="ttname"><a href="classsylar_1_1Socket.html#aa92b2914dbdc7a7cde33c4c49360957b">sylar::Socket::CreateUnixTCPSocket</a></div><div class="ttdeci">static Socket::ptr CreateUnixTCPSocket()</div><div class="ttdoc">创建Unix的TCP Socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a55ff16b76c9ce6d0f899b3aab5f8b6a8"><div class="ttname"><a href="classsylar_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">sylar::Socket::m_family</a></div><div class="ttdeci">int m_family</div><div class="ttdoc">协议簇</div><div class="ttdef"><b>Definition:</b> socket.h:381</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a63026bfc275903ccd28825b15901ae8c"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a63026bfc275903ccd28825b15901ae8c">sylar::SSLSocket::close</a></div><div class="ttdeci">virtual bool close() override</div><div class="ttdoc">关闭socket</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a32d1c1ea43ef650864d1c3caa4ebaa1e"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a32d1c1ea43ef650864d1c3caa4ebaa1e">sylar::SSLSocket::recv</a></div><div class="ttdeci">virtual int recv(void *buffer, size_t length, int flags=0) override</div><div class="ttdoc">接受数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html"><div class="ttname"><a href="classsylar_1_1Socket.html">sylar::Socket</a></div><div class="ttdoc">Socket封装类</div><div class="ttdef"><b>Definition:</b> socket.h:26</div></div>
+<div class="ttc" id="aclasssylar_1_1SSLSocket_html_a046a3616b1afb59d81100c862bde939d"><div class="ttname"><a href="classsylar_1_1SSLSocket.html#a046a3616b1afb59d81100c862bde939d">sylar::SSLSocket::send</a></div><div class="ttdeci">virtual int send(const void *buffer, size_t length, int flags=0) override</div><div class="ttdoc">发送数据</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_af10ea76d3a586f6ac71fc7593cf57c8f"><div class="ttname"><a href="classsylar_1_1Socket.html#af10ea76d3a586f6ac71fc7593cf57c8f">sylar::Socket::initSock</a></div><div class="ttdeci">void initSock()</div><div class="ttdoc">初始化socket</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_ad7d10ddda988d74a39f8ea80023933c6"><div class="ttname"><a href="classsylar_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">sylar::Socket::Socket</a></div><div class="ttdeci">Socket(int family, int type, int protocol=0)</div><div class="ttdoc">Socket构造函数</div></div>
+<div class="ttc" id="aclasssylar_1_1Socket_html_a1c938fdb33ca71386ea97408cf3d59b8"><div class="ttname"><a href="classsylar_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">sylar::Socket::m_sock</a></div><div class="ttdeci">int m_sock</div><div class="ttdoc">socket句柄</div><div class="ttdef"><b>Definition:</b> socket.h:379</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

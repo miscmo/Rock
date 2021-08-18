@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::ds::HashMap&lt; K, V, PosHash &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>ds</b></li><li class="navelem"><a class="el" href="classsylar_1_1ds_1_1HashMap.html">HashMap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classsylar_1_1ds_1_1HashMap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::ds::HashMap&lt; K, V, PosHash &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+sylar::ds::HashMap&lt; K, V, PosHash &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aeb546cd5dae8d0cad0106521fe75aff4"><td class="memItemLeft" align="right" valign="top"><a id="aeb546cd5dae8d0cad0106521fe75aff4"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1ds_1_1HashMap.html">HashMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:aeb546cd5dae8d0cad0106521fe75aff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6802860b4a6c80257d292156339d6426"><td class="memItemLeft" align="right" valign="top"><a id="a6802860b4a6c80257d292156339d6426"></a>
+typedef <a class="el" href="structsylar_1_1ds_1_1Pair.html">Pair</a>&lt; K, V &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="separator:a6802860b4a6c80257d292156339d6426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c027b493c62e1b91c9ea073001874a"><td class="memItemLeft" align="right" valign="top"><a id="a42c027b493c62e1b91c9ea073001874a"></a>
+typedef std::function&lt; bool(const K &amp;k, const V &amp;v)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rcallback</b></td></tr>
+<tr class="separator:a42c027b493c62e1b91c9ea073001874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f47ec5499cdaa3758bc8246f2e1e84"><td class="memItemLeft" align="right" valign="top"><a id="ac9f47ec5499cdaa3758bc8246f2e1e84"></a>
+typedef std::function&lt; bool(const K &amp;k, V &amp;v)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>wcallback</b></td></tr>
+<tr class="separator:ac9f47ec5499cdaa3758bc8246f2e1e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adf089e638d179c955f70c02e77a77d1f"><td class="memItemLeft" align="right" valign="top"><a id="adf089e638d179c955f70c02e77a77d1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>HashMap</b> (const uint32_t &amp;size=0)</td></tr>
+<tr class="separator:adf089e638d179c955f70c02e77a77d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6591a611798f3a990f7916144cb01f63"><td class="memItemLeft" align="right" valign="top"><a id="a6591a611798f3a990f7916144cb01f63"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rforeach</b> (rcallback cb)</td></tr>
+<tr class="separator:a6591a611798f3a990f7916144cb01f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaee2d17568a3235081fc1ad9d5e8865"><td class="memItemLeft" align="right" valign="top"><a id="adaee2d17568a3235081fc1ad9d5e8865"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wforeach</b> (wcallback cb)</td></tr>
+<tr class="separator:adaee2d17568a3235081fc1ad9d5e8865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f77cce884f3138096904f5c5f066eb"><td class="memItemLeft" align="right" valign="top"><a id="a03f77cce884f3138096904f5c5f066eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (const K &amp;k, V &amp;v)</td></tr>
+<tr class="separator:a03f77cce884f3138096904f5c5f066eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5734e47b2d983e755ab2a15646162b"><td class="memItemLeft" align="right" valign="top"><a id="afb5734e47b2d983e755ab2a15646162b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (const K &amp;k)</td></tr>
+<tr class="separator:afb5734e47b2d983e755ab2a15646162b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039b95a6fc6ed1dfd841048a58f745db"><td class="memItemLeft" align="right" valign="top"><a id="a039b95a6fc6ed1dfd841048a58f745db"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const K &amp;k, const V &amp;v)</td></tr>
+<tr class="separator:a039b95a6fc6ed1dfd841048a58f745db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a490c896d28720f94e1db2741ef3ef"><td class="memItemLeft" align="right" valign="top"><a id="a31a490c896d28720f94e1db2741ef3ef"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getTotal</b> () const</td></tr>
+<tr class="separator:a31a490c896d28720f94e1db2741ef3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cdc5d1ca589874c6943eaac9b50bc3"><td class="memItemLeft" align="right" valign="top"><a id="ac5cdc5d1ca589874c6943eaac9b50bc3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>del</b> (const K &amp;k)</td></tr>
+<tr class="separator:ac5cdc5d1ca589874c6943eaac9b50bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaffc9ac80e47c34ce355d6506a14482"><td class="memItemLeft" align="right" valign="top"><a id="aeaffc9ac80e47c34ce355d6506a14482"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:aeaffc9ac80e47c34ce355d6506a14482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3b622b183c60447600a61bcdcd7444"><td class="memItemLeft" align="right" valign="top"><a id="aca3b622b183c60447600a61bcdcd7444"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classsylar_1_1ds_1_1HashMap.html">HashMap</a> &amp;oth)</td></tr>
+<tr class="separator:aca3b622b183c60447600a61bcdcd7444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f4aa97b41b16eba805787fd1362c299"><td class="memItemLeft" align="right" valign="top"><a id="a3f4aa97b41b16eba805787fd1362c299"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>merge</b> (<a class="el" href="classsylar_1_1ds_1_1HashMap.html">HashMap</a> &amp;oth)</td></tr>
+<tr class="separator:a3f4aa97b41b16eba805787fd1362c299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76eb60bd6763850766754dec7ff73f0a"><td class="memItemLeft" align="right" valign="top"><a id="a76eb60bd6763850766754dec7ff73f0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rehash</b> ()</td></tr>
+<tr class="separator:a76eb60bd6763850766754dec7ff73f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212a12e3bab902c38c6990d680adaa0b"><td class="memItemLeft" align="right" valign="top"><a id="a212a12e3bab902c38c6990d680adaa0b"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dump</b> (std::ostream &amp;os)</td></tr>
+<tr class="separator:a212a12e3bab902c38c6990d680adaa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8df9ae31b91d4bc60ecef296fb9751"><td class="memItemLeft" align="right" valign="top"><a id="afd8df9ae31b91d4bc60ecef296fb9751"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>writeTo</b> (std::ostream &amp;os, uint64_t speed=-1)</td></tr>
+<tr class="separator:afd8df9ae31b91d4bc60ecef296fb9751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6a9d573089c9f008b005fd3b126240"><td class="memItemLeft" align="right" valign="top"><a id="a0e6a9d573089c9f008b005fd3b126240"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>readFrom</b> (std::istream &amp;is, uint64_t speed=-1)</td></tr>
+<tr class="separator:a0e6a9d573089c9f008b005fd3b126240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/ds/<a class="el" href="hash__map_8h_source.html">hash_map.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

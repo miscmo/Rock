@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::http::HttpResult结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="structsylar_1_1http_1_1HttpResult.html">HttpResult</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structsylar_1_1http_1_1HttpResult-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::http::HttpResult结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP响应结果  
+ <a href="structsylar_1_1http_1_1HttpResult.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="http__connection_8h_source.html">http_connection.h</a>&gt;</code></p>
+<div class="dynheader">
+sylar::http::HttpResult 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a0febea690c2c61e6e44b39eff7b3e0e4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4">Error</a> { <br />
+&#160;&#160;<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4ae0aa021e21dddbd6d8cecec71e9cf564">Error::OK</a> = 0, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a9ba423abc90614e7ec03992f6484517a">Error::INVALID_URL</a> = 1, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a8ec92b8be851c2c9f935c17f94310401">Error::INVALID_HOST</a> = 2, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4adca3fec5c248b241263e8a63b7abaf9d">Error::CONNECT_FAIL</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a4eb3ef838bd587136925ddfa42206a51">Error::SEND_CLOSE_BY_PEER</a> = 4, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4aa20970543da334c5772bb5de140fb47f">Error::SEND_SOCKET_ERROR</a> = 5, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a070a0fb40f6c308ab544b227660aadff">Error::TIMEOUT</a> = 6, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a5459c7f06ce10ec753e440f8d1613aba">Error::CREATE_SOCKET_ERROR</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a3c96e045074fe542e6b8a5dea8331102">Error::POOL_GET_CONNECTION</a> = 8, 
+<a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4a61454a702ca29f60f09ea881dbdad142">Error::POOL_INVALID_CONNECTION</a> = 9
+<br />
+ }</td></tr>
+<tr class="memdesc:a0febea690c2c61e6e44b39eff7b3e0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误码定义  <a href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4">更多...</a><br /></td></tr>
+<tr class="separator:a0febea690c2c61e6e44b39eff7b3e0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0a8df62134ba376ed3e9460118affb"><td class="memItemLeft" align="right" valign="top"><a id="a9e0a8df62134ba376ed3e9460118affb"></a>
+typedef std::shared_ptr&lt; <a class="el" href="structsylar_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">ptr</a></td></tr>
+<tr class="memdesc:a9e0a8df62134ba376ed3e9460118affb"><td class="mdescLeft">&#160;</td><td class="mdescRight">智能指针类型定义 <br /></td></tr>
+<tr class="separator:a9e0a8df62134ba376ed3e9460118affb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abd4471e47d099baa51d1b149c605e117"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#abd4471e47d099baa51d1b149c605e117">HttpResult</a> (int _result, <a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">HttpResponse::ptr</a> _response, const std::string &amp;_error)</td></tr>
+<tr class="memdesc:abd4471e47d099baa51d1b149c605e117"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="structsylar_1_1http_1_1HttpResult.html#abd4471e47d099baa51d1b149c605e117">更多...</a><br /></td></tr>
+<tr class="separator:abd4471e47d099baa51d1b149c605e117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6672251da8d07d87023e98f0abb87b8"><td class="memItemLeft" align="right" valign="top"><a id="ad6672251da8d07d87023e98f0abb87b8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
+<tr class="separator:ad6672251da8d07d87023e98f0abb87b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a3d96071970136208db8ed112b0b36bce"><td class="memItemLeft" align="right" valign="top"><a id="a3d96071970136208db8ed112b0b36bce"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a3d96071970136208db8ed112b0b36bce">result</a></td></tr>
+<tr class="memdesc:a3d96071970136208db8ed112b0b36bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误码 <br /></td></tr>
+<tr class="separator:a3d96071970136208db8ed112b0b36bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c91a5b1bbcdb75af0611971da9be3e"><td class="memItemLeft" align="right" valign="top"><a id="a20c91a5b1bbcdb75af0611971da9be3e"></a>
+<a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">HttpResponse::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a20c91a5b1bbcdb75af0611971da9be3e">response</a></td></tr>
+<tr class="memdesc:a20c91a5b1bbcdb75af0611971da9be3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP响应结构体 <br /></td></tr>
+<tr class="separator:a20c91a5b1bbcdb75af0611971da9be3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a007faf0e2938a09a66d1a51dbb5f2356"><td class="memItemLeft" align="right" valign="top"><a id="a007faf0e2938a09a66d1a51dbb5f2356"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a007faf0e2938a09a66d1a51dbb5f2356">error</a></td></tr>
+<tr class="memdesc:a007faf0e2938a09a66d1a51dbb5f2356"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误描述 <br /></td></tr>
+<tr class="separator:a007faf0e2938a09a66d1a51dbb5f2356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP响应结果 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a0febea690c2c61e6e44b39eff7b3e0e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0febea690c2c61e6e44b39eff7b3e0e4">&#9670;&nbsp;</a></span>Error</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structsylar_1_1http_1_1HttpResult.html#a0febea690c2c61e6e44b39eff7b3e0e4">sylar::http::HttpResult::Error</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>错误码定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4ae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"><p>正常 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a9ba423abc90614e7ec03992f6484517a"></a>INVALID_URL&#160;</td><td class="fielddoc"><p>非法URL </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a8ec92b8be851c2c9f935c17f94310401"></a>INVALID_HOST&#160;</td><td class="fielddoc"><p>无法解析HOST </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4adca3fec5c248b241263e8a63b7abaf9d"></a>CONNECT_FAIL&#160;</td><td class="fielddoc"><p>连接失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a4eb3ef838bd587136925ddfa42206a51"></a>SEND_CLOSE_BY_PEER&#160;</td><td class="fielddoc"><p>连接被对端关闭 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4aa20970543da334c5772bb5de140fb47f"></a>SEND_SOCKET_ERROR&#160;</td><td class="fielddoc"><p>发送请求产生Socket错误 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a070a0fb40f6c308ab544b227660aadff"></a>TIMEOUT&#160;</td><td class="fielddoc"><p>超时 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a5459c7f06ce10ec753e440f8d1613aba"></a>CREATE_SOCKET_ERROR&#160;</td><td class="fielddoc"><p>创建Socket失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a3c96e045074fe542e6b8a5dea8331102"></a>POOL_GET_CONNECTION&#160;</td><td class="fielddoc"><p>从连接池中取连接失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0febea690c2c61e6e44b39eff7b3e0e4a61454a702ca29f60f09ea881dbdad142"></a>POOL_INVALID_CONNECTION&#160;</td><td class="fielddoc"><p>无效的连接 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="abd4471e47d099baa51d1b149c605e117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4471e47d099baa51d1b149c605e117">&#9670;&nbsp;</a></span>HttpResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylar::http::HttpResult::HttpResult </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">HttpResponse::ptr</a>&#160;</td>
+          <td class="paramname"><em>_response</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_result</td><td>错误码 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_response</td><td>HTTP响应结构体 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_error</td><td>错误描述 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>sylar/http/<a class="el" href="http__connection_8h_source.html">http_connection.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

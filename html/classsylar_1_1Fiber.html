@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sylar: sylar::Fiber类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sylar
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1Fiber.html">Fiber</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classsylar_1_1Fiber-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">sylar::Fiber类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>协程类  
+ <a href="classsylar_1_1Fiber.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fiber_8h_source.html">fiber.h</a>&gt;</code></p>
+<div class="dynheader">
+类 sylar::Fiber 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 -->
+</div>
+</div>
+<div class="dynheader">
+sylar::Fiber 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a4fa17489879111742d2605389f0ef523"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">State</a> { <br />
+&#160;&#160;<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3">INIT</a>, 
+<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8">HOLD</a>, 
+<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d">EXEC</a>, 
+<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092">TERM</a>, 
+<br />
+&#160;&#160;<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049">READY</a>, 
+<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13">EXCEPT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a4fa17489879111742d2605389f0ef523"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程状态  <a href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">更多...</a><br /></td></tr>
+<tr class="separator:a4fa17489879111742d2605389f0ef523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a478fd946ea18814614de2f1ad5c7159e"><td class="memItemLeft" align="right" valign="top"><a id="a478fd946ea18814614de2f1ad5c7159e"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Fiber.html">Fiber</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a478fd946ea18814614de2f1ad5c7159e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a673567c43576189acea7a335927ce847"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a673567c43576189acea7a335927ce847">Fiber</a> (std::function&lt; void()&gt; cb, size_t stacksize=0, bool use_caller=false)</td></tr>
+<tr class="memdesc:a673567c43576189acea7a335927ce847"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1Fiber.html#a673567c43576189acea7a335927ce847">更多...</a><br /></td></tr>
+<tr class="separator:a673567c43576189acea7a335927ce847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9a01682c9290b34a103b4f41a7e0d6"><td class="memItemLeft" align="right" valign="top"><a id="a2e9a01682c9290b34a103b4f41a7e0d6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a2e9a01682c9290b34a103b4f41a7e0d6">~Fiber</a> ()</td></tr>
+<tr class="memdesc:a2e9a01682c9290b34a103b4f41a7e0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a2e9a01682c9290b34a103b4f41a7e0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765bbbf572ffefa9719ef6927472ab89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a765bbbf572ffefa9719ef6927472ab89">reset</a> (std::function&lt; void()&gt; cb)</td></tr>
+<tr class="memdesc:a765bbbf572ffefa9719ef6927472ab89"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置协程执行函数,并设置状态  <a href="classsylar_1_1Fiber.html#a765bbbf572ffefa9719ef6927472ab89">更多...</a><br /></td></tr>
+<tr class="separator:a765bbbf572ffefa9719ef6927472ab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1f61001070d3e14c274e98fd68e6d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a4a1f61001070d3e14c274e98fd68e6d8">swapIn</a> ()</td></tr>
+<tr class="memdesc:a4a1f61001070d3e14c274e98fd68e6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前协程切换到运行状态  <a href="classsylar_1_1Fiber.html#a4a1f61001070d3e14c274e98fd68e6d8">更多...</a><br /></td></tr>
+<tr class="separator:a4a1f61001070d3e14c274e98fd68e6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43585923f39c2230fb529229a6eb6d3b"><td class="memItemLeft" align="right" valign="top"><a id="a43585923f39c2230fb529229a6eb6d3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a43585923f39c2230fb529229a6eb6d3b">swapOut</a> ()</td></tr>
+<tr class="memdesc:a43585923f39c2230fb529229a6eb6d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前协程切换到后台 <br /></td></tr>
+<tr class="separator:a43585923f39c2230fb529229a6eb6d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2abad4fd10a7f9f6e16fd51d044285"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a0e2abad4fd10a7f9f6e16fd51d044285">call</a> ()</td></tr>
+<tr class="memdesc:a0e2abad4fd10a7f9f6e16fd51d044285"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前线程切换到执行状态  <a href="classsylar_1_1Fiber.html#a0e2abad4fd10a7f9f6e16fd51d044285">更多...</a><br /></td></tr>
+<tr class="separator:a0e2abad4fd10a7f9f6e16fd51d044285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f42925ec8f66eafb481ae453df946b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#aa9f42925ec8f66eafb481ae453df946b">back</a> ()</td></tr>
+<tr class="memdesc:aa9f42925ec8f66eafb481ae453df946b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前线程切换到后台  <a href="classsylar_1_1Fiber.html#aa9f42925ec8f66eafb481ae453df946b">更多...</a><br /></td></tr>
+<tr class="separator:aa9f42925ec8f66eafb481ae453df946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a357f571db2dc90eb942e4e7fef62d251"><td class="memItemLeft" align="right" valign="top"><a id="a357f571db2dc90eb942e4e7fef62d251"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a357f571db2dc90eb942e4e7fef62d251">getId</a> () const</td></tr>
+<tr class="memdesc:a357f571db2dc90eb942e4e7fef62d251"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回协程id <br /></td></tr>
+<tr class="separator:a357f571db2dc90eb942e4e7fef62d251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2f1e5ba3a5b94fffa55aa601a22e89"><td class="memItemLeft" align="right" valign="top"><a id="a8b2f1e5ba3a5b94fffa55aa601a22e89"></a>
+<a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89">getState</a> () const</td></tr>
+<tr class="memdesc:a8b2f1e5ba3a5b94fffa55aa601a22e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回协程状态 <br /></td></tr>
+<tr class="separator:a8b2f1e5ba3a5b94fffa55aa601a22e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a235383a38d2877800fb3d65ffae729d0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a235383a38d2877800fb3d65ffae729d0">SetThis</a> (<a class="el" href="classsylar_1_1Fiber.html">Fiber</a> *f)</td></tr>
+<tr class="memdesc:a235383a38d2877800fb3d65ffae729d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前线程的运行协程  <a href="classsylar_1_1Fiber.html#a235383a38d2877800fb3d65ffae729d0">更多...</a><br /></td></tr>
+<tr class="separator:a235383a38d2877800fb3d65ffae729d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac615a161a131e8867fae7b0657d97860"><td class="memItemLeft" align="right" valign="top"><a id="ac615a161a131e8867fae7b0657d97860"></a>
+static Fiber::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#ac615a161a131e8867fae7b0657d97860">GetThis</a> ()</td></tr>
+<tr class="memdesc:ac615a161a131e8867fae7b0657d97860"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前所在的协程 <br /></td></tr>
+<tr class="separator:ac615a161a131e8867fae7b0657d97860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21eedd398e89f4cec66605e3f3c3f1b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a21eedd398e89f4cec66605e3f3c3f1b0">YieldToReady</a> ()</td></tr>
+<tr class="memdesc:a21eedd398e89f4cec66605e3f3c3f1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前协程切换到后台,并设置为READY状态  <a href="classsylar_1_1Fiber.html#a21eedd398e89f4cec66605e3f3c3f1b0">更多...</a><br /></td></tr>
+<tr class="separator:a21eedd398e89f4cec66605e3f3c3f1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b69821a292ae0b2ac1e1fa3f642010"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a09b69821a292ae0b2ac1e1fa3f642010">YieldToHold</a> ()</td></tr>
+<tr class="memdesc:a09b69821a292ae0b2ac1e1fa3f642010"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前协程切换到后台,并设置为HOLD状态  <a href="classsylar_1_1Fiber.html#a09b69821a292ae0b2ac1e1fa3f642010">更多...</a><br /></td></tr>
+<tr class="separator:a09b69821a292ae0b2ac1e1fa3f642010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cba1b5a9976f872378bcbdca5300e7"><td class="memItemLeft" align="right" valign="top"><a id="a17cba1b5a9976f872378bcbdca5300e7"></a>
+static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a17cba1b5a9976f872378bcbdca5300e7">TotalFibers</a> ()</td></tr>
+<tr class="memdesc:a17cba1b5a9976f872378bcbdca5300e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前协程的总数量 <br /></td></tr>
+<tr class="separator:a17cba1b5a9976f872378bcbdca5300e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b5c4e4a8906affd34d1a8a917c99186"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a2b5c4e4a8906affd34d1a8a917c99186">MainFunc</a> ()</td></tr>
+<tr class="memdesc:a2b5c4e4a8906affd34d1a8a917c99186"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程执行函数  <a href="classsylar_1_1Fiber.html#a2b5c4e4a8906affd34d1a8a917c99186">更多...</a><br /></td></tr>
+<tr class="separator:a2b5c4e4a8906affd34d1a8a917c99186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7c87ecf7772fe5baff562357edb764"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#a6b7c87ecf7772fe5baff562357edb764">CallerMainFunc</a> ()</td></tr>
+<tr class="memdesc:a6b7c87ecf7772fe5baff562357edb764"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程执行函数  <a href="classsylar_1_1Fiber.html#a6b7c87ecf7772fe5baff562357edb764">更多...</a><br /></td></tr>
+<tr class="separator:a6b7c87ecf7772fe5baff562357edb764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2856295355a48a29e02726c7f80cef3"><td class="memItemLeft" align="right" valign="top"><a id="aa2856295355a48a29e02726c7f80cef3"></a>
+static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Fiber.html#aa2856295355a48a29e02726c7f80cef3">GetFiberId</a> ()</td></tr>
+<tr class="memdesc:aa2856295355a48a29e02726c7f80cef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前协程的id <br /></td></tr>
+<tr class="separator:aa2856295355a48a29e02726c7f80cef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:afb88c77ea5daaefa6c8fa6bc5b9aa5c1"><td class="memItemLeft" align="right" valign="top"><a id="afb88c77ea5daaefa6c8fa6bc5b9aa5c1"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Scheduler</b></td></tr>
+<tr class="separator:afb88c77ea5daaefa6c8fa6bc5b9aa5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>协程类 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a4fa17489879111742d2605389f0ef523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa17489879111742d2605389f0ef523">&#9670;&nbsp;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classsylar_1_1Fiber.html#a4fa17489879111742d2605389f0ef523">sylar::Fiber::State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>协程状态 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3"></a>INIT&#160;</td><td class="fielddoc"><p>初始化状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8"></a>HOLD&#160;</td><td class="fielddoc"><p>暂停状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d"></a>EXEC&#160;</td><td class="fielddoc"><p>执行中状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092"></a>TERM&#160;</td><td class="fielddoc"><p>结束状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049"></a>READY&#160;</td><td class="fielddoc"><p>可执行状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13"></a>EXCEPT&#160;</td><td class="fielddoc"><p>异常状态 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a673567c43576189acea7a335927ce847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673567c43576189acea7a335927ce847">&#9670;&nbsp;</a></span>Fiber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sylar::Fiber::Fiber </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stacksize</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_caller</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>协程执行的函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stacksize</td><td>协程栈大小 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">use_caller</td><td>是否在MainFiber上调度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa9f42925ec8f66eafb481ae453df946b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f42925ec8f66eafb481ae453df946b">&#9670;&nbsp;</a></span>back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sylar::Fiber::back </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将当前线程切换到后台 </p>
+<dl class="section pre"><dt>前置条件</dt><dd>执行的为该协程 </dd></dl>
+<dl class="section post"><dt>后置条件</dt><dd>返回到线程的主协程 </dd></dl>
+
+</div>
+</div>
+<a id="a0e2abad4fd10a7f9f6e16fd51d044285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e2abad4fd10a7f9f6e16fd51d044285">&#9670;&nbsp;</a></span>call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sylar::Fiber::call </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将当前线程切换到执行状态 </p>
+<dl class="section pre"><dt>前置条件</dt><dd>执行的为当前线程的主协程 </dd></dl>
+
+</div>
+</div>
+<a id="a6b7c87ecf7772fe5baff562357edb764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7c87ecf7772fe5baff562357edb764">&#9670;&nbsp;</a></span>CallerMainFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sylar::Fiber::CallerMainFunc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>协程执行函数 </p>
+<dl class="section post"><dt>后置条件</dt><dd>执行完成返回到线程调度协程 </dd></dl>
+
+</div>
+</div>
+<a id="a2b5c4e4a8906affd34d1a8a917c99186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b5c4e4a8906affd34d1a8a917c99186">&#9670;&nbsp;</a></span>MainFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sylar::Fiber::MainFunc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>协程执行函数 </p>
+<dl class="section post"><dt>后置条件</dt><dd>执行完成返回到线程主协程 </dd></dl>
+
+</div>
+</div>
+<a id="a765bbbf572ffefa9719ef6927472ab89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765bbbf572ffefa9719ef6927472ab89">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sylar::Fiber::reset </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重置协程执行函数,并设置状态 </p>
+<dl class="section pre"><dt>前置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> 为 INIT, TERM, EXCEPT </dd></dl>
+<dl class="section post"><dt>后置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> = INIT </dd></dl>
+
+</div>
+</div>
+<a id="a235383a38d2877800fb3d65ffae729d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235383a38d2877800fb3d65ffae729d0">&#9670;&nbsp;</a></span>SetThis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sylar::Fiber::SetThis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsylar_1_1Fiber.html">Fiber</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置当前线程的运行协程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>运行协程 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a1f61001070d3e14c274e98fd68e6d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1f61001070d3e14c274e98fd68e6d8">&#9670;&nbsp;</a></span>swapIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sylar::Fiber::swapIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将当前协程切换到运行状态 </p>
+<dl class="section pre"><dt>前置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> != EXEC </dd></dl>
+<dl class="section post"><dt>后置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> = EXEC </dd></dl>
+
+</div>
+</div>
+<a id="a09b69821a292ae0b2ac1e1fa3f642010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b69821a292ae0b2ac1e1fa3f642010">&#9670;&nbsp;</a></span>YieldToHold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sylar::Fiber::YieldToHold </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将当前协程切换到后台,并设置为HOLD状态 </p>
+<dl class="section post"><dt>后置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> = HOLD </dd></dl>
+
+</div>
+</div>
+<a id="a21eedd398e89f4cec66605e3f3c3f1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21eedd398e89f4cec66605e3f3c3f1b0">&#9670;&nbsp;</a></span>YieldToReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sylar::Fiber::YieldToReady </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将当前协程切换到后台,并设置为READY状态 </p>
+<dl class="section post"><dt>后置条件</dt><dd><a class="el" href="classsylar_1_1Fiber.html#a8b2f1e5ba3a5b94fffa55aa601a22e89" title="返回协程状态">getState()</a> = READY </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>sylar/<a class="el" href="fiber_8h_source.html">fiber.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

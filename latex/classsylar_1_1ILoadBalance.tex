@@ -1,0 +1,38 @@
+\doxysection{sylar\+::I\+Load\+Balance类 参考}
+\label{classsylar_1_1ILoadBalance}\index{sylar::ILoadBalance@{sylar::ILoadBalance}}
+
+
+类 sylar\+::I\+Load\+Balance 继承关系图\+:
+% FIG 0
+
+
+sylar\+::I\+Load\+Balance 的协作图\+:
+% FIG 1
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ILoadBalance_a1648c1609a2007db7b2a813c915b1e43}} 
+enum {\bfseries Type} \{ {\bfseries R\+O\+U\+N\+D\+R\+O\+B\+IN} = 1, 
+{\bfseries W\+E\+I\+G\+HT} = 2, 
+{\bfseries F\+A\+IR} = 3
+ \}
+\item 
+\mbox{\label{classsylar_1_1ILoadBalance_a57055fc785ca178c45801b52dab36c57}} 
+enum {\bfseries Error} \{ {\bfseries N\+O\+\_\+\+S\+E\+R\+V\+I\+CE} = -\/101, 
+{\bfseries N\+O\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON} = -\/102
+ \}
+\item 
+\mbox{\label{classsylar_1_1ILoadBalance_a55f4642f8cfc71ee1f3faf30221a86ba}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Load\+Balance} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1ILoadBalance_a3468d59e7ffbdacbf128eaae6af4c273}} 
+virtual Load\+Balance\+Item\+::ptr {\bfseries get} (uint64\+\_\+t v=-\/1)=0
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}

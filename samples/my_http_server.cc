@@ -11,6 +11,7 @@ void run() {
         return;
     }
 
+    //true 支持长连接
     sylar::http::HttpServer::ptr http_server(new sylar::http::HttpServer(true, worker.get()));
     //sylar::http::HttpServer::ptr http_server(new sylar::http::HttpServer(true));
     bool ssl = false;
@@ -28,7 +29,8 @@ void run() {
 
 int main(int argc, char** argv) {
     sylar::IOManager iom(1);
-    worker.reset(new sylar::IOManager(4, false));
+    //worker.reset(new sylar::IOManager(4, false));
+    worker.reset(new sylar::IOManager(1, false));
     iom.schedule(run);
     return 0;
 }

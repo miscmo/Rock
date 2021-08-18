@@ -1,0 +1,7 @@
+digraph "sylar::AsyncSocketStreamManager"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{sylar::AsyncSocketStream\lManager\n||+ AsyncSocketStreamManager()\l+ ~AsyncSocketStreamManager()\l+ add()\l+ clear()\l+ setConnection()\l+ get()\l+ getAs()\l+ getConnectCb()\l+ getDisconnectCb()\l+ setConnectCb()\l+ setDisconnectCb()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

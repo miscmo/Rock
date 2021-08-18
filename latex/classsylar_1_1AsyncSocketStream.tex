@@ -1,0 +1,182 @@
+\doxysection{sylar\+::Async\+Socket\+Stream类 参考}
+\label{classsylar_1_1AsyncSocketStream}\index{sylar::AsyncSocketStream@{sylar::AsyncSocketStream}}
+
+
+类 sylar\+::Async\+Socket\+Stream 继承关系图\+:
+% FIG 0
+
+
+sylar\+::Async\+Socket\+Stream 的协作图\+:
+% FIG 1
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Ctx}
+\item 
+struct \textbf{ Send\+Ctx}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a6ff095ff3f1b2377c4ec18ed98034f5f}} 
+enum {\bfseries Error} \{ {\bfseries OK} = 0, 
+{\bfseries T\+I\+M\+E\+O\+UT} = -\/1, 
+{\bfseries I\+O\+\_\+\+E\+R\+R\+OR} = -\/2, 
+{\bfseries N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+CT} = -\/3
+ \}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a17b640080eb2b2d3fd20197214ea3483}} 
+typedef std\+::shared\+\_\+ptr$<$ \textbf{ Async\+Socket\+Stream} $>$ {\bfseries ptr}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_aae44b91bb46c699a55459c28ba96c6ca}} 
+typedef \textbf{ sylar\+::\+R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a1dc20f461ade6b2ca73cc132ab5e0ca8}} 
+typedef std\+::function$<$ bool(Async\+Socket\+Stream\+::ptr)$>$ {\bfseries connect\+\_\+callback}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a5d0d83640f13a49cdbc80b5637dd3f6b}} 
+typedef std\+::function$<$ void(Async\+Socket\+Stream\+::ptr)$>$ {\bfseries disconnect\+\_\+callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a018e7a32a3e1daaba2914743b9a04653}} 
+{\bfseries Async\+Socket\+Stream} (Socket\+::ptr sock, bool owner=true)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a490a26ce8da74f069f6170931de75b19}} 
+virtual bool {\bfseries start} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a2113456ea902ac258022235c3b7874c6}} 
+virtual void \textbf{ close} () override
+\begin{DoxyCompactList}\small\item\em 关闭socket \end{DoxyCompactList}\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a3332485eb4e9c97a5245f8ee67d48e51}} 
+void {\bfseries set\+Worker} (\textbf{ sylar\+::\+I\+O\+Manager} $\ast$v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ab01c64c4ac8bf097f7b027995d92f76e}} 
+\textbf{ sylar\+::\+I\+O\+Manager} $\ast$ {\bfseries get\+Worker} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a00ff261aa884ecab90df99642e9c96c0}} 
+void {\bfseries set\+I\+O\+Manager} (\textbf{ sylar\+::\+I\+O\+Manager} $\ast$v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a11e7d82607bbc417754e36dee3c87237}} 
+\textbf{ sylar\+::\+I\+O\+Manager} $\ast$ {\bfseries get\+I\+O\+Manager} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a687630130e1efc278ba30b7eb0892584}} 
+bool {\bfseries is\+Auto\+Connect} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a575329fa693222c33bceccb8c71f5f35}} 
+void {\bfseries set\+Auto\+Connect} (bool v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a3be5dd46403f7b2e8c520277e075e4e2}} 
+connect\+\_\+callback {\bfseries get\+Connect\+Cb} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a940e35035732538ea2d9b6742a414113}} 
+disconnect\+\_\+callback {\bfseries get\+Disconnect\+Cb} () const
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_adad5d9e267f9ee29f7c662272362b993}} 
+void {\bfseries set\+Connect\+Cb} (connect\+\_\+callback v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a01e35c08119e2d3789f48c914d350795}} 
+void {\bfseries set\+Disconnect\+Cb} (disconnect\+\_\+callback v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ac3d81803012f4e50639af4e0a7558775}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries set\+Data} (const T \&v)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a3dcf1564eed12eaf45f0ffb00ad8f9eb}} 
+{\footnotesize template$<$class T $>$ }\\T {\bfseries get\+Data} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a9a49815f97bb7d8290ae3861ff935ed6}} 
+virtual void {\bfseries do\+Read} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a4b8836312d68b4b44271fe95d701f827}} 
+virtual void {\bfseries do\+Write} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ac99f371cd63d30811cf051fa22bc8630}} 
+virtual void {\bfseries start\+Read} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a12377bfa8994332fb67225a379ee3be9}} 
+virtual void {\bfseries start\+Write} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_aed84e01f00abfdc5680152ebddb60e2c}} 
+virtual void {\bfseries on\+Time\+Out} (Ctx\+::ptr ctx)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a8be8dbd1f96adbbeb3d57c10bfbd1cb8}} 
+virtual Ctx\+::ptr {\bfseries do\+Recv} ()=0
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ab99d7e4a7443eb536df0e02b977fb5e8}} 
+Ctx\+::ptr {\bfseries get\+Ctx} (uint32\+\_\+t sn)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ad102dff38e70b9f1f7a352acea008be9}} 
+Ctx\+::ptr {\bfseries get\+And\+Del\+Ctx} (uint32\+\_\+t sn)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a7e458f6a9b6247c1a4d1d39627199d9d}} 
+{\footnotesize template$<$class T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get\+Ctx\+As} (uint32\+\_\+t sn)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_afd4507a0564933f4173e987bb41a1e3b}} 
+{\footnotesize template$<$class T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get\+And\+Del\+Ctx\+As} (uint32\+\_\+t sn)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a18453dabacae674893bce18472ee3260}} 
+bool {\bfseries add\+Ctx} (Ctx\+::ptr ctx)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a78ad7c2e2fe53a685396cc7adfa79995}} 
+bool {\bfseries enqueue} (Send\+Ctx\+::ptr ctx)
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a49573aa476e713fdfe038fd5f1edc8e0}} 
+bool {\bfseries inner\+Close} ()
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a579c6e86eff9e95799996d989fdde311}} 
+bool {\bfseries wait\+Fiber} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a153bbaf75db8fcdd7556c5fb409128e6}} 
+\textbf{ sylar\+::\+Fiber\+Semaphore} {\bfseries m\+\_\+sem}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a8afd8b1a3def701c9c36904f7970410b}} 
+\textbf{ sylar\+::\+Fiber\+Semaphore} {\bfseries m\+\_\+wait\+Sem}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a43334f7432e2e833189e9336a95bd34b}} 
+\textbf{ R\+W\+Mutex\+Type} {\bfseries m\+\_\+queue\+Mutex}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ac2e330d38a4cf74175867a0e3e11dc90}} 
+std\+::list$<$ Send\+Ctx\+::ptr $>$ {\bfseries m\+\_\+queue}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a29d5fa31596ca259d921888309776546}} 
+\textbf{ R\+W\+Mutex\+Type} {\bfseries m\+\_\+mutex}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a7be28b47da6026de966104fc1fffe600}} 
+std\+::unordered\+\_\+map$<$ uint32\+\_\+t, Ctx\+::ptr $>$ {\bfseries m\+\_\+ctxs}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a3472b13ce813c9aa2855ceca2d24ff2c}} 
+uint32\+\_\+t {\bfseries m\+\_\+sn}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ac7aee40e124a7792ee524d8605646de9}} 
+bool {\bfseries m\+\_\+auto\+Connect}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a3f929747af09390f08052343a2415e9e}} 
+\textbf{ sylar\+::\+Timer\+::ptr} {\bfseries m\+\_\+timer}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a6f5688bb418dd829d01d972cdb12c007}} 
+\textbf{ sylar\+::\+I\+O\+Manager} $\ast$ {\bfseries m\+\_\+iomanager}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a8feb7ecc817164611bf398adef4732dc}} 
+\textbf{ sylar\+::\+I\+O\+Manager} $\ast$ {\bfseries m\+\_\+worker}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_aa06dabea082f4f5d1b5d897b71ed276b}} 
+connect\+\_\+callback {\bfseries m\+\_\+connect\+Cb}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_a92d79e081fa9d67aab3fda8e01a215ee}} 
+disconnect\+\_\+callback {\bfseries m\+\_\+disconnect\+Cb}
+\item 
+\mbox{\label{classsylar_1_1AsyncSocketStream_ace35164cb1e999b89fc2e37fa97b6fac}} 
+boost\+::any {\bfseries m\+\_\+data}
+\end{DoxyCompactItemize}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+sylar/streams/async\+\_\+socket\+\_\+stream.\+h\end{DoxyCompactItemize}
