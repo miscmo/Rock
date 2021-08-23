@@ -1,12 +1,12 @@
-#ifndef __SYLAR_EMAIL_EMAIL_H__
-#define __SYLAR_EMAIL_EMAIL_H__
+#ifndef __ROCK_EMAIL_EMAIL_H__
+#define __ROCK_EMAIL_EMAIL_H__
 
 #include <memory>
 #include <string>
 #include <vector>
 #include <map>
 
-namespace sylar {
+namespace rock {
 
 class EMailEntity {
 public:

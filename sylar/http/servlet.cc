@@ -1,7 +1,7 @@
 #include "servlet.h"
 #include <fnmatch.h>
 
-namespace sylar {
+namespace rock {
 namespace http {
 
 FunctionServlet::FunctionServlet(callback cb)
@@ -9,9 +9,9 @@ FunctionServlet::FunctionServlet(callback cb)
     ,m_cb(cb) {
 }
 
-int32_t FunctionServlet::handle(sylar::http::HttpRequest::ptr request
-               , sylar::http::HttpResponse::ptr response
-               , sylar::http::HttpSession::ptr session) {
+int32_t FunctionServlet::handle(rock::http::HttpRequest::ptr request
+               , rock::http::HttpResponse::ptr response
+               , rock::http::HttpSession::ptr session) {
     return m_cb(request, response, session);
 }
 
@@ -19,12 +19,12 @@ int32_t FunctionServlet::handle(sylar::http::HttpRequest::ptr request
 
 ServletDispatch::ServletDispatch()
     :Servlet("ServletDispatch") {
-    m_default.reset(new NotFoundServlet("sylar/1.0"));
+    m_default.reset(new NotFoundServlet("rock/1.0"));
 }
 
-int32_t ServletDispatch::handle(sylar::http::HttpRequest::ptr request
-               , sylar::http::HttpResponse::ptr response
-               , sylar::http::HttpSession::ptr session) {
+int32_t ServletDispatch::handle(rock::http::HttpRequest::ptr request
+               , rock::http::HttpResponse::ptr response
+               , rock::http::HttpSession::ptr session) {
     auto slt = getMatchedServlet(request->getPath());
     if(slt) {
         slt->handle(request, response, session);
@@ -151,11 +151,11 @@ NotFoundServlet::NotFoundServlet(const std::string& name)
 
 }
 
-int32_t NotFoundServlet::handle(sylar::http::HttpRequest::ptr request
-                   , sylar::http::HttpResponse::ptr response
-                   , sylar::http::HttpSession::ptr session) {
-    response->setStatus(sylar::http::HttpStatus::NOT_FOUND);
-    response->setHeader("Server", "sylar/1.0.0");
+int32_t NotFoundServlet::handle(rock::http::HttpRequest::ptr request
+                   , rock::http::HttpResponse::ptr response
+                   , rock::http::HttpSession::ptr session) {
+    response->setStatus(rock::http::HttpStatus::NOT_FOUND);
+    response->setHeader("Server", "rock/1.0.0");
     response->setHeader("Content-Type", "text/html");
     response->setBody(m_content);
     return 0;

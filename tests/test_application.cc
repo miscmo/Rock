@@ -1,7 +1,7 @@
-#include "sylar/application.h"
+#include "rock/application.h"
 
 int main(int argc, char** argv) {
-    sylar::Application app;
+    rock::Application app;
     if(app.init(argc, argv)) {
         return app.run();
     }

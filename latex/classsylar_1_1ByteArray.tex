@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Byte\+Array类 参考}
-\label{classsylar_1_1ByteArray}\index{sylar::ByteArray@{sylar::ByteArray}}
+\doxysection{rock\+::Byte\+Array类 参考}
+\label{classrock_1_1ByteArray}\index{rock::ByteArray@{rock::ByteArray}}
 
 
 二进制数组,提供基础类型的序列化,反序列化功能  
@@ -11,7 +11,7 @@
 
 
 
-sylar\+::Byte\+Array 的协作图\+:
+rock\+::Byte\+Array 的协作图\+:
 % FIG 0
 \doxysubsection*{类}
 \begin{DoxyCompactItemize}
@@ -21,7 +21,7 @@ struct \textbf{ Node}
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ByteArray_a0d8e5d83fb4401d9d603387675e18d6b}} 
+\mbox{\label{classrock_1_1ByteArray_a0d8e5d83fb4401d9d603387675e18d6b}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Byte\+Array} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -29,7 +29,7 @@ typedef std\+::shared\+\_\+ptr$<$ \textbf{ Byte\+Array} $>$ {\bfseries ptr}
 \item 
 \textbf{ Byte\+Array} (size\+\_\+t base\+\_\+size=4096)
 \begin{DoxyCompactList}\small\item\em 使用指定长度的内存块构造\+Byte\+Array \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a1ec2060607924eb789ebd175b26f3434}} 
+\mbox{\label{classrock_1_1ByteArray_a1ec2060607924eb789ebd175b26f3434}} 
 \textbf{ $\sim$\+Byte\+Array} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
 void \textbf{ write\+Fint8} (int8\+\_\+t value)
@@ -114,7 +114,7 @@ void \textbf{ read} (void $\ast$buf, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em 读取size长度的数据 \end{DoxyCompactList}\item 
 void \textbf{ read} (void $\ast$buf, size\+\_\+t size, size\+\_\+t position) const
 \begin{DoxyCompactList}\small\item\em 读取size长度的数据 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_aeff49fd6b1de6290aae8f415240addfe}} 
+\mbox{\label{classrock_1_1ByteArray_aeff49fd6b1de6290aae8f415240addfe}} 
 size\+\_\+t \textbf{ get\+Position} () const
 \begin{DoxyCompactList}\small\item\em 返回\+Byte\+Array当前位置 \end{DoxyCompactList}\item 
 void \textbf{ set\+Position} (size\+\_\+t v)
@@ -123,22 +123,22 @@ bool \textbf{ write\+To\+File} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em 把\+Byte\+Array的数据写入到文件中 \end{DoxyCompactList}\item 
 bool \textbf{ read\+From\+File} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em 从文件中读取数据 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a1cabe193f62faf4f73477e20b59531ea}} 
+\mbox{\label{classrock_1_1ByteArray_a1cabe193f62faf4f73477e20b59531ea}} 
 size\+\_\+t \textbf{ get\+Base\+Size} () const
 \begin{DoxyCompactList}\small\item\em 返回内存块的大小 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc}} 
+\mbox{\label{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc}} 
 size\+\_\+t \textbf{ get\+Read\+Size} () const
 \begin{DoxyCompactList}\small\item\em 返回可读取数据大小 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a72909157855595c883ac325a96289f28}} 
+\mbox{\label{classrock_1_1ByteArray_a72909157855595c883ac325a96289f28}} 
 bool \textbf{ is\+Little\+Endian} () const
 \begin{DoxyCompactList}\small\item\em 是否是小端 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a2324a31cd48c64daae5303e3f1489169}} 
+\mbox{\label{classrock_1_1ByteArray_a2324a31cd48c64daae5303e3f1489169}} 
 void \textbf{ set\+Is\+Little\+Endian} (bool val)
 \begin{DoxyCompactList}\small\item\em 设置是否为小端 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a60b2558f247c672a7dd347011cc72125}} 
+\mbox{\label{classrock_1_1ByteArray_a60b2558f247c672a7dd347011cc72125}} 
 std\+::string \textbf{ to\+String} () const
 \begin{DoxyCompactList}\small\item\em 将\+Byte\+Array里面的数据[m\+\_\+position, m\+\_\+size)转成std\+::string \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a9de014ee29513f5f69661ba42580144c}} 
+\mbox{\label{classrock_1_1ByteArray_a9de014ee29513f5f69661ba42580144c}} 
 std\+::string \textbf{ to\+Hex\+String} () const
 \begin{DoxyCompactList}\small\item\em 将\+Byte\+Array里面的数据[m\+\_\+position, m\+\_\+size)转成16进制的std\+::string(格式\+:FF FF FF) \end{DoxyCompactList}\item 
 uint64\+\_\+t \textbf{ get\+Read\+Buffers} (std\+::vector$<$ iovec $>$ \&buffers, uint64\+\_\+t len=$\sim$0ull) const
@@ -147,7 +147,7 @@ uint64\+\_\+t \textbf{ get\+Read\+Buffers} (std\+::vector$<$ iovec $>$ \&buffers
 \begin{DoxyCompactList}\small\item\em 获取可读取的缓存,保存成iovec数组,从position位置开始 \end{DoxyCompactList}\item 
 uint64\+\_\+t \textbf{ get\+Write\+Buffers} (std\+::vector$<$ iovec $>$ \&buffers, uint64\+\_\+t len)
 \begin{DoxyCompactList}\small\item\em 获取可写入的缓存,保存成iovec数组 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ByteArray_a8a40496dc6ca7003fe38b550040e83a1}} 
+\mbox{\label{classrock_1_1ByteArray_a8a40496dc6ca7003fe38b550040e83a1}} 
 size\+\_\+t \textbf{ get\+Size} () const
 \begin{DoxyCompactList}\small\item\em 返回数据的长度 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -156,11 +156,11 @@ size\+\_\+t \textbf{ get\+Size} () const
 二进制数组,提供基础类型的序列化,反序列化功能 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1ByteArray_a6e9f2eff57c380de87fce2d77a476b55}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!ByteArray@{ByteArray}}
-\index{ByteArray@{ByteArray}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a6e9f2eff57c380de87fce2d77a476b55}} 
+\index{rock::ByteArray@{rock::ByteArray}!ByteArray@{ByteArray}}
+\index{ByteArray@{ByteArray}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{ByteArray()}
-{\footnotesize\ttfamily sylar\+::\+Byte\+Array\+::\+Byte\+Array (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{base\+\_\+size = {\ttfamily 4096} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Byte\+Array\+::\+Byte\+Array (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{base\+\_\+size = {\ttfamily 4096} }\end{DoxyParamCaption})}
 
 
 
@@ -174,11 +174,11 @@ size\+\_\+t \textbf{ get\+Size} () const
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1ByteArray_a07b992fccef82f943b9febdf7278bb10}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!clear@{clear}}
-\index{clear@{clear}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a07b992fccef82f943b9febdf7278bb10}} 
+\index{rock::ByteArray@{rock::ByteArray}!clear@{clear}}
+\index{clear@{clear}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{clear()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -187,11 +187,11 @@ size\+\_\+t \textbf{ get\+Size} () const
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position = 0, m\+\_\+size = 0 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_adb2680f698882e9a5b8ef626366b7b86}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!getReadBuffers@{getReadBuffers}}
-\index{getReadBuffers@{getReadBuffers}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_adb2680f698882e9a5b8ef626366b7b86}} 
+\index{rock::ByteArray@{rock::ByteArray}!getReadBuffers@{getReadBuffers}}
+\index{getReadBuffers@{getReadBuffers}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{getReadBuffers()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Byte\+Array\+::get\+Read\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len,  }\item[{uint64\+\_\+t}]{position }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily uint64\+\_\+t rock\+::\+Byte\+Array\+::get\+Read\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len,  }\item[{uint64\+\_\+t}]{position }\end{DoxyParamCaption}) const}
 
 
 
@@ -201,7 +201,7 @@ m\+\_\+position = 0, m\+\_\+size = 0
 \begin{DoxyParams}[1]{参数}
 \mbox{\texttt{ out}}  & {\em buffers} & 保存可读取数据的iovec数组 \\
 \hline
-\mbox{\texttt{ in}}  & {\em len} & 读取数据的长度,如果len $>$ \doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} 则 len = \doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} \\
+\mbox{\texttt{ in}}  & {\em len} & 读取数据的长度,如果len $>$ \doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} 则 len = \doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} \\
 \hline
 \mbox{\texttt{ in}}  & {\em position} & 读取数据的位置 \\
 \hline
@@ -209,11 +209,11 @@ m\+\_\+position = 0, m\+\_\+size = 0
 \begin{DoxyReturn}{返回}
 返回实际数据的长度 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1ByteArray_a7773dd5bfed1291c4ee9ea46f3af810a}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!getReadBuffers@{getReadBuffers}}
-\index{getReadBuffers@{getReadBuffers}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a7773dd5bfed1291c4ee9ea46f3af810a}} 
+\index{rock::ByteArray@{rock::ByteArray}!getReadBuffers@{getReadBuffers}}
+\index{getReadBuffers@{getReadBuffers}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{getReadBuffers()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Byte\+Array\+::get\+Read\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len = {\ttfamily $\sim$0ull} }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily uint64\+\_\+t rock\+::\+Byte\+Array\+::get\+Read\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len = {\ttfamily $\sim$0ull} }\end{DoxyParamCaption}) const}
 
 
 
@@ -223,17 +223,17 @@ m\+\_\+position = 0, m\+\_\+size = 0
 \begin{DoxyParams}[1]{参数}
 \mbox{\texttt{ out}}  & {\em buffers} & 保存可读取数据的iovec数组 \\
 \hline
-\mbox{\texttt{ in}}  & {\em len} & 读取数据的长度,如果len $>$ \doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} 则 len = \doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} \\
+\mbox{\texttt{ in}}  & {\em len} & 读取数据的长度,如果len $>$ \doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} 则 len = \doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{返回}
 返回实际数据的长度 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1ByteArray_ac495e047c897835df11ff5076c5b7784}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!getWriteBuffers@{getWriteBuffers}}
-\index{getWriteBuffers@{getWriteBuffers}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ac495e047c897835df11ff5076c5b7784}} 
+\index{rock::ByteArray@{rock::ByteArray}!getWriteBuffers@{getWriteBuffers}}
+\index{getWriteBuffers@{getWriteBuffers}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{getWriteBuffers()}
-{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Byte\+Array\+::get\+Write\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint64\+\_\+t rock\+::\+Byte\+Array\+::get\+Write\+Buffers (\begin{DoxyParamCaption}\item[{std\+::vector$<$ iovec $>$ \&}]{buffers,  }\item[{uint64\+\_\+t}]{len }\end{DoxyParamCaption})}
 
 
 
@@ -252,11 +252,11 @@ m\+\_\+position = 0, m\+\_\+size = 0
 \begin{DoxyPostcond}{后置条件}
 如果(m\+\_\+position + len) $>$ m\+\_\+capacity 则 m\+\_\+capacity扩容\+N个节点以容纳len长度 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_add0a86b9e7ac29fe11e9a9efc3f25699}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!read@{read}}
-\index{read@{read}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_add0a86b9e7ac29fe11e9a9efc3f25699}} 
+\index{rock::ByteArray@{rock::ByteArray}!read@{read}}
+\index{read@{read}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -277,11 +277,11 @@ m\+\_\+position += size, 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size =
 {\em 如果get\+Read\+Size()} & $<$ size 则抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a38a0cd59b9a1033c7b867f73ec15d8b8}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!read@{read}}
-\index{read@{read}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a38a0cd59b9a1033c7b867f73ec15d8b8}} 
+\index{rock::ByteArray@{rock::ByteArray}!read@{read}}
+\index{read@{read}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{position }\end{DoxyParamCaption}) const}
 
 
 
@@ -301,18 +301,18 @@ m\+\_\+position += size, 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size =
 {\em 如果} & (m\+\_\+size -\/ position) $<$ size 则抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a85af590a2c12c7fbafad23d3407cf439}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readDouble@{readDouble}}
-\index{readDouble@{readDouble}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a85af590a2c12c7fbafad23d3407cf439}} 
+\index{rock::ByteArray@{rock::ByteArray}!readDouble@{readDouble}}
+\index{readDouble@{readDouble}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readDouble()}
-{\footnotesize\ttfamily double sylar\+::\+Byte\+Array\+::read\+Double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double rock\+::\+Byte\+Array\+::read\+Double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取double类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(double) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(double) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(double); 
@@ -322,18 +322,18 @@ m\+\_\+position += sizeof(double);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(double) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_ad3aa462204995a1cb187aaf159a2f7c1}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFint16@{readFint16}}
-\index{readFint16@{readFint16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ad3aa462204995a1cb187aaf159a2f7c1}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFint16@{readFint16}}
+\index{readFint16@{readFint16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFint16()}
-{\footnotesize\ttfamily int16\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fint16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int16\+\_\+t rock\+::\+Byte\+Array\+::read\+Fint16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取int16\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int16\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int16\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(int16\+\_\+t); 
@@ -343,18 +343,18 @@ m\+\_\+position += sizeof(int16\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(int16\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_ad01577de6b457b3347774d5de522665d}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFint32@{readFint32}}
-\index{readFint32@{readFint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ad01577de6b457b3347774d5de522665d}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFint32@{readFint32}}
+\index{readFint32@{readFint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFint32()}
-{\footnotesize\ttfamily int32\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int32\+\_\+t rock\+::\+Byte\+Array\+::read\+Fint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取int32\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int32\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int32\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(int32\+\_\+t); 
@@ -364,18 +364,18 @@ m\+\_\+position += sizeof(int32\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(int32\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_aa5ec3be135f05933d941da9880446465}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFint64@{readFint64}}
-\index{readFint64@{readFint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa5ec3be135f05933d941da9880446465}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFint64@{readFint64}}
+\index{readFint64@{readFint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFint64()}
-{\footnotesize\ttfamily int64\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int64\+\_\+t rock\+::\+Byte\+Array\+::read\+Fint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取int64\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int64\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int64\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(int64\+\_\+t); 
@@ -385,18 +385,18 @@ m\+\_\+position += sizeof(int64\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(int64\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a9befc74454614840e5889744c87f5346}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFint8@{readFint8}}
-\index{readFint8@{readFint8}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a9befc74454614840e5889744c87f5346}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFint8@{readFint8}}
+\index{readFint8@{readFint8}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFint8()}
-{\footnotesize\ttfamily int8\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fint8 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int8\+\_\+t rock\+::\+Byte\+Array\+::read\+Fint8 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取int8\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int8\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(int8\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(int8\+\_\+t); 
@@ -406,18 +406,18 @@ m\+\_\+position += sizeof(int8\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(int8\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a98b32f743e684a4fa900a17dabae3929}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFloat@{readFloat}}
-\index{readFloat@{readFloat}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a98b32f743e684a4fa900a17dabae3929}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFloat@{readFloat}}
+\index{readFloat@{readFloat}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFloat()}
-{\footnotesize\ttfamily float sylar\+::\+Byte\+Array\+::read\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float rock\+::\+Byte\+Array\+::read\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取float类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(float) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(float) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(float); 
@@ -427,11 +427,11 @@ m\+\_\+position += sizeof(float);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(float) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a0b369c280a2556bd1548421279b279ac}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFromFile@{readFromFile}}
-\index{readFromFile@{readFromFile}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a0b369c280a2556bd1548421279b279ac}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFromFile()}
-{\footnotesize\ttfamily bool sylar\+::\+Byte\+Array\+::read\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool rock\+::\+Byte\+Array\+::read\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
 
 
 
@@ -442,18 +442,18 @@ m\+\_\+position += sizeof(float);
 \mbox{\texttt{ in}}  & {\em name} & 文件名 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1ByteArray_a803580ac0dc43e428be8a629b5e01307}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFuint16@{readFuint16}}
-\index{readFuint16@{readFuint16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a803580ac0dc43e428be8a629b5e01307}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFuint16@{readFuint16}}
+\index{readFuint16@{readFuint16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFuint16()}
-{\footnotesize\ttfamily uint16\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fuint16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint16\+\_\+t rock\+::\+Byte\+Array\+::read\+Fuint16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取uint16\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint16\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint16\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint16\+\_\+t); 
@@ -463,18 +463,18 @@ m\+\_\+position += sizeof(uint16\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint16\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a65bb6d59d13e234a2ad2e786482f1ee1}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFuint32@{readFuint32}}
-\index{readFuint32@{readFuint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a65bb6d59d13e234a2ad2e786482f1ee1}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFuint32@{readFuint32}}
+\index{readFuint32@{readFuint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFuint32()}
-{\footnotesize\ttfamily uint32\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fuint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint32\+\_\+t rock\+::\+Byte\+Array\+::read\+Fuint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取uint32\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint32\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint32\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint32\+\_\+t); 
@@ -484,18 +484,18 @@ m\+\_\+position += sizeof(uint32\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint32\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_aa9652f213ed9f4ffd1965fbdc444a9d9}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFuint64@{readFuint64}}
-\index{readFuint64@{readFuint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa9652f213ed9f4ffd1965fbdc444a9d9}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFuint64@{readFuint64}}
+\index{readFuint64@{readFuint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFuint64()}
-{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fuint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint64\+\_\+t rock\+::\+Byte\+Array\+::read\+Fuint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取uint64\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint64\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint64\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint64\+\_\+t); 
@@ -505,18 +505,18 @@ m\+\_\+position += sizeof(uint64\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint64\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_aa68fb27eef571c42e4dabdc1331a59d6}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readFuint8@{readFuint8}}
-\index{readFuint8@{readFuint8}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa68fb27eef571c42e4dabdc1331a59d6}} 
+\index{rock::ByteArray@{rock::ByteArray}!readFuint8@{readFuint8}}
+\index{readFuint8@{readFuint8}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readFuint8()}
-{\footnotesize\ttfamily uint8\+\_\+t sylar\+::\+Byte\+Array\+::read\+Fuint8 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint8\+\_\+t rock\+::\+Byte\+Array\+::read\+Fuint8 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取uint8\+\_\+t类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint8\+\_\+t) 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint8\+\_\+t) 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint8\+\_\+t); 
@@ -526,18 +526,18 @@ m\+\_\+position += sizeof(uint8\+\_\+t);
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint8\+\_\+t) 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a030c9f1b23065ca5f9351e21a0bdff78}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readInt32@{readInt32}}
-\index{readInt32@{readInt32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a030c9f1b23065ca5f9351e21a0bdff78}} 
+\index{rock::ByteArray@{rock::ByteArray}!readInt32@{readInt32}}
+\index{readInt32@{readInt32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readInt32()}
-{\footnotesize\ttfamily int32\+\_\+t sylar\+::\+Byte\+Array\+::read\+Int32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int32\+\_\+t rock\+::\+Byte\+Array\+::read\+Int32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取有符号\+Varint32类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 有符号\+Varint32实际占用内存 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 有符号\+Varint32实际占用内存 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 有符号\+Varint32实际占用内存 
@@ -547,18 +547,18 @@ m\+\_\+position += 有符号\+Varint32实际占用内存
 {\em 如果get\+Read\+Size()} & $<$ 有符号\+Varint32实际占用内存 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_aad44ea46e4077a1b8cc137602361bdb4}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readInt64@{readInt64}}
-\index{readInt64@{readInt64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aad44ea46e4077a1b8cc137602361bdb4}} 
+\index{rock::ByteArray@{rock::ByteArray}!readInt64@{readInt64}}
+\index{readInt64@{readInt64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readInt64()}
-{\footnotesize\ttfamily int64\+\_\+t sylar\+::\+Byte\+Array\+::read\+Int64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int64\+\_\+t rock\+::\+Byte\+Array\+::read\+Int64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取有符号\+Varint64类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 有符号\+Varint64实际占用内存 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 有符号\+Varint64实际占用内存 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 有符号\+Varint64实际占用内存 
@@ -568,18 +568,18 @@ m\+\_\+position += 有符号\+Varint64实际占用内存
 {\em 如果get\+Read\+Size()} & $<$ 有符号\+Varint64实际占用内存 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a8c44f61faf3b192d39ef4d4331902d14}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readStringF16@{readStringF16}}
-\index{readStringF16@{readStringF16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a8c44f61faf3b192d39ef4d4331902d14}} 
+\index{rock::ByteArray@{rock::ByteArray}!readStringF16@{readStringF16}}
+\index{readStringF16@{readStringF16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readStringF16()}
-{\footnotesize\ttfamily std\+::string sylar\+::\+Byte\+Array\+::read\+String\+F16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string rock\+::\+Byte\+Array\+::read\+String\+F16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取std\+::string类型的数据,用uint16\+\_\+t作为长度 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint16\+\_\+t) + size 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint16\+\_\+t) + size 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint16\+\_\+t) + size; 
@@ -589,18 +589,18 @@ m\+\_\+position += sizeof(uint16\+\_\+t) + size;
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint16\+\_\+t) + size 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_ac0fc1540691b295d4ebb8088230b74f7}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readStringF32@{readStringF32}}
-\index{readStringF32@{readStringF32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ac0fc1540691b295d4ebb8088230b74f7}} 
+\index{rock::ByteArray@{rock::ByteArray}!readStringF32@{readStringF32}}
+\index{readStringF32@{readStringF32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readStringF32()}
-{\footnotesize\ttfamily std\+::string sylar\+::\+Byte\+Array\+::read\+String\+F32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string rock\+::\+Byte\+Array\+::read\+String\+F32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取std\+::string类型的数据,用uint32\+\_\+t作为长度 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint32\+\_\+t) + size 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint32\+\_\+t) + size 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint32\+\_\+t) + size; 
@@ -610,18 +610,18 @@ m\+\_\+position += sizeof(uint32\+\_\+t) + size;
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint32\+\_\+t) + size 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a6a79587d66588fd3f009abbb5fc58df5}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readStringF64@{readStringF64}}
-\index{readStringF64@{readStringF64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a6a79587d66588fd3f009abbb5fc58df5}} 
+\index{rock::ByteArray@{rock::ByteArray}!readStringF64@{readStringF64}}
+\index{readStringF64@{readStringF64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readStringF64()}
-{\footnotesize\ttfamily std\+::string sylar\+::\+Byte\+Array\+::read\+String\+F64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string rock\+::\+Byte\+Array\+::read\+String\+F64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取std\+::string类型的数据,用uint64\+\_\+t作为长度 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint64\+\_\+t) + size 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= sizeof(uint64\+\_\+t) + size 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(uint64\+\_\+t) + size; 
@@ -631,18 +631,18 @@ m\+\_\+position += sizeof(uint64\+\_\+t) + size;
 {\em 如果get\+Read\+Size()} & $<$ sizeof(uint64\+\_\+t) + size 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a29b314000d17f5727b811ddce8abacbc}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readStringVint@{readStringVint}}
-\index{readStringVint@{readStringVint}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a29b314000d17f5727b811ddce8abacbc}} 
+\index{rock::ByteArray@{rock::ByteArray}!readStringVint@{readStringVint}}
+\index{readStringVint@{readStringVint}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readStringVint()}
-{\footnotesize\ttfamily std\+::string sylar\+::\+Byte\+Array\+::read\+String\+Vint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string rock\+::\+Byte\+Array\+::read\+String\+Vint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取std\+::string类型的数据,用无符号\+Varint64作为长度 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint64实际大小 + size 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint64实际大小 + size 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 无符号\+Varint64实际大小 + size; 
@@ -652,18 +652,18 @@ m\+\_\+position += 无符号\+Varint64实际大小 + size;
 {\em 如果get\+Read\+Size()} & $<$ 无符号\+Varint64实际大小 + size 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a7dc598ec63e41422c62cc28fc06eeee5}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readUint32@{readUint32}}
-\index{readUint32@{readUint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a7dc598ec63e41422c62cc28fc06eeee5}} 
+\index{rock::ByteArray@{rock::ByteArray}!readUint32@{readUint32}}
+\index{readUint32@{readUint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readUint32()}
-{\footnotesize\ttfamily uint32\+\_\+t sylar\+::\+Byte\+Array\+::read\+Uint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint32\+\_\+t rock\+::\+Byte\+Array\+::read\+Uint32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取无符号\+Varint32类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint32实际占用内存 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint32实际占用内存 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 无符号\+Varint32实际占用内存 
@@ -673,18 +673,18 @@ m\+\_\+position += 无符号\+Varint32实际占用内存
 {\em 如果get\+Read\+Size()} & $<$ 无符号\+Varint32实际占用内存 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a7c45e91cbb1761b66ca9d9f6a788ac30}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!readUint64@{readUint64}}
-\index{readUint64@{readUint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a7c45e91cbb1761b66ca9d9f6a788ac30}} 
+\index{rock::ByteArray@{rock::ByteArray}!readUint64@{readUint64}}
+\index{readUint64@{readUint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{readUint64()}
-{\footnotesize\ttfamily uint64\+\_\+t sylar\+::\+Byte\+Array\+::read\+Uint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint64\+\_\+t rock\+::\+Byte\+Array\+::read\+Uint64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 读取无符号\+Varint64类型的数据 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+Read\+Size()}{p.}{classsylar_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint64实际占用内存 
+\doxyref{get\+Read\+Size()}{p.}{classrock_1_1ByteArray_a763d792f91cfd84072692ac0cdef8efc} $>$= 无符号\+Varint64实际占用内存 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 无符号\+Varint64实际占用内存 
@@ -694,11 +694,11 @@ m\+\_\+position += 无符号\+Varint64实际占用内存
 {\em 如果get\+Read\+Size()} & $<$ 无符号\+Varint64实际占用内存 抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_a07785726c95061127c7b294ab528f275}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!setPosition@{setPosition}}
-\index{setPosition@{setPosition}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a07785726c95061127c7b294ab528f275}} 
+\index{rock::ByteArray@{rock::ByteArray}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{setPosition()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::set\+Position (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{v }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::set\+Position (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{v }\end{DoxyParamCaption})}
 
 
 
@@ -712,11 +712,11 @@ m\+\_\+position += 无符号\+Varint64实际占用内存
 {\em 如果m\+\_\+position} & $>$ m\+\_\+capacity 则抛出 std\+::out\+\_\+of\+\_\+range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1ByteArray_aa02ff9c7ab29ee312e3ad8043acf28dc}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!write@{write}}
-\index{write@{write}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa02ff9c7ab29ee312e3ad8043acf28dc}} 
+\index{rock::ByteArray@{rock::ByteArray}!write@{write}}
+\index{write@{write}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{write()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
 
 
@@ -732,11 +732,11 @@ m\+\_\+position += 无符号\+Varint64实际占用内存
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += size, 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_acf2456f48a48546166822553f348c4e4}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeDouble@{writeDouble}}
-\index{writeDouble@{writeDouble}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_acf2456f48a48546166822553f348c4e4}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeDouble@{writeDouble}}
+\index{writeDouble@{writeDouble}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeDouble()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Double (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Double (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -745,11 +745,11 @@ m\+\_\+position += size, 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size =
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a6b0631d8278da20c9b69e65b03a87715}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFint16@{writeFint16}}
-\index{writeFint16@{writeFint16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a6b0631d8278da20c9b69e65b03a87715}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFint16@{writeFint16}}
+\index{writeFint16@{writeFint16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFint16()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fint16 (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fint16 (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -758,11 +758,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a7b6d812d210b995e2846ce60afc38646}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFint32@{writeFint32}}
-\index{writeFint32@{writeFint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a7b6d812d210b995e2846ce60afc38646}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFint32@{writeFint32}}
+\index{writeFint32@{writeFint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFint32()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fint32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fint32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -771,11 +771,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_aa419a41d256ef99ecc93be3d26dee300}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFint64@{writeFint64}}
-\index{writeFint64@{writeFint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa419a41d256ef99ecc93be3d26dee300}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFint64@{writeFint64}}
+\index{writeFint64@{writeFint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFint64()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fint64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fint64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -784,11 +784,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a268f969e8988fe82d3bd0b595ab8dcf6}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFint8@{writeFint8}}
-\index{writeFint8@{writeFint8}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a268f969e8988fe82d3bd0b595ab8dcf6}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFint8@{writeFint8}}
+\index{writeFint8@{writeFint8}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFint8()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fint8 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fint8 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -797,11 +797,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a7be73c311bfd710297190453d534372b}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFloat@{writeFloat}}
-\index{writeFloat@{writeFloat}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a7be73c311bfd710297190453d534372b}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFloat@{writeFloat}}
+\index{writeFloat@{writeFloat}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFloat()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Float (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Float (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -810,11 +810,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a24aa3be1bca40a0d0af6696a554ba342}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFuint16@{writeFuint16}}
-\index{writeFuint16@{writeFuint16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a24aa3be1bca40a0d0af6696a554ba342}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFuint16@{writeFuint16}}
+\index{writeFuint16@{writeFuint16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFuint16()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fuint16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fuint16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -823,11 +823,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_ab36f106f0c14457e89913448adce9821}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFuint32@{writeFuint32}}
-\index{writeFuint32@{writeFuint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ab36f106f0c14457e89913448adce9821}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFuint32@{writeFuint32}}
+\index{writeFuint32@{writeFuint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFuint32()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fuint32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fuint32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -836,11 +836,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a45b7a0e3ffd7654df9125b5d7014ff31}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFuint64@{writeFuint64}}
-\index{writeFuint64@{writeFuint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a45b7a0e3ffd7654df9125b5d7014ff31}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFuint64@{writeFuint64}}
+\index{writeFuint64@{writeFuint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFuint64()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fuint64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fuint64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -849,11 +849,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a6b06ddcdf3f9eb2784dd40bb1351564e}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeFuint8@{writeFuint8}}
-\index{writeFuint8@{writeFuint8}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a6b06ddcdf3f9eb2784dd40bb1351564e}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeFuint8@{writeFuint8}}
+\index{writeFuint8@{writeFuint8}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeFuint8()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Fuint8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Fuint8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -862,11 +862,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a24fc6ecee446c56366c5ac2a1cf441ee}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeInt32@{writeInt32}}
-\index{writeInt32@{writeInt32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a24fc6ecee446c56366c5ac2a1cf441ee}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeInt32@{writeInt32}}
+\index{writeInt32@{writeInt32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeInt32()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Int32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Int32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -875,11 +875,11 @@ m\+\_\+position += sizeof(value) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 实际占用内存(1 $\sim$ 5) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a735fc95adfac4baf583da29d6ee8d39e}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeInt64@{writeInt64}}
-\index{writeInt64@{writeInt64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a735fc95adfac4baf583da29d6ee8d39e}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeInt64@{writeInt64}}
+\index{writeInt64@{writeInt64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeInt64()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -888,11 +888,11 @@ m\+\_\+position += 实际占用内存(1 $\sim$ 5) 如果m\+\_\+position $>$ m\+\
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 实际占用内存(1 $\sim$ 10) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a8ade2a532e339bec93cb01e143babc44}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeStringF16@{writeStringF16}}
-\index{writeStringF16@{writeStringF16}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a8ade2a532e339bec93cb01e143babc44}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeStringF16@{writeStringF16}}
+\index{writeStringF16@{writeStringF16}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeStringF16()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+String\+F16 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+String\+F16 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -901,11 +901,11 @@ m\+\_\+position += 实际占用内存(1 $\sim$ 10) 如果m\+\_\+position $>$ m\+
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 2 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_aa03d4679a4f1930b3da600ab65fbb03e}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeStringF32@{writeStringF32}}
-\index{writeStringF32@{writeStringF32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa03d4679a4f1930b3da600ab65fbb03e}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeStringF32@{writeStringF32}}
+\index{writeStringF32@{writeStringF32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeStringF32()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+String\+F32 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+String\+F32 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -914,11 +914,11 @@ m\+\_\+position += 2 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 4 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_aa43458c06759a2d798a083b82483b81f}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeStringF64@{writeStringF64}}
-\index{writeStringF64@{writeStringF64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aa43458c06759a2d798a083b82483b81f}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeStringF64@{writeStringF64}}
+\index{writeStringF64@{writeStringF64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeStringF64()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+String\+F64 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+String\+F64 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -927,11 +927,11 @@ m\+\_\+position += 4 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 8 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_a2155ef5ae7bbf254d375f5d15789a5f6}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeStringVint@{writeStringVint}}
-\index{writeStringVint@{writeStringVint}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_a2155ef5ae7bbf254d375f5d15789a5f6}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeStringVint@{writeStringVint}}
+\index{writeStringVint@{writeStringVint}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeStringVint()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+String\+Vint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+String\+Vint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -940,11 +940,11 @@ m\+\_\+position += 8 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += Varint64长度 + value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_ae72ff109a6b3c947acd35d8bd308492a}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeStringWithoutLength@{writeStringWithoutLength}}
-\index{writeStringWithoutLength@{writeStringWithoutLength}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_ae72ff109a6b3c947acd35d8bd308492a}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeStringWithoutLength@{writeStringWithoutLength}}
+\index{writeStringWithoutLength@{writeStringWithoutLength}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeStringWithoutLength()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+String\+Without\+Length (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+String\+Without\+Length (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -953,11 +953,11 @@ m\+\_\+position += Varint64长度 + value.\+size() 如果m\+\_\+position $>$ m\+
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_aecf85d4a29e7f0e06b2093539d91a2b6}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeToFile@{writeToFile}}
-\index{writeToFile@{writeToFile}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aecf85d4a29e7f0e06b2093539d91a2b6}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeToFile@{writeToFile}}
+\index{writeToFile@{writeToFile}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeToFile()}
-{\footnotesize\ttfamily bool sylar\+::\+Byte\+Array\+::write\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool rock\+::\+Byte\+Array\+::write\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
 
 
 
@@ -968,11 +968,11 @@ m\+\_\+position += value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\
 \mbox{\texttt{ in}}  & {\em name} & 文件名 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1ByteArray_aacc7d361418de9bffd69a2c4bbf02f7d}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeUint32@{writeUint32}}
-\index{writeUint32@{writeUint32}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aacc7d361418de9bffd69a2c4bbf02f7d}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeUint32@{writeUint32}}
+\index{writeUint32@{writeUint32}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeUint32()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Uint32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Uint32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -981,11 +981,11 @@ m\+\_\+position += value.\+size() 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\
 \begin{DoxyPostcond}{后置条件}
 m\+\_\+position += 实际占用内存(1 $\sim$ 5) 如果m\+\_\+position $>$ m\+\_\+size 则 m\+\_\+size = m\+\_\+position 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1ByteArray_aea9565d96c17bb40b36902cb2910549f}} 
-\index{sylar::ByteArray@{sylar::ByteArray}!writeUint64@{writeUint64}}
-\index{writeUint64@{writeUint64}!sylar::ByteArray@{sylar::ByteArray}}
+\mbox{\label{classrock_1_1ByteArray_aea9565d96c17bb40b36902cb2910549f}} 
+\index{rock::ByteArray@{rock::ByteArray}!writeUint64@{writeUint64}}
+\index{writeUint64@{writeUint64}!rock::ByteArray@{rock::ByteArray}}
 \doxysubsubsection{writeUint64()}
-{\footnotesize\ttfamily void sylar\+::\+Byte\+Array\+::write\+Uint64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Byte\+Array\+::write\+Uint64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -998,4 +998,4 @@ m\+\_\+position += 实际占用内存(1 $\sim$ 10) 如果m\+\_\+position $>$ m\+
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ bytearray.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ bytearray.\+h}\end{DoxyCompactItemize}

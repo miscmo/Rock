@@ -1,23 +1,23 @@
 /**
  * @file uri.h
  * @brief URI封装类
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-06-13
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_URI_H__
-#define __SYLAR_URI_H__
+#ifndef __ROCK_URI_H__
+#define __ROCK_URI_H__
 
 #include <memory>
 #include <string>
 #include <stdint.h>
 #include "address.h"
 
-namespace sylar {
+namespace rock {
 
 /*
-     foo://user@sylar.com:8042/over/there?name=ferret#nose
+     foo://user@rock.com:8042/over/there?name=ferret#nose
        \_/   \______________/\_________/ \_________/ \__/
         |           |            |            |        |
      scheme     authority       path        query   fragment

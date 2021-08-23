@@ -1,12 +1,12 @@
-#ifndef __SYLAR_ROCK_ROCK_STREAM_H__
-#define __SYLAR_ROCK_ROCK_STREAM_H__
+#ifndef __ROCK_ROCK_ROCK_STREAM_H__
+#define __ROCK_ROCK_ROCK_STREAM_H__
 
-#include "sylar/streams/async_socket_stream.h"
+#include "rock/streams/async_socket_stream.h"
 #include "rock_protocol.h"
-#include "sylar/streams/load_balance.h"
+#include "rock/streams/load_balance.h"
 #include <boost/any.hpp>
 
-namespace sylar {
+namespace rock {
 
 struct RockResult {
    typedef std::shared_ptr<RockResult> ptr; 
@@ -24,14 +24,14 @@ struct RockResult {
    std::string toString() const;
 };
 
-class RockStream : public sylar::AsyncSocketStream {
+class RockStream : public rock::AsyncSocketStream {
 public:
     typedef std::shared_ptr<RockStream> ptr;
-    typedef std::function<bool(sylar::RockRequest::ptr
-                               ,sylar::RockResponse::ptr
-                               ,sylar::RockStream::ptr)> request_handler;
-    typedef std::function<bool(sylar::RockNotify::ptr
-                               ,sylar::RockStream::ptr)> notify_handler;
+    typedef std::function<bool(rock::RockRequest::ptr
+                               ,rock::RockResponse::ptr
+                               ,rock::RockStream::ptr)> request_handler;
+    typedef std::function<bool(rock::RockNotify::ptr
+                               ,rock::RockStream::ptr)> notify_handler;
 
     RockStream(Socket::ptr sock);
     ~RockStream();
@@ -76,8 +76,8 @@ protected:
 
     virtual Ctx::ptr doRecv() override;
 
-    void handleRequest(sylar::RockRequest::ptr req);
-    void handleNotify(sylar::RockNotify::ptr nty);
+    void handleRequest(rock::RockRequest::ptr req);
+    void handleNotify(rock::RockNotify::ptr nty);
 private:
     RockMessageDecoder::ptr m_decoder;
     request_handler m_requestHandler;
@@ -95,7 +95,7 @@ class RockConnection : public RockStream {
 public:
     typedef std::shared_ptr<RockConnection> ptr;
     RockConnection();
-    bool connect(sylar::Address::ptr addr);
+    bool connect(rock::Address::ptr addr);
 };
 
 class RockSDLoadBalance : public SDLoadBalance {

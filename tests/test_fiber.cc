@@ -1,36 +1,36 @@
-#include "sylar/sylar.h"
+#include "rock/rock.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 void run_in_fiber() {
-    SYLAR_LOG_INFO(g_logger) << "run_in_fiber begin";
-    sylar::Fiber::YieldToHold();
-    SYLAR_LOG_INFO(g_logger) << "run_in_fiber end";
-    sylar::Fiber::YieldToHold();
+    ROCK_LOG_INFO(g_logger) << "run_in_fiber begin";
+    rock::Fiber::YieldToHold();
+    ROCK_LOG_INFO(g_logger) << "run_in_fiber end";
+    rock::Fiber::YieldToHold();
 }
 
 void test_fiber() {
-    SYLAR_LOG_INFO(g_logger) << "main begin -1";
+    ROCK_LOG_INFO(g_logger) << "main begin -1";
     {
-        sylar::Fiber::GetThis();
-        SYLAR_LOG_INFO(g_logger) << "main begin";
-        sylar::Fiber::ptr fiber(new sylar::Fiber(run_in_fiber));
+        rock::Fiber::GetThis();
+        ROCK_LOG_INFO(g_logger) << "main begin";
+        rock::Fiber::ptr fiber(new rock::Fiber(run_in_fiber));
         fiber->swapIn();
-        SYLAR_LOG_INFO(g_logger) << "main after swapIn";
+        ROCK_LOG_INFO(g_logger) << "main after swapIn";
         fiber->swapIn();
-        SYLAR_LOG_INFO(g_logger) << "main after end";
+        ROCK_LOG_INFO(g_logger) << "main after end";
         fiber->swapIn();
     }
-    SYLAR_LOG_INFO(g_logger) << "main after end2";
+    ROCK_LOG_INFO(g_logger) << "main after end2";
 }
 
 int main(int argc, char** argv) {
-    sylar::Thread::SetName("main");
+    rock::Thread::SetName("main");
 
-    std::vector<sylar::Thread::ptr> thrs;
+    std::vector<rock::Thread::ptr> thrs;
     for(int i = 0; i < 3; ++i) {
-        thrs.push_back(sylar::Thread::ptr(
-                    new sylar::Thread(&test_fiber, "name_" + std::to_string(i))));
+        thrs.push_back(rock::Thread::ptr(
+                    new rock::Thread(&test_fiber, "name_" + std::to_string(i))));
     }
     for(auto i : thrs) {
         i->join();

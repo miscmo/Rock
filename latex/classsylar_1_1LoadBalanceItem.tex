@@ -1,72 +1,72 @@
-\doxysection{sylar\+::Load\+Balance\+Item类 参考}
-\label{classsylar_1_1LoadBalanceItem}\index{sylar::LoadBalanceItem@{sylar::LoadBalanceItem}}
+\doxysection{rock\+::Load\+Balance\+Item类 参考}
+\label{classrock_1_1LoadBalanceItem}\index{rock::LoadBalanceItem@{rock::LoadBalanceItem}}
 
 
-类 sylar\+::Load\+Balance\+Item 继承关系图\+:
+类 rock\+::Load\+Balance\+Item 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Load\+Balance\+Item 的协作图\+:
+rock\+::Load\+Balance\+Item 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_af8fc9145a652913c4939c6cf705b174e}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_af8fc9145a652913c4939c6cf705b174e}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Load\+Balance\+Item} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a02356479968b789f9cd731e7351d8e15}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a02356479968b789f9cd731e7351d8e15}} 
 Socket\+Stream\+::ptr {\bfseries get\+Stream} () const
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_ab91a7e0d591edad0940784f1f8e0bb6e}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_ab91a7e0d591edad0940784f1f8e0bb6e}} 
 void {\bfseries set\+Stream} (Socket\+Stream\+::ptr v)
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_ac248fef2b8e6f3f27d808712980974cd}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_ac248fef2b8e6f3f27d808712980974cd}} 
 void {\bfseries set\+Id} (uint64\+\_\+t v)
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a030acf3b4c3bff7c157b38986e923e9c}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a030acf3b4c3bff7c157b38986e923e9c}} 
 uint64\+\_\+t {\bfseries get\+Id} () const
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a4c8988268db66427ba0561f703a08cc5}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a4c8988268db66427ba0561f703a08cc5}} 
 \textbf{ Holder\+Stats} \& {\bfseries get} (const uint32\+\_\+t \&now=time(0))
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a7b8849bb56285074db8e82d7a7f0ccaf}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a7b8849bb56285074db8e82d7a7f0ccaf}} 
 {\footnotesize template$<$class T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries get\+Stream\+As} ()
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_ad7f12a008421ebb13a5531296d685fc4}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_ad7f12a008421ebb13a5531296d685fc4}} 
 virtual int32\+\_\+t {\bfseries get\+Weight} ()
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a9aef9cf1049024ad2dd431d011d91184}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a9aef9cf1049024ad2dd431d011d91184}} 
 void {\bfseries set\+Weight} (int32\+\_\+t v)
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a640e551156863adcfaf87e38ea8ae4f1}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a640e551156863adcfaf87e38ea8ae4f1}} 
 virtual bool {\bfseries is\+Valid} ()
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_ae621cf16a511f034542427d50310cf05}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_ae621cf16a511f034542427d50310cf05}} 
 void {\bfseries close} ()
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_afbfa03e3c09c6c77b97524e2c97487fd}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_afbfa03e3c09c6c77b97524e2c97487fd}} 
 std\+::string {\bfseries to\+String} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a92913f3960d82fdc272edd5406f2d3e3}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a92913f3960d82fdc272edd5406f2d3e3}} 
 uint64\+\_\+t {\bfseries m\+\_\+id} = 0
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a77403269ef517f4c4dc272357cb26a5a}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a77403269ef517f4c4dc272357cb26a5a}} 
 Socket\+Stream\+::ptr {\bfseries m\+\_\+stream}
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a811b9a846db5ec07c1548e786013f8f1}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a811b9a846db5ec07c1548e786013f8f1}} 
 int32\+\_\+t {\bfseries m\+\_\+weight} = 0
 \item 
-\mbox{\label{classsylar_1_1LoadBalanceItem_a3d80ca39a8bf7a3a9bf0219bc9e64790}} 
+\mbox{\label{classrock_1_1LoadBalanceItem_a3d80ca39a8bf7a3a9bf0219bc9e64790}} 
 \textbf{ Holder\+Stats\+Set} {\bfseries m\+\_\+stats}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}
+rock/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}

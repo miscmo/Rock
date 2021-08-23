@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/http/ws_servlet.h 源文件</title>
+<title>rock: rock/http/ws_servlet.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,72 +73,72 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __HTTP_WS_SERVLET_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;ws_session.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="thread_8h.html">sylar/thread.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="thread_8h.html">rock/thread.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="servlet_8h.html">servlet.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>http {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSServlet.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1WSServlet.html">WSServlet</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSServlet.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1WSServlet.html">WSServlet</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1http_1_1Servlet.html">Servlet</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSServlet&gt; <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classsylar_1_1http_1_1WSServlet.html">WSServlet</a>(<span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        :<a class="code" href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a>(name) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSServlet&gt; <a class="code" href="classrock_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classrock_1_1http_1_1WSServlet.html">WSServlet</a>(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        :<a class="code" href="classrock_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a>(name) {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classsylar_1_1http_1_1WSServlet.html">WSServlet</a>() {}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classrock_1_1http_1_1WSServlet.html">WSServlet</a>() {}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">   19</a></span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                   , <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">   19</a></span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a>(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> request</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                   , <a class="code" href="classrock_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">rock::http::HttpResponse::ptr</a> response</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                   , <a class="code" href="classrock_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">rock::http::HttpSession::ptr</a> session)<span class="keyword"> override </span>{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> int32_t onConnect(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                              ,sylar::http::WSSession::ptr session) = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> int32_t onClose(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                             ,sylar::http::WSSession::ptr session) = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a>(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                           ,sylar::http::WSFrameMessage::ptr msg</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                           ,sylar::http::WSSession::ptr session) = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> int32_t onConnect(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                              ,rock::http::WSSession::ptr session) = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> int32_t onClose(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                             ,rock::http::WSSession::ptr session) = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> int32_t <a class="code" href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a>(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                           ,rock::http::WSFrameMessage::ptr msg</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                           ,rock::http::WSSession::ptr session) = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> std::string&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string m_name;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1FunctionWSServlet.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1WSServlet.html">WSServlet</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1FunctionWSServlet.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1http_1_1WSServlet.html">WSServlet</a> {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FunctionWSServlet&gt; <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                              ,sylar::http::WSSession::ptr session)&gt; on_connect_cb;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                             ,sylar::http::WSSession::ptr session)&gt; on_close_cb; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                           ,sylar::http::WSFrameMessage::ptr msg</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                           ,sylar::http::WSSession::ptr session)&gt; callback;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FunctionWSServlet&gt; <a class="code" href="classrock_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                              ,rock::http::WSSession::ptr session)&gt; on_connect_cb;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                             ,rock::http::WSSession::ptr session)&gt; on_close_cb; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> std::function&lt;int32_t (<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                           ,rock::http::WSFrameMessage::ptr msg</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                           ,rock::http::WSSession::ptr session)&gt; callback;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classsylar_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a>(callback cb</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classrock_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a>(callback cb</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                      ,on_connect_cb connect_cb = <span class="keyword">nullptr</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                      ,on_close_cb close_cb = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> int32_t onConnect(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                              ,sylar::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> int32_t onClose(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                             ,sylar::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> int32_t handle(<a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                           ,sylar::http::WSFrameMessage::ptr msg</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                           ,sylar::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> int32_t onConnect(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                              ,rock::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">virtual</span> int32_t onClose(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                             ,rock::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> int32_t handle(<a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                           ,rock::http::WSFrameMessage::ptr msg</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                           ,rock::http::WSSession::ptr session) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    callback m_callback;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    on_connect_cb m_onConnect;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    on_close_cb m_onClose;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSServletDispatch.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1ServletDispatch.html">ServletDispatch</a> {</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSServletDispatch.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1http_1_1ServletDispatch.html">ServletDispatch</a> {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSServletDispatch&gt; <a class="code" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classsylar_1_1RWMutex.html">RWMutex</a> <a class="code" href="classsylar_1_1RWMutex.html">RWMutexType</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSServletDispatch&gt; <a class="code" href="classrock_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classrock_1_1RWMutex.html">RWMutex</a> <a class="code" href="classrock_1_1RWMutex.html">RWMutexType</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classsylar_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classrock_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a>();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> addServlet(<span class="keyword">const</span> std::string&amp; uri</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    ,FunctionWSServlet::callback cb</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    ,FunctionWSServlet::on_connect_cb connect_cb = <span class="keyword">nullptr</span></div>
@@ -156,18 +156,18 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aservlet_8h_html"><div class="ttname"><a href="servlet_8h.html">servlet.h</a></div><div class="ttdoc">Servlet封装</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1FunctionWSServlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1FunctionWSServlet.html">sylar::http::FunctionWSServlet</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:37</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSServletDispatch_html"><div class="ttname"><a href="classsylar_1_1http_1_1WSServletDispatch.html">sylar::http::WSServletDispatch</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:65</div></div>
-<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1ServletDispatch_html"><div class="ttname"><a href="classsylar_1_1http_1_1ServletDispatch.html">sylar::http::ServletDispatch</a></div><div class="ttdoc">Servlet分发器</div><div class="ttdef"><b>Definition:</b> servlet.h:137</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_af80c04c87c587133b721c017f22922d3"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">sylar::http::Servlet::Servlet</a></div><div class="ttdeci">Servlet(const std::string &amp;name)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition:</b> servlet.h:37</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSServlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1WSServlet.html">sylar::http::WSServlet</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:11</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html_af428473e4ff0e3dbe411ba95d8dd749f"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">sylar::http::Servlet::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Servlet &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:31</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1Servlet_html"><div class="ttname"><a href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></div><div class="ttdoc">Servlet封装</div><div class="ttdef"><b>Definition:</b> servlet.h:28</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSServlet_html_aace63a58ad55a539d40a64d4de8061ca"><div class="ttname"><a href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">sylar::http::WSServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(sylar::http::HttpRequest::ptr request, sylar::http::HttpResponse::ptr response, sylar::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div><div class="ttdef"><b>Definition:</b> ws_servlet.h:19</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpResponse_html_a69535456f2042c35c1a2758fc79f08ca"><div class="ttname"><a href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResponse &gt; ptr</div><div class="ttdoc">HTTP响应结构智能指针</div><div class="ttdef"><b>Definition:</b> http.h:586</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1FunctionWSServlet_html"><div class="ttname"><a href="classrock_1_1http_1_1FunctionWSServlet.html">rock::http::FunctionWSServlet</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:37</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSServletDispatch_html"><div class="ttname"><a href="classrock_1_1http_1_1WSServletDispatch.html">rock::http::WSServletDispatch</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:65</div></div>
+<div class="ttc" id="aclassrock_1_1RWMutex_html"><div class="ttname"><a href="classrock_1_1RWMutex.html">rock::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1ServletDispatch_html"><div class="ttname"><a href="classrock_1_1http_1_1ServletDispatch.html">rock::http::ServletDispatch</a></div><div class="ttdoc">Servlet分发器</div><div class="ttdef"><b>Definition:</b> servlet.h:137</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classrock_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">rock::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1Servlet_html_af80c04c87c587133b721c017f22922d3"><div class="ttname"><a href="classrock_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">rock::http::Servlet::Servlet</a></div><div class="ttdeci">Servlet(const std::string &amp;name)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition:</b> servlet.h:37</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSServlet_html"><div class="ttname"><a href="classrock_1_1http_1_1WSServlet.html">rock::http::WSServlet</a></div><div class="ttdef"><b>Definition:</b> ws_servlet.h:11</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1Servlet_html_af428473e4ff0e3dbe411ba95d8dd749f"><div class="ttname"><a href="classrock_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">rock::http::Servlet::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Servlet &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> servlet.h:31</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1Servlet_html"><div class="ttname"><a href="classrock_1_1http_1_1Servlet.html">rock::http::Servlet</a></div><div class="ttdoc">Servlet封装</div><div class="ttdef"><b>Definition:</b> servlet.h:28</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSServlet_html_aace63a58ad55a539d40a64d4de8061ca"><div class="ttname"><a href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">rock::http::WSServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(rock::http::HttpRequest::ptr request, rock::http::HttpResponse::ptr response, rock::http::HttpSession::ptr session) override</div><div class="ttdoc">处理请求</div><div class="ttdef"><b>Definition:</b> ws_servlet.h:19</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpResponse_html_a69535456f2042c35c1a2758fc79f08ca"><div class="ttname"><a href="classrock_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">rock::http::HttpResponse::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResponse &gt; ptr</div><div class="ttdoc">HTTP响应结构智能指针</div><div class="ttdef"><b>Definition:</b> http.h:586</div></div>
 <div class="ttc" id="athread_8h_html"><div class="ttname"><a href="thread_8h.html">thread.h</a></div><div class="ttdoc">线程相关的封装</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

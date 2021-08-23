@@ -1,19 +1,19 @@
-#include "sylar/sylar.h"
-#include "sylar/rock/rock_stream.h"
+#include "rock/rock.h"
+#include "rock/rock/rock_stream.h"
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
-sylar::RockConnection::ptr conn(new sylar::RockConnection);
+rock::RockConnection::ptr conn(new rock::RockConnection);
 void run() {
     conn->setAutoConnect(true);
-    sylar::Address::ptr addr = sylar::Address::LookupAny("127.0.0.1:8061");
+    rock::Address::ptr addr = rock::Address::LookupAny("127.0.0.1:8061");
     if(!conn->connect(addr)) {
-        SYLAR_LOG_INFO(g_logger) << "connect " << *addr << " false";
+        ROCK_LOG_INFO(g_logger) << "connect " << *addr << " false";
     }
     conn->start();
 
-    sylar::IOManager::GetThis()->addTimer(1000, [](){
-        sylar::RockRequest::ptr req(new sylar::RockRequest);
+    rock::IOManager::GetThis()->addTimer(1000, [](){
+        rock::RockRequest::ptr req(new rock::RockRequest);
         static uint32_t s_sn = 0;
         req->setSn(++s_sn);
         req->setCmd(100);
@@ -21,15 +21,15 @@ void run() {
 
         auto rsp = conn->request(req, 300);
         if(rsp->response) {
-            SYLAR_LOG_INFO(g_logger) << rsp->response->toString();
+            ROCK_LOG_INFO(g_logger) << rsp->response->toString();
         } else {
-            SYLAR_LOG_INFO(g_logger) << "error result=" << rsp->result;
+            ROCK_LOG_INFO(g_logger) << "error result=" << rsp->result;
         }
     }, true);
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(1);
+    rock::IOManager iom(1);
     iom.schedule(run);
     return 0;
 }

@@ -1,6 +1,6 @@
 #include "stream.h"
 
-namespace sylar {
+namespace rock {
 
 int Stream::readFixSize(void* buffer, size_t length) {
     size_t offset = 0;

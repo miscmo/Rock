@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/ds/timed_cache.h 源文件</title>
+<title>rock: rock/ds/timed_cache.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,20 +69,20 @@ $(function() {
 <div class="title">timed_cache.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_DS_TIMED_CACHE_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_DS_TIMED_CACHE_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_DS_TIMED_CACHE_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_DS_TIMED_CACHE_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;cache_status.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;sylar/mutex.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">sylar/util.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;rock/mutex.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">rock/util.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>ds {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> K, <span class="keyword">class</span> V, <span class="keyword">class</span> RWMutexType = sylar::RWMutex&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classsylar_1_1ds_1_1TimedCache.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1TimedCache.html">TimedCache</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> K, <span class="keyword">class</span> V, <span class="keyword">class</span> RWMutexType = rock::RWMutex&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classrock_1_1ds_1_1TimedCache.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1TimedCache.html">TimedCache</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">struct </span>Item {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Item(<span class="keyword">const</span> K&amp; k, <span class="keyword">const</span> V&amp; v, <span class="keyword">const</span> uint64_t&amp; t)</div>
@@ -105,18 +105,18 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">typedef</span> std::unordered_map&lt;K, typename set_type::iterator&gt; map_type;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(<span class="keyword">const</span> K&amp;, <span class="keyword">const</span> V&amp;)&gt; prune_callback;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1TimedCache.html">TimedCache</a>(<span class="keywordtype">size_t</span> max_size = 0, <span class="keywordtype">size_t</span> elasticity = 0</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;               , <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>* status = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classrock_1_1ds_1_1TimedCache.html">TimedCache</a>(<span class="keywordtype">size_t</span> max_size = 0, <span class="keywordtype">size_t</span> elasticity = 0</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;               , <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>* status = <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        :m_maxSize(max_size)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ,m_elasticity(elasticity)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        ,m_status(status) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(m_status == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            m_status = <span class="keyword">new</span> <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            m_status = <span class="keyword">new</span> <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m_statusOwner = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="classsylar_1_1ds_1_1TimedCache.html">TimedCache</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="classrock_1_1ds_1_1TimedCache.html">TimedCache</a>() {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(m_statusOwner &amp;&amp; m_status) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">delete</span> m_status;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span>(it != m_cache.end()) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            m_cache.erase(it);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">auto</span> sit = m_timed.insert(Item(k, v, expired + <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">sylar::GetCurrentMS</a>()));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">auto</span> sit = m_timed.insert(Item(k, v, expired + <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">rock::GetCurrentMS</a>()));</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        m_cache.insert(std::make_pair(k, sit.first));</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        prune();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
@@ -179,7 +179,7 @@ $(function() {
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>(it == m_cache.end()) {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        uint64_t tts = ts + <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">sylar::GetCurrentMS</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        uint64_t tts = ts + <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">rock::GetCurrentMS</a>();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">if</span>(it-&gt;second-&gt;ts == tts) {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
@@ -234,9 +234,9 @@ $(function() {
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> ss.str();</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>* getStatus()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_status;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>* getStatus()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_status;}</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> setStatus(<a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>* v, <span class="keywordtype">bool</span> owner = <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> setStatus(<a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>* v, <span class="keywordtype">bool</span> owner = <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">if</span>(m_statusOwner &amp;&amp; m_status) {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keyword">delete</span> m_status;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
@@ -244,12 +244,12 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        m_statusOwner = owner;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">if</span>(m_status == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            m_status = <span class="keyword">new</span> <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            m_status = <span class="keyword">new</span> <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            m_statusOwner = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">size_t</span> checkTimeout(<span class="keyword">const</span> uint64_t&amp; ts = <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">sylar::GetCurrentMS</a>()) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">size_t</span> checkTimeout(<span class="keyword">const</span> uint64_t&amp; ts = <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">rock::GetCurrentMS</a>()) {</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">size_t</span> size = 0;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">typename</span> RWMutexType::WriteLock lock(m_mutex);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it = m_timed.begin();</div>
@@ -289,20 +289,20 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    RWMutexType m_mutex;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    uint64_t m_maxSize;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    uint64_t m_elasticity;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>* m_status;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>* m_status;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    map_type m_cache;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    set_type m_timed;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    prune_callback m_cb;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">bool</span> m_statusOwner = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> K, <span class="keyword">class</span> V, <span class="keyword">class</span> RWMutexType = sylar::RWMutex, <span class="keyword">class</span> Hash = std::hash&lt;K&gt; &gt;</div>
-<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classsylar_1_1ds_1_1HashTimedCache.html">  229</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1HashTimedCache.html">HashTimedCache</a> {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> K, <span class="keyword">class</span> V, <span class="keyword">class</span> RWMutexType = rock::RWMutex, <span class="keyword">class</span> Hash = std::hash&lt;K&gt; &gt;</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classrock_1_1ds_1_1HashTimedCache.html">  229</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1HashTimedCache.html">HashTimedCache</a> {</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;HashTimedCache&gt; ptr;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classsylar_1_1ds_1_1TimedCache.html">TimedCache&lt;K, V, RWMutexType&gt;</a> <a class="code" href="classsylar_1_1ds_1_1TimedCache.html">cache_type</a>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classrock_1_1ds_1_1TimedCache.html">TimedCache&lt;K, V, RWMutexType&gt;</a> <a class="code" href="classrock_1_1ds_1_1TimedCache.html">cache_type</a>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1HashTimedCache.html">HashTimedCache</a>(<span class="keywordtype">size_t</span> bucket, <span class="keywordtype">size_t</span> max_size, <span class="keywordtype">size_t</span> elasticity)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="classrock_1_1ds_1_1HashTimedCache.html">HashTimedCache</a>(<span class="keywordtype">size_t</span> bucket, <span class="keywordtype">size_t</span> max_size, <span class="keywordtype">size_t</span> elasticity)</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        :m_bucket(bucket) {</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        m_datas.resize(bucket);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
@@ -312,12 +312,12 @@ $(function() {
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        m_elasticity = pre_elasiticity * bucket;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; bucket; ++i) {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            m_datas[i] = <span class="keyword">new</span> <a class="code" href="classsylar_1_1ds_1_1TimedCache.html">cache_type</a>(pre_max_size</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            m_datas[i] = <span class="keyword">new</span> <a class="code" href="classrock_1_1ds_1_1TimedCache.html">cache_type</a>(pre_max_size</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        ,pre_elasiticity, &amp;m_status);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        }</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    ~<a class="code" href="classsylar_1_1ds_1_1HashTimedCache.html">HashTimedCache</a>() {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    ~<a class="code" href="classrock_1_1ds_1_1HashTimedCache.html">HashTimedCache</a>() {</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; m_datas.size(); ++i) {</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keyword">delete</span> m_datas[i];</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        }</div>
@@ -404,7 +404,7 @@ $(function() {
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>* getStatus() {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>* getStatus() {</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">return</span> &amp;m_status;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
@@ -414,7 +414,7 @@ $(function() {
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">return</span> ss.str();</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">size_t</span> checkTimeout(<span class="keyword">const</span> uint64_t&amp; ts = <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">sylar::GetCurrentMS</a>()) {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">size_t</span> checkTimeout(<span class="keyword">const</span> uint64_t&amp; ts = <a class="code" href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">rock::GetCurrentMS</a>()) {</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordtype">size_t</span> size = 0;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; i : m_datas) {</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            size += i-&gt;checkTimeout(ts);</div>
@@ -427,7 +427,7 @@ $(function() {
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordtype">size_t</span> m_bucket;</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">size_t</span> m_elasticity;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    Hash m_hash;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> m_status;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a> m_status;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;};</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
@@ -435,11 +435,11 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1ds_1_1TimedCache_html"><div class="ttname"><a href="classsylar_1_1ds_1_1TimedCache.html">sylar::ds::TimedCache</a></div><div class="ttdef"><b>Definition:</b> timed_cache.h:14</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1HashTimedCache_html"><div class="ttname"><a href="classsylar_1_1ds_1_1HashTimedCache.html">sylar::ds::HashTimedCache</a></div><div class="ttdef"><b>Definition:</b> timed_cache.h:229</div></div>
-<div class="ttc" id="autil_8h_html_ae39a238868576cbc0c1fac03221e3d60"><div class="ttname"><a href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">sylar::GetCurrentMS</a></div><div class="ttdeci">uint64_t GetCurrentMS()</div><div class="ttdoc">获取当前时间的毫秒</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1TimedCache_html"><div class="ttname"><a href="classrock_1_1ds_1_1TimedCache.html">rock::ds::TimedCache</a></div><div class="ttdef"><b>Definition:</b> timed_cache.h:14</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1HashTimedCache_html"><div class="ttname"><a href="classrock_1_1ds_1_1HashTimedCache.html">rock::ds::HashTimedCache</a></div><div class="ttdef"><b>Definition:</b> timed_cache.h:229</div></div>
+<div class="ttc" id="autil_8h_html_ae39a238868576cbc0c1fac03221e3d60"><div class="ttname"><a href="util_8h.html#ae39a238868576cbc0c1fac03221e3d60">rock::GetCurrentMS</a></div><div class="ttdeci">uint64_t GetCurrentMS()</div><div class="ttdoc">获取当前时间的毫秒</div></div>
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">常用的工具函数</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1CacheStatus_html"><div class="ttname"><a href="classsylar_1_1ds_1_1CacheStatus.html">sylar::ds::CacheStatus</a></div><div class="ttdef"><b>Definition:</b> cache_status.h:12</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1CacheStatus_html"><div class="ttname"><a href="classrock_1_1ds_1_1CacheStatus.html">rock::ds::CacheStatus</a></div><div class="ttdef"><b>Definition:</b> cache_status.h:12</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,7 +1,7 @@
-digraph "sylar::HolderStats"
+digraph "rock::HolderStats"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::HolderStats\n||+ getUsedTime()\l+ getTotal()\l+ getDoing()\l+ getTimeouts()\l+ getOks()\l+ getErrs()\l+ incUsedTime()\l+ incTotal()\l+ incDoing()\l+ incTimeouts()\l和 6 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::HolderStats\n||+ getUsedTime()\l+ getTotal()\l+ getDoing()\l+ getTimeouts()\l+ getOks()\l+ getErrs()\l+ incUsedTime()\l+ incTotal()\l+ incDoing()\l+ incTimeouts()\l和 6 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

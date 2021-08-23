@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/ns/name_server_module.h 源文件</title>
+<title>rock: rock/ns/name_server_module.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_14cb8fc44d7a95761043055eb210fa06.html">ns</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_14cb8fc44d7a95761043055eb210fa06.html">ns</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,18 +69,18 @@ $(function() {
 <div class="title">name_server_module.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_NS_NAME_SERVER_MODULE_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_NS_NAME_SERVER_MODULE_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_NS_NAME_SERVER_MODULE_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_NS_NAME_SERVER_MODULE_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;sylar/module.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;rock/module.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ns_protocol.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>ns {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span>NameServerModule;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NSClientInfo.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NSClientInfo.html">NSClientInfo</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NameServerModule.html">NameServerModule</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NSClientInfo.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NSClientInfo.html">NSClientInfo</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NameServerModule.html">NameServerModule</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NSClientInfo&gt; ptr;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
@@ -88,47 +88,47 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::map&lt;std::string, std::set&lt;uint32_t&gt; &gt; m_domain2cmds;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NameServerModule.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NameServerModule.html">NameServerModule</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1RockModule.html">RockModule</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NameServerModule.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NameServerModule.html">NameServerModule</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1RockModule.html">RockModule</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NameServerModule&gt; ptr;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classsylar_1_1ns_1_1NameServerModule.html">NameServerModule</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classrock_1_1ns_1_1NameServerModule.html">NameServerModule</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleRockRequest(sylar::RockRequest::ptr request</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        ,sylar::RockResponse::ptr response</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        ,sylar::RockStream::ptr stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleRockNotify(sylar::RockNotify::ptr notify</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        ,sylar::RockStream::ptr stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onConnect(sylar::Stream::ptr stream) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onDisconnect(sylar::Stream::ptr stream) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleRockRequest(rock::RockRequest::ptr request</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        ,rock::RockResponse::ptr response</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        ,rock::RockStream::ptr stream) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handleRockNotify(rock::RockNotify::ptr notify</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        ,rock::RockStream::ptr stream) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onConnect(rock::Stream::ptr stream) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onDisconnect(rock::Stream::ptr stream) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> std::string statusString() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> handleRegister(sylar::RockRequest::ptr request</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        ,sylar::RockResponse::ptr response</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        ,sylar::RockStream::ptr stream);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> handleQuery(sylar::RockRequest::ptr request</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        ,sylar::RockResponse::ptr response</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        ,sylar::RockStream::ptr stream);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> handleTick(sylar::RockRequest::ptr request</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        ,sylar::RockResponse::ptr response</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        ,sylar::RockStream::ptr stream);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> handleRegister(rock::RockRequest::ptr request</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        ,rock::RockResponse::ptr response</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        ,rock::RockStream::ptr stream);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> handleQuery(rock::RockRequest::ptr request</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        ,rock::RockResponse::ptr response</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        ,rock::RockStream::ptr stream);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> handleTick(rock::RockRequest::ptr request</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        ,rock::RockResponse::ptr response</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        ,rock::RockStream::ptr stream);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    NSClientInfo::ptr get(sylar::RockStream::ptr rs);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> set(sylar::RockStream::ptr rs, NSClientInfo::ptr info);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    NSClientInfo::ptr get(rock::RockStream::ptr rs);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> set(rock::RockStream::ptr rs, NSClientInfo::ptr info);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setQueryDomain(sylar::RockStream::ptr rs, <span class="keyword">const</span> std::set&lt;std::string&gt;&amp; ds);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> setQueryDomain(rock::RockStream::ptr rs, <span class="keyword">const</span> std::set&lt;std::string&gt;&amp; ds);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> doNotify(std::set&lt;std::string&gt;&amp; domains, std::shared_ptr&lt;NotifyMessage&gt; nty);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::set&lt;sylar::RockStream::ptr&gt; getStreams(<span class="keyword">const</span> std::string&amp; domain);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::set&lt;rock::RockStream::ptr&gt; getStreams(<span class="keyword">const</span> std::string&amp; domain);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    NSDomainSet::ptr m_domains;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::map&lt;sylar::RockStream::ptr, NSClientInfo::ptr&gt; m_sessions;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::map&lt;rock::RockStream::ptr, NSClientInfo::ptr&gt; m_sessions;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::map&lt;sylar::RockStream::ptr, std::set&lt;std::string&gt; &gt; m_queryDomains;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::map&lt;std::string, std::set&lt;sylar::RockStream::ptr&gt; &gt; m_domainToSessions;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::map&lt;rock::RockStream::ptr, std::set&lt;std::string&gt; &gt; m_queryDomains;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::map&lt;std::string, std::set&lt;rock::RockStream::ptr&gt; &gt; m_domainToSessions;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
@@ -136,10 +136,10 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
-<div class="ttc" id="aclasssylar_1_1RockModule_html"><div class="ttname"><a href="classsylar_1_1RockModule.html">sylar::RockModule</a></div><div class="ttdef"><b>Definition:</b> module.h:74</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NameServerModule_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NameServerModule.html">sylar::ns::NameServerModule</a></div><div class="ttdef"><b>Definition:</b> name_server_module.h:20</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NSClientInfo_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NSClientInfo.html">sylar::ns::NSClientInfo</a></div><div class="ttdef"><b>Definition:</b> name_server_module.h:11</div></div>
+<div class="ttc" id="aclassrock_1_1RWMutex_html"><div class="ttname"><a href="classrock_1_1RWMutex.html">rock::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclassrock_1_1RockModule_html"><div class="ttname"><a href="classrock_1_1RockModule.html">rock::RockModule</a></div><div class="ttdef"><b>Definition:</b> module.h:74</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NameServerModule_html"><div class="ttname"><a href="classrock_1_1ns_1_1NameServerModule.html">rock::ns::NameServerModule</a></div><div class="ttdef"><b>Definition:</b> name_server_module.h:20</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NSClientInfo_html"><div class="ttname"><a href="classrock_1_1ns_1_1NSClientInfo.html">rock::ns::NSClientInfo</a></div><div class="ttdef"><b>Definition:</b> name_server_module.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

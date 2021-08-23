@@ -1,7 +1,7 @@
-#include "sylar/protocol.h"
-#include "sylar/util.h"
+#include "rock/protocol.h"
+#include "rock/util.h"
 
-namespace sylar {
+namespace rock {
 
 ByteArray::ptr Message::toByteArray() {
     ByteArray::ptr ba(new ByteArray);

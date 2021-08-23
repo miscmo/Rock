@@ -3,9 +3,9 @@
 #include "macro.h"
 #include "hook.h"
 
-namespace sylar {
+namespace rock {
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
 //thread_local：每个线程拥有独立的变量存储空间，每个变量的生命周期和线程的生命周期相同
 static thread_local Scheduler* t_scheduler = nullptr;
@@ -13,20 +13,20 @@ static thread_local Fiber* t_scheduler_fiber = nullptr;
 
 Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name)
     :m_name(name) {
-    SYLAR_ASSERT(threads > 0);
+    ROCK_ASSERT(threads > 0);
 
     if(use_caller) {
-        sylar::Fiber::GetThis();
+        rock::Fiber::GetThis();
         --threads;
 
-        SYLAR_ASSERT(GetThis() == nullptr);
+        ROCK_ASSERT(GetThis() == nullptr);
         t_scheduler = this;
 
         m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));
-        sylar::Thread::SetName(m_name);
+        rock::Thread::SetName(m_name);
 
         t_scheduler_fiber = m_rootFiber.get();
-        m_rootThread = sylar::GetThreadId();
+        m_rootThread = rock::GetThreadId();
         m_threadIds.push_back(m_rootThread);
     } else {
         m_rootThread = -1;
@@ -35,7 +35,7 @@ Scheduler::Scheduler(size_t threads, bool use_caller, const std::string& name)
 }
 
 Scheduler::~Scheduler() {
-    SYLAR_ASSERT(m_stopping);
+    ROCK_ASSERT(m_stopping);
     if(GetThis() == this) {
         t_scheduler = nullptr;
     }
@@ -56,7 +56,7 @@ void Scheduler::start() {
         return;
     }
     m_stopping = false;
-    SYLAR_ASSERT(m_threads.empty());
+    ROCK_ASSERT(m_threads.empty());
 
     m_threads.resize(m_threadCount);
     for(size_t i = 0; i < m_threadCount; ++i) {
@@ -69,7 +69,7 @@ void Scheduler::start() {
     //if(m_rootFiber) {
     //    //m_rootFiber->swapIn();
     //    m_rootFiber->call();
-    //    SYLAR_LOG_INFO(g_logger) << "call out " << m_rootFiber->getState();
+    //    ROCK_LOG_INFO(g_logger) << "call out " << m_rootFiber->getState();
     //}
 }
 
@@ -79,7 +79,7 @@ void Scheduler::stop() {
             && m_threadCount == 0
             && (m_rootFiber->getState() == Fiber::TERM
                 || m_rootFiber->getState() == Fiber::INIT)) {
-        SYLAR_LOG_INFO(g_logger) << this << " stopped";
+        ROCK_LOG_INFO(g_logger) << this << " stopped";
         m_stopping = true;
 
         if(stopping()) {
@@ -89,9 +89,9 @@ void Scheduler::stop() {
 
     //bool exit_on_this_fiber = false;
     if(m_rootThread != -1) {
-        SYLAR_ASSERT(GetThis() == this);
+        ROCK_ASSERT(GetThis() == this);
     } else {
-        SYLAR_ASSERT(GetThis() != this);
+        ROCK_ASSERT(GetThis() != this);
     }
 
     m_stopping = true;
@@ -108,7 +108,7 @@ void Scheduler::stop() {
         //    if(m_rootFiber->getState() == Fiber::TERM
         //            || m_rootFiber->getState() == Fiber::EXCEPT) {
         //        m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run, this), 0, true));
-        //        SYLAR_LOG_INFO(g_logger) << " root fiber is term, reset";
+        //        ROCK_LOG_INFO(g_logger) << " root fiber is term, reset";
         //        t_fiber = m_rootFiber.get();
         //    }
         //    m_rootFiber->call();
@@ -136,10 +136,10 @@ void Scheduler::setThis() {
 }
 
 void Scheduler::run() {
-    SYLAR_LOG_DEBUG(g_logger) << m_name << " run";
+    ROCK_LOG_DEBUG(g_logger) << m_name << " run";
     set_hook_enable(true);
     setThis();
-    if(sylar::GetThreadId() != m_rootThread) {
+    if(rock::GetThreadId() != m_rootThread) {
         t_scheduler_fiber = Fiber::GetThis().get();
     }
 
@@ -155,14 +155,14 @@ void Scheduler::run() {
             MutexType::Lock lock(m_mutex);
             auto it = m_fibers.begin();
             while(it != m_fibers.end()) {
-                if(it->thread != -1 && it->thread != sylar::GetThreadId()) {
+                if(it->thread != -1 && it->thread != rock::GetThreadId()) {
                     ++it;
                     //有协程任务，但是不属于当前线程执行，通知调度器的其他线程执行
                     tickle_me = true;
                     continue;
                 }
 
-                SYLAR_ASSERT(it->fiber || it->cb);
+                ROCK_ASSERT(it->fiber || it->cb);
                 if(it->fiber && it->fiber->getState() == Fiber::EXEC) {
                     ++it;
                     continue;
@@ -227,7 +227,7 @@ void Scheduler::run() {
 
             //协程队列中的任务执行完毕后，开始执行idle_fiber
             if(idle_fiber->getState() == Fiber::TERM) {
-                SYLAR_LOG_INFO(g_logger) << "idle fiber term";
+                ROCK_LOG_INFO(g_logger) << "idle fiber term";
                 break;
             }
 
@@ -243,7 +243,7 @@ void Scheduler::run() {
 }
 
 void Scheduler::tickle() {
-    SYLAR_LOG_INFO(g_logger) << "tickle";
+    ROCK_LOG_INFO(g_logger) << "tickle";
 }
 
 bool Scheduler::stopping() {
@@ -253,16 +253,16 @@ bool Scheduler::stopping() {
 }
 
 void Scheduler::idle() {
-    SYLAR_LOG_INFO(g_logger) << "idle";
+    ROCK_LOG_INFO(g_logger) << "idle";
     while(!stopping()) {
-        sylar::Fiber::YieldToHold();
+        rock::Fiber::YieldToHold();
     }
 }
 
 void Scheduler::switchTo(int thread) {
-    SYLAR_ASSERT(Scheduler::GetThis() != nullptr);
+    ROCK_ASSERT(Scheduler::GetThis() != nullptr);
     if(Scheduler::GetThis() == this) {
-        if(thread == -1 || thread == sylar::GetThreadId()) {
+        if(thread == -1 || thread == rock::GetThreadId()) {
             return;
         }
     }

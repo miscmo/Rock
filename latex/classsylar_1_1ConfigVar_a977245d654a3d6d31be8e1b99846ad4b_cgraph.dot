@@ -1,10 +1,10 @@
-digraph "sylar::ConfigVar::fromString"
+digraph "rock::ConfigVar::fromString"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="sylar::ConfigVar::fromString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="从YAML String 转成参数的值"];
+  Node1 [label="rock::ConfigVar::fromString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="从YAML String 转成参数的值"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="sylar::ConfigVar::setValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ConfigVar.html#a0efde2e43919caa1d60b25022baf34d8",tooltip="设置当前参数的值"];
+  Node2 [label="rock::ConfigVar::setValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ConfigVar.html#a0efde2e43919caa1d60b25022baf34d8",tooltip="设置当前参数的值"];
 }

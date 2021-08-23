@@ -1,7 +1,7 @@
 #include "zlib_stream.h"
-#include "sylar/macro.h"
+#include "rock/macro.h"
 
-namespace sylar {
+namespace rock {
 
 ZlibStream::ptr ZlibStream::CreateGzip(bool encode, uint32_t buff_size) {
     return Create(encode, buff_size, GZIP);
@@ -79,9 +79,9 @@ void ZlibStream::close() {
 
 int ZlibStream::init(Type type, int level, int window_bits
                     ,int memlevel, Strategy strategy) {
-    SYLAR_ASSERT((level >= 0 && level <= 9) || level == DEFAULT_COMPRESSION);
-    SYLAR_ASSERT((window_bits >= 8 && window_bits <= 15));
-    SYLAR_ASSERT((memlevel >= 1 && memlevel <= 9));
+    ROCK_ASSERT((level >= 0 && level <= 9) || level == DEFAULT_COMPRESSION);
+    ROCK_ASSERT((window_bits >= 8 && window_bits <= 15));
+    ROCK_ASSERT((memlevel >= 1 && memlevel <= 9));
 
     memset(&m_zstream, 0, sizeof(m_zstream));
 
@@ -204,8 +204,8 @@ std::string ZlibStream::getResult() const {
     return rt;
 }
 
-sylar::ByteArray::ptr ZlibStream::getByteArray() {
-    sylar::ByteArray::ptr ba(new sylar::ByteArray);
+rock::ByteArray::ptr ZlibStream::getByteArray() {
+    rock::ByteArray::ptr ba(new rock::ByteArray);
     for(auto& i : m_buffs) {
         ba->write(i.iov_base, i.iov_len);
     }

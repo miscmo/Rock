@@ -1,18 +1,18 @@
 /**
  * @file iomanager.h
  * @brief 基于Epoll的IO协程调度器
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-05-28
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_IOMANAGER_H__
-#define __SYLAR_IOMANAGER_H__
+#ifndef __ROCK_IOMANAGER_H__
+#define __ROCK_IOMANAGER_H__
 
 #include "scheduler.h"
 #include "timer.h"
 
-namespace sylar {
+namespace rock {
 
 /**
  * @brief 基于Epoll的IO协程调度器

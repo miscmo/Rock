@@ -1,32 +1,32 @@
-#include "sylar/http/ws_server.h"
-#include "sylar/log.h"
+#include "rock/http/ws_server.h"
+#include "rock/log.h"
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 void run() {
-    sylar::http::WSServer::ptr server(new sylar::http::WSServer);
-    sylar::Address::ptr addr = sylar::Address::LookupAnyIPAddress("0.0.0.0:8020");
+    rock::http::WSServer::ptr server(new rock::http::WSServer);
+    rock::Address::ptr addr = rock::Address::LookupAnyIPAddress("0.0.0.0:8020");
     if(!addr) {
-        SYLAR_LOG_ERROR(g_logger) << "get address error";
+        ROCK_LOG_ERROR(g_logger) << "get address error";
         return;
     }
-    auto fun = [](sylar::http::HttpRequest::ptr header
-                  ,sylar::http::WSFrameMessage::ptr msg
-                  ,sylar::http::WSSession::ptr session) {
+    auto fun = [](rock::http::HttpRequest::ptr header
+                  ,rock::http::WSFrameMessage::ptr msg
+                  ,rock::http::WSSession::ptr session) {
         session->sendMessage(msg);
         return 0;
     };
 
-    server->getWSServletDispatch()->addServlet("/sylar", fun);
+    server->getWSServletDispatch()->addServlet("/rock", fun);
     while(!server->bind(addr)) {
-        SYLAR_LOG_ERROR(g_logger) << "bind " << *addr << " fail";
+        ROCK_LOG_ERROR(g_logger) << "bind " << *addr << " fail";
         sleep(1);
     }
     server->start();
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(2);
+    rock::IOManager iom(2);
     iom.schedule(run);
     return 0;
 }

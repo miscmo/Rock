@@ -1,7 +1,7 @@
-digraph "sylar::Module"
+digraph "rock::Module"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::Module\n|# m_name\l# m_version\l# m_filename\l# m_id\l# m_type\l|+ Module()\l+ ~Module()\l+ onBeforeArgsParse()\l+ onAfterArgsParse()\l+ onLoad()\l+ onUnload()\l+ onConnect()\l+ onDisconnect()\l+ onServerReady()\l+ onServerUp()\l和 10 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::Module\n|# m_name\l# m_version\l# m_filename\l# m_id\l# m_type\l|+ Module()\l+ ~Module()\l+ onBeforeArgsParse()\l+ onAfterArgsParse()\l+ onLoad()\l+ onUnload()\l+ onConnect()\l+ onDisconnect()\l+ onServerReady()\l+ onServerUp()\l和 10 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

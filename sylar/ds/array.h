@@ -1,12 +1,12 @@
-#ifndef __SYLAR_DS_ARRAY_H__
-#define __SYLAR_DS_ARRAY_H__
+#ifndef __ROCK_DS_ARRAY_H__
+#define __ROCK_DS_ARRAY_H__
 
 #include <memory>
 #include <stdint.h>
 #include <iostream>
-#include "sylar/util.h"
+#include "rock/util.h"
 
-namespace sylar {
+namespace rock {
 namespace ds {
 
 template<class T>

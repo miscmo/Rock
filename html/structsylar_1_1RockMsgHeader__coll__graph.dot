@@ -1,7 +1,7 @@
-digraph "sylar::RockMsgHeader"
+digraph "rock::RockMsgHeader"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::RockMsgHeader\n|+ magic\l+ version\l+ flag\l+ length\l|+ RockMsgHeader()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::RockMsgHeader\n|+ magic\l+ version\l+ flag\l+ length\l|+ RockMsgHeader()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

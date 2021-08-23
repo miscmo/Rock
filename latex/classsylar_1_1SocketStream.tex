@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Socket\+Stream类 参考}
-\label{classsylar_1_1SocketStream}\index{sylar::SocketStream@{sylar::SocketStream}}
+\doxysection{rock\+::Socket\+Stream类 参考}
+\label{classrock_1_1SocketStream}\index{rock::SocketStream@{rock::SocketStream}}
 
 
 Socket流  
@@ -11,16 +11,16 @@ Socket流
 
 
 
-类 sylar\+::Socket\+Stream 继承关系图\+:
+类 rock\+::Socket\+Stream 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Socket\+Stream 的协作图\+:
+rock\+::Socket\+Stream 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SocketStream_a99cc9d12a8054e59ebecdf4a458bbbd3}} 
+\mbox{\label{classrock_1_1SocketStream_a99cc9d12a8054e59ebecdf4a458bbbd3}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Socket\+Stream} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -38,34 +38,34 @@ virtual int \textbf{ write} (const void $\ast$buffer, size\+\_\+t length) overri
 \begin{DoxyCompactList}\small\item\em 写入数据 \end{DoxyCompactList}\item 
 virtual int \textbf{ write} (Byte\+Array\+::ptr ba, size\+\_\+t length) override
 \begin{DoxyCompactList}\small\item\em 写入数据 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SocketStream_af354cad43063b30ac167e1ed73bfb549}} 
+\mbox{\label{classrock_1_1SocketStream_af354cad43063b30ac167e1ed73bfb549}} 
 virtual void \textbf{ close} () override
 \begin{DoxyCompactList}\small\item\em 关闭socket \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SocketStream_a3a1f6975f5ce1dd56f317ee55d8e8ab8}} 
+\mbox{\label{classrock_1_1SocketStream_a3a1f6975f5ce1dd56f317ee55d8e8ab8}} 
 Socket\+::ptr \textbf{ get\+Socket} () const
 \begin{DoxyCompactList}\small\item\em 返回\+Socket类 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SocketStream_a488ce96a03f795dc9d27e35abd4901c7}} 
+\mbox{\label{classrock_1_1SocketStream_a488ce96a03f795dc9d27e35abd4901c7}} 
 bool \textbf{ is\+Connected} () const
 \begin{DoxyCompactList}\small\item\em 返回是否连接 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SocketStream_adb705dcbb9cc35d0ab824f0dd5bf7d6b}} 
+\mbox{\label{classrock_1_1SocketStream_adb705dcbb9cc35d0ab824f0dd5bf7d6b}} 
 Address\+::ptr {\bfseries get\+Remote\+Address} ()
 \item 
-\mbox{\label{classsylar_1_1SocketStream_a6336032caa25921d41582b517d67ac69}} 
+\mbox{\label{classrock_1_1SocketStream_a6336032caa25921d41582b517d67ac69}} 
 Address\+::ptr {\bfseries get\+Local\+Address} ()
 \item 
-\mbox{\label{classsylar_1_1SocketStream_a877834b94a234c8568bf45ca18c22336}} 
+\mbox{\label{classrock_1_1SocketStream_a877834b94a234c8568bf45ca18c22336}} 
 std\+::string {\bfseries get\+Remote\+Address\+String} ()
 \item 
-\mbox{\label{classsylar_1_1SocketStream_ad756475d10dd09f011b12ab36a97c679}} 
+\mbox{\label{classrock_1_1SocketStream_ad756475d10dd09f011b12ab36a97c679}} 
 std\+::string {\bfseries get\+Local\+Address\+String} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SocketStream_a358b16565b6adfbf882abb54def5c600}} 
+\mbox{\label{classrock_1_1SocketStream_a358b16565b6adfbf882abb54def5c600}} 
 Socket\+::ptr \textbf{ m\+\_\+socket}
 \begin{DoxyCompactList}\small\item\em Socket类 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SocketStream_a86cc9c7048fa2577499a5084178081ca}} 
+\mbox{\label{classrock_1_1SocketStream_a86cc9c7048fa2577499a5084178081ca}} 
 bool \textbf{ m\+\_\+owner}
 \begin{DoxyCompactList}\small\item\em 是否主控 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -74,11 +74,11 @@ bool \textbf{ m\+\_\+owner}
 Socket流 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1SocketStream_a376550be0ece546796ee2d0d0426b36d}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!SocketStream@{SocketStream}}
-\index{SocketStream@{SocketStream}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a376550be0ece546796ee2d0d0426b36d}} 
+\index{rock::SocketStream@{rock::SocketStream}!SocketStream@{SocketStream}}
+\index{SocketStream@{SocketStream}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{SocketStream()}
-{\footnotesize\ttfamily sylar\+::\+Socket\+Stream\+::\+Socket\+Stream (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Socket\+Stream\+::\+Socket\+Stream (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
 
 
 
@@ -91,11 +91,11 @@ Socket流
 \mbox{\texttt{ in}}  & {\em owner} & 是否完全控制 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1SocketStream_a7bbba4ad707a4bc0d21eab4d04edd28f}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!````~SocketStream@{$\sim$SocketStream}}
-\index{````~SocketStream@{$\sim$SocketStream}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a7bbba4ad707a4bc0d21eab4d04edd28f}} 
+\index{rock::SocketStream@{rock::SocketStream}!````~SocketStream@{$\sim$SocketStream}}
+\index{````~SocketStream@{$\sim$SocketStream}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{$\sim$SocketStream()}
-{\footnotesize\ttfamily sylar\+::\+Socket\+Stream\+::$\sim$\+Socket\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Socket\+Stream\+::$\sim$\+Socket\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -104,11 +104,11 @@ Socket流
 如果m\+\_\+owner=true,则close 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1SocketStream_a390ba1458b59483ce78ff8bd0654e7bd}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!read@{read}}
-\index{read@{read}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a390ba1458b59483ce78ff8bd0654e7bd}} 
+\index{rock::SocketStream@{rock::SocketStream}!read@{read}}
+\index{read@{read}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -135,13 +135,13 @@ Socket流
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3eff9c660adf8339885e91f06daddae1}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3eff9c660adf8339885e91f06daddae1}.
 
-\mbox{\label{classsylar_1_1SocketStream_a83ceb6fab95c744b1f5d418bd4e4228b}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!read@{read}}
-\index{read@{read}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a83ceb6fab95c744b1f5d418bd4e4228b}} 
+\index{rock::SocketStream@{rock::SocketStream}!read@{read}}
+\index{read@{read}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Socket\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -168,13 +168,13 @@ Socket流
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a0901dfdec95a25aee92b0d82360b4e13}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a0901dfdec95a25aee92b0d82360b4e13}.
 
-\mbox{\label{classsylar_1_1SocketStream_a11c518ed09bd39d8c39059cc3627474d}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!write@{write}}
-\index{write@{write}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a11c518ed09bd39d8c39059cc3627474d}} 
+\index{rock::SocketStream@{rock::SocketStream}!write@{write}}
+\index{write@{write}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -201,13 +201,13 @@ Socket流
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3fb968a29622bcf27913b20633895a97}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3fb968a29622bcf27913b20633895a97}.
 
-\mbox{\label{classsylar_1_1SocketStream_a26cb5f28be39aac14cba7d93a28430e0}} 
-\index{sylar::SocketStream@{sylar::SocketStream}!write@{write}}
-\index{write@{write}!sylar::SocketStream@{sylar::SocketStream}}
+\mbox{\label{classrock_1_1SocketStream_a26cb5f28be39aac14cba7d93a28430e0}} 
+\index{rock::SocketStream@{rock::SocketStream}!write@{write}}
+\index{write@{write}!rock::SocketStream@{rock::SocketStream}}
 \doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Socket\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -234,10 +234,10 @@ Socket流
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3f228e40abdf4462268b871614e9d5a1}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3f228e40abdf4462268b871614e9d5a1}.
 
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/streams/\textbf{ socket\+\_\+stream.\+h}\end{DoxyCompactItemize}
+rock/streams/\textbf{ socket\+\_\+stream.\+h}\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
 #include "zk_client.h"
 
-namespace sylar {
+namespace rock {
 
 //static const int CREATED = ZOO_CREATED_EVENT;
 //static const int DELETED = ZOO_DELETED_EVENT;

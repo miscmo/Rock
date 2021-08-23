@@ -1,7 +1,7 @@
-digraph "sylar::ds::TimedCache&lt; K, V, RWMutexType &gt;"
+digraph "rock::ds::TimedCache&lt; K, V, RWMutexType &gt;"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::ds::TimedCache\l\< K, V, RWMutexType \>\n||+ TimedCache()\l+ ~TimedCache()\l+ set()\l+ get()\l+ get()\l+ del()\l+ expired()\l+ exists()\l+ size()\l+ empty()\l和 12 更多...\l# prune()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::ds::TimedCache\l\< K, V, RWMutexType \>\n||+ TimedCache()\l+ ~TimedCache()\l+ set()\l+ get()\l+ get()\l+ del()\l+ expired()\l+ exists()\l+ size()\l+ empty()\l和 12 更多...\l# prune()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

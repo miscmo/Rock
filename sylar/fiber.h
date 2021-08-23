@@ -1,19 +1,19 @@
 /**
  * @file fiber.h
  * @brief 协程封装
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-05-24
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_FIBER_H__
-#define __SYLAR_FIBER_H__
+#ifndef __ROCK_FIBER_H__
+#define __ROCK_FIBER_H__
 
 #include <memory>
 #include <functional>
 #include <ucontext.h>
 
-namespace sylar {
+namespace rock {
 
 class Scheduler;
 

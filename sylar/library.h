@@ -1,10 +1,10 @@
-#ifndef __SYLAR_LIBRARY_H__
-#define __SYLAR_LIBRARY_H__
+#ifndef __ROCK_LIBRARY_H__
+#define __ROCK_LIBRARY_H__
 
 #include <memory>
 #include "module.h"
 
-namespace sylar {
+namespace rock {
 
 class Library {
 public:

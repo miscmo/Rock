@@ -1,5 +1,5 @@
-\doxysection{sylar\+::http\+::Servlet类 参考}
-\label{classsylar_1_1http_1_1Servlet}\index{sylar::http::Servlet@{sylar::http::Servlet}}
+\doxysection{rock\+::http\+::Servlet类 参考}
+\label{classrock_1_1http_1_1Servlet}\index{rock::http::Servlet@{rock::http::Servlet}}
 
 
 Servlet封装  
@@ -11,16 +11,16 @@ Servlet封装
 
 
 
-类 sylar\+::http\+::Servlet 继承关系图\+:
+类 rock\+::http\+::Servlet 继承关系图\+:
 % FIG 0
 
 
-sylar\+::http\+::Servlet 的协作图\+:
+rock\+::http\+::Servlet 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1Servlet_af428473e4ff0e3dbe411ba95d8dd749f}} 
+\mbox{\label{classrock_1_1http_1_1Servlet_af428473e4ff0e3dbe411ba95d8dd749f}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Servlet} $>$ \textbf{ ptr}
 \begin{DoxyCompactList}\small\item\em 智能指针类型定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -28,18 +28,18 @@ typedef std\+::shared\+\_\+ptr$<$ \textbf{ Servlet} $>$ \textbf{ ptr}
 \item 
 \textbf{ Servlet} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1Servlet_a77cde49edee5158fd7259c9a01c0b7b1}} 
+\mbox{\label{classrock_1_1http_1_1Servlet_a77cde49edee5158fd7259c9a01c0b7b1}} 
 virtual \textbf{ $\sim$\+Servlet} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
-virtual int32\+\_\+t \textbf{ handle} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ sylar\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ sylar\+::http\+::\+Http\+Session\+::ptr} session)=0
+virtual int32\+\_\+t \textbf{ handle} (\textbf{ rock\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ rock\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ rock\+::http\+::\+Http\+Session\+::ptr} session)=0
 \begin{DoxyCompactList}\small\item\em 处理请求 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1Servlet_aaf499b23f91cbe4227e6dfc79724bf9c}} 
+\mbox{\label{classrock_1_1http_1_1Servlet_aaf499b23f91cbe4227e6dfc79724bf9c}} 
 const std\+::string \& \textbf{ get\+Name} () const
 \begin{DoxyCompactList}\small\item\em 返回\+Servlet名称 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1Servlet_aa7f018f7eee599cf1c2d3ac3591b538e}} 
+\mbox{\label{classrock_1_1http_1_1Servlet_aa7f018f7eee599cf1c2d3ac3591b538e}} 
 std\+::string \textbf{ m\+\_\+name}
 \begin{DoxyCompactList}\small\item\em 名称 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -48,11 +48,11 @@ std\+::string \textbf{ m\+\_\+name}
 Servlet封装 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1http_1_1Servlet_af80c04c87c587133b721c017f22922d3}} 
-\index{sylar::http::Servlet@{sylar::http::Servlet}!Servlet@{Servlet}}
-\index{Servlet@{Servlet}!sylar::http::Servlet@{sylar::http::Servlet}}
+\mbox{\label{classrock_1_1http_1_1Servlet_af80c04c87c587133b721c017f22922d3}} 
+\index{rock::http::Servlet@{rock::http::Servlet}!Servlet@{Servlet}}
+\index{Servlet@{Servlet}!rock::http::Servlet@{rock::http::Servlet}}
 \doxysubsubsection{Servlet()}
-{\footnotesize\ttfamily sylar\+::http\+::\+Servlet\+::\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily rock\+::http\+::\+Servlet\+::\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -66,11 +66,11 @@ Servlet封装
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}} 
-\index{sylar::http::Servlet@{sylar::http::Servlet}!handle@{handle}}
-\index{handle@{handle}!sylar::http::Servlet@{sylar::http::Servlet}}
+\mbox{\label{classrock_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}} 
+\index{rock::http::Servlet@{rock::http::Servlet}!handle@{handle}}
+\index{handle@{handle}!rock::http::Servlet@{rock::http::Servlet}}
 \doxysubsubsection{handle()}
-{\footnotesize\ttfamily virtual int32\+\_\+t sylar\+::http\+::\+Servlet\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t rock\+::http\+::\+Servlet\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ rock\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ rock\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ rock\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -90,10 +90,10 @@ Servlet封装
 \end{DoxyReturn}
 
 
-在 \textbf{ sylar\+::http\+::\+Not\+Found\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1NotFoundServlet_ace03ccc4be4f07d990a86b4babd34c60}, \textbf{ sylar\+::http\+::\+Servlet\+Dispatch} \doxyref{}{p.}{classsylar_1_1http_1_1ServletDispatch_ad32337b5a0c681b54388f70fd885d236}, \textbf{ sylar\+::http\+::\+Function\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1FunctionServlet_a5afa1dadb1a31c0ba295de6736c191db}, \textbf{ sylar\+::http\+::\+W\+S\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1WSServlet_aace63a58ad55a539d40a64d4de8061ca}, \textbf{ sylar\+::http\+::\+Config\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1ConfigServlet_a4cd3fc101cd59db29385ad0678c40f94} , 以及 \textbf{ sylar\+::http\+::\+Status\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1StatusServlet_aa7e8869113be987a288828c861d143fb} 内被实现.
+在 \textbf{ rock\+::http\+::\+Not\+Found\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1NotFoundServlet_ace03ccc4be4f07d990a86b4babd34c60}, \textbf{ rock\+::http\+::\+Servlet\+Dispatch} \doxyref{}{p.}{classrock_1_1http_1_1ServletDispatch_ad32337b5a0c681b54388f70fd885d236}, \textbf{ rock\+::http\+::\+Function\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1FunctionServlet_a5afa1dadb1a31c0ba295de6736c191db}, \textbf{ rock\+::http\+::\+W\+S\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1WSServlet_aace63a58ad55a539d40a64d4de8061ca}, \textbf{ rock\+::http\+::\+Config\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1ConfigServlet_a4cd3fc101cd59db29385ad0678c40f94} , 以及 \textbf{ rock\+::http\+::\+Status\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1StatusServlet_aa7e8869113be987a288828c861d143fb} 内被实现.
 
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}
+rock/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}

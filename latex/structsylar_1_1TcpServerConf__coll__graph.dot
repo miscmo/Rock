@@ -1,7 +1,7 @@
-digraph "sylar::TcpServerConf"
+digraph "rock::TcpServerConf"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::TcpServerConf\n|+ address\l+ keepalive\l+ timeout\l+ ssl\l+ id\l+ type\l+ name\l+ cert_file\l+ key_file\l+ accept_worker\l+ io_worker\l+ process_worker\l+ args\l|+ isValid()\l+ operator==()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::TcpServerConf\n|+ address\l+ keepalive\l+ timeout\l+ ssl\l+ id\l+ type\l+ name\l+ cert_file\l+ key_file\l+ accept_worker\l+ io_worker\l+ process_worker\l+ args\l|+ isValid()\l+ operator==()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

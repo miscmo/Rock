@@ -1,12 +1,12 @@
-#ifndef __SYLAR_ORM_INDEX_H__
-#define __SYLAR_ORM_INDEX_H__
+#ifndef __ROCK_ORM_INDEX_H__
+#define __ROCK_ORM_INDEX_H__
 
 #include <memory>
 #include <string>
 #include <vector>
 #include "tinyxml2.h"
 
-namespace sylar {
+namespace rock {
 namespace orm {
 
 class Index {

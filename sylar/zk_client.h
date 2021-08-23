@@ -1,5 +1,5 @@
-#ifndef __SYLAR_ZK_CLIENT_H__
-#define __SYLAR_ZK_CLIENT_H__
+#ifndef __ROCK_ZK_CLIENT_H__
+#define __ROCK_ZK_CLIENT_H__
 
 #include <memory>
 #include <functional>
@@ -13,7 +13,7 @@
 
 #include <zookeeper/zookeeper.h>
 
-namespace sylar {
+namespace rock {
 
 class ZKClient : public std::enable_shared_from_this<ZKClient> {
 public:

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::LoadBalance类 参考</title>
+<title>rock: rock::LoadBalance类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1LoadBalance.html">LoadBalance</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><a class="el" href="classrock_1_1LoadBalance.html">LoadBalance</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,19 +70,19 @@ $(function() {
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-methods">Protected 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
-<a href="classsylar_1_1LoadBalance-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1LoadBalance-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::LoadBalance类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">rock::LoadBalance类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-类 sylar::LoadBalance 继承关系图:</div>
+类 rock::LoadBalance 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div class="dynheader">
-sylar::LoadBalance 的协作图:</div>
+rock::LoadBalance 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 -->
 </div>
@@ -91,24 +91,24 @@ sylar::LoadBalance 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a250b9829030b7adb236fddb1617d80e2"><td class="memItemLeft" align="right" valign="top"><a id="a250b9829030b7adb236fddb1617d80e2"></a>
-typedef <a class="el" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
+typedef <a class="el" href="classrock_1_1RWMutex.html">rock::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
 <tr class="separator:a250b9829030b7adb236fddb1617d80e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50bb7e71bc858743f5cc39907711607f"><td class="memItemLeft" align="right" valign="top"><a id="a50bb7e71bc858743f5cc39907711607f"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1LoadBalance.html">LoadBalance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1LoadBalance.html">LoadBalance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:a50bb7e71bc858743f5cc39907711607f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classsylar_1_1ILoadBalance"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1ILoadBalance')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1ILoadBalance.html">sylar::ILoadBalance</a></td></tr>
-<tr class="memitem:a1648c1609a2007db7b2a813c915b1e43 inherit pub_types_classsylar_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a1648c1609a2007db7b2a813c915b1e43"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>ROUNDROBIN</b> = 1, 
+<tr class="inherit_header pub_types_classrock_1_1ILoadBalance"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classrock_1_1ILoadBalance')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classrock_1_1ILoadBalance.html">rock::ILoadBalance</a></td></tr>
+<tr class="memitem:a1648c1609a2007db7b2a813c915b1e43 inherit pub_types_classrock_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a1648c1609a2007db7b2a813c915b1e43"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>ROUNDROBIN</b> = 1, 
 <b>WEIGHT</b> = 2, 
 <b>FAIR</b> = 3
  }</td></tr>
-<tr class="separator:a1648c1609a2007db7b2a813c915b1e43 inherit pub_types_classsylar_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57055fc785ca178c45801b52dab36c57 inherit pub_types_classsylar_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a57055fc785ca178c45801b52dab36c57"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> { <b>NO_SERVICE</b> = -101, 
+<tr class="separator:a1648c1609a2007db7b2a813c915b1e43 inherit pub_types_classrock_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57055fc785ca178c45801b52dab36c57 inherit pub_types_classrock_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a57055fc785ca178c45801b52dab36c57"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> { <b>NO_SERVICE</b> = -101, 
 <b>NO_CONNECTION</b> = -102
  }</td></tr>
-<tr class="separator:a57055fc785ca178c45801b52dab36c57 inherit pub_types_classsylar_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f4642f8cfc71ee1f3faf30221a86ba inherit pub_types_classsylar_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a55f4642f8cfc71ee1f3faf30221a86ba"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1ILoadBalance.html">ILoadBalance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
-<tr class="separator:a55f4642f8cfc71ee1f3faf30221a86ba inherit pub_types_classsylar_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a57055fc785ca178c45801b52dab36c57 inherit pub_types_classrock_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f4642f8cfc71ee1f3faf30221a86ba inherit pub_types_classrock_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a55f4642f8cfc71ee1f3faf30221a86ba"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1ILoadBalance.html">ILoadBalance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:a55f4642f8cfc71ee1f3faf30221a86ba inherit pub_types_classrock_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -133,10 +133,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 <tr class="memitem:a8f98fa9607a3f80aa1d29d47e1815ebe"><td class="memItemLeft" align="right" valign="top"><a id="a8f98fa9607a3f80aa1d29d47e1815ebe"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>statusString</b> (const std::string &amp;prefix)</td></tr>
 <tr class="separator:a8f98fa9607a3f80aa1d29d47e1815ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classsylar_1_1ILoadBalance"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1ILoadBalance')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1ILoadBalance.html">sylar::ILoadBalance</a></td></tr>
-<tr class="memitem:a3468d59e7ffbdacbf128eaae6af4c273 inherit pub_methods_classsylar_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a3468d59e7ffbdacbf128eaae6af4c273"></a>
+<tr class="inherit_header pub_methods_classrock_1_1ILoadBalance"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrock_1_1ILoadBalance')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classrock_1_1ILoadBalance.html">rock::ILoadBalance</a></td></tr>
+<tr class="memitem:a3468d59e7ffbdacbf128eaae6af4c273 inherit pub_methods_classrock_1_1ILoadBalance"><td class="memItemLeft" align="right" valign="top"><a id="a3468d59e7ffbdacbf128eaae6af4c273"></a>
 virtual LoadBalanceItem::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (uint64_t v=-1)=0</td></tr>
-<tr class="separator:a3468d59e7ffbdacbf128eaae6af4c273 inherit pub_methods_classsylar_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3468d59e7ffbdacbf128eaae6af4c273 inherit pub_methods_classrock_1_1ILoadBalance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
@@ -150,7 +150,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkInit</b> ()</td>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:a0bb141ab056239ef4b38600805b754be"><td class="memItemLeft" align="right" valign="top"><a id="a0bb141ab056239ef4b38600805b754be"></a>
-<a class="el" href="classsylar_1_1RWMutex.html">RWMutexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
+<a class="el" href="classrock_1_1RWMutex.html">RWMutexType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
 <tr class="separator:a0bb141ab056239ef4b38600805b754be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae16202f98e659571869c2651551b78b9"><td class="memItemLeft" align="right" valign="top"><a id="ae16202f98e659571869c2651551b78b9"></a>
 std::unordered_map&lt; uint64_t, LoadBalanceItem::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_datas</b></td></tr>
@@ -160,7 +160,7 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_lastInitTime</b
 <tr class="separator:aaca4701442aead53932d8937d9d26ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/streams/<a class="el" href="load__balance_8h_source.html">load_balance.h</a></li>
+<li>rock/streams/<a class="el" href="load__balance_8h_source.html">load_balance.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

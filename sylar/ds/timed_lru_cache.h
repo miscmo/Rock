@@ -1,17 +1,17 @@
-#ifndef __SYLAR_DS_TIMED_LRU_CACHE_H__
-#define __SYLAR_DS_TIMED_LRU_CACHE_H__
+#ifndef __ROCK_DS_TIMED_LRU_CACHE_H__
+#define __ROCK_DS_TIMED_LRU_CACHE_H__
 
 #include "cache_status.h"
-#include "sylar/mutex.h"
-#include "sylar/util.h"
+#include "rock/mutex.h"
+#include "rock/util.h"
 #include <set>
 #include <list>
 #include <unordered_map>
 
-namespace sylar {
+namespace rock {
 namespace ds {
 
-template<class K, class V, class MutexType = sylar::Mutex>
+template<class K, class V, class MutexType = rock::Mutex>
 class TimedLruCache {
 private:
     struct Item {
@@ -73,12 +73,12 @@ public:
             m_keys.splice(m_keys.begin(), m_keys, it->second);
             m_timed.erase(it->second);
             it->second->val = v;
-            it->second->ts = expired + sylar::GetCurrentMS();
+            it->second->ts = expired + rock::GetCurrentMS();
             m_timed.insert(it->second);
             return;
         }
 
-        m_keys.emplace_front(Item(k, v, expired + sylar::GetCurrentMS()));
+        m_keys.emplace_front(Item(k, v, expired + rock::GetCurrentMS()));
         m_cache.insert(std::make_pair(k, m_keys.begin()));
         m_timed.insert(m_keys.begin());
         prune();
@@ -185,7 +185,7 @@ public:
         }
     }
 
-    size_t checkTimeout(const uint64_t& ts = sylar::GetCurrentMS()) {
+    size_t checkTimeout(const uint64_t& ts = rock::GetCurrentMS()) {
         size_t size = 0;
         typename MutexType::Lock lock(m_mutex);
         for(auto it = m_timed.begin();
@@ -235,7 +235,7 @@ private:
     bool m_statusOwner = false;
 };
 
-template<class K, class V, class MutexType = sylar::Mutex, class Hash = std::hash<K> >
+template<class K, class V, class MutexType = rock::Mutex, class Hash = std::hash<K> >
 class HashTimedLruCache {
 public:
     typedef std::shared_ptr<HashTimedLruCache> ptr;
@@ -353,7 +353,7 @@ public:
         return ss.str();
     }
 
-    size_t checkTimeout(const uint64_t& ts = sylar::GetCurrentMS()) {
+    size_t checkTimeout(const uint64_t& ts = rock::GetCurrentMS()) {
         size_t size = 0;
         for(auto& i : m_datas) {
             size += i->checkTimeout(ts);

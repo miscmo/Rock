@@ -1,12 +1,12 @@
-#ifndef __SYLAR_DS_CACHE_STATUS_H__
-#define __SYLAR_DS_CACHE_STATUS_H__
+#ifndef __ROCK_DS_CACHE_STATUS_H__
+#define __ROCK_DS_CACHE_STATUS_H__
 
 #include <sstream>
 #include <string>
 #include <stdint.h>
-#include "sylar/util.h"
+#include "rock/util.h"
 
-namespace sylar {
+namespace rock {
 namespace ds {
 
 class CacheStatus {

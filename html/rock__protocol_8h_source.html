@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/rock/rock_protocol.h 源文件</title>
+<title>rock: rock/rock/rock_protocol.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_85bef477dd70a83b232fc3b9b16e7c18.html">rock</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_85bef477dd70a83b232fc3b9b16e7c18.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,18 +69,18 @@ $(function() {
 <div class="title">rock_protocol.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_ROCK_ROCK_PROTOCOL_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_ROCK_ROCK_PROTOCOL_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_ROCK_ROCK_PROTOCOL_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_ROCK_ROCK_PROTOCOL_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="protocol_8h.html">sylar/protocol.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="protocol_8h.html">rock/protocol.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;google/protobuf/message.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classsylar_1_1RockBody.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockBody.html">RockBody</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classrock_1_1RockBody.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockBody.html">RockBody</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;RockBody&gt; ptr;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classsylar_1_1RockBody.html">RockBody</a>(){}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classrock_1_1RockBody.html">RockBody</a>(){}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> setBody(<span class="keyword">const</span> std::string&amp; v) { m_body = v;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> std::string&amp; getBody()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_body;}</div>
@@ -112,8 +112,8 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string m_body;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockResponse.html">RockResponse</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classsylar_1_1RockRequest.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockRequest.html">RockRequest</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1Request.html">Request</a>, <span class="keyword">public</span> <a class="code" href="classsylar_1_1RockBody.html">RockBody</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockResponse.html">RockResponse</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classrock_1_1RockRequest.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockRequest.html">RockRequest</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1Request.html">Request</a>, <span class="keyword">public</span> <a class="code" href="classrock_1_1RockBody.html">RockBody</a> {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;RockRequest&gt; ptr;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> parseFromByteArray(ByteArray::ptr bytearray) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classsylar_1_1RockResponse.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockResponse.html">RockResponse</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1Response.html">Response</a>, <span class="keyword">public</span> <a class="code" href="classsylar_1_1RockBody.html">RockBody</a> {</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classrock_1_1RockResponse.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockResponse.html">RockResponse</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1Response.html">Response</a>, <span class="keyword">public</span> <a class="code" href="classrock_1_1RockBody.html">RockBody</a> {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;RockResponse&gt; ptr;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
@@ -139,7 +139,7 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> parseFromByteArray(ByteArray::ptr bytearray) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classsylar_1_1RockNotify.html">   71</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockNotify.html">RockNotify</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1Notify.html">Notify</a>, <span class="keyword">public</span> <a class="code" href="classsylar_1_1RockBody.html">RockBody</a> {</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classrock_1_1RockNotify.html">   71</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockNotify.html">RockNotify</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1Notify.html">Notify</a>, <span class="keyword">public</span> <a class="code" href="classrock_1_1RockBody.html">RockBody</a> {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;RockNotify&gt; ptr;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
@@ -151,15 +151,15 @@ $(function() {
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> parseFromByteArray(ByteArray::ptr bytearray) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structsylar_1_1RockMsgHeader.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsylar_1_1RockMsgHeader.html">RockMsgHeader</a> {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="structsylar_1_1RockMsgHeader.html">RockMsgHeader</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structrock_1_1RockMsgHeader.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structrock_1_1RockMsgHeader.html">RockMsgHeader</a> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="structrock_1_1RockMsgHeader.html">RockMsgHeader</a>();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uint8_t magic[2];</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    uint8_t version;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    uint8_t flag;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    int32_t length;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classsylar_1_1RockMessageDecoder.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1RockMessageDecoder.html">RockMessageDecoder</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1MessageDecoder.html">MessageDecoder</a> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classrock_1_1RockMessageDecoder.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1RockMessageDecoder.html">RockMessageDecoder</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1MessageDecoder.html">MessageDecoder</a> {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;RockMessageDecoder&gt; ptr;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
@@ -171,17 +171,17 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1RockBody_html"><div class="ttname"><a href="classsylar_1_1RockBody.html">sylar::RockBody</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:9</div></div>
-<div class="ttc" id="aclasssylar_1_1Response_html"><div class="ttname"><a href="classsylar_1_1Response.html">sylar::Response</a></div><div class="ttdef"><b>Definition:</b> protocol.h:65</div></div>
-<div class="ttc" id="aclasssylar_1_1Request_html"><div class="ttname"><a href="classsylar_1_1Request.html">sylar::Request</a></div><div class="ttdef"><b>Definition:</b> protocol.h:46</div></div>
-<div class="ttc" id="aclasssylar_1_1RockMessageDecoder_html"><div class="ttname"><a href="classsylar_1_1RockMessageDecoder.html">sylar::RockMessageDecoder</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:91</div></div>
-<div class="ttc" id="aclasssylar_1_1Notify_html"><div class="ttname"><a href="classsylar_1_1Notify.html">sylar::Notify</a></div><div class="ttdef"><b>Definition:</b> protocol.h:90</div></div>
-<div class="ttc" id="aclasssylar_1_1RockRequest_html"><div class="ttname"><a href="classsylar_1_1RockRequest.html">sylar::RockRequest</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:45</div></div>
-<div class="ttc" id="astructsylar_1_1RockMsgHeader_html"><div class="ttname"><a href="structsylar_1_1RockMsgHeader.html">sylar::RockMsgHeader</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:83</div></div>
-<div class="ttc" id="aclasssylar_1_1RockResponse_html"><div class="ttname"><a href="classsylar_1_1RockResponse.html">sylar::RockResponse</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:59</div></div>
+<div class="ttc" id="aclassrock_1_1RockBody_html"><div class="ttname"><a href="classrock_1_1RockBody.html">rock::RockBody</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:9</div></div>
+<div class="ttc" id="aclassrock_1_1Response_html"><div class="ttname"><a href="classrock_1_1Response.html">rock::Response</a></div><div class="ttdef"><b>Definition:</b> protocol.h:65</div></div>
+<div class="ttc" id="aclassrock_1_1Request_html"><div class="ttname"><a href="classrock_1_1Request.html">rock::Request</a></div><div class="ttdef"><b>Definition:</b> protocol.h:46</div></div>
+<div class="ttc" id="aclassrock_1_1RockMessageDecoder_html"><div class="ttname"><a href="classrock_1_1RockMessageDecoder.html">rock::RockMessageDecoder</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:91</div></div>
+<div class="ttc" id="aclassrock_1_1Notify_html"><div class="ttname"><a href="classrock_1_1Notify.html">rock::Notify</a></div><div class="ttdef"><b>Definition:</b> protocol.h:90</div></div>
+<div class="ttc" id="aclassrock_1_1RockRequest_html"><div class="ttname"><a href="classrock_1_1RockRequest.html">rock::RockRequest</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:45</div></div>
+<div class="ttc" id="astructrock_1_1RockMsgHeader_html"><div class="ttname"><a href="structrock_1_1RockMsgHeader.html">rock::RockMsgHeader</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:83</div></div>
+<div class="ttc" id="aclassrock_1_1RockResponse_html"><div class="ttname"><a href="classrock_1_1RockResponse.html">rock::RockResponse</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:59</div></div>
 <div class="ttc" id="aprotocol_8h_html"><div class="ttname"><a href="protocol_8h.html">protocol.h</a></div><div class="ttdoc">自定义协议</div></div>
-<div class="ttc" id="aclasssylar_1_1MessageDecoder_html"><div class="ttname"><a href="classsylar_1_1MessageDecoder.html">sylar::MessageDecoder</a></div><div class="ttdef"><b>Definition:</b> protocol.h:37</div></div>
-<div class="ttc" id="aclasssylar_1_1RockNotify_html"><div class="ttname"><a href="classsylar_1_1RockNotify.html">sylar::RockNotify</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:71</div></div>
+<div class="ttc" id="aclassrock_1_1MessageDecoder_html"><div class="ttname"><a href="classrock_1_1MessageDecoder.html">rock::MessageDecoder</a></div><div class="ttdef"><b>Definition:</b> protocol.h:37</div></div>
+<div class="ttc" id="aclassrock_1_1RockNotify_html"><div class="ttname"><a href="classrock_1_1RockNotify.html">rock::RockNotify</a></div><div class="ttdef"><b>Definition:</b> rock_protocol.h:71</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

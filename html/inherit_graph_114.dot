@@ -6,17 +6,17 @@ digraph "类继承关系图"
   rankdir="LR";
   Node131 [label="Message",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node131 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="sylar::ns::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1Node.html",tooltip=" "];
+  Node0 [label="rock::ns::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1Node.html",tooltip=" "];
   Node131 -> Node133 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node133 [label="sylar::ns::NodeInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1NodeInfo.html",tooltip=" "];
+  Node133 [label="rock::ns::NodeInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1NodeInfo.html",tooltip=" "];
   Node131 -> Node134 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node134 [label="sylar::ns::NotifyMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1NotifyMessage.html",tooltip=" "];
+  Node134 [label="rock::ns::NotifyMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1NotifyMessage.html",tooltip=" "];
   Node131 -> Node135 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node135 [label="sylar::ns::QueryRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1QueryRequest.html",tooltip=" "];
+  Node135 [label="rock::ns::QueryRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1QueryRequest.html",tooltip=" "];
   Node131 -> Node136 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node136 [label="sylar::ns::QueryResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1QueryResponse.html",tooltip=" "];
+  Node136 [label="rock::ns::QueryResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1QueryResponse.html",tooltip=" "];
   Node131 -> Node137 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node137 [label="sylar::ns::RegisterInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1RegisterInfo.html",tooltip=" "];
+  Node137 [label="rock::ns::RegisterInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1RegisterInfo.html",tooltip=" "];
   Node131 -> Node138 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node138 [label="sylar::ns::RegisterRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1RegisterRequest.html",tooltip=" "];
+  Node138 [label="rock::ns::RegisterRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1RegisterRequest.html",tooltip=" "];
 }

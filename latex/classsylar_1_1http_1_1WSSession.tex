@@ -1,41 +1,41 @@
-\doxysection{sylar\+::http\+::W\+S\+Session类 参考}
-\label{classsylar_1_1http_1_1WSSession}\index{sylar::http::WSSession@{sylar::http::WSSession}}
+\doxysection{rock\+::http\+::W\+S\+Session类 参考}
+\label{classrock_1_1http_1_1WSSession}\index{rock::http::WSSession@{rock::http::WSSession}}
 
 
-类 sylar\+::http\+::W\+S\+Session 继承关系图\+:
+类 rock\+::http\+::W\+S\+Session 继承关系图\+:
 % FIG 0
 
 
-sylar\+::http\+::W\+S\+Session 的协作图\+:
+rock\+::http\+::W\+S\+Session 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_a146537545405373e65dbcef70ba9fd8c}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_a146537545405373e65dbcef70ba9fd8c}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ W\+S\+Session} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_a59f34b80c1e8043bead00058c428f1f2}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_a59f34b80c1e8043bead00058c428f1f2}} 
 {\bfseries W\+S\+Session} (Socket\+::ptr sock, bool owner=true)
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_ae43eda61ae2b17300a158c12d5dca732}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_ae43eda61ae2b17300a158c12d5dca732}} 
 \textbf{ Http\+Request\+::ptr} \textbf{ handle\+Shake} ()
 \begin{DoxyCompactList}\small\item\em server client \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_ab849defc87da6be95012dbbe91b70203}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_ab849defc87da6be95012dbbe91b70203}} 
 W\+S\+Frame\+Message\+::ptr {\bfseries recv\+Message} ()
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_a2348177e252bcb19be22e0d3000192fb}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_a2348177e252bcb19be22e0d3000192fb}} 
 int32\+\_\+t {\bfseries send\+Message} (W\+S\+Frame\+Message\+::ptr msg, bool fin=true)
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_a010adda39ed26aa32c960d09d16d5768}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_a010adda39ed26aa32c960d09d16d5768}} 
 int32\+\_\+t {\bfseries send\+Message} (const std\+::string \&msg, int32\+\_\+t opcode=\textbf{ W\+S\+Frame\+Head\+::\+T\+E\+X\+T\+\_\+\+F\+R\+A\+ME}, bool fin=true)
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_ae7639fb6658b216aeb65ba34a7a7c9d3}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_ae7639fb6658b216aeb65ba34a7a7c9d3}} 
 int32\+\_\+t {\bfseries ping} ()
 \item 
-\mbox{\label{classsylar_1_1http_1_1WSSession_a09c9ef9ac615070a7a4ea8c9cf6c2db1}} 
+\mbox{\label{classrock_1_1http_1_1WSSession_a09c9ef9ac615070a7a4ea8c9cf6c2db1}} 
 int32\+\_\+t {\bfseries pong} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
@@ -43,4 +43,4 @@ int32\+\_\+t {\bfseries pong} ()
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/ws\+\_\+session.\+h\end{DoxyCompactItemize}
+rock/http/ws\+\_\+session.\+h\end{DoxyCompactItemize}

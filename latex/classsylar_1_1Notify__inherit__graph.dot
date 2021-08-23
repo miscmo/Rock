@@ -1,11 +1,11 @@
-digraph "sylar::Notify"
+digraph "rock::Notify"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::Notify\n|# m_notify\l|+ Notify()\l+ getNotify()\l+ setNotify()\l+ serializeToByteArray()\l+ parseFromByteArray()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::Notify\n|# m_notify\l|+ Notify()\l+ getNotify()\l+ setNotify()\l+ serializeToByteArray()\l+ parseFromByteArray()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
-  Node2 [label="{sylar::Message\n||+ ~Message()\l+ toByteArray()\l+ serializeToByteArray()\l+ parseFromByteArray()\l+ toString()\l+ getName()\l+ getType()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Message.html",tooltip=" "];
+  Node2 [label="{rock::Message\n||+ ~Message()\l+ toByteArray()\l+ serializeToByteArray()\l+ parseFromByteArray()\l+ toString()\l+ getName()\l+ getType()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1Message.html",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
-  Node3 [label="{sylar::RockNotify\n||+ toString()\l+ getName()\l+ getType()\l+ serializeToByteArray()\l+ parseFromByteArray()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RockNotify.html",tooltip=" "];
+  Node3 [label="{rock::RockNotify\n||+ toString()\l+ getName()\l+ getType()\l+ serializeToByteArray()\l+ parseFromByteArray()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1RockNotify.html",tooltip=" "];
 }

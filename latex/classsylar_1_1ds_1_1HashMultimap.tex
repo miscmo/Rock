@@ -1,83 +1,83 @@
-\doxysection{sylar\+::ds\+::Hash\+Multimap$<$ K, V, Pos\+Hash $>$ 模板类 参考}
-\label{classsylar_1_1ds_1_1HashMultimap}\index{sylar::ds::HashMultimap$<$ K, V, PosHash $>$@{sylar::ds::HashMultimap$<$ K, V, PosHash $>$}}
+\doxysection{rock\+::ds\+::Hash\+Multimap$<$ K, V, Pos\+Hash $>$ 模板类 参考}
+\label{classrock_1_1ds_1_1HashMultimap}\index{rock::ds::HashMultimap$<$ K, V, PosHash $>$@{rock::ds::HashMultimap$<$ K, V, PosHash $>$}}
 
 
-sylar\+::ds\+::Hash\+Multimap$<$ K, V, Pos\+Hash $>$ 的协作图\+:
+rock\+::ds\+::Hash\+Multimap$<$ K, V, Pos\+Hash $>$ 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_af47fa378445e226072a96f302b6ca798}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_af47fa378445e226072a96f302b6ca798}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Hash\+Multimap} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_af28deacfb8790fd0ec2f65ecaafd5a96}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_af28deacfb8790fd0ec2f65ecaafd5a96}} 
 typedef std\+::function$<$ bool(const K \&k, const V $\ast$v, int)$>$ {\bfseries rcallback}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_abe8673b28120a710f4cc731947839738}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_abe8673b28120a710f4cc731947839738}} 
 typedef std\+::function$<$ bool(const K \&k, V $\ast$v, int)$>$ {\bfseries wcallback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_adb7d76961bf37cde782bae5b7c203e2c}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_adb7d76961bf37cde782bae5b7c203e2c}} 
 {\bfseries Hash\+Multimap} (const uint32\+\_\+t \&size=10)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a0f15d91efcda6fbc682b2cd4a113a500}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a0f15d91efcda6fbc682b2cd4a113a500}} 
 void {\bfseries rforeach} (rcallback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a1f8a3e9908f4d2c24cbf027c89bf50a8}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a1f8a3e9908f4d2c24cbf027c89bf50a8}} 
 void {\bfseries wforeach} (wcallback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a19e16e230c9598e140a92e4820b908b6}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a19e16e230c9598e140a92e4820b908b6}} 
 \textbf{ Shared\+Array}$<$ V $>$ {\bfseries get} (const K \&k, bool duplicate=true)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a7fdd9e5ed86ef0b338208e5e84578485}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a7fdd9e5ed86ef0b338208e5e84578485}} 
 bool {\bfseries get} (const K \&k, std\+::vector$<$ V $>$ \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a9ec258a1cd65d1f63183fda135676bfa}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a9ec258a1cd65d1f63183fda135676bfa}} 
 bool {\bfseries get} (const K \&k, V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a4c4478f89c6228f4980af51ebc122caa}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a4c4478f89c6228f4980af51ebc122caa}} 
 bool {\bfseries exists} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a13024411383feb3c9227e6f2c36c8c00}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a13024411383feb3c9227e6f2c36c8c00}} 
 bool {\bfseries exists} (const K \&k, const V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_abf5c129a107758998afad0ed93f385c0}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_abf5c129a107758998afad0ed93f385c0}} 
 bool {\bfseries insert} (const K \&k, const V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_ad9fb4312353b563263cc80419ce8df7e}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_ad9fb4312353b563263cc80419ce8df7e}} 
 bool {\bfseries insert} (const K \&k, const V $\ast$v, const uint32\+\_\+t \&size)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_acb136dadf687d4a2a83c4351dad8f240}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_acb136dadf687d4a2a83c4351dad8f240}} 
 bool {\bfseries set} (const K \&k, const V $\ast$v, const uint32\+\_\+t \&size)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a00121ff67c23c0acd49cf816a827a8d8}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a00121ff67c23c0acd49cf816a827a8d8}} 
 bool {\bfseries del} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a631f515bf2b2c6b2ed1f83c46c459413}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a631f515bf2b2c6b2ed1f83c46c459413}} 
 bool {\bfseries del} (const K \&k, const V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_aeb829767bcee42b59359e45bdf7951bd}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_aeb829767bcee42b59359e45bdf7951bd}} 
 void {\bfseries rehash} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_aa8ae0845127bcb5f28894cae06c3ab0c}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_aa8ae0845127bcb5f28894cae06c3ab0c}} 
 uint64\+\_\+t {\bfseries get\+Total} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a2f0dad4eb0cd82a71e0cf39fa83fbed7}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a2f0dad4eb0cd82a71e0cf39fa83fbed7}} 
 uint64\+\_\+t {\bfseries get\+Elements} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_ad494b1356ad07bca71a2ea56239e94b3}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_ad494b1356ad07bca71a2ea56239e94b3}} 
 std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_ab8a323719cd44b31d010d052ea18da3c}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_ab8a323719cd44b31d010d052ea18da3c}} 
 bool {\bfseries write\+To} (std\+::ostream \&os, uint64\+\_\+t speed=-\/1)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMultimap_a9f27ba3fab52d856e25107d593c32392}} 
+\mbox{\label{classrock_1_1ds_1_1HashMultimap_a9f27ba3fab52d856e25107d593c32392}} 
 bool {\bfseries read\+From} (std\+::istream \&is, uint64\+\_\+t speed=-\/1)
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/ds/hash\+\_\+multimap.\+h\end{DoxyCompactItemize}
+rock/ds/hash\+\_\+multimap.\+h\end{DoxyCompactItemize}

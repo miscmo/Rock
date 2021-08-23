@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/thread.h 源文件</title>
+<title>rock: rock/thread.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,32 +70,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="thread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_THREAD_H__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_THREAD_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __ROCK_THREAD_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __ROCK_THREAD_H__</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;mutex.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsylar_1_1Thread.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1Thread.html">Thread</a> : <a class="code" href="classsylar_1_1Noncopyable.html">Noncopyable</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classrock_1_1Thread.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1Thread.html">Thread</a> : <a class="code" href="classrock_1_1Noncopyable.html">Noncopyable</a> {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsylar_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">   22</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Thread&gt; <a class="code" href="classsylar_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">ptr</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classrock_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">   22</a></span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Thread&gt; <a class="code" href="classrock_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">ptr</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classsylar_1_1Thread.html#a21423020cfee611288713ec0fd4e5db6">Thread</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; cb, <span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classrock_1_1Thread.html#a21423020cfee611288713ec0fd4e5db6">Thread</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; cb, <span class="keyword">const</span> std::string&amp; name);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classsylar_1_1Thread.html#ae03879c4a90c8cbd70f22bb5af6e551d">~Thread</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classrock_1_1Thread.html#ae03879c4a90c8cbd70f22bb5af6e551d">~Thread</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsylar_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">   39</a></span>&#160;    pid_t <a class="code" href="classsylar_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">getId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_id;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classrock_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">   39</a></span>&#160;    pid_t <a class="code" href="classrock_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">getId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_id;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classsylar_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">   44</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classrock_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">   44</a></span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="classrock_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_name;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Thread.html#a51e83a092b106aa490dfc4ffdc47fa3d">join</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classrock_1_1Thread.html#a51e83a092b106aa490dfc4ffdc47fa3d">join</a>();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <a class="code" href="classsylar_1_1Thread.html">Thread</a>* <a class="code" href="classsylar_1_1Thread.html#aba843e09667e9aff3123d16f6139454c">GetThis</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <a class="code" href="classrock_1_1Thread.html">Thread</a>* <a class="code" href="classrock_1_1Thread.html#aba843e09667e9aff3123d16f6139454c">GetThis</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classsylar_1_1Thread.html#a6594a6c80a6494d8b1427cb8928c5d2f">GetName</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> std::string&amp; <a class="code" href="classrock_1_1Thread.html#a6594a6c80a6494d8b1427cb8928c5d2f">GetName</a>();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Thread.html#a49d86dcdd854cd850a54427c6b4f894c">SetName</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classrock_1_1Thread.html#a49d86dcdd854cd850a54427c6b4f894c">SetName</a>(<span class="keyword">const</span> std::string&amp; name);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span>* run(<span class="keywordtype">void</span>* arg);</div>
@@ -104,25 +104,25 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    pthread_t m_thread = 0;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::function&lt;void()&gt; m_cb;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string m_name;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classsylar_1_1Semaphore.html">Semaphore</a> m_semaphore;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classrock_1_1Semaphore.html">Semaphore</a> m_semaphore;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1Thread_html_a7652aca44db5914881356dcd9d161e47"><div class="ttname"><a href="classsylar_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">sylar::Thread::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdoc">线程名称</div><div class="ttdef"><b>Definition:</b> thread.h:44</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_a51e83a092b106aa490dfc4ffdc47fa3d"><div class="ttname"><a href="classsylar_1_1Thread.html#a51e83a092b106aa490dfc4ffdc47fa3d">sylar::Thread::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">等待线程执行完成</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_a49d86dcdd854cd850a54427c6b4f894c"><div class="ttname"><a href="classsylar_1_1Thread.html#a49d86dcdd854cd850a54427c6b4f894c">sylar::Thread::SetName</a></div><div class="ttdeci">static void SetName(const std::string &amp;name)</div><div class="ttdoc">设置当前线程名称</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_a6594a6c80a6494d8b1427cb8928c5d2f"><div class="ttname"><a href="classsylar_1_1Thread.html#a6594a6c80a6494d8b1427cb8928c5d2f">sylar::Thread::GetName</a></div><div class="ttdeci">static const std::string &amp; GetName()</div><div class="ttdoc">获取当前的线程名称</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_aba843e09667e9aff3123d16f6139454c"><div class="ttname"><a href="classsylar_1_1Thread.html#aba843e09667e9aff3123d16f6139454c">sylar::Thread::GetThis</a></div><div class="ttdeci">static Thread * GetThis()</div><div class="ttdoc">获取当前的线程指针</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_ae03879c4a90c8cbd70f22bb5af6e551d"><div class="ttname"><a href="classsylar_1_1Thread.html#ae03879c4a90c8cbd70f22bb5af6e551d">sylar::Thread::~Thread</a></div><div class="ttdeci">~Thread()</div><div class="ttdoc">析构函数</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_ac3f80069fd34a46d43f3deb182d0862a"><div class="ttname"><a href="classsylar_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">sylar::Thread::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Thread &gt; ptr</div><div class="ttdoc">线程智能指针类型</div><div class="ttdef"><b>Definition:</b> thread.h:22</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html"><div class="ttname"><a href="classsylar_1_1Thread.html">sylar::Thread</a></div><div class="ttdoc">线程类</div><div class="ttdef"><b>Definition:</b> thread.h:19</div></div>
-<div class="ttc" id="aclasssylar_1_1Noncopyable_html"><div class="ttname"><a href="classsylar_1_1Noncopyable.html">sylar::Noncopyable</a></div><div class="ttdoc">对象无法拷贝,赋值</div><div class="ttdef"><b>Definition:</b> noncopyable.h:17</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_a21423020cfee611288713ec0fd4e5db6"><div class="ttname"><a href="classsylar_1_1Thread.html#a21423020cfee611288713ec0fd4e5db6">sylar::Thread::Thread</a></div><div class="ttdeci">Thread(std::function&lt; void()&gt; cb, const std::string &amp;name)</div><div class="ttdoc">构造函数</div></div>
-<div class="ttc" id="aclasssylar_1_1Thread_html_ac4cce4866ea05e18c198006933398b60"><div class="ttname"><a href="classsylar_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">sylar::Thread::getId</a></div><div class="ttdeci">pid_t getId() const</div><div class="ttdoc">线程ID</div><div class="ttdef"><b>Definition:</b> thread.h:39</div></div>
-<div class="ttc" id="aclasssylar_1_1Semaphore_html"><div class="ttname"><a href="classsylar_1_1Semaphore.html">sylar::Semaphore</a></div><div class="ttdoc">信号量</div><div class="ttdef"><b>Definition:</b> mutex.h:21</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_a7652aca44db5914881356dcd9d161e47"><div class="ttname"><a href="classrock_1_1Thread.html#a7652aca44db5914881356dcd9d161e47">rock::Thread::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdoc">线程名称</div><div class="ttdef"><b>Definition:</b> thread.h:44</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_a51e83a092b106aa490dfc4ffdc47fa3d"><div class="ttname"><a href="classrock_1_1Thread.html#a51e83a092b106aa490dfc4ffdc47fa3d">rock::Thread::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">等待线程执行完成</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_a49d86dcdd854cd850a54427c6b4f894c"><div class="ttname"><a href="classrock_1_1Thread.html#a49d86dcdd854cd850a54427c6b4f894c">rock::Thread::SetName</a></div><div class="ttdeci">static void SetName(const std::string &amp;name)</div><div class="ttdoc">设置当前线程名称</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_a6594a6c80a6494d8b1427cb8928c5d2f"><div class="ttname"><a href="classrock_1_1Thread.html#a6594a6c80a6494d8b1427cb8928c5d2f">rock::Thread::GetName</a></div><div class="ttdeci">static const std::string &amp; GetName()</div><div class="ttdoc">获取当前的线程名称</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_aba843e09667e9aff3123d16f6139454c"><div class="ttname"><a href="classrock_1_1Thread.html#aba843e09667e9aff3123d16f6139454c">rock::Thread::GetThis</a></div><div class="ttdeci">static Thread * GetThis()</div><div class="ttdoc">获取当前的线程指针</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_ae03879c4a90c8cbd70f22bb5af6e551d"><div class="ttname"><a href="classrock_1_1Thread.html#ae03879c4a90c8cbd70f22bb5af6e551d">rock::Thread::~Thread</a></div><div class="ttdeci">~Thread()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_ac3f80069fd34a46d43f3deb182d0862a"><div class="ttname"><a href="classrock_1_1Thread.html#ac3f80069fd34a46d43f3deb182d0862a">rock::Thread::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Thread &gt; ptr</div><div class="ttdoc">线程智能指针类型</div><div class="ttdef"><b>Definition:</b> thread.h:22</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html"><div class="ttname"><a href="classrock_1_1Thread.html">rock::Thread</a></div><div class="ttdoc">线程类</div><div class="ttdef"><b>Definition:</b> thread.h:19</div></div>
+<div class="ttc" id="aclassrock_1_1Noncopyable_html"><div class="ttname"><a href="classrock_1_1Noncopyable.html">rock::Noncopyable</a></div><div class="ttdoc">对象无法拷贝,赋值</div><div class="ttdef"><b>Definition:</b> noncopyable.h:17</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_a21423020cfee611288713ec0fd4e5db6"><div class="ttname"><a href="classrock_1_1Thread.html#a21423020cfee611288713ec0fd4e5db6">rock::Thread::Thread</a></div><div class="ttdeci">Thread(std::function&lt; void()&gt; cb, const std::string &amp;name)</div><div class="ttdoc">构造函数</div></div>
+<div class="ttc" id="aclassrock_1_1Thread_html_ac4cce4866ea05e18c198006933398b60"><div class="ttname"><a href="classrock_1_1Thread.html#ac4cce4866ea05e18c198006933398b60">rock::Thread::getId</a></div><div class="ttdeci">pid_t getId() const</div><div class="ttdoc">线程ID</div><div class="ttdef"><b>Definition:</b> thread.h:39</div></div>
+<div class="ttc" id="aclassrock_1_1Semaphore_html"><div class="ttname"><a href="classrock_1_1Semaphore.html">rock::Semaphore</a></div><div class="ttdoc">信号量</div><div class="ttdef"><b>Definition:</b> mutex.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

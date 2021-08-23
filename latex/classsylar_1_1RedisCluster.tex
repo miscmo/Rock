@@ -1,56 +1,56 @@
-\doxysection{sylar\+::Redis\+Cluster类 参考}
-\label{classsylar_1_1RedisCluster}\index{sylar::RedisCluster@{sylar::RedisCluster}}
+\doxysection{rock\+::Redis\+Cluster类 参考}
+\label{classrock_1_1RedisCluster}\index{rock::RedisCluster@{rock::RedisCluster}}
 
 
-类 sylar\+::Redis\+Cluster 继承关系图\+:
+类 rock\+::Redis\+Cluster 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Redis\+Cluster 的协作图\+:
+rock\+::Redis\+Cluster 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_aa5396a9b19face1253e44cf677a79441}} 
+\mbox{\label{classrock_1_1RedisCluster_aa5396a9b19face1253e44cf677a79441}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Redis\+Cluster} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a59e92d5f739507656d394c650f348045}} 
+\mbox{\label{classrock_1_1RedisCluster_a59e92d5f739507656d394c650f348045}} 
 {\bfseries Redis\+Cluster} (const std\+::map$<$ std\+::string, std\+::string $>$ \&conf)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_af9cb2a6716f91ab7fa0eb17108244d05}} 
+\mbox{\label{classrock_1_1RedisCluster_af9cb2a6716f91ab7fa0eb17108244d05}} 
 virtual bool {\bfseries reconnect} ()
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_ac03fa569fe44c23e1e0e9a0440a90209}} 
+\mbox{\label{classrock_1_1RedisCluster_ac03fa569fe44c23e1e0e9a0440a90209}} 
 virtual bool {\bfseries connect} (const std\+::string \&ip, int port, uint64\+\_\+t ms=0)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a06f44b81dadfc1c138049c68bcbc778d}} 
+\mbox{\label{classrock_1_1RedisCluster_a06f44b81dadfc1c138049c68bcbc778d}} 
 virtual bool {\bfseries connect} ()
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_ad2a9ebdfd5ccfadfc028fba46f9f3b87}} 
+\mbox{\label{classrock_1_1RedisCluster_ad2a9ebdfd5ccfadfc028fba46f9f3b87}} 
 virtual bool {\bfseries set\+Timeout} (uint64\+\_\+t ms)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a7b44f0723da75d95c60cd306cf63f85f}} 
+\mbox{\label{classrock_1_1RedisCluster_a7b44f0723da75d95c60cd306cf63f85f}} 
 virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt,...)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a44137766ab1496d60e2f4802740d7da0}} 
+\mbox{\label{classrock_1_1RedisCluster_a44137766ab1496d60e2f4802740d7da0}} 
 virtual Reply\+Ptr {\bfseries cmd} (const char $\ast$fmt, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a9063501e68a0bb2f7e0d1cf00483c598}} 
+\mbox{\label{classrock_1_1RedisCluster_a9063501e68a0bb2f7e0d1cf00483c598}} 
 virtual Reply\+Ptr {\bfseries cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a2ce723f1073f34d07b1850a75a319983}} 
+\mbox{\label{classrock_1_1RedisCluster_a2ce723f1073f34d07b1850a75a319983}} 
 virtual int {\bfseries append\+Cmd} (const char $\ast$fmt,...)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a075b7e7106d44cb4fc2da87b0b49acc6}} 
+\mbox{\label{classrock_1_1RedisCluster_a075b7e7106d44cb4fc2da87b0b49acc6}} 
 virtual int {\bfseries append\+Cmd} (const char $\ast$fmt, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_a545be9b2a26808dc210855078c454e55}} 
+\mbox{\label{classrock_1_1RedisCluster_a545be9b2a26808dc210855078c454e55}} 
 virtual int {\bfseries append\+Cmd} (const std\+::vector$<$ std\+::string $>$ \&argv)
 \item 
-\mbox{\label{classsylar_1_1RedisCluster_ada5d8106f5744fddb3a52c9849cda7fa}} 
+\mbox{\label{classrock_1_1RedisCluster_ada5d8106f5744fddb3a52c9849cda7fa}} 
 virtual Reply\+Ptr {\bfseries get\+Reply} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
@@ -58,4 +58,4 @@ virtual Reply\+Ptr {\bfseries get\+Reply} ()
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/redis.\+h\end{DoxyCompactItemize}
+rock/db/redis.\+h\end{DoxyCompactItemize}

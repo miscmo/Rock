@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Log\+Appender类 参考}
-\label{classsylar_1_1LogAppender}\index{sylar::LogAppender@{sylar::LogAppender}}
+\doxysection{rock\+::Log\+Appender类 参考}
+\label{classrock_1_1LogAppender}\index{rock::LogAppender@{rock::LogAppender}}
 
 
 日志输出目标  
@@ -11,63 +11,63 @@
 
 
 
-类 sylar\+::Log\+Appender 继承关系图\+:
+类 rock\+::Log\+Appender 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Log\+Appender 的协作图\+:
+rock\+::Log\+Appender 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LogAppender_a16c4d71a72684533056b6b99feec1ed7}} 
+\mbox{\label{classrock_1_1LogAppender_a16c4d71a72684533056b6b99feec1ed7}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Log\+Appender} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1LogAppender_a69070f9de38ee21c1b3d3bd92b7e2685}} 
+\mbox{\label{classrock_1_1LogAppender_a69070f9de38ee21c1b3d3bd92b7e2685}} 
 typedef \textbf{ Spinlock} {\bfseries Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LogAppender_ae138dc2ce082f7831c2605bff9cf1d6b}} 
+\mbox{\label{classrock_1_1LogAppender_ae138dc2ce082f7831c2605bff9cf1d6b}} 
 virtual \textbf{ $\sim$\+Log\+Appender} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
 virtual void \textbf{ log} (std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$ logger, \textbf{ Log\+Level\+::\+Level} level, Log\+Event\+::ptr event)=0
 \begin{DoxyCompactList}\small\item\em 写入日志 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_a7d03db71a8d7593dc6c4de7b7c42a452}} 
+\mbox{\label{classrock_1_1LogAppender_a7d03db71a8d7593dc6c4de7b7c42a452}} 
 virtual std\+::string \textbf{ to\+Yaml\+String} ()=0
 \begin{DoxyCompactList}\small\item\em 将日志输出目标的配置转成\+Y\+A\+ML String \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_ade49666352b105396992ddd7099cabb9}} 
+\mbox{\label{classrock_1_1LogAppender_ade49666352b105396992ddd7099cabb9}} 
 void \textbf{ set\+Formatter} (Log\+Formatter\+::ptr val)
 \begin{DoxyCompactList}\small\item\em 更改日志格式器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_acdbd919ff4eb7e7f476e913fb32b82a7}} 
+\mbox{\label{classrock_1_1LogAppender_acdbd919ff4eb7e7f476e913fb32b82a7}} 
 Log\+Formatter\+::ptr \textbf{ get\+Formatter} ()
 \begin{DoxyCompactList}\small\item\em 获取日志格式器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_ae864cbcb5fedc68bf7cec1110658883a}} 
+\mbox{\label{classrock_1_1LogAppender_ae864cbcb5fedc68bf7cec1110658883a}} 
 \textbf{ Log\+Level\+::\+Level} \textbf{ get\+Level} () const
 \begin{DoxyCompactList}\small\item\em 获取日志级别 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_a71c5563fb6e44411a4ad89ad6ac1b561}} 
+\mbox{\label{classrock_1_1LogAppender_a71c5563fb6e44411a4ad89ad6ac1b561}} 
 void \textbf{ set\+Level} (\textbf{ Log\+Level\+::\+Level} val)
 \begin{DoxyCompactList}\small\item\em 设置日志级别 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LogAppender_a4e1088a64778dda4d6813275bfb763a1}} 
+\mbox{\label{classrock_1_1LogAppender_a4e1088a64778dda4d6813275bfb763a1}} 
 \textbf{ Log\+Level\+::\+Level} \textbf{ m\+\_\+level} = \textbf{ Log\+Level\+::\+D\+E\+B\+UG}
 \begin{DoxyCompactList}\small\item\em 日志级别 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_ad39f1d5bd9c5e46bb8e8bd7fe7d44a4e}} 
+\mbox{\label{classrock_1_1LogAppender_ad39f1d5bd9c5e46bb8e8bd7fe7d44a4e}} 
 bool \textbf{ m\+\_\+has\+Formatter} = false
 \begin{DoxyCompactList}\small\item\em 是否有自己的日志格式器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_a89fc441dde93af5e145e660961630918}} 
+\mbox{\label{classrock_1_1LogAppender_a89fc441dde93af5e145e660961630918}} 
 \textbf{ Mutex\+Type} \textbf{ m\+\_\+mutex}
-\begin{DoxyCompactList}\small\item\em \doxyref{Mutex}{p.}{classsylar_1_1Mutex} \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogAppender_a6174f622ce2f4d687612912dcb427dd5}} 
+\begin{DoxyCompactList}\small\item\em \doxyref{Mutex}{p.}{classrock_1_1Mutex} \end{DoxyCompactList}\item 
+\mbox{\label{classrock_1_1LogAppender_a6174f622ce2f4d687612912dcb427dd5}} 
 Log\+Formatter\+::ptr \textbf{ m\+\_\+formatter}
 \begin{DoxyCompactList}\small\item\em 日志格式器 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LogAppender_aff02b76416d2846736b7ecd798921a0a}} 
+\mbox{\label{classrock_1_1LogAppender_aff02b76416d2846736b7ecd798921a0a}} 
 class {\bfseries Logger}
 \end{DoxyCompactItemize}
 
@@ -76,11 +76,11 @@ class {\bfseries Logger}
 日志输出目标 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1LogAppender_ad49c2fa9abee897253b493323c47fcdd}} 
-\index{sylar::LogAppender@{sylar::LogAppender}!log@{log}}
-\index{log@{log}!sylar::LogAppender@{sylar::LogAppender}}
+\mbox{\label{classrock_1_1LogAppender_ad49c2fa9abee897253b493323c47fcdd}} 
+\index{rock::LogAppender@{rock::LogAppender}!log@{log}}
+\index{log@{log}!rock::LogAppender@{rock::LogAppender}}
 \doxysubsubsection{log()}
-{\footnotesize\ttfamily virtual void sylar\+::\+Log\+Appender\+::log (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$}]{logger,  }\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void rock\+::\+Log\+Appender\+::log (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$}]{logger,  }\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -99,4 +99,4 @@ class {\bfseries Logger}
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ log.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ log.\+h}\end{DoxyCompactItemize}

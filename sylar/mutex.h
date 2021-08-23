@@ -1,5 +1,5 @@
-#ifndef __SYLAR_MUTEX_H__
-#define __SYLAR_MUTEX_H__
+#ifndef __ROCK_MUTEX_H__
+#define __ROCK_MUTEX_H__
 
 #include <thread>
 #include <functional>
@@ -13,7 +13,7 @@
 #include "noncopyable.h"
 #include "fiber.h"
 
-namespace sylar {
+namespace rock {
 
 /**
  * @brief 信号量

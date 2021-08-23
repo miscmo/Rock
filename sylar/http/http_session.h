@@ -1,19 +1,19 @@
 /**
  * @file http_session.h
  * @brief HTTPSession封装
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-06-07
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
 
-#ifndef __SYLAR_HTTP_SESSION_H__
-#define __SYLAR_HTTP_SESSION_H__
+#ifndef __ROCK_HTTP_SESSION_H__
+#define __ROCK_HTTP_SESSION_H__
 
-#include "sylar/streams/socket_stream.h"
+#include "rock/streams/socket_stream.h"
 #include "http.h"
 
-namespace sylar {
+namespace rock {
 namespace http {
 
 /**

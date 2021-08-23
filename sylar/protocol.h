@@ -1,19 +1,19 @@
 /**
  * @file protocol.h
  * @brief 自定义协议
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-07-03
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_PROTOCOL_H__
-#define __SYLAR_PROTOCOL_H__
+#ifndef __ROCK_PROTOCOL_H__
+#define __ROCK_PROTOCOL_H__
 
 #include <memory>
-#include "sylar/stream.h"
-#include "sylar/bytearray.h"
+#include "rock/stream.h"
+#include "rock/bytearray.h"
 
-namespace sylar {
+namespace rock {
 
 class Message {
 public:

@@ -1,13 +1,13 @@
 /**
  * @file crypto_util.h
  * @brief 加解密工具函数
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-07-02
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_UTIL_CRYPTO_UTIL_H__
-#define __SYLAR_UTIL_CRYPTO_UTIL_H__
+#ifndef __ROCK_UTIL_CRYPTO_UTIL_H__
+#define __ROCK_UTIL_CRYPTO_UTIL_H__
 
 #include <openssl/ssl.h>
 #include <openssl/evp.h>
@@ -15,7 +15,7 @@
 #include <memory>
 #include <string>
 
-namespace sylar {
+namespace rock {
 
 class CryptoUtil {
 public:

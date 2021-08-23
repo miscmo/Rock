@@ -1,5 +1,5 @@
-\doxysection{sylar/macro.h 文件参考}
-\label{macro_8h}\index{sylar/macro.h@{sylar/macro.h}}
+\doxysection{rock/macro.h 文件参考}
+\label{macro_8h}\index{rock/macro.h@{rock/macro.h}}
 
 
 常用宏的封装  
@@ -32,29 +32,29 @@ macro.\+h 的引用(Include)关系图\+:
 常用宏的封装 
 
 \begin{DoxyAuthor}{作者}
-sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+rock.\+yin @email {\texttt{ 564628276@qq.\+com}} 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日期}
 2019-\/06-\/01 
 \end{DoxyDate}
 \begin{DoxyCopyright}{版权所有}
-Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+Copyright (c) 2019年 rock.\+yin All rights reserved (www.\+rock.\+top) 
 \end{DoxyCopyright}
 
 
 \doxysubsection{宏定义说明}
 \mbox{\label{macro_8h_a8a2348af23f3f851e5d82627eff1ee44}} 
-\index{macro.h@{macro.h}!SYLAR\_ASSERT@{SYLAR\_ASSERT}}
-\index{SYLAR\_ASSERT@{SYLAR\_ASSERT}!macro.h@{macro.h}}
-\doxysubsubsection{SYLAR\_ASSERT}
+\index{macro.h@{macro.h}!ROCK\_ASSERT@{ROCK\_ASSERT}}
+\index{ROCK\_ASSERT@{ROCK\_ASSERT}!macro.h@{macro.h}}
+\doxysubsubsection{ROCK\_ASSERT}
 {\footnotesize\ttfamily \#define S\+Y\+L\+A\+R\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
 
 {\bfseries 值\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{if}(SYLAR\_UNLIKELY(!(x))) \{ \(\backslash\)}
-\DoxyCodeLine{        SYLAR\_LOG\_ERROR(SYLAR\_LOG\_ROOT()) << \textcolor{stringliteral}{"ASSERTION: "} \#x \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(ROCK\_UNLIKELY(!(x))) \{ \(\backslash\)}
+\DoxyCodeLine{        ROCK\_LOG\_ERROR(ROCK\_LOG\_ROOT()) << \textcolor{stringliteral}{"ASSERTION: "} \#x \(\backslash\)}
 \DoxyCodeLine{            << \textcolor{stringliteral}{"\(\backslash\)nbacktrace:\(\backslash\)n"} \(\backslash\)}
-\DoxyCodeLine{            << sylar::BacktraceToString(100, 2, \textcolor{stringliteral}{"    "}); \(\backslash\)}
+\DoxyCodeLine{            << rock::BacktraceToString(100, 2, \textcolor{stringliteral}{"    "}); \(\backslash\)}
 \DoxyCodeLine{        assert(x); \(\backslash\)}
 \DoxyCodeLine{    \}}
 
@@ -64,18 +64,18 @@ Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top)
 断言宏封装 
 
 \mbox{\label{macro_8h_a1d827e5ee32bdf91a8c67a846c2208fb}} 
-\index{macro.h@{macro.h}!SYLAR\_ASSERT2@{SYLAR\_ASSERT2}}
-\index{SYLAR\_ASSERT2@{SYLAR\_ASSERT2}!macro.h@{macro.h}}
-\doxysubsubsection{SYLAR\_ASSERT2}
+\index{macro.h@{macro.h}!ROCK\_ASSERT2@{ROCK\_ASSERT2}}
+\index{ROCK\_ASSERT2@{ROCK\_ASSERT2}!macro.h@{macro.h}}
+\doxysubsubsection{ROCK\_ASSERT2}
 {\footnotesize\ttfamily \#define S\+Y\+L\+A\+R\+\_\+\+A\+S\+S\+E\+R\+T2(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{w }\end{DoxyParamCaption})}
 
 {\bfseries 值\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{    \textcolor{keywordflow}{if}(SYLAR\_UNLIKELY(!(x))) \{ \(\backslash\)}
-\DoxyCodeLine{        SYLAR\_LOG\_ERROR(SYLAR\_LOG\_ROOT()) << \textcolor{stringliteral}{"ASSERTION: "} \#x \(\backslash\)}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(ROCK\_UNLIKELY(!(x))) \{ \(\backslash\)}
+\DoxyCodeLine{        ROCK\_LOG\_ERROR(ROCK\_LOG\_ROOT()) << \textcolor{stringliteral}{"ASSERTION: "} \#x \(\backslash\)}
 \DoxyCodeLine{            << \textcolor{stringliteral}{"\(\backslash\)n"} << w \(\backslash\)}
 \DoxyCodeLine{            << \textcolor{stringliteral}{"\(\backslash\)nbacktrace:\(\backslash\)n"} \(\backslash\)}
-\DoxyCodeLine{            << sylar::BacktraceToString(100, 2, \textcolor{stringliteral}{"    "}); \(\backslash\)}
+\DoxyCodeLine{            << rock::BacktraceToString(100, 2, \textcolor{stringliteral}{"    "}); \(\backslash\)}
 \DoxyCodeLine{        assert(x); \(\backslash\)}
 \DoxyCodeLine{    \}}
 

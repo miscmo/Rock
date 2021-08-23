@@ -1,7 +1,7 @@
 #include "socket_stream.h"
-#include "sylar/util.h"
+#include "rock/util.h"
 
-namespace sylar {
+namespace rock {
 
 SocketStream::SocketStream(Socket::ptr sock, bool owner)
     :m_socket(sock)

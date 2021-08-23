@@ -1,63 +1,63 @@
-\doxysection{sylar\+::My\+S\+Q\+L\+Transaction类 参考}
-\label{classsylar_1_1MySQLTransaction}\index{sylar::MySQLTransaction@{sylar::MySQLTransaction}}
+\doxysection{rock\+::My\+S\+Q\+L\+Transaction类 参考}
+\label{classrock_1_1MySQLTransaction}\index{rock::MySQLTransaction@{rock::MySQLTransaction}}
 
 
-类 sylar\+::My\+S\+Q\+L\+Transaction 继承关系图\+:
+类 rock\+::My\+S\+Q\+L\+Transaction 继承关系图\+:
 % FIG 0
 
 
-sylar\+::My\+S\+Q\+L\+Transaction 的协作图\+:
+rock\+::My\+S\+Q\+L\+Transaction 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a736fb39ede0060831724af2296db2033}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a736fb39ede0060831724af2296db2033}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+Q\+L\+Transaction} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_ac1ad5776f69d46d12a271bd6a391a564}} 
+\mbox{\label{classrock_1_1MySQLTransaction_ac1ad5776f69d46d12a271bd6a391a564}} 
 bool {\bfseries begin} () override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_ab278f903fd290b73e570811598443910}} 
+\mbox{\label{classrock_1_1MySQLTransaction_ab278f903fd290b73e570811598443910}} 
 bool {\bfseries commit} () override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a4d9004ba4b9d55d462cdd45784d625a6}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a4d9004ba4b9d55d462cdd45784d625a6}} 
 bool {\bfseries rollback} () override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a8d553922b3338853163ca75f79db8697}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a8d553922b3338853163ca75f79db8697}} 
 virtual int {\bfseries execute} (const char $\ast$format,...) override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a87b7ab0e84b8b0f8806171defe2f83c6}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a87b7ab0e84b8b0f8806171defe2f83c6}} 
 int {\bfseries execute} (const char $\ast$format, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a584c05608dd8c710e585e6d7ab55291f}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a584c05608dd8c710e585e6d7ab55291f}} 
 virtual int {\bfseries execute} (const std\+::string \&sql) override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_ae8cce2eb69ccbbfdb1cc4dee97eec66b}} 
+\mbox{\label{classrock_1_1MySQLTransaction_ae8cce2eb69ccbbfdb1cc4dee97eec66b}} 
 int64\+\_\+t {\bfseries get\+Last\+Insert\+Id} () override
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_aa3c10e4679180b1226084e8be346209d}} 
+\mbox{\label{classrock_1_1MySQLTransaction_aa3c10e4679180b1226084e8be346209d}} 
 std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+QL} $>$ {\bfseries get\+My\+S\+QL} ()
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_aa627078dee82bf0868e0faba73c1ac3f}} 
+\mbox{\label{classrock_1_1MySQLTransaction_aa627078dee82bf0868e0faba73c1ac3f}} 
 bool {\bfseries is\+Auto\+Commit} () const
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a5187428e700ca33ef885ba63f4710f9b}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a5187428e700ca33ef885ba63f4710f9b}} 
 bool {\bfseries is\+Finished} () const
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a4226cec7d428e283c432bd53267cc239}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a4226cec7d428e283c432bd53267cc239}} 
 bool {\bfseries is\+Error} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQLTransaction_a1291f415fc51fed7125b9f5aeb4fe74e}} 
+\mbox{\label{classrock_1_1MySQLTransaction_a1291f415fc51fed7125b9f5aeb4fe74e}} 
 static My\+S\+Q\+L\+Transaction\+::ptr {\bfseries Create} (My\+S\+Q\+L\+::ptr mysql, bool auto\+\_\+commit)
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/mysql.\+h\end{DoxyCompactItemize}
+rock/db/mysql.\+h\end{DoxyCompactItemize}

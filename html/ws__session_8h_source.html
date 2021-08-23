@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/http/ws_session.h 源文件</title>
+<title>rock: rock/http/ws_session.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,25 +69,25 @@ $(function() {
 <div class="title">ws_session.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_HTTP_WS_SESSION_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_HTTP_WS_SESSION_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_HTTP_WS_SESSION_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_HTTP_WS_SESSION_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">sylar/config.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http__session_8h.html">sylar/http/http_session.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">rock/config.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http__session_8h.html">rock/http/http_session.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>http {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma pack(1)</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structsylar_1_1http_1_1WSFrameHead.html">WSFrameHead</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">   13</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">OPCODE</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">   15</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">CONTINUE</a> = 0,</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">   17</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">TEXT_FRAME</a> = 1,</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">   19</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">BIN_FRAME</a> = 2,</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">   21</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">CLOSE</a> = 8,</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">   23</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">PING</a> = 0x9,</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">   25</a></span>&#160;        <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">PONG</a> = 0xA</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structrock_1_1http_1_1WSFrameHead.html">WSFrameHead</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">   13</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">OPCODE</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">   15</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">CONTINUE</a> = 0,</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">   17</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">TEXT_FRAME</a> = 1,</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">   19</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">BIN_FRAME</a> = 2,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">   21</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">CLOSE</a> = 8,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">   23</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">PING</a> = 0x9,</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">   25</a></span>&#160;        <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">PONG</a> = 0xA</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    uint32_t opcode: 4;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> rsv3: 1;</div>
@@ -101,10 +101,10 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#pragma pack()</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSFrameMessage.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSFrameMessage.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSFrameMessage&gt; ptr;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classsylar_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a>(<span class="keywordtype">int</span> opcode = 0, <span class="keyword">const</span> std::string&amp; data = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classrock_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a>(<span class="keywordtype">int</span> opcode = 0, <span class="keyword">const</span> std::string&amp; data = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> getOpcode()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_opcode;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> setOpcode(<span class="keywordtype">int</span> v) { m_opcode = v;}</div>
@@ -117,16 +117,16 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string m_data;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSSession.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1WSSession.html">WSSession</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1HttpSession.html">HttpSession</a> {</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSSession.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1WSSession.html">WSSession</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1http_1_1HttpSession.html">HttpSession</a> {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSSession&gt; <a class="code" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">ptr</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classsylar_1_1http_1_1WSSession.html">WSSession</a>(Socket::ptr sock, <span class="keywordtype">bool</span> owner = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSSession&gt; <a class="code" href="classrock_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">ptr</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classrock_1_1http_1_1WSSession.html">WSSession</a>(Socket::ptr sock, <span class="keywordtype">bool</span> owner = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> <a class="code" href="classsylar_1_1http_1_1WSSession.html#ae43eda61ae2b17300a158c12d5dca732">handleShake</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> <a class="code" href="classrock_1_1http_1_1WSSession.html#ae43eda61ae2b17300a158c12d5dca732">handleShake</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    WSFrameMessage::ptr recvMessage();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    int32_t sendMessage(WSFrameMessage::ptr msg, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    int32_t sendMessage(<span class="keyword">const</span> std::string&amp; msg, int32_t opcode = <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">WSFrameHead::TEXT_FRAME</a>, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    int32_t sendMessage(<span class="keyword">const</span> std::string&amp; msg, int32_t opcode = <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">WSFrameHead::TEXT_FRAME</a>, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    int32_t ping();</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    int32_t pong();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
@@ -134,34 +134,34 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> handleClientShake();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> sylar::ConfigVar&lt;uint32_t&gt;::ptr g_websocket_message_max_size;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;WSFrameMessage::ptr WSRecvMessage(<a class="code" href="classsylar_1_1Stream.html">Stream</a>* stream, <span class="keywordtype">bool</span> client);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;int32_t WSSendMessage(<a class="code" href="classsylar_1_1Stream.html">Stream</a>* stream, WSFrameMessage::ptr msg, <span class="keywordtype">bool</span> client, <span class="keywordtype">bool</span> fin);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;int32_t WSPing(<a class="code" href="classsylar_1_1Stream.html">Stream</a>* stream);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;int32_t WSPong(<a class="code" href="classsylar_1_1Stream.html">Stream</a>* stream);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> rock::ConfigVar&lt;uint32_t&gt;::ptr g_websocket_message_max_size;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;WSFrameMessage::ptr WSRecvMessage(<a class="code" href="classrock_1_1Stream.html">Stream</a>* stream, <span class="keywordtype">bool</span> client);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;int32_t WSSendMessage(<a class="code" href="classrock_1_1Stream.html">Stream</a>* stream, WSFrameMessage::ptr msg, <span class="keywordtype">bool</span> client, <span class="keywordtype">bool</span> fin);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;int32_t WSPing(<a class="code" href="classrock_1_1Stream.html">Stream</a>* stream);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;int32_t WSPong(<a class="code" href="classrock_1_1Stream.html">Stream</a>* stream);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpSession_html"><div class="ttname"><a href="classsylar_1_1http_1_1HttpSession.html">sylar::http::HttpSession</a></div><div class="ttdoc">HTTPSession封装</div><div class="ttdef"><b>Definition:</b> http_session.h:22</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">sylar::http::WSFrameHead::PONG</a></div><div class="ttdeci">@ PONG</div><div class="ttdoc">PONG</div><div class="ttdef"><b>Definition:</b> ws_session.h:25</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html">sylar::http::WSFrameHead</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:12</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">sylar::http::WSFrameHead::TEXT_FRAME</a></div><div class="ttdeci">@ TEXT_FRAME</div><div class="ttdoc">文本帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:17</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">sylar::http::WSFrameHead::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">断开连接</div><div class="ttdef"><b>Definition:</b> ws_session.h:21</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">sylar::http::WSFrameHead::CONTINUE</a></div><div class="ttdeci">@ CONTINUE</div><div class="ttdoc">数据分片帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:15</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">sylar::http::WSFrameHead::PING</a></div><div class="ttdeci">@ PING</div><div class="ttdoc">PING</div><div class="ttdef"><b>Definition:</b> ws_session.h:23</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSSession_html_ae43eda61ae2b17300a158c12d5dca732"><div class="ttname"><a href="classsylar_1_1http_1_1WSSession.html#ae43eda61ae2b17300a158c12d5dca732">sylar::http::WSSession::handleShake</a></div><div class="ttdeci">HttpRequest::ptr handleShake()</div><div class="ttdoc">server client</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpSession_html"><div class="ttname"><a href="classrock_1_1http_1_1HttpSession.html">rock::http::HttpSession</a></div><div class="ttdoc">HTTPSession封装</div><div class="ttdef"><b>Definition:</b> http_session.h:22</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda22d88dec4d1bfc5e60906142dcab82ae">rock::http::WSFrameHead::PONG</a></div><div class="ttdeci">@ PONG</div><div class="ttdoc">PONG</div><div class="ttdef"><b>Definition:</b> ws_session.h:25</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html">rock::http::WSFrameHead</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:12</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">rock::http::WSFrameHead::TEXT_FRAME</a></div><div class="ttdeci">@ TEXT_FRAME</div><div class="ttdoc">文本帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:17</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda3faf691a3a058399248f6741a77ca4be">rock::http::WSFrameHead::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">断开连接</div><div class="ttdef"><b>Definition:</b> ws_session.h:21</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda61e23431ff927e8b83ff3fc596c0f245">rock::http::WSFrameHead::CONTINUE</a></div><div class="ttdeci">@ CONTINUE</div><div class="ttdoc">数据分片帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:15</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda707e41d75e493b54e2521176e75f4613">rock::http::WSFrameHead::PING</a></div><div class="ttdeci">@ PING</div><div class="ttdoc">PING</div><div class="ttdef"><b>Definition:</b> ws_session.h:23</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSSession_html_ae43eda61ae2b17300a158c12d5dca732"><div class="ttname"><a href="classrock_1_1http_1_1WSSession.html#ae43eda61ae2b17300a158c12d5dca732">rock::http::WSSession::handleShake</a></div><div class="ttdeci">HttpRequest::ptr handleShake()</div><div class="ttdoc">server client</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpSession_html_aa4a912ed5c1f8eaacabc9c6a499058cf"><div class="ttname"><a href="classrock_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">rock::http::HttpSession::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpSession &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> http_session.h:25</div></div>
 <div class="ttc" id="ahttp__session_8h_html"><div class="ttname"><a href="http__session_8h.html">http_session.h</a></div><div class="ttdoc">HTTPSession封装</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">sylar::http::WSFrameHead::BIN_FRAME</a></div><div class="ttdeci">@ BIN_FRAME</div><div class="ttdoc">二进制帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:19</div></div>
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cd"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">sylar::http::WSFrameHead::OPCODE</a></div><div class="ttdeci">OPCODE</div><div class="ttdef"><b>Definition:</b> ws_session.h:13</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html"><div class="ttname"><a href="classsylar_1_1Stream.html">sylar::Stream</a></div><div class="ttdoc">流结构</div><div class="ttdef"><b>Definition:</b> stream.h:20</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda507e49b1c2c0b8cb795b562bd6613a11">rock::http::WSFrameHead::BIN_FRAME</a></div><div class="ttdeci">@ BIN_FRAME</div><div class="ttdoc">二进制帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:19</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cd"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cd">rock::http::WSFrameHead::OPCODE</a></div><div class="ttdeci">OPCODE</div><div class="ttdef"><b>Definition:</b> ws_session.h:13</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpRequest_html_a04b3c9ae1818394b618e602b3ba835b8"><div class="ttname"><a href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; ptr</div><div class="ttdoc">HTTP请求的智能指针</div><div class="ttdef"><b>Definition:</b> http.h:240</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html"><div class="ttname"><a href="classrock_1_1Stream.html">rock::Stream</a></div><div class="ttdoc">流结构</div><div class="ttdef"><b>Definition:</b> stream.h:20</div></div>
 <div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div><div class="ttdoc">配置模块</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSSession_html"><div class="ttname"><a href="classsylar_1_1http_1_1WSSession.html">sylar::http::WSSession</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:55</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSFrameMessage_html"><div class="ttname"><a href="classsylar_1_1http_1_1WSFrameMessage.html">sylar::http::WSFrameMessage</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:39</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSSession_html"><div class="ttname"><a href="classrock_1_1http_1_1WSSession.html">rock::http::WSSession</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:55</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSFrameMessage_html"><div class="ttname"><a href="classrock_1_1http_1_1WSFrameMessage.html">rock::http::WSFrameMessage</a></div><div class="ttdef"><b>Definition:</b> ws_session.h:39</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

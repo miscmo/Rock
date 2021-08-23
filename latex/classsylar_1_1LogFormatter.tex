@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Log\+Formatter类 参考}
-\label{classsylar_1_1LogFormatter}\index{sylar::LogFormatter@{sylar::LogFormatter}}
+\doxysection{rock\+::Log\+Formatter类 参考}
+\label{classrock_1_1LogFormatter}\index{rock::LogFormatter@{rock::LogFormatter}}
 
 
 日志格式化  
@@ -11,7 +11,7 @@
 
 
 
-sylar\+::Log\+Formatter 的协作图\+:
+rock\+::Log\+Formatter 的协作图\+:
 % FIG 0
 \doxysubsection*{类}
 \begin{DoxyCompactItemize}
@@ -21,7 +21,7 @@ class \textbf{ Format\+Item}
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1LogFormatter_a6968c960b5bed4e57badb54afd45c5e5}} 
+\mbox{\label{classrock_1_1LogFormatter_a6968c960b5bed4e57badb54afd45c5e5}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Log\+Formatter} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -31,16 +31,16 @@ typedef std\+::shared\+\_\+ptr$<$ \textbf{ Log\+Formatter} $>$ {\bfseries ptr}
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
 std\+::string \textbf{ format} (std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$ logger, \textbf{ Log\+Level\+::\+Level} level, Log\+Event\+::ptr event)
 \begin{DoxyCompactList}\small\item\em 返回格式化日志文本 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogFormatter_ab2b04c847351b5ae1396f805f26178d2}} 
+\mbox{\label{classrock_1_1LogFormatter_ab2b04c847351b5ae1396f805f26178d2}} 
 std\+::ostream \& {\bfseries format} (std\+::ostream \&ofs, std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$ logger, \textbf{ Log\+Level\+::\+Level} level, Log\+Event\+::ptr event)
 \item 
-\mbox{\label{classsylar_1_1LogFormatter_a84b8213e503570f4de1655028f7debf3}} 
+\mbox{\label{classrock_1_1LogFormatter_a84b8213e503570f4de1655028f7debf3}} 
 void \textbf{ init} ()
 \begin{DoxyCompactList}\small\item\em 初始化,解析日志模板 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogFormatter_a89c12e29d7cf73a3d93a98fd53683801}} 
+\mbox{\label{classrock_1_1LogFormatter_a89c12e29d7cf73a3d93a98fd53683801}} 
 bool \textbf{ is\+Error} () const
 \begin{DoxyCompactList}\small\item\em 是否有错误 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1LogFormatter_a283df40ecc8dbbc9a36d3f6dab739eb2}} 
+\mbox{\label{classrock_1_1LogFormatter_a283df40ecc8dbbc9a36d3f6dab739eb2}} 
 const std\+::string \textbf{ get\+Pattern} () const
 \begin{DoxyCompactList}\small\item\em 返回日志模板 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -49,11 +49,11 @@ const std\+::string \textbf{ get\+Pattern} () const
 日志格式化 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1LogFormatter_a939b4a2513ad3f27736346f06775369d}} 
-\index{sylar::LogFormatter@{sylar::LogFormatter}!LogFormatter@{LogFormatter}}
-\index{LogFormatter@{LogFormatter}!sylar::LogFormatter@{sylar::LogFormatter}}
+\mbox{\label{classrock_1_1LogFormatter_a939b4a2513ad3f27736346f06775369d}} 
+\index{rock::LogFormatter@{rock::LogFormatter}!LogFormatter@{LogFormatter}}
+\index{LogFormatter@{LogFormatter}!rock::LogFormatter@{rock::LogFormatter}}
 \doxysubsubsection{LogFormatter()}
-{\footnotesize\ttfamily sylar\+::\+Log\+Formatter\+::\+Log\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Log\+Formatter\+::\+Log\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern }\end{DoxyParamCaption})}
 
 
 
@@ -69,11 +69,11 @@ m 消息 p 日志级别 r 累计毫秒数 c 日志名称 t 线程id n 换行 d �
 默认格式 \char`\"{}\%d\{\%\+Y-\/\%m-\/\%d \%\+H\+:\%\+M\+:\%\+S\}\%\+T\%t\%\+T\%\+N\%\+T\%\+F\%\+T[\%p]\%\+T[\%c]\%\+T\%f\+:\%l\%\+T\%m\%n\char`\"{} 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1LogFormatter_a83b31fbad9724e424a9e2d327698311d}} 
-\index{sylar::LogFormatter@{sylar::LogFormatter}!format@{format}}
-\index{format@{format}!sylar::LogFormatter@{sylar::LogFormatter}}
+\mbox{\label{classrock_1_1LogFormatter_a83b31fbad9724e424a9e2d327698311d}} 
+\index{rock::LogFormatter@{rock::LogFormatter}!format@{format}}
+\index{format@{format}!rock::LogFormatter@{rock::LogFormatter}}
 \doxysubsubsection{format()}
-{\footnotesize\ttfamily std\+::string sylar\+::\+Log\+Formatter\+::format (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$}]{logger,  }\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string rock\+::\+Log\+Formatter\+::format (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$}]{logger,  }\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -92,4 +92,4 @@ m 消息 p 日志级别 r 累计毫秒数 c 日志名称 t 线程id n 换行 d �
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ log.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ log.\+h}\end{DoxyCompactItemize}

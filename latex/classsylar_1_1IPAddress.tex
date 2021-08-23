@@ -1,5 +1,5 @@
-\doxysection{sylar\+::I\+P\+Address类 参考}
-\label{classsylar_1_1IPAddress}\index{sylar::IPAddress@{sylar::IPAddress}}
+\doxysection{rock\+::I\+P\+Address类 参考}
+\label{classrock_1_1IPAddress}\index{rock::IPAddress@{rock::IPAddress}}
 
 
 I\+P地址的基类  
@@ -11,16 +11,16 @@ I\+P地址的基类
 
 
 
-类 sylar\+::I\+P\+Address 继承关系图\+:
+类 rock\+::I\+P\+Address 继承关系图\+:
 % FIG 0
 
 
-sylar\+::I\+P\+Address 的协作图\+:
+rock\+::I\+P\+Address 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IPAddress_adb22b1f7bf8ceaa2d77ad8d1023f1607}} 
+\mbox{\label{classrock_1_1IPAddress_adb22b1f7bf8ceaa2d77ad8d1023f1607}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+P\+Address} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -32,10 +32,10 @@ virtual I\+P\+Address\+::ptr \textbf{ netword\+Address} (uint32\+\_\+t prefix\+\
 \begin{DoxyCompactList}\small\item\em 获取该地址的网段 \end{DoxyCompactList}\item 
 virtual I\+P\+Address\+::ptr \textbf{ subnet\+Mask} (uint32\+\_\+t prefix\+\_\+len)=0
 \begin{DoxyCompactList}\small\item\em 获取子网掩码地址 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IPAddress_ada5ccf28a743e84af846b3894d989d63}} 
+\mbox{\label{classrock_1_1IPAddress_ada5ccf28a743e84af846b3894d989d63}} 
 virtual uint32\+\_\+t \textbf{ get\+Port} () const =0
 \begin{DoxyCompactList}\small\item\em 返回端口号 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IPAddress_ae52770ba76f3b0935e977fcd4c3f9b99}} 
+\mbox{\label{classrock_1_1IPAddress_ae52770ba76f3b0935e977fcd4c3f9b99}} 
 virtual void \textbf{ set\+Port} (uint16\+\_\+t v)=0
 \begin{DoxyCompactList}\small\item\em 设置端口号 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
@@ -49,11 +49,11 @@ static I\+P\+Address\+::ptr \textbf{ Create} (const char $\ast$address, uint16\+
 I\+P地址的基类 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1IPAddress_a49d8c17af40e1a300f0edfcfe7271146}} 
-\index{sylar::IPAddress@{sylar::IPAddress}!broadcastAddress@{broadcastAddress}}
-\index{broadcastAddress@{broadcastAddress}!sylar::IPAddress@{sylar::IPAddress}}
+\mbox{\label{classrock_1_1IPAddress_a49d8c17af40e1a300f0edfcfe7271146}} 
+\index{rock::IPAddress@{rock::IPAddress}!broadcastAddress@{broadcastAddress}}
+\index{broadcastAddress@{broadcastAddress}!rock::IPAddress@{rock::IPAddress}}
 \doxysubsubsection{broadcastAddress()}
-{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr sylar\+::\+I\+P\+Address\+::broadcast\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr rock\+::\+I\+P\+Address\+::broadcast\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -69,13 +69,13 @@ I\+P地址的基类
 \end{DoxyReturn}
 
 
-在 \textbf{ sylar\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classsylar_1_1IPv6Address_a5b89d863332102f1a0328c885ee11394} , 以及 \textbf{ sylar\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classsylar_1_1IPv4Address_ae27c1b563a4f645cb246c9e11784d6ec} 内被实现.
+在 \textbf{ rock\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classrock_1_1IPv6Address_a5b89d863332102f1a0328c885ee11394} , 以及 \textbf{ rock\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classrock_1_1IPv4Address_ae27c1b563a4f645cb246c9e11784d6ec} 内被实现.
 
-\mbox{\label{classsylar_1_1IPAddress_aa49189aab606d180a9d913822a14331e}} 
-\index{sylar::IPAddress@{sylar::IPAddress}!Create@{Create}}
-\index{Create@{Create}!sylar::IPAddress@{sylar::IPAddress}}
+\mbox{\label{classrock_1_1IPAddress_aa49189aab606d180a9d913822a14331e}} 
+\index{rock::IPAddress@{rock::IPAddress}!Create@{Create}}
+\index{Create@{Create}!rock::IPAddress@{rock::IPAddress}}
 \doxysubsubsection{Create()}
-{\footnotesize\ttfamily static I\+P\+Address\+::ptr sylar\+::\+I\+P\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address,  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static I\+P\+Address\+::ptr rock\+::\+I\+P\+Address\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{address,  }\item[{uint16\+\_\+t}]{port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -83,7 +83,7 @@ I\+P地址的基类
 
 
 \begin{DoxyParams}[1]{参数}
-\mbox{\texttt{ in}}  & {\em address} & 域名,IP,服务器名等.\+举例\+: www.\+sylar.\+top \\
+\mbox{\texttt{ in}}  & {\em address} & 域名,IP,服务器名等.\+举例\+: www.\+rock.\+top \\
 \hline
 \mbox{\texttt{ in}}  & {\em port} & 端口号 \\
 \hline
@@ -91,11 +91,11 @@ I\+P地址的基类
 \begin{DoxyReturn}{返回}
 调用成功返回\+I\+P\+Address,失败返回nullptr 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1IPAddress_af14294f8c7309ab766564d8dafcf1bfc}} 
-\index{sylar::IPAddress@{sylar::IPAddress}!networdAddress@{networdAddress}}
-\index{networdAddress@{networdAddress}!sylar::IPAddress@{sylar::IPAddress}}
+\mbox{\label{classrock_1_1IPAddress_af14294f8c7309ab766564d8dafcf1bfc}} 
+\index{rock::IPAddress@{rock::IPAddress}!networdAddress@{networdAddress}}
+\index{networdAddress@{networdAddress}!rock::IPAddress@{rock::IPAddress}}
 \doxysubsubsection{networdAddress()}
-{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr sylar\+::\+I\+P\+Address\+::netword\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr rock\+::\+I\+P\+Address\+::netword\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -111,13 +111,13 @@ I\+P地址的基类
 \end{DoxyReturn}
 
 
-在 \textbf{ sylar\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classsylar_1_1IPv6Address_a48f3ca938dd2c6634388e61ca3f9dc6c} , 以及 \textbf{ sylar\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classsylar_1_1IPv4Address_af3e0aade158046d7e93f2d2670fef04e} 内被实现.
+在 \textbf{ rock\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classrock_1_1IPv6Address_a48f3ca938dd2c6634388e61ca3f9dc6c} , 以及 \textbf{ rock\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classrock_1_1IPv4Address_af3e0aade158046d7e93f2d2670fef04e} 内被实现.
 
-\mbox{\label{classsylar_1_1IPAddress_a26ff22c5694f765058e0e9abb0be3414}} 
-\index{sylar::IPAddress@{sylar::IPAddress}!subnetMask@{subnetMask}}
-\index{subnetMask@{subnetMask}!sylar::IPAddress@{sylar::IPAddress}}
+\mbox{\label{classrock_1_1IPAddress_a26ff22c5694f765058e0e9abb0be3414}} 
+\index{rock::IPAddress@{rock::IPAddress}!subnetMask@{subnetMask}}
+\index{subnetMask@{subnetMask}!rock::IPAddress@{rock::IPAddress}}
 \doxysubsubsection{subnetMask()}
-{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr sylar\+::\+I\+P\+Address\+::subnet\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual I\+P\+Address\+::ptr rock\+::\+I\+P\+Address\+::subnet\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{prefix\+\_\+len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -133,10 +133,10 @@ I\+P地址的基类
 \end{DoxyReturn}
 
 
-在 \textbf{ sylar\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classsylar_1_1IPv6Address_ab8843278b5104114697f026ed37051b5} , 以及 \textbf{ sylar\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classsylar_1_1IPv4Address_a7592d488f496adb0d5c12f0eafc89044} 内被实现.
+在 \textbf{ rock\+::\+I\+Pv6\+Address} \doxyref{}{p.}{classrock_1_1IPv6Address_ab8843278b5104114697f026ed37051b5} , 以及 \textbf{ rock\+::\+I\+Pv4\+Address} \doxyref{}{p.}{classrock_1_1IPv4Address_a7592d488f496adb0d5c12f0eafc89044} 内被实现.
 
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ address.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ address.\+h}\end{DoxyCompactItemize}

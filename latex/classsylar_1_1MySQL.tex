@@ -1,96 +1,96 @@
-\doxysection{sylar\+::My\+S\+Q\+L类 参考}
-\label{classsylar_1_1MySQL}\index{sylar::MySQL@{sylar::MySQL}}
+\doxysection{rock\+::My\+S\+Q\+L类 参考}
+\label{classrock_1_1MySQL}\index{rock::MySQL@{rock::MySQL}}
 
 
-类 sylar\+::My\+S\+QL 继承关系图\+:
+类 rock\+::My\+S\+QL 继承关系图\+:
 % FIG 0
 
 
-sylar\+::My\+S\+QL 的协作图\+:
+rock\+::My\+S\+QL 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQL_a16b4dc026a8e2590108c898af9333d89}} 
+\mbox{\label{classrock_1_1MySQL_a16b4dc026a8e2590108c898af9333d89}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+QL} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQL_a9fcd5d921454e0af461b90984184fead}} 
+\mbox{\label{classrock_1_1MySQL_a9fcd5d921454e0af461b90984184fead}} 
 {\bfseries My\+S\+QL} (const std\+::map$<$ std\+::string, std\+::string $>$ \&args)
 \item 
-\mbox{\label{classsylar_1_1MySQL_a49edaaf4d66b1c280b6d9a5dbc8dfea2}} 
+\mbox{\label{classrock_1_1MySQL_a49edaaf4d66b1c280b6d9a5dbc8dfea2}} 
 bool {\bfseries connect} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_a11dd18af782e7ee99bbb25c9e5bf73bd}} 
+\mbox{\label{classrock_1_1MySQL_a11dd18af782e7ee99bbb25c9e5bf73bd}} 
 bool {\bfseries ping} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_afe48fb54f0689ecac83515abadb34264}} 
+\mbox{\label{classrock_1_1MySQL_afe48fb54f0689ecac83515abadb34264}} 
 virtual int {\bfseries execute} (const char $\ast$format,...) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a6e31c15b60deea322d36b4b0852a38f7}} 
+\mbox{\label{classrock_1_1MySQL_a6e31c15b60deea322d36b4b0852a38f7}} 
 int {\bfseries execute} (const char $\ast$format, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1MySQL_a3abe8568bf03a5b065a7d648ba4eb579}} 
+\mbox{\label{classrock_1_1MySQL_a3abe8568bf03a5b065a7d648ba4eb579}} 
 virtual int {\bfseries execute} (const std\+::string \&sql) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_ab656f1c21f79b18392f1a48767ec1175}} 
+\mbox{\label{classrock_1_1MySQL_ab656f1c21f79b18392f1a48767ec1175}} 
 int64\+\_\+t {\bfseries get\+Last\+Insert\+Id} () override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a1ba46ccad6903f381aa2e0744030fc63}} 
+\mbox{\label{classrock_1_1MySQL_a1ba46ccad6903f381aa2e0744030fc63}} 
 std\+::shared\+\_\+ptr$<$ \textbf{ My\+S\+QL} $>$ {\bfseries get\+My\+S\+QL} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_a35a5e97760ae53ffa4d6c697800da704}} 
+\mbox{\label{classrock_1_1MySQL_a35a5e97760ae53ffa4d6c697800da704}} 
 std\+::shared\+\_\+ptr$<$ M\+Y\+S\+QL $>$ {\bfseries get\+Raw} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_a4d309515085658abf252e38771ffb5de}} 
+\mbox{\label{classrock_1_1MySQL_a4d309515085658abf252e38771ffb5de}} 
 uint64\+\_\+t {\bfseries get\+Affected\+Rows} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_a441b5f95200d82769e8a9ea1daa3c017}} 
+\mbox{\label{classrock_1_1MySQL_a441b5f95200d82769e8a9ea1daa3c017}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const char $\ast$format,...) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a00d1e76910f49e36d7508384bfa7e351}} 
+\mbox{\label{classrock_1_1MySQL_a00d1e76910f49e36d7508384bfa7e351}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const char $\ast$format, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1MySQL_aa3872d0d881d59022f3ea0a05f2a34be}} 
+\mbox{\label{classrock_1_1MySQL_aa3872d0d881d59022f3ea0a05f2a34be}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&sql) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a3bf91b8ae33bdcb22c2a040cd1ff9d1c}} 
+\mbox{\label{classrock_1_1MySQL_a3bf91b8ae33bdcb22c2a040cd1ff9d1c}} 
 I\+Transaction\+::ptr {\bfseries open\+Transaction} (bool auto\+\_\+commit) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a91aa3dff74eed065b4c996f9c7985497}} 
-sylar\+::\+I\+Stmt\+::ptr {\bfseries prepare} (const std\+::string \&sql) override
+\mbox{\label{classrock_1_1MySQL_a91aa3dff74eed065b4c996f9c7985497}} 
+rock\+::\+I\+Stmt\+::ptr {\bfseries prepare} (const std\+::string \&sql) override
 \item 
-\mbox{\label{classsylar_1_1MySQL_ae6417b1a3ca9aadc767b4bff16e85f28}} 
+\mbox{\label{classrock_1_1MySQL_ae6417b1a3ca9aadc767b4bff16e85f28}} 
 {\footnotesize template$<$typename... Args$>$ }\\int {\bfseries exec\+Stmt} (const char $\ast$stmt, Args \&\&... args)
 \item 
-\mbox{\label{classsylar_1_1MySQL_a1a56d73851b925c235eb1993fa4eaada}} 
+\mbox{\label{classrock_1_1MySQL_a1a56d73851b925c235eb1993fa4eaada}} 
 {\footnotesize template$<$class... Args$>$ }\\I\+S\+Q\+L\+Data\+::ptr {\bfseries query\+Stmt} (const char $\ast$stmt, Args \&\&... args)
 \item 
-\mbox{\label{classsylar_1_1MySQL_a61388b3a15aa8c4e4c6cbbcc7acb39b8}} 
+\mbox{\label{classrock_1_1MySQL_a61388b3a15aa8c4e4c6cbbcc7acb39b8}} 
 const char $\ast$ {\bfseries cmd} ()
 \item 
-\mbox{\label{classsylar_1_1MySQL_aed928bacd799a9f76b61d4c679ab1954}} 
+\mbox{\label{classrock_1_1MySQL_aed928bacd799a9f76b61d4c679ab1954}} 
 bool {\bfseries use} (const std\+::string \&dbname)
 \item 
-\mbox{\label{classsylar_1_1MySQL_a81f3568a32f596a8d88fc23c7befaf62}} 
+\mbox{\label{classrock_1_1MySQL_a81f3568a32f596a8d88fc23c7befaf62}} 
 int {\bfseries get\+Errno} () override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a181bed0f4215cf8cd992b4f59042005e}} 
+\mbox{\label{classrock_1_1MySQL_a181bed0f4215cf8cd992b4f59042005e}} 
 std\+::string {\bfseries get\+Err\+Str} () override
 \item 
-\mbox{\label{classsylar_1_1MySQL_a0c9e7bc9a390087f79aeb21fb59e6661}} 
+\mbox{\label{classrock_1_1MySQL_a0c9e7bc9a390087f79aeb21fb59e6661}} 
 uint64\+\_\+t {\bfseries get\+Insert\+Id} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1MySQL_a5f050ed23a1cf4124b79de39caacf139}} 
+\mbox{\label{classrock_1_1MySQL_a5f050ed23a1cf4124b79de39caacf139}} 
 class {\bfseries My\+S\+Q\+L\+Manager}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/mysql.\+h\end{DoxyCompactItemize}
+rock/db/mysql.\+h\end{DoxyCompactItemize}

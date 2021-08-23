@@ -4,5 +4,5 @@ digraph "类继承关系图"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="sylar::Uri",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Uri.html",tooltip="URI类"];
+  Node0 [label="rock::Uri",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1Uri.html",tooltip="URI类"];
 }

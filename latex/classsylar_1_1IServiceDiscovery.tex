@@ -1,75 +1,75 @@
-\doxysection{sylar\+::I\+Service\+Discovery类 参考}
-\label{classsylar_1_1IServiceDiscovery}\index{sylar::IServiceDiscovery@{sylar::IServiceDiscovery}}
+\doxysection{rock\+::I\+Service\+Discovery类 参考}
+\label{classrock_1_1IServiceDiscovery}\index{rock::IServiceDiscovery@{rock::IServiceDiscovery}}
 
 
-类 sylar\+::I\+Service\+Discovery 继承关系图\+:
+类 rock\+::I\+Service\+Discovery 继承关系图\+:
 % FIG 0
 
 
-sylar\+::I\+Service\+Discovery 的协作图\+:
+rock\+::I\+Service\+Discovery 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a55223341c4d29e333238487e1382d4e1}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a55223341c4d29e333238487e1382d4e1}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Service\+Discovery} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a710e41e3881a30957462b44cf1b89e3a}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a710e41e3881a30957462b44cf1b89e3a}} 
 typedef std\+::function$<$ void(const std\+::string \&domain, const std\+::string \&service,const std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Service\+Item\+Info\+::ptr $>$ \&old\+\_\+value,const std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Service\+Item\+Info\+::ptr $>$ \&new\+\_\+value)$>$ {\bfseries service\+\_\+callback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a7a3c92db71dd2d98a591856c8f68b420}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a7a3c92db71dd2d98a591856c8f68b420}} 
 void {\bfseries register\+Server} (const std\+::string \&domain, const std\+::string \&service, const std\+::string \&ip\+\_\+and\+\_\+port, const std\+::string \&data)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a8b8d50f4728405ff84b92de7ae933b27}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a8b8d50f4728405ff84b92de7ae933b27}} 
 void {\bfseries query\+Server} (const std\+::string \&domain, const std\+::string \&service)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_ab7d2c4fe82f97cb4628a079ce63de128}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_ab7d2c4fe82f97cb4628a079ce63de128}} 
 void {\bfseries list\+Server} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Service\+Item\+Info\+::ptr $>$ $>$ $>$ \&infos)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a7febd2de93055aae0ee3c2821e42f96b}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a7febd2de93055aae0ee3c2821e42f96b}} 
 void {\bfseries list\+Register\+Server} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $>$ $>$ \&infos)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_ac976529ac143f7b018b79c4a4a85dc2c}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_ac976529ac143f7b018b79c4a4a85dc2c}} 
 void {\bfseries list\+Query\+Server} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+set$<$ std\+::string $>$ $>$ \&infos)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_abb7ce6d8e7bef7f85aa8f8dac90857e0}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_abb7ce6d8e7bef7f85aa8f8dac90857e0}} 
 virtual void {\bfseries start} ()=0
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a2160bc3105f33e96dff866194315fef2}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a2160bc3105f33e96dff866194315fef2}} 
 virtual void {\bfseries stop} ()=0
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a8253e294a59be96240379961494c9018}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a8253e294a59be96240379961494c9018}} 
 service\+\_\+callback {\bfseries get\+Service\+Callback} () const
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a3dd1f5ce7c6f4fcf9ce6d81e15b42fed}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a3dd1f5ce7c6f4fcf9ce6d81e15b42fed}} 
 void {\bfseries set\+Service\+Callback} (service\+\_\+callback v)
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_af82c69b0a1807708135dae0b5fcbe840}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_af82c69b0a1807708135dae0b5fcbe840}} 
 void {\bfseries set\+Query\+Server} (const std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+set$<$ std\+::string $>$ $>$ \&v)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_aebfc1430c8c453df69361795eabad2f8}} 
-\textbf{ sylar\+::\+R\+W\+Mutex} {\bfseries m\+\_\+mutex}
+\mbox{\label{classrock_1_1IServiceDiscovery_aebfc1430c8c453df69361795eabad2f8}} 
+\textbf{ rock\+::\+R\+W\+Mutex} {\bfseries m\+\_\+mutex}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a34019f45487ddb58f03ad92f9bb14b2b}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a34019f45487ddb58f03ad92f9bb14b2b}} 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string,std\+::unordered\+\_\+map$<$ uint64\+\_\+t, Service\+Item\+Info\+::ptr $>$ $>$ $>$ {\bfseries m\+\_\+datas}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a4e286ac4bc92fe7ec514cd506ccb845c}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a4e286ac4bc92fe7ec514cd506ccb845c}} 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string,std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $>$ $>$ {\bfseries m\+\_\+register\+Infos}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_addd1da061353305ed85be2e03391ec99}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_addd1da061353305ed85be2e03391ec99}} 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+set$<$ std\+::string $>$ $>$ {\bfseries m\+\_\+query\+Infos}
 \item 
-\mbox{\label{classsylar_1_1IServiceDiscovery_a76bae38cf2518e02e96a146614536bd6}} 
+\mbox{\label{classrock_1_1IServiceDiscovery_a76bae38cf2518e02e96a146614536bd6}} 
 service\+\_\+callback {\bfseries m\+\_\+cb}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/streams/service\+\_\+discovery.\+h\end{DoxyCompactItemize}
+rock/streams/service\+\_\+discovery.\+h\end{DoxyCompactItemize}

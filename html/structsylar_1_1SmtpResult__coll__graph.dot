@@ -1,7 +1,7 @@
-digraph "sylar::SmtpResult"
+digraph "rock::SmtpResult"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::SmtpResult\n|+ result\l+ msg\l|+ SmtpResult()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::SmtpResult\n|+ result\l+ msg\l|+ SmtpResult()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

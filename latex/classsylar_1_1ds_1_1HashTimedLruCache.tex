@@ -1,86 +1,86 @@
-\doxysection{sylar\+::ds\+::Hash\+Timed\+Lru\+Cache$<$ K, V, Mutex\+Type, Hash $>$ 模板类 参考}
-\label{classsylar_1_1ds_1_1HashTimedLruCache}\index{sylar::ds::HashTimedLruCache$<$ K, V, MutexType, Hash $>$@{sylar::ds::HashTimedLruCache$<$ K, V, MutexType, Hash $>$}}
+\doxysection{rock\+::ds\+::Hash\+Timed\+Lru\+Cache$<$ K, V, Mutex\+Type, Hash $>$ 模板类 参考}
+\label{classrock_1_1ds_1_1HashTimedLruCache}\index{rock::ds::HashTimedLruCache$<$ K, V, MutexType, Hash $>$@{rock::ds::HashTimedLruCache$<$ K, V, MutexType, Hash $>$}}
 
 
-sylar\+::ds\+::Hash\+Timed\+Lru\+Cache$<$ K, V, Mutex\+Type, Hash $>$ 的协作图\+:
+rock\+::ds\+::Hash\+Timed\+Lru\+Cache$<$ K, V, Mutex\+Type, Hash $>$ 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a51c077b307dfde54ae4d28c89c17e87c}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a51c077b307dfde54ae4d28c89c17e87c}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Hash\+Timed\+Lru\+Cache} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a80bb037ebe3e19a002ca9acb6ed3d7e9}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a80bb037ebe3e19a002ca9acb6ed3d7e9}} 
 typedef \textbf{ Timed\+Lru\+Cache}$<$ K, V, Mutex\+Type $>$ {\bfseries cache\+\_\+type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a4d690f297fbc1eb934a0e3692dfe1cac}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a4d690f297fbc1eb934a0e3692dfe1cac}} 
 {\bfseries Hash\+Timed\+Lru\+Cache} (size\+\_\+t bucket, size\+\_\+t max\+\_\+size, size\+\_\+t elasticity)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_af15d102acf188ae77fbf3ce471dd91c0}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_af15d102acf188ae77fbf3ce471dd91c0}} 
 void {\bfseries set} (const K \&k, const V \&v, uint64\+\_\+t expired)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_ab354b0714d714b5ad646070cc5ce99e0}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_ab354b0714d714b5ad646070cc5ce99e0}} 
 bool {\bfseries expired} (const K \&k, const uint64\+\_\+t \&ts)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a802360c39d6352b1aef281678920c06b}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a802360c39d6352b1aef281678920c06b}} 
 bool {\bfseries get} (const K \&k, V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a677a39118d7cf2e4faf544f4fdfd2c18}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a677a39118d7cf2e4faf544f4fdfd2c18}} 
 V {\bfseries get} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a7f16ef1bff09470fa81b07db056fb432}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a7f16ef1bff09470fa81b07db056fb432}} 
 bool {\bfseries del} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_aff828d5d9bb8ec55794992042d9fb18a}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_aff828d5d9bb8ec55794992042d9fb18a}} 
 bool {\bfseries exists} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a61d6e3c7c501125e9c2397096bee83db}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a61d6e3c7c501125e9c2397096bee83db}} 
 size\+\_\+t {\bfseries size} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a55a21bdc3717efa5de088744c650e185}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a55a21bdc3717efa5de088744c650e185}} 
 bool {\bfseries empty} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a9541225d559ed22c32ae6ce75e5e326b}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a9541225d559ed22c32ae6ce75e5e326b}} 
 void {\bfseries clear} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_ad9ff71b7c990d43c0e18ade81253f12c}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_ad9ff71b7c990d43c0e18ade81253f12c}} 
 size\+\_\+t {\bfseries get\+Max\+Size} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a9612aafbcfb928f15801a06466512db3}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a9612aafbcfb928f15801a06466512db3}} 
 size\+\_\+t {\bfseries get\+Elasticity} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a4ab24336b39508971ab30857ff6feebd}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a4ab24336b39508971ab30857ff6feebd}} 
 size\+\_\+t {\bfseries get\+Max\+Allowed\+Size} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a910bddeba2c2a936122231ec33e9c081}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a910bddeba2c2a936122231ec33e9c081}} 
 size\+\_\+t {\bfseries get\+Bucket} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a4c29ec826866eed9f20ea67c3c108d00}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a4c29ec826866eed9f20ea67c3c108d00}} 
 void {\bfseries set\+Max\+Size} (const size\+\_\+t \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a406c111195cc0b2608da19d534fc665a}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a406c111195cc0b2608da19d534fc665a}} 
 void {\bfseries set\+Elasticity} (const size\+\_\+t \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a993ce08e0e8da9b7f5f666c1818adff3}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a993ce08e0e8da9b7f5f666c1818adff3}} 
 {\footnotesize template$<$class F $>$ }\\void {\bfseries foreach} (F \&f)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_aaf93352b8703244c90686c98594bb221}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_aaf93352b8703244c90686c98594bb221}} 
 void {\bfseries set\+Prune\+Callback} (typename cache\+\_\+type\+::prune\+\_\+callback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a1f5da7d1a6d5c8f3c31e06bf34f03d9b}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a1f5da7d1a6d5c8f3c31e06bf34f03d9b}} 
 \textbf{ Cache\+Status} $\ast$ {\bfseries get\+Status} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_a5230cd1dd48c9d8e9300003be88591d0}} 
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_a5230cd1dd48c9d8e9300003be88591d0}} 
 std\+::string {\bfseries to\+Status\+String} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashTimedLruCache_ab742aacb2066bd3e976e4cd99f7ae0a4}} 
-size\+\_\+t {\bfseries check\+Timeout} (const uint64\+\_\+t \&ts=sylar\+::\+Get\+Current\+MS())
+\mbox{\label{classrock_1_1ds_1_1HashTimedLruCache_ab742aacb2066bd3e976e4cd99f7ae0a4}} 
+size\+\_\+t {\bfseries check\+Timeout} (const uint64\+\_\+t \&ts=rock\+::\+Get\+Current\+MS())
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/ds/timed\+\_\+lru\+\_\+cache.\+h\end{DoxyCompactItemize}
+rock/ds/timed\+\_\+lru\+\_\+cache.\+h\end{DoxyCompactItemize}

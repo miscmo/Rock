@@ -1,25 +1,25 @@
-\doxysection{sylar\+::http\+::Http\+Connection\+Pool类 参考}
-\label{classsylar_1_1http_1_1HttpConnectionPool}\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\doxysection{rock\+::http\+::Http\+Connection\+Pool类 参考}
+\label{classrock_1_1http_1_1HttpConnectionPool}\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 
 
-sylar\+::http\+::Http\+Connection\+Pool 的协作图\+:
+rock\+::http\+::Http\+Connection\+Pool 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ad409f599e64bd4f9104fbb489d5ca559}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_ad409f599e64bd4f9104fbb489d5ca559}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Connection\+Pool} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a67fc08ab4e76220f39d2225f24ffce44}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a67fc08ab4e76220f39d2225f24ffce44}} 
 typedef \textbf{ Mutex} {\bfseries Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a045aa910d746fb138d1100a2508c83a2}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a045aa910d746fb138d1100a2508c83a2}} 
 {\bfseries Http\+Connection\+Pool} (const std\+::string \&host, const std\+::string \&vhost, uint32\+\_\+t port, bool is\+\_\+https, uint32\+\_\+t max\+\_\+size, uint32\+\_\+t max\+\_\+alive\+\_\+time, uint32\+\_\+t max\+\_\+request)
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ae61677cedc82af909352e290bdfb5ee2}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_ae61677cedc82af909352e290bdfb5ee2}} 
 \textbf{ Http\+Connection\+::ptr} {\bfseries get\+Connection} ()
 \item 
 \textbf{ Http\+Result\+::ptr} \textbf{ do\+Get} (const std\+::string \&url, uint64\+\_\+t timeout\+\_\+ms, const std\+::map$<$ std\+::string, std\+::string $>$ \&headers=\{\}, const std\+::string \&body=\char`\"{}\char`\"{})
@@ -39,17 +39,17 @@ typedef \textbf{ Mutex} {\bfseries Mutex\+Type}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a19a0fb856b8eb4eabaebcba5c7e163d9}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a19a0fb856b8eb4eabaebcba5c7e163d9}} 
 static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&uri, const std\+::string \&vhost, uint32\+\_\+t max\+\_\+size, uint32\+\_\+t max\+\_\+alive\+\_\+time, uint32\+\_\+t max\+\_\+request)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a68ce48ac37128b246b0c7d04f904ad31}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doGet@{doGet}}
-\index{doGet@{doGet}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a68ce48ac37128b246b0c7d04f904ad31}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doGet@{doGet}}
+\index{doGet@{doGet}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doGet()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -69,11 +69,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_af231809abe374bfd498486766c7925bf}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doGet@{doGet}}
-\index{doGet@{doGet}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_af231809abe374bfd498486766c7925bf}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doGet@{doGet}}
+\index{doGet@{doGet}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doGet()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Get (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -93,11 +93,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a58617111cf236af5849a9f7eaf5e682e}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doPost@{doPost}}
-\index{doPost@{doPost}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a58617111cf236af5849a9f7eaf5e682e}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doPost@{doPost}}
+\index{doPost@{doPost}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doPost()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -117,11 +117,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a32593d1f4f5e111983cd40ba804e6bda}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doPost@{doPost}}
-\index{doPost@{doPost}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a32593d1f4f5e111983cd40ba804e6bda}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doPost@{doPost}}
+\index{doPost@{doPost}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doPost()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Post (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -141,11 +141,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_aced59271181c7f7f0afd65d2ec4cc6b0}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
-\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_aced59271181c7f7f0afd65d2ec4cc6b0}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -167,11 +167,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_ad1c1faa8b6652a17e5189d23f612fd8b}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
-\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_ad1c1faa8b6652a17e5189d23f612fd8b}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -193,11 +193,11 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnectionPool_a8aabb8a66c2f47cff0c10466a7433007}} 
-\index{sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}!doRequest@{doRequest}}
-\index{doRequest@{doRequest}!sylar::http::HttpConnectionPool@{sylar::http::HttpConnectionPool}}
+\mbox{\label{classrock_1_1http_1_1HttpConnectionPool_a8aabb8a66c2f47cff0c10466a7433007}} 
+\index{rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}!doRequest@{doRequest}}
+\index{doRequest@{doRequest}!rock::http::HttpConnectionPool@{rock::http::HttpConnectionPool}}
 \doxysubsubsection{doRequest()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+Pool\+::do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
 
 
 
@@ -217,4 +217,4 @@ static Http\+Connection\+Pool\+::ptr {\bfseries Create} (const std\+::string \&u
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/\textbf{ http\+\_\+connection.\+h}\end{DoxyCompactItemize}
+rock/http/\textbf{ http\+\_\+connection.\+h}\end{DoxyCompactItemize}

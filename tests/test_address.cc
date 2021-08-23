@@ -1,53 +1,53 @@
-#include "sylar/address.h"
-#include "sylar/log.h"
+#include "rock/address.h"
+#include "rock/log.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 void test() {
-    std::vector<sylar::Address::ptr> addrs;
+    std::vector<rock::Address::ptr> addrs;
 
-    SYLAR_LOG_INFO(g_logger) << "begin";
-    bool v = sylar::Address::Lookup(addrs, "localhost:3080");
-    //bool v = sylar::Address::Lookup(addrs, "www.baidu.com", AF_INET);
-    //bool v = sylar::Address::Lookup(addrs, "www.sylar.top", AF_INET);
-    SYLAR_LOG_INFO(g_logger) << "end";
+    ROCK_LOG_INFO(g_logger) << "begin";
+    bool v = rock::Address::Lookup(addrs, "localhost:3080");
+    //bool v = rock::Address::Lookup(addrs, "www.baidu.com", AF_INET);
+    //bool v = rock::Address::Lookup(addrs, "www.rock.top", AF_INET);
+    ROCK_LOG_INFO(g_logger) << "end";
     if(!v) {
-        SYLAR_LOG_ERROR(g_logger) << "lookup fail";
+        ROCK_LOG_ERROR(g_logger) << "lookup fail";
         return;
     }
 
     for(size_t i = 0; i < addrs.size(); ++i) {
-        SYLAR_LOG_INFO(g_logger) << i << " - " << addrs[i]->toString();
+        ROCK_LOG_INFO(g_logger) << i << " - " << addrs[i]->toString();
     }
 
-    auto addr = sylar::Address::LookupAny("localhost:4080");
+    auto addr = rock::Address::LookupAny("localhost:4080");
     if(addr) {
-        SYLAR_LOG_INFO(g_logger) << *addr;
+        ROCK_LOG_INFO(g_logger) << *addr;
     } else {
-        SYLAR_LOG_ERROR(g_logger) << "error";
+        ROCK_LOG_ERROR(g_logger) << "error";
     }
 }
 
 void test_iface() {
-    std::multimap<std::string, std::pair<sylar::Address::ptr, uint32_t> > results;
+    std::multimap<std::string, std::pair<rock::Address::ptr, uint32_t> > results;
 
-    bool v = sylar::Address::GetInterfaceAddresses(results);
+    bool v = rock::Address::GetInterfaceAddresses(results);
     if(!v) {
-        SYLAR_LOG_ERROR(g_logger) << "GetInterfaceAddresses fail";
+        ROCK_LOG_ERROR(g_logger) << "GetInterfaceAddresses fail";
         return;
     }
 
     for(auto& i: results) {
-        SYLAR_LOG_INFO(g_logger) << i.first << " - " << i.second.first->toString() << " - "
+        ROCK_LOG_INFO(g_logger) << i.first << " - " << i.second.first->toString() << " - "
             << i.second.second;
     }
 }
 
 void test_ipv4() {
-    //auto addr = sylar::IPAddress::Create("www.sylar.top");
-    auto addr = sylar::IPAddress::Create("127.0.0.8");
+    //auto addr = rock::IPAddress::Create("www.rock.top");
+    auto addr = rock::IPAddress::Create("127.0.0.8");
     if(addr) {
-        SYLAR_LOG_INFO(g_logger) << addr->toString();
+        ROCK_LOG_INFO(g_logger) << addr->toString();
     }
 }
 

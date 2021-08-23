@@ -1,13 +1,13 @@
-#include "sylar/config.h"
-#include "sylar/env.h"
-#include "sylar/util.h"
+#include "rock/config.h"
+#include "rock/env.h"
+#include "rock/util.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
 
-namespace sylar {
+namespace rock {
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
 ConfigVarBase::ptr Config::LookupBase(const std::string& name) {
     RWMutexType::ReadLock lock(GetMutex());
@@ -25,7 +25,7 @@ static void ListAllMember(const std::string& prefix,
                           std::list<std::pair<std::string, const YAML::Node> >& output) {
     if(prefix.find_first_not_of("abcdefghikjlmnopqrstuvwxyz._012345678")
             != std::string::npos) {
-        SYLAR_LOG_ERROR(g_logger) << "Config invalid name: " << prefix << " : " << node;
+        ROCK_LOG_ERROR(g_logger) << "Config invalid name: " << prefix << " : " << node;
         return;
     }
     output.push_back(std::make_pair(prefix, node));
@@ -64,10 +64,10 @@ void Config::LoadFromYaml(const YAML::Node& root) {
 }
 
 static std::map<std::string, uint64_t> s_file2modifytime;
-static sylar::Mutex s_mutex;
+static rock::Mutex s_mutex;
 
 void Config::LoadFromConfDir(const std::string& path, bool force) {
-    std::string absoulte_path = sylar::EnvMgr::GetInstance()->getAbsolutePath(path);
+    std::string absoulte_path = rock::EnvMgr::GetInstance()->getAbsolutePath(path);
     std::vector<std::string> files;
     FSUtil::ListAllFile(files, absoulte_path, ".yml");
 
@@ -75,7 +75,7 @@ void Config::LoadFromConfDir(const std::string& path, bool force) {
         {
             struct stat st;
             lstat(i.c_str(), &st);
-            sylar::Mutex::Lock lock(s_mutex);
+            rock::Mutex::Lock lock(s_mutex);
             if(!force && s_file2modifytime[i] == (uint64_t)st.st_mtime) {
                 continue;
             }
@@ -84,10 +84,10 @@ void Config::LoadFromConfDir(const std::string& path, bool force) {
         try {
             YAML::Node root = YAML::LoadFile(i);
             LoadFromYaml(root);
-            SYLAR_LOG_INFO(g_logger) << "LoadConfFile file="
+            ROCK_LOG_INFO(g_logger) << "LoadConfFile file="
                 << i << " ok";
         } catch (...) {
-            SYLAR_LOG_ERROR(g_logger) << "LoadConfFile file="
+            ROCK_LOG_ERROR(g_logger) << "LoadConfFile file="
                 << i << " failed";
         }
     }

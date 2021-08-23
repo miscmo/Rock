@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::IServiceDiscovery类 参考</title>
+<title>rock: rock::IServiceDiscovery类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1IServiceDiscovery.html">IServiceDiscovery</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><a class="el" href="classrock_1_1IServiceDiscovery.html">IServiceDiscovery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,19 +69,19 @@ $(function() {
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
-<a href="classsylar_1_1IServiceDiscovery-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1IServiceDiscovery-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::IServiceDiscovery类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">rock::IServiceDiscovery类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-类 sylar::IServiceDiscovery 继承关系图:</div>
+类 rock::IServiceDiscovery 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div class="dynheader">
-sylar::IServiceDiscovery 的协作图:</div>
+rock::IServiceDiscovery 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 -->
 </div>
@@ -90,7 +90,7 @@ sylar::IServiceDiscovery 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a55223341c4d29e333238487e1382d4e1"><td class="memItemLeft" align="right" valign="top"><a id="a55223341c4d29e333238487e1382d4e1"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1IServiceDiscovery.html">IServiceDiscovery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1IServiceDiscovery.html">IServiceDiscovery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:a55223341c4d29e333238487e1382d4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710e41e3881a30957462b44cf1b89e3a"><td class="memItemLeft" align="right" valign="top"><a id="a710e41e3881a30957462b44cf1b89e3a"></a>
 typedef std::function&lt; void(const std::string &amp;domain, const std::string &amp;service,const std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &amp;old_value,const std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &amp;new_value)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>service_callback</b></td></tr>
@@ -132,7 +132,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setQueryServer</b> (c
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:aebfc1430c8c453df69361795eabad2f8"><td class="memItemLeft" align="right" valign="top"><a id="aebfc1430c8c453df69361795eabad2f8"></a>
-<a class="el" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
+<a class="el" href="classrock_1_1RWMutex.html">rock::RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutex</b></td></tr>
 <tr class="separator:aebfc1430c8c453df69361795eabad2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34019f45487ddb58f03ad92f9bb14b2b"><td class="memItemLeft" align="right" valign="top"><a id="a34019f45487ddb58f03ad92f9bb14b2b"></a>
 std::unordered_map&lt; std::string, std::unordered_map&lt; std::string,std::unordered_map&lt; uint64_t, ServiceItemInfo::ptr &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_datas</b></td></tr>
@@ -148,7 +148,7 @@ service_callback&#160;</td><td class="memItemRight" valign="bottom"><b>m_cb</b><
 <tr class="separator:a76bae38cf2518e02e96a146614536bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/streams/<a class="el" href="service__discovery_8h_source.html">service_discovery.h</a></li>
+<li>rock/streams/<a class="el" href="service__discovery_8h_source.html">service_discovery.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

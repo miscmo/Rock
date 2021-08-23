@@ -13,16 +13,16 @@
 #include "log.h"
 #include "fiber.h"
 
-namespace sylar {
+namespace rock {
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
 pid_t GetThreadId() {
     return syscall(SYS_gettid);
 }
 
 uint32_t GetFiberId() {
-    return sylar::Fiber::GetFiberId();
+    return rock::Fiber::GetFiberId();
 }
 
 static std::string demangle(const char* str) {
@@ -51,7 +51,7 @@ void Backtrace(std::vector<std::string>& bt, int size, int skip) {
 
     char** strings = backtrace_symbols(array, s);
     if(strings == NULL) {
-        SYLAR_LOG_ERROR(g_logger) << "backtrace_synbols error";
+        ROCK_LOG_ERROR(g_logger) << "backtrace_synbols error";
         free(array);
         return;
     }
@@ -542,7 +542,7 @@ std::wstring StringUtil::StringToWString(const std::string& s) {
 }
 
 std::string GetHostName() {
-    std::shared_ptr<char> host(new char[512], sylar::delete_array<char>);
+    std::shared_ptr<char> host(new char[512], rock::delete_array<char>);
     memset(host.get(), 0, 512);
     gethostname(host.get(), 511);
     return host.get();
@@ -554,7 +554,7 @@ in_addr_t GetIPv4Inet() {
 
     in_addr_t localhost = inet_addr("127.0.0.1");
     if(getifaddrs(&ifas)) {
-        SYLAR_LOG_ERROR(g_logger) << "getifaddrs errno=" << errno
+        ROCK_LOG_ERROR(g_logger) << "getifaddrs errno=" << errno
             << " errstr=" << strerror(errno);
         return localhost;
     }
@@ -580,7 +580,7 @@ in_addr_t GetIPv4Inet() {
 }
 
 std::string _GetIPv4() {
-    std::shared_ptr<char> ipv4(new char[INET_ADDRSTRLEN], sylar::delete_array<char>);
+    std::shared_ptr<char> ipv4(new char[INET_ADDRSTRLEN], rock::delete_array<char>);
     memset(ipv4.get(), 0, INET_ADDRSTRLEN);
     auto ia = GetIPv4Inet();
     inet_ntop(AF_INET, &ia, ipv4.get(), INET_ADDRSTRLEN);
@@ -794,7 +794,7 @@ static void serialize_message(const google::protobuf::Message& message, Json::Va
 std::string PBToJsonString(const google::protobuf::Message& message) {
     Json::Value jnode;
     serialize_message(message, jnode);
-    return sylar::JsonUtil::ToString(jnode);
+    return rock::JsonUtil::ToString(jnode);
 }
 
 SpeedLimit::SpeedLimit(uint32_t speed)
@@ -809,7 +809,7 @@ SpeedLimit::SpeedLimit(uint32_t speed)
 }
 
 void SpeedLimit::add(uint32_t v) {
-    uint64_t curms = sylar::GetCurrentMS();
+    uint64_t curms = rock::GetCurrentMS();
     if(curms / 1000 != m_curSec) {
         m_curSec = curms / 1000;
         m_curCount = v;

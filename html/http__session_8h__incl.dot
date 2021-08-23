@@ -1,13 +1,13 @@
-digraph "sylar/http/http_session.h"
+digraph "rock/http/http_session.h"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="sylar/http/http_session.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="HTTPSession封装"];
+  Node1 [label="rock/http/http_session.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="HTTPSession封装"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="sylar/streams/socket\l_stream.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$socket__stream_8h.html",tooltip="Socket流式接口封装"];
+  Node2 [label="rock/streams/socket\l_stream.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$socket__stream_8h.html",tooltip="Socket流式接口封装"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="sylar/stream.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stream_8h.html",tooltip="流接口"];
+  Node3 [label="rock/stream.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stream_8h.html",tooltip="流接口"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="memory",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -24,7 +24,7 @@ digraph "sylar/http/http_session.h"
   Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node10 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="sylar/socket.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$socket_8h.html",tooltip="Socket封装"];
+  Node11 [label="rock/socket.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$socket_8h.html",tooltip="Socket封装"];
   Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 [label="netinet/tcp.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
@@ -54,7 +54,7 @@ digraph "sylar/http/http_session.h"
   Node11 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node21 [label="noncopyable.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$noncopyable_8h.html",tooltip="不可拷贝对象封装"];
   Node2 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node22 [label="sylar/mutex.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mutex_8h_source.html",tooltip=" "];
+  Node22 [label="rock/mutex.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mutex_8h_source.html",tooltip=" "];
   Node22 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node23 [label="thread",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node22 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -77,7 +77,7 @@ digraph "sylar/http/http_session.h"
   Node29 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node30 [label="ucontext.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node2 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 [label="sylar/iomanager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$iomanager_8h.html",tooltip="基于Epoll的IO协程调度器"];
+  Node31 [label="rock/iomanager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$iomanager_8h.html",tooltip="基于Epoll的IO协程调度器"];
   Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node32 [label="scheduler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$scheduler_8h.html",tooltip="协程调度器封装"];
   Node32 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

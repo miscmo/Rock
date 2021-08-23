@@ -1,75 +1,75 @@
-\doxysection{sylar\+::S\+D\+Load\+Balance类 参考}
-\label{classsylar_1_1SDLoadBalance}\index{sylar::SDLoadBalance@{sylar::SDLoadBalance}}
+\doxysection{rock\+::S\+D\+Load\+Balance类 参考}
+\label{classrock_1_1SDLoadBalance}\index{rock::SDLoadBalance@{rock::SDLoadBalance}}
 
 
-类 sylar\+::S\+D\+Load\+Balance 继承关系图\+:
+类 rock\+::S\+D\+Load\+Balance 继承关系图\+:
 % FIG 0
 
 
-sylar\+::S\+D\+Load\+Balance 的协作图\+:
+rock\+::S\+D\+Load\+Balance 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a88701ada342d673b646514a70921f55f}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a88701ada342d673b646514a70921f55f}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ S\+D\+Load\+Balance} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a7769cb8b5e1bc63d797970e2aa6c371f}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a7769cb8b5e1bc63d797970e2aa6c371f}} 
 typedef std\+::function$<$ Socket\+Stream\+::ptr(Service\+Item\+Info\+::ptr)$>$ {\bfseries stream\+\_\+callback}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a6b50f23dd4c117571e915c0a040f16a0}} 
-typedef \textbf{ sylar\+::\+R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
+\mbox{\label{classrock_1_1SDLoadBalance_a6b50f23dd4c117571e915c0a040f16a0}} 
+typedef \textbf{ rock\+::\+R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a1a9782cafd6ec61cead075aa4c6bcb61}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a1a9782cafd6ec61cead075aa4c6bcb61}} 
 {\bfseries S\+D\+Load\+Balance} (I\+Service\+Discovery\+::ptr sd)
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a10655adc20b1b566cd2685d06c2e1824}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a10655adc20b1b566cd2685d06c2e1824}} 
 virtual void {\bfseries start} ()
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a231b8d253b823c637d62f137eec5efbf}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a231b8d253b823c637d62f137eec5efbf}} 
 virtual void {\bfseries stop} ()
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a28e526409dc63defca32145a84726c4e}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a28e526409dc63defca32145a84726c4e}} 
 stream\+\_\+callback {\bfseries get\+Cb} () const
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_aeaa3546ef452d346fe5254ef92a31303}} 
+\mbox{\label{classrock_1_1SDLoadBalance_aeaa3546ef452d346fe5254ef92a31303}} 
 void {\bfseries set\+Cb} (stream\+\_\+callback v)
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_ac409b039604454a0bbdef2b713fe9f22}} 
+\mbox{\label{classrock_1_1SDLoadBalance_ac409b039604454a0bbdef2b713fe9f22}} 
 Load\+Balance\+::ptr {\bfseries get} (const std\+::string \&domain, const std\+::string \&service, bool auto\+\_\+create=false)
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_ac722b9f916e978f4eb2ce6403a216e89}} 
+\mbox{\label{classrock_1_1SDLoadBalance_ac722b9f916e978f4eb2ce6403a216e89}} 
 void {\bfseries init\+Conf} (const std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ $>$ \&confs)
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a078f2b50113138894713de838c4bbb3d}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a078f2b50113138894713de838c4bbb3d}} 
 std\+::string {\bfseries status\+String} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a9b9d91ec0f26185966f48e02b1c6216b}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a9b9d91ec0f26185966f48e02b1c6216b}} 
 \textbf{ R\+W\+Mutex\+Type} {\bfseries m\+\_\+mutex}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_af1baa3bac44ab33add27de109bb7cea1}} 
+\mbox{\label{classrock_1_1SDLoadBalance_af1baa3bac44ab33add27de109bb7cea1}} 
 I\+Service\+Discovery\+::ptr {\bfseries m\+\_\+sd}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a0ca9fabd21d03b4bcf19b0dfa8ecb8b5}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a0ca9fabd21d03b4bcf19b0dfa8ecb8b5}} 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, Load\+Balance\+::ptr $>$ $>$ {\bfseries m\+\_\+datas}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_a0e55cab487738a37f980ff822ee77cb1}} 
+\mbox{\label{classrock_1_1SDLoadBalance_a0e55cab487738a37f980ff822ee77cb1}} 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, I\+Load\+Balance\+::\+Type $>$ $>$ {\bfseries m\+\_\+types}
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_acc0fe626c2636b0a4f9c0dce5c3ec92c}} 
+\mbox{\label{classrock_1_1SDLoadBalance_acc0fe626c2636b0a4f9c0dce5c3ec92c}} 
 I\+Load\+Balance\+::\+Type {\bfseries m\+\_\+default\+Type} = I\+Load\+Balance\+::\+F\+A\+IR
 \item 
-\mbox{\label{classsylar_1_1SDLoadBalance_ae0f93e494f76682a5c498d12d940e5b8}} 
+\mbox{\label{classrock_1_1SDLoadBalance_ae0f93e494f76682a5c498d12d940e5b8}} 
 stream\+\_\+callback {\bfseries m\+\_\+cb}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}
+rock/streams/load\+\_\+balance.\+h\end{DoxyCompactItemize}

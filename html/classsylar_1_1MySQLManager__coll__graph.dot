@@ -1,7 +1,7 @@
-digraph "sylar::MySQLManager"
+digraph "rock::MySQLManager"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::MySQLManager\n||+ MySQLManager()\l+ ~MySQLManager()\l+ get()\l+ registerMySQL()\l+ checkConnection()\l+ getMaxConn()\l+ setMaxConn()\l+ execute()\l+ execute()\l+ execute()\l+ query()\l+ query()\l+ query()\l+ openTransaction()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::MySQLManager\n||+ MySQLManager()\l+ ~MySQLManager()\l+ get()\l+ registerMySQL()\l+ checkConnection()\l+ getMaxConn()\l+ setMaxConn()\l+ execute()\l+ execute()\l+ execute()\l+ query()\l+ query()\l+ query()\l+ openTransaction()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/macro.h 源文件</title>
+<title>rock: rock/macro.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,8 +70,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="macro_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_MACRO_H__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_MACRO_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __ROCK_MACRO_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __ROCK_MACRO_H__</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
@@ -79,27 +79,27 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#if defined __GNUC__ || defined __llvm__</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#   define SYLAR_LIKELY(x)       __builtin_expect(!!(x), 1)</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#   define SYLAR_UNLIKELY(x)     __builtin_expect(!!(x), 0)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#   define ROCK_LIKELY(x)       __builtin_expect(!!(x), 1)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#   define ROCK_UNLIKELY(x)     __builtin_expect(!!(x), 0)</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#   define SYLAR_LIKELY(x)      (x)</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#   define SYLAR_UNLIKELY(x)      (x)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#   define ROCK_LIKELY(x)      (x)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#   define ROCK_UNLIKELY(x)      (x)</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="macro_8h.html#a8a2348af23f3f851e5d82627eff1ee44">   28</a></span>&#160;<span class="preprocessor">#define SYLAR_ASSERT(x) \</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    if(SYLAR_UNLIKELY(!(x))) { \</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">        SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) &lt;&lt; &quot;ASSERTION: &quot; #x \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="macro_8h.html#a8a2348af23f3f851e5d82627eff1ee44">   28</a></span>&#160;<span class="preprocessor">#define ROCK_ASSERT(x) \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    if(ROCK_UNLIKELY(!(x))) { \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">        ROCK_LOG_ERROR(ROCK_LOG_ROOT()) &lt;&lt; &quot;ASSERTION: &quot; #x \</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">            &lt;&lt; &quot;\nbacktrace:\n&quot; \</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">            &lt;&lt; sylar::BacktraceToString(100, 2, &quot;    &quot;); \</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">            &lt;&lt; rock::BacktraceToString(100, 2, &quot;    &quot;); \</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">        assert(x); \</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    }</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="macro_8h.html#a1d827e5ee32bdf91a8c67a846c2208fb">   37</a></span>&#160;<span class="preprocessor">#define SYLAR_ASSERT2(x, w) \</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    if(SYLAR_UNLIKELY(!(x))) { \</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">        SYLAR_LOG_ERROR(SYLAR_LOG_ROOT()) &lt;&lt; &quot;ASSERTION: &quot; #x \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="macro_8h.html#a1d827e5ee32bdf91a8c67a846c2208fb">   37</a></span>&#160;<span class="preprocessor">#define ROCK_ASSERT2(x, w) \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    if(ROCK_UNLIKELY(!(x))) { \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">        ROCK_LOG_ERROR(ROCK_LOG_ROOT()) &lt;&lt; &quot;ASSERTION: &quot; #x \</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">            &lt;&lt; &quot;\n&quot; &lt;&lt; w \</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">            &lt;&lt; &quot;\nbacktrace:\n&quot; \</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">            &lt;&lt; sylar::BacktraceToString(100, 2, &quot;    &quot;); \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">            &lt;&lt; rock::BacktraceToString(100, 2, &quot;    &quot;); \</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">        assert(x); \</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    }</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>

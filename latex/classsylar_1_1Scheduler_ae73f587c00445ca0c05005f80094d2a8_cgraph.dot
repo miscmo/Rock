@@ -1,10 +1,10 @@
-digraph "sylar::Scheduler::schedule"
+digraph "rock::Scheduler::schedule"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="sylar::Scheduler::schedule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="批量调度协程"];
+  Node1 [label="rock::Scheduler::schedule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="批量调度协程"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="sylar::Scheduler::tickle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Scheduler.html#af9c7148718b612596faf9ef669722548",tooltip="通知协程调度器有任务了"];
+  Node2 [label="rock::Scheduler::tickle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1Scheduler.html#af9c7148718b612596faf9ef669722548",tooltip="通知协程调度器有任务了"];
 }

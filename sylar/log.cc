@@ -9,7 +9,7 @@
 #include "macro.h"
 #include "env.h"
 
-namespace sylar {
+namespace rock {
 
 const char* LogLevel::ToString(LogLevel::Level level) {
     switch(level) {
@@ -253,7 +253,7 @@ void Logger::setFormatter(LogFormatter::ptr val) {
 
 void Logger::setFormatter(const std::string& val) {
     std::cout << "---" << val << std::endl;
-    sylar::LogFormatter::ptr new_val(new sylar::LogFormatter(val));
+    rock::LogFormatter::ptr new_val(new rock::LogFormatter(val));
     if(new_val->isError()) {
         std::cout << "Logger setFormatter name=" << m_name
                   << " value=" << val << " invalid formatter"
@@ -697,24 +697,24 @@ public:
     }
 };
 
-sylar::ConfigVar<std::set<LogDefine> >::ptr g_log_defines =
-    sylar::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
+rock::ConfigVar<std::set<LogDefine> >::ptr g_log_defines =
+    rock::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
 
 struct LogIniter {
     LogIniter() {
         g_log_defines->addListener([](const std::set<LogDefine>& old_value,
                     const std::set<LogDefine>& new_value){
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "on_logger_conf_changed";
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "on_logger_conf_changed";
             for(auto& i : new_value) {
                 auto it = old_value.find(i);
-                sylar::Logger::ptr logger;
+                rock::Logger::ptr logger;
                 if(it == old_value.end()) {
                     //新增logger
-                    logger = SYLAR_LOG_NAME(i.name);
+                    logger = ROCK_LOG_NAME(i.name);
                 } else {
                     if(!(i == *it)) {
                         //修改的logger
-                        logger = SYLAR_LOG_NAME(i.name);
+                        logger = ROCK_LOG_NAME(i.name);
                     } else {
                         continue;
                     }
@@ -728,11 +728,11 @@ struct LogIniter {
 
                 logger->clearAppenders();
                 for(auto& a : i.appenders) {
-                    sylar::LogAppender::ptr ap;
+                    rock::LogAppender::ptr ap;
                     if(a.type == 1) {
                         ap.reset(new FileLogAppender(a.file));
                     } else if(a.type == 2) {
-                        if(!sylar::EnvMgr::GetInstance()->has("d")) {
+                        if(!rock::EnvMgr::GetInstance()->has("d")) {
                             ap.reset(new StdoutLogAppender);
                         } else {
                             continue;
@@ -756,7 +756,7 @@ struct LogIniter {
                 auto it = new_value.find(i);
                 if(it == new_value.end()) {
                     //删除logger
-                    auto logger = SYLAR_LOG_NAME(i.name);
+                    auto logger = ROCK_LOG_NAME(i.name);
                     logger->setLevel((LogLevel::Level)0);
                     logger->clearAppenders();
                 }

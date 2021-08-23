@@ -1,11 +1,11 @@
-#ifndef __SYLAR_UTIL_JSON_UTIL_H__
-#define __SYLAR_UTIL_JSON_UTIL_H__
+#ifndef __ROCK_UTIL_JSON_UTIL_H__
+#define __ROCK_UTIL_JSON_UTIL_H__
 
 #include <string>
 #include <iostream>
 #include <jsoncpp/json/json.h>
 
-namespace sylar {
+namespace rock {
 
 class JsonUtil {
 public:

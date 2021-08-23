@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/endian.h 源文件</title>
+<title>rock: rock/endian.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,16 +70,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="endian_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_ENDIAN_H__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_ENDIAN_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __ROCK_ENDIAN_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __ROCK_ENDIAN_H__</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define SYLAR_LITTLE_ENDIAN 1</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define SYLAR_BIG_ENDIAN 2</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define ROCK_LITTLE_ENDIAN 1</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define ROCK_BIG_ENDIAN 2</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;byteswap.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typename</span> std::enable_if&lt;<span class="keyword">sizeof</span>(T) == <span class="keyword">sizeof</span>(uint64_t), T&gt;::type</div>
@@ -100,12 +100,12 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#if BYTE_ORDER == BIG_ENDIAN</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define SYLAR_BYTE_ORDER SYLAR_BIG_ENDIAN</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define ROCK_BYTE_ORDER ROCK_BIG_ENDIAN</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define SYLAR_BYTE_ORDER SYLAR_LITTLE_ENDIAN</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#define ROCK_BYTE_ORDER ROCK_LITTLE_ENDIAN</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if SYLAR_BYTE_ORDER == SYLAR_BIG_ENDIAN</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#if ROCK_BYTE_ORDER == ROCK_BIG_ENDIAN</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;T byteswapOnLittleEndian(T t) {</div>
@@ -133,9 +133,9 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aendian_8h_html_a6d290a9f2556bda1de644174b7cb12d8"><div class="ttname"><a href="endian_8h.html#a6d290a9f2556bda1de644174b7cb12d8">sylar::byteswapOnBigEndian</a></div><div class="ttdeci">T byteswapOnBigEndian(T t)</div><div class="ttdoc">只在大端机器上执行byteswap, 在小端机器上什么都不做</div><div class="ttdef"><b>Definition:</b> endian.h:84</div></div>
-<div class="ttc" id="aendian_8h_html_ab8dcd6ce4925d2a88159fdf438ad09b0"><div class="ttname"><a href="endian_8h.html#ab8dcd6ce4925d2a88159fdf438ad09b0">sylar::byteswap</a></div><div class="ttdeci">std::enable_if&lt; sizeof(T)==sizeof(uint64_t), T &gt;::type byteswap(T value)</div><div class="ttdoc">8字节类型的字节序转化</div><div class="ttdef"><b>Definition:</b> endian.h:25</div></div>
-<div class="ttc" id="aendian_8h_html_ace3c6efe9da95573435daf6bd0509d31"><div class="ttname"><a href="endian_8h.html#ace3c6efe9da95573435daf6bd0509d31">sylar::byteswapOnLittleEndian</a></div><div class="ttdeci">T byteswapOnLittleEndian(T t)</div><div class="ttdoc">只在小端机器上执行byteswap, 在大端机器上什么都不做</div><div class="ttdef"><b>Definition:</b> endian.h:76</div></div>
+<div class="ttc" id="aendian_8h_html_a6d290a9f2556bda1de644174b7cb12d8"><div class="ttname"><a href="endian_8h.html#a6d290a9f2556bda1de644174b7cb12d8">rock::byteswapOnBigEndian</a></div><div class="ttdeci">T byteswapOnBigEndian(T t)</div><div class="ttdoc">只在大端机器上执行byteswap, 在小端机器上什么都不做</div><div class="ttdef"><b>Definition:</b> endian.h:84</div></div>
+<div class="ttc" id="aendian_8h_html_ab8dcd6ce4925d2a88159fdf438ad09b0"><div class="ttname"><a href="endian_8h.html#ab8dcd6ce4925d2a88159fdf438ad09b0">rock::byteswap</a></div><div class="ttdeci">std::enable_if&lt; sizeof(T)==sizeof(uint64_t), T &gt;::type byteswap(T value)</div><div class="ttdoc">8字节类型的字节序转化</div><div class="ttdef"><b>Definition:</b> endian.h:25</div></div>
+<div class="ttc" id="aendian_8h_html_ace3c6efe9da95573435daf6bd0509d31"><div class="ttname"><a href="endian_8h.html#ace3c6efe9da95573435daf6bd0509d31">rock::byteswapOnLittleEndian</a></div><div class="ttdeci">T byteswapOnLittleEndian(T t)</div><div class="ttdoc">只在小端机器上执行byteswap, 在大端机器上什么都不做</div><div class="ttdef"><b>Definition:</b> endian.h:76</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::WorkerGroup类 参考</title>
+<title>rock: rock::WorkerGroup类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1WorkerGroup.html">WorkerGroup</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><a class="el" href="classrock_1_1WorkerGroup.html">WorkerGroup</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,19 +69,19 @@ $(function() {
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="classsylar_1_1WorkerGroup-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1WorkerGroup-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::WorkerGroup类 参考</div>  </div>
+<div class="title">rock::WorkerGroup类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-类 sylar::WorkerGroup 继承关系图:</div>
+类 rock::WorkerGroup 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div class="dynheader">
-sylar::WorkerGroup 的协作图:</div>
+rock::WorkerGroup 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 -->
 </div>
@@ -90,13 +90,13 @@ sylar::WorkerGroup 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a70d28c053e997dede9457fac9f54206d"><td class="memItemLeft" align="right" valign="top"><a id="a70d28c053e997dede9457fac9f54206d"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1WorkerGroup.html">WorkerGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1WorkerGroup.html">WorkerGroup</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:a70d28c053e997dede9457fac9f54206d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a2817be30fad51bfc32724d4d00bfe482"><td class="memItemLeft" align="right" valign="top"><a id="a2817be30fad51bfc32724d4d00bfe482"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WorkerGroup</b> (uint32_t batch_size, <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a> *s=<a class="el" href="classsylar_1_1Scheduler.html#a1a2808b67d1eb43f872e9c7f3890a342">sylar::Scheduler::GetThis</a>())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>WorkerGroup</b> (uint32_t batch_size, <a class="el" href="classrock_1_1Scheduler.html">rock::Scheduler</a> *s=<a class="el" href="classrock_1_1Scheduler.html#a1a2808b67d1eb43f872e9c7f3890a342">rock::Scheduler::GetThis</a>())</td></tr>
 <tr class="separator:a2817be30fad51bfc32724d4d00bfe482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa615df84af2bee3886b77b85c79d45a"><td class="memItemLeft" align="right" valign="top"><a id="aaa615df84af2bee3886b77b85c79d45a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>schedule</b> (std::function&lt; void()&gt; cb, int thread=-1)</td></tr>
@@ -108,11 +108,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>waitAll</b> ()</td></
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a64bc0b60d0080a3204ef4f4c39b37758"><td class="memItemLeft" align="right" valign="top"><a id="a64bc0b60d0080a3204ef4f4c39b37758"></a>
-static WorkerGroup::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (uint32_t batch_size, <a class="el" href="classsylar_1_1Scheduler.html">sylar::Scheduler</a> *s=<a class="el" href="classsylar_1_1Scheduler.html#a1a2808b67d1eb43f872e9c7f3890a342">sylar::Scheduler::GetThis</a>())</td></tr>
+static WorkerGroup::ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (uint32_t batch_size, <a class="el" href="classrock_1_1Scheduler.html">rock::Scheduler</a> *s=<a class="el" href="classrock_1_1Scheduler.html#a1a2808b67d1eb43f872e9c7f3890a342">rock::Scheduler::GetThis</a>())</td></tr>
 <tr class="separator:a64bc0b60d0080a3204ef4f4c39b37758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/<a class="el" href="worker_8h_source.html">worker.h</a></li>
+<li>rock/<a class="el" href="worker_8h_source.html">worker.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

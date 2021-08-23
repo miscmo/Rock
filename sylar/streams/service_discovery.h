@@ -1,15 +1,15 @@
-#ifndef __SYLAR_STREAMS_SERVICE_DISCOVERY_H__
-#define __SYLAR_STREAMS_SERVICE_DISCOVERY_H__
+#ifndef __ROCK_STREAMS_SERVICE_DISCOVERY_H__
+#define __ROCK_STREAMS_SERVICE_DISCOVERY_H__
 
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
 #include <string>
-#include "sylar/mutex.h"
-#include "sylar/iomanager.h"
-#include "sylar/zk_client.h"
+#include "rock/mutex.h"
+#include "rock/iomanager.h"
+#include "rock/zk_client.h"
 
-namespace sylar {
+namespace rock {
 
 class ServiceItemInfo {
 public:
@@ -54,7 +54,7 @@ public:
 
     void setQueryServer(const std::unordered_map<std::string, std::unordered_set<std::string> >& v);
 protected:
-    sylar::RWMutex m_mutex;
+    rock::RWMutex m_mutex;
     //domain -> [service -> [id -> ServiceItemInfo] ]
     std::unordered_map<std::string, std::unordered_map<std::string
         ,std::unordered_map<uint64_t, ServiceItemInfo::ptr> > > m_datas;
@@ -99,7 +99,7 @@ private:
     std::string m_selfInfo;
     std::string m_selfData;
     ZKClient::ptr m_client;
-    sylar::Timer::ptr m_timer;
+    rock::Timer::ptr m_timer;
     bool m_isOnTimer = false;
 };
 

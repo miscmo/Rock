@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/ds/dict.h 源文件</title>
+<title>rock: rock/ds/dict.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,67 +69,67 @@ $(function() {
 <div class="title">dict.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_DS_DICT_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_DS_DICT_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_DS_DICT_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_DS_DICT_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;sylar/ds/util.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">sylar/util.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;sylar/mutex.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">sylar/log.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;rock/ds/util.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">rock/util.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;rock/mutex.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">rock/log.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>ds {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span>StringDict;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>K</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ,<span class="keyword">class </span>V</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        ,<span class="keyword">class </span>PosHash = <a class="code" href="classsylar_1_1ds_1_1Murmur3Hash.html">sylar::ds::Murmur3Hash&lt;K&gt;</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        ,<span class="keyword">class </span>PosHash = <a class="code" href="classrock_1_1ds_1_1Murmur3Hash.html">rock::ds::Murmur3Hash&lt;K&gt;</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        &gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsylar_1_1ds_1_1Dict.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1Dict.html">Dict</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1StringDict.html">StringDict</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classrock_1_1ds_1_1Dict.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1Dict.html">Dict</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1StringDict.html">StringDict</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Dict&gt; ptr;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">typedef</span> std::function&lt;bool(<span class="keyword">const</span> K&amp; k, <span class="keyword">const</span> V* v, <span class="keywordtype">size_t</span> size)&gt; callback;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1Dict.html">Dict</a>(<span class="keyword">const</span> uint32_t&amp; size = 0)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classrock_1_1ds_1_1Dict.html">Dict</a>(<span class="keyword">const</span> uint32_t&amp; size = 0)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        :m_total(0) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        m_size = basket(size);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        m_datas = <span class="keyword">new</span> std::vector&lt;Node&gt;[m_size]();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="classsylar_1_1ds_1_1Dict.html">Dict</a>() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="classrock_1_1ds_1_1Dict.html">Dict</a>() {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        freeDatas(m_datas, m_size);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classsylar_1_1SharedArray.html">SharedArray&lt;V&gt;</a> get(<span class="keyword">const</span> K&amp; k, <span class="keywordtype">bool</span> duplicate = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classrock_1_1SharedArray.html">SharedArray&lt;V&gt;</a> get(<span class="keyword">const</span> K&amp; k, <span class="keywordtype">bool</span> duplicate = <span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span>(it == m_datas[pos].end()) {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1SharedArray.html">SharedArray&lt;V&gt;</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classrock_1_1SharedArray.html">SharedArray&lt;V&gt;</a>();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span>(duplicate) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            V* tmp = <span class="keyword">new</span> V[it-&gt;size]();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            memcpy(tmp, it-&gt;val, <span class="keyword">sizeof</span>(V) * it-&gt;size);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1SharedArray.html">SharedArray&lt;V&gt;</a>(it-&gt;size, tmp);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classrock_1_1SharedArray.html">SharedArray&lt;V&gt;</a>(it-&gt;size, tmp);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classsylar_1_1SharedArray.html">SharedArray&lt;V&gt;</a>(it-&gt;size, it-&gt;val, nop&lt;V&gt;);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classrock_1_1SharedArray.html">SharedArray&lt;V&gt;</a>(it-&gt;size, it-&gt;val, nop&lt;V&gt;);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">bool</span> get(<span class="keyword">const</span> K&amp; k, std::vector&lt;V&gt;&amp; v) {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(it == m_datas[pos].end()) {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
@@ -141,11 +141,11 @@ $(function() {
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> exists(<span class="keyword">const</span> K&amp; k) {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> it != m_datas[pos].end();</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -159,12 +159,12 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="structsylar_1_1WriteScopedLockImpl.html">sylar::RWMutex::WriteLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="structrock_1_1WriteScopedLockImpl.html">rock::RWMutex::WriteLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span>(it == m_datas[pos].end()) {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            Node node(k);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            node.size = size;</div>
@@ -175,7 +175,7 @@ $(function() {
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            SortLast(&amp;m_datas[pos][0], m_datas[pos].size());</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">//std::sort(m_datas[pos].begin(), m_datas[pos].end());</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            sylar::Atomic::addFetch(m_total);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            rock::Atomic::addFetch(m_total);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">if</span>(it-&gt;size == (<span class="keywordtype">int</span>)size) {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                memcpy(it-&gt;val, v, <span class="keyword">sizeof</span>(V) * size);</div>
@@ -193,9 +193,9 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <span class="keywordflow">foreach</span>(callback cb) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; m_size; ++i) {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[i % MAX_MUTEX]);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[i % MAX_MUTEX]);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> n : m_datas[i]) {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordflow">if</span>(!cb(n.key, n.val, n.size)) {</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    <span class="keywordflow">break</span>;</div>
@@ -208,12 +208,12 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">bool</span> del(<span class="keyword">const</span> K&amp; k) {</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="structsylar_1_1WriteScopedLockImpl.html">sylar::RWMutex::WriteLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="structrock_1_1WriteScopedLockImpl.html">rock::RWMutex::WriteLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span>(it == m_datas[pos].end()) {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        } <span class="keywordflow">else</span> {</div>
@@ -225,20 +225,20 @@ $(function() {
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            m_datas[pos].resize(m_datas[pos].size() - 1);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            std::sort(m_datas[pos].begin(), m_datas[pos].end());</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            sylar::Atomic::subFetch(m_total);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            rock::Atomic::subFetch(m_total);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> rehash() {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="structsylar_1_1WriteScopedLockImpl.html">sylar::RWMutex::WriteLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="structrock_1_1WriteScopedLockImpl.html">rock::RWMutex::WriteLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span>(needRehash()) {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            rehashUnlock();</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    std::ostream&amp; dump(std::ostream&amp; os) {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">typename</span> <a class="code" href="structrock_1_1ReadScopedLockImpl.html">RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        os &lt;&lt; <span class="stringliteral">&quot;[Dict total=&quot;</span> &lt;&lt; m_total</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;           &lt;&lt; <span class="stringliteral">&quot; bucket=&quot;</span> &lt;&lt; m_size</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;           &lt;&lt; <span class="stringliteral">&quot; rate=&quot;</span> &lt;&lt; getRate()</div>
@@ -249,7 +249,7 @@ $(function() {
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">//for K,V is POD</span></div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">bool</span> writeTo(std::ostream&amp; os, uint64_t speed = -1) {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        os.write((<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;m_size, <span class="keyword">sizeof</span>(m_size));</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::vector&lt;V&gt; vs;</div>
@@ -259,7 +259,7 @@ $(function() {
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        vs.reserve(m_total);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; m_size; ++i) {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[i % MAX_MUTEX]);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[i % MAX_MUTEX]);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> n : m_datas[i]) {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordtype">size_t</span> offset = vs.size();</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                vs.insert(vs.end(), n.val, n.val + n.size);</div>
@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span>(speed == (uint64_t)-1) {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            os.write((<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;vs[0], size);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            sylar::WriteFixToStreamWithSpeed(os, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;vs[0], size, speed);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            rock::WriteFixToStreamWithSpeed(os, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;vs[0], size, speed);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        size = ns.size() * <span class="keyword">sizeof</span>(Node);</div>
@@ -281,7 +281,7 @@ $(function() {
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">if</span>(speed == (uint64_t)-1) {</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            os.write((<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;ns[0], size);</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            sylar::WriteFixToStreamWithSpeed(os, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;ns[0], size, speed);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            rock::WriteFixToStreamWithSpeed(os, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;ns[0], size, speed);</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;writeTo size: &quot; &lt;&lt; os.tellp() &lt;&lt; std::endl;</span></div>
@@ -353,11 +353,11 @@ $(function() {
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    std::string getString(<span class="keyword">const</span> K&amp; k) {</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        uint32_t hashvalue = m_posHash(k);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        uint32_t pos = hashvalue % m_size;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock2(s_mutex[pos % MAX_MUTEX]);</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keyword">auto</span> it = BinarySearch(m_datas[pos].begin(), m_datas[pos].end(), Node(k));</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="comment">//SYLAR_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="comment">//ROCK_ASSERT(it == std::find(m_datas[pos].begin(), m_datas[pos].end(), Node(k)));</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span>(it == m_datas[pos].end()) {</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">return</span> std::string();</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        }</div>
@@ -442,40 +442,40 @@ $(function() {
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    uint64_t m_size;</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    uint64_t m_total;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    std::vector&lt;Node&gt;* m_datas;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    PosHash m_posHash;</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    std::vector&lt;V&gt; m_values;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> uint32_t MAX_MUTEX = 1024 * 128;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">static</span> <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> s_mutex[MAX_MUTEX];</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">static</span> <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> s_mutex[MAX_MUTEX];</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;};</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>K</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        ,<span class="keyword">class </span>V</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        ,<span class="keyword">class </span>PosHash</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        &gt;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> <a class="code" href="classsylar_1_1ds_1_1Dict.html">Dict&lt;K, V, PosHash&gt;::s_mutex</a>[MAX_MUTEX];</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> <a class="code" href="classrock_1_1ds_1_1Dict.html">Dict&lt;K, V, PosHash&gt;::s_mutex</a>[MAX_MUTEX];</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classsylar_1_1ds_1_1StringDict.html">  389</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1StringDict.html">StringDict</a> {</div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classrock_1_1ds_1_1StringDict.html">  389</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1StringDict.html">StringDict</a> {</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keyword">static</span> uint64_t GetID(<span class="keyword">const</span> std::string&amp; str) {</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">if</span>(str.empty()) {</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        }</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">return</span> sylar::murmur3_hash64(str.c_str(), str.size(), 1060627423, 1050126127);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        <span class="keywordflow">return</span> rock::murmur3_hash64(str.c_str(), str.size(), 1060627423, 1050126127);</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keyword">static</span> uint64_t GetID(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> uint32_t&amp; size) {</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">if</span>(size == 0) {</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">return</span> sylar::murmur3_hash64(str, size, 1060627423, 1050126127);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">return</span> rock::murmur3_hash64(str, size, 1060627423, 1050126127);</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">static</span> uint64_t GetID(<span class="keyword">const</span> <span class="keywordtype">char</span>* str) {</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        <span class="keywordflow">if</span>(str == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        }</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> sylar::murmur3_hash64(str, 1060627423, 1050126127);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keywordflow">return</span> rock::murmur3_hash64(str, 1060627423, 1050126127);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    uint64_t update(<span class="keyword">const</span> std::string&amp; str) {</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">return</span> update(str.c_str(), str.size());</div>
@@ -503,7 +503,7 @@ $(function() {
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="keywordflow">return</span> m_dict.getString(<span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    }</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="classsylar_1_1SharedArray.html">SharedArray&lt;char&gt;</a> getRaw(<span class="keyword">const</span> uint64_t&amp; <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> duplicate = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="classrock_1_1SharedArray.html">SharedArray&lt;char&gt;</a> getRaw(<span class="keyword">const</span> uint64_t&amp; <span class="keywordtype">id</span>, <span class="keywordtype">bool</span> duplicate = <span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">return</span> m_dict.get(<span class="keywordtype">id</span>, duplicate);</div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
@@ -525,7 +525,7 @@ $(function() {
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    uint64_t getTotal() { <span class="keywordflow">return</span> m_dict.getTotal();}</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1Dict.html">Dict&lt;uint64_t, char&gt;</a> m_dict;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <a class="code" href="classrock_1_1ds_1_1Dict.html">Dict&lt;uint64_t, char&gt;</a> m_dict;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;};</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div>
@@ -533,15 +533,15 @@ $(function() {
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1SharedArray_html"><div class="ttname"><a href="classsylar_1_1SharedArray.html">sylar::SharedArray</a></div><div class="ttdef"><b>Definition:</b> util.h:217</div></div>
-<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
-<div class="ttc" id="astructsylar_1_1ReadScopedLockImpl_html"><div class="ttname"><a href="structsylar_1_1ReadScopedLockImpl.html">sylar::ReadScopedLockImpl</a></div><div class="ttdoc">局部读锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:100</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1Murmur3Hash_html"><div class="ttname"><a href="classsylar_1_1ds_1_1Murmur3Hash.html">sylar::ds::Murmur3Hash&lt; K &gt;</a></div></div>
+<div class="ttc" id="aclassrock_1_1SharedArray_html"><div class="ttname"><a href="classrock_1_1SharedArray.html">rock::SharedArray</a></div><div class="ttdef"><b>Definition:</b> util.h:217</div></div>
+<div class="ttc" id="aclassrock_1_1RWMutex_html"><div class="ttname"><a href="classrock_1_1RWMutex.html">rock::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="astructrock_1_1ReadScopedLockImpl_html"><div class="ttname"><a href="structrock_1_1ReadScopedLockImpl.html">rock::ReadScopedLockImpl</a></div><div class="ttdoc">局部读锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:100</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1Murmur3Hash_html"><div class="ttname"><a href="classrock_1_1ds_1_1Murmur3Hash.html">rock::ds::Murmur3Hash&lt; K &gt;</a></div></div>
 <div class="ttc" id="alog_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div><div class="ttdoc">日志模块封装</div></div>
-<div class="ttc" id="astructsylar_1_1WriteScopedLockImpl_html"><div class="ttname"><a href="structsylar_1_1WriteScopedLockImpl.html">sylar::WriteScopedLockImpl</a></div><div class="ttdoc">局部写锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:149</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1StringDict_html"><div class="ttname"><a href="classsylar_1_1ds_1_1StringDict.html">sylar::ds::StringDict</a></div><div class="ttdef"><b>Definition:</b> dict.h:389</div></div>
+<div class="ttc" id="astructrock_1_1WriteScopedLockImpl_html"><div class="ttname"><a href="structrock_1_1WriteScopedLockImpl.html">rock::WriteScopedLockImpl</a></div><div class="ttdoc">局部写锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:149</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1StringDict_html"><div class="ttname"><a href="classrock_1_1ds_1_1StringDict.html">rock::ds::StringDict</a></div><div class="ttdef"><b>Definition:</b> dict.h:389</div></div>
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">常用的工具函数</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1Dict_html"><div class="ttname"><a href="classsylar_1_1ds_1_1Dict.html">sylar::ds::Dict</a></div><div class="ttdef"><b>Definition:</b> dict.h:20</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1Dict_html"><div class="ttname"><a href="classrock_1_1ds_1_1Dict.html">rock::ds::Dict</a></div><div class="ttdef"><b>Definition:</b> dict.h:20</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

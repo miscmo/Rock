@@ -1,4 +1,4 @@
-#include "sylar/env.h"
+#include "rock/env.h"
 #include <unistd.h>
 #include <iostream>
 #include <fstream>
@@ -22,23 +22,23 @@ A a;
 
 int main(int argc, char** argv) {
     std::cout << "argc=" << argc << std::endl;
-    sylar::EnvMgr::GetInstance()->addHelp("s", "start with the terminal");
-    sylar::EnvMgr::GetInstance()->addHelp("d", "run as daemon");
-    sylar::EnvMgr::GetInstance()->addHelp("p", "print help");
-    if(!sylar::EnvMgr::GetInstance()->init(argc, argv)) {
-        sylar::EnvMgr::GetInstance()->printHelp();
+    rock::EnvMgr::GetInstance()->addHelp("s", "start with the terminal");
+    rock::EnvMgr::GetInstance()->addHelp("d", "run as daemon");
+    rock::EnvMgr::GetInstance()->addHelp("p", "print help");
+    if(!rock::EnvMgr::GetInstance()->init(argc, argv)) {
+        rock::EnvMgr::GetInstance()->printHelp();
         return 0;
     }
 
-    std::cout << "exe=" << sylar::EnvMgr::GetInstance()->getExe() << std::endl;
-    std::cout << "cwd=" << sylar::EnvMgr::GetInstance()->getCwd() << std::endl;
+    std::cout << "exe=" << rock::EnvMgr::GetInstance()->getExe() << std::endl;
+    std::cout << "cwd=" << rock::EnvMgr::GetInstance()->getCwd() << std::endl;
 
-    std::cout << "path=" << sylar::EnvMgr::GetInstance()->getEnv("PATH", "xxx") << std::endl;
-    std::cout << "test=" << sylar::EnvMgr::GetInstance()->getEnv("TEST", "") << std::endl;
-    std::cout << "set env " << sylar::EnvMgr::GetInstance()->setEnv("TEST", "yy") << std::endl;
-    std::cout << "test=" << sylar::EnvMgr::GetInstance()->getEnv("TEST", "") << std::endl;
-    if(sylar::EnvMgr::GetInstance()->has("p")) {
-        sylar::EnvMgr::GetInstance()->printHelp();
+    std::cout << "path=" << rock::EnvMgr::GetInstance()->getEnv("PATH", "xxx") << std::endl;
+    std::cout << "test=" << rock::EnvMgr::GetInstance()->getEnv("TEST", "") << std::endl;
+    std::cout << "set env " << rock::EnvMgr::GetInstance()->setEnv("TEST", "yy") << std::endl;
+    std::cout << "test=" << rock::EnvMgr::GetInstance()->getEnv("TEST", "") << std::endl;
+    if(rock::EnvMgr::GetInstance()->has("p")) {
+        rock::EnvMgr::GetInstance()->printHelp();
     }
     return 0;
 }

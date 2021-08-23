@@ -1,23 +1,23 @@
-\doxysection{sylar\+::S\+S\+L\+Socket类 参考}
-\label{classsylar_1_1SSLSocket}\index{sylar::SSLSocket@{sylar::SSLSocket}}
+\doxysection{rock\+::S\+S\+L\+Socket类 参考}
+\label{classrock_1_1SSLSocket}\index{rock::SSLSocket@{rock::SSLSocket}}
 
 
-类 sylar\+::S\+S\+L\+Socket 继承关系图\+:
+类 rock\+::S\+S\+L\+Socket 继承关系图\+:
 % FIG 0
 
 
-sylar\+::S\+S\+L\+Socket 的协作图\+:
+rock\+::S\+S\+L\+Socket 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_a6b975b27d6c45bbb63b212d8e7d3e4f0}} 
+\mbox{\label{classrock_1_1SSLSocket_a6b975b27d6c45bbb63b212d8e7d3e4f0}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ S\+S\+L\+Socket} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_ae4e6bcd0f1ac8171e04f5d007ed6cb34}} 
+\mbox{\label{classrock_1_1SSLSocket_ae4e6bcd0f1ac8171e04f5d007ed6cb34}} 
 {\bfseries S\+S\+L\+Socket} (int family, int type, int protocol=0)
 \item 
 virtual Socket\+::ptr \textbf{ accept} () override
@@ -28,7 +28,7 @@ virtual bool \textbf{ connect} (const Address\+::ptr addr, uint64\+\_\+t timeout
 \begin{DoxyCompactList}\small\item\em 连接地址 \end{DoxyCompactList}\item 
 virtual bool \textbf{ listen} (int backlog=S\+O\+M\+A\+X\+C\+O\+NN) override
 \begin{DoxyCompactList}\small\item\em 监听socket \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SSLSocket_a63026bfc275903ccd28825b15901ae8c}} 
+\mbox{\label{classrock_1_1SSLSocket_a63026bfc275903ccd28825b15901ae8c}} 
 virtual bool \textbf{ close} () override
 \begin{DoxyCompactList}\small\item\em 关闭socket \end{DoxyCompactList}\item 
 virtual int \textbf{ send} (const void $\ast$buffer, size\+\_\+t length, int flags=0) override
@@ -47,39 +47,39 @@ virtual int \textbf{ recv\+From} (void $\ast$buffer, size\+\_\+t length, Address
 \begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
 virtual int \textbf{ recv\+From} (iovec $\ast$buffers, size\+\_\+t length, Address\+::ptr from, int flags=0) override
 \begin{DoxyCompactList}\small\item\em 接受数据 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1SSLSocket_a440cf1cd1f922631b63946335f0e2469}} 
+\mbox{\label{classrock_1_1SSLSocket_a440cf1cd1f922631b63946335f0e2469}} 
 bool {\bfseries load\+Certificates} (const std\+::string \&cert\+\_\+file, const std\+::string \&key\+\_\+file)
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_af38deef2aa3cd5280f9ec9e7501acd3b}} 
+\mbox{\label{classrock_1_1SSLSocket_af38deef2aa3cd5280f9ec9e7501acd3b}} 
 virtual std\+::ostream \& \textbf{ dump} (std\+::ostream \&os) const override
 \begin{DoxyCompactList}\small\item\em 输出信息到流中 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_a28af7c910b7d49f1c0b86b63d8851fee}} 
-static S\+S\+L\+Socket\+::ptr {\bfseries Create\+T\+CP} (sylar\+::\+Address\+::ptr address)
+\mbox{\label{classrock_1_1SSLSocket_a28af7c910b7d49f1c0b86b63d8851fee}} 
+static S\+S\+L\+Socket\+::ptr {\bfseries Create\+T\+CP} (rock\+::\+Address\+::ptr address)
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_a858bae6cf5afbaa1e7aad885cd5bd356}} 
+\mbox{\label{classrock_1_1SSLSocket_a858bae6cf5afbaa1e7aad885cd5bd356}} 
 static S\+S\+L\+Socket\+::ptr {\bfseries Create\+T\+C\+P\+Socket} ()
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_ab4aca442a820b8d0d1872fd7ca9862b4}} 
+\mbox{\label{classrock_1_1SSLSocket_ab4aca442a820b8d0d1872fd7ca9862b4}} 
 static S\+S\+L\+Socket\+::ptr {\bfseries Create\+T\+C\+P\+Socket6} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SSLSocket_a1dd76359b68c833b41bd8390d6733d22}} 
+\mbox{\label{classrock_1_1SSLSocket_a1dd76359b68c833b41bd8390d6733d22}} 
 virtual bool \textbf{ init} (int sock) override
 \begin{DoxyCompactList}\small\item\em 初始化sock \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1SSLSocket_afecbb66a11644b6215b319c86aea6a3a}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!accept@{accept}}
-\index{accept@{accept}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_afecbb66a11644b6215b319c86aea6a3a}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!accept@{accept}}
+\index{accept@{accept}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{accept()}
-{\footnotesize\ttfamily virtual Socket\+::ptr sylar\+::\+S\+S\+L\+Socket\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual Socket\+::ptr rock\+::\+S\+S\+L\+Socket\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -93,13 +93,13 @@ Socket必须 bind , listen 成功
 \end{DoxyPrecond}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_aa8671aebd2450ea097d8820416d5237f} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_aa8671aebd2450ea097d8820416d5237f} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a0d2bec8689cb32f67a60b7edeb1dcf71}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!bind@{bind}}
-\index{bind@{bind}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a0d2bec8689cb32f67a60b7edeb1dcf71}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!bind@{bind}}
+\index{bind@{bind}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{bind()}
-{\footnotesize\ttfamily virtual bool sylar\+::\+S\+S\+L\+Socket\+::bind (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+S\+S\+L\+Socket\+::bind (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -115,13 +115,13 @@ Socket必须 bind , listen 成功
 \end{DoxyReturn}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_ae6b4769ae79789ee9b36373c720dc915} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_ae6b4769ae79789ee9b36373c720dc915} .
 
-\mbox{\label{classsylar_1_1SSLSocket_af80ab931d1a8e01306311285ef036df8}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!connect@{connect}}
-\index{connect@{connect}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_af80ab931d1a8e01306311285ef036df8}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!connect@{connect}}
+\index{connect@{connect}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{connect()}
-{\footnotesize\ttfamily virtual bool sylar\+::\+S\+S\+L\+Socket\+::connect (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+S\+S\+L\+Socket\+::connect (\begin{DoxyParamCaption}\item[{const Address\+::ptr}]{addr,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -136,13 +136,13 @@ Socket必须 bind , listen 成功
 \end{DoxyParams}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a918c0f55dbfdfcd1e27a8e800b297a24} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a918c0f55dbfdfcd1e27a8e800b297a24} .
 
-\mbox{\label{classsylar_1_1SSLSocket_afdafa044aec7e161e308fe6ac22d7032}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!listen@{listen}}
-\index{listen@{listen}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_afdafa044aec7e161e308fe6ac22d7032}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!listen@{listen}}
+\index{listen@{listen}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{listen()}
-{\footnotesize\ttfamily virtual bool sylar\+::\+S\+S\+L\+Socket\+::listen (\begin{DoxyParamCaption}\item[{int}]{backlog = {\ttfamily SOMAXCONN} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+S\+S\+L\+Socket\+::listen (\begin{DoxyParamCaption}\item[{int}]{backlog = {\ttfamily SOMAXCONN} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -161,13 +161,13 @@ Socket必须 bind , listen 成功
 \end{DoxyPrecond}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a834b6645daaeec36b35582514118929f} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a834b6645daaeec36b35582514118929f} .
 
-\mbox{\label{classsylar_1_1SSLSocket_aa09cbf574c6a896d9438980b5fdfe1b5}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!recv@{recv}}
-\index{recv@{recv}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_aa09cbf574c6a896d9438980b5fdfe1b5}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!recv@{recv}}
+\index{recv@{recv}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{recv()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::recv (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::recv (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -196,13 +196,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a78dd52bd532befe374e9b3efb6af3bee} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a78dd52bd532befe374e9b3efb6af3bee} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a32d1c1ea43ef650864d1c3caa4ebaa1e}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!recv@{recv}}
-\index{recv@{recv}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a32d1c1ea43ef650864d1c3caa4ebaa1e}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!recv@{recv}}
+\index{recv@{recv}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{recv()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::recv (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::recv (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -231,13 +231,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a9c9fcf7f10dc2aa792ab4a153af66ccb} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a9c9fcf7f10dc2aa792ab4a153af66ccb} .
 
-\mbox{\label{classsylar_1_1SSLSocket_ad24a65df3344ba7365a438ec363494b9}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!recvFrom@{recvFrom}}
-\index{recvFrom@{recvFrom}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_ad24a65df3344ba7365a438ec363494b9}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{recvFrom()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -268,13 +268,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a65b6ac9ea74b621c5e11fe9665f25502} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a65b6ac9ea74b621c5e11fe9665f25502} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a0b8d04fbf9a28eb80055adb78c390f28}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!recvFrom@{recvFrom}}
-\index{recvFrom@{recvFrom}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a0b8d04fbf9a28eb80055adb78c390f28}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!recvFrom@{recvFrom}}
+\index{recvFrom@{recvFrom}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{recvFrom()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::recv\+From (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{Address\+::ptr}]{from,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -305,13 +305,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a5e3e43ad94c153db6080b768940f4b2a} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a5e3e43ad94c153db6080b768940f4b2a} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a251b229f5ca5d3229e4586a11485f659}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!send@{send}}
-\index{send@{send}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a251b229f5ca5d3229e4586a11485f659}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!send@{send}}
+\index{send@{send}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{send()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::send (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::send (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -340,13 +340,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a5d5166f9884951885753598b1a9a3d53} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a5d5166f9884951885753598b1a9a3d53} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a046a3616b1afb59d81100c862bde939d}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!send@{send}}
-\index{send@{send}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a046a3616b1afb59d81100c862bde939d}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!send@{send}}
+\index{send@{send}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{send()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::send (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::send (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -375,13 +375,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a10d250f5b6f476e99b1a204db60925ca} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a10d250f5b6f476e99b1a204db60925ca} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a6f140f9f8a6217adbc5b823803b7ddfb}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!sendTo@{sendTo}}
-\index{sendTo@{sendTo}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a6f140f9f8a6217adbc5b823803b7ddfb}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{sendTo()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const iovec $\ast$}]{buffers,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -412,13 +412,13 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a5ca79cde27053f8fa17d59206aa3bdcf} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a5ca79cde27053f8fa17d59206aa3bdcf} .
 
-\mbox{\label{classsylar_1_1SSLSocket_a3ff1c8ec11526bb404f6a9ca935865f2}} 
-\index{sylar::SSLSocket@{sylar::SSLSocket}!sendTo@{sendTo}}
-\index{sendTo@{sendTo}!sylar::SSLSocket@{sylar::SSLSocket}}
+\mbox{\label{classrock_1_1SSLSocket_a3ff1c8ec11526bb404f6a9ca935865f2}} 
+\index{rock::SSLSocket@{rock::SSLSocket}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!rock::SSLSocket@{rock::SSLSocket}}
 \doxysubsubsection{sendTo()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+S\+S\+L\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+S\+S\+L\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length,  }\item[{const Address\+::ptr}]{to,  }\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -449,10 +449,10 @@ Socket必须 bind , listen 成功
 \end{DoxyRetVals}
 
 
-重载 \textbf{ sylar\+::\+Socket} \doxyref{}{p.}{classsylar_1_1Socket_a96bb0a4fbc86e6aed2f378a4c4119e4d} .
+重载 \textbf{ rock\+::\+Socket} \doxyref{}{p.}{classrock_1_1Socket_a96bb0a4fbc86e6aed2f378a4c4119e4d} .
 
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ socket.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ socket.\+h}\end{DoxyCompactItemize}

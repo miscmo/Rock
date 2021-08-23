@@ -1,6 +1,6 @@
 #include "ws_servlet.h"
 
-namespace sylar {
+namespace rock {
 namespace http {
 
 FunctionWSServlet::FunctionWSServlet(callback cb
@@ -12,25 +12,25 @@ FunctionWSServlet::FunctionWSServlet(callback cb
     ,m_onClose(close_cb) {
 }
 
-int32_t FunctionWSServlet::onConnect(sylar::http::HttpRequest::ptr header
-                                     ,sylar::http::WSSession::ptr session) {
+int32_t FunctionWSServlet::onConnect(rock::http::HttpRequest::ptr header
+                                     ,rock::http::WSSession::ptr session) {
     if(m_onConnect) {
         return m_onConnect(header, session);
     }
     return 0;
 }
 
-int32_t FunctionWSServlet::onClose(sylar::http::HttpRequest::ptr header
-                                     ,sylar::http::WSSession::ptr session) {
+int32_t FunctionWSServlet::onClose(rock::http::HttpRequest::ptr header
+                                     ,rock::http::WSSession::ptr session) {
     if(m_onClose) {
         return m_onClose(header, session);
     }
     return 0;
 }
 
-int32_t FunctionWSServlet::handle(sylar::http::HttpRequest::ptr header
-                                   ,sylar::http::WSFrameMessage::ptr msg
-                                   ,sylar::http::WSSession::ptr session) {
+int32_t FunctionWSServlet::handle(rock::http::HttpRequest::ptr header
+                                   ,rock::http::WSFrameMessage::ptr msg
+                                   ,rock::http::WSSession::ptr session) {
     if(m_callback) {
         return m_callback(header, msg, session);
     }

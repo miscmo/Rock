@@ -1,56 +1,56 @@
-\doxysection{sylar\+::S\+Q\+Lite3\+Manager类 参考}
-\label{classsylar_1_1SQLite3Manager}\index{sylar::SQLite3Manager@{sylar::SQLite3Manager}}
+\doxysection{rock\+::S\+Q\+Lite3\+Manager类 参考}
+\label{classrock_1_1SQLite3Manager}\index{rock::SQLite3Manager@{rock::SQLite3Manager}}
 
 
-sylar\+::S\+Q\+Lite3\+Manager 的协作图\+:
+rock\+::S\+Q\+Lite3\+Manager 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a4e35141c6c2e64a2e7902424fab5de47}} 
-typedef \textbf{ sylar\+::\+Mutex} {\bfseries Mutex\+Type}
+\mbox{\label{classrock_1_1SQLite3Manager_a4e35141c6c2e64a2e7902424fab5de47}} 
+typedef \textbf{ rock\+::\+Mutex} {\bfseries Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_abc13e7937bc33c4974e34809778ce7c3}} 
+\mbox{\label{classrock_1_1SQLite3Manager_abc13e7937bc33c4974e34809778ce7c3}} 
 S\+Q\+Lite3\+::ptr {\bfseries get} (const std\+::string \&name)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a97ca0579602e10224182a6ae9ccaba75}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a97ca0579602e10224182a6ae9ccaba75}} 
 void {\bfseries register\+S\+Q\+Lite3} (const std\+::string \&name, const std\+::map$<$ std\+::string, std\+::string $>$ \&params)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a2d68bc1d82ddb1e3e75d8c057cd438f6}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a2d68bc1d82ddb1e3e75d8c057cd438f6}} 
 void {\bfseries check\+Connection} (int sec=30)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_aef8f3e3d440f04332e76d1abd8e27324}} 
+\mbox{\label{classrock_1_1SQLite3Manager_aef8f3e3d440f04332e76d1abd8e27324}} 
 uint32\+\_\+t {\bfseries get\+Max\+Conn} () const
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a8378986beeecf0e4d1dad3e19d51229a}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a8378986beeecf0e4d1dad3e19d51229a}} 
 void {\bfseries set\+Max\+Conn} (uint32\+\_\+t v)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a9bce7c78badfd5ef797a11f15a986313}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a9bce7c78badfd5ef797a11f15a986313}} 
 int {\bfseries execute} (const std\+::string \&name, const char $\ast$format,...)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a1ddb09cc986a9be571710e0590c7f902}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a1ddb09cc986a9be571710e0590c7f902}} 
 int {\bfseries execute} (const std\+::string \&name, const char $\ast$format, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a5a04ec0789594d02fc6cace8cc0e0b93}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a5a04ec0789594d02fc6cace8cc0e0b93}} 
 int {\bfseries execute} (const std\+::string \&name, const std\+::string \&sql)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_af0ac4475441059a1611ac65b6b77c5b7}} 
+\mbox{\label{classrock_1_1SQLite3Manager_af0ac4475441059a1611ac65b6b77c5b7}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const char $\ast$format,...)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_aeec32eb190d95454e3658faeda3509ae}} 
+\mbox{\label{classrock_1_1SQLite3Manager_aeec32eb190d95454e3658faeda3509ae}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const char $\ast$format, va\+\_\+list ap)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_af73d2be33629f2547e8960fa3f70dec6}} 
+\mbox{\label{classrock_1_1SQLite3Manager_af73d2be33629f2547e8960fa3f70dec6}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} (const std\+::string \&name, const std\+::string \&sql)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Manager_a2d4728b7f404e0236c79c1b8ba6202d5}} 
+\mbox{\label{classrock_1_1SQLite3Manager_a2d4728b7f404e0236c79c1b8ba6202d5}} 
 S\+Q\+Lite3\+Transaction\+::ptr {\bfseries open\+Transaction} (const std\+::string \&name, bool auto\+\_\+commit)
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/\textbf{ sqlite3.\+h}\end{DoxyCompactItemize}
+rock/db/\textbf{ sqlite3.\+h}\end{DoxyCompactItemize}

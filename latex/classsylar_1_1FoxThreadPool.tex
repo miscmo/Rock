@@ -1,63 +1,63 @@
-\doxysection{sylar\+::Fox\+Thread\+Pool类 参考}
-\label{classsylar_1_1FoxThreadPool}\index{sylar::FoxThreadPool@{sylar::FoxThreadPool}}
+\doxysection{rock\+::Fox\+Thread\+Pool类 参考}
+\label{classrock_1_1FoxThreadPool}\index{rock::FoxThreadPool@{rock::FoxThreadPool}}
 
 
-类 sylar\+::Fox\+Thread\+Pool 继承关系图\+:
+类 rock\+::Fox\+Thread\+Pool 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Fox\+Thread\+Pool 的协作图\+:
+rock\+::Fox\+Thread\+Pool 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a91d719e3ed4e2a8ed8bfd2e4246bb475}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a91d719e3ed4e2a8ed8bfd2e4246bb475}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fox\+Thread\+Pool} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_aa98235a6313def94413f60d3c4f4043b}} 
+\mbox{\label{classrock_1_1FoxThreadPool_aa98235a6313def94413f60d3c4f4043b}} 
 typedef I\+Fox\+Thread\+::callback {\bfseries callback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a0ae4c2a9907c26b48e9ae64e6a47892a}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a0ae4c2a9907c26b48e9ae64e6a47892a}} 
 {\bfseries Fox\+Thread\+Pool} (uint32\+\_\+t size, const std\+::string \&name=\char`\"{}\char`\"{}, bool advance=false)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a9e0bd6b728baa699334b11b02db107e4}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a9e0bd6b728baa699334b11b02db107e4}} 
 void {\bfseries start} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a955b672302fa64a41cf740941828dcfd}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a955b672302fa64a41cf740941828dcfd}} 
 void {\bfseries stop} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a523299301de5feecaf643de649e6716b}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a523299301de5feecaf643de649e6716b}} 
 void {\bfseries join} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a49378a712f118b802a16268947d024e3}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a49378a712f118b802a16268947d024e3}} 
 bool {\bfseries dispatch} (callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a6e9d1e32149e8d73c64980ee0dcf3620}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a6e9d1e32149e8d73c64980ee0dcf3620}} 
 bool {\bfseries batch\+Dispatch} (const std\+::vector$<$ callback $>$ \&cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a7bd6c50adb352b44248eea27b3ac3314}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a7bd6c50adb352b44248eea27b3ac3314}} 
 bool {\bfseries dispatch} (uint32\+\_\+t id, callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a3838b8c876b1bd1286599f3039bb0300}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a3838b8c876b1bd1286599f3039bb0300}} 
 \textbf{ Fox\+Thread} $\ast$ {\bfseries get\+Rand\+Fox\+Thread} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a1d646df7a43b927afcbe50bf6baada2d}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a1d646df7a43b927afcbe50bf6baada2d}} 
 void {\bfseries set\+Init\+Cb} (Fox\+Thread\+::init\+\_\+cb v)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a70a192b8c157ef78f666fa50c2b5ae77}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a70a192b8c157ef78f666fa50c2b5ae77}} 
 void {\bfseries dump} (std\+::ostream \&os)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a4fe192e55d666f268fadc2a9d6e43398}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a4fe192e55d666f268fadc2a9d6e43398}} 
 void {\bfseries broadcast} (callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThreadPool_a8383e574d70394f325bed4fc2ab8ce2d}} 
+\mbox{\label{classrock_1_1FoxThreadPool_a8383e574d70394f325bed4fc2ab8ce2d}} 
 virtual uint64\+\_\+t {\bfseries get\+Total} ()
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}
+rock/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}

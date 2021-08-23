@@ -8,5 +8,5 @@ else
     unlink bin/module/libproject_name.so
 fi
 
-cp sylar/bin/sylar bin/project_name
+cp rock/bin/rock bin/project_name
 cp lib/libproject_name.so bin/module/

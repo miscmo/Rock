@@ -1,5 +1,5 @@
-#ifndef __SYLAR_DB_FOX_THREAD_H__
-#define __SYLAR_DB_FOX_THREAD_H__
+#ifndef __ROCK_DB_FOX_THREAD_H__
+#define __ROCK_DB_FOX_THREAD_H__
 
 #include <thread>
 #include <vector>
@@ -9,10 +9,10 @@
 #include <event2/buffer.h>
 #include <event2/listener.h>
 
-#include "sylar/singleton.h"
-#include "sylar/mutex.h"
+#include "rock/singleton.h"
+#include "rock/mutex.h"
 
-namespace sylar {
+namespace rock {
 
 class FoxThread;
 class IFoxThread {
@@ -82,7 +82,7 @@ private:
     struct event_base* m_base;
     struct event* m_event;
     std::thread* m_thread;
-    sylar::RWMutex m_mutex;
+    rock::RWMutex m_mutex;
     std::list<callback> m_callbacks;
 
     std::string m_name;

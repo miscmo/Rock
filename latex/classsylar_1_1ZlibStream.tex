@@ -1,23 +1,23 @@
-\doxysection{sylar\+::Zlib\+Stream类 参考}
-\label{classsylar_1_1ZlibStream}\index{sylar::ZlibStream@{sylar::ZlibStream}}
+\doxysection{rock\+::Zlib\+Stream类 参考}
+\label{classrock_1_1ZlibStream}\index{rock::ZlibStream@{rock::ZlibStream}}
 
 
-类 sylar\+::Zlib\+Stream 继承关系图\+:
+类 rock\+::Zlib\+Stream 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Zlib\+Stream 的协作图\+:
+rock\+::Zlib\+Stream 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a8a2ed2ac36bfe3a24ead4208f68f27a3}} 
+\mbox{\label{classrock_1_1ZlibStream_a8a2ed2ac36bfe3a24ead4208f68f27a3}} 
 enum {\bfseries Type} \{ {\bfseries Z\+L\+IB}, 
 {\bfseries D\+E\+F\+L\+A\+TE}, 
 {\bfseries G\+Z\+IP}
  \}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_ad76e71e4626f975ac859bf7fc3f0dc1f}} 
+\mbox{\label{classrock_1_1ZlibStream_ad76e71e4626f975ac859bf7fc3f0dc1f}} 
 enum {\bfseries Strategy} \{ \newline
 {\bfseries D\+E\+F\+A\+U\+LT} = Z\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+T\+R\+A\+T\+E\+GY, 
 {\bfseries F\+I\+L\+T\+E\+R\+ED} = Z\+\_\+\+F\+I\+L\+T\+E\+R\+ED, 
@@ -27,20 +27,20 @@ enum {\bfseries Strategy} \{ \newline
 {\bfseries R\+LE} = Z\+\_\+\+R\+LE
  \}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_ae57ce4854925cc268860543a87e7715c}} 
+\mbox{\label{classrock_1_1ZlibStream_ae57ce4854925cc268860543a87e7715c}} 
 enum {\bfseries Compress\+Level} \{ {\bfseries N\+O\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON} = Z\+\_\+\+N\+O\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON, 
 {\bfseries B\+E\+S\+T\+\_\+\+S\+P\+E\+ED} = Z\+\_\+\+B\+E\+S\+T\+\_\+\+S\+P\+E\+ED, 
 {\bfseries B\+E\+S\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON} = Z\+\_\+\+B\+E\+S\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON, 
 {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON} = Z\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON
  \}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a3662b9d0ff4d7bdadf9c222f3ab18405}} 
+\mbox{\label{classrock_1_1ZlibStream_a3662b9d0ff4d7bdadf9c222f3ab18405}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Zlib\+Stream} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_aed4a4ad161d1127fc4e88c02ec4b4b02}} 
+\mbox{\label{classrock_1_1ZlibStream_aed4a4ad161d1127fc4e88c02ec4b4b02}} 
 {\bfseries Zlib\+Stream} (bool encode, uint32\+\_\+t buff\+\_\+size=4096)
 \item 
 virtual int \textbf{ read} (void $\ast$buffer, size\+\_\+t length) override
@@ -51,56 +51,56 @@ virtual int \textbf{ write} (const void $\ast$buffer, size\+\_\+t length) overri
 \begin{DoxyCompactList}\small\item\em 写数据 \end{DoxyCompactList}\item 
 virtual int \textbf{ write} (Byte\+Array\+::ptr ba, size\+\_\+t length) override
 \begin{DoxyCompactList}\small\item\em 写数据 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ZlibStream_a41178cfd39f9d7a91d2c95b796ca0085}} 
+\mbox{\label{classrock_1_1ZlibStream_a41178cfd39f9d7a91d2c95b796ca0085}} 
 virtual void \textbf{ close} () override
 \begin{DoxyCompactList}\small\item\em 关闭流 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1ZlibStream_a884ac6b6a1eb6b56c38d4f1ba73ec569}} 
+\mbox{\label{classrock_1_1ZlibStream_a884ac6b6a1eb6b56c38d4f1ba73ec569}} 
 int {\bfseries flush} ()
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a7044147739e37e45d8e2ee9251edfb38}} 
+\mbox{\label{classrock_1_1ZlibStream_a7044147739e37e45d8e2ee9251edfb38}} 
 bool {\bfseries is\+Free} () const
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_ad6820f4ebf13c70dd702e06e82d70886}} 
+\mbox{\label{classrock_1_1ZlibStream_ad6820f4ebf13c70dd702e06e82d70886}} 
 void {\bfseries set\+Free} (bool v)
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a0470a700ab6e8450233f6fad27684602}} 
+\mbox{\label{classrock_1_1ZlibStream_a0470a700ab6e8450233f6fad27684602}} 
 bool {\bfseries is\+Encode} () const
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a956106010ee5c734c1f6f4d02320290e}} 
+\mbox{\label{classrock_1_1ZlibStream_a956106010ee5c734c1f6f4d02320290e}} 
 void {\bfseries set\+Endcode} (bool v)
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_afc28ca1da37b4c08965e9a4e84184c00}} 
+\mbox{\label{classrock_1_1ZlibStream_afc28ca1da37b4c08965e9a4e84184c00}} 
 std\+::vector$<$ iovec $>$ \& {\bfseries get\+Buffers} ()
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_ab27209598d5a04cb29b316dfd835bf31}} 
+\mbox{\label{classrock_1_1ZlibStream_ab27209598d5a04cb29b316dfd835bf31}} 
 std\+::string {\bfseries get\+Result} () const
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_abd3fff56740ab35ef574ab7b7c3bfbc8}} 
-sylar\+::\+Byte\+Array\+::ptr {\bfseries get\+Byte\+Array} ()
+\mbox{\label{classrock_1_1ZlibStream_abd3fff56740ab35ef574ab7b7c3bfbc8}} 
+rock\+::\+Byte\+Array\+::ptr {\bfseries get\+Byte\+Array} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a0da09b9ccd831c4a7b4b86159269e192}} 
+\mbox{\label{classrock_1_1ZlibStream_a0da09b9ccd831c4a7b4b86159269e192}} 
 static Zlib\+Stream\+::ptr {\bfseries Create\+Gzip} (bool encode, uint32\+\_\+t buff\+\_\+size=4096)
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_a7e9deee258b06c121f23fe157e719a48}} 
+\mbox{\label{classrock_1_1ZlibStream_a7e9deee258b06c121f23fe157e719a48}} 
 static Zlib\+Stream\+::ptr {\bfseries Create\+Zlib} (bool encode, uint32\+\_\+t buff\+\_\+size=4096)
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_ab0618e5eaeb9fc90e9ff25df2fb990ba}} 
+\mbox{\label{classrock_1_1ZlibStream_ab0618e5eaeb9fc90e9ff25df2fb990ba}} 
 static Zlib\+Stream\+::ptr {\bfseries Create\+Deflate} (bool encode, uint32\+\_\+t buff\+\_\+size=4096)
 \item 
-\mbox{\label{classsylar_1_1ZlibStream_acba1df62e5ccec050923d8d6e5b7fe80}} 
+\mbox{\label{classrock_1_1ZlibStream_acba1df62e5ccec050923d8d6e5b7fe80}} 
 static Zlib\+Stream\+::ptr {\bfseries Create} (bool encode, uint32\+\_\+t buff\+\_\+size=4096, Type type=D\+E\+F\+L\+A\+TE, int level=D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+I\+ON, int window\+\_\+bits=15, int memlevel=8, Strategy strategy=D\+E\+F\+A\+U\+LT)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1ZlibStream_a4d704a5c7ef1818e2d813b5a2f3e74d9}} 
-\index{sylar::ZlibStream@{sylar::ZlibStream}!read@{read}}
-\index{read@{read}!sylar::ZlibStream@{sylar::ZlibStream}}
+\mbox{\label{classrock_1_1ZlibStream_a4d704a5c7ef1818e2d813b5a2f3e74d9}} 
+\index{rock::ZlibStream@{rock::ZlibStream}!read@{read}}
+\index{read@{read}!rock::ZlibStream@{rock::ZlibStream}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Zlib\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Zlib\+Stream\+::read (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -127,13 +127,13 @@ static Zlib\+Stream\+::ptr {\bfseries Create} (bool encode, uint32\+\_\+t buff\+
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3eff9c660adf8339885e91f06daddae1}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3eff9c660adf8339885e91f06daddae1}.
 
-\mbox{\label{classsylar_1_1ZlibStream_a49d8f30f74be95410ffbdb372789d014}} 
-\index{sylar::ZlibStream@{sylar::ZlibStream}!read@{read}}
-\index{read@{read}!sylar::ZlibStream@{sylar::ZlibStream}}
+\mbox{\label{classrock_1_1ZlibStream_a49d8f30f74be95410ffbdb372789d014}} 
+\index{rock::ZlibStream@{rock::ZlibStream}!read@{read}}
+\index{read@{read}!rock::ZlibStream@{rock::ZlibStream}}
 \doxysubsubsection{read()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Zlib\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Zlib\+Stream\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -160,13 +160,13 @@ static Zlib\+Stream\+::ptr {\bfseries Create} (bool encode, uint32\+\_\+t buff\+
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a0901dfdec95a25aee92b0d82360b4e13}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a0901dfdec95a25aee92b0d82360b4e13}.
 
-\mbox{\label{classsylar_1_1ZlibStream_a74e042190e2c84f1f66b5c845613446d}} 
-\index{sylar::ZlibStream@{sylar::ZlibStream}!write@{write}}
-\index{write@{write}!sylar::ZlibStream@{sylar::ZlibStream}}
+\mbox{\label{classrock_1_1ZlibStream_a74e042190e2c84f1f66b5c845613446d}} 
+\index{rock::ZlibStream@{rock::ZlibStream}!write@{write}}
+\index{write@{write}!rock::ZlibStream@{rock::ZlibStream}}
 \doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Zlib\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Zlib\+Stream\+::write (\begin{DoxyParamCaption}\item[{Byte\+Array\+::ptr}]{ba,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -193,13 +193,13 @@ static Zlib\+Stream\+::ptr {\bfseries Create} (bool encode, uint32\+\_\+t buff\+
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3fb968a29622bcf27913b20633895a97}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3fb968a29622bcf27913b20633895a97}.
 
-\mbox{\label{classsylar_1_1ZlibStream_a73933d8cce7af3657d7b4a3903451920}} 
-\index{sylar::ZlibStream@{sylar::ZlibStream}!write@{write}}
-\index{write@{write}!sylar::ZlibStream@{sylar::ZlibStream}}
+\mbox{\label{classrock_1_1ZlibStream_a73933d8cce7af3657d7b4a3903451920}} 
+\index{rock::ZlibStream@{rock::ZlibStream}!write@{write}}
+\index{write@{write}!rock::ZlibStream@{rock::ZlibStream}}
 \doxysubsubsection{write()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual int sylar\+::\+Zlib\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int rock\+::\+Zlib\+Stream\+::write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -226,10 +226,10 @@ static Zlib\+Stream\+::ptr {\bfseries Create} (bool encode, uint32\+\_\+t buff\+
 \end{DoxyRetVals}
 
 
-实现了 \textbf{ sylar\+::\+Stream} \doxyref{}{p.}{classsylar_1_1Stream_a3f228e40abdf4462268b871614e9d5a1}.
+实现了 \textbf{ rock\+::\+Stream} \doxyref{}{p.}{classrock_1_1Stream_a3f228e40abdf4462268b871614e9d5a1}.
 
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/streams/zlib\+\_\+stream.\+h\end{DoxyCompactItemize}
+rock/streams/zlib\+\_\+stream.\+h\end{DoxyCompactItemize}

@@ -1,11 +1,11 @@
-#ifndef __SYLAR_ORM_TABLE_H__
-#define __SYLAR_ORM_TABLE_H__
+#ifndef __ROCK_ORM_TABLE_H__
+#define __ROCK_ORM_TABLE_H__
 
 #include "column.h"
 #include "index.h"
 #include <fstream>
 
-namespace sylar {
+namespace rock {
 namespace orm {
 
 class Table {
@@ -49,9 +49,9 @@ private:
     std::string m_desc;
     std::string m_subfix = "_info";
     DBType m_type = TYPE_SQLITE3;
-    std::string m_dbclass = "sylar::IDB";
-    std::string m_queryclass = "sylar::IDB";
-    std::string m_updateclass = "sylar::IDB";
+    std::string m_dbclass = "rock::IDB";
+    std::string m_queryclass = "rock::IDB";
+    std::string m_updateclass = "rock::IDB";
     std::vector<Column::ptr> m_cols;
     std::vector<Index::ptr> m_idxs;
 };

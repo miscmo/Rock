@@ -1,5 +1,5 @@
-\doxysection{sylar\+::I\+O\+Manager类 参考}
-\label{classsylar_1_1IOManager}\index{sylar::IOManager@{sylar::IOManager}}
+\doxysection{rock\+::I\+O\+Manager类 参考}
+\label{classrock_1_1IOManager}\index{rock::IOManager@{rock::IOManager}}
 
 
 基于\+Epoll的\+I\+O协程调度器  
@@ -11,11 +11,11 @@
 
 
 
-类 sylar\+::I\+O\+Manager 继承关系图\+:
+类 rock\+::I\+O\+Manager 继承关系图\+:
 % FIG 0
 
 
-sylar\+::I\+O\+Manager 的协作图\+:
+rock\+::I\+O\+Manager 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
@@ -25,10 +25,10 @@ enum \textbf{ Event} \{ \textbf{ N\+O\+NE} = 0x0,
 \textbf{ W\+R\+I\+TE} = 0x4
  \}
 \begin{DoxyCompactList}\small\item\em I\+O事件 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IOManager_a840e581e311eba40f92e43c5053e7060}} 
+\mbox{\label{classrock_1_1IOManager_a840e581e311eba40f92e43c5053e7060}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+O\+Manager} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1IOManager_abcf0eabb8ce7a492a019575fde00f0bf}} 
+\mbox{\label{classrock_1_1IOManager_abcf0eabb8ce7a492a019575fde00f0bf}} 
 typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -36,7 +36,7 @@ typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
 \item 
 \textbf{ I\+O\+Manager} (size\+\_\+t threads=1, bool use\+\_\+caller=true, const std\+::string \&name=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IOManager_a58fee9eb690cdf0269b57fb7d813e9f7}} 
+\mbox{\label{classrock_1_1IOManager_a58fee9eb690cdf0269b57fb7d813e9f7}} 
 \textbf{ $\sim$\+I\+O\+Manager} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
 int \textbf{ add\+Event} (int fd, \textbf{ Event} event, std\+::function$<$ void()$>$ cb=nullptr)
@@ -50,22 +50,22 @@ bool \textbf{ cancel\+All} (int fd)
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IOManager_a84320322b91d83534bbcc34086d4468c}} 
+\mbox{\label{classrock_1_1IOManager_a84320322b91d83534bbcc34086d4468c}} 
 static \textbf{ I\+O\+Manager} $\ast$ \textbf{ Get\+This} ()
 \begin{DoxyCompactList}\small\item\em 返回当前的\+I\+O\+Manager \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IOManager_a28895129097dd6e85698bd52aa2f30cd}} 
+\mbox{\label{classrock_1_1IOManager_a28895129097dd6e85698bd52aa2f30cd}} 
 void \textbf{ tickle} () override
 \begin{DoxyCompactList}\small\item\em 通知协程调度器有任务了 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IOManager_aec614100855edd1e48d23afb67468b45}} 
+\mbox{\label{classrock_1_1IOManager_aec614100855edd1e48d23afb67468b45}} 
 bool \textbf{ stopping} () override
 \begin{DoxyCompactList}\small\item\em 返回是否可以停止 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IOManager_ab68c334a1b1c0bbd8f016b28f6715c13}} 
+\mbox{\label{classrock_1_1IOManager_ab68c334a1b1c0bbd8f016b28f6715c13}} 
 void \textbf{ idle} () override
 \begin{DoxyCompactList}\small\item\em 协程无任务可调度时执行idle协程 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1IOManager_aae440d45abd9ab0667b964fd71126ffb}} 
+\mbox{\label{classrock_1_1IOManager_aae440d45abd9ab0667b964fd71126ffb}} 
 void \textbf{ on\+Timer\+Inserted\+At\+Front} () override
 \begin{DoxyCompactList}\small\item\em 当有新的定时器插入到定时器的首部,执行该函数 \end{DoxyCompactList}\item 
 void \textbf{ context\+Resize} (size\+\_\+t size)
@@ -79,26 +79,26 @@ bool \textbf{ stopping} (uint64\+\_\+t \&timeout)
 基于\+Epoll的\+I\+O协程调度器 
 
 \doxysubsection{成员枚举类型说明}
-\mbox{\label{classsylar_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7f}} 
-\index{sylar::IOManager@{sylar::IOManager}!Event@{Event}}
-\index{Event@{Event}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7f}} 
+\index{rock::IOManager@{rock::IOManager}!Event@{Event}}
+\index{Event@{Event}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{Event}
-{\footnotesize\ttfamily enum \textbf{ sylar\+::\+I\+O\+Manager\+::\+Event}}
+{\footnotesize\ttfamily enum \textbf{ rock\+::\+I\+O\+Manager\+::\+Event}}
 
 
 
 I\+O事件 
 
 \begin{DoxyEnumFields}{枚举值}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!sylar::IOManager@{sylar::IOManager}}\index{sylar::IOManager@{sylar::IOManager}!NONE@{NONE}}}\mbox{\label{classsylar_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7faadc83980f9a40fcf08169d6ad2ad23a3}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!rock::IOManager@{rock::IOManager}}\index{rock::IOManager@{rock::IOManager}!NONE@{NONE}}}\mbox{\label{classrock_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7faadc83980f9a40fcf08169d6ad2ad23a3}} 
 N\+O\+NE&无事件 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{READ@{READ}!sylar::IOManager@{sylar::IOManager}}\index{sylar::IOManager@{sylar::IOManager}!READ@{READ}}}\mbox{\label{classsylar_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7fa090891b5bdc9b68bfba5a8f37dbf5515}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{READ@{READ}!rock::IOManager@{rock::IOManager}}\index{rock::IOManager@{rock::IOManager}!READ@{READ}}}\mbox{\label{classrock_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7fa090891b5bdc9b68bfba5a8f37dbf5515}} 
 R\+E\+AD&读事件(\+E\+P\+O\+L\+L\+I\+N) \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{WRITE@{WRITE}!sylar::IOManager@{sylar::IOManager}}\index{sylar::IOManager@{sylar::IOManager}!WRITE@{WRITE}}}\mbox{\label{classsylar_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7fa5374ec6931815ee5254402a638a9db51}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRITE@{WRITE}!rock::IOManager@{rock::IOManager}}\index{rock::IOManager@{rock::IOManager}!WRITE@{WRITE}}}\mbox{\label{classrock_1_1IOManager_a92053b21305a9cd1e0854f60a9ddde7fa5374ec6931815ee5254402a638a9db51}} 
 W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \hline
 
@@ -106,11 +106,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1IOManager_afc89b6386f058c60697e6d0ffdf65da7}} 
-\index{sylar::IOManager@{sylar::IOManager}!IOManager@{IOManager}}
-\index{IOManager@{IOManager}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_afc89b6386f058c60697e6d0ffdf65da7}} 
+\index{rock::IOManager@{rock::IOManager}!IOManager@{IOManager}}
+\index{IOManager@{IOManager}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{IOManager()}
-{\footnotesize\ttfamily sylar\+::\+I\+O\+Manager\+::\+I\+O\+Manager (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{threads = {\ttfamily 1},  }\item[{bool}]{use\+\_\+caller = {\ttfamily true},  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+I\+O\+Manager\+::\+I\+O\+Manager (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{threads = {\ttfamily 1},  }\item[{bool}]{use\+\_\+caller = {\ttfamily true},  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -128,11 +128,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1IOManager_a11db87578175f119af195c313ead7b32}} 
-\index{sylar::IOManager@{sylar::IOManager}!addEvent@{addEvent}}
-\index{addEvent@{addEvent}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a11db87578175f119af195c313ead7b32}} 
+\index{rock::IOManager@{rock::IOManager}!addEvent@{addEvent}}
+\index{addEvent@{addEvent}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{addEvent()}
-{\footnotesize\ttfamily int sylar\+::\+I\+O\+Manager\+::add\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event,  }\item[{std\+::function$<$ void()$>$}]{cb = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int rock\+::\+I\+O\+Manager\+::add\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event,  }\item[{std\+::function$<$ void()$>$}]{cb = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
@@ -150,11 +150,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \begin{DoxyReturn}{返回}
 添加成功返回0,失败返回-\/1 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1IOManager_a4be82a8ec8ce0653e5a90bc3a2d4450d}} 
-\index{sylar::IOManager@{sylar::IOManager}!cancelAll@{cancelAll}}
-\index{cancelAll@{cancelAll}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a4be82a8ec8ce0653e5a90bc3a2d4450d}} 
+\index{rock::IOManager@{rock::IOManager}!cancelAll@{cancelAll}}
+\index{cancelAll@{cancelAll}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{cancelAll()}
-{\footnotesize\ttfamily bool sylar\+::\+I\+O\+Manager\+::cancel\+All (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool rock\+::\+I\+O\+Manager\+::cancel\+All (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
 
 
 
@@ -165,11 +165,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \mbox{\texttt{ in}}  & {\em fd} & socket句柄 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1IOManager_a3939d465df257f6e591aa405f24f7c3a}} 
-\index{sylar::IOManager@{sylar::IOManager}!cancelEvent@{cancelEvent}}
-\index{cancelEvent@{cancelEvent}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a3939d465df257f6e591aa405f24f7c3a}} 
+\index{rock::IOManager@{rock::IOManager}!cancelEvent@{cancelEvent}}
+\index{cancelEvent@{cancelEvent}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{cancelEvent()}
-{\footnotesize\ttfamily bool sylar\+::\+I\+O\+Manager\+::cancel\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool rock\+::\+I\+O\+Manager\+::cancel\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -185,11 +185,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \begin{DoxyAttention}{注意}
 如果事件存在则触发事件 
 \end{DoxyAttention}
-\mbox{\label{classsylar_1_1IOManager_a887c03f40a7360591ca9b945b7a76714}} 
-\index{sylar::IOManager@{sylar::IOManager}!contextResize@{contextResize}}
-\index{contextResize@{contextResize}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a887c03f40a7360591ca9b945b7a76714}} 
+\index{rock::IOManager@{rock::IOManager}!contextResize@{contextResize}}
+\index{contextResize@{contextResize}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{contextResize()}
-{\footnotesize\ttfamily void sylar\+::\+I\+O\+Manager\+::context\+Resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void rock\+::\+I\+O\+Manager\+::context\+Resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -200,11 +200,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \mbox{\texttt{ in}}  & {\em size} & 容量大小 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1IOManager_a75d9ef80cbaea0b0f5fbef325fd38a9d}} 
-\index{sylar::IOManager@{sylar::IOManager}!delEvent@{delEvent}}
-\index{delEvent@{delEvent}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a75d9ef80cbaea0b0f5fbef325fd38a9d}} 
+\index{rock::IOManager@{rock::IOManager}!delEvent@{delEvent}}
+\index{delEvent@{delEvent}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{delEvent()}
-{\footnotesize\ttfamily bool sylar\+::\+I\+O\+Manager\+::del\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool rock\+::\+I\+O\+Manager\+::del\+Event (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{\textbf{ Event}}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -220,11 +220,11 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 \begin{DoxyAttention}{注意}
 不会触发事件 
 \end{DoxyAttention}
-\mbox{\label{classsylar_1_1IOManager_a5cc8bc218e13cf197930f8e0b2e9f458}} 
-\index{sylar::IOManager@{sylar::IOManager}!stopping@{stopping}}
-\index{stopping@{stopping}!sylar::IOManager@{sylar::IOManager}}
+\mbox{\label{classrock_1_1IOManager_a5cc8bc218e13cf197930f8e0b2e9f458}} 
+\index{rock::IOManager@{rock::IOManager}!stopping@{stopping}}
+\index{stopping@{stopping}!rock::IOManager@{rock::IOManager}}
 \doxysubsubsection{stopping()}
-{\footnotesize\ttfamily bool sylar\+::\+I\+O\+Manager\+::stopping (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily bool rock\+::\+I\+O\+Manager\+::stopping (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -242,4 +242,4 @@ W\+R\+I\+TE&写事件(\+E\+P\+O\+L\+L\+O\+U\+T) \\
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ iomanager.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ iomanager.\+h}\end{DoxyCompactItemize}

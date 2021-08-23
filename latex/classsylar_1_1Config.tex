@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Config类 参考}
-\label{classsylar_1_1Config}\index{sylar::Config@{sylar::Config}}
+\doxysection{rock\+::Config类 参考}
+\label{classrock_1_1Config}\index{rock::Config@{rock::Config}}
 
 
 Config\+Var的管理类  
@@ -11,15 +11,15 @@ Config\+Var的管理类
 
 
 
-sylar\+::Config 的协作图\+:
+rock\+::Config 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Config_acca4c31405d485cc5684130721ed4767}} 
+\mbox{\label{classrock_1_1Config_acca4c31405d485cc5684130721ed4767}} 
 typedef std\+::unordered\+\_\+map$<$ std\+::string, Config\+Var\+Base\+::ptr $>$ {\bfseries Config\+Var\+Map}
 \item 
-\mbox{\label{classsylar_1_1Config_afc77a8ebc99d0b267ea9ca762449a65c}} 
+\mbox{\label{classrock_1_1Config_afc77a8ebc99d0b267ea9ca762449a65c}} 
 typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
@@ -29,10 +29,10 @@ typedef \textbf{ R\+W\+Mutex} {\bfseries R\+W\+Mutex\+Type}
 \begin{DoxyCompactList}\small\item\em 获取/创建对应参数名的配置参数 \end{DoxyCompactList}\item 
 {\footnotesize template$<$class T $>$ }\\static \textbf{ Config\+Var}$<$ T $>$\+::ptr \textbf{ Lookup} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em 查找配置参数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Config_afe9b06f2309a0e63f325dfcfa9e0ee27}} 
+\mbox{\label{classrock_1_1Config_afe9b06f2309a0e63f325dfcfa9e0ee27}} 
 static void \textbf{ Load\+From\+Yaml} (const Y\+A\+M\+L\+::\+Node \&root)
 \begin{DoxyCompactList}\small\item\em 使用\+Y\+A\+M\+L\+::\+Node初始化配置模块 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Config_a5fd34d25c4b3b597407138f451a3db6f}} 
+\mbox{\label{classrock_1_1Config_a5fd34d25c4b3b597407138f451a3db6f}} 
 static void \textbf{ Load\+From\+Conf\+Dir} (const std\+::string \&path, bool force=false)
 \begin{DoxyCompactList}\small\item\em 加载path文件夹里面的配置文件 \end{DoxyCompactList}\item 
 static Config\+Var\+Base\+::ptr \textbf{ Lookup\+Base} (const std\+::string \&name)
@@ -47,12 +47,12 @@ Config\+Var的管理类
 提供便捷的方法创建/访问\+Config\+Var 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1Config_a8756af787939964e5d99343549e9b9cd}} 
-\index{sylar::Config@{sylar::Config}!Lookup@{Lookup}}
-\index{Lookup@{Lookup}!sylar::Config@{sylar::Config}}
+\mbox{\label{classrock_1_1Config_a8756af787939964e5d99343549e9b9cd}} 
+\index{rock::Config@{rock::Config}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!rock::Config@{rock::Config}}
 \doxysubsubsection{Lookup()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+static \textbf{ Config\+Var}$<$T$>$\+::ptr rock\+::\+Config\+::\+Lookup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -66,12 +66,12 @@ static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin
 \begin{DoxyReturn}{返回}
 返回配置参数名为name的配置参数 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1Config_af4ae13dc6d932b1ecde5a6851c34e4f7}} 
-\index{sylar::Config@{sylar::Config}!Lookup@{Lookup}}
-\index{Lookup@{Lookup}!sylar::Config@{sylar::Config}}
+\mbox{\label{classrock_1_1Config_af4ae13dc6d932b1ecde5a6851c34e4f7}} 
+\index{rock::Config@{rock::Config}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!rock::Config@{rock::Config}}
 \doxysubsubsection{Lookup()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{default\+\_\+value,  }\item[{const std\+::string \&}]{description = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+static \textbf{ Config\+Var}$<$T$>$\+::ptr rock\+::\+Config\+::\+Lookup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const T \&}]{default\+\_\+value,  }\item[{const std\+::string \&}]{description = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -94,11 +94,11 @@ static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin
 {\em 如果参数名包含非法字符\mbox{[}$^\wedge$0-\/9a-\/z\+\_\+.\mbox{]}} & 抛出异常 std\+::invalid\+\_\+argument \\
 \hline
 \end{DoxyExceptions}
-\mbox{\label{classsylar_1_1Config_a4686fe9cdfadd0e404004c5b63b7fe33}} 
-\index{sylar::Config@{sylar::Config}!LookupBase@{LookupBase}}
-\index{LookupBase@{LookupBase}!sylar::Config@{sylar::Config}}
+\mbox{\label{classrock_1_1Config_a4686fe9cdfadd0e404004c5b63b7fe33}} 
+\index{rock::Config@{rock::Config}!LookupBase@{LookupBase}}
+\index{LookupBase@{LookupBase}!rock::Config@{rock::Config}}
 \doxysubsubsection{LookupBase()}
-{\footnotesize\ttfamily static Config\+Var\+Base\+::ptr sylar\+::\+Config\+::\+Lookup\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static Config\+Var\+Base\+::ptr rock\+::\+Config\+::\+Lookup\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -109,11 +109,11 @@ static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin
 \mbox{\texttt{ in}}  & {\em name} & 配置参数名称 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Config_aeca2a705605dfae2e80c4f94b3689eee}} 
-\index{sylar::Config@{sylar::Config}!Visit@{Visit}}
-\index{Visit@{Visit}!sylar::Config@{sylar::Config}}
+\mbox{\label{classrock_1_1Config_aeca2a705605dfae2e80c4f94b3689eee}} 
+\index{rock::Config@{rock::Config}!Visit@{Visit}}
+\index{Visit@{Visit}!rock::Config@{rock::Config}}
 \doxysubsubsection{Visit()}
-{\footnotesize\ttfamily static void sylar\+::\+Config\+::\+Visit (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(Config\+Var\+Base\+::ptr)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Config\+::\+Visit (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(Config\+Var\+Base\+::ptr)$>$}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -128,4 +128,4 @@ static \textbf{ Config\+Var}$<$T$>$\+::ptr sylar\+::\+Config\+::\+Lookup (\begin
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ config.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ config.\+h}\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/ds/cache_status.h 源文件</title>
+<title>rock: rock/ds/cache_status.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5d8a758f8eaae8cfc76012487c772dae.html">ds</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,20 +69,20 @@ $(function() {
 <div class="title">cache_status.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_DS_CACHE_STATUS_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_DS_CACHE_STATUS_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_DS_CACHE_STATUS_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_DS_CACHE_STATUS_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">sylar/util.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">rock/util.h</a>&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>ds {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classsylar_1_1ds_1_1CacheStatus.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classrock_1_1ds_1_1CacheStatus.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>() {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>() {}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    int64_t incGet(int64_t v = 1) { <span class="keywordflow">return</span> Atomic::addFetch(m_get, v);}</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    int64_t incSet(int64_t v = 1) { <span class="keywordflow">return</span> Atomic::addFetch(m_set, v);}</div>
@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> m_get ? (m_hit * 1.0 / m_get) : 0;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> merge(<span class="keyword">const</span> <a class="code" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a>&amp; o) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> merge(<span class="keyword">const</span> <a class="code" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a>&amp; o) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        m_get += o.m_get;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        m_set += o.m_set;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        m_del += o.m_del;</div>
@@ -144,7 +144,7 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">常用的工具函数</div></div>
-<div class="ttc" id="aclasssylar_1_1ds_1_1CacheStatus_html"><div class="ttname"><a href="classsylar_1_1ds_1_1CacheStatus.html">sylar::ds::CacheStatus</a></div><div class="ttdef"><b>Definition:</b> cache_status.h:12</div></div>
+<div class="ttc" id="aclassrock_1_1ds_1_1CacheStatus_html"><div class="ttname"><a href="classrock_1_1ds_1_1CacheStatus.html">rock::ds::CacheStatus</a></div><div class="ttdef"><b>Definition:</b> cache_status.h:12</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

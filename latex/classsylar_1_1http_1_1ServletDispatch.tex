@@ -1,5 +1,5 @@
-\doxysection{sylar\+::http\+::Servlet\+Dispatch类 参考}
-\label{classsylar_1_1http_1_1ServletDispatch}\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\doxysection{rock\+::http\+::Servlet\+Dispatch类 参考}
+\label{classrock_1_1http_1_1ServletDispatch}\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 
 
 Servlet分发器  
@@ -11,28 +11,28 @@ Servlet分发器
 
 
 
-类 sylar\+::http\+::Servlet\+Dispatch 继承关系图\+:
+类 rock\+::http\+::Servlet\+Dispatch 继承关系图\+:
 % FIG 0
 
 
-sylar\+::http\+::Servlet\+Dispatch 的协作图\+:
+rock\+::http\+::Servlet\+Dispatch 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_abf8a9874e26a0728a0452580c5c6d722}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_abf8a9874e26a0728a0452580c5c6d722}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Servlet\+Dispatch} $>$ \textbf{ ptr}
 \begin{DoxyCompactList}\small\item\em 智能指针类型定义 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a86361c13fcc1aa8a2d378a07164c8a6d}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a86361c13fcc1aa8a2d378a07164c8a6d}} 
 typedef \textbf{ R\+W\+Mutex} \textbf{ R\+W\+Mutex\+Type}
 \begin{DoxyCompactList}\small\item\em 读写锁类型定义 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a6055e6abbc0bef6b6de99e28a495397b}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a6055e6abbc0bef6b6de99e28a495397b}} 
 \textbf{ Servlet\+Dispatch} ()
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-virtual int32\+\_\+t \textbf{ handle} (\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ sylar\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ sylar\+::http\+::\+Http\+Session\+::ptr} session) override
+virtual int32\+\_\+t \textbf{ handle} (\textbf{ rock\+::http\+::\+Http\+Request\+::ptr} request, \textbf{ rock\+::http\+::\+Http\+Response\+::ptr} response, \textbf{ rock\+::http\+::\+Http\+Session\+::ptr} session) override
 \begin{DoxyCompactList}\small\item\em 处理请求 \end{DoxyCompactList}\item 
 void \textbf{ add\+Servlet} (const std\+::string \&uri, \textbf{ Servlet\+::ptr} slt)
 \begin{DoxyCompactList}\small\item\em 添加servlet \end{DoxyCompactList}\item 
@@ -42,23 +42,23 @@ void \textbf{ add\+Glob\+Servlet} (const std\+::string \&uri, \textbf{ Servlet\+
 \begin{DoxyCompactList}\small\item\em 添加模糊匹配servlet \end{DoxyCompactList}\item 
 void \textbf{ add\+Glob\+Servlet} (const std\+::string \&uri, \textbf{ Function\+Servlet\+::callback} cb)
 \begin{DoxyCompactList}\small\item\em 添加模糊匹配servlet \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a1b0702a2546cc9a18752233fa08a6c2b}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a1b0702a2546cc9a18752233fa08a6c2b}} 
 void {\bfseries add\+Servlet\+Creator} (const std\+::string \&uri, I\+Servlet\+Creator\+::ptr creator)
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_ac1beba85dc2a3805dbc71c41bc2121a1}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_ac1beba85dc2a3805dbc71c41bc2121a1}} 
 void {\bfseries add\+Glob\+Servlet\+Creator} (const std\+::string \&uri, I\+Servlet\+Creator\+::ptr creator)
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_aaebb4a57a3824257399d589f200e42d3}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_aaebb4a57a3824257399d589f200e42d3}} 
 {\footnotesize template$<$class T $>$ }\\void {\bfseries add\+Servlet\+Creator} (const std\+::string \&uri)
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_ab8d6d67c10ca9ed3eb6aa53cc6cd97d7}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_ab8d6d67c10ca9ed3eb6aa53cc6cd97d7}} 
 {\footnotesize template$<$class T $>$ }\\void {\bfseries add\+Glob\+Servlet\+Creator} (const std\+::string \&uri)
 \item 
 void \textbf{ del\+Servlet} (const std\+::string \&uri)
 \begin{DoxyCompactList}\small\item\em 删除servlet \end{DoxyCompactList}\item 
 void \textbf{ del\+Glob\+Servlet} (const std\+::string \&uri)
 \begin{DoxyCompactList}\small\item\em 删除模糊匹配servlet \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a6a05d0141ef5b36ddf16d0cd7e04426b}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a6a05d0141ef5b36ddf16d0cd7e04426b}} 
 \textbf{ Servlet\+::ptr} \textbf{ get\+Default} () const
 \begin{DoxyCompactList}\small\item\em 返回默认servlet \end{DoxyCompactList}\item 
 void \textbf{ set\+Default} (\textbf{ Servlet\+::ptr} v)
@@ -69,10 +69,10 @@ void \textbf{ set\+Default} (\textbf{ Servlet\+::ptr} v)
 \begin{DoxyCompactList}\small\item\em 通过uri获取模糊匹配servlet \end{DoxyCompactList}\item 
 \textbf{ Servlet\+::ptr} \textbf{ get\+Matched\+Servlet} (const std\+::string \&uri)
 \begin{DoxyCompactList}\small\item\em 通过uri获取servlet \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_ad32d1f1196247979ee0f7ffc7e53ca7c}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_ad32d1f1196247979ee0f7ffc7e53ca7c}} 
 void {\bfseries list\+All\+Servlet\+Creator} (std\+::map$<$ std\+::string, I\+Servlet\+Creator\+::ptr $>$ \&infos)
 \item 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_add183999438ecec1b420679dc11cba19}} 
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_add183999438ecec1b420679dc11cba19}} 
 void {\bfseries list\+All\+Glob\+Servlet\+Creator} (std\+::map$<$ std\+::string, I\+Servlet\+Creator\+::ptr $>$ \&infos)
 \end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
@@ -82,11 +82,11 @@ void {\bfseries list\+All\+Glob\+Servlet\+Creator} (std\+::map$<$ std\+::string,
 Servlet分发器 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a1564a0cbabb6052cabb27eb81d813471}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
-\index{addGlobServlet@{addGlobServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a1564a0cbabb6052cabb27eb81d813471}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
+\index{addGlobServlet@{addGlobServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{addGlobServlet()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Function\+Servlet\+::callback}}]{cb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Function\+Servlet\+::callback}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -94,16 +94,16 @@ Servlet分发器
 
 
 \begin{DoxyParams}[1]{参数}
-\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /sylar\+\_\+$\ast$ \\
+\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /rock\+\_\+$\ast$ \\
 \hline
 \mbox{\texttt{ in}}  & {\em cb} & Function\+Servlet回调函数 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_aafd8071eeafa5f86fe051b869743cb91}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
-\index{addGlobServlet@{addGlobServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_aafd8071eeafa5f86fe051b869743cb91}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!addGlobServlet@{addGlobServlet}}
+\index{addGlobServlet@{addGlobServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{addGlobServlet()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Servlet\+::ptr}}]{slt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::add\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Servlet\+::ptr}}]{slt }\end{DoxyParamCaption})}
 
 
 
@@ -111,16 +111,16 @@ Servlet分发器
 
 
 \begin{DoxyParams}[1]{参数}
-\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /sylar\+\_\+$\ast$ \\
+\mbox{\texttt{ in}}  & {\em uri} & uri 模糊匹配 /rock\+\_\+$\ast$ \\
 \hline
 \mbox{\texttt{ in}}  & {\em slt} & servlet \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_aae84245a981418c591fe73b97567edad}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!addServlet@{addServlet}}
-\index{addServlet@{addServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_aae84245a981418c591fe73b97567edad}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!addServlet@{addServlet}}
+\index{addServlet@{addServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{addServlet()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Function\+Servlet\+::callback}}]{cb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Function\+Servlet\+::callback}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -133,11 +133,11 @@ Servlet分发器
 \mbox{\texttt{ in}}  & {\em cb} & Function\+Servlet回调函数 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a22632b0c002ad063bed2f3b1ea7430d8}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!addServlet@{addServlet}}
-\index{addServlet@{addServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a22632b0c002ad063bed2f3b1ea7430d8}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!addServlet@{addServlet}}
+\index{addServlet@{addServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{addServlet()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Servlet\+::ptr}}]{slt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::add\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{\textbf{ Servlet\+::ptr}}]{slt }\end{DoxyParamCaption})}
 
 
 
@@ -150,11 +150,11 @@ Servlet分发器
 \mbox{\texttt{ in}}  & {\em slt} & serlvet \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a9c5554445aacd6f2386df542312b4380}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!delGlobServlet@{delGlobServlet}}
-\index{delGlobServlet@{delGlobServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a9c5554445aacd6f2386df542312b4380}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!delGlobServlet@{delGlobServlet}}
+\index{delGlobServlet@{delGlobServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{delGlobServlet()}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::del\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::del\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
 
 
 
@@ -165,11 +165,11 @@ Servlet分发器
 \mbox{\texttt{ in}}  & {\em uri} & uri \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a03c49fe9bf9dc39bb73563e8efca0e63}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!delServlet@{delServlet}}
-\index{delServlet@{delServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a03c49fe9bf9dc39bb73563e8efca0e63}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!delServlet@{delServlet}}
+\index{delServlet@{delServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{delServlet()}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::del\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::del\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
 
 
 
@@ -180,11 +180,11 @@ Servlet分发器
 \mbox{\texttt{ in}}  & {\em uri} & uri \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a7b5bdb57af2637a72524cdec5dbf04c2}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!getGlobServlet@{getGlobServlet}}
-\index{getGlobServlet@{getGlobServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a7b5bdb57af2637a72524cdec5dbf04c2}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!getGlobServlet@{getGlobServlet}}
+\index{getGlobServlet@{getGlobServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{getGlobServlet()}
-{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} sylar\+::http\+::\+Servlet\+Dispatch\+::get\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} rock\+::http\+::\+Servlet\+Dispatch\+::get\+Glob\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
 
 
 
@@ -198,11 +198,11 @@ Servlet分发器
 \begin{DoxyReturn}{返回}
 返回对应的servlet 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a13ee79301fb4a3ad973e10f5a83be308}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!getMatchedServlet@{getMatchedServlet}}
-\index{getMatchedServlet@{getMatchedServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a13ee79301fb4a3ad973e10f5a83be308}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!getMatchedServlet@{getMatchedServlet}}
+\index{getMatchedServlet@{getMatchedServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{getMatchedServlet()}
-{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} sylar\+::http\+::\+Servlet\+Dispatch\+::get\+Matched\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} rock\+::http\+::\+Servlet\+Dispatch\+::get\+Matched\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
 
 
 
@@ -216,11 +216,11 @@ Servlet分发器
 \begin{DoxyReturn}{返回}
 优先精准匹配,其次模糊匹配,最后返回默认 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a148bdfe3dc74bbc55b5b86893ddb130b}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!getServlet@{getServlet}}
-\index{getServlet@{getServlet}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a148bdfe3dc74bbc55b5b86893ddb130b}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!getServlet@{getServlet}}
+\index{getServlet@{getServlet}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{getServlet()}
-{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} sylar\+::http\+::\+Servlet\+Dispatch\+::get\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Servlet\+::ptr} rock\+::http\+::\+Servlet\+Dispatch\+::get\+Servlet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
 
 
 
@@ -234,11 +234,11 @@ Servlet分发器
 \begin{DoxyReturn}{返回}
 返回对应的servlet 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_ad32337b5a0c681b54388f70fd885d236}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!handle@{handle}}
-\index{handle@{handle}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_ad32337b5a0c681b54388f70fd885d236}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!handle@{handle}}
+\index{handle@{handle}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{handle()}
-{\footnotesize\ttfamily virtual int32\+\_\+t sylar\+::http\+::\+Servlet\+Dispatch\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ sylar\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ sylar\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual int32\+\_\+t rock\+::http\+::\+Servlet\+Dispatch\+::handle (\begin{DoxyParamCaption}\item[{\textbf{ rock\+::http\+::\+Http\+Request\+::ptr}}]{request,  }\item[{\textbf{ rock\+::http\+::\+Http\+Response\+::ptr}}]{response,  }\item[{\textbf{ rock\+::http\+::\+Http\+Session\+::ptr}}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -258,13 +258,13 @@ Servlet分发器
 \end{DoxyReturn}
 
 
-实现了 \textbf{ sylar\+::http\+::\+Servlet} \doxyref{}{p.}{classsylar_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}.
+实现了 \textbf{ rock\+::http\+::\+Servlet} \doxyref{}{p.}{classrock_1_1http_1_1Servlet_abf60c9694dfc14bb0f2c2b1ff3bde5e1}.
 
-\mbox{\label{classsylar_1_1http_1_1ServletDispatch_a0167382eb502737cadc10ac531623b7d}} 
-\index{sylar::http::ServletDispatch@{sylar::http::ServletDispatch}!setDefault@{setDefault}}
-\index{setDefault@{setDefault}!sylar::http::ServletDispatch@{sylar::http::ServletDispatch}}
+\mbox{\label{classrock_1_1http_1_1ServletDispatch_a0167382eb502737cadc10ac531623b7d}} 
+\index{rock::http::ServletDispatch@{rock::http::ServletDispatch}!setDefault@{setDefault}}
+\index{setDefault@{setDefault}!rock::http::ServletDispatch@{rock::http::ServletDispatch}}
 \doxysubsubsection{setDefault()}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Servlet\+Dispatch\+::set\+Default (\begin{DoxyParamCaption}\item[{\textbf{ Servlet\+::ptr}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void rock\+::http\+::\+Servlet\+Dispatch\+::set\+Default (\begin{DoxyParamCaption}\item[{\textbf{ Servlet\+::ptr}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -279,4 +279,4 @@ Servlet分发器
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}
+rock/http/\textbf{ servlet.\+h}\end{DoxyCompactItemize}

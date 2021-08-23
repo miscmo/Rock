@@ -1,10 +1,10 @@
-#include "sylar/module.h"
-#include "sylar/singleton.h"
+#include "rock/module.h"
+#include "rock/singleton.h"
 #include <iostream>
-#include "sylar/log.h"
-#include "sylar/db/redis.h"
+#include "rock/log.h"
+#include "rock/db/redis.h"
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 class A {
 public:
@@ -18,41 +18,41 @@ public:
 
 };
 
-class MyModule : public sylar::RockModule {
+class MyModule : public rock::RockModule {
 public:
     MyModule()
         :RockModule("hello", "1.0", "") {
-        //sylar::Singleton<A>::GetInstance();
+        //rock::Singleton<A>::GetInstance();
     }
 
     bool onLoad() override {
-        sylar::Singleton<A>::GetInstance();
+        rock::Singleton<A>::GetInstance();
         std::cout << "-----------onLoad------------" << std::endl;
         return true;
     }
 
     bool onUnload() override {
-        sylar::Singleton<A>::GetInstance();
+        rock::Singleton<A>::GetInstance();
         std::cout << "-----------onUnload------------" << std::endl;
         return true;
     }
 
     bool onServerReady() {
-        registerService("rock", "sylar.top", "blog");
-        auto rpy = sylar::RedisUtil::Cmd("local", "get abc");
+        registerService("rock", "rock.top", "blog");
+        auto rpy = rock::RedisUtil::Cmd("local", "get abc");
         if(!rpy) {
-            SYLAR_LOG_ERROR(g_logger) << "redis cmd get abc error";
+            ROCK_LOG_ERROR(g_logger) << "redis cmd get abc error";
         } else {
-            SYLAR_LOG_ERROR(g_logger) << "redis get abc: "
+            ROCK_LOG_ERROR(g_logger) << "redis get abc: "
                 << (rpy->str ? rpy->str : "(null)");
         }
         return true;
     }
 
-    bool handleRockRequest(sylar::RockRequest::ptr request
-                        ,sylar::RockResponse::ptr response
-                        ,sylar::RockStream::ptr stream) {
-        //SYLAR_LOG_INFO(g_logger) << "handleRockRequest " << request->toString();
+    bool handleRockRequest(rock::RockRequest::ptr request
+                        ,rock::RockResponse::ptr response
+                        ,rock::RockStream::ptr stream) {
+        //ROCK_LOG_INFO(g_logger) << "handleRockRequest " << request->toString();
         //sleep(1);
         response->setResult(0);
         response->setResultStr("ok");
@@ -77,9 +77,9 @@ public:
         //return rand() % 100 < 90;
     }
 
-    bool handleRockNotify(sylar::RockNotify::ptr notify 
-                        ,sylar::RockStream::ptr stream) {
-        SYLAR_LOG_INFO(g_logger) << "handleRockNotify " << notify->toString();
+    bool handleRockNotify(rock::RockNotify::ptr notify 
+                        ,rock::RockStream::ptr stream) {
+        ROCK_LOG_INFO(g_logger) << "handleRockNotify " << notify->toString();
         return true;
     }
 
@@ -87,13 +87,13 @@ public:
 
 extern "C" {
 
-sylar::Module* CreateModule() {
-    sylar::Singleton<A>::GetInstance();
+rock::Module* CreateModule() {
+    rock::Singleton<A>::GetInstance();
     std::cout << "=============CreateModule=================" << std::endl;
     return new MyModule;
 }
 
-void DestoryModule(sylar::Module* ptr) {
+void DestoryModule(rock::Module* ptr) {
     std::cout << "=============DestoryModule=================" << std::endl;
     delete ptr;
 }

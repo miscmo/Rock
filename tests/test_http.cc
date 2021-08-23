@@ -1,18 +1,18 @@
-#include "sylar/http/http.h"
-#include "sylar/log.h"
+#include "rock/http/http.h"
+#include "rock/log.h"
 
 void test_request() {
-    sylar::http::HttpRequest::ptr req(new sylar::http::HttpRequest);
-    req->setHeader("host" , "www.sylar.top");
-    req->setBody("hello sylar");
+    rock::http::HttpRequest::ptr req(new rock::http::HttpRequest);
+    req->setHeader("host" , "www.rock.top");
+    req->setBody("hello rock");
     req->dump(std::cout) << std::endl;
 }
 
 void test_response() {
-    sylar::http::HttpResponse::ptr rsp(new sylar::http::HttpResponse);
-    rsp->setHeader("X-X", "sylar");
-    rsp->setBody("hello sylar");
-    rsp->setStatus((sylar::http::HttpStatus)400);
+    rock::http::HttpResponse::ptr rsp(new rock::http::HttpResponse);
+    rsp->setHeader("X-X", "rock");
+    rsp->setBody("hello rock");
+    rsp->setStatus((rock::http::HttpStatus)400);
     rsp->setClose(false);
 
     rsp->dump(std::cout) << std::endl;

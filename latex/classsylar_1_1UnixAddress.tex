@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Unix\+Address类 参考}
-\label{classsylar_1_1UnixAddress}\index{sylar::UnixAddress@{sylar::UnixAddress}}
+\doxysection{rock\+::Unix\+Address类 参考}
+\label{classrock_1_1UnixAddress}\index{rock::UnixAddress@{rock::UnixAddress}}
 
 
 Unix\+Socket地址  
@@ -11,42 +11,42 @@ Unix\+Socket地址
 
 
 
-类 sylar\+::Unix\+Address 继承关系图\+:
+类 rock\+::Unix\+Address 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Unix\+Address 的协作图\+:
+rock\+::Unix\+Address 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1UnixAddress_afa0181dca73db440ee4e81f8b4fd0dce}} 
+\mbox{\label{classrock_1_1UnixAddress_afa0181dca73db440ee4e81f8b4fd0dce}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Unix\+Address} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1UnixAddress_a2ae3007fa869319c1e6a2980579c9c96}} 
+\mbox{\label{classrock_1_1UnixAddress_a2ae3007fa869319c1e6a2980579c9c96}} 
 \textbf{ Unix\+Address} ()
 \begin{DoxyCompactList}\small\item\em 无参构造函数 \end{DoxyCompactList}\item 
 \textbf{ Unix\+Address} (const std\+::string \&path)
 \begin{DoxyCompactList}\small\item\em 通过路径构造\+Unix\+Address \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1UnixAddress_a8cdee2c6fd696f34ea8a6e0768758297}} 
+\mbox{\label{classrock_1_1UnixAddress_a8cdee2c6fd696f34ea8a6e0768758297}} 
 const sockaddr $\ast$ \textbf{ get\+Addr} () const override
 \begin{DoxyCompactList}\small\item\em 返回sockaddr指针,只读 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1UnixAddress_a9d7dcb80ce899a14eb2487e49b3eb5d1}} 
+\mbox{\label{classrock_1_1UnixAddress_a9d7dcb80ce899a14eb2487e49b3eb5d1}} 
 sockaddr $\ast$ \textbf{ get\+Addr} () override
 \begin{DoxyCompactList}\small\item\em 返回sockaddr指针,读写 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1UnixAddress_a16e2b7f20f9a2b40d3340b28b82551e7}} 
+\mbox{\label{classrock_1_1UnixAddress_a16e2b7f20f9a2b40d3340b28b82551e7}} 
 socklen\+\_\+t \textbf{ get\+Addr\+Len} () const override
 \begin{DoxyCompactList}\small\item\em 返回sockaddr的长度 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1UnixAddress_aa71864fe71dbbfe8a7d87e603a5eab15}} 
+\mbox{\label{classrock_1_1UnixAddress_aa71864fe71dbbfe8a7d87e603a5eab15}} 
 void {\bfseries set\+Addr\+Len} (uint32\+\_\+t v)
 \item 
-\mbox{\label{classsylar_1_1UnixAddress_a82a83f96cb35a09c6bfdd7c9cae7808f}} 
+\mbox{\label{classrock_1_1UnixAddress_a82a83f96cb35a09c6bfdd7c9cae7808f}} 
 std\+::string {\bfseries get\+Path} () const
 \item 
-\mbox{\label{classsylar_1_1UnixAddress_a091b41a0b0e446cb32ed5479b6ad9d29}} 
+\mbox{\label{classrock_1_1UnixAddress_a091b41a0b0e446cb32ed5479b6ad9d29}} 
 std\+::ostream \& \textbf{ insert} (std\+::ostream \&os) const override
 \begin{DoxyCompactList}\small\item\em 可读性输出地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
@@ -56,11 +56,11 @@ std\+::ostream \& \textbf{ insert} (std\+::ostream \&os) const override
 Unix\+Socket地址 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1UnixAddress_a7c2b247279344819316b02852218a90b}} 
-\index{sylar::UnixAddress@{sylar::UnixAddress}!UnixAddress@{UnixAddress}}
-\index{UnixAddress@{UnixAddress}!sylar::UnixAddress@{sylar::UnixAddress}}
+\mbox{\label{classrock_1_1UnixAddress_a7c2b247279344819316b02852218a90b}} 
+\index{rock::UnixAddress@{rock::UnixAddress}!UnixAddress@{UnixAddress}}
+\index{UnixAddress@{UnixAddress}!rock::UnixAddress@{rock::UnixAddress}}
 \doxysubsubsection{UnixAddress()}
-{\footnotesize\ttfamily sylar\+::\+Unix\+Address\+::\+Unix\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Unix\+Address\+::\+Unix\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
 
 
 
@@ -75,4 +75,4 @@ Unix\+Socket地址
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ address.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ address.\+h}\end{DoxyCompactItemize}

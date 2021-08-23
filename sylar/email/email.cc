@@ -1,9 +1,9 @@
 #include "email.h"
 #include <fstream>
 #include <sstream>
-#include "sylar/util.h"
+#include "rock/util.h"
 
-namespace sylar {
+namespace rock {
 
 EMailEntity::ptr EMailEntity::CreateAttach(const std::string& filename) {
     std::ifstream ifs(filename, std::ios::binary);
@@ -14,10 +14,10 @@ EMailEntity::ptr EMailEntity::CreateAttach(const std::string& filename) {
         ifs.read(&buf[0], buf.size());
         entity->m_content.append(buf.c_str(), ifs.gcount());
     }
-    entity->m_content = sylar::base64encode(entity->m_content);
+    entity->m_content = rock::base64encode(entity->m_content);
     entity->addHeader("Content-Transfer-Encoding", "base64");
     entity->addHeader("Content-Disposition", "attachment");
-    entity->addHeader("Content-Type", "application/octet-stream;name=" + sylar::FSUtil::Basename(filename));
+    entity->addHeader("Content-Type", "application/octet-stream;name=" + rock::FSUtil::Basename(filename));
     return entity;
 }
 

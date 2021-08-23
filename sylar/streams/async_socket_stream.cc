@@ -1,11 +1,11 @@
 #include "async_socket_stream.h"
-#include "sylar/util.h"
-#include "sylar/log.h"
-#include "sylar/macro.h"
+#include "rock/util.h"
+#include "rock/log.h"
+#include "rock/macro.h"
 
-namespace sylar {
+namespace rock {
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
 AsyncSocketStream::Ctx::Ctx()
     :sn(0)
@@ -17,7 +17,7 @@ AsyncSocketStream::Ctx::Ctx()
 
 void AsyncSocketStream::Ctx::doRsp() {
     Scheduler* scd = scheduler;
-    if(!sylar::Atomic::compareAndSwapBool(scheduler, scd, (Scheduler*)nullptr)) {
+    if(!rock::Atomic::compareAndSwapBool(scheduler, scd, (Scheduler*)nullptr)) {
         return;
     }
     if(!scd || !fiber) {
@@ -45,10 +45,10 @@ AsyncSocketStream::AsyncSocketStream(Socket::ptr sock, bool owner)
 
 bool AsyncSocketStream::start() {
     if(!m_iomanager) {
-        m_iomanager = sylar::IOManager::GetThis();
+        m_iomanager = rock::IOManager::GetThis();
     }
     if(!m_worker) {
-        m_worker = sylar::IOManager::GetThis();
+        m_worker = rock::IOManager::GetThis();
     }
 
     do {
@@ -106,7 +106,7 @@ void AsyncSocketStream::doRead() {
         //TODO log
     }
 
-    SYLAR_LOG_DEBUG(g_logger) << "doRead out " << this;
+    ROCK_LOG_DEBUG(g_logger) << "doRead out " << this;
     innerClose();
     m_waitSem.notify();
 
@@ -135,7 +135,7 @@ void AsyncSocketStream::doWrite() {
     } catch (...) {
         //TODO log
     }
-    SYLAR_LOG_DEBUG(g_logger) << "doWrite out " << this;
+    ROCK_LOG_DEBUG(g_logger) << "doWrite out " << this;
     {
         RWMutexType::WriteLock lock(m_queueMutex);
         m_queue.clear();
@@ -184,7 +184,7 @@ bool AsyncSocketStream::addCtx(Ctx::ptr ctx) {
 }
 
 bool AsyncSocketStream::enqueue(SendCtx::ptr ctx) {
-    SYLAR_ASSERT(ctx);
+    ROCK_ASSERT(ctx);
     RWMutexType::WriteLock lock(m_queueMutex);
     bool empty = m_queue.empty();
     m_queue.push_back(ctx);
@@ -196,7 +196,7 @@ bool AsyncSocketStream::enqueue(SendCtx::ptr ctx) {
 }
 
 bool AsyncSocketStream::innerClose() {
-    SYLAR_ASSERT(m_iomanager == sylar::IOManager::GetThis());
+    ROCK_ASSERT(m_iomanager == rock::IOManager::GetThis());
     if(isConnected() && m_disconnectCb) {
         m_disconnectCb(shared_from_this());
     }
@@ -285,7 +285,7 @@ void AsyncSocketStreamManager::setConnection(const std::vector<AsyncSocketStream
 AsyncSocketStream::ptr AsyncSocketStreamManager::get() {
     RWMutexType::ReadLock lock(m_mutex);
     for(uint32_t i = 0; i < m_size; ++i) {
-        auto idx = sylar::Atomic::addFetch(m_idx, 1);
+        auto idx = rock::Atomic::addFetch(m_idx, 1);
         if(m_datas[idx % m_size]->isConnected()) {
             return m_datas[idx % m_size];
         }

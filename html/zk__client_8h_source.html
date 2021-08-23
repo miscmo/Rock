@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/zk_client.h 源文件</title>
+<title>rock: rock/zk_client.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,8 +69,8 @@ $(function() {
 <div class="title">zk_client.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_ZK_CLIENT_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_ZK_CLIENT_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_ZK_CLIENT_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_ZK_CLIENT_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
@@ -84,11 +84,11 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;zookeeper/zookeeper.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classsylar_1_1ZKClient.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ZKClient.html">ZKClient</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;ZKClient&gt; {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classrock_1_1ZKClient.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ZKClient.html">ZKClient</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;ZKClient&gt; {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsylar_1_1ZKClient_1_1EventType.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsylar_1_1ZKClient_1_1EventType.html">EventType</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classrock_1_1ZKClient_1_1EventType.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classrock_1_1ZKClient_1_1EventType.html">EventType</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CREATED; <span class="comment">// = ZOO_CREATED_EVENT;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> DELETED; <span class="comment">// = ZOO_DELETED_EVENT;</span></div>
@@ -97,13 +97,13 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SESSION; <span class="comment">// = ZOO_SESSION_EVENT;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NOWATCHING; <span class="comment">// = ZOO_NOTWATCHING_EVENT;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsylar_1_1ZKClient_1_1FlagsType.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsylar_1_1ZKClient_1_1FlagsType.html">FlagsType</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classrock_1_1ZKClient_1_1FlagsType.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classrock_1_1ZKClient_1_1FlagsType.html">FlagsType</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> EPHEMERAL; <span class="comment">// = ZOO_EPHEMERAL;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SEQUENCE;  <span class="comment">//  = ZOO_SEQUENCE;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTAINER; <span class="comment">// = ZOO_CONTAINER;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classsylar_1_1ZKClient_1_1StateType.html">   35</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsylar_1_1ZKClient_1_1StateType.html">StateType</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classrock_1_1ZKClient_1_1StateType.html">   35</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classrock_1_1ZKClient_1_1StateType.html">StateType</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> EXPIRED_SESSION; <span class="comment">// = ZOO_EXPIRED_SESSION_STATE;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> AUTH_FAILED; <span class="comment">// = ZOO_AUTH_FAILED_STATE;</span></div>
@@ -118,8 +118,8 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(<span class="keywordtype">int</span> type, <span class="keywordtype">int</span> stat, <span class="keyword">const</span> std::string&amp; path, ZKClient::ptr)&gt; watcher_callback;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">typedef</span> void(*log_callback)(<span class="keyword">const</span> <span class="keywordtype">char</span> *message);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classsylar_1_1ZKClient.html">ZKClient</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ~<a class="code" href="classsylar_1_1ZKClient.html">ZKClient</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classrock_1_1ZKClient.html">ZKClient</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ~<a class="code" href="classrock_1_1ZKClient.html">ZKClient</a>();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> init(<span class="keyword">const</span> std::string&amp; hosts, <span class="keywordtype">int</span> recv_timeout, watcher_callback cb, log_callback lcb = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    int32_t setServers(<span class="keyword">const</span> std::string&amp; hosts);</div>
@@ -153,10 +153,10 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1ZKClient_1_1EventType_html"><div class="ttname"><a href="classsylar_1_1ZKClient_1_1EventType.html">sylar::ZKClient::EventType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:20</div></div>
-<div class="ttc" id="aclasssylar_1_1ZKClient_1_1StateType_html"><div class="ttname"><a href="classsylar_1_1ZKClient_1_1StateType.html">sylar::ZKClient::StateType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:35</div></div>
-<div class="ttc" id="aclasssylar_1_1ZKClient_1_1FlagsType_html"><div class="ttname"><a href="classsylar_1_1ZKClient_1_1FlagsType.html">sylar::ZKClient::FlagsType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:29</div></div>
-<div class="ttc" id="aclasssylar_1_1ZKClient_html"><div class="ttname"><a href="classsylar_1_1ZKClient.html">sylar::ZKClient</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:18</div></div>
+<div class="ttc" id="aclassrock_1_1ZKClient_1_1EventType_html"><div class="ttname"><a href="classrock_1_1ZKClient_1_1EventType.html">rock::ZKClient::EventType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:20</div></div>
+<div class="ttc" id="aclassrock_1_1ZKClient_1_1StateType_html"><div class="ttname"><a href="classrock_1_1ZKClient_1_1StateType.html">rock::ZKClient::StateType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:35</div></div>
+<div class="ttc" id="aclassrock_1_1ZKClient_1_1FlagsType_html"><div class="ttname"><a href="classrock_1_1ZKClient_1_1FlagsType.html">rock::ZKClient::FlagsType</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:29</div></div>
+<div class="ttc" id="aclassrock_1_1ZKClient_html"><div class="ttname"><a href="classrock_1_1ZKClient.html">rock::ZKClient</a></div><div class="ttdef"><b>Definition:</b> zk_client.h:18</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

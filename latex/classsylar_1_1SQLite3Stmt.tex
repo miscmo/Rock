@@ -1,185 +1,185 @@
-\doxysection{sylar\+::S\+Q\+Lite3\+Stmt类 参考}
-\label{classsylar_1_1SQLite3Stmt}\index{sylar::SQLite3Stmt@{sylar::SQLite3Stmt}}
+\doxysection{rock\+::S\+Q\+Lite3\+Stmt类 参考}
+\label{classrock_1_1SQLite3Stmt}\index{rock::SQLite3Stmt@{rock::SQLite3Stmt}}
 
 
-类 sylar\+::S\+Q\+Lite3\+Stmt 继承关系图\+:
+类 rock\+::S\+Q\+Lite3\+Stmt 继承关系图\+:
 % FIG 0
 
 
-sylar\+::S\+Q\+Lite3\+Stmt 的协作图\+:
+rock\+::S\+Q\+Lite3\+Stmt 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a1521ef39918be6ca810c0ef503d9c7ba}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a1521ef39918be6ca810c0ef503d9c7ba}} 
 enum {\bfseries Type} \{ {\bfseries C\+O\+PY} = 1, 
 {\bfseries R\+EF} = 2
  \}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a706c145e0210a5d8e3ccc1f326562ce6}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a706c145e0210a5d8e3ccc1f326562ce6}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ S\+Q\+Lite3\+Stmt} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aeaa5614994ec6797f63365b193690a9c}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aeaa5614994ec6797f63365b193690a9c}} 
 int {\bfseries prepare} (const char $\ast$stmt)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a14e2aec2dc17903612b5caf2b1e51ca3}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a14e2aec2dc17903612b5caf2b1e51ca3}} 
 int {\bfseries finish} ()
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_acb7c60d24fd7bd9cd5b57e14b40ad58b}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_acb7c60d24fd7bd9cd5b57e14b40ad58b}} 
 int {\bfseries bind} (int idx, int32\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a00346c4883f3c7db79304df8ceebacb8}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a00346c4883f3c7db79304df8ceebacb8}} 
 int {\bfseries bind} (int idx, uint32\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aa93e1888474b04a74b1c52c0cf89acca}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aa93e1888474b04a74b1c52c0cf89acca}} 
 int {\bfseries bind} (int idx, double value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a381fe6c6f2c12192c1a22018b9420adf}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a381fe6c6f2c12192c1a22018b9420adf}} 
 int {\bfseries bind} (int idx, int64\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ac6985b543fa46617a7fc595477a6978b}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ac6985b543fa46617a7fc595477a6978b}} 
 int {\bfseries bind} (int idx, uint64\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ae00726ce9887e600bd5c160041899306}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ae00726ce9887e600bd5c160041899306}} 
 int {\bfseries bind} (int idx, const char $\ast$value, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aa4b90a318ffb97f6d9703a5b6a1eaa6e}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aa4b90a318ffb97f6d9703a5b6a1eaa6e}} 
 int {\bfseries bind} (int idx, const void $\ast$value, int len, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a2d5d59ac77df2de11a38ce47f0438c86}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a2d5d59ac77df2de11a38ce47f0438c86}} 
 int {\bfseries bind} (int idx, const std\+::string \&value, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a28491663c78f690906e3d1c6a1a49606}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a28491663c78f690906e3d1c6a1a49606}} 
 int {\bfseries bind} (int idx)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a2989fa6b0538562bf72c0b944a2f2d6d}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a2989fa6b0538562bf72c0b944a2f2d6d}} 
 int {\bfseries bind\+Int8} (int idx, const int8\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a02142187746f279dca93f977c8cf2e92}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a02142187746f279dca93f977c8cf2e92}} 
 int {\bfseries bind\+Uint8} (int idx, const uint8\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_af48be5b8aa732a728e889dcfe66c339e}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_af48be5b8aa732a728e889dcfe66c339e}} 
 int {\bfseries bind\+Int16} (int idx, const int16\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_afda84cefea78bd6f85e422f836866354}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_afda84cefea78bd6f85e422f836866354}} 
 int {\bfseries bind\+Uint16} (int idx, const uint16\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ae41c6977a64648fe197e30ff26c6131d}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ae41c6977a64648fe197e30ff26c6131d}} 
 int {\bfseries bind\+Int32} (int idx, const int32\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a6ba91c5f36194a813fd55a2aede47ba6}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a6ba91c5f36194a813fd55a2aede47ba6}} 
 int {\bfseries bind\+Uint32} (int idx, const uint32\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_af6c8607084c59e74b5d955cc3a11286e}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_af6c8607084c59e74b5d955cc3a11286e}} 
 int {\bfseries bind\+Int64} (int idx, const int64\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ae4853af059aa2bcbded1332fd89cf7aa}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ae4853af059aa2bcbded1332fd89cf7aa}} 
 int {\bfseries bind\+Uint64} (int idx, const uint64\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aee0116d03285255d23037213ec477e5d}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aee0116d03285255d23037213ec477e5d}} 
 int {\bfseries bind\+Float} (int idx, const float \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a66fa39dd0f95e45e4286d2eeb93564ef}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a66fa39dd0f95e45e4286d2eeb93564ef}} 
 int {\bfseries bind\+Double} (int idx, const double \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a559ca012b008e186daeaede7b42d5cb4}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a559ca012b008e186daeaede7b42d5cb4}} 
 int {\bfseries bind\+String} (int idx, const char $\ast$value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ac6e2e5ac63fb79283dd15072a78f172b}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ac6e2e5ac63fb79283dd15072a78f172b}} 
 int {\bfseries bind\+String} (int idx, const std\+::string \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a36e8726e8f2d789dbe0e7edeade99b83}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a36e8726e8f2d789dbe0e7edeade99b83}} 
 int {\bfseries bind\+Blob} (int idx, const void $\ast$value, int64\+\_\+t size) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aaf3dd0fa03c2e3ce3c184669dd69b442}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aaf3dd0fa03c2e3ce3c184669dd69b442}} 
 int {\bfseries bind\+Blob} (int idx, const std\+::string \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a5c56dda90e11bc80f340384b9ef76b96}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a5c56dda90e11bc80f340384b9ef76b96}} 
 int {\bfseries bind\+Time} (int idx, const time\+\_\+t \&value) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a97125d443b9a8641347076470474e64e}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a97125d443b9a8641347076470474e64e}} 
 int {\bfseries bind\+Null} (int idx) override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ae26f5c9ca77905ad159a856ada30d06d}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ae26f5c9ca77905ad159a856ada30d06d}} 
 int {\bfseries bind} (const char $\ast$name, int32\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ac31c5d928b6e9648b28c8747911d4b25}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ac31c5d928b6e9648b28c8747911d4b25}} 
 int {\bfseries bind} (const char $\ast$name, uint32\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a040359149db024fabc76645605c8cb7a}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a040359149db024fabc76645605c8cb7a}} 
 int {\bfseries bind} (const char $\ast$name, double value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a7f0d1d04208b6c21b7ac5a1b2e62d183}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a7f0d1d04208b6c21b7ac5a1b2e62d183}} 
 int {\bfseries bind} (const char $\ast$name, int64\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a42756ceb914ac222e64da6639679b1a2}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a42756ceb914ac222e64da6639679b1a2}} 
 int {\bfseries bind} (const char $\ast$name, uint64\+\_\+t value)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a01b5592d4c3583511f9dd233c13419fb}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a01b5592d4c3583511f9dd233c13419fb}} 
 int {\bfseries bind} (const char $\ast$name, const char $\ast$value, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a9050941a52b242eea26377a8a96d722c}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a9050941a52b242eea26377a8a96d722c}} 
 int {\bfseries bind} (const char $\ast$name, const void $\ast$value, int len, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a9256d4799a19db6d186f8f7b84fde475}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a9256d4799a19db6d186f8f7b84fde475}} 
 int {\bfseries bind} (const char $\ast$name, const std\+::string \&value, Type type=C\+O\+PY)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a0243571d7a51f0b2a30a335187be65b6}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a0243571d7a51f0b2a30a335187be65b6}} 
 int {\bfseries bind} (const char $\ast$name)
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aa5a0b18fdc3711b0f942c157936579e8}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aa5a0b18fdc3711b0f942c157936579e8}} 
 int {\bfseries step} ()
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a5ec90affb6bbec9cc67601d61952c961}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a5ec90affb6bbec9cc67601d61952c961}} 
 int {\bfseries reset} ()
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a4592513b7866be1b70b7000863314764}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a4592513b7866be1b70b7000863314764}} 
 I\+S\+Q\+L\+Data\+::ptr {\bfseries query} () override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_abc04aa1130a967c217eb3ecc48f209f2}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_abc04aa1130a967c217eb3ecc48f209f2}} 
 int {\bfseries execute} () override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a37b70a54c5a915824e50bbdbfabf4a7a}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a37b70a54c5a915824e50bbdbfabf4a7a}} 
 int64\+\_\+t {\bfseries get\+Last\+Insert\+Id} () override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ab16aecd9e38f42416b89a9dff59d337c}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ab16aecd9e38f42416b89a9dff59d337c}} 
 int {\bfseries get\+Errno} () override
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_aa7dc334426b408a03110e3cc556b7f9b}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_aa7dc334426b408a03110e3cc556b7f9b}} 
 std\+::string {\bfseries get\+Err\+Str} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_ac0b47397d966c5f08865658de265ccca}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_ac0b47397d966c5f08865658de265ccca}} 
 static S\+Q\+Lite3\+Stmt\+::ptr {\bfseries Create} (S\+Q\+Lite3\+::ptr db, const char $\ast$stmt)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a2cb8fa79a54ec3cf88e8ab7e9569de6d}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a2cb8fa79a54ec3cf88e8ab7e9569de6d}} 
 {\bfseries S\+Q\+Lite3\+Stmt} (S\+Q\+Lite3\+::ptr db)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a6d5f8829e3ed51084f46c46de079b433}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a6d5f8829e3ed51084f46c46de079b433}} 
 S\+Q\+Lite3\+::ptr {\bfseries m\+\_\+db}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a86bc9ecce57e054316d1184268a0a509}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a86bc9ecce57e054316d1184268a0a509}} 
 sqlite3\+\_\+stmt $\ast$ {\bfseries m\+\_\+stmt}
 \end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1SQLite3Stmt_a8dac27a03a42a81ddb1d774a1b489733}} 
+\mbox{\label{classrock_1_1SQLite3Stmt_a8dac27a03a42a81ddb1d774a1b489733}} 
 class {\bfseries S\+Q\+Lite3\+Data}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/\textbf{ sqlite3.\+h}\end{DoxyCompactItemize}
+rock/db/\textbf{ sqlite3.\+h}\end{DoxyCompactItemize}

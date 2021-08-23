@@ -1,10 +1,10 @@
-#ifndef __SYLAR_DB_DB_H__
-#define __SYLAR_DB_DB_H__
+#ifndef __ROCK_DB_DB_H__
+#define __ROCK_DB_DB_H__
 
 #include <memory>
 #include <string>
 
-namespace sylar {
+namespace rock {
 
 class ISQLData {
 public:

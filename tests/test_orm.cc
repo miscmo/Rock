@@ -1,20 +1,20 @@
 #include "orm_out/test/orm/user_info.h"
-#include "sylar/db/sqlite3.h"
-#include "sylar/db/mysql.h"
+#include "rock/db/sqlite3.h"
+#include "rock/db/mysql.h"
 
 int main(int argc, char** argv) {
-    sylar::IDB::ptr db;
+    rock::IDB::ptr db;
     if(argc == 1) {
-        db = sylar::SQLite3::Create("abc.db");
+        db = rock::SQLite3::Create("abc.db");
         std::cout << "create table: " << test::orm::UserInfoDao::CreateTableSQLite3(db) << std::endl;
     } else {
         std::map<std::string, std::string> params;
         params["host"] = "127.0.0.1";
-        params["user"] = "sylar";
+        params["user"] = "rock";
         params["passwd"] = "123456";
-        params["dbname"] = "sylar";
+        params["dbname"] = "rock";
 
-        sylar::MySQL::ptr m(new sylar::MySQL(params));
+        rock::MySQL::ptr m(new rock::MySQL(params));
         m->connect();
         db = m;
         std::cout << "create table: " << test::orm::UserInfoDao::CreateTableMySQL(db) << std::endl;

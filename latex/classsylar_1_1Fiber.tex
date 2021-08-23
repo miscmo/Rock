@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Fiber类 参考}
-\label{classsylar_1_1Fiber}\index{sylar::Fiber@{sylar::Fiber}}
+\doxysection{rock\+::Fiber类 参考}
+\label{classrock_1_1Fiber}\index{rock::Fiber@{rock::Fiber}}
 
 
 协程类  
@@ -11,11 +11,11 @@
 
 
 
-类 sylar\+::Fiber 继承关系图\+:
+类 rock\+::Fiber 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Fiber 的协作图\+:
+rock\+::Fiber 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
@@ -30,7 +30,7 @@ enum \textbf{ State} \{ \newline
 \textbf{ E\+X\+C\+E\+PT}
  \}
 \begin{DoxyCompactList}\small\item\em 协程状态 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a478fd946ea18814614de2f1ad5c7159e}} 
+\mbox{\label{classrock_1_1Fiber_a478fd946ea18814614de2f1ad5c7159e}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fiber} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -38,24 +38,24 @@ typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fiber} $>$ {\bfseries ptr}
 \item 
 \textbf{ Fiber} (std\+::function$<$ void()$>$ cb, size\+\_\+t stacksize=0, bool use\+\_\+caller=false)
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a2e9a01682c9290b34a103b4f41a7e0d6}} 
+\mbox{\label{classrock_1_1Fiber_a2e9a01682c9290b34a103b4f41a7e0d6}} 
 \textbf{ $\sim$\+Fiber} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
 void \textbf{ reset} (std\+::function$<$ void()$>$ cb)
 \begin{DoxyCompactList}\small\item\em 重置协程执行函数,并设置状态 \end{DoxyCompactList}\item 
 void \textbf{ swap\+In} ()
 \begin{DoxyCompactList}\small\item\em 将当前协程切换到运行状态 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a43585923f39c2230fb529229a6eb6d3b}} 
+\mbox{\label{classrock_1_1Fiber_a43585923f39c2230fb529229a6eb6d3b}} 
 void \textbf{ swap\+Out} ()
 \begin{DoxyCompactList}\small\item\em 将当前协程切换到后台 \end{DoxyCompactList}\item 
 void \textbf{ call} ()
 \begin{DoxyCompactList}\small\item\em 将当前线程切换到执行状态 \end{DoxyCompactList}\item 
 void \textbf{ back} ()
 \begin{DoxyCompactList}\small\item\em 将当前线程切换到后台 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a357f571db2dc90eb942e4e7fef62d251}} 
+\mbox{\label{classrock_1_1Fiber_a357f571db2dc90eb942e4e7fef62d251}} 
 uint64\+\_\+t \textbf{ get\+Id} () const
 \begin{DoxyCompactList}\small\item\em 返回协程id \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89}} 
+\mbox{\label{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89}} 
 \textbf{ State} \textbf{ get\+State} () const
 \begin{DoxyCompactList}\small\item\em 返回协程状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
@@ -63,27 +63,27 @@ uint64\+\_\+t \textbf{ get\+Id} () const
 \item 
 static void \textbf{ Set\+This} (\textbf{ Fiber} $\ast$f)
 \begin{DoxyCompactList}\small\item\em 设置当前线程的运行协程 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_ac615a161a131e8867fae7b0657d97860}} 
+\mbox{\label{classrock_1_1Fiber_ac615a161a131e8867fae7b0657d97860}} 
 static Fiber\+::ptr \textbf{ Get\+This} ()
 \begin{DoxyCompactList}\small\item\em 返回当前所在的协程 \end{DoxyCompactList}\item 
 static void \textbf{ Yield\+To\+Ready} ()
 \begin{DoxyCompactList}\small\item\em 将当前协程切换到后台,并设置为\+R\+E\+A\+D\+Y状态 \end{DoxyCompactList}\item 
 static void \textbf{ Yield\+To\+Hold} ()
 \begin{DoxyCompactList}\small\item\em 将当前协程切换到后台,并设置为\+H\+O\+L\+D状态 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_a17cba1b5a9976f872378bcbdca5300e7}} 
+\mbox{\label{classrock_1_1Fiber_a17cba1b5a9976f872378bcbdca5300e7}} 
 static uint64\+\_\+t \textbf{ Total\+Fibers} ()
 \begin{DoxyCompactList}\small\item\em 返回当前协程的总数量 \end{DoxyCompactList}\item 
 static void \textbf{ Main\+Func} ()
 \begin{DoxyCompactList}\small\item\em 协程执行函数 \end{DoxyCompactList}\item 
 static void \textbf{ Caller\+Main\+Func} ()
 \begin{DoxyCompactList}\small\item\em 协程执行函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Fiber_aa2856295355a48a29e02726c7f80cef3}} 
+\mbox{\label{classrock_1_1Fiber_aa2856295355a48a29e02726c7f80cef3}} 
 static uint64\+\_\+t \textbf{ Get\+Fiber\+Id} ()
 \begin{DoxyCompactList}\small\item\em 获取当前协程的id \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Fiber_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}} 
+\mbox{\label{classrock_1_1Fiber_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}} 
 class {\bfseries Scheduler}
 \end{DoxyCompactItemize}
 
@@ -92,38 +92,38 @@ class {\bfseries Scheduler}
 协程类 
 
 \doxysubsection{成员枚举类型说明}
-\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523}} 
-\index{sylar::Fiber@{sylar::Fiber}!State@{State}}
-\index{State@{State}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523}} 
+\index{rock::Fiber@{rock::Fiber}!State@{State}}
+\index{State@{State}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{State}
-{\footnotesize\ttfamily enum \textbf{ sylar\+::\+Fiber\+::\+State}}
+{\footnotesize\ttfamily enum \textbf{ rock\+::\+Fiber\+::\+State}}
 
 
 
 协程状态 
 
 \begin{DoxyEnumFields}{枚举值}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!INIT@{INIT}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!INIT@{INIT}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523a5a6fe5b68c3f97031e573ee5afa1bda3}} 
 I\+N\+IT&初始化状态 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!HOLD@{HOLD}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD@{HOLD}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!HOLD@{HOLD}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523a6287bcaf8ba42a1e0134e21d20cda1a8}} 
 H\+O\+LD&暂停状态 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{EXEC@{EXEC}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!EXEC@{EXEC}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXEC@{EXEC}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!EXEC@{EXEC}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523acc22c1782e42ddc799479ed5e6020c5d}} 
 E\+X\+EC&执行中状态 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{TERM@{TERM}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!TERM@{TERM}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TERM@{TERM}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!TERM@{TERM}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523afe11192b01883279e41e793362388092}} 
 T\+E\+RM&结束状态 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{READY@{READY}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!READY@{READY}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{READY@{READY}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!READY@{READY}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523a468c79bb239b57c37218c636edd5c049}} 
 R\+E\+A\+DY&可执行状态 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{EXCEPT@{EXCEPT}!sylar::Fiber@{sylar::Fiber}}\index{sylar::Fiber@{sylar::Fiber}!EXCEPT@{EXCEPT}}}\mbox{\label{classsylar_1_1Fiber_a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13}} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXCEPT@{EXCEPT}!rock::Fiber@{rock::Fiber}}\index{rock::Fiber@{rock::Fiber}!EXCEPT@{EXCEPT}}}\mbox{\label{classrock_1_1Fiber_a4fa17489879111742d2605389f0ef523aa515d86e87fbe5d46690359f5dd5fe13}} 
 E\+X\+C\+E\+PT&异常状态 \\
 \hline
 
@@ -131,11 +131,11 @@ E\+X\+C\+E\+PT&异常状态 \\
 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1Fiber_a673567c43576189acea7a335927ce847}} 
-\index{sylar::Fiber@{sylar::Fiber}!Fiber@{Fiber}}
-\index{Fiber@{Fiber}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a673567c43576189acea7a335927ce847}} 
+\index{rock::Fiber@{rock::Fiber}!Fiber@{Fiber}}
+\index{Fiber@{Fiber}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{Fiber()}
-{\footnotesize\ttfamily sylar\+::\+Fiber\+::\+Fiber (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{size\+\_\+t}]{stacksize = {\ttfamily 0},  }\item[{bool}]{use\+\_\+caller = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Fiber\+::\+Fiber (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{size\+\_\+t}]{stacksize = {\ttfamily 0},  }\item[{bool}]{use\+\_\+caller = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
@@ -153,11 +153,11 @@ E\+X\+C\+E\+PT&异常状态 \\
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1Fiber_aa9f42925ec8f66eafb481ae453df946b}} 
-\index{sylar::Fiber@{sylar::Fiber}!back@{back}}
-\index{back@{back}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_aa9f42925ec8f66eafb481ae453df946b}} 
+\index{rock::Fiber@{rock::Fiber}!back@{back}}
+\index{back@{back}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{back()}
-{\footnotesize\ttfamily void sylar\+::\+Fiber\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Fiber\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -169,11 +169,11 @@ E\+X\+C\+E\+PT&异常状态 \\
 \begin{DoxyPostcond}{后置条件}
 返回到线程的主协程 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a0e2abad4fd10a7f9f6e16fd51d044285}} 
-\index{sylar::Fiber@{sylar::Fiber}!call@{call}}
-\index{call@{call}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a0e2abad4fd10a7f9f6e16fd51d044285}} 
+\index{rock::Fiber@{rock::Fiber}!call@{call}}
+\index{call@{call}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{call()}
-{\footnotesize\ttfamily void sylar\+::\+Fiber\+::call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Fiber\+::call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -182,11 +182,11 @@ E\+X\+C\+E\+PT&异常状态 \\
 \begin{DoxyPrecond}{前置条件}
 执行的为当前线程的主协程 
 \end{DoxyPrecond}
-\mbox{\label{classsylar_1_1Fiber_a6b7c87ecf7772fe5baff562357edb764}} 
-\index{sylar::Fiber@{sylar::Fiber}!CallerMainFunc@{CallerMainFunc}}
-\index{CallerMainFunc@{CallerMainFunc}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a6b7c87ecf7772fe5baff562357edb764}} 
+\index{rock::Fiber@{rock::Fiber}!CallerMainFunc@{CallerMainFunc}}
+\index{CallerMainFunc@{CallerMainFunc}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{CallerMainFunc()}
-{\footnotesize\ttfamily static void sylar\+::\+Fiber\+::\+Caller\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Fiber\+::\+Caller\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -195,11 +195,11 @@ E\+X\+C\+E\+PT&异常状态 \\
 \begin{DoxyPostcond}{后置条件}
 执行完成返回到线程调度协程 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a2b5c4e4a8906affd34d1a8a917c99186}} 
-\index{sylar::Fiber@{sylar::Fiber}!MainFunc@{MainFunc}}
-\index{MainFunc@{MainFunc}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a2b5c4e4a8906affd34d1a8a917c99186}} 
+\index{rock::Fiber@{rock::Fiber}!MainFunc@{MainFunc}}
+\index{MainFunc@{MainFunc}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{MainFunc()}
-{\footnotesize\ttfamily static void sylar\+::\+Fiber\+::\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Fiber\+::\+Main\+Func (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -208,27 +208,27 @@ E\+X\+C\+E\+PT&异常状态 \\
 \begin{DoxyPostcond}{后置条件}
 执行完成返回到线程主协程 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a765bbbf572ffefa9719ef6927472ab89}} 
-\index{sylar::Fiber@{sylar::Fiber}!reset@{reset}}
-\index{reset@{reset}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a765bbbf572ffefa9719ef6927472ab89}} 
+\index{rock::Fiber@{rock::Fiber}!reset@{reset}}
+\index{reset@{reset}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{reset()}
-{\footnotesize\ttfamily void sylar\+::\+Fiber\+::reset (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Fiber\+::reset (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{cb }\end{DoxyParamCaption})}
 
 
 
 重置协程执行函数,并设置状态 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} 为 I\+N\+IT, T\+E\+RM, E\+X\+C\+E\+PT 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} 为 I\+N\+IT, T\+E\+RM, E\+X\+C\+E\+PT 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = I\+N\+IT 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = I\+N\+IT 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a235383a38d2877800fb3d65ffae729d0}} 
-\index{sylar::Fiber@{sylar::Fiber}!SetThis@{SetThis}}
-\index{SetThis@{SetThis}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a235383a38d2877800fb3d65ffae729d0}} 
+\index{rock::Fiber@{rock::Fiber}!SetThis@{SetThis}}
+\index{SetThis@{SetThis}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{SetThis()}
-{\footnotesize\ttfamily static void sylar\+::\+Fiber\+::\+Set\+This (\begin{DoxyParamCaption}\item[{\textbf{ Fiber} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Fiber\+::\+Set\+This (\begin{DoxyParamCaption}\item[{\textbf{ Fiber} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -239,50 +239,50 @@ E\+X\+C\+E\+PT&异常状态 \\
 \mbox{\texttt{ in}}  & {\em f} & 运行协程 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Fiber_a4a1f61001070d3e14c274e98fd68e6d8}} 
-\index{sylar::Fiber@{sylar::Fiber}!swapIn@{swapIn}}
-\index{swapIn@{swapIn}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a4a1f61001070d3e14c274e98fd68e6d8}} 
+\index{rock::Fiber@{rock::Fiber}!swapIn@{swapIn}}
+\index{swapIn@{swapIn}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{swapIn()}
-{\footnotesize\ttfamily void sylar\+::\+Fiber\+::swap\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Fiber\+::swap\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 将当前协程切换到运行状态 
 
 \begin{DoxyPrecond}{前置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} != E\+X\+EC 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} != E\+X\+EC 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{后置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = E\+X\+EC 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = E\+X\+EC 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a09b69821a292ae0b2ac1e1fa3f642010}} 
-\index{sylar::Fiber@{sylar::Fiber}!YieldToHold@{YieldToHold}}
-\index{YieldToHold@{YieldToHold}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a09b69821a292ae0b2ac1e1fa3f642010}} 
+\index{rock::Fiber@{rock::Fiber}!YieldToHold@{YieldToHold}}
+\index{YieldToHold@{YieldToHold}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{YieldToHold()}
-{\footnotesize\ttfamily static void sylar\+::\+Fiber\+::\+Yield\+To\+Hold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Fiber\+::\+Yield\+To\+Hold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 将当前协程切换到后台,并设置为\+H\+O\+L\+D状态 
 
 \begin{DoxyPostcond}{后置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = H\+O\+LD 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = H\+O\+LD 
 \end{DoxyPostcond}
-\mbox{\label{classsylar_1_1Fiber_a21eedd398e89f4cec66605e3f3c3f1b0}} 
-\index{sylar::Fiber@{sylar::Fiber}!YieldToReady@{YieldToReady}}
-\index{YieldToReady@{YieldToReady}!sylar::Fiber@{sylar::Fiber}}
+\mbox{\label{classrock_1_1Fiber_a21eedd398e89f4cec66605e3f3c3f1b0}} 
+\index{rock::Fiber@{rock::Fiber}!YieldToReady@{YieldToReady}}
+\index{YieldToReady@{YieldToReady}!rock::Fiber@{rock::Fiber}}
 \doxysubsubsection{YieldToReady()}
-{\footnotesize\ttfamily static void sylar\+::\+Fiber\+::\+Yield\+To\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void rock\+::\+Fiber\+::\+Yield\+To\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
 将当前协程切换到后台,并设置为\+R\+E\+A\+D\+Y状态 
 
 \begin{DoxyPostcond}{后置条件}
-\doxyref{get\+State()}{p.}{classsylar_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = R\+E\+A\+DY 
+\doxyref{get\+State()}{p.}{classrock_1_1Fiber_a8b2f1e5ba3a5b94fffa55aa601a22e89} = R\+E\+A\+DY 
 \end{DoxyPostcond}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ fiber.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ fiber.\+h}\end{DoxyCompactItemize}

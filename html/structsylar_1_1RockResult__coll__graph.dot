@@ -1,7 +1,7 @@
-digraph "sylar::RockResult"
+digraph "rock::RockResult"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::RockResult\n|+ result\l+ used\l+ response\l+ request\l|+ RockResult()\l+ toString()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::RockResult\n|+ result\l+ used\l+ response\l+ request\l|+ RockResult()\l+ toString()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(sylar)
+project(rock)
 
 #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/yaml-cpp)
 #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/jsoncpp-1.8.4)
@@ -14,14 +14,14 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -
 set(CMAKE_C_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated  -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
 
 include_directories(.)
-include_directories(/apps/sylar/include)
+include_directories(/apps/rock/include)
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart)
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/yaml-cpp/include)
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/jsoncpp-1.8.4/include)
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/sqlite-3.28.0)
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/thirdpart/tinyxml2-7.0.1)
-link_directories(/apps/sylar/lib)
-link_directories(/apps/sylar/lib64)
+link_directories(/apps/rock/lib)
+link_directories(/apps/rock/lib64)
 
 option(BUILD_TEST "ON for complile test" ON)
 
@@ -50,94 +50,94 @@ if(ZLIB_FOUND)
 endif()
 
 set(LIB_SRC
-    sylar/address.cc
-    sylar/bytearray.cc
-    sylar/config.cc
-    sylar/db/fox_thread.cc
-    sylar/db/mysql.cc
-    sylar/db/redis.cc
-    sylar/db/sqlite3.cc
-    sylar/ds/bitmap.cc
-    sylar/ds/roaring_bitmap.cc
-    sylar/ds/roaring.c
-    sylar/ds/util.cc
-    sylar/email/email.cc
-    sylar/email/smtp.cc
-    sylar/env.cc
-    sylar/daemon.cc
-    sylar/fd_manager.cc
-    sylar/fiber.cc
-    sylar/http/http.cc
-    sylar/http/http_connection.cc
-    sylar/http/http_parser.cc
-    sylar/http/http_session.cc
-    sylar/http/http_server.cc
-    sylar/http/servlet.cc
-    sylar/http/servlets/config_servlet.cc
-    sylar/http/servlets/status_servlet.cc
-    sylar/http/session_data.cc
-    sylar/http/ws_connection.cc
-    sylar/http/ws_session.cc
-    sylar/http/ws_server.cc
-    sylar/http/ws_servlet.cc
-    sylar/hook.cc
-    sylar/iomanager.cc
-    sylar/library.cc
-    sylar/log.cc
-    sylar/module.cc
-    sylar/mutex.cc
-    sylar/ns/name_server_module.cc
-    sylar/ns/ns_client.cc
-    sylar/ns/ns_protocol.cc
-    sylar/protocol.cc
-    sylar/rock/rock_protocol.cc
-    sylar/rock/rock_server.cc
-    sylar/rock/rock_stream.cc
-    sylar/scheduler.cc
-    sylar/socket.cc
-    sylar/stream.cc
-    sylar/streams/async_socket_stream.cc
-    sylar/streams/socket_stream.cc
-    sylar/streams/load_balance.cc
-    sylar/streams/service_discovery.cc
-    sylar/streams/zlib_stream.cc
-    sylar/tcp_server.cc
-    sylar/timer.cc
-    sylar/thread.cc
-    sylar/util.cc
-    sylar/util/crypto_util.cc
-    sylar/util/json_util.cc
-    sylar/util/hash_util.cc
-    sylar/worker.cc
-    sylar/application.cc
-    sylar/zk_client.cc
+    rock/address.cc
+    rock/bytearray.cc
+    rock/config.cc
+    rock/db/fox_thread.cc
+    rock/db/mysql.cc
+    rock/db/redis.cc
+    rock/db/sqlite3.cc
+    rock/ds/bitmap.cc
+    rock/ds/roaring_bitmap.cc
+    rock/ds/roaring.c
+    rock/ds/util.cc
+    rock/email/email.cc
+    rock/email/smtp.cc
+    rock/env.cc
+    rock/daemon.cc
+    rock/fd_manager.cc
+    rock/fiber.cc
+    rock/http/http.cc
+    rock/http/http_connection.cc
+    rock/http/http_parser.cc
+    rock/http/http_session.cc
+    rock/http/http_server.cc
+    rock/http/servlet.cc
+    rock/http/servlets/config_servlet.cc
+    rock/http/servlets/status_servlet.cc
+    rock/http/session_data.cc
+    rock/http/ws_connection.cc
+    rock/http/ws_session.cc
+    rock/http/ws_server.cc
+    rock/http/ws_servlet.cc
+    rock/hook.cc
+    rock/iomanager.cc
+    rock/library.cc
+    rock/log.cc
+    rock/module.cc
+    rock/mutex.cc
+    rock/ns/name_server_module.cc
+    rock/ns/ns_client.cc
+    rock/ns/ns_protocol.cc
+    rock/protocol.cc
+    rock/rock/rock_protocol.cc
+    rock/rock/rock_server.cc
+    rock/rock/rock_stream.cc
+    rock/scheduler.cc
+    rock/socket.cc
+    rock/stream.cc
+    rock/streams/async_socket_stream.cc
+    rock/streams/socket_stream.cc
+    rock/streams/load_balance.cc
+    rock/streams/service_discovery.cc
+    rock/streams/zlib_stream.cc
+    rock/tcp_server.cc
+    rock/timer.cc
+    rock/thread.cc
+    rock/util.cc
+    rock/util/crypto_util.cc
+    rock/util/json_util.cc
+    rock/util/hash_util.cc
+    rock/worker.cc
+    rock/application.cc
+    rock/zk_client.cc
     )
 
-ragelmaker(sylar/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar/http)
-ragelmaker(sylar/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar/http)
-ragelmaker(sylar/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar)
+ragelmaker(rock/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/rock/http)
+ragelmaker(rock/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/rock/http)
+ragelmaker(rock/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/rock)
 
-protobufmaker(sylar/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
-#PROTOBUF_GENERATE_CPP(PB_SRCS PB_HDRS sylar/ns/ns_protobuf.proto)
+protobufmaker(rock/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+#PROTOBUF_GENERATE_CPP(PB_SRCS PB_HDRS rock/ns/ns_protobuf.proto)
 #message("****${PB_SRCS}***${PB_HDRS}****")
 #list(APPEND LIB_SRC ${PB_SRCS})
 #
 #message(STATUS ${LIB_SRC})
 
-add_library(sylar SHARED ${LIB_SRC})
-force_redefine_file_macro_for_sources(sylar)
-#add_library(sylar_static STATIC ${LIB_SRC})
-#SET_TARGET_PROPERTIES (sylar_static PROPERTIES OUTPUT_NAME "sylar")
+add_library(rock SHARED ${LIB_SRC})
+force_redefine_file_macro_for_sources(rock)
+#add_library(rock_static STATIC ${LIB_SRC})
+#SET_TARGET_PROPERTIES (rock_static PROPERTIES OUTPUT_NAME "rock")
 
 #find_library(YAMLCPP yaml-cpp)
 find_library(PTHREAD pthread)
-#set(LIBS ${LIBS} sylar)
+#set(LIBS ${LIBS} rock)
 #set(LIBS ${LIBS} dl)
 #set(LIBS ${LIBS} ${YAMLCPP})
 #set(LIBS ${LIBS} ${PTHREAD})
 
 set(LIBS
-        sylar
+        rock
         dl
         pthread
         yaml-cpp
@@ -153,73 +153,73 @@ set(LIBS
         tinyxml2
         jemalloc
         )
-sylar_add_executable(test_util "tests/test_util.cc" sylar "${LIBS}")
-sylar_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" sylar "${LIBS}")
-sylar_add_executable(test_hashmap "tests/test_hashmap.cc" sylar "${LIBS}")
-sylar_add_executable(test_dict "tests/test_dict.cc" sylar "${LIBS}")
-sylar_add_executable(test_array "tests/test_array.cc" sylar "${LIBS}")
+rock_add_executable(test_util "tests/test_util.cc" rock "${LIBS}")
+rock_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" rock "${LIBS}")
+rock_add_executable(test_hashmap "tests/test_hashmap.cc" rock "${LIBS}")
+rock_add_executable(test_dict "tests/test_dict.cc" rock "${LIBS}")
+rock_add_executable(test_array "tests/test_array.cc" rock "${LIBS}")
 # if(BUILD_TEST)
-sylar_add_executable(test1 "tests/test.cc" sylar "${LIBS}")
-sylar_add_executable(test_config "tests/test_config.cc" sylar "${LIBS}")
-sylar_add_executable(test_thread "tests/test_thread.cc" sylar "${LIBS}")
-sylar_add_executable(test_fiber "tests/test_fiber.cc" sylar "${LIBS}")
-sylar_add_executable(test_scheduler "tests/test_scheduler.cc" sylar "${LIBS}")
-sylar_add_executable(test_iomanager "tests/test_iomanager.cc" sylar "${LIBS}")
-sylar_add_executable(test_hook "tests/test_hook.cc" sylar "${LIBS}")
-sylar_add_executable(test_address "tests/test_address.cc" sylar "${LIBS}")
-sylar_add_executable(test_socket "tests/test_socket.cc" sylar "${LIBS}")
-sylar_add_executable(test_bytearray "tests/test_bytearray.cc" sylar "${LIBS}")
-sylar_add_executable(test_http "tests/test_http.cc" sylar "${LIBS}")
-sylar_add_executable(test_http_parser "tests/test_http_parser.cc" sylar "${LIBS}")
-sylar_add_executable(test_tcp_server "tests/test_tcp_server.cc" sylar "${LIBS}")
-sylar_add_executable(echo_server "examples/echo_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_http_server "tests/test_http_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_uri "tests/test_uri.cc" sylar "${LIBS}")
-sylar_add_executable(my_http_server "samples/my_http_server.cc" sylar "${LIBS}")
+rock_add_executable(test1 "tests/test.cc" rock "${LIBS}")
+rock_add_executable(test_config "tests/test_config.cc" rock "${LIBS}")
+rock_add_executable(test_thread "tests/test_thread.cc" rock "${LIBS}")
+rock_add_executable(test_fiber "tests/test_fiber.cc" rock "${LIBS}")
+rock_add_executable(test_scheduler "tests/test_scheduler.cc" rock "${LIBS}")
+rock_add_executable(test_iomanager "tests/test_iomanager.cc" rock "${LIBS}")
+rock_add_executable(test_hook "tests/test_hook.cc" rock "${LIBS}")
+rock_add_executable(test_address "tests/test_address.cc" rock "${LIBS}")
+rock_add_executable(test_socket "tests/test_socket.cc" rock "${LIBS}")
+rock_add_executable(test_bytearray "tests/test_bytearray.cc" rock "${LIBS}")
+rock_add_executable(test_http "tests/test_http.cc" rock "${LIBS}")
+rock_add_executable(test_http_parser "tests/test_http_parser.cc" rock "${LIBS}")
+rock_add_executable(test_tcp_server "tests/test_tcp_server.cc" rock "${LIBS}")
+rock_add_executable(echo_server "examples/echo_server.cc" rock "${LIBS}")
+rock_add_executable(test_http_server "tests/test_http_server.cc" rock "${LIBS}")
+rock_add_executable(test_uri "tests/test_uri.cc" rock "${LIBS}")
+rock_add_executable(my_http_server "samples/my_http_server.cc" rock "${LIBS}")
 
-sylar_add_executable(echo_server_udp "examples/echo_server_udp.cc" sylar "${LIBS}")
-sylar_add_executable(echo_udp_client "examples/echo_udp_client.cc" sylar "${LIBS}")
+rock_add_executable(echo_server_udp "examples/echo_server_udp.cc" rock "${LIBS}")
+rock_add_executable(echo_udp_client "examples/echo_udp_client.cc" rock "${LIBS}")
 
-sylar_add_executable(test_daemon "tests/test_daemon.cc" sylar "${LIBS}")
-sylar_add_executable(test_env "tests/test_env.cc" sylar "${LIBS}")
-sylar_add_executable(test_ws_server "tests/test_ws_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_ws_client "tests/test_ws_client.cc" sylar "${LIBS}")
-sylar_add_executable(test_application "tests/test_application.cc" sylar "${LIBS}")
+rock_add_executable(test_daemon "tests/test_daemon.cc" rock "${LIBS}")
+rock_add_executable(test_env "tests/test_env.cc" rock "${LIBS}")
+rock_add_executable(test_ws_server "tests/test_ws_server.cc" rock "${LIBS}")
+rock_add_executable(test_ws_client "tests/test_ws_client.cc" rock "${LIBS}")
+rock_add_executable(test_application "tests/test_application.cc" rock "${LIBS}")
 
-sylar_add_executable(test_http_connection "tests/test_http_connection.cc" sylar "${LIBS}")
-sylar_add_executable(test_lru "tests/test_lru.cc" sylar "${LIBS}")
-sylar_add_executable(test_timed_cache "tests/test_timed_cache.cc" sylar "${LIBS}")
-sylar_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" sylar "${LIBS}")
-sylar_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" sylar "${LIBS}")
+rock_add_executable(test_http_connection "tests/test_http_connection.cc" rock "${LIBS}")
+rock_add_executable(test_lru "tests/test_lru.cc" rock "${LIBS}")
+rock_add_executable(test_timed_cache "tests/test_timed_cache.cc" rock "${LIBS}")
+rock_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" rock "${LIBS}")
+rock_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" rock "${LIBS}")
 
 #endif()
-sylar_add_executable(test_crypto "tests/test_crypto.cc" sylar "${LIBS}")
-sylar_add_executable(test_sqlite3 "tests/test_sqlite3.cc" sylar "${LIBS}")
-sylar_add_executable(test_rock "tests/test_rock.cc" sylar "${LIBS}")
-sylar_add_executable(test_email  "tests/test_email.cc" sylar "${LIBS}")
-sylar_add_executable(test_mysql "tests/test_mysql.cc" sylar "${LIBS}")
-sylar_add_executable(test_nameserver "tests/test_nameserver.cc" sylar "${LIBS}")
-sylar_add_executable(test_bitmap "tests/test_bitmap.cc" sylar "${LIBS}")
-sylar_add_executable(test_zkclient "tests/test_zookeeper.cc" sylar "${LIBS}")
-sylar_add_executable(test_service_discovery "tests/test_service_discovery.cc" sylar "${LIBS}")
+rock_add_executable(test_crypto "tests/test_crypto.cc" rock "${LIBS}")
+rock_add_executable(test_sqlite3 "tests/test_sqlite3.cc" rock "${LIBS}")
+rock_add_executable(test_rock "tests/test_rock.cc" rock "${LIBS}")
+rock_add_executable(test_email  "tests/test_email.cc" rock "${LIBS}")
+rock_add_executable(test_mysql "tests/test_mysql.cc" rock "${LIBS}")
+rock_add_executable(test_nameserver "tests/test_nameserver.cc" rock "${LIBS}")
+rock_add_executable(test_bitmap "tests/test_bitmap.cc" rock "${LIBS}")
+rock_add_executable(test_zkclient "tests/test_zookeeper.cc" rock "${LIBS}")
+rock_add_executable(test_service_discovery "tests/test_service_discovery.cc" rock "${LIBS}")
 
 set(ORM_SRCS
-    sylar/orm/table.cc
-    sylar/orm/column.cc
-    sylar/orm/index.cc
-    sylar/orm/orm.cc
-    sylar/orm/util.cc
+    rock/orm/table.cc
+    rock/orm/column.cc
+    rock/orm/index.cc
+    rock/orm/orm.cc
+    rock/orm/util.cc
     )
-sylar_add_executable(orm "${ORM_SRCS}" sylar "${LIBS}")
+rock_add_executable(orm "${ORM_SRCS}" rock "${LIBS}")
 
 add_library(test_module SHARED tests/test_module.cc)
 
-sylar_add_executable(bin_sylar "sylar/main.cc" sylar "${LIBS}")
-set_target_properties(bin_sylar PROPERTIES OUTPUT_NAME "sylar")
+rock_add_executable(bin_rock "rock/main.cc" rock "${LIBS}")
+set_target_properties(bin_rock PROPERTIES OUTPUT_NAME "rock")
 
 #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/orm_out)
 #set(OLIBS ${LIBS} orm_data)
-#sylar_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
+#rock_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

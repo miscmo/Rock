@@ -1,5 +1,5 @@
-\doxysection{sylar/http/http.h 文件参考}
-\label{http_8h}\index{sylar/http/http.h@{sylar/http/http.h}}
+\doxysection{rock/http/http.h 文件参考}
+\label{http_8h}\index{rock/http/http.h@{rock/http/http.h}}
 
 
 H\+T\+T\+P定义结构体封装  
@@ -19,11 +19,11 @@ http.\+h 的引用(Include)关系图\+:
 \doxysubsection*{类}
 \begin{DoxyCompactItemize}
 \item 
-struct \textbf{ sylar\+::http\+::\+Case\+Insensitive\+Less}
+struct \textbf{ rock\+::http\+::\+Case\+Insensitive\+Less}
 \begin{DoxyCompactList}\small\item\em 忽略大小写比较仿函数 \end{DoxyCompactList}\item 
-class \textbf{ sylar\+::http\+::\+Http\+Request}
+class \textbf{ rock\+::http\+::\+Http\+Request}
 \begin{DoxyCompactList}\small\item\em H\+T\+T\+P请求结构 \end{DoxyCompactList}\item 
-class \textbf{ sylar\+::http\+::\+Http\+Response}
+class \textbf{ rock\+::http\+::\+Http\+Response}
 \begin{DoxyCompactList}\small\item\em H\+T\+T\+P响应结构体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{宏定义}
 \begin{DoxyCompactItemize}
@@ -44,32 +44,32 @@ class \textbf{ sylar\+::http\+::\+Http\+Response}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\label{http_8h_ae6e414e88664e23d4e83cb6cd91b477e}} 
-enum \textbf{ sylar\+::http\+::\+Http\+Method} \{ {\bfseries XX}, 
+enum \textbf{ rock\+::http\+::\+Http\+Method} \{ {\bfseries XX}, 
 {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+M\+E\+T\+H\+OD}
  \}
 \begin{DoxyCompactList}\small\item\em H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
 \mbox{\label{http_8h_a5200eca685ab9ffeb9a63236b8253332}} 
-enum \textbf{ sylar\+::http\+::\+Http\+Status} \{ {\bfseries XX}
+enum \textbf{ rock\+::http\+::\+Http\+Status} \{ {\bfseries XX}
  \}
 \begin{DoxyCompactList}\small\item\em H\+T\+T\+P状态枚举 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{函数}
 \begin{DoxyCompactItemize}
 \item 
-Http\+Method \textbf{ sylar\+::http\+::\+String\+To\+Http\+Method} (const std\+::string \&m)
+Http\+Method \textbf{ rock\+::http\+::\+String\+To\+Http\+Method} (const std\+::string \&m)
 \begin{DoxyCompactList}\small\item\em 将字符串方法名转成\+H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
-Http\+Method \textbf{ sylar\+::http\+::\+Chars\+To\+Http\+Method} (const char $\ast$m)
+Http\+Method \textbf{ rock\+::http\+::\+Chars\+To\+Http\+Method} (const char $\ast$m)
 \begin{DoxyCompactList}\small\item\em 将字符串指针转换成\+H\+T\+T\+P方法枚举 \end{DoxyCompactList}\item 
-const char $\ast$ \textbf{ sylar\+::http\+::\+Http\+Method\+To\+String} (const Http\+Method \&m)
+const char $\ast$ \textbf{ rock\+::http\+::\+Http\+Method\+To\+String} (const Http\+Method \&m)
 \begin{DoxyCompactList}\small\item\em 将\+H\+T\+T\+P方法枚举转换成字符串 \end{DoxyCompactList}\item 
-const char $\ast$ \textbf{ sylar\+::http\+::\+Http\+Status\+To\+String} (const Http\+Status \&s)
+const char $\ast$ \textbf{ rock\+::http\+::\+Http\+Status\+To\+String} (const Http\+Status \&s)
 \begin{DoxyCompactList}\small\item\em 将\+H\+T\+T\+P状态枚举转换成字符串 \end{DoxyCompactList}\item 
-{\footnotesize template$<$class Map\+Type , class T $>$ }\\bool \textbf{ sylar\+::http\+::check\+Get\+As} (const Map\+Type \&m, const std\+::string \&key, T \&val, const T \&def=T())
+{\footnotesize template$<$class Map\+Type , class T $>$ }\\bool \textbf{ rock\+::http\+::check\+Get\+As} (const Map\+Type \&m, const std\+::string \&key, T \&val, const T \&def=T())
 \begin{DoxyCompactList}\small\item\em 获取\+Map中的key值,并转成对应类型,返回是否成功 \end{DoxyCompactList}\item 
-{\footnotesize template$<$class Map\+Type , class T $>$ }\\T \textbf{ sylar\+::http\+::get\+As} (const Map\+Type \&m, const std\+::string \&key, const T \&def=T())
+{\footnotesize template$<$class Map\+Type , class T $>$ }\\T \textbf{ rock\+::http\+::get\+As} (const Map\+Type \&m, const std\+::string \&key, const T \&def=T())
 \begin{DoxyCompactList}\small\item\em 获取\+Map中的key值,并转成对应类型 \end{DoxyCompactList}\item 
-std\+::ostream \& \textbf{ sylar\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Request \&req)
+std\+::ostream \& \textbf{ rock\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Request \&req)
 \begin{DoxyCompactList}\small\item\em 流式输出\+Http\+Request \end{DoxyCompactList}\item 
-std\+::ostream \& \textbf{ sylar\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Response \&rsp)
+std\+::ostream \& \textbf{ rock\+::http\+::operator$<$$<$} (std\+::ostream \&os, const Http\+Response \&rsp)
 \begin{DoxyCompactList}\small\item\em 流式输出\+Http\+Response \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -77,13 +77,13 @@ std\+::ostream \& \textbf{ sylar\+::http\+::operator$<$$<$} (std\+::ostream \&os
 H\+T\+T\+P定义结构体封装 
 
 \begin{DoxyAuthor}{作者}
-sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+rock.\+yin @email {\texttt{ 564628276@qq.\+com}} 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日期}
 2019-\/06-\/07 
 \end{DoxyDate}
 \begin{DoxyCopyright}{版权所有}
-Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+Copyright (c) 2019年 rock.\+yin All rights reserved (www.\+rock.\+top) 
 \end{DoxyCopyright}
 
 
@@ -92,7 +92,7 @@ Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top)
 \index{http.h@{http.h}!CharsToHttpMethod@{CharsToHttpMethod}}
 \index{CharsToHttpMethod@{CharsToHttpMethod}!http.h@{http.h}}
 \doxysubsubsection{CharsToHttpMethod()}
-{\footnotesize\ttfamily Http\+Method sylar\+::http\+::\+Chars\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const char $\ast$}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Http\+Method rock\+::http\+::\+Chars\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const char $\ast$}]{m }\end{DoxyParamCaption})}
 
 
 
@@ -111,7 +111,7 @@ H\+T\+T\+P方法枚举
 \index{checkGetAs@{checkGetAs}!http.h@{http.h}}
 \doxysubsubsection{checkGetAs()}
 {\footnotesize\ttfamily template$<$class Map\+Type , class T $>$ \\
-bool sylar\+::http\+::check\+Get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
+bool rock\+::http\+::check\+Get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{T \&}]{val,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
 
 
 
@@ -145,7 +145,7 @@ bool sylar\+::http\+::check\+Get\+As (\begin{DoxyParamCaption}\item[{const Map\+
 \index{getAs@{getAs}!http.h@{http.h}}
 \doxysubsubsection{getAs()}
 {\footnotesize\ttfamily template$<$class Map\+Type , class T $>$ \\
-T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
+T rock\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{m,  }\item[{const std\+::string \&}]{key,  }\item[{const T \&}]{def = {\ttfamily T()} }\end{DoxyParamCaption})}
 
 
 
@@ -169,7 +169,7 @@ T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{
 \index{http.h@{http.h}!HttpMethodToString@{HttpMethodToString}}
 \index{HttpMethodToString@{HttpMethodToString}!http.h@{http.h}}
 \doxysubsubsection{HttpMethodToString()}
-{\footnotesize\ttfamily const char$\ast$ sylar\+::http\+::\+Http\+Method\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Method} \&}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const char$\ast$ rock\+::http\+::\+Http\+Method\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Method} \&}]{m }\end{DoxyParamCaption})}
 
 
 
@@ -187,7 +187,7 @@ T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{
 \index{http.h@{http.h}!HttpStatusToString@{HttpStatusToString}}
 \index{HttpStatusToString@{HttpStatusToString}!http.h@{http.h}}
 \doxysubsubsection{HttpStatusToString()}
-{\footnotesize\ttfamily const char$\ast$ sylar\+::http\+::\+Http\+Status\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Status} \&}]{s }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const char$\ast$ rock\+::http\+::\+Http\+Status\+To\+String (\begin{DoxyParamCaption}\item[{const \textbf{ Http\+Status} \&}]{s }\end{DoxyParamCaption})}
 
 
 
@@ -205,7 +205,7 @@ T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{
 \index{http.h@{http.h}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!http.h@{http.h}}
 \doxysubsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Request} \&}]{req }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::ostream\& rock\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Request} \&}]{req }\end{DoxyParamCaption})}
 
 
 
@@ -225,7 +225,7 @@ T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{
 \index{http.h@{http.h}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!http.h@{http.h}}
 \doxysubsubsection{operator$<$$<$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::ostream\& sylar\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Response} \&}]{rsp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::ostream\& rock\+::http\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Http\+Response} \&}]{rsp }\end{DoxyParamCaption})}
 
 
 
@@ -245,7 +245,7 @@ T sylar\+::http\+::get\+As (\begin{DoxyParamCaption}\item[{const Map\+Type \&}]{
 \index{http.h@{http.h}!StringToHttpMethod@{StringToHttpMethod}}
 \index{StringToHttpMethod@{StringToHttpMethod}!http.h@{http.h}}
 \doxysubsubsection{StringToHttpMethod()}
-{\footnotesize\ttfamily Http\+Method sylar\+::http\+::\+String\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Http\+Method rock\+::http\+::\+String\+To\+Http\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{m }\end{DoxyParamCaption})}
 
 
 

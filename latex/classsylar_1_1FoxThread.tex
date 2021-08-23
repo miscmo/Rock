@@ -1,99 +1,99 @@
-\doxysection{sylar\+::Fox\+Thread类 参考}
-\label{classsylar_1_1FoxThread}\index{sylar::FoxThread@{sylar::FoxThread}}
+\doxysection{rock\+::Fox\+Thread类 参考}
+\label{classrock_1_1FoxThread}\index{rock::FoxThread@{rock::FoxThread}}
 
 
-类 sylar\+::Fox\+Thread 继承关系图\+:
+类 rock\+::Fox\+Thread 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Fox\+Thread 的协作图\+:
+rock\+::Fox\+Thread 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a2c644597e57b20371e12c816e6a8aceb}} 
+\mbox{\label{classrock_1_1FoxThread_a2c644597e57b20371e12c816e6a8aceb}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Fox\+Thread} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1FoxThread_ac87b4cef932af77f20bde6d459f901aa}} 
+\mbox{\label{classrock_1_1FoxThread_ac87b4cef932af77f20bde6d459f901aa}} 
 typedef I\+Fox\+Thread\+::callback {\bfseries callback}
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a117887af813374009755cc80e3a86d3d}} 
+\mbox{\label{classrock_1_1FoxThread_a117887af813374009755cc80e3a86d3d}} 
 typedef std\+::function$<$ void(\textbf{ Fox\+Thread} $\ast$)$>$ {\bfseries init\+\_\+cb}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a1bbdee5d60beb42d1e34fec4da90f8cf}} 
+\mbox{\label{classrock_1_1FoxThread_a1bbdee5d60beb42d1e34fec4da90f8cf}} 
 {\bfseries Fox\+Thread} (const std\+::string \&name=\char`\"{}\char`\"{}, struct event\+\_\+base $\ast$base=N\+U\+LL)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_aa5250c0172d905b1fc36ed8eb7f7876f}} 
+\mbox{\label{classrock_1_1FoxThread_aa5250c0172d905b1fc36ed8eb7f7876f}} 
 void {\bfseries set\+This} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_afeda4ca852486973a1a0c417710f028a}} 
+\mbox{\label{classrock_1_1FoxThread_afeda4ca852486973a1a0c417710f028a}} 
 void {\bfseries unset\+This} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_afab4199a243abd0221ffd4243c4404a3}} 
+\mbox{\label{classrock_1_1FoxThread_afab4199a243abd0221ffd4243c4404a3}} 
 void {\bfseries start} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_ae9854df0841f9c8a7ee278207fa190ea}} 
+\mbox{\label{classrock_1_1FoxThread_ae9854df0841f9c8a7ee278207fa190ea}} 
 virtual bool {\bfseries dispatch} (callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a6f549e5d8697c8e39f813f86a4e38ef5}} 
+\mbox{\label{classrock_1_1FoxThread_a6f549e5d8697c8e39f813f86a4e38ef5}} 
 virtual bool {\bfseries dispatch} (uint32\+\_\+t id, callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a0596726f993e8467b118ca363e0e3e22}} 
+\mbox{\label{classrock_1_1FoxThread_a0596726f993e8467b118ca363e0e3e22}} 
 virtual bool {\bfseries batch\+Dispatch} (const std\+::vector$<$ callback $>$ \&cbs)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a522d348ff3cfbf719c9da5e709d1a9ad}} 
+\mbox{\label{classrock_1_1FoxThread_a522d348ff3cfbf719c9da5e709d1a9ad}} 
 virtual void {\bfseries broadcast} (callback cb)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_af1c16631392affe86db202b5f04e688e}} 
+\mbox{\label{classrock_1_1FoxThread_af1c16631392affe86db202b5f04e688e}} 
 void {\bfseries join} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a547c1135c01e03a0ec1e1b34d72084e6}} 
+\mbox{\label{classrock_1_1FoxThread_a547c1135c01e03a0ec1e1b34d72084e6}} 
 void {\bfseries stop} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a91434504c1e5bedb5a6ab3f809dab3ef}} 
+\mbox{\label{classrock_1_1FoxThread_a91434504c1e5bedb5a6ab3f809dab3ef}} 
 bool {\bfseries is\+Start} () const
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a86b4fa36411e99fe9b621304d6482298}} 
+\mbox{\label{classrock_1_1FoxThread_a86b4fa36411e99fe9b621304d6482298}} 
 struct event\+\_\+base $\ast$ {\bfseries get\+Base} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_abcc408f6721dd1ec733a3ebd27d6ff53}} 
+\mbox{\label{classrock_1_1FoxThread_abcc408f6721dd1ec733a3ebd27d6ff53}} 
 std\+::thread\+::id {\bfseries get\+Id} () const
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a2cc13f526b8db04d51b6d9f198e9b0ff}} 
+\mbox{\label{classrock_1_1FoxThread_a2cc13f526b8db04d51b6d9f198e9b0ff}} 
 void $\ast$ {\bfseries get\+Data} (const std\+::string \&name)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_adc0052e496eab60edee61f848f83aa17}} 
+\mbox{\label{classrock_1_1FoxThread_adc0052e496eab60edee61f848f83aa17}} 
 {\footnotesize template$<$class T $>$ }\\T $\ast$ {\bfseries get\+Data} (const std\+::string \&name)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a3a491450135e89b55c97c765a1fac472}} 
+\mbox{\label{classrock_1_1FoxThread_a3a491450135e89b55c97c765a1fac472}} 
 void {\bfseries set\+Data} (const std\+::string \&name, void $\ast$v)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_aed214720bb7636471ab39bbbe4b4a458}} 
+\mbox{\label{classrock_1_1FoxThread_aed214720bb7636471ab39bbbe4b4a458}} 
 void {\bfseries set\+Init\+Cb} (init\+\_\+cb v)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a9b992ea4d82302d52b0e2652316c6ace}} 
+\mbox{\label{classrock_1_1FoxThread_a9b992ea4d82302d52b0e2652316c6ace}} 
 void {\bfseries dump} (std\+::ostream \&os)
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a84f28979a88925bf5149b785ef6fc694}} 
+\mbox{\label{classrock_1_1FoxThread_a84f28979a88925bf5149b785ef6fc694}} 
 virtual uint64\+\_\+t {\bfseries get\+Total} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1FoxThread_abc254d91b00528c0f5edff2ed0d78f4f}} 
+\mbox{\label{classrock_1_1FoxThread_abc254d91b00528c0f5edff2ed0d78f4f}} 
 static \textbf{ Fox\+Thread} $\ast$ {\bfseries Get\+This} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a9e01636d1dee95c7b9365345b72a60c2}} 
+\mbox{\label{classrock_1_1FoxThread_a9e01636d1dee95c7b9365345b72a60c2}} 
 static const std\+::string \& {\bfseries Get\+Fox\+Thread\+Name} ()
 \item 
-\mbox{\label{classsylar_1_1FoxThread_a608e414d0933fd136f71a1300df256bf}} 
+\mbox{\label{classrock_1_1FoxThread_a608e414d0933fd136f71a1300df256bf}} 
 static void {\bfseries Get\+All\+Fox\+Thread\+Name} (std\+::map$<$ uint64\+\_\+t, std\+::string $>$ \&names)
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}
+rock/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}

@@ -1,48 +1,48 @@
-\doxysection{sylar\+::Message类 参考}
-\label{classsylar_1_1Message}\index{sylar::Message@{sylar::Message}}
+\doxysection{rock\+::Message类 参考}
+\label{classrock_1_1Message}\index{rock::Message@{rock::Message}}
 
 
-类 sylar\+::Message 继承关系图\+:
+类 rock\+::Message 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Message 的协作图\+:
+rock\+::Message 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Message_ac3bd4a3445a806bcbb82ef8b742540c5}} 
+\mbox{\label{classrock_1_1Message_ac3bd4a3445a806bcbb82ef8b742540c5}} 
 enum {\bfseries Message\+Type} \{ {\bfseries R\+E\+Q\+U\+E\+ST} = 1, 
 {\bfseries R\+E\+S\+P\+O\+N\+SE} = 2, 
 {\bfseries N\+O\+T\+I\+FY} = 3
  \}
 \item 
-\mbox{\label{classsylar_1_1Message_adfec35a311a7247a3abfdcf7cac37ee2}} 
+\mbox{\label{classrock_1_1Message_adfec35a311a7247a3abfdcf7cac37ee2}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Message} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Message_a476dd6c3fb30b8d8175d15598f12741f}} 
+\mbox{\label{classrock_1_1Message_a476dd6c3fb30b8d8175d15598f12741f}} 
 virtual Byte\+Array\+::ptr {\bfseries to\+Byte\+Array} ()
 \item 
-\mbox{\label{classsylar_1_1Message_a6cc5ab491d1795a60321ba5c9a95b53a}} 
+\mbox{\label{classrock_1_1Message_a6cc5ab491d1795a60321ba5c9a95b53a}} 
 virtual bool {\bfseries serialize\+To\+Byte\+Array} (Byte\+Array\+::ptr bytearray)=0
 \item 
-\mbox{\label{classsylar_1_1Message_aa7417af447b1d7f5409985f832a8e4ab}} 
+\mbox{\label{classrock_1_1Message_aa7417af447b1d7f5409985f832a8e4ab}} 
 virtual bool {\bfseries parse\+From\+Byte\+Array} (Byte\+Array\+::ptr bytearray)=0
 \item 
-\mbox{\label{classsylar_1_1Message_a91770f83823b26589b9fdbbc1430cd4c}} 
+\mbox{\label{classrock_1_1Message_a91770f83823b26589b9fdbbc1430cd4c}} 
 virtual std\+::string {\bfseries to\+String} () const =0
 \item 
-\mbox{\label{classsylar_1_1Message_abedefe1eb4be826b32c9952f30152911}} 
+\mbox{\label{classrock_1_1Message_abedefe1eb4be826b32c9952f30152911}} 
 virtual const std\+::string \& {\bfseries get\+Name} () const =0
 \item 
-\mbox{\label{classsylar_1_1Message_a5a3ae6fb941978f627185e950ebd72b1}} 
+\mbox{\label{classrock_1_1Message_a5a3ae6fb941978f627185e950ebd72b1}} 
 virtual int32\+\_\+t {\bfseries get\+Type} () const =0
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ protocol.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ protocol.\+h}\end{DoxyCompactItemize}

@@ -1,7 +1,7 @@
-digraph "sylar::http::SessionData"
+digraph "rock::http::SessionData"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::http::SessionData\n||+ SessionData()\l+ setData()\l+ getData()\l+ del()\l+ has()\l+ getLastAccessTime()\l+ setLastAccessTime()\l+ getId()\l+ setId()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::http::SessionData\n||+ SessionData()\l+ setData()\l+ getData()\l+ del()\l+ has()\l+ getLastAccessTime()\l+ setLastAccessTime()\l+ getId()\l+ setId()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

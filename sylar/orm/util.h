@@ -1,10 +1,10 @@
-#ifndef __SYLAR_ORM_UTIL_H__
-#define __SYLAR_ORM_UTIL_H__
+#ifndef __ROCK_ORM_UTIL_H__
+#define __ROCK_ORM_UTIL_H__
 
 #include <tinyxml2.h>
 #include <string>
 
-namespace sylar {
+namespace rock {
 namespace orm {
 
 std::string GetAsVariable(const std::string& v);

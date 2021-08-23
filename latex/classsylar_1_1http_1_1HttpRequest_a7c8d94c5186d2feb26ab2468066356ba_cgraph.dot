@@ -1,11 +1,11 @@
-digraph "sylar::http::HttpRequest::checkGetHeaderAs"
+digraph "rock::http::HttpRequest::checkGetHeaderAs"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="sylar::http::HttpRequest\l::checkGetHeaderAs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="检查并获取HTTP请求的头部参数"];
+  Node1 [label="rock::http::HttpRequest\l::checkGetHeaderAs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="检查并获取HTTP请求的头部参数"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="sylar::http::checkGetAs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$http_8h.html#ae706fa797ef4b8066246dccc0a905f46",tooltip="获取Map中的key值,并转成对应类型,返回是否成功"];
+  Node2 [label="rock::http::checkGetAs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$http_8h.html#ae706fa797ef4b8066246dccc0a905f46",tooltip="获取Map中的key值,并转成对应类型,返回是否成功"];
   Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
 }

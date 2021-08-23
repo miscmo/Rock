@@ -1,5 +1,5 @@
-\doxysection{sylar\+::http\+::Http\+Response\+Parser类 参考}
-\label{classsylar_1_1http_1_1HttpResponseParser}\index{sylar::http::HttpResponseParser@{sylar::http::HttpResponseParser}}
+\doxysection{rock\+::http\+::Http\+Response\+Parser类 参考}
+\label{classrock_1_1http_1_1HttpResponseParser}\index{rock::http::HttpResponseParser@{rock::http::HttpResponseParser}}
 
 
 Http响应解析结构体  
@@ -11,46 +11,46 @@ Http响应解析结构体
 
 
 
-sylar\+::http\+::Http\+Response\+Parser 的协作图\+:
+rock\+::http\+::Http\+Response\+Parser 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_ac7303cf793b89e7c1cf2fae9b0e5be44}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_ac7303cf793b89e7c1cf2fae9b0e5be44}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Response\+Parser} $>$ \textbf{ ptr}
 \begin{DoxyCompactList}\small\item\em 智能指针类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_ae521eed3394982b0c6f1aca73bb68b07}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_ae521eed3394982b0c6f1aca73bb68b07}} 
 \textbf{ Http\+Response\+Parser} ()
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
 size\+\_\+t \textbf{ execute} (char $\ast$data, size\+\_\+t len, bool chunck)
 \begin{DoxyCompactList}\small\item\em 解析\+H\+T\+T\+P响应协议 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a6e4dd40eab0df52c62bcb1f88141795c}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a6e4dd40eab0df52c62bcb1f88141795c}} 
 int \textbf{ is\+Finished} ()
 \begin{DoxyCompactList}\small\item\em 是否解析完成 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a8c57f9eac5fcce388cecc205c148afe2}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a8c57f9eac5fcce388cecc205c148afe2}} 
 int \textbf{ has\+Error} ()
 \begin{DoxyCompactList}\small\item\em 是否有错误 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a8e6429a613316bb32b7ba02a1984fb0d}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a8e6429a613316bb32b7ba02a1984fb0d}} 
 \textbf{ Http\+Response\+::ptr} \textbf{ get\+Data} () const
 \begin{DoxyCompactList}\small\item\em 返回\+Http\+Response \end{DoxyCompactList}\item 
 void \textbf{ set\+Error} (int v)
 \begin{DoxyCompactList}\small\item\em 设置错误码 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a3b040445ab31a92b17e502019682dd47}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a3b040445ab31a92b17e502019682dd47}} 
 uint64\+\_\+t \textbf{ get\+Content\+Length} ()
 \begin{DoxyCompactList}\small\item\em 获取消息体长度 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_aa8247a28a3ef024d05652574297403ef}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_aa8247a28a3ef024d05652574297403ef}} 
 const \textbf{ httpclient\+\_\+parser} \& \textbf{ get\+Parser} () const
 \begin{DoxyCompactList}\small\item\em 返回httpclient\+\_\+parser \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{静态 Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a26915ba3795215870bbc4968707b03f8}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a26915ba3795215870bbc4968707b03f8}} 
 static uint64\+\_\+t \textbf{ Get\+Http\+Response\+Buffer\+Size} ()
 \begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P响应解析缓存大小 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_a29fd3c351882b7b126947c7c1b8853fa}} 
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_a29fd3c351882b7b126947c7c1b8853fa}} 
 static uint64\+\_\+t \textbf{ Get\+Http\+Response\+Max\+Body\+Size} ()
 \begin{DoxyCompactList}\small\item\em 返回\+H\+T\+T\+P响应最大消息体大小 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -59,11 +59,11 @@ static uint64\+\_\+t \textbf{ Get\+Http\+Response\+Max\+Body\+Size} ()
 Http响应解析结构体 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_aa7f05289220e641d76af8bca8af4ffc9}} 
-\index{sylar::http::HttpResponseParser@{sylar::http::HttpResponseParser}!execute@{execute}}
-\index{execute@{execute}!sylar::http::HttpResponseParser@{sylar::http::HttpResponseParser}}
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_aa7f05289220e641d76af8bca8af4ffc9}} 
+\index{rock::http::HttpResponseParser@{rock::http::HttpResponseParser}!execute@{execute}}
+\index{execute@{execute}!rock::http::HttpResponseParser@{rock::http::HttpResponseParser}}
 \doxysubsubsection{execute()}
-{\footnotesize\ttfamily size\+\_\+t sylar\+::http\+::\+Http\+Response\+Parser\+::execute (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{len,  }\item[{bool}]{chunck }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily size\+\_\+t rock\+::http\+::\+Http\+Response\+Parser\+::execute (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{len,  }\item[{bool}]{chunck }\end{DoxyParamCaption})}
 
 
 
@@ -81,11 +81,11 @@ Http响应解析结构体
 \begin{DoxyReturn}{返回}
 返回实际解析的长度,并且移除已解析的数据 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpResponseParser_afa081cd671b81f4124f3d28eac9586d5}} 
-\index{sylar::http::HttpResponseParser@{sylar::http::HttpResponseParser}!setError@{setError}}
-\index{setError@{setError}!sylar::http::HttpResponseParser@{sylar::http::HttpResponseParser}}
+\mbox{\label{classrock_1_1http_1_1HttpResponseParser_afa081cd671b81f4124f3d28eac9586d5}} 
+\index{rock::http::HttpResponseParser@{rock::http::HttpResponseParser}!setError@{setError}}
+\index{setError@{setError}!rock::http::HttpResponseParser@{rock::http::HttpResponseParser}}
 \doxysubsubsection{setError()}
-{\footnotesize\ttfamily void sylar\+::http\+::\+Http\+Response\+Parser\+::set\+Error (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void rock\+::http\+::\+Http\+Response\+Parser\+::set\+Error (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -100,4 +100,4 @@ Http响应解析结构体
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/\textbf{ http\+\_\+parser.\+h}\end{DoxyCompactItemize}
+rock/http/\textbf{ http\+\_\+parser.\+h}\end{DoxyCompactItemize}

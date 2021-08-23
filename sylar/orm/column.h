@@ -1,11 +1,11 @@
-#ifndef __SYLAR_ORM_COLUMN_H__
-#define __SYLAR_ORM_COLUMN_H__
+#ifndef __ROCK_ORM_COLUMN_H__
+#define __ROCK_ORM_COLUMN_H__
 
 #include <memory>
 #include <string>
 #include "tinyxml2.h"
 
-namespace sylar {
+namespace rock {
 namespace orm {
 
 class Table;

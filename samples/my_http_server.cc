@@ -1,36 +1,36 @@
-#include "sylar/http/http_server.h"
-#include "sylar/log.h"
+#include "rock/http/http_server.h"
+#include "rock/log.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
-sylar::IOManager::ptr worker;
+rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
+rock::IOManager::ptr worker;
 void run() {
-    g_logger->setLevel(sylar::LogLevel::INFO);
-    sylar::Address::ptr addr = sylar::Address::LookupAnyIPAddress("0.0.0.0:8020");
+    g_logger->setLevel(rock::LogLevel::INFO);
+    rock::Address::ptr addr = rock::Address::LookupAnyIPAddress("0.0.0.0:8020");
     if(!addr) {
-        SYLAR_LOG_ERROR(g_logger) << "get address error";
+        ROCK_LOG_ERROR(g_logger) << "get address error";
         return;
     }
 
     //true 支持长连接
-    sylar::http::HttpServer::ptr http_server(new sylar::http::HttpServer(true, worker.get()));
-    //sylar::http::HttpServer::ptr http_server(new sylar::http::HttpServer(true));
+    rock::http::HttpServer::ptr http_server(new rock::http::HttpServer(true, worker.get()));
+    //rock::http::HttpServer::ptr http_server(new rock::http::HttpServer(true));
     bool ssl = false;
     while(!http_server->bind(addr, ssl)) {
-        SYLAR_LOG_ERROR(g_logger) << "bind " << *addr << " fail";
+        ROCK_LOG_ERROR(g_logger) << "bind " << *addr << " fail";
         sleep(1);
     }
 
     if(ssl) {
-        //http_server->loadCertificates("/home/apps/soft/sylar/keys/server.crt", "/home/apps/soft/sylar/keys/server.key");
+        //http_server->loadCertificates("/home/apps/soft/rock/keys/server.crt", "/home/apps/soft/rock/keys/server.key");
     }
 
     http_server->start();
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(1);
-    //worker.reset(new sylar::IOManager(4, false));
-    worker.reset(new sylar::IOManager(1, false));
+    rock::IOManager iom(1);
+    //worker.reset(new rock::IOManager(4, false));
+    worker.reset(new rock::IOManager(1, false));
     iom.schedule(run);
     return 0;
 }

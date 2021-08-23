@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/http/session_data.h 源文件</title>
+<title>rock: rock/http/session_data.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,37 +69,37 @@ $(function() {
 <div class="title">session_data.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_HTTP_SESSION_DATA_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_HTTP_SESSION_DATA_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_HTTP_SESSION_DATA_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_HTTP_SESSION_DATA_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;sylar/mutex.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="singleton_8h.html">sylar/singleton.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;rock/mutex.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="singleton_8h.html">rock/singleton.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;boost/any.hpp&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>http {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1SessionData.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1SessionData.html">SessionData</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1SessionData.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1SessionData.html">SessionData</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;SessionData&gt; ptr;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classsylar_1_1http_1_1SessionData.html">SessionData</a>(<span class="keywordtype">bool</span> auto_gen = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classrock_1_1http_1_1SessionData.html">SessionData</a>(<span class="keywordtype">bool</span> auto_gen = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> setData(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> T&amp; v) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="structsylar_1_1WriteScopedLockImpl.html">sylar::RWMutex::WriteLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="structrock_1_1WriteScopedLockImpl.html">rock::RWMutex::WriteLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        m_datas[key] = v;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    T getData(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> T&amp; def = T()) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="structsylar_1_1ReadScopedLockImpl.html">sylar::RWMutex::ReadLock</a> lock(m_mutex);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="structrock_1_1ReadScopedLockImpl.html">rock::RWMutex::ReadLock</a> lock(m_mutex);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">auto</span> it = m_datas.find(key);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span>(it == m_datas.end()) {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> def;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        boost::any v = it-&gt;second;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        lock.<a class="code" href="structsylar_1_1ReadScopedLockImpl.html#ac628a0e3211dbaa1544a060702eabb00">unlock</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        lock.<a class="code" href="structrock_1_1ReadScopedLockImpl.html#ac628a0e3211dbaa1544a060702eabb00">unlock</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> boost::any_cast&lt;T&gt;(v);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
@@ -116,38 +116,38 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> std::string&amp; getId()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_id;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> setId(<span class="keyword">const</span> std::string&amp; val) { m_id = val;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::unordered_map&lt;std::string, boost::any&gt; m_datas;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    uint64_t m_lastAccessTime;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string m_id;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1SessionDataManager.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1SessionDataManager.html">SessionDataManager</a> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1SessionDataManager.html">   54</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1SessionDataManager.html">SessionDataManager</a> {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> add(SessionData::ptr info);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> del(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    SessionData::ptr get(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> check(int64_t ts = 3600);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    std::unordered_map&lt;std::string, SessionData::ptr&gt; m_datas;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classsylar_1_1Singleton.html">sylar::Singleton&lt;SessionDataManager&gt;</a> <a class="code" href="classsylar_1_1Singleton.html">SessionDataMgr</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classrock_1_1Singleton.html">rock::Singleton&lt;SessionDataManager&gt;</a> <a class="code" href="classrock_1_1Singleton.html">SessionDataMgr</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclassrock_1_1RWMutex_html"><div class="ttname"><a href="classrock_1_1RWMutex.html">rock::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
 <div class="ttc" id="asingleton_8h_html"><div class="ttname"><a href="singleton_8h.html">singleton.h</a></div><div class="ttdoc">单例模式封装</div></div>
-<div class="ttc" id="astructsylar_1_1ReadScopedLockImpl_html"><div class="ttname"><a href="structsylar_1_1ReadScopedLockImpl.html">sylar::ReadScopedLockImpl</a></div><div class="ttdoc">局部读锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:100</div></div>
-<div class="ttc" id="astructsylar_1_1ReadScopedLockImpl_html_ac628a0e3211dbaa1544a060702eabb00"><div class="ttname"><a href="structsylar_1_1ReadScopedLockImpl.html#ac628a0e3211dbaa1544a060702eabb00">sylar::ReadScopedLockImpl::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdoc">释放锁</div><div class="ttdef"><b>Definition:</b> mutex.h:132</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1SessionDataManager_html"><div class="ttname"><a href="classsylar_1_1http_1_1SessionDataManager.html">sylar::http::SessionDataManager</a></div><div class="ttdef"><b>Definition:</b> session_data.h:54</div></div>
-<div class="ttc" id="aclasssylar_1_1Singleton_html"><div class="ttname"><a href="classsylar_1_1Singleton.html">sylar::Singleton</a></div><div class="ttdoc">单例模式封装类</div><div class="ttdef"><b>Definition:</b> singleton.h:40</div></div>
-<div class="ttc" id="astructsylar_1_1WriteScopedLockImpl_html"><div class="ttname"><a href="structsylar_1_1WriteScopedLockImpl.html">sylar::WriteScopedLockImpl</a></div><div class="ttdoc">局部写锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:149</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1SessionData_html"><div class="ttname"><a href="classsylar_1_1http_1_1SessionData.html">sylar::http::SessionData</a></div><div class="ttdef"><b>Definition:</b> session_data.h:12</div></div>
+<div class="ttc" id="astructrock_1_1ReadScopedLockImpl_html"><div class="ttname"><a href="structrock_1_1ReadScopedLockImpl.html">rock::ReadScopedLockImpl</a></div><div class="ttdoc">局部读锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:100</div></div>
+<div class="ttc" id="astructrock_1_1ReadScopedLockImpl_html_ac628a0e3211dbaa1544a060702eabb00"><div class="ttname"><a href="structrock_1_1ReadScopedLockImpl.html#ac628a0e3211dbaa1544a060702eabb00">rock::ReadScopedLockImpl::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdoc">释放锁</div><div class="ttdef"><b>Definition:</b> mutex.h:132</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1SessionDataManager_html"><div class="ttname"><a href="classrock_1_1http_1_1SessionDataManager.html">rock::http::SessionDataManager</a></div><div class="ttdef"><b>Definition:</b> session_data.h:54</div></div>
+<div class="ttc" id="aclassrock_1_1Singleton_html"><div class="ttname"><a href="classrock_1_1Singleton.html">rock::Singleton</a></div><div class="ttdoc">单例模式封装类</div><div class="ttdef"><b>Definition:</b> singleton.h:40</div></div>
+<div class="ttc" id="astructrock_1_1WriteScopedLockImpl_html"><div class="ttname"><a href="structrock_1_1WriteScopedLockImpl.html">rock::WriteScopedLockImpl</a></div><div class="ttdoc">局部写锁模板实现</div><div class="ttdef"><b>Definition:</b> mutex.h:149</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1SessionData_html"><div class="ttname"><a href="classrock_1_1http_1_1SessionData.html">rock::http::SessionData</a></div><div class="ttdef"><b>Definition:</b> session_data.h:12</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

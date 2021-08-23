@@ -2,22 +2,22 @@
 #include "config.h"
 #include "log.h"
 
-namespace sylar {
+namespace rock {
 
-static sylar::ConfigVar<uint64_t>::ptr g_tcp_server_read_timeout =
-    sylar::Config::Lookup("tcp_server.read_timeout", (uint64_t)(60 * 1000 * 2),
+static rock::ConfigVar<uint64_t>::ptr g_tcp_server_read_timeout =
+    rock::Config::Lookup("tcp_server.read_timeout", (uint64_t)(60 * 1000 * 2),
             "tcp server read timeout");
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
-TcpServer::TcpServer(sylar::IOManager* worker,
-                    sylar::IOManager* io_worker,
-                    sylar::IOManager* accept_worker)
+TcpServer::TcpServer(rock::IOManager* worker,
+                    rock::IOManager* io_worker,
+                    rock::IOManager* accept_worker)
     :m_worker(worker)
     ,m_ioWorker(io_worker)
     ,m_acceptWorker(accept_worker)
     ,m_recvTimeout(g_tcp_server_read_timeout->getValue())
-    ,m_name("sylar/1.0.0")
+    ,m_name("rock/1.0.0")
     ,m_isStop(true) {
 }
 
@@ -32,7 +32,7 @@ void TcpServer::setConf(const TcpServerConf& v) {
     m_conf.reset(new TcpServerConf(v));
 }
 
-bool TcpServer::bind(sylar::Address::ptr addr, bool ssl) {
+bool TcpServer::bind(rock::Address::ptr addr, bool ssl) {
     std::vector<Address::ptr> addrs;
     std::vector<Address::ptr> fails;
     addrs.push_back(addr);
@@ -46,14 +46,14 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs
     for(auto& addr : addrs) {
         Socket::ptr sock = ssl ? SSLSocket::CreateTCP(addr) : Socket::CreateTCP(addr);
         if(!sock->bind(addr)) {
-            SYLAR_LOG_ERROR(g_logger) << "bind fail errno="
+            ROCK_LOG_ERROR(g_logger) << "bind fail errno="
                 << errno << " errstr=" << strerror(errno)
                 << " addr=[" << addr->toString() << "]";
             fails.push_back(addr);
             continue;
         }
         if(!sock->listen()) {
-            SYLAR_LOG_ERROR(g_logger) << "listen fail errno="
+            ROCK_LOG_ERROR(g_logger) << "listen fail errno="
                 << errno << " errstr=" << strerror(errno)
                 << " addr=[" << addr->toString() << "]";
             fails.push_back(addr);
@@ -68,7 +68,7 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs
     }
 
     for(auto& i : m_socks) {
-        SYLAR_LOG_INFO(g_logger) << "type=" << m_type
+        ROCK_LOG_INFO(g_logger) << "type=" << m_type
             << " name=" << m_name
             << " ssl=" << m_ssl
             << " server bind success: " << *i;
@@ -84,7 +84,7 @@ void TcpServer::startAccept(Socket::ptr sock) {
             m_ioWorker->schedule(std::bind(&TcpServer::handleClient,
                         shared_from_this(), client));
         } else {
-            SYLAR_LOG_ERROR(g_logger) << "accept errno=" << errno
+            ROCK_LOG_ERROR(g_logger) << "accept errno=" << errno
                 << " errstr=" << strerror(errno);
         }
     }
@@ -115,7 +115,7 @@ void TcpServer::stop() {
 }
 
 void TcpServer::handleClient(Socket::ptr client) {
-    SYLAR_LOG_INFO(g_logger) << "handleClient: " << *client;
+    ROCK_LOG_INFO(g_logger) << "handleClient: " << *client;
 }
 
 bool TcpServer::loadCertificates(const std::string& cert_file, const std::string& key_file) {

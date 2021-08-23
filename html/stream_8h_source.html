@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/stream.h 源文件</title>
+<title>rock: rock/stream.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,50 +70,50 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="stream_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __SYLAR_STREAM_H__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __SYLAR_STREAM_H__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __ROCK_STREAM_H__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __ROCK_STREAM_H__</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bytearray_8h.html">bytearray.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsylar_1_1Stream.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1Stream.html">Stream</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classrock_1_1Stream.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1Stream.html">Stream</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;Stream&gt; ptr;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">   26</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">~Stream</a>() {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classrock_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">   26</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classrock_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">~Stream</a>() {}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">read</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">read</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) = 0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">read</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length) = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">read</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length) = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">readFixSize</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) = 0;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">write</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length) = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">write</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length) = 0;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classrock_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">writeFixSize</a>(ByteArray::ptr ba, <span class="keywordtype">size_t</span> length);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classsylar_1_1Stream.html#a21f37afb067c11f727b4fb04195916bb">close</a>() = 0;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classrock_1_1Stream.html#a21f37afb067c11f727b4fb04195916bb">close</a>() = 0;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1Stream_html_a0901dfdec95a25aee92b0d82360b4e13"><div class="ttname"><a href="classsylar_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">sylar::Stream::read</a></div><div class="ttdeci">virtual int read(void *buffer, size_t length)=0</div><div class="ttdoc">读数据</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a0901dfdec95a25aee92b0d82360b4e13"><div class="ttname"><a href="classrock_1_1Stream.html#a0901dfdec95a25aee92b0d82360b4e13">rock::Stream::read</a></div><div class="ttdeci">virtual int read(void *buffer, size_t length)=0</div><div class="ttdoc">读数据</div></div>
 <div class="ttc" id="abytearray_8h_html"><div class="ttname"><a href="bytearray_8h.html">bytearray.h</a></div><div class="ttdoc">二进制数组(序列化/反序列化)</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html_a3409defd81c7adc25645ef7dee2878c4"><div class="ttname"><a href="classsylar_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">sylar::Stream::writeFixSize</a></div><div class="ttdeci">virtual int writeFixSize(const void *buffer, size_t length)</div><div class="ttdoc">写固定长度的数据</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html_a88ed2d9006b3870cc4d2174f207d5fcb"><div class="ttname"><a href="classsylar_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">sylar::Stream::readFixSize</a></div><div class="ttdeci">virtual int readFixSize(void *buffer, size_t length)</div><div class="ttdoc">读固定长度的数据</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html_a3f228e40abdf4462268b871614e9d5a1"><div class="ttname"><a href="classsylar_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">sylar::Stream::write</a></div><div class="ttdeci">virtual int write(const void *buffer, size_t length)=0</div><div class="ttdoc">写数据</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html_a67520125cad49bb3fb4835a36ec56762"><div class="ttname"><a href="classsylar_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">sylar::Stream::~Stream</a></div><div class="ttdeci">virtual ~Stream()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>Definition:</b> stream.h:26</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html"><div class="ttname"><a href="classsylar_1_1Stream.html">sylar::Stream</a></div><div class="ttdoc">流结构</div><div class="ttdef"><b>Definition:</b> stream.h:20</div></div>
-<div class="ttc" id="aclasssylar_1_1Stream_html_a21f37afb067c11f727b4fb04195916bb"><div class="ttname"><a href="classsylar_1_1Stream.html#a21f37afb067c11f727b4fb04195916bb">sylar::Stream::close</a></div><div class="ttdeci">virtual void close()=0</div><div class="ttdoc">关闭流</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a3409defd81c7adc25645ef7dee2878c4"><div class="ttname"><a href="classrock_1_1Stream.html#a3409defd81c7adc25645ef7dee2878c4">rock::Stream::writeFixSize</a></div><div class="ttdeci">virtual int writeFixSize(const void *buffer, size_t length)</div><div class="ttdoc">写固定长度的数据</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a88ed2d9006b3870cc4d2174f207d5fcb"><div class="ttname"><a href="classrock_1_1Stream.html#a88ed2d9006b3870cc4d2174f207d5fcb">rock::Stream::readFixSize</a></div><div class="ttdeci">virtual int readFixSize(void *buffer, size_t length)</div><div class="ttdoc">读固定长度的数据</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a3f228e40abdf4462268b871614e9d5a1"><div class="ttname"><a href="classrock_1_1Stream.html#a3f228e40abdf4462268b871614e9d5a1">rock::Stream::write</a></div><div class="ttdeci">virtual int write(const void *buffer, size_t length)=0</div><div class="ttdoc">写数据</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a67520125cad49bb3fb4835a36ec56762"><div class="ttname"><a href="classrock_1_1Stream.html#a67520125cad49bb3fb4835a36ec56762">rock::Stream::~Stream</a></div><div class="ttdeci">virtual ~Stream()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>Definition:</b> stream.h:26</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html"><div class="ttname"><a href="classrock_1_1Stream.html">rock::Stream</a></div><div class="ttdoc">流结构</div><div class="ttdef"><b>Definition:</b> stream.h:20</div></div>
+<div class="ttc" id="aclassrock_1_1Stream_html_a21f37afb067c11f727b4fb04195916bb"><div class="ttname"><a href="classrock_1_1Stream.html#a21f37afb067c11f727b4fb04195916bb">rock::Stream::close</a></div><div class="ttdeci">virtual void close()=0</div><div class="ttdoc">关闭流</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

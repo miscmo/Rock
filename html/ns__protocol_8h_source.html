@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/ns/ns_protocol.h 源文件</title>
+<title>rock: rock/ns/ns_protocol.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_14cb8fc44d7a95761043055eb210fa06.html">ns</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_14cb8fc44d7a95761043055eb210fa06.html">ns</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,18 +69,18 @@ $(function() {
 <div class="title">ns_protocol.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_NS_NS_PROTOCOL_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_NS_NS_PROTOCOL_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_NS_NS_PROTOCOL_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_NS_NS_PROTOCOL_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;sylar/mutex.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;rock/mutex.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ns_protobuf.pb.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>ns {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum class</span> NSCommand {</div>
@@ -95,11 +95,11 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    NODE_CHANGE = 0x10001,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NSNode.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NSNode.html">NSNode</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NSNode.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NSNode.html">NSNode</a> {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NSNode&gt; ptr;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classsylar_1_1ns_1_1NSNode.html">NSNode</a>(<span class="keyword">const</span> std::string&amp; ip, uint16_t port, uint32_t weight);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classrock_1_1ns_1_1NSNode.html">NSNode</a>(<span class="keyword">const</span> std::string&amp; ip, uint16_t port, uint32_t weight);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> std::string&amp; getIp()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_ip;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    uint16_t getPort()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_port;}</div>
@@ -121,10 +121,10 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    uint32_t m_weight;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NSNodeSet.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NSNodeSet.html">NSNodeSet</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NSNodeSet.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NSNodeSet.html">NSNodeSet</a> {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NSNodeSet&gt; ptr;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classsylar_1_1ns_1_1NSNodeSet.html">NSNodeSet</a>(uint32_t cmd);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classrock_1_1ns_1_1NSNodeSet.html">NSNodeSet</a>(uint32_t cmd);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> add(NSNode::ptr info);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    NSNode::ptr del(uint64_t <span class="keywordtype">id</span>);</div>
@@ -139,15 +139,15 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">size_t</span> size();</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint32_t m_cmd;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::map&lt;uint64_t, NSNode::ptr&gt; m_datas;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NSDomain.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NSDomain.html">NSDomain</a> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NSDomain.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NSDomain.html">NSDomain</a> {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NSDomain&gt; ptr;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classsylar_1_1ns_1_1NSDomain.html">NSDomain</a>(<span class="keyword">const</span> std::string&amp; domain)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classrock_1_1ns_1_1NSDomain.html">NSDomain</a>(<span class="keyword">const</span> std::string&amp; domain)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        :m_domain(domain) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
@@ -165,11 +165,11 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">size_t</span> size();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    std::string m_domain;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::map&lt;uint32_t, NSNodeSet::ptr&gt; m_datas;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classsylar_1_1ns_1_1NSDomainSet.html">  106</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1ns_1_1NSDomainSet.html">NSDomainSet</a> {</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classrock_1_1ns_1_1NSDomainSet.html">  106</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1ns_1_1NSDomainSet.html">NSDomainSet</a> {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;NSDomainSet&gt; ptr;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
@@ -183,9 +183,9 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::ostream&amp; dump(std::ostream&amp; os, <span class="keyword">const</span> std::string&amp; prefix = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::string toString(<span class="keyword">const</span> std::string&amp; prefix = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> swap(<a class="code" href="classsylar_1_1ns_1_1NSDomainSet.html">NSDomainSet</a>&amp; ds);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> swap(<a class="code" href="classrock_1_1ns_1_1NSDomainSet.html">NSDomainSet</a>&amp; ds);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classsylar_1_1RWMutex.html">sylar::RWMutex</a> m_mutex;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classrock_1_1RWMutex.html">rock::RWMutex</a> m_mutex;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    std::map&lt;std::string, NSDomain::ptr&gt; m_datas;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
@@ -194,11 +194,11 @@ $(function() {
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasssylar_1_1RWMutex_html"><div class="ttname"><a href="classsylar_1_1RWMutex.html">sylar::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NSDomain_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NSDomain.html">sylar::ns::NSDomain</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:81</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NSNodeSet_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NSNodeSet.html">sylar::ns::NSNodeSet</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:58</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NSDomainSet_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NSDomainSet.html">sylar::ns::NSDomainSet</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:106</div></div>
-<div class="ttc" id="aclasssylar_1_1ns_1_1NSNode_html"><div class="ttname"><a href="classsylar_1_1ns_1_1NSNode.html">sylar::ns::NSNode</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:32</div></div>
+<div class="ttc" id="aclassrock_1_1RWMutex_html"><div class="ttname"><a href="classrock_1_1RWMutex.html">rock::RWMutex</a></div><div class="ttdoc">读写锁</div><div class="ttdef"><b>Definition:</b> mutex.h:266</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NSDomain_html"><div class="ttname"><a href="classrock_1_1ns_1_1NSDomain.html">rock::ns::NSDomain</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:81</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NSNodeSet_html"><div class="ttname"><a href="classrock_1_1ns_1_1NSNodeSet.html">rock::ns::NSNodeSet</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:58</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NSDomainSet_html"><div class="ttname"><a href="classrock_1_1ns_1_1NSDomainSet.html">rock::ns::NSDomainSet</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:106</div></div>
+<div class="ttc" id="aclassrock_1_1ns_1_1NSNode_html"><div class="ttname"><a href="classrock_1_1ns_1_1NSNode.html">rock::ns::NSNode</a></div><div class="ttdef"><b>Definition:</b> ns_protocol.h:32</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

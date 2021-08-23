@@ -1,12 +1,12 @@
-\doxysection{sylar\+::Rock\+Stream类 参考}
-\label{classsylar_1_1RockStream}\index{sylar::RockStream@{sylar::RockStream}}
+\doxysection{rock\+::Rock\+Stream类 参考}
+\label{classrock_1_1RockStream}\index{rock::RockStream@{rock::RockStream}}
 
 
-类 sylar\+::Rock\+Stream 继承关系图\+:
+类 rock\+::Rock\+Stream 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Rock\+Stream 的协作图\+:
+rock\+::Rock\+Stream 的协作图\+:
 % FIG 1
 \doxysubsection*{类}
 \begin{DoxyCompactItemize}
@@ -18,60 +18,60 @@ struct \textbf{ Rock\+Send\+Ctx}
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1RockStream_a35ca6f42fa1e263126eff283dab5bb89}} 
+\mbox{\label{classrock_1_1RockStream_a35ca6f42fa1e263126eff283dab5bb89}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Rock\+Stream} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1RockStream_ae2babd4483426b863e5ff54a4198c59e}} 
-typedef std\+::function$<$ bool(sylar\+::\+Rock\+Request\+::ptr,sylar\+::\+Rock\+Response\+::ptr,sylar\+::\+Rock\+Stream\+::ptr)$>$ {\bfseries request\+\_\+handler}
+\mbox{\label{classrock_1_1RockStream_ae2babd4483426b863e5ff54a4198c59e}} 
+typedef std\+::function$<$ bool(rock\+::\+Rock\+Request\+::ptr,rock\+::\+Rock\+Response\+::ptr,rock\+::\+Rock\+Stream\+::ptr)$>$ {\bfseries request\+\_\+handler}
 \item 
-\mbox{\label{classsylar_1_1RockStream_a0981291fb8c65368abf2ad11baf4cbb6}} 
-typedef std\+::function$<$ bool(sylar\+::\+Rock\+Notify\+::ptr,sylar\+::\+Rock\+Stream\+::ptr)$>$ {\bfseries notify\+\_\+handler}
+\mbox{\label{classrock_1_1RockStream_a0981291fb8c65368abf2ad11baf4cbb6}} 
+typedef std\+::function$<$ bool(rock\+::\+Rock\+Notify\+::ptr,rock\+::\+Rock\+Stream\+::ptr)$>$ {\bfseries notify\+\_\+handler}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1RockStream_af031707c422844684d6c0eaef116458c}} 
+\mbox{\label{classrock_1_1RockStream_af031707c422844684d6c0eaef116458c}} 
 {\bfseries Rock\+Stream} (Socket\+::ptr sock)
 \item 
-\mbox{\label{classsylar_1_1RockStream_af038dc07322e47cba567250dc1cb8b0c}} 
+\mbox{\label{classrock_1_1RockStream_af038dc07322e47cba567250dc1cb8b0c}} 
 int32\+\_\+t {\bfseries send\+Message} (Message\+::ptr msg)
 \item 
-\mbox{\label{classsylar_1_1RockStream_ac24e3eb8e4fcb0454e0c48a0d61b818c}} 
+\mbox{\label{classrock_1_1RockStream_ac24e3eb8e4fcb0454e0c48a0d61b818c}} 
 Rock\+Result\+::ptr {\bfseries request} (Rock\+Request\+::ptr req, uint32\+\_\+t timeout\+\_\+ms)
 \item 
-\mbox{\label{classsylar_1_1RockStream_a4eba2a11c14fe090749b2960326dead0}} 
+\mbox{\label{classrock_1_1RockStream_a4eba2a11c14fe090749b2960326dead0}} 
 request\+\_\+handler {\bfseries get\+Request\+Handler} () const
 \item 
-\mbox{\label{classsylar_1_1RockStream_a833e20ed2560551474c16149e3f14828}} 
+\mbox{\label{classrock_1_1RockStream_a833e20ed2560551474c16149e3f14828}} 
 notify\+\_\+handler {\bfseries get\+Notify\+Handler} () const
 \item 
-\mbox{\label{classsylar_1_1RockStream_a7178a7e0ea1da7e1b927d1fea01d5787}} 
+\mbox{\label{classrock_1_1RockStream_a7178a7e0ea1da7e1b927d1fea01d5787}} 
 void {\bfseries set\+Request\+Handler} (request\+\_\+handler v)
 \item 
-\mbox{\label{classsylar_1_1RockStream_a49b38593dcc57927d4473ecc4e3fd2a5}} 
+\mbox{\label{classrock_1_1RockStream_a49b38593dcc57927d4473ecc4e3fd2a5}} 
 void {\bfseries set\+Notify\+Handler} (notify\+\_\+handler v)
 \item 
-\mbox{\label{classsylar_1_1RockStream_af502199c149b7db559588d2f974e3b27}} 
+\mbox{\label{classrock_1_1RockStream_af502199c149b7db559588d2f974e3b27}} 
 {\footnotesize template$<$class T $>$ }\\void {\bfseries set\+Data} (const T \&v)
 \item 
-\mbox{\label{classsylar_1_1RockStream_a2c09776dbac455b3daf5d0a87a51b413}} 
+\mbox{\label{classrock_1_1RockStream_a2c09776dbac455b3daf5d0a87a51b413}} 
 {\footnotesize template$<$class T $>$ }\\T {\bfseries get\+Data} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1RockStream_ac60c54e6e3c59340e25a2f15c338cf15}} 
+\mbox{\label{classrock_1_1RockStream_ac60c54e6e3c59340e25a2f15c338cf15}} 
 virtual Ctx\+::ptr {\bfseries do\+Recv} () override
 \item 
-\mbox{\label{classsylar_1_1RockStream_a94e18bcb0270d1f844d7e37617642796}} 
-void {\bfseries handle\+Request} (sylar\+::\+Rock\+Request\+::ptr req)
+\mbox{\label{classrock_1_1RockStream_a94e18bcb0270d1f844d7e37617642796}} 
+void {\bfseries handle\+Request} (rock\+::\+Rock\+Request\+::ptr req)
 \item 
-\mbox{\label{classsylar_1_1RockStream_a88a6b21a925ee1f837319d0abb642a2e}} 
-void {\bfseries handle\+Notify} (sylar\+::\+Rock\+Notify\+::ptr nty)
+\mbox{\label{classrock_1_1RockStream_a88a6b21a925ee1f837319d0abb642a2e}} 
+void {\bfseries handle\+Notify} (rock\+::\+Rock\+Notify\+::ptr nty)
 \end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/rock/rock\+\_\+stream.\+h\end{DoxyCompactItemize}
+rock/rock/rock\+\_\+stream.\+h\end{DoxyCompactItemize}

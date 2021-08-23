@@ -1,54 +1,54 @@
-#include "sylar/config.h"
-#include "sylar/log.h"
+#include "rock/config.h"
+#include "rock/log.h"
 #include <yaml-cpp/yaml.h>
-#include "sylar/env.h"
+#include "rock/env.h"
 #include <iostream>
 
 #if 1
-sylar::ConfigVar<int>::ptr g_int_value_config =
-    sylar::Config::Lookup("system.port", (int)8080, "system port");
+rock::ConfigVar<int>::ptr g_int_value_config =
+    rock::Config::Lookup("system.port", (int)8080, "system port");
 
-sylar::ConfigVar<float>::ptr g_int_valuex_config =
-    sylar::Config::Lookup("system.port", (float)8080, "system port");
+rock::ConfigVar<float>::ptr g_int_valuex_config =
+    rock::Config::Lookup("system.port", (float)8080, "system port");
 
-sylar::ConfigVar<float>::ptr g_float_value_config =
-    sylar::Config::Lookup("system.value", (float)10.2f, "system value");
+rock::ConfigVar<float>::ptr g_float_value_config =
+    rock::Config::Lookup("system.value", (float)10.2f, "system value");
 
-sylar::ConfigVar<std::vector<int> >::ptr g_int_vec_value_config =
-    sylar::Config::Lookup("system.int_vec", std::vector<int>{1,2}, "system int vec");
+rock::ConfigVar<std::vector<int> >::ptr g_int_vec_value_config =
+    rock::Config::Lookup("system.int_vec", std::vector<int>{1,2}, "system int vec");
 
-sylar::ConfigVar<std::list<int> >::ptr g_int_list_value_config =
-    sylar::Config::Lookup("system.int_list", std::list<int>{1,2}, "system int list");
+rock::ConfigVar<std::list<int> >::ptr g_int_list_value_config =
+    rock::Config::Lookup("system.int_list", std::list<int>{1,2}, "system int list");
 
-sylar::ConfigVar<std::set<int> >::ptr g_int_set_value_config =
-    sylar::Config::Lookup("system.int_set", std::set<int>{1,2}, "system int set");
+rock::ConfigVar<std::set<int> >::ptr g_int_set_value_config =
+    rock::Config::Lookup("system.int_set", std::set<int>{1,2}, "system int set");
 
-sylar::ConfigVar<std::unordered_set<int> >::ptr g_int_uset_value_config =
-    sylar::Config::Lookup("system.int_uset", std::unordered_set<int>{1,2}, "system int uset");
+rock::ConfigVar<std::unordered_set<int> >::ptr g_int_uset_value_config =
+    rock::Config::Lookup("system.int_uset", std::unordered_set<int>{1,2}, "system int uset");
 
-sylar::ConfigVar<std::map<std::string, int> >::ptr g_str_int_map_value_config =
-    sylar::Config::Lookup("system.str_int_map", std::map<std::string, int>{{"k",2}}, "system str int map");
+rock::ConfigVar<std::map<std::string, int> >::ptr g_str_int_map_value_config =
+    rock::Config::Lookup("system.str_int_map", std::map<std::string, int>{{"k",2}}, "system str int map");
 
-sylar::ConfigVar<std::unordered_map<std::string, int> >::ptr g_str_int_umap_value_config =
-    sylar::Config::Lookup("system.str_int_umap", std::unordered_map<std::string, int>{{"k",2}}, "system str int map");
+rock::ConfigVar<std::unordered_map<std::string, int> >::ptr g_str_int_umap_value_config =
+    rock::Config::Lookup("system.str_int_umap", std::unordered_map<std::string, int>{{"k",2}}, "system str int map");
 
 void print_yaml(const YAML::Node& node, int level) {
     if(node.IsScalar()) {
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << std::string(level * 4, ' ')
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << std::string(level * 4, ' ')
             << node.Scalar() << " - " << node.Type() << " - " << level;
     } else if(node.IsNull()) {
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << std::string(level * 4, ' ')
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << std::string(level * 4, ' ')
             << "NULL - " << node.Type() << " - " << level;
     } else if(node.IsMap()) {
         for(auto it = node.begin();
                 it != node.end(); ++it) {
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << std::string(level * 4, ' ')
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) << std::string(level * 4, ' ')
                     << it->first << " - " << it->second.Type() << " - " << level;
             print_yaml(it->second, level + 1);
         }
     } else if(node.IsSequence()) {
         for(size_t i = 0; i < node.size(); ++i) {
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << std::string(level * 4, ' ')
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) << std::string(level * 4, ' ')
                 << i << " - " << node[i].Type() << " - " << level;
             print_yaml(node[i], level + 1);
         }
@@ -56,36 +56,36 @@ void print_yaml(const YAML::Node& node, int level) {
 }
 
 void test_yaml() {
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/home/rock/workspace/rock/bin/conf/log.yml");
     //print_yaml(root, 0);
-    //SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root.Scalar();
+    //ROCK_LOG_INFO(ROCK_LOG_ROOT()) << root.Scalar();
 
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root["test"].IsDefined();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root["logs"].IsDefined();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root;
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << root["test"].IsDefined();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << root["logs"].IsDefined();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << root;
 }
 
 void test_config() {
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_int_value_config->getValue();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_float_value_config->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "before: " << g_int_value_config->getValue();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "before: " << g_float_value_config->toString();
 
 #define XX(g_var, name, prefix) \
     { \
         auto& v = g_var->getValue(); \
         for(auto& i : v) { \
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << #prefix " " #name ": " << i; \
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) << #prefix " " #name ": " << i; \
         } \
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
 
 #define XX_M(g_var, name, prefix) \
     { \
         auto& v = g_var->getValue(); \
         for(auto& i : v) { \
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << #prefix " " #name ": {" \
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) << #prefix " " #name ": {" \
                     << i.first << " - " << i.second << "}"; \
         } \
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
 
 
@@ -96,11 +96,11 @@ void test_config() {
     XX_M(g_str_int_map_value_config, str_int_map, before);
     XX_M(g_str_int_umap_value_config, str_int_umap, before);
 
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/test.yml");
-    sylar::Config::LoadFromYaml(root);
+    YAML::Node root = YAML::LoadFile("/home/rock/workspace/rock/bin/conf/test.yml");
+    rock::Config::LoadFromYaml(root);
 
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_float_value_config->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "after: " << g_float_value_config->toString();
 
     XX(g_int_vec_value_config, int_vec, after);
     XX(g_int_list_value_config, int_list, after);
@@ -135,7 +135,7 @@ public:
     }
 };
 
-namespace sylar {
+namespace rock {
 
 template<>
 class LexicalCast<std::string, Person> {
@@ -166,61 +166,61 @@ public:
 
 }
 
-sylar::ConfigVar<Person>::ptr g_person =
-    sylar::Config::Lookup("class.person", Person(), "system person");
+rock::ConfigVar<Person>::ptr g_person =
+    rock::Config::Lookup("class.person", Person(), "system person");
 
-sylar::ConfigVar<std::map<std::string, Person> >::ptr g_person_map =
-    sylar::Config::Lookup("class.map", std::map<std::string, Person>(), "system person");
+rock::ConfigVar<std::map<std::string, Person> >::ptr g_person_map =
+    rock::Config::Lookup("class.map", std::map<std::string, Person>(), "system person");
 
-sylar::ConfigVar<std::map<std::string, std::vector<Person> > >::ptr g_person_vec_map =
-    sylar::Config::Lookup("class.vec_map", std::map<std::string, std::vector<Person> >(), "system person");
+rock::ConfigVar<std::map<std::string, std::vector<Person> > >::ptr g_person_vec_map =
+    rock::Config::Lookup("class.vec_map", std::map<std::string, std::vector<Person> >(), "system person");
 
 void test_class() {
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person->getValue().toString() << " - " << g_person->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "before: " << g_person->getValue().toString() << " - " << g_person->toString();
 
 #define XX_PM(g_var, prefix) \
     { \
         auto m = g_person_map->getValue(); \
         for(auto& i : m) { \
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) <<  prefix << ": " << i.first << " - " << i.second.toString(); \
+            ROCK_LOG_INFO(ROCK_LOG_ROOT()) <<  prefix << ": " << i.first << " - " << i.second.toString(); \
         } \
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) <<  prefix << ": size=" << m.size(); \
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) <<  prefix << ": size=" << m.size(); \
     }
 
     g_person->addListener([](const Person& old_value, const Person& new_value){
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "old_value=" << old_value.toString()
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "old_value=" << old_value.toString()
                 << " new_value=" << new_value.toString();
     });
 
     XX_PM(g_person_map, "class.map before");
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/test.yml");
-    sylar::Config::LoadFromYaml(root);
+    YAML::Node root = YAML::LoadFile("/home/rock/workspace/rock/bin/conf/test.yml");
+    rock::Config::LoadFromYaml(root);
 
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
     XX_PM(g_person_map, "class.map after");
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
+    ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
 }
 
 void test_log() {
-    static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
-    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    YAML::Node root = YAML::LoadFile("/home/sylar/workspace/sylar/bin/conf/log.yml");
-    sylar::Config::LoadFromYaml(root);
+    static rock::Logger::ptr system_log = ROCK_LOG_NAME("system");
+    ROCK_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << rock::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    YAML::Node root = YAML::LoadFile("/home/rock/workspace/rock/bin/conf/log.yml");
+    rock::Config::LoadFromYaml(root);
     std::cout << "=============" << std::endl;
-    std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    std::cout << rock::LoggerMgr::GetInstance()->toYamlString() << std::endl;
     std::cout << "=============" << std::endl;
     std::cout << root << std::endl;
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+    ROCK_LOG_INFO(system_log) << "hello system" << std::endl;
 
     system_log->setFormatter("%d - %m%n");
-    SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
+    ROCK_LOG_INFO(system_log) << "hello system" << std::endl;
 }
 
 void test_loadconf() {
-    sylar::Config::LoadFromConfDir("conf");
+    rock::Config::LoadFromConfDir("conf");
 }
 
 int main(int argc, char** argv) {
@@ -228,14 +228,14 @@ int main(int argc, char** argv) {
     //test_config();
     //test_class();
     //test_log();
-    sylar::EnvMgr::GetInstance()->init(argc, argv);
+    rock::EnvMgr::GetInstance()->init(argc, argv);
     test_loadconf();
     std::cout << " ==== " << std::endl;
     sleep(10);
     test_loadconf();
     return 0;
-    sylar::Config::Visit([](sylar::ConfigVarBase::ptr var) {
-        SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "name=" << var->getName()
+    rock::Config::Visit([](rock::ConfigVarBase::ptr var) {
+        ROCK_LOG_INFO(ROCK_LOG_ROOT()) << "name=" << var->getName()
                     << " description=" << var->getDescription()
                     << " typename=" << var->getTypeName()
                     << " value=" << var->toString();

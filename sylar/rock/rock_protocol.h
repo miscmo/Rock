@@ -1,10 +1,10 @@
-#ifndef __SYLAR_ROCK_ROCK_PROTOCOL_H__
-#define __SYLAR_ROCK_ROCK_PROTOCOL_H__
+#ifndef __ROCK_ROCK_ROCK_PROTOCOL_H__
+#define __ROCK_ROCK_ROCK_PROTOCOL_H__
 
-#include "sylar/protocol.h"
+#include "rock/protocol.h"
 #include "google/protobuf/message.h"
 
-namespace sylar {
+namespace rock {
 
 class RockBody {
 public:

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::http::HttpConnectionPool类 参考</title>
+<title>rock: rock::http::HttpConnectionPool类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,13 +69,13 @@ $(function() {
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="classsylar_1_1http_1_1HttpConnectionPool-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1http_1_1HttpConnectionPool-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::http::HttpConnectionPool类 参考</div>  </div>
+<div class="title">rock::http::HttpConnectionPool类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-sylar::http::HttpConnectionPool 的协作图:</div>
+rock::http::HttpConnectionPool 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
@@ -84,10 +84,10 @@ sylar::http::HttpConnectionPool 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:ad409f599e64bd4f9104fbb489d5ca559"><td class="memItemLeft" align="right" valign="top"><a id="ad409f599e64bd4f9104fbb489d5ca559"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:ad409f599e64bd4f9104fbb489d5ca559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67fc08ab4e76220f39d2225f24ffce44"><td class="memItemLeft" align="right" valign="top"><a id="a67fc08ab4e76220f39d2225f24ffce44"></a>
-typedef <a class="el" href="classsylar_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MutexType</b></td></tr>
+typedef <a class="el" href="classrock_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MutexType</b></td></tr>
 <tr class="separator:a67fc08ab4e76220f39d2225f24ffce44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -96,28 +96,28 @@ Public 成员函数</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>HttpConnectionPool</b> (const std::string &amp;host, const std::string &amp;vhost, uint32_t port, bool is_https, uint32_t max_size, uint32_t max_alive_time, uint32_t max_request)</td></tr>
 <tr class="separator:a045aa910d746fb138d1100a2508c83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae61677cedc82af909352e290bdfb5ee2"><td class="memItemLeft" align="right" valign="top"><a id="ae61677cedc82af909352e290bdfb5ee2"></a>
-<a class="el" href="classsylar_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">HttpConnection::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getConnection</b> ()</td></tr>
+<a class="el" href="classrock_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">HttpConnection::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getConnection</b> ()</td></tr>
 <tr class="separator:ae61677cedc82af909352e290bdfb5ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ce48ac37128b246b0c7d04f904ad31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#a68ce48ac37128b246b0c7d04f904ad31">doGet</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:a68ce48ac37128b246b0c7d04f904ad31"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#a68ce48ac37128b246b0c7d04f904ad31">更多...</a><br /></td></tr>
+<tr class="memitem:a68ce48ac37128b246b0c7d04f904ad31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#a68ce48ac37128b246b0c7d04f904ad31">doGet</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a68ce48ac37128b246b0c7d04f904ad31"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#a68ce48ac37128b246b0c7d04f904ad31">更多...</a><br /></td></tr>
 <tr class="separator:a68ce48ac37128b246b0c7d04f904ad31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af231809abe374bfd498486766c7925bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#af231809abe374bfd498486766c7925bf">doGet</a> (<a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:af231809abe374bfd498486766c7925bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#af231809abe374bfd498486766c7925bf">更多...</a><br /></td></tr>
+<tr class="memitem:af231809abe374bfd498486766c7925bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#af231809abe374bfd498486766c7925bf">doGet</a> (<a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:af231809abe374bfd498486766c7925bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的GET请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#af231809abe374bfd498486766c7925bf">更多...</a><br /></td></tr>
 <tr class="separator:af231809abe374bfd498486766c7925bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58617111cf236af5849a9f7eaf5e682e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#a58617111cf236af5849a9f7eaf5e682e">doPost</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:a58617111cf236af5849a9f7eaf5e682e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#a58617111cf236af5849a9f7eaf5e682e">更多...</a><br /></td></tr>
+<tr class="memitem:a58617111cf236af5849a9f7eaf5e682e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#a58617111cf236af5849a9f7eaf5e682e">doPost</a> (const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a58617111cf236af5849a9f7eaf5e682e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#a58617111cf236af5849a9f7eaf5e682e">更多...</a><br /></td></tr>
 <tr class="separator:a58617111cf236af5849a9f7eaf5e682e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32593d1f4f5e111983cd40ba804e6bda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#a32593d1f4f5e111983cd40ba804e6bda">doPost</a> (<a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:a32593d1f4f5e111983cd40ba804e6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#a32593d1f4f5e111983cd40ba804e6bda">更多...</a><br /></td></tr>
+<tr class="memitem:a32593d1f4f5e111983cd40ba804e6bda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#a32593d1f4f5e111983cd40ba804e6bda">doPost</a> (<a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a32593d1f4f5e111983cd40ba804e6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP的POST请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#a32593d1f4f5e111983cd40ba804e6bda">更多...</a><br /></td></tr>
 <tr class="separator:a32593d1f4f5e111983cd40ba804e6bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aced59271181c7f7f0afd65d2ec4cc6b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#aced59271181c7f7f0afd65d2ec4cc6b0">doRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:aced59271181c7f7f0afd65d2ec4cc6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#aced59271181c7f7f0afd65d2ec4cc6b0">更多...</a><br /></td></tr>
+<tr class="memitem:aced59271181c7f7f0afd65d2ec4cc6b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#aced59271181c7f7f0afd65d2ec4cc6b0">doRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, const std::string &amp;url, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:aced59271181c7f7f0afd65d2ec4cc6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#aced59271181c7f7f0afd65d2ec4cc6b0">更多...</a><br /></td></tr>
 <tr class="separator:aced59271181c7f7f0afd65d2ec4cc6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c1faa8b6652a17e5189d23f612fd8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#ad1c1faa8b6652a17e5189d23f612fd8b">doRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, <a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad1c1faa8b6652a17e5189d23f612fd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#ad1c1faa8b6652a17e5189d23f612fd8b">更多...</a><br /></td></tr>
+<tr class="memitem:ad1c1faa8b6652a17e5189d23f612fd8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#ad1c1faa8b6652a17e5189d23f612fd8b">doRequest</a> (<a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a> method, <a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri, uint64_t timeout_ms, const std::map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:ad1c1faa8b6652a17e5189d23f612fd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#ad1c1faa8b6652a17e5189d23f612fd8b">更多...</a><br /></td></tr>
 <tr class="separator:ad1c1faa8b6652a17e5189d23f612fd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aabb8a66c2f47cff0c10466a7433007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1HttpConnectionPool.html#a8aabb8a66c2f47cff0c10466a7433007">doRequest</a> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> req, uint64_t timeout_ms)</td></tr>
-<tr class="memdesc:a8aabb8a66c2f47cff0c10466a7433007"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classsylar_1_1http_1_1HttpConnectionPool.html#a8aabb8a66c2f47cff0c10466a7433007">更多...</a><br /></td></tr>
+<tr class="memitem:a8aabb8a66c2f47cff0c10466a7433007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1HttpConnectionPool.html#a8aabb8a66c2f47cff0c10466a7433007">doRequest</a> (<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a> req, uint64_t timeout_ms)</td></tr>
+<tr class="memdesc:a8aabb8a66c2f47cff0c10466a7433007"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送HTTP请求  <a href="classrock_1_1http_1_1HttpConnectionPool.html#a8aabb8a66c2f47cff0c10466a7433007">更多...</a><br /></td></tr>
 <tr class="separator:a8aabb8a66c2f47cff0c10466a7433007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -134,7 +134,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doGet </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doGet </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>url</em>, </td>
@@ -186,9 +186,9 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doGet </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doGet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
           <td class="paramname"><em>uri</em>, </td>
         </tr>
         <tr>
@@ -238,7 +238,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doPost </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doPost </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>url</em>, </td>
@@ -290,9 +290,9 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doPost </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doPost </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
           <td class="paramname"><em>uri</em>, </td>
         </tr>
         <tr>
@@ -342,7 +342,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doRequest </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doRequest </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a>&#160;</td>
           <td class="paramname"><em>method</em>, </td>
@@ -401,7 +401,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doRequest </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doRequest </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="http_8h.html#ae6e414e88664e23d4e83cb6cd91b477e">HttpMethod</a>&#160;</td>
           <td class="paramname"><em>method</em>, </td>
@@ -409,7 +409,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a>&#160;</td>
           <td class="paramname"><em>uri</em>, </td>
         </tr>
         <tr>
@@ -460,9 +460,9 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structsylar_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> sylar::http::HttpConnectionPool::doRequest </td>
+          <td class="memname"><a class="el" href="structrock_1_1http_1_1HttpResult.html#a9e0a8df62134ba376ed3e9460118affb">HttpResult::ptr</a> rock::http::HttpConnectionPool::doRequest </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">HttpRequest::ptr</a>&#160;</td>
           <td class="paramname"><em>req</em>, </td>
         </tr>
         <tr>
@@ -492,7 +492,7 @@ static HttpConnectionPool::ptr&#160;</td><td class="memItemRight" valign="bottom
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/http/<a class="el" href="http__connection_8h_source.html">http_connection.h</a></li>
+<li>rock/http/<a class="el" href="http__connection_8h_source.html">http_connection.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

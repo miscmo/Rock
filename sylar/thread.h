@@ -1,17 +1,17 @@
 /**
  * @file thread.h
  * @brief 线程相关的封装
- * @author sylar.yin
+ * @author rock.yin
  * @email 564628276@qq.com
  * @date 2019-05-31
- * @copyright Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top)
+ * @copyright Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top)
  */
-#ifndef __SYLAR_THREAD_H__
-#define __SYLAR_THREAD_H__
+#ifndef __ROCK_THREAD_H__
+#define __ROCK_THREAD_H__
 
 #include "mutex.h"
 
-namespace sylar {
+namespace rock {
 
 /**
  * @brief 线程类

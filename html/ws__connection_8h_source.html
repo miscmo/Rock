@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/http/ws_connection.h 源文件</title>
+<title>rock: rock/http/ws_connection.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li><li class="navelem"><a class="el" href="dir_5fdfbf8b0b8272587873e17fac938b86.html">http</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,28 +69,28 @@ $(function() {
 <div class="title">ws_connection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SYLAR_HTTP_WS_CONNECTION_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SYLAR_HTTP_WS_CONNECTION_H__</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ROCK_HTTP_WS_CONNECTION_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __ROCK_HTTP_WS_CONNECTION_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http__connection_8h.html">sylar/http/http_connection.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;sylar/http/ws_session.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="http__connection_8h.html">rock/http/http_connection.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;rock/http/ws_session.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>sylar {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>rock {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>http {</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classsylar_1_1http_1_1WSConnection.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsylar_1_1http_1_1WSConnection.html">WSConnection</a> : <span class="keyword">public</span> <a class="code" href="classsylar_1_1http_1_1HttpConnection.html">HttpConnection</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classrock_1_1http_1_1WSConnection.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrock_1_1http_1_1WSConnection.html">WSConnection</a> : <span class="keyword">public</span> <a class="code" href="classrock_1_1http_1_1HttpConnection.html">HttpConnection</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSConnection&gt; <a class="code" href="classsylar_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">ptr</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classsylar_1_1http_1_1WSConnection.html">WSConnection</a>(Socket::ptr sock, <span class="keywordtype">bool</span> owner = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;WSConnection&gt; <a class="code" href="classrock_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">ptr</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classrock_1_1http_1_1WSConnection.html">WSConnection</a>(Socket::ptr sock, <span class="keywordtype">bool</span> owner = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> std::pair&lt;HttpResult::ptr, WSConnection::ptr&gt; Create(<span class="keyword">const</span> std::string&amp; url</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                    ,uint64_t timeout_ms</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                    , <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; headers = {});</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> std::pair&lt;HttpResult::ptr, WSConnection::ptr&gt; Create(<a class="code" href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> std::pair&lt;HttpResult::ptr, WSConnection::ptr&gt; Create(<a class="code" href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">Uri::ptr</a> uri</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                    ,uint64_t timeout_ms</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                    , <span class="keyword">const</span> std::map&lt;std::string, std::string&gt;&amp; headers = {});</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    WSFrameMessage::ptr recvMessage();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int32_t sendMessage(WSFrameMessage::ptr msg, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    int32_t sendMessage(<span class="keyword">const</span> std::string&amp; msg, int32_t opcode = <a class="code" href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">WSFrameHead::TEXT_FRAME</a>, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    int32_t sendMessage(<span class="keyword">const</span> std::string&amp; msg, int32_t opcode = <a class="code" href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">WSFrameHead::TEXT_FRAME</a>, <span class="keywordtype">bool</span> fin = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    int32_t ping();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    int32_t pong();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
@@ -100,12 +100,12 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructsylar_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45"><div class="ttname"><a href="structsylar_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">sylar::http::WSFrameHead::TEXT_FRAME</a></div><div class="ttdeci">@ TEXT_FRAME</div><div class="ttdoc">文本帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:17</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1WSConnection_html"><div class="ttname"><a href="classsylar_1_1http_1_1WSConnection.html">sylar::http::WSConnection</a></div><div class="ttdef"><b>Definition:</b> ws_connection.h:10</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpConnection_html_adb1452e766d3f42e950429300810af23"><div class="ttname"><a href="classsylar_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">sylar::http::HttpConnection::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpConnection &gt; ptr</div><div class="ttdoc">HTTP客户端类智能指针</div><div class="ttdef"><b>Definition:</b> http_connection.h:85</div></div>
-<div class="ttc" id="aclasssylar_1_1http_1_1HttpConnection_html"><div class="ttname"><a href="classsylar_1_1http_1_1HttpConnection.html">sylar::http::HttpConnection</a></div><div class="ttdoc">HTTP客户端类</div><div class="ttdef"><b>Definition:</b> http_connection.h:81</div></div>
+<div class="ttc" id="astructrock_1_1http_1_1WSFrameHead_html_a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45"><div class="ttname"><a href="structrock_1_1http_1_1WSFrameHead.html#a67fe35286cb8e171bb486f02f56d76cda6e118d59b2ef85c4f9c7b37f439acd45">rock::http::WSFrameHead::TEXT_FRAME</a></div><div class="ttdeci">@ TEXT_FRAME</div><div class="ttdoc">文本帧</div><div class="ttdef"><b>Definition:</b> ws_session.h:17</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1WSConnection_html"><div class="ttname"><a href="classrock_1_1http_1_1WSConnection.html">rock::http::WSConnection</a></div><div class="ttdef"><b>Definition:</b> ws_connection.h:10</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpConnection_html_adb1452e766d3f42e950429300810af23"><div class="ttname"><a href="classrock_1_1http_1_1HttpConnection.html#adb1452e766d3f42e950429300810af23">rock::http::HttpConnection::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; HttpConnection &gt; ptr</div><div class="ttdoc">HTTP客户端类智能指针</div><div class="ttdef"><b>Definition:</b> http_connection.h:85</div></div>
+<div class="ttc" id="aclassrock_1_1http_1_1HttpConnection_html"><div class="ttname"><a href="classrock_1_1http_1_1HttpConnection.html">rock::http::HttpConnection</a></div><div class="ttdoc">HTTP客户端类</div><div class="ttdef"><b>Definition:</b> http_connection.h:81</div></div>
 <div class="ttc" id="ahttp__connection_8h_html"><div class="ttname"><a href="http__connection_8h.html">http_connection.h</a></div><div class="ttdoc">HTTP客户端类</div></div>
-<div class="ttc" id="aclasssylar_1_1Uri_html_a6dfcd7add35add7675e21e8f23b4f262"><div class="ttname"><a href="classsylar_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">sylar::Uri::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Uri &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> uri.h:32</div></div>
+<div class="ttc" id="aclassrock_1_1Uri_html_a6dfcd7add35add7675e21e8f23b4f262"><div class="ttname"><a href="classrock_1_1Uri.html#a6dfcd7add35add7675e21e8f23b4f262">rock::Uri::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Uri &gt; ptr</div><div class="ttdoc">智能指针类型定义</div><div class="ttdef"><b>Definition:</b> uri.h:32</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者 &#160;<a href="http://www.doxygen.org/index.html">

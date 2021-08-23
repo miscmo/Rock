@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Tcp\+Server类 参考}
-\label{classsylar_1_1TcpServer}\index{sylar::TcpServer@{sylar::TcpServer}}
+\doxysection{rock\+::Tcp\+Server类 参考}
+\label{classrock_1_1TcpServer}\index{rock::TcpServer@{rock::TcpServer}}
 
 
 T\+C\+P服务器封装  
@@ -11,108 +11,108 @@ T\+C\+P服务器封装
 
 
 
-类 sylar\+::Tcp\+Server 继承关系图\+:
+类 rock\+::Tcp\+Server 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Tcp\+Server 的协作图\+:
+rock\+::Tcp\+Server 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a1b1b774363de05bd0d11e154808eb6eb}} 
+\mbox{\label{classrock_1_1TcpServer_a1b1b774363de05bd0d11e154808eb6eb}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Tcp\+Server} $>$ {\bfseries ptr}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Tcp\+Server} (\textbf{ sylar\+::\+I\+O\+Manager} $\ast$worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$io\+\_\+woker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ sylar\+::\+I\+O\+Manager} $\ast$accept\+\_\+worker=\textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}())
+\textbf{ Tcp\+Server} (\textbf{ rock\+::\+I\+O\+Manager} $\ast$worker=\textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ rock\+::\+I\+O\+Manager} $\ast$io\+\_\+woker=\textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}(), \textbf{ rock\+::\+I\+O\+Manager} $\ast$accept\+\_\+worker=\textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}())
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a883425ffb2aa3fa7f841640d710c44f0}} 
+\mbox{\label{classrock_1_1TcpServer_a883425ffb2aa3fa7f841640d710c44f0}} 
 virtual \textbf{ $\sim$\+Tcp\+Server} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
-virtual bool \textbf{ bind} (sylar\+::\+Address\+::ptr addr, bool ssl=false)
+virtual bool \textbf{ bind} (rock\+::\+Address\+::ptr addr, bool ssl=false)
 \begin{DoxyCompactList}\small\item\em 绑定地址 \end{DoxyCompactList}\item 
 virtual bool \textbf{ bind} (const std\+::vector$<$ Address\+::ptr $>$ \&addrs, std\+::vector$<$ Address\+::ptr $>$ \&fails, bool ssl=false)
 \begin{DoxyCompactList}\small\item\em 绑定地址数组 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a9b971281325c095bff83ab0c4db6a3c3}} 
+\mbox{\label{classrock_1_1TcpServer_a9b971281325c095bff83ab0c4db6a3c3}} 
 bool {\bfseries load\+Certificates} (const std\+::string \&cert\+\_\+file, const std\+::string \&key\+\_\+file)
 \item 
 virtual bool \textbf{ start} ()
 \begin{DoxyCompactList}\small\item\em 启动服务 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_ae77ccab6e1481baaca597b1d1b93b2cc}} 
+\mbox{\label{classrock_1_1TcpServer_ae77ccab6e1481baaca597b1d1b93b2cc}} 
 virtual void \textbf{ stop} ()
 \begin{DoxyCompactList}\small\item\em 停止服务 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_af517f20bb50cb3dc02d5220cb16059fb}} 
+\mbox{\label{classrock_1_1TcpServer_af517f20bb50cb3dc02d5220cb16059fb}} 
 uint64\+\_\+t \textbf{ get\+Recv\+Timeout} () const
 \begin{DoxyCompactList}\small\item\em 返回读取超时时间(毫秒) \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_afa18d9f9fffad707061d4bf96451f2a1}} 
+\mbox{\label{classrock_1_1TcpServer_afa18d9f9fffad707061d4bf96451f2a1}} 
 std\+::string \textbf{ get\+Name} () const
 \begin{DoxyCompactList}\small\item\em 返回服务器名称 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_adf506161f3352fa94e244aa26fd9e56f}} 
+\mbox{\label{classrock_1_1TcpServer_adf506161f3352fa94e244aa26fd9e56f}} 
 void \textbf{ set\+Recv\+Timeout} (uint64\+\_\+t v)
 \begin{DoxyCompactList}\small\item\em 设置读取超时时间(毫秒) \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_aeebc37c4c913dbab784c7d25a2115992}} 
+\mbox{\label{classrock_1_1TcpServer_aeebc37c4c913dbab784c7d25a2115992}} 
 virtual void \textbf{ set\+Name} (const std\+::string \&v)
 \begin{DoxyCompactList}\small\item\em 设置服务器名称 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_adc2f7cc515ca4a624d29599dd924cf41}} 
+\mbox{\label{classrock_1_1TcpServer_adc2f7cc515ca4a624d29599dd924cf41}} 
 bool \textbf{ is\+Stop} () const
 \begin{DoxyCompactList}\small\item\em 是否停止 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a2318c5d9cdaf346242891c6633d30d0d}} 
+\mbox{\label{classrock_1_1TcpServer_a2318c5d9cdaf346242891c6633d30d0d}} 
 Tcp\+Server\+Conf\+::ptr {\bfseries get\+Conf} () const
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a9a62003dbd43e945e5c33e14df4eeaaf}} 
+\mbox{\label{classrock_1_1TcpServer_a9a62003dbd43e945e5c33e14df4eeaaf}} 
 void {\bfseries set\+Conf} (Tcp\+Server\+Conf\+::ptr v)
 \item 
-\mbox{\label{classsylar_1_1TcpServer_ad397221be26414595170dd0b9467f327}} 
+\mbox{\label{classrock_1_1TcpServer_ad397221be26414595170dd0b9467f327}} 
 void {\bfseries set\+Conf} (const \textbf{ Tcp\+Server\+Conf} \&v)
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a054cf9168c7b8f5f79f7cd1a1259102b}} 
+\mbox{\label{classrock_1_1TcpServer_a054cf9168c7b8f5f79f7cd1a1259102b}} 
 virtual std\+::string {\bfseries to\+String} (const std\+::string \&prefix=\char`\"{}\char`\"{})
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a55f4bf4ab83a2b6a9256d3fee842bda7}} 
+\mbox{\label{classrock_1_1TcpServer_a55f4bf4ab83a2b6a9256d3fee842bda7}} 
 std\+::vector$<$ Socket\+::ptr $>$ {\bfseries get\+Socks} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TcpServer_ac952ea5e6b1ca2422b9bf847fcf5f438}} 
+\mbox{\label{classrock_1_1TcpServer_ac952ea5e6b1ca2422b9bf847fcf5f438}} 
 virtual void \textbf{ handle\+Client} (Socket\+::ptr client)
 \begin{DoxyCompactList}\small\item\em 处理新连接的\+Socket类 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a0e0c75ce5b544ef54328033620f2a54b}} 
+\mbox{\label{classrock_1_1TcpServer_a0e0c75ce5b544ef54328033620f2a54b}} 
 virtual void \textbf{ start\+Accept} (Socket\+::ptr sock)
 \begin{DoxyCompactList}\small\item\em 开始接受连接 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected 属性}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a9a7e9678dc10633c3e14052f01df31dc}} 
+\mbox{\label{classrock_1_1TcpServer_a9a7e9678dc10633c3e14052f01df31dc}} 
 std\+::vector$<$ Socket\+::ptr $>$ \textbf{ m\+\_\+socks}
 \begin{DoxyCompactList}\small\item\em 监听\+Socket数组 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a7cbfab7ee6e57fe94944f3767662c7e3}} 
+\mbox{\label{classrock_1_1TcpServer_a7cbfab7ee6e57fe94944f3767662c7e3}} 
 \textbf{ I\+O\+Manager} $\ast$ \textbf{ m\+\_\+worker}
 \begin{DoxyCompactList}\small\item\em 新连接的\+Socket工作的调度器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a3de72aa9bef40c552d29b71d22f3d61b}} 
+\mbox{\label{classrock_1_1TcpServer_a3de72aa9bef40c552d29b71d22f3d61b}} 
 \textbf{ I\+O\+Manager} $\ast$ {\bfseries m\+\_\+io\+Worker}
 \item 
-\mbox{\label{classsylar_1_1TcpServer_a422a2b28ab2534ae1a70c3e553d01172}} 
+\mbox{\label{classrock_1_1TcpServer_a422a2b28ab2534ae1a70c3e553d01172}} 
 \textbf{ I\+O\+Manager} $\ast$ \textbf{ m\+\_\+accept\+Worker}
 \begin{DoxyCompactList}\small\item\em 服务器\+Socket接收连接的调度器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a66e920154ce8bd4865669555f91b45bb}} 
+\mbox{\label{classrock_1_1TcpServer_a66e920154ce8bd4865669555f91b45bb}} 
 uint64\+\_\+t \textbf{ m\+\_\+recv\+Timeout}
 \begin{DoxyCompactList}\small\item\em 接收超时时间(毫秒) \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a9c956ff52912062eeb6fe53f8a712e55}} 
+\mbox{\label{classrock_1_1TcpServer_a9c956ff52912062eeb6fe53f8a712e55}} 
 std\+::string \textbf{ m\+\_\+name}
 \begin{DoxyCompactList}\small\item\em 服务器名称 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a393335266c777ba4fc4c7299c5e7499a}} 
+\mbox{\label{classrock_1_1TcpServer_a393335266c777ba4fc4c7299c5e7499a}} 
 std\+::string \textbf{ m\+\_\+type} = \char`\"{}tcp\char`\"{}
 \begin{DoxyCompactList}\small\item\em 服务器类型 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_ad56141ae810906378dd8fc3fc98b0bfd}} 
+\mbox{\label{classrock_1_1TcpServer_ad56141ae810906378dd8fc3fc98b0bfd}} 
 bool \textbf{ m\+\_\+is\+Stop}
 \begin{DoxyCompactList}\small\item\em 服务是否停止 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TcpServer_a5010f6bf04f7230c8fddfe49b490f873}} 
+\mbox{\label{classrock_1_1TcpServer_a5010f6bf04f7230c8fddfe49b490f873}} 
 bool {\bfseries m\+\_\+ssl} = false
 \item 
-\mbox{\label{classsylar_1_1TcpServer_aa21f2e19eecbd9322ddcfb10679c2db4}} 
+\mbox{\label{classrock_1_1TcpServer_aa21f2e19eecbd9322ddcfb10679c2db4}} 
 Tcp\+Server\+Conf\+::ptr {\bfseries m\+\_\+conf}
 \end{DoxyCompactItemize}
 
@@ -121,11 +121,11 @@ Tcp\+Server\+Conf\+::ptr {\bfseries m\+\_\+conf}
 T\+C\+P服务器封装 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1TcpServer_a0c7f9e2e803b9d1570a97c754f66ec4b}} 
-\index{sylar::TcpServer@{sylar::TcpServer}!TcpServer@{TcpServer}}
-\index{TcpServer@{TcpServer}!sylar::TcpServer@{sylar::TcpServer}}
+\mbox{\label{classrock_1_1TcpServer_a0c7f9e2e803b9d1570a97c754f66ec4b}} 
+\index{rock::TcpServer@{rock::TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!rock::TcpServer@{rock::TcpServer}}
 \doxysubsubsection{TcpServer()}
-{\footnotesize\ttfamily sylar\+::\+Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{worker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{io\+\_\+woker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ sylar\+::\+I\+O\+Manager} $\ast$}]{accept\+\_\+worker = {\ttfamily \textbf{ sylar\+::\+I\+O\+Manager\+::\+Get\+This}()} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{\textbf{ rock\+::\+I\+O\+Manager} $\ast$}]{worker = {\ttfamily \textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ rock\+::\+I\+O\+Manager} $\ast$}]{io\+\_\+woker = {\ttfamily \textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}()},  }\item[{\textbf{ rock\+::\+I\+O\+Manager} $\ast$}]{accept\+\_\+worker = {\ttfamily \textbf{ rock\+::\+I\+O\+Manager\+::\+Get\+This}()} }\end{DoxyParamCaption})}
 
 
 
@@ -141,11 +141,11 @@ T\+C\+P服务器封装
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1TcpServer_a03a90e9240b336769f7ccd50fb0e12a9}} 
-\index{sylar::TcpServer@{sylar::TcpServer}!bind@{bind}}
-\index{bind@{bind}!sylar::TcpServer@{sylar::TcpServer}}
+\mbox{\label{classrock_1_1TcpServer_a03a90e9240b336769f7ccd50fb0e12a9}} 
+\index{rock::TcpServer@{rock::TcpServer}!bind@{bind}}
+\index{bind@{bind}!rock::TcpServer@{rock::TcpServer}}
 \doxysubsubsection{bind()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily virtual bool sylar\+::\+Tcp\+Server\+::bind (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Address\+::ptr $>$ \&}]{addrs,  }\item[{std\+::vector$<$ Address\+::ptr $>$ \&}]{fails,  }\item[{bool}]{ssl = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+Tcp\+Server\+::bind (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Address\+::ptr $>$ \&}]{addrs,  }\item[{std\+::vector$<$ Address\+::ptr $>$ \&}]{fails,  }\item[{bool}]{ssl = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -161,11 +161,11 @@ T\+C\+P服务器封装
 \begin{DoxyReturn}{返回}
 是否绑定成功 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1TcpServer_a5949bf7f7d58aa0a3ca1e6a0c1e633c3}} 
-\index{sylar::TcpServer@{sylar::TcpServer}!bind@{bind}}
-\index{bind@{bind}!sylar::TcpServer@{sylar::TcpServer}}
+\mbox{\label{classrock_1_1TcpServer_a5949bf7f7d58aa0a3ca1e6a0c1e633c3}} 
+\index{rock::TcpServer@{rock::TcpServer}!bind@{bind}}
+\index{bind@{bind}!rock::TcpServer@{rock::TcpServer}}
 \doxysubsubsection{bind()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual bool sylar\+::\+Tcp\+Server\+::bind (\begin{DoxyParamCaption}\item[{sylar\+::\+Address\+::ptr}]{addr,  }\item[{bool}]{ssl = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+Tcp\+Server\+::bind (\begin{DoxyParamCaption}\item[{rock\+::\+Address\+::ptr}]{addr,  }\item[{bool}]{ssl = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -174,11 +174,11 @@ T\+C\+P服务器封装
 \begin{DoxyReturn}{返回}
 返回是否绑定成功 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1TcpServer_a20bde67a5274ff1db29890866ed54cc1}} 
-\index{sylar::TcpServer@{sylar::TcpServer}!start@{start}}
-\index{start@{start}!sylar::TcpServer@{sylar::TcpServer}}
+\mbox{\label{classrock_1_1TcpServer_a20bde67a5274ff1db29890866ed54cc1}} 
+\index{rock::TcpServer@{rock::TcpServer}!start@{start}}
+\index{start@{start}!rock::TcpServer@{rock::TcpServer}}
 \doxysubsubsection{start()}
-{\footnotesize\ttfamily virtual bool sylar\+::\+Tcp\+Server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual bool rock\+::\+Tcp\+Server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -191,4 +191,4 @@ T\+C\+P服务器封装
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ tcp\+\_\+server.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ tcp\+\_\+server.\+h}\end{DoxyCompactItemize}

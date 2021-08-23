@@ -1,7 +1,7 @@
-digraph "sylar::ZKClient::EventType"
+digraph "rock::ZKClient::EventType"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::ZKClient::EventType\n|+ CREATED\l+ DELETED\l+ CHANGED\l+ CHILD\l+ SESSION\l+ NOWATCHING\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::ZKClient::EventType\n|+ CREATED\l+ DELETED\l+ CHANGED\l+ CHILD\l+ SESSION\l+ NOWATCHING\l|}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

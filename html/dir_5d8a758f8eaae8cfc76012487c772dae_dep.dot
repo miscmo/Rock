@@ -1,9 +1,9 @@
-digraph "sylar/ds" {
+digraph "rock/ds" {
   compound=true
   node [ fontsize="10", fontname="Helvetica"];
   edge [ labelfontsize="10", labelfontname="Helvetica"];
   subgraph clusterdir_85140288eee94f6c1dbd59c496fa876b {
-    graph [ bgcolor="#ddddee", pencolor="black", label="sylar" fontname="Helvetica", fontsize="10", URL="dir_85140288eee94f6c1dbd59c496fa876b.html"]
+    graph [ bgcolor="#ddddee", pencolor="black", label="rock" fontname="Helvetica", fontsize="10", URL="dir_85140288eee94f6c1dbd59c496fa876b.html"]
   dir_5d8a758f8eaae8cfc76012487c772dae [shape=box, label="ds", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5d8a758f8eaae8cfc76012487c772dae.html"];
   }
 }

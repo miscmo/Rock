@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar/endian.h 文件参考</title>
+<title>rock: rock/endian.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">sylar</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_85140288eee94f6c1dbd59c496fa876b.html">rock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,48 +95,48 @@ endian.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
 <tr class="memitem:ab9babb6b43e7e2f3bbe8c1331e6b84e4"><td class="memItemLeft" align="right" valign="top"><a id="ab9babb6b43e7e2f3bbe8c1331e6b84e4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYLAR_LITTLE_ENDIAN</b>&#160;&#160;&#160;1</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROCK_LITTLE_ENDIAN</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ab9babb6b43e7e2f3bbe8c1331e6b84e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899f4656fd6368a0a76c68f9bd9f61d2"><td class="memItemLeft" align="right" valign="top"><a id="a899f4656fd6368a0a76c68f9bd9f61d2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYLAR_BIG_ENDIAN</b>&#160;&#160;&#160;2</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROCK_BIG_ENDIAN</b>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a899f4656fd6368a0a76c68f9bd9f61d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0e9ef7ed61054db4cf3cc83ee189253"><td class="memItemLeft" align="right" valign="top"><a id="ad0e9ef7ed61054db4cf3cc83ee189253"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SYLAR_BYTE_ORDER</b>&#160;&#160;&#160;SYLAR_BIG_ENDIAN</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROCK_BYTE_ORDER</b>&#160;&#160;&#160;ROCK_BIG_ENDIAN</td></tr>
 <tr class="separator:ad0e9ef7ed61054db4cf3cc83ee189253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:ab8dcd6ce4925d2a88159fdf438ad09b0"><td class="memTemplParams" colspan="2"><a id="ab8dcd6ce4925d2a88159fdf438ad09b0"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab8dcd6ce4925d2a88159fdf438ad09b0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint64_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#ab8dcd6ce4925d2a88159fdf438ad09b0">sylar::byteswap</a> (T value)</td></tr>
+<tr class="memitem:ab8dcd6ce4925d2a88159fdf438ad09b0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint64_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#ab8dcd6ce4925d2a88159fdf438ad09b0">rock::byteswap</a> (T value)</td></tr>
 <tr class="memdesc:ab8dcd6ce4925d2a88159fdf438ad09b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">8字节类型的字节序转化 <br /></td></tr>
 <tr class="separator:ab8dcd6ce4925d2a88159fdf438ad09b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed38b62ca30fd1770cfe557d0e55c106"><td class="memTemplParams" colspan="2"><a id="aed38b62ca30fd1770cfe557d0e55c106"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:aed38b62ca30fd1770cfe557d0e55c106"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint32_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#aed38b62ca30fd1770cfe557d0e55c106">sylar::byteswap</a> (T value)</td></tr>
+<tr class="memitem:aed38b62ca30fd1770cfe557d0e55c106"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint32_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#aed38b62ca30fd1770cfe557d0e55c106">rock::byteswap</a> (T value)</td></tr>
 <tr class="memdesc:aed38b62ca30fd1770cfe557d0e55c106"><td class="mdescLeft">&#160;</td><td class="mdescRight">4字节类型的字节序转化 <br /></td></tr>
 <tr class="separator:aed38b62ca30fd1770cfe557d0e55c106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acba7fd365af292a754b9b1155d6c1a52"><td class="memTemplParams" colspan="2"><a id="acba7fd365af292a754b9b1155d6c1a52"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:acba7fd365af292a754b9b1155d6c1a52"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint16_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#acba7fd365af292a754b9b1155d6c1a52">sylar::byteswap</a> (T value)</td></tr>
+<tr class="memitem:acba7fd365af292a754b9b1155d6c1a52"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; sizeof(T)==sizeof(uint16_t), T &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#acba7fd365af292a754b9b1155d6c1a52">rock::byteswap</a> (T value)</td></tr>
 <tr class="memdesc:acba7fd365af292a754b9b1155d6c1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">2字节类型的字节序转化 <br /></td></tr>
 <tr class="separator:acba7fd365af292a754b9b1155d6c1a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3c6efe9da95573435daf6bd0509d31"><td class="memTemplParams" colspan="2"><a id="ace3c6efe9da95573435daf6bd0509d31"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:ace3c6efe9da95573435daf6bd0509d31"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#ace3c6efe9da95573435daf6bd0509d31">sylar::byteswapOnLittleEndian</a> (T t)</td></tr>
+<tr class="memitem:ace3c6efe9da95573435daf6bd0509d31"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#ace3c6efe9da95573435daf6bd0509d31">rock::byteswapOnLittleEndian</a> (T t)</td></tr>
 <tr class="memdesc:ace3c6efe9da95573435daf6bd0509d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">只在小端机器上执行byteswap, 在大端机器上什么都不做 <br /></td></tr>
 <tr class="separator:ace3c6efe9da95573435daf6bd0509d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d290a9f2556bda1de644174b7cb12d8"><td class="memTemplParams" colspan="2"><a id="a6d290a9f2556bda1de644174b7cb12d8"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a6d290a9f2556bda1de644174b7cb12d8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#a6d290a9f2556bda1de644174b7cb12d8">sylar::byteswapOnBigEndian</a> (T t)</td></tr>
+<tr class="memitem:a6d290a9f2556bda1de644174b7cb12d8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="endian_8h.html#a6d290a9f2556bda1de644174b7cb12d8">rock::byteswapOnBigEndian</a> (T t)</td></tr>
 <tr class="memdesc:a6d290a9f2556bda1de644174b7cb12d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">只在大端机器上执行byteswap, 在小端机器上什么都不做 <br /></td></tr>
 <tr class="separator:a6d290a9f2556bda1de644174b7cb12d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>字节序操作函数(大端/小端) </p>
-<dl class="section author"><dt>作者</dt><dd>sylar.yin @email <a href="#" onclick="location.href='mai'+'lto:'+'564'+'62'+'827'+'6@'+'qq.'+'co'+'m'; return false;">56462<span style="display: none;">.nosp@m.</span>8276<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section author"><dt>作者</dt><dd>rock.yin @email <a href="#" onclick="location.href='mai'+'lto:'+'564'+'62'+'827'+'6@'+'qq.'+'co'+'m'; return false;">56462<span style="display: none;">.nosp@m.</span>8276<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section date"><dt>日期</dt><dd>2019-06-01 </dd></dl>
-<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2019年 sylar.yin All rights reserved (www.sylar.top) </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) 2019年 rock.yin All rights reserved (www.rock.top) </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

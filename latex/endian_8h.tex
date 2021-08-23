@@ -1,5 +1,5 @@
-\doxysection{sylar/endian.h 文件参考}
-\label{endian_8h}\index{sylar/endian.h@{sylar/endian.h}}
+\doxysection{rock/endian.h 文件参考}
+\label{endian_8h}\index{rock/endian.h@{rock/endian.h}}
 
 
 字节序操作函数(大端/小端)  
@@ -27,19 +27,19 @@ endian.\+h 的引用(Include)关系图\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\label{endian_8h_ab8dcd6ce4925d2a88159fdf438ad09b0}} 
-{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint64\+\_\+t), T $>$\+::type \textbf{ sylar\+::byteswap} (T value)
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint64\+\_\+t), T $>$\+::type \textbf{ rock\+::byteswap} (T value)
 \begin{DoxyCompactList}\small\item\em 8字节类型的字节序转化 \end{DoxyCompactList}\item 
 \mbox{\label{endian_8h_aed38b62ca30fd1770cfe557d0e55c106}} 
-{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint32\+\_\+t), T $>$\+::type \textbf{ sylar\+::byteswap} (T value)
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint32\+\_\+t), T $>$\+::type \textbf{ rock\+::byteswap} (T value)
 \begin{DoxyCompactList}\small\item\em 4字节类型的字节序转化 \end{DoxyCompactList}\item 
 \mbox{\label{endian_8h_acba7fd365af292a754b9b1155d6c1a52}} 
-{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint16\+\_\+t), T $>$\+::type \textbf{ sylar\+::byteswap} (T value)
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ sizeof(T)==sizeof(uint16\+\_\+t), T $>$\+::type \textbf{ rock\+::byteswap} (T value)
 \begin{DoxyCompactList}\small\item\em 2字节类型的字节序转化 \end{DoxyCompactList}\item 
 \mbox{\label{endian_8h_ace3c6efe9da95573435daf6bd0509d31}} 
-{\footnotesize template$<$class T $>$ }\\T \textbf{ sylar\+::byteswap\+On\+Little\+Endian} (T t)
+{\footnotesize template$<$class T $>$ }\\T \textbf{ rock\+::byteswap\+On\+Little\+Endian} (T t)
 \begin{DoxyCompactList}\small\item\em 只在小端机器上执行byteswap, 在大端机器上什么都不做 \end{DoxyCompactList}\item 
 \mbox{\label{endian_8h_a6d290a9f2556bda1de644174b7cb12d8}} 
-{\footnotesize template$<$class T $>$ }\\T \textbf{ sylar\+::byteswap\+On\+Big\+Endian} (T t)
+{\footnotesize template$<$class T $>$ }\\T \textbf{ rock\+::byteswap\+On\+Big\+Endian} (T t)
 \begin{DoxyCompactList}\small\item\em 只在大端机器上执行byteswap, 在小端机器上什么都不做 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -47,11 +47,11 @@ endian.\+h 的引用(Include)关系图\+:
 字节序操作函数(大端/小端) 
 
 \begin{DoxyAuthor}{作者}
-sylar.\+yin @email {\texttt{ 564628276@qq.\+com}} 
+rock.\+yin @email {\texttt{ 564628276@qq.\+com}} 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日期}
 2019-\/06-\/01 
 \end{DoxyDate}
 \begin{DoxyCopyright}{版权所有}
-Copyright (c) 2019年 sylar.\+yin All rights reserved (www.\+sylar.\+top) 
+Copyright (c) 2019年 rock.\+yin All rights reserved (www.\+rock.\+top) 
 \end{DoxyCopyright}

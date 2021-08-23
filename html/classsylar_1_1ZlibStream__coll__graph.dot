@@ -1,9 +1,9 @@
-digraph "sylar::ZlibStream"
+digraph "rock::ZlibStream"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::ZlibStream\n||+ ZlibStream()\l+ ~ZlibStream()\l+ read()\l+ read()\l+ write()\l+ write()\l+ close()\l+ flush()\l+ isFree()\l+ setFree()\l+ isEncode()\l+ setEndcode()\l+ getBuffers()\l+ getResult()\l+ getByteArray()\l+ CreateGzip()\l+ CreateZlib()\l+ CreateDeflate()\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::ZlibStream\n||+ ZlibStream()\l+ ~ZlibStream()\l+ read()\l+ read()\l+ write()\l+ write()\l+ close()\l+ flush()\l+ isFree()\l+ setFree()\l+ isEncode()\l+ setEndcode()\l+ getBuffers()\l+ getResult()\l+ getByteArray()\l+ CreateGzip()\l+ CreateZlib()\l+ CreateDeflate()\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{sylar::Stream\n||+ ~Stream()\l+ read()\l+ read()\l+ readFixSize()\l+ readFixSize()\l+ write()\l+ write()\l+ writeFixSize()\l+ writeFixSize()\l+ close()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1Stream.html",tooltip="流结构"];
+  Node2 [label="{rock::Stream\n||+ ~Stream()\l+ read()\l+ read()\l+ readFixSize()\l+ readFixSize()\l+ write()\l+ write()\l+ writeFixSize()\l+ writeFixSize()\l+ close()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1Stream.html",tooltip="流结构"];
 }

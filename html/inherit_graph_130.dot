@@ -6,5 +6,5 @@ digraph "类继承关系图"
   rankdir="LR";
   Node49 [label="SendCtx",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node49 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="sylar::RockStream::\lRockSendCtx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsylar_1_1RockStream_1_1RockSendCtx.html",tooltip=" "];
+  Node0 [label="rock::RockStream::\lRockSendCtx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrock_1_1RockStream_1_1RockSendCtx.html",tooltip=" "];
 }

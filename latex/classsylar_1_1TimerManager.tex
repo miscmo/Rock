@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Timer\+Manager类 参考}
-\label{classsylar_1_1TimerManager}\index{sylar::TimerManager@{sylar::TimerManager}}
+\doxysection{rock\+::Timer\+Manager类 参考}
+\label{classrock_1_1TimerManager}\index{rock::TimerManager@{rock::TimerManager}}
 
 
 定时器管理器  
@@ -11,52 +11,52 @@
 
 
 
-类 sylar\+::Timer\+Manager 继承关系图\+:
+类 rock\+::Timer\+Manager 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Timer\+Manager 的协作图\+:
+rock\+::Timer\+Manager 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TimerManager_afba04532d8da0367bf75be0c6dd248ac}} 
+\mbox{\label{classrock_1_1TimerManager_afba04532d8da0367bf75be0c6dd248ac}} 
 typedef \textbf{ R\+W\+Mutex} \textbf{ R\+W\+Mutex\+Type}
 \begin{DoxyCompactList}\small\item\em 读写锁类型 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TimerManager_a8d9b6ca1141d8db2d6b4134de57e0138}} 
+\mbox{\label{classrock_1_1TimerManager_a8d9b6ca1141d8db2d6b4134de57e0138}} 
 \textbf{ Timer\+Manager} ()
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TimerManager_a0412749adb5dbbe8692aad5d48306e70}} 
+\mbox{\label{classrock_1_1TimerManager_a0412749adb5dbbe8692aad5d48306e70}} 
 virtual \textbf{ $\sim$\+Timer\+Manager} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
 \textbf{ Timer\+::ptr} \textbf{ add\+Timer} (uint64\+\_\+t ms, std\+::function$<$ void()$>$ cb, bool recurring=false)
 \begin{DoxyCompactList}\small\item\em 添加定时器 \end{DoxyCompactList}\item 
 \textbf{ Timer\+::ptr} \textbf{ add\+Condition\+Timer} (uint64\+\_\+t ms, std\+::function$<$ void()$>$ cb, std\+::weak\+\_\+ptr$<$ void $>$ weak\+\_\+cond, bool recurring=false)
 \begin{DoxyCompactList}\small\item\em 添加条件定时器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TimerManager_a18e9ac0428af178d7196cad9c5971195}} 
+\mbox{\label{classrock_1_1TimerManager_a18e9ac0428af178d7196cad9c5971195}} 
 uint64\+\_\+t \textbf{ get\+Next\+Timer} ()
 \begin{DoxyCompactList}\small\item\em 到最近一个定时器执行的时间间隔(毫秒) \end{DoxyCompactList}\item 
 void \textbf{ list\+Expired\+Cb} (std\+::vector$<$ std\+::function$<$ void()$>$ $>$ \&cbs)
 \begin{DoxyCompactList}\small\item\em 获取需要执行的定时器的回调函数列表 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TimerManager_a1a41364b95f0eb1974fe4082c23bcc47}} 
+\mbox{\label{classrock_1_1TimerManager_a1a41364b95f0eb1974fe4082c23bcc47}} 
 bool \textbf{ has\+Timer} ()
 \begin{DoxyCompactList}\small\item\em 是否有定时器 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TimerManager_a96a52646d84fb3cc40032a2268695019}} 
+\mbox{\label{classrock_1_1TimerManager_a96a52646d84fb3cc40032a2268695019}} 
 virtual void \textbf{ on\+Timer\+Inserted\+At\+Front} ()=0
 \begin{DoxyCompactList}\small\item\em 当有新的定时器插入到定时器的首部,执行该函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1TimerManager_a13866b28bcf8b48d4b62fd5d32897d75}} 
+\mbox{\label{classrock_1_1TimerManager_a13866b28bcf8b48d4b62fd5d32897d75}} 
 void \textbf{ add\+Timer} (\textbf{ Timer\+::ptr} val, \textbf{ R\+W\+Mutex\+Type\+::\+Write\+Lock} \&lock)
 \begin{DoxyCompactList}\small\item\em 将定时器添加到管理器中 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1TimerManager_a50de43af5bed41f30c071d8cce0e81bc}} 
+\mbox{\label{classrock_1_1TimerManager_a50de43af5bed41f30c071d8cce0e81bc}} 
 class {\bfseries Timer}
 \end{DoxyCompactItemize}
 
@@ -65,11 +65,11 @@ class {\bfseries Timer}
 定时器管理器 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1TimerManager_a24f3ee669b8fe34e07fbba618e80b807}} 
-\index{sylar::TimerManager@{sylar::TimerManager}!addConditionTimer@{addConditionTimer}}
-\index{addConditionTimer@{addConditionTimer}!sylar::TimerManager@{sylar::TimerManager}}
+\mbox{\label{classrock_1_1TimerManager_a24f3ee669b8fe34e07fbba618e80b807}} 
+\index{rock::TimerManager@{rock::TimerManager}!addConditionTimer@{addConditionTimer}}
+\index{addConditionTimer@{addConditionTimer}!rock::TimerManager@{rock::TimerManager}}
 \doxysubsubsection{addConditionTimer()}
-{\footnotesize\ttfamily \textbf{ Timer\+::ptr} sylar\+::\+Timer\+Manager\+::add\+Condition\+Timer (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ms,  }\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{std\+::weak\+\_\+ptr$<$ void $>$}]{weak\+\_\+cond,  }\item[{bool}]{recurring = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Timer\+::ptr} rock\+::\+Timer\+Manager\+::add\+Condition\+Timer (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ms,  }\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{std\+::weak\+\_\+ptr$<$ void $>$}]{weak\+\_\+cond,  }\item[{bool}]{recurring = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
@@ -86,11 +86,11 @@ class {\bfseries Timer}
 \mbox{\texttt{ in}}  & {\em recurring} & 是否循环 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1TimerManager_a10eb57e69128959a148910b352345b2f}} 
-\index{sylar::TimerManager@{sylar::TimerManager}!addTimer@{addTimer}}
-\index{addTimer@{addTimer}!sylar::TimerManager@{sylar::TimerManager}}
+\mbox{\label{classrock_1_1TimerManager_a10eb57e69128959a148910b352345b2f}} 
+\index{rock::TimerManager@{rock::TimerManager}!addTimer@{addTimer}}
+\index{addTimer@{addTimer}!rock::TimerManager@{rock::TimerManager}}
 \doxysubsubsection{addTimer()}
-{\footnotesize\ttfamily \textbf{ Timer\+::ptr} sylar\+::\+Timer\+Manager\+::add\+Timer (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ms,  }\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{bool}]{recurring = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \textbf{ Timer\+::ptr} rock\+::\+Timer\+Manager\+::add\+Timer (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ms,  }\item[{std\+::function$<$ void()$>$}]{cb,  }\item[{bool}]{recurring = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
@@ -105,11 +105,11 @@ class {\bfseries Timer}
 \mbox{\texttt{ in}}  & {\em recurring} & 是否循环定时器 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1TimerManager_ab85e40a1d3fc4d3ce07037372afbcd28}} 
-\index{sylar::TimerManager@{sylar::TimerManager}!listExpiredCb@{listExpiredCb}}
-\index{listExpiredCb@{listExpiredCb}!sylar::TimerManager@{sylar::TimerManager}}
+\mbox{\label{classrock_1_1TimerManager_ab85e40a1d3fc4d3ce07037372afbcd28}} 
+\index{rock::TimerManager@{rock::TimerManager}!listExpiredCb@{listExpiredCb}}
+\index{listExpiredCb@{listExpiredCb}!rock::TimerManager@{rock::TimerManager}}
 \doxysubsubsection{listExpiredCb()}
-{\footnotesize\ttfamily void sylar\+::\+Timer\+Manager\+::list\+Expired\+Cb (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::function$<$ void()$>$ $>$ \&}]{cbs }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Timer\+Manager\+::list\+Expired\+Cb (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::function$<$ void()$>$ $>$ \&}]{cbs }\end{DoxyParamCaption})}
 
 
 
@@ -124,4 +124,4 @@ class {\bfseries Timer}
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ timer.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ timer.\+h}\end{DoxyCompactItemize}

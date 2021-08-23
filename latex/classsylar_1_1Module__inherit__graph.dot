@@ -1,11 +1,11 @@
-digraph "sylar::Module"
+digraph "rock::Module"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::Module\n|# m_name\l# m_version\l# m_filename\l# m_id\l# m_type\l|+ Module()\l+ ~Module()\l+ onBeforeArgsParse()\l+ onAfterArgsParse()\l+ onLoad()\l+ onUnload()\l+ onConnect()\l+ onDisconnect()\l+ onServerReady()\l+ onServerUp()\l和 10 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::Module\n|# m_name\l# m_version\l# m_filename\l# m_id\l# m_type\l|+ Module()\l+ ~Module()\l+ onBeforeArgsParse()\l+ onAfterArgsParse()\l+ onLoad()\l+ onUnload()\l+ onConnect()\l+ onDisconnect()\l+ onServerReady()\l+ onServerUp()\l和 10 更多...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
-  Node2 [label="{sylar::RockModule\n||+ RockModule()\l+ handleRockRequest()\l+ handleRockNotify()\l+ handleRequest()\l+ handleNotify()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RockModule.html",tooltip=" "];
+  Node2 [label="{rock::RockModule\n||+ RockModule()\l+ handleRockRequest()\l+ handleRockNotify()\l+ handleRequest()\l+ handleNotify()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1RockModule.html",tooltip=" "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal"];
-  Node3 [label="{sylar::ns::NameServerModule\n||+ NameServerModule()\l+ handleRockRequest()\l+ handleRockNotify()\l+ onConnect()\l+ onDisconnect()\l+ statusString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ns_1_1NameServerModule.html",tooltip=" "];
+  Node3 [label="{rock::ns::NameServerModule\n||+ NameServerModule()\l+ handleRockRequest()\l+ handleRockNotify()\l+ onConnect()\l+ onDisconnect()\l+ statusString()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ns_1_1NameServerModule.html",tooltip=" "];
 }

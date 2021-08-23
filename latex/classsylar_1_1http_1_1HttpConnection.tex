@@ -1,5 +1,5 @@
-\doxysection{sylar\+::http\+::Http\+Connection类 参考}
-\label{classsylar_1_1http_1_1HttpConnection}\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\doxysection{rock\+::http\+::Http\+Connection类 参考}
+\label{classrock_1_1http_1_1HttpConnection}\index{rock::http::HttpConnection@{rock::http::HttpConnection}}
 
 
 H\+T\+T\+P客户端类  
@@ -11,16 +11,16 @@ H\+T\+T\+P客户端类
 
 
 
-类 sylar\+::http\+::Http\+Connection 继承关系图\+:
+类 rock\+::http\+::Http\+Connection 继承关系图\+:
 % FIG 0
 
 
-sylar\+::http\+::Http\+Connection 的协作图\+:
+rock\+::http\+::Http\+Connection 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_adb1452e766d3f42e950429300810af23}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnection_adb1452e766d3f42e950429300810af23}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Connection} $>$ \textbf{ ptr}
 \begin{DoxyCompactList}\small\item\em H\+T\+T\+P客户端类智能指针 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -28,10 +28,10 @@ typedef std\+::shared\+\_\+ptr$<$ \textbf{ Http\+Connection} $>$ \textbf{ ptr}
 \item 
 \textbf{ Http\+Connection} (Socket\+::ptr sock, bool owner=true)
 \begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_afb1ec3e62917681aae73792d5d41e0e2}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnection_afb1ec3e62917681aae73792d5d41e0e2}} 
 \textbf{ $\sim$\+Http\+Connection} ()
 \begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_ab7e211bcd7cf7b3bb54bd56e398c6511}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnection_ab7e211bcd7cf7b3bb54bd56e398c6511}} 
 \textbf{ Http\+Response\+::ptr} \textbf{ recv\+Response} ()
 \begin{DoxyCompactList}\small\item\em 接收\+H\+T\+T\+P响应 \end{DoxyCompactList}\item 
 int \textbf{ send\+Request} (\textbf{ Http\+Request\+::ptr} req)
@@ -56,7 +56,7 @@ static \textbf{ Http\+Result\+::ptr} \textbf{ Do\+Request} (\textbf{ Http\+Reque
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_ab0ebe12cfc12798e7a08d6de4e1c849f}} 
+\mbox{\label{classrock_1_1http_1_1HttpConnection_ab0ebe12cfc12798e7a08d6de4e1c849f}} 
 class {\bfseries Http\+Connection\+Pool}
 \end{DoxyCompactItemize}
 \doxysubsection*{额外继承的成员函数}
@@ -66,11 +66,11 @@ class {\bfseries Http\+Connection\+Pool}
 H\+T\+T\+P客户端类 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a2a25ae52fb5ff7c6bc1f38bf227187da}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!HttpConnection@{HttpConnection}}
-\index{HttpConnection@{HttpConnection}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a2a25ae52fb5ff7c6bc1f38bf227187da}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!HttpConnection@{HttpConnection}}
+\index{HttpConnection@{HttpConnection}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{HttpConnection()}
-{\footnotesize\ttfamily sylar\+::http\+::\+Http\+Connection\+::\+Http\+Connection (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::http\+::\+Http\+Connection\+::\+Http\+Connection (\begin{DoxyParamCaption}\item[{Socket\+::ptr}]{sock,  }\item[{bool}]{owner = {\ttfamily true} }\end{DoxyParamCaption})}
 
 
 
@@ -86,11 +86,11 @@ H\+T\+T\+P客户端类
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a694b4db16f7a23f02626eff5ffd5c4e3}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoGet@{DoGet}}
-\index{DoGet@{DoGet}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a694b4db16f7a23f02626eff5ffd5c4e3}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoGet@{DoGet}}
+\index{DoGet@{DoGet}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoGet()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -110,11 +110,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a7561a0ba7edeab60930d81b08ee15fd2}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoGet@{DoGet}}
-\index{DoGet@{DoGet}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a7561a0ba7edeab60930d81b08ee15fd2}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoGet@{DoGet}}
+\index{DoGet@{DoGet}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoGet()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Get (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Get (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -134,11 +134,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a488acf9e582f69dc2f643a3e9ded0d22}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoPost@{DoPost}}
-\index{DoPost@{DoPost}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a488acf9e582f69dc2f643a3e9ded0d22}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoPost@{DoPost}}
+\index{DoPost@{DoPost}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoPost()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -158,11 +158,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a1691f5485c6a08402e7f72746fc6f320}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoPost@{DoPost}}
-\index{DoPost@{DoPost}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a1691f5485c6a08402e7f72746fc6f320}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoPost@{DoPost}}
+\index{DoPost@{DoPost}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoPost()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Post (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Post (\begin{DoxyParamCaption}\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -182,11 +182,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_abf656bf16aefcf3c5962e452789309e0}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoRequest@{DoRequest}}
-\index{DoRequest@{DoRequest}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_abf656bf16aefcf3c5962e452789309e0}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoRequest@{DoRequest}}
+\index{DoRequest@{DoRequest}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoRequest()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -208,11 +208,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a4a1dde7d817fdbbffe4266dec338a83e}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoRequest@{DoRequest}}
-\index{DoRequest@{DoRequest}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a4a1dde7d817fdbbffe4266dec338a83e}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoRequest@{DoRequest}}
+\index{DoRequest@{DoRequest}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoRequest()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Method}}]{method,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{headers = {\ttfamily \{\}},  }\item[{const std\+::string \&}]{body = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -234,11 +234,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_abeb80e4053a9baac4c18be0c6ef7a545}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!DoRequest@{DoRequest}}
-\index{DoRequest@{DoRequest}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_abeb80e4053a9baac4c18be0c6ef7a545}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!DoRequest@{DoRequest}}
+\index{DoRequest@{DoRequest}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{DoRequest()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} sylar\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \textbf{ Http\+Result\+::ptr} rock\+::http\+::\+Http\+Connection\+::\+Do\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req,  }\item[{\textbf{ Uri\+::ptr}}]{uri,  }\item[{uint64\+\_\+t}]{timeout\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -256,11 +256,11 @@ H\+T\+T\+P客户端类
 \begin{DoxyReturn}{返回}
 返回\+H\+T\+T\+P结果结构体 
 \end{DoxyReturn}
-\mbox{\label{classsylar_1_1http_1_1HttpConnection_a32e070e43231c968d46cb7d359b14a57}} 
-\index{sylar::http::HttpConnection@{sylar::http::HttpConnection}!sendRequest@{sendRequest}}
-\index{sendRequest@{sendRequest}!sylar::http::HttpConnection@{sylar::http::HttpConnection}}
+\mbox{\label{classrock_1_1http_1_1HttpConnection_a32e070e43231c968d46cb7d359b14a57}} 
+\index{rock::http::HttpConnection@{rock::http::HttpConnection}!sendRequest@{sendRequest}}
+\index{sendRequest@{sendRequest}!rock::http::HttpConnection@{rock::http::HttpConnection}}
 \doxysubsubsection{sendRequest()}
-{\footnotesize\ttfamily int sylar\+::http\+::\+Http\+Connection\+::send\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int rock\+::http\+::\+Http\+Connection\+::send\+Request (\begin{DoxyParamCaption}\item[{\textbf{ Http\+Request\+::ptr}}]{req }\end{DoxyParamCaption})}
 
 
 
@@ -275,4 +275,4 @@ H\+T\+T\+P客户端类
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/http/\textbf{ http\+\_\+connection.\+h}\end{DoxyCompactItemize}
+rock/http/\textbf{ http\+\_\+connection.\+h}\end{DoxyCompactItemize}

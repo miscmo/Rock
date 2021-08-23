@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::Config类 参考</title>
+<title>rock: rock::Config类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,25 +61,25 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1Config.html">Config</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><a class="el" href="classrock_1_1Config.html">Config</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
-<a href="classsylar_1_1Config-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1Config-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::Config类 参考</div>  </div>
+<div class="title">rock::Config类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>ConfigVar的管理类  
- <a href="classsylar_1_1Config.html#details">更多...</a></p>
+ <a href="classrock_1_1Config.html#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="config_8h_source.html">config.h</a>&gt;</code></p>
 <div class="dynheader">
-sylar::Config 的协作图:</div>
+rock::Config 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
@@ -91,32 +91,32 @@ Public 类型</h2></td></tr>
 typedef std::unordered_map&lt; std::string, ConfigVarBase::ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ConfigVarMap</b></td></tr>
 <tr class="separator:acca4c31405d485cc5684130721ed4767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc77a8ebc99d0b267ea9ca762449a65c"><td class="memItemLeft" align="right" valign="top"><a id="afc77a8ebc99d0b267ea9ca762449a65c"></a>
-typedef <a class="el" href="classsylar_1_1RWMutex.html">RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
+typedef <a class="el" href="classrock_1_1RWMutex.html">RWMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RWMutexType</b></td></tr>
 <tr class="separator:afc77a8ebc99d0b267ea9ca762449a65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classsylar_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt;::ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#af4ae13dc6d932b1ecde5a6851c34e4f7">Lookup</a> (const std::string &amp;name, const T &amp;default_value, const std::string &amp;description=&quot;&quot;)</td></tr>
-<tr class="memdesc:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取/创建对应参数名的配置参数  <a href="classsylar_1_1Config.html#af4ae13dc6d932b1ecde5a6851c34e4f7">更多...</a><br /></td></tr>
+<tr class="memitem:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classrock_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt;::ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#af4ae13dc6d932b1ecde5a6851c34e4f7">Lookup</a> (const std::string &amp;name, const T &amp;default_value, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取/创建对应参数名的配置参数  <a href="classrock_1_1Config.html#af4ae13dc6d932b1ecde5a6851c34e4f7">更多...</a><br /></td></tr>
 <tr class="separator:af4ae13dc6d932b1ecde5a6851c34e4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8756af787939964e5d99343549e9b9cd"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a8756af787939964e5d99343549e9b9cd"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classsylar_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt;::ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#a8756af787939964e5d99343549e9b9cd">Lookup</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a8756af787939964e5d99343549e9b9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数  <a href="classsylar_1_1Config.html#a8756af787939964e5d99343549e9b9cd">更多...</a><br /></td></tr>
+<tr class="memitem:a8756af787939964e5d99343549e9b9cd"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classrock_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt;::ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#a8756af787939964e5d99343549e9b9cd">Lookup</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a8756af787939964e5d99343549e9b9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数  <a href="classrock_1_1Config.html#a8756af787939964e5d99343549e9b9cd">更多...</a><br /></td></tr>
 <tr class="separator:a8756af787939964e5d99343549e9b9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe9b06f2309a0e63f325dfcfa9e0ee27"><td class="memItemLeft" align="right" valign="top"><a id="afe9b06f2309a0e63f325dfcfa9e0ee27"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#afe9b06f2309a0e63f325dfcfa9e0ee27">LoadFromYaml</a> (const YAML::Node &amp;root)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#afe9b06f2309a0e63f325dfcfa9e0ee27">LoadFromYaml</a> (const YAML::Node &amp;root)</td></tr>
 <tr class="memdesc:afe9b06f2309a0e63f325dfcfa9e0ee27"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用YAML::Node初始化配置模块 <br /></td></tr>
 <tr class="separator:afe9b06f2309a0e63f325dfcfa9e0ee27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd34d25c4b3b597407138f451a3db6f"><td class="memItemLeft" align="right" valign="top"><a id="a5fd34d25c4b3b597407138f451a3db6f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#a5fd34d25c4b3b597407138f451a3db6f">LoadFromConfDir</a> (const std::string &amp;path, bool force=false)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#a5fd34d25c4b3b597407138f451a3db6f">LoadFromConfDir</a> (const std::string &amp;path, bool force=false)</td></tr>
 <tr class="memdesc:a5fd34d25c4b3b597407138f451a3db6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载path文件夹里面的配置文件 <br /></td></tr>
 <tr class="separator:a5fd34d25c4b3b597407138f451a3db6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4686fe9cdfadd0e404004c5b63b7fe33"><td class="memItemLeft" align="right" valign="top">static ConfigVarBase::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#a4686fe9cdfadd0e404004c5b63b7fe33">LookupBase</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a4686fe9cdfadd0e404004c5b63b7fe33"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数,返回配置参数的基类  <a href="classsylar_1_1Config.html#a4686fe9cdfadd0e404004c5b63b7fe33">更多...</a><br /></td></tr>
+<tr class="memitem:a4686fe9cdfadd0e404004c5b63b7fe33"><td class="memItemLeft" align="right" valign="top">static ConfigVarBase::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#a4686fe9cdfadd0e404004c5b63b7fe33">LookupBase</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a4686fe9cdfadd0e404004c5b63b7fe33"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数,返回配置参数的基类  <a href="classrock_1_1Config.html#a4686fe9cdfadd0e404004c5b63b7fe33">更多...</a><br /></td></tr>
 <tr class="separator:a4686fe9cdfadd0e404004c5b63b7fe33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeca2a705605dfae2e80c4f94b3689eee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Config.html#aeca2a705605dfae2e80c4f94b3689eee">Visit</a> (std::function&lt; void(ConfigVarBase::ptr)&gt; cb)</td></tr>
-<tr class="memdesc:aeca2a705605dfae2e80c4f94b3689eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历配置模块里面所有配置项  <a href="classsylar_1_1Config.html#aeca2a705605dfae2e80c4f94b3689eee">更多...</a><br /></td></tr>
+<tr class="memitem:aeca2a705605dfae2e80c4f94b3689eee"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Config.html#aeca2a705605dfae2e80c4f94b3689eee">Visit</a> (std::function&lt; void(ConfigVarBase::ptr)&gt; cb)</td></tr>
+<tr class="memdesc:aeca2a705605dfae2e80c4f94b3689eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历配置模块里面所有配置项  <a href="classrock_1_1Config.html#aeca2a705605dfae2e80c4f94b3689eee">更多...</a><br /></td></tr>
 <tr class="separator:aeca2a705605dfae2e80c4f94b3689eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -135,7 +135,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classsylar_1_1ConfigVar.html">ConfigVar</a>&lt;T&gt;::ptr sylar::Config::Lookup </td>
+          <td class="memname">static <a class="el" href="classrock_1_1ConfigVar.html">ConfigVar</a>&lt;T&gt;::ptr rock::Config::Lookup </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -172,7 +172,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classsylar_1_1ConfigVar.html">ConfigVar</a>&lt;T&gt;::ptr sylar::Config::Lookup </td>
+          <td class="memname">static <a class="el" href="classrock_1_1ConfigVar.html">ConfigVar</a>&lt;T&gt;::ptr rock::Config::Lookup </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -231,7 +231,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static ConfigVarBase::ptr sylar::Config::LookupBase </td>
+          <td class="memname">static ConfigVarBase::ptr rock::Config::LookupBase </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -265,7 +265,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void sylar::Config::Visit </td>
+          <td class="memname">static void rock::Config::Visit </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void(ConfigVarBase::ptr)&gt;&#160;</td>
           <td class="paramname"><em>cb</em></td><td>)</td>
@@ -290,7 +290,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/<a class="el" href="config_8h_source.html">config.h</a></li>
+<li>rock/<a class="el" href="config_8h_source.html">config.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

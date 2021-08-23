@@ -1,65 +1,65 @@
-\doxysection{sylar\+::ds\+::Dict$<$ K, V, Pos\+Hash $>$ 模板类 参考}
-\label{classsylar_1_1ds_1_1Dict}\index{sylar::ds::Dict$<$ K, V, PosHash $>$@{sylar::ds::Dict$<$ K, V, PosHash $>$}}
+\doxysection{rock\+::ds\+::Dict$<$ K, V, Pos\+Hash $>$ 模板类 参考}
+\label{classrock_1_1ds_1_1Dict}\index{rock::ds::Dict$<$ K, V, PosHash $>$@{rock::ds::Dict$<$ K, V, PosHash $>$}}
 
 
-sylar\+::ds\+::Dict$<$ K, V, Pos\+Hash $>$ 的协作图\+:
+rock\+::ds\+::Dict$<$ K, V, Pos\+Hash $>$ 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a5c5b1a086c40bb01f6450eb93c339fb1}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a5c5b1a086c40bb01f6450eb93c339fb1}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Dict} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_ab3d7a07843af7904f6edec826a9b1ed5}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_ab3d7a07843af7904f6edec826a9b1ed5}} 
 typedef std\+::function$<$ bool(const K \&k, const V $\ast$v, size\+\_\+t size)$>$ {\bfseries callback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a126d783fc90d6bfd420d54e70c31b754}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a126d783fc90d6bfd420d54e70c31b754}} 
 {\bfseries Dict} (const uint32\+\_\+t \&size=0)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a0803f49023068eceddf5f80f2ad0936e}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a0803f49023068eceddf5f80f2ad0936e}} 
 \textbf{ Shared\+Array}$<$ V $>$ {\bfseries get} (const K \&k, bool duplicate=true)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a746b5127b3d966ee90e1a8f36b02cede}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a746b5127b3d966ee90e1a8f36b02cede}} 
 bool {\bfseries get} (const K \&k, std\+::vector$<$ V $>$ \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a430b31d038130275ef73efab87014157}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a430b31d038130275ef73efab87014157}} 
 bool {\bfseries exists} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_af14f95faf075206b4b2cc482c522d275}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_af14f95faf075206b4b2cc482c522d275}} 
 bool {\bfseries insert} (const K \&k, const V $\ast$v, const uint32\+\_\+t \&size)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_aa8b83d15793706f4fcfd46c8508f1f8a}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_aa8b83d15793706f4fcfd46c8508f1f8a}} 
 void {\bfseries foreach} (callback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a7e38dcbcd83d83823e35526c2f069a28}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a7e38dcbcd83d83823e35526c2f069a28}} 
 uint64\+\_\+t {\bfseries get\+Total} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_abcd5727dda9c18ff4f543b7fbd0323c1}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_abcd5727dda9c18ff4f543b7fbd0323c1}} 
 bool {\bfseries del} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_af9a18ee09aae2918d8b7e93f5dfe919f}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_af9a18ee09aae2918d8b7e93f5dfe919f}} 
 void {\bfseries rehash} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_af41dcf3fd198617587d54509321b9e59}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_af41dcf3fd198617587d54509321b9e59}} 
 std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a5d0bfa846727eeea50189ec512edec43}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a5d0bfa846727eeea50189ec512edec43}} 
 bool {\bfseries write\+To} (std\+::ostream \&os, uint64\+\_\+t speed=-\/1)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_aac9efdf0d568a7789f431f541d4c81bb}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_aac9efdf0d568a7789f431f541d4c81bb}} 
 bool {\bfseries read\+From} (std\+::istream \&is, uint64\+\_\+t speed=-\/1)
 \end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1Dict_a30d3a9e70733f31d1943087ae8fecd90}} 
+\mbox{\label{classrock_1_1ds_1_1Dict_a30d3a9e70733f31d1943087ae8fecd90}} 
 class {\bfseries String\+Dict}
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/ds/dict.\+h\end{DoxyCompactItemize}
+rock/ds/dict.\+h\end{DoxyCompactItemize}

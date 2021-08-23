@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::http::FunctionWSServlet类 参考</title>
+<title>rock: rock::http::FunctionWSServlet类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classsylar_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><b>http</b></li><li class="navelem"><a class="el" href="classrock_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,19 +69,19 @@ $(function() {
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
-<a href="classsylar_1_1http_1_1FunctionWSServlet-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1http_1_1FunctionWSServlet-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::http::FunctionWSServlet类 参考</div>  </div>
+<div class="title">rock::http::FunctionWSServlet类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-类 sylar::http::FunctionWSServlet 继承关系图:</div>
+类 rock::http::FunctionWSServlet 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div class="dynheader">
-sylar::http::FunctionWSServlet 的协作图:</div>
+rock::http::FunctionWSServlet 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 -->
 </div>
@@ -90,26 +90,26 @@ sylar::http::FunctionWSServlet 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:aca0ad02ae09a51869567cab61c51d4f0"><td class="memItemLeft" align="right" valign="top"><a id="aca0ad02ae09a51869567cab61c51d4f0"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:aca0ad02ae09a51869567cab61c51d4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496254e3af2c71143d1129b872853910"><td class="memItemLeft" align="right" valign="top"><a id="a496254e3af2c71143d1129b872853910"></a>
-typedef std::function&lt; int32_t(<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header,sylar::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>on_connect_cb</b></td></tr>
+typedef std::function&lt; int32_t(<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header,rock::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>on_connect_cb</b></td></tr>
 <tr class="separator:a496254e3af2c71143d1129b872853910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000c8a2c572f17739f8900fd094b8556"><td class="memItemLeft" align="right" valign="top"><a id="a000c8a2c572f17739f8900fd094b8556"></a>
-typedef std::function&lt; int32_t(<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header,sylar::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>on_close_cb</b></td></tr>
+typedef std::function&lt; int32_t(<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header,rock::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>on_close_cb</b></td></tr>
 <tr class="separator:a000c8a2c572f17739f8900fd094b8556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bad810dfc329136755f89e2e2da730d"><td class="memItemLeft" align="right" valign="top"><a id="a6bad810dfc329136755f89e2e2da730d"></a>
-typedef std::function&lt; int32_t(<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header,sylar::http::WSFrameMessage::ptr msg,sylar::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b></td></tr>
+typedef std::function&lt; int32_t(<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header,rock::http::WSFrameMessage::ptr msg,rock::http::WSSession::ptr session)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>callback</b></td></tr>
 <tr class="separator:a6bad810dfc329136755f89e2e2da730d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classsylar_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1http_1_1WSServlet.html">sylar::http::WSServlet</a></td></tr>
-<tr class="memitem:adce8970b8a12e17a62f828be4786bc2c inherit pub_types_classsylar_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="adce8970b8a12e17a62f828be4786bc2c"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1WSServlet.html">WSServlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
-<tr class="separator:adce8970b8a12e17a62f828be4786bc2c inherit pub_types_classsylar_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classsylar_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsylar_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></td></tr>
-<tr class="memitem:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classsylar_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="af428473e4ff0e3dbe411ba95d8dd749f"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1http_1_1Servlet.html">Servlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a></td></tr>
-<tr class="memdesc:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classsylar_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">智能指针类型定义 <br /></td></tr>
-<tr class="separator:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classsylar_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classrock_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classrock_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classrock_1_1http_1_1WSServlet.html">rock::http::WSServlet</a></td></tr>
+<tr class="memitem:adce8970b8a12e17a62f828be4786bc2c inherit pub_types_classrock_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="adce8970b8a12e17a62f828be4786bc2c"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1http_1_1WSServlet.html">WSServlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+<tr class="separator:adce8970b8a12e17a62f828be4786bc2c inherit pub_types_classrock_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classrock_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classrock_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classrock_1_1http_1_1Servlet.html">rock::http::Servlet</a></td></tr>
+<tr class="memitem:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classrock_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="af428473e4ff0e3dbe411ba95d8dd749f"></a>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1http_1_1Servlet.html">Servlet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1Servlet.html#af428473e4ff0e3dbe411ba95d8dd749f">ptr</a></td></tr>
+<tr class="memdesc:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classrock_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">智能指针类型定义 <br /></td></tr>
+<tr class="separator:af428473e4ff0e3dbe411ba95d8dd749f inherit pub_types_classrock_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
@@ -117,36 +117,36 @@ Public 成员函数</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FunctionWSServlet</b> (callback cb, on_connect_cb connect_cb=nullptr, on_close_cb close_cb=nullptr)</td></tr>
 <tr class="separator:a3f0535ee0f6625457d00afdfebd50e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a3b1de3147023a51b7543e4d643e77"><td class="memItemLeft" align="right" valign="top"><a id="ad0a3b1de3147023a51b7543e4d643e77"></a>
-virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>onConnect</b> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header, sylar::http::WSSession::ptr session) override</td></tr>
+virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>onConnect</b> (<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header, rock::http::WSSession::ptr session) override</td></tr>
 <tr class="separator:ad0a3b1de3147023a51b7543e4d643e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afccc1f87fc4334bd32ed049b1f19d436"><td class="memItemLeft" align="right" valign="top"><a id="afccc1f87fc4334bd32ed049b1f19d436"></a>
-virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>onClose</b> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header, sylar::http::WSSession::ptr session) override</td></tr>
+virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>onClose</b> (<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header, rock::http::WSSession::ptr session) override</td></tr>
 <tr class="separator:afccc1f87fc4334bd32ed049b1f19d436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97841a35ba17f341ba97c7f04a993333"><td class="memItemLeft" align="right" valign="top"><a id="a97841a35ba17f341ba97c7f04a993333"></a>
-virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>handle</b> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> header, sylar::http::WSFrameMessage::ptr msg, sylar::http::WSSession::ptr session) override</td></tr>
+virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>handle</b> (<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> header, rock::http::WSFrameMessage::ptr msg, rock::http::WSSession::ptr session) override</td></tr>
 <tr class="separator:a97841a35ba17f341ba97c7f04a993333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classsylar_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1http_1_1WSServlet.html">sylar::http::WSServlet</a></td></tr>
-<tr class="memitem:af9c7764b7d584f53dd1e2bf6e57090c4 inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="af9c7764b7d584f53dd1e2bf6e57090c4"></a>
+<tr class="inherit_header pub_methods_classrock_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrock_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classrock_1_1http_1_1WSServlet.html">rock::http::WSServlet</a></td></tr>
+<tr class="memitem:af9c7764b7d584f53dd1e2bf6e57090c4 inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="af9c7764b7d584f53dd1e2bf6e57090c4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>WSServlet</b> (const std::string &amp;name)</td></tr>
-<tr class="separator:af9c7764b7d584f53dd1e2bf6e57090c4 inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a> (<a class="el" href="classsylar_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">sylar::http::HttpRequest::ptr</a> request, <a class="el" href="classsylar_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">sylar::http::HttpResponse::ptr</a> response, <a class="el" href="classsylar_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">sylar::http::HttpSession::ptr</a> session) override</td></tr>
-<tr class="memdesc:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理请求  <a href="classsylar_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">更多...</a><br /></td></tr>
-<tr class="separator:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a192f73da956328722d687b6e599c9 inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="ab9a192f73da956328722d687b6e599c9"></a>
+<tr class="separator:af9c7764b7d584f53dd1e2bf6e57090c4 inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">handle</a> (<a class="el" href="classrock_1_1http_1_1HttpRequest.html#a04b3c9ae1818394b618e602b3ba835b8">rock::http::HttpRequest::ptr</a> request, <a class="el" href="classrock_1_1http_1_1HttpResponse.html#a69535456f2042c35c1a2758fc79f08ca">rock::http::HttpResponse::ptr</a> response, <a class="el" href="classrock_1_1http_1_1HttpSession.html#aa4a912ed5c1f8eaacabc9c6a499058cf">rock::http::HttpSession::ptr</a> session) override</td></tr>
+<tr class="memdesc:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理请求  <a href="classrock_1_1http_1_1WSServlet.html#aace63a58ad55a539d40a64d4de8061ca">更多...</a><br /></td></tr>
+<tr class="separator:aace63a58ad55a539d40a64d4de8061ca inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a192f73da956328722d687b6e599c9 inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="ab9a192f73da956328722d687b6e599c9"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="separator:ab9a192f73da956328722d687b6e599c9 inherit pub_methods_classsylar_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classsylar_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsylar_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></td></tr>
-<tr class="memitem:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classsylar_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">更多...</a><br /></td></tr>
-<tr class="separator:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="a77cde49edee5158fd7259c9a01c0b7b1"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">~Servlet</a> ()</td></tr>
-<tr class="memdesc:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
-<tr class="separator:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="aaf499b23f91cbe4227e6dfc79724bf9c"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">getName</a> () const</td></tr>
-<tr class="memdesc:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Servlet名称 <br /></td></tr>
-<tr class="separator:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classsylar_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ab9a192f73da956328722d687b6e599c9 inherit pub_methods_classrock_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classrock_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrock_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classrock_1_1http_1_1Servlet.html">rock::http::Servlet</a></td></tr>
+<tr class="memitem:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">Servlet</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classrock_1_1http_1_1Servlet.html#af80c04c87c587133b721c017f22922d3">更多...</a><br /></td></tr>
+<tr class="separator:af80c04c87c587133b721c017f22922d3 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="a77cde49edee5158fd7259c9a01c0b7b1"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1Servlet.html#a77cde49edee5158fd7259c9a01c0b7b1">~Servlet</a> ()</td></tr>
+<tr class="memdesc:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
+<tr class="separator:a77cde49edee5158fd7259c9a01c0b7b1 inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="aaf499b23f91cbe4227e6dfc79724bf9c"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1Servlet.html#aaf499b23f91cbe4227e6dfc79724bf9c">getName</a> () const</td></tr>
+<tr class="memdesc:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Servlet名称 <br /></td></tr>
+<tr class="separator:aaf499b23f91cbe4227e6dfc79724bf9c inherit pub_methods_classrock_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -159,18 +159,18 @@ on_connect_cb&#160;</td><td class="memItemRight" valign="bottom"><b>m_onConnect<
 <tr class="memitem:aeb0297f2637deb7fcbddeb894238a941"><td class="memItemLeft" align="right" valign="top"><a id="aeb0297f2637deb7fcbddeb894238a941"></a>
 on_close_cb&#160;</td><td class="memItemRight" valign="bottom"><b>m_onClose</b></td></tr>
 <tr class="separator:aeb0297f2637deb7fcbddeb894238a941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classsylar_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1http_1_1WSServlet.html">sylar::http::WSServlet</a></td></tr>
-<tr class="memitem:aebab7f0981e661f83550b745616724f8 inherit pro_attribs_classsylar_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="aebab7f0981e661f83550b745616724f8"></a>
+<tr class="inherit_header pro_attribs_classrock_1_1http_1_1WSServlet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classrock_1_1http_1_1WSServlet')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classrock_1_1http_1_1WSServlet.html">rock::http::WSServlet</a></td></tr>
+<tr class="memitem:aebab7f0981e661f83550b745616724f8 inherit pro_attribs_classrock_1_1http_1_1WSServlet"><td class="memItemLeft" align="right" valign="top"><a id="aebab7f0981e661f83550b745616724f8"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
-<tr class="separator:aebab7f0981e661f83550b745616724f8 inherit pro_attribs_classsylar_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classsylar_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsylar_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classsylar_1_1http_1_1Servlet.html">sylar::http::Servlet</a></td></tr>
-<tr class="memitem:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classsylar_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="aa7f018f7eee599cf1c2d3ac3591b538e"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a></td></tr>
-<tr class="memdesc:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classsylar_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">名称 <br /></td></tr>
-<tr class="separator:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classsylar_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aebab7f0981e661f83550b745616724f8 inherit pro_attribs_classrock_1_1http_1_1WSServlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classrock_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classrock_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classrock_1_1http_1_1Servlet.html">rock::http::Servlet</a></td></tr>
+<tr class="memitem:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classrock_1_1http_1_1Servlet"><td class="memItemLeft" align="right" valign="top"><a id="aa7f018f7eee599cf1c2d3ac3591b538e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1http_1_1Servlet.html#aa7f018f7eee599cf1c2d3ac3591b538e">m_name</a></td></tr>
+<tr class="memdesc:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classrock_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">名称 <br /></td></tr>
+<tr class="separator:aa7f018f7eee599cf1c2d3ac3591b538e inherit pro_attribs_classrock_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/http/<a class="el" href="ws__servlet_8h_source.html">ws_servlet.h</a></li>
+<li>rock/http/<a class="el" href="ws__servlet_8h_source.html">ws_servlet.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

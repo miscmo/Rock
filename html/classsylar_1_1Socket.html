@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::Socket类 参考</title>
+<title>rock: rock::Socket类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><a class="el" href="classsylar_1_1Socket.html">Socket</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><a class="el" href="classrock_1_1Socket.html">Socket</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,24 +71,24 @@ $(function() {
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pro-methods">Protected 成员函数</a> &#124;
 <a href="#pro-attribs">Protected 属性</a> &#124;
-<a href="classsylar_1_1Socket-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1Socket-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::Socket类 参考</div>  </div>
+<div class="title">rock::Socket类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Socket封装类  
- <a href="classsylar_1_1Socket.html#details">更多...</a></p>
+ <a href="classrock_1_1Socket.html#details">更多...</a></p>
 
 <p><code>#include &lt;<a class="el" href="socket_8h_source.html">socket.h</a>&gt;</code></p>
 <div class="dynheader">
-类 sylar::Socket 继承关系图:</div>
+类 rock::Socket 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div class="dynheader">
-sylar::Socket 的协作图:</div>
+rock::Socket 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 -->
 </div>
@@ -96,242 +96,242 @@ sylar::Socket 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
-<tr class="memitem:a1800cc78da1f58204b5f3778679d0628"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">Type</a> { <a class="el" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6">TCP</a> = SOCK_STREAM, 
-<a class="el" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f">UDP</a> = SOCK_DGRAM
+<tr class="memitem:a1800cc78da1f58204b5f3778679d0628"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">Type</a> { <a class="el" href="classrock_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628afb5d815cb0a0d1805dea6d85a837a8f6">TCP</a> = SOCK_STREAM, 
+<a class="el" href="classrock_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628ae647d26647d90b97bd7a950d53a58f7f">UDP</a> = SOCK_DGRAM
  }</td></tr>
-<tr class="memdesc:a1800cc78da1f58204b5f3778679d0628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket类型  <a href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">更多...</a><br /></td></tr>
+<tr class="memdesc:a1800cc78da1f58204b5f3778679d0628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket类型  <a href="classrock_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">更多...</a><br /></td></tr>
 <tr class="separator:a1800cc78da1f58204b5f3778679d0628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9cdb560b0d6c8dff762180e9643d280"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">Family</a> { <a class="el" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0">IPv4</a> = AF_INET, 
-<a class="el" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35">IPv6</a> = AF_INET6, 
-<a class="el" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259">UNIX</a> = AF_UNIX
+<tr class="memitem:ae9cdb560b0d6c8dff762180e9643d280"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">Family</a> { <a class="el" href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280a9fc97ac02fcdd36b33bb2a5bb7157ce0">IPv4</a> = AF_INET, 
+<a class="el" href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280ac8dd7dbc6f79dab484e60a3290024c35">IPv6</a> = AF_INET6, 
+<a class="el" href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280af2074499f473fe7a9f8bddd143c9b259">UNIX</a> = AF_UNIX
  }</td></tr>
-<tr class="memdesc:ae9cdb560b0d6c8dff762180e9643d280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket协议簇  <a href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">更多...</a><br /></td></tr>
+<tr class="memdesc:ae9cdb560b0d6c8dff762180e9643d280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket协议簇  <a href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">更多...</a><br /></td></tr>
 <tr class="separator:ae9cdb560b0d6c8dff762180e9643d280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c72b9a4bf41e82644d6905d9a676bba"><td class="memItemLeft" align="right" valign="top"><a id="a8c72b9a4bf41e82644d6905d9a676bba"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:a8c72b9a4bf41e82644d6905d9a676bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa874a0bd3c6cc809d978bbaf51240a81"><td class="memItemLeft" align="right" valign="top"><a id="aa874a0bd3c6cc809d978bbaf51240a81"></a>
-typedef std::weak_ptr&lt; <a class="el" href="classsylar_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weak_ptr</b></td></tr>
+typedef std::weak_ptr&lt; <a class="el" href="classrock_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weak_ptr</b></td></tr>
 <tr class="separator:aa874a0bd3c6cc809d978bbaf51240a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:ad7d10ddda988d74a39f8ea80023933c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">Socket</a> (int family, int type, int protocol=0)</td></tr>
-<tr class="memdesc:ad7d10ddda988d74a39f8ea80023933c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket构造函数  <a href="classsylar_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">更多...</a><br /></td></tr>
+<tr class="memitem:ad7d10ddda988d74a39f8ea80023933c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">Socket</a> (int family, int type, int protocol=0)</td></tr>
+<tr class="memdesc:ad7d10ddda988d74a39f8ea80023933c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket构造函数  <a href="classrock_1_1Socket.html#ad7d10ddda988d74a39f8ea80023933c6">更多...</a><br /></td></tr>
 <tr class="separator:ad7d10ddda988d74a39f8ea80023933c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf7b37e04c57b86fbfb061b7e488c8a0"><td class="memItemLeft" align="right" valign="top"><a id="abf7b37e04c57b86fbfb061b7e488c8a0"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#abf7b37e04c57b86fbfb061b7e488c8a0">~Socket</a> ()</td></tr>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#abf7b37e04c57b86fbfb061b7e488c8a0">~Socket</a> ()</td></tr>
 <tr class="memdesc:abf7b37e04c57b86fbfb061b7e488c8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数 <br /></td></tr>
 <tr class="separator:abf7b37e04c57b86fbfb061b7e488c8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a889c0f673a364d7b38f663f9348989f3"><td class="memItemLeft" align="right" valign="top"><a id="a889c0f673a364d7b38f663f9348989f3"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a889c0f673a364d7b38f663f9348989f3">getSendTimeout</a> ()</td></tr>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a889c0f673a364d7b38f663f9348989f3">getSendTimeout</a> ()</td></tr>
 <tr class="memdesc:a889c0f673a364d7b38f663f9348989f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取发送超时时间(毫秒) <br /></td></tr>
 <tr class="separator:a889c0f673a364d7b38f663f9348989f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b9a47ba9b10ba1e9d9ef8fbd89cace6"><td class="memItemLeft" align="right" valign="top"><a id="a7b9a47ba9b10ba1e9d9ef8fbd89cace6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a7b9a47ba9b10ba1e9d9ef8fbd89cace6">setSendTimeout</a> (int64_t v)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a7b9a47ba9b10ba1e9d9ef8fbd89cace6">setSendTimeout</a> (int64_t v)</td></tr>
 <tr class="memdesc:a7b9a47ba9b10ba1e9d9ef8fbd89cace6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置发送超时时间(毫秒) <br /></td></tr>
 <tr class="separator:a7b9a47ba9b10ba1e9d9ef8fbd89cace6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a557d5c5d77aebadeddccb08989be6bf9"><td class="memItemLeft" align="right" valign="top"><a id="a557d5c5d77aebadeddccb08989be6bf9"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a557d5c5d77aebadeddccb08989be6bf9">getRecvTimeout</a> ()</td></tr>
+int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a557d5c5d77aebadeddccb08989be6bf9">getRecvTimeout</a> ()</td></tr>
 <tr class="memdesc:a557d5c5d77aebadeddccb08989be6bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取接受超时时间(毫秒) <br /></td></tr>
 <tr class="separator:a557d5c5d77aebadeddccb08989be6bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0bdec399a87f8bf61c3993bd03bb218"><td class="memItemLeft" align="right" valign="top"><a id="ab0bdec399a87f8bf61c3993bd03bb218"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ab0bdec399a87f8bf61c3993bd03bb218">setRecvTimeout</a> (int64_t v)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ab0bdec399a87f8bf61c3993bd03bb218">setRecvTimeout</a> (int64_t v)</td></tr>
 <tr class="memdesc:ab0bdec399a87f8bf61c3993bd03bb218"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置接受超时时间(毫秒) <br /></td></tr>
 <tr class="separator:ab0bdec399a87f8bf61c3993bd03bb218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab058fddd5ef08e56957989a36df2463c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">getOption</a> (int level, int option, void *result, socklen_t *len)</td></tr>
-<tr class="memdesc:ab058fddd5ef08e56957989a36df2463c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取sockopt  <a href="classsylar_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">更多...</a><br /></td></tr>
+<tr class="memitem:ab058fddd5ef08e56957989a36df2463c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">getOption</a> (int level, int option, void *result, socklen_t *len)</td></tr>
+<tr class="memdesc:ab058fddd5ef08e56957989a36df2463c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取sockopt  <a href="classrock_1_1Socket.html#ab058fddd5ef08e56957989a36df2463c">更多...</a><br /></td></tr>
 <tr class="separator:ab058fddd5ef08e56957989a36df2463c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add5ddd190ab14ceb7dad07dff5a472d7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:add5ddd190ab14ceb7dad07dff5a472d7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">getOption</a> (int level, int option, T &amp;result)</td></tr>
-<tr class="memdesc:add5ddd190ab14ceb7dad07dff5a472d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取sockopt模板  <a href="classsylar_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">更多...</a><br /></td></tr>
+<tr class="memitem:add5ddd190ab14ceb7dad07dff5a472d7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">getOption</a> (int level, int option, T &amp;result)</td></tr>
+<tr class="memdesc:add5ddd190ab14ceb7dad07dff5a472d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取sockopt模板  <a href="classrock_1_1Socket.html#add5ddd190ab14ceb7dad07dff5a472d7">更多...</a><br /></td></tr>
 <tr class="separator:add5ddd190ab14ceb7dad07dff5a472d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45566852ee9ecf920a4216b399466516"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a45566852ee9ecf920a4216b399466516">setOption</a> (int level, int option, const void *result, socklen_t len)</td></tr>
-<tr class="memdesc:a45566852ee9ecf920a4216b399466516"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置sockopt  <a href="classsylar_1_1Socket.html#a45566852ee9ecf920a4216b399466516">更多...</a><br /></td></tr>
+<tr class="memitem:a45566852ee9ecf920a4216b399466516"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a45566852ee9ecf920a4216b399466516">setOption</a> (int level, int option, const void *result, socklen_t len)</td></tr>
+<tr class="memdesc:a45566852ee9ecf920a4216b399466516"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置sockopt  <a href="classrock_1_1Socket.html#a45566852ee9ecf920a4216b399466516">更多...</a><br /></td></tr>
 <tr class="separator:a45566852ee9ecf920a4216b399466516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5742dc60c85aedf9e25adee99e32a8e"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:ab5742dc60c85aedf9e25adee99e32a8e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">setOption</a> (int level, int option, const T &amp;value)</td></tr>
-<tr class="memdesc:ab5742dc60c85aedf9e25adee99e32a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置sockopt模板  <a href="classsylar_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">更多...</a><br /></td></tr>
+<tr class="memitem:ab5742dc60c85aedf9e25adee99e32a8e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">setOption</a> (int level, int option, const T &amp;value)</td></tr>
+<tr class="memdesc:ab5742dc60c85aedf9e25adee99e32a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置sockopt模板  <a href="classrock_1_1Socket.html#ab5742dc60c85aedf9e25adee99e32a8e">更多...</a><br /></td></tr>
 <tr class="separator:ab5742dc60c85aedf9e25adee99e32a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8671aebd2450ea097d8820416d5237f"><td class="memItemLeft" align="right" valign="top">virtual Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">accept</a> ()</td></tr>
-<tr class="memdesc:aa8671aebd2450ea097d8820416d5237f"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收connect链接  <a href="classsylar_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">更多...</a><br /></td></tr>
+<tr class="memitem:aa8671aebd2450ea097d8820416d5237f"><td class="memItemLeft" align="right" valign="top">virtual Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">accept</a> ()</td></tr>
+<tr class="memdesc:aa8671aebd2450ea097d8820416d5237f"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收connect链接  <a href="classrock_1_1Socket.html#aa8671aebd2450ea097d8820416d5237f">更多...</a><br /></td></tr>
 <tr class="separator:aa8671aebd2450ea097d8820416d5237f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6b4769ae79789ee9b36373c720dc915"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">bind</a> (const Address::ptr addr)</td></tr>
-<tr class="memdesc:ae6b4769ae79789ee9b36373c720dc915"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定地址  <a href="classsylar_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">更多...</a><br /></td></tr>
+<tr class="memitem:ae6b4769ae79789ee9b36373c720dc915"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">bind</a> (const Address::ptr addr)</td></tr>
+<tr class="memdesc:ae6b4769ae79789ee9b36373c720dc915"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定地址  <a href="classrock_1_1Socket.html#ae6b4769ae79789ee9b36373c720dc915">更多...</a><br /></td></tr>
 <tr class="separator:ae6b4769ae79789ee9b36373c720dc915"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a918c0f55dbfdfcd1e27a8e800b297a24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">connect</a> (const Address::ptr addr, uint64_t timeout_ms=-1)</td></tr>
-<tr class="memdesc:a918c0f55dbfdfcd1e27a8e800b297a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接地址  <a href="classsylar_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">更多...</a><br /></td></tr>
+<tr class="memitem:a918c0f55dbfdfcd1e27a8e800b297a24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">connect</a> (const Address::ptr addr, uint64_t timeout_ms=-1)</td></tr>
+<tr class="memdesc:a918c0f55dbfdfcd1e27a8e800b297a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接地址  <a href="classrock_1_1Socket.html#a918c0f55dbfdfcd1e27a8e800b297a24">更多...</a><br /></td></tr>
 <tr class="separator:a918c0f55dbfdfcd1e27a8e800b297a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac011a045fab09c6dd331ae760e54b3d9"><td class="memItemLeft" align="right" valign="top"><a id="ac011a045fab09c6dd331ae760e54b3d9"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>reconnect</b> (uint64_t timeout_ms=-1)</td></tr>
 <tr class="separator:ac011a045fab09c6dd331ae760e54b3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834b6645daaeec36b35582514118929f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a834b6645daaeec36b35582514118929f">listen</a> (int backlog=SOMAXCONN)</td></tr>
-<tr class="memdesc:a834b6645daaeec36b35582514118929f"><td class="mdescLeft">&#160;</td><td class="mdescRight">监听socket  <a href="classsylar_1_1Socket.html#a834b6645daaeec36b35582514118929f">更多...</a><br /></td></tr>
+<tr class="memitem:a834b6645daaeec36b35582514118929f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a834b6645daaeec36b35582514118929f">listen</a> (int backlog=SOMAXCONN)</td></tr>
+<tr class="memdesc:a834b6645daaeec36b35582514118929f"><td class="mdescLeft">&#160;</td><td class="mdescRight">监听socket  <a href="classrock_1_1Socket.html#a834b6645daaeec36b35582514118929f">更多...</a><br /></td></tr>
 <tr class="separator:a834b6645daaeec36b35582514118929f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2414452cf6e34ae9d7e714fecf5749a"><td class="memItemLeft" align="right" valign="top"><a id="aa2414452cf6e34ae9d7e714fecf5749a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#aa2414452cf6e34ae9d7e714fecf5749a">close</a> ()</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#aa2414452cf6e34ae9d7e714fecf5749a">close</a> ()</td></tr>
 <tr class="memdesc:aa2414452cf6e34ae9d7e714fecf5749a"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭socket <br /></td></tr>
 <tr class="separator:aa2414452cf6e34ae9d7e714fecf5749a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d250f5b6f476e99b1a204db60925ca"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">send</a> (const void *buffer, size_t length, int flags=0)</td></tr>
-<tr class="memdesc:a10d250f5b6f476e99b1a204db60925ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classsylar_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">更多...</a><br /></td></tr>
+<tr class="memitem:a10d250f5b6f476e99b1a204db60925ca"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">send</a> (const void *buffer, size_t length, int flags=0)</td></tr>
+<tr class="memdesc:a10d250f5b6f476e99b1a204db60925ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classrock_1_1Socket.html#a10d250f5b6f476e99b1a204db60925ca">更多...</a><br /></td></tr>
 <tr class="separator:a10d250f5b6f476e99b1a204db60925ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d5166f9884951885753598b1a9a3d53"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a5d5166f9884951885753598b1a9a3d53">send</a> (const iovec *buffers, size_t length, int flags=0)</td></tr>
-<tr class="memdesc:a5d5166f9884951885753598b1a9a3d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classsylar_1_1Socket.html#a5d5166f9884951885753598b1a9a3d53">更多...</a><br /></td></tr>
+<tr class="memitem:a5d5166f9884951885753598b1a9a3d53"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a5d5166f9884951885753598b1a9a3d53">send</a> (const iovec *buffers, size_t length, int flags=0)</td></tr>
+<tr class="memdesc:a5d5166f9884951885753598b1a9a3d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classrock_1_1Socket.html#a5d5166f9884951885753598b1a9a3d53">更多...</a><br /></td></tr>
 <tr class="separator:a5d5166f9884951885753598b1a9a3d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96bb0a4fbc86e6aed2f378a4c4119e4d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">sendTo</a> (const void *buffer, size_t length, const Address::ptr to, int flags=0)</td></tr>
-<tr class="memdesc:a96bb0a4fbc86e6aed2f378a4c4119e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classsylar_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">更多...</a><br /></td></tr>
+<tr class="memitem:a96bb0a4fbc86e6aed2f378a4c4119e4d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">sendTo</a> (const void *buffer, size_t length, const Address::ptr to, int flags=0)</td></tr>
+<tr class="memdesc:a96bb0a4fbc86e6aed2f378a4c4119e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classrock_1_1Socket.html#a96bb0a4fbc86e6aed2f378a4c4119e4d">更多...</a><br /></td></tr>
 <tr class="separator:a96bb0a4fbc86e6aed2f378a4c4119e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ca79cde27053f8fa17d59206aa3bdcf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a5ca79cde27053f8fa17d59206aa3bdcf">sendTo</a> (const iovec *buffers, size_t length, const Address::ptr to, int flags=0)</td></tr>
-<tr class="memdesc:a5ca79cde27053f8fa17d59206aa3bdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classsylar_1_1Socket.html#a5ca79cde27053f8fa17d59206aa3bdcf">更多...</a><br /></td></tr>
+<tr class="memitem:a5ca79cde27053f8fa17d59206aa3bdcf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a5ca79cde27053f8fa17d59206aa3bdcf">sendTo</a> (const iovec *buffers, size_t length, const Address::ptr to, int flags=0)</td></tr>
+<tr class="memdesc:a5ca79cde27053f8fa17d59206aa3bdcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <a href="classrock_1_1Socket.html#a5ca79cde27053f8fa17d59206aa3bdcf">更多...</a><br /></td></tr>
 <tr class="separator:a5ca79cde27053f8fa17d59206aa3bdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c9fcf7f10dc2aa792ab4a153af66ccb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">recv</a> (void *buffer, size_t length, int flags=0)</td></tr>
-<tr class="memdesc:a9c9fcf7f10dc2aa792ab4a153af66ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classsylar_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">更多...</a><br /></td></tr>
+<tr class="memitem:a9c9fcf7f10dc2aa792ab4a153af66ccb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">recv</a> (void *buffer, size_t length, int flags=0)</td></tr>
+<tr class="memdesc:a9c9fcf7f10dc2aa792ab4a153af66ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classrock_1_1Socket.html#a9c9fcf7f10dc2aa792ab4a153af66ccb">更多...</a><br /></td></tr>
 <tr class="separator:a9c9fcf7f10dc2aa792ab4a153af66ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78dd52bd532befe374e9b3efb6af3bee"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a78dd52bd532befe374e9b3efb6af3bee">recv</a> (iovec *buffers, size_t length, int flags=0)</td></tr>
-<tr class="memdesc:a78dd52bd532befe374e9b3efb6af3bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classsylar_1_1Socket.html#a78dd52bd532befe374e9b3efb6af3bee">更多...</a><br /></td></tr>
+<tr class="memitem:a78dd52bd532befe374e9b3efb6af3bee"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a78dd52bd532befe374e9b3efb6af3bee">recv</a> (iovec *buffers, size_t length, int flags=0)</td></tr>
+<tr class="memdesc:a78dd52bd532befe374e9b3efb6af3bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classrock_1_1Socket.html#a78dd52bd532befe374e9b3efb6af3bee">更多...</a><br /></td></tr>
 <tr class="separator:a78dd52bd532befe374e9b3efb6af3bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3e43ad94c153db6080b768940f4b2a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">recvFrom</a> (void *buffer, size_t length, Address::ptr from, int flags=0)</td></tr>
-<tr class="memdesc:a5e3e43ad94c153db6080b768940f4b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classsylar_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">更多...</a><br /></td></tr>
+<tr class="memitem:a5e3e43ad94c153db6080b768940f4b2a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">recvFrom</a> (void *buffer, size_t length, Address::ptr from, int flags=0)</td></tr>
+<tr class="memdesc:a5e3e43ad94c153db6080b768940f4b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classrock_1_1Socket.html#a5e3e43ad94c153db6080b768940f4b2a">更多...</a><br /></td></tr>
 <tr class="separator:a5e3e43ad94c153db6080b768940f4b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65b6ac9ea74b621c5e11fe9665f25502"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a65b6ac9ea74b621c5e11fe9665f25502">recvFrom</a> (iovec *buffers, size_t length, Address::ptr from, int flags=0)</td></tr>
-<tr class="memdesc:a65b6ac9ea74b621c5e11fe9665f25502"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classsylar_1_1Socket.html#a65b6ac9ea74b621c5e11fe9665f25502">更多...</a><br /></td></tr>
+<tr class="memitem:a65b6ac9ea74b621c5e11fe9665f25502"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a65b6ac9ea74b621c5e11fe9665f25502">recvFrom</a> (iovec *buffers, size_t length, Address::ptr from, int flags=0)</td></tr>
+<tr class="memdesc:a65b6ac9ea74b621c5e11fe9665f25502"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受数据  <a href="classrock_1_1Socket.html#a65b6ac9ea74b621c5e11fe9665f25502">更多...</a><br /></td></tr>
 <tr class="separator:a65b6ac9ea74b621c5e11fe9665f25502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dda94c9aeadaca0eb2cdef0ad5a6f9f"><td class="memItemLeft" align="right" valign="top"><a id="a5dda94c9aeadaca0eb2cdef0ad5a6f9f"></a>
-Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a5dda94c9aeadaca0eb2cdef0ad5a6f9f">getRemoteAddress</a> ()</td></tr>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a5dda94c9aeadaca0eb2cdef0ad5a6f9f">getRemoteAddress</a> ()</td></tr>
 <tr class="memdesc:a5dda94c9aeadaca0eb2cdef0ad5a6f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取远端地址 <br /></td></tr>
 <tr class="separator:a5dda94c9aeadaca0eb2cdef0ad5a6f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a0f6a81c99fb7644afe5046f84f5d29"><td class="memItemLeft" align="right" valign="top"><a id="a0a0f6a81c99fb7644afe5046f84f5d29"></a>
-Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a0a0f6a81c99fb7644afe5046f84f5d29">getLocalAddress</a> ()</td></tr>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a0a0f6a81c99fb7644afe5046f84f5d29">getLocalAddress</a> ()</td></tr>
 <tr class="memdesc:a0a0f6a81c99fb7644afe5046f84f5d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本地地址 <br /></td></tr>
 <tr class="separator:a0a0f6a81c99fb7644afe5046f84f5d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71b422f6793ce03a4207de9f36576c58"><td class="memItemLeft" align="right" valign="top"><a id="a71b422f6793ce03a4207de9f36576c58"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a71b422f6793ce03a4207de9f36576c58">getFamily</a> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a71b422f6793ce03a4207de9f36576c58">getFamily</a> () const</td></tr>
 <tr class="memdesc:a71b422f6793ce03a4207de9f36576c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取协议簇 <br /></td></tr>
 <tr class="separator:a71b422f6793ce03a4207de9f36576c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf47e95058c48eb50ac87ca841ffa7bd"><td class="memItemLeft" align="right" valign="top"><a id="acf47e95058c48eb50ac87ca841ffa7bd"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#acf47e95058c48eb50ac87ca841ffa7bd">getType</a> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#acf47e95058c48eb50ac87ca841ffa7bd">getType</a> () const</td></tr>
 <tr class="memdesc:acf47e95058c48eb50ac87ca841ffa7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取类型 <br /></td></tr>
 <tr class="separator:acf47e95058c48eb50ac87ca841ffa7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a011edf15dd491cf8b2cd259e980c7057"><td class="memItemLeft" align="right" valign="top"><a id="a011edf15dd491cf8b2cd259e980c7057"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a011edf15dd491cf8b2cd259e980c7057">getProtocol</a> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a011edf15dd491cf8b2cd259e980c7057">getProtocol</a> () const</td></tr>
 <tr class="memdesc:a011edf15dd491cf8b2cd259e980c7057"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取协议 <br /></td></tr>
 <tr class="separator:a011edf15dd491cf8b2cd259e980c7057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eaf883907617a351d3a7d9c6471839d"><td class="memItemLeft" align="right" valign="top"><a id="a4eaf883907617a351d3a7d9c6471839d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a4eaf883907617a351d3a7d9c6471839d">isConnected</a> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a4eaf883907617a351d3a7d9c6471839d">isConnected</a> () const</td></tr>
 <tr class="memdesc:a4eaf883907617a351d3a7d9c6471839d"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回是否连接 <br /></td></tr>
 <tr class="separator:a4eaf883907617a351d3a7d9c6471839d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86d7b7034c6ee0462dbe6af951c078e6"><td class="memItemLeft" align="right" valign="top"><a id="a86d7b7034c6ee0462dbe6af951c078e6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a86d7b7034c6ee0462dbe6af951c078e6">isValid</a> () const</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a86d7b7034c6ee0462dbe6af951c078e6">isValid</a> () const</td></tr>
 <tr class="memdesc:a86d7b7034c6ee0462dbe6af951c078e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否有效(m_sock != -1) <br /></td></tr>
 <tr class="separator:a86d7b7034c6ee0462dbe6af951c078e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7a4496b05868f69ba1feace4a6d233"><td class="memItemLeft" align="right" valign="top"><a id="abc7a4496b05868f69ba1feace4a6d233"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#abc7a4496b05868f69ba1feace4a6d233">getError</a> ()</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#abc7a4496b05868f69ba1feace4a6d233">getError</a> ()</td></tr>
 <tr class="memdesc:abc7a4496b05868f69ba1feace4a6d233"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Socket错误 <br /></td></tr>
 <tr class="separator:abc7a4496b05868f69ba1feace4a6d233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb5a7e190205a7c71f22943708289a6"><td class="memItemLeft" align="right" valign="top"><a id="adcb5a7e190205a7c71f22943708289a6"></a>
-virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#adcb5a7e190205a7c71f22943708289a6">dump</a> (std::ostream &amp;os) const</td></tr>
+virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#adcb5a7e190205a7c71f22943708289a6">dump</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:adcb5a7e190205a7c71f22943708289a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">输出信息到流中 <br /></td></tr>
 <tr class="separator:adcb5a7e190205a7c71f22943708289a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af440f45a18368c76ac8fd6f34ccdb641"><td class="memItemLeft" align="right" valign="top"><a id="af440f45a18368c76ac8fd6f34ccdb641"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
 <tr class="separator:af440f45a18368c76ac8fd6f34ccdb641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe4cfcb71216c5e5491de1f65ede86e"><td class="memItemLeft" align="right" valign="top"><a id="affe4cfcb71216c5e5491de1f65ede86e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#affe4cfcb71216c5e5491de1f65ede86e">getSocket</a> () const</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#affe4cfcb71216c5e5491de1f65ede86e">getSocket</a> () const</td></tr>
 <tr class="memdesc:affe4cfcb71216c5e5491de1f65ede86e"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回socket句柄 <br /></td></tr>
 <tr class="separator:affe4cfcb71216c5e5491de1f65ede86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b12962d326b19ed7d9b5bd660fe242"><td class="memItemLeft" align="right" valign="top"><a id="a87b12962d326b19ed7d9b5bd660fe242"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a87b12962d326b19ed7d9b5bd660fe242">cancelRead</a> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a87b12962d326b19ed7d9b5bd660fe242">cancelRead</a> ()</td></tr>
 <tr class="memdesc:a87b12962d326b19ed7d9b5bd660fe242"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消读 <br /></td></tr>
 <tr class="separator:a87b12962d326b19ed7d9b5bd660fe242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd5fb9a5cf6fa564a8007fb25edbbcf1"><td class="memItemLeft" align="right" valign="top"><a id="afd5fb9a5cf6fa564a8007fb25edbbcf1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#afd5fb9a5cf6fa564a8007fb25edbbcf1">cancelWrite</a> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#afd5fb9a5cf6fa564a8007fb25edbbcf1">cancelWrite</a> ()</td></tr>
 <tr class="memdesc:afd5fb9a5cf6fa564a8007fb25edbbcf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消写 <br /></td></tr>
 <tr class="separator:afd5fb9a5cf6fa564a8007fb25edbbcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb212d4cd1ff1ce63bc03dc27ea41bc"><td class="memItemLeft" align="right" valign="top"><a id="a6cb212d4cd1ff1ce63bc03dc27ea41bc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a6cb212d4cd1ff1ce63bc03dc27ea41bc">cancelAccept</a> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a6cb212d4cd1ff1ce63bc03dc27ea41bc">cancelAccept</a> ()</td></tr>
 <tr class="memdesc:a6cb212d4cd1ff1ce63bc03dc27ea41bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消accept <br /></td></tr>
 <tr class="separator:a6cb212d4cd1ff1ce63bc03dc27ea41bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67bbd88370cb11fccb77ad962b6bb468"><td class="memItemLeft" align="right" valign="top"><a id="a67bbd88370cb11fccb77ad962b6bb468"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a67bbd88370cb11fccb77ad962b6bb468">cancelAll</a> ()</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a67bbd88370cb11fccb77ad962b6bb468">cancelAll</a> ()</td></tr>
 <tr class="memdesc:a67bbd88370cb11fccb77ad962b6bb468"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消所有事件 <br /></td></tr>
 <tr class="separator:a67bbd88370cb11fccb77ad962b6bb468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a880530342b59695723480c6ac8fe7f89"><td class="memItemLeft" align="right" valign="top">static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">CreateTCP</a> (sylar::Address::ptr address)</td></tr>
-<tr class="memdesc:a880530342b59695723480c6ac8fe7f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建TCP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型)  <a href="classsylar_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">更多...</a><br /></td></tr>
+<tr class="memitem:a880530342b59695723480c6ac8fe7f89"><td class="memItemLeft" align="right" valign="top">static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">CreateTCP</a> (rock::Address::ptr address)</td></tr>
+<tr class="memdesc:a880530342b59695723480c6ac8fe7f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建TCP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型)  <a href="classrock_1_1Socket.html#a880530342b59695723480c6ac8fe7f89">更多...</a><br /></td></tr>
 <tr class="separator:a880530342b59695723480c6ac8fe7f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746675af41ed7260af2df8ef0916afc8"><td class="memItemLeft" align="right" valign="top">static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">CreateUDP</a> (sylar::Address::ptr address)</td></tr>
-<tr class="memdesc:a746675af41ed7260af2df8ef0916afc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建UDP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型)  <a href="classsylar_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">更多...</a><br /></td></tr>
+<tr class="memitem:a746675af41ed7260af2df8ef0916afc8"><td class="memItemLeft" align="right" valign="top">static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">CreateUDP</a> (rock::Address::ptr address)</td></tr>
+<tr class="memdesc:a746675af41ed7260af2df8ef0916afc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建UDP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型)  <a href="classrock_1_1Socket.html#a746675af41ed7260af2df8ef0916afc8">更多...</a><br /></td></tr>
 <tr class="separator:a746675af41ed7260af2df8ef0916afc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc86da1143eec39943f3d0ef8f0ce0f"><td class="memItemLeft" align="right" valign="top"><a id="a9dc86da1143eec39943f3d0ef8f0ce0f"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a9dc86da1143eec39943f3d0ef8f0ce0f">CreateTCPSocket</a> ()</td></tr>
-<tr class="memdesc:a9dc86da1143eec39943f3d0ef8f0ce0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv4的TCP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a9dc86da1143eec39943f3d0ef8f0ce0f">CreateTCPSocket</a> ()</td></tr>
+<tr class="memdesc:a9dc86da1143eec39943f3d0ef8f0ce0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv4的TCP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:a9dc86da1143eec39943f3d0ef8f0ce0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e412ee5ccc035a61e92287d2c6e920d"><td class="memItemLeft" align="right" valign="top"><a id="a1e412ee5ccc035a61e92287d2c6e920d"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a1e412ee5ccc035a61e92287d2c6e920d">CreateUDPSocket</a> ()</td></tr>
-<tr class="memdesc:a1e412ee5ccc035a61e92287d2c6e920d"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv4的UDP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a1e412ee5ccc035a61e92287d2c6e920d">CreateUDPSocket</a> ()</td></tr>
+<tr class="memdesc:a1e412ee5ccc035a61e92287d2c6e920d"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv4的UDP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:a1e412ee5ccc035a61e92287d2c6e920d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87454bd49d00a311f9306b4b009e664b"><td class="memItemLeft" align="right" valign="top"><a id="a87454bd49d00a311f9306b4b009e664b"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a87454bd49d00a311f9306b4b009e664b">CreateTCPSocket6</a> ()</td></tr>
-<tr class="memdesc:a87454bd49d00a311f9306b4b009e664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv6的TCP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a87454bd49d00a311f9306b4b009e664b">CreateTCPSocket6</a> ()</td></tr>
+<tr class="memdesc:a87454bd49d00a311f9306b4b009e664b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv6的TCP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:a87454bd49d00a311f9306b4b009e664b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a56ebc1dc797a36130fd014db90731f"><td class="memItemLeft" align="right" valign="top"><a id="a9a56ebc1dc797a36130fd014db90731f"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a9a56ebc1dc797a36130fd014db90731f">CreateUDPSocket6</a> ()</td></tr>
-<tr class="memdesc:a9a56ebc1dc797a36130fd014db90731f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv6的UDP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a9a56ebc1dc797a36130fd014db90731f">CreateUDPSocket6</a> ()</td></tr>
+<tr class="memdesc:a9a56ebc1dc797a36130fd014db90731f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建IPv6的UDP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:a9a56ebc1dc797a36130fd014db90731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92b2914dbdc7a7cde33c4c49360957b"><td class="memItemLeft" align="right" valign="top"><a id="aa92b2914dbdc7a7cde33c4c49360957b"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#aa92b2914dbdc7a7cde33c4c49360957b">CreateUnixTCPSocket</a> ()</td></tr>
-<tr class="memdesc:aa92b2914dbdc7a7cde33c4c49360957b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建Unix的TCP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#aa92b2914dbdc7a7cde33c4c49360957b">CreateUnixTCPSocket</a> ()</td></tr>
+<tr class="memdesc:aa92b2914dbdc7a7cde33c4c49360957b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建Unix的TCP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:aa92b2914dbdc7a7cde33c4c49360957b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae136d494658548c395d12aff7807af29"><td class="memItemLeft" align="right" valign="top"><a id="ae136d494658548c395d12aff7807af29"></a>
-static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ae136d494658548c395d12aff7807af29">CreateUnixUDPSocket</a> ()</td></tr>
-<tr class="memdesc:ae136d494658548c395d12aff7807af29"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建Unix的UDP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
+static Socket::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ae136d494658548c395d12aff7807af29">CreateUnixUDPSocket</a> ()</td></tr>
+<tr class="memdesc:ae136d494658548c395d12aff7807af29"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建Unix的UDP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a> <br /></td></tr>
 <tr class="separator:ae136d494658548c395d12aff7807af29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
 <tr class="memitem:af10ea76d3a586f6ac71fc7593cf57c8f"><td class="memItemLeft" align="right" valign="top"><a id="af10ea76d3a586f6ac71fc7593cf57c8f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#af10ea76d3a586f6ac71fc7593cf57c8f">initSock</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#af10ea76d3a586f6ac71fc7593cf57c8f">initSock</a> ()</td></tr>
 <tr class="memdesc:af10ea76d3a586f6ac71fc7593cf57c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化socket <br /></td></tr>
 <tr class="separator:af10ea76d3a586f6ac71fc7593cf57c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c251c1e5bb0eceaad8493b90a04b6a"><td class="memItemLeft" align="right" valign="top"><a id="a77c251c1e5bb0eceaad8493b90a04b6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a77c251c1e5bb0eceaad8493b90a04b6a">newSock</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a77c251c1e5bb0eceaad8493b90a04b6a">newSock</a> ()</td></tr>
 <tr class="memdesc:a77c251c1e5bb0eceaad8493b90a04b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建socket <br /></td></tr>
 <tr class="separator:a77c251c1e5bb0eceaad8493b90a04b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c9b39975e21c6b6f08018c2e1fe7ec"><td class="memItemLeft" align="right" valign="top"><a id="a00c9b39975e21c6b6f08018c2e1fe7ec"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a00c9b39975e21c6b6f08018c2e1fe7ec">init</a> (int sock)</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a00c9b39975e21c6b6f08018c2e1fe7ec">init</a> (int sock)</td></tr>
 <tr class="memdesc:a00c9b39975e21c6b6f08018c2e1fe7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化sock <br /></td></tr>
 <tr class="separator:a00c9b39975e21c6b6f08018c2e1fe7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
 <tr class="memitem:a1c938fdb33ca71386ea97408cf3d59b8"><td class="memItemLeft" align="right" valign="top"><a id="a1c938fdb33ca71386ea97408cf3d59b8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">m_sock</a></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a1c938fdb33ca71386ea97408cf3d59b8">m_sock</a></td></tr>
 <tr class="memdesc:a1c938fdb33ca71386ea97408cf3d59b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket句柄 <br /></td></tr>
 <tr class="separator:a1c938fdb33ca71386ea97408cf3d59b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55ff16b76c9ce6d0f899b3aab5f8b6a8"><td class="memItemLeft" align="right" valign="top"><a id="a55ff16b76c9ce6d0f899b3aab5f8b6a8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">m_family</a></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a55ff16b76c9ce6d0f899b3aab5f8b6a8">m_family</a></td></tr>
 <tr class="memdesc:a55ff16b76c9ce6d0f899b3aab5f8b6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议簇 <br /></td></tr>
 <tr class="separator:a55ff16b76c9ce6d0f899b3aab5f8b6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a6f18189faa650c3b534d5b7e4a0843"><td class="memItemLeft" align="right" valign="top"><a id="a8a6f18189faa650c3b534d5b7e4a0843"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">m_type</a></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a8a6f18189faa650c3b534d5b7e4a0843">m_type</a></td></tr>
 <tr class="memdesc:a8a6f18189faa650c3b534d5b7e4a0843"><td class="mdescLeft">&#160;</td><td class="mdescRight">类型 <br /></td></tr>
 <tr class="separator:a8a6f18189faa650c3b534d5b7e4a0843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcdf4ee9486a0274def42ff5ba188f3"><td class="memItemLeft" align="right" valign="top"><a id="a6dcdf4ee9486a0274def42ff5ba188f3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">m_protocol</a></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#a6dcdf4ee9486a0274def42ff5ba188f3">m_protocol</a></td></tr>
 <tr class="memdesc:a6dcdf4ee9486a0274def42ff5ba188f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议 <br /></td></tr>
 <tr class="separator:a6dcdf4ee9486a0274def42ff5ba188f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec6303472f8d128b8aec57cd9ef124fe"><td class="memItemLeft" align="right" valign="top"><a id="aec6303472f8d128b8aec57cd9ef124fe"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">m_isConnected</a></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#aec6303472f8d128b8aec57cd9ef124fe">m_isConnected</a></td></tr>
 <tr class="memdesc:aec6303472f8d128b8aec57cd9ef124fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否连接 <br /></td></tr>
 <tr class="separator:aec6303472f8d128b8aec57cd9ef124fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc79b0b9176cdef334e588a6cb730c3f"><td class="memItemLeft" align="right" valign="top"><a id="acc79b0b9176cdef334e588a6cb730c3f"></a>
-Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#acc79b0b9176cdef334e588a6cb730c3f">m_localAddress</a></td></tr>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#acc79b0b9176cdef334e588a6cb730c3f">m_localAddress</a></td></tr>
 <tr class="memdesc:acc79b0b9176cdef334e588a6cb730c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">本地地址 <br /></td></tr>
 <tr class="separator:acc79b0b9176cdef334e588a6cb730c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad45afa01a968433fd24c6b6c6715fabb"><td class="memItemLeft" align="right" valign="top"><a id="ad45afa01a968433fd24c6b6c6715fabb"></a>
-Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsylar_1_1Socket.html#ad45afa01a968433fd24c6b6c6715fabb">m_remoteAddress</a></td></tr>
+Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrock_1_1Socket.html#ad45afa01a968433fd24c6b6c6715fabb">m_remoteAddress</a></td></tr>
 <tr class="memdesc:ad45afa01a968433fd24c6b6c6715fabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">远端地址 <br /></td></tr>
 <tr class="separator:ad45afa01a968433fd24c6b6c6715fabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -345,7 +345,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="classsylar_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">sylar::Socket::Family</a></td>
+          <td class="memname">enum <a class="el" href="classrock_1_1Socket.html#ae9cdb560b0d6c8dff762180e9643d280">rock::Socket::Family</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -369,7 +369,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="classsylar_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">sylar::Socket::Type</a></td>
+          <td class="memname">enum <a class="el" href="classrock_1_1Socket.html#a1800cc78da1f58204b5f3778679d0628">rock::Socket::Type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -392,7 +392,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">sylar::Socket::Socket </td>
+          <td class="memname">rock::Socket::Socket </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>family</em>, </td>
@@ -440,7 +440,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Socket::ptr sylar::Socket::accept </td>
+          <td class="memname">virtual Socket::ptr rock::Socket::accept </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -457,7 +457,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="section return"><dt>返回</dt><dd>成功返回新连接的socket,失败返回nullptr </dd></dl>
 <dl class="section pre"><dt>前置条件</dt><dd>Socket必须 bind , listen 成功 </dd></dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#afecbb66a11644b6215b319c86aea6a3a">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#afecbb66a11644b6215b319c86aea6a3a">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -471,7 +471,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool sylar::Socket::bind </td>
+          <td class="memname">virtual bool rock::Socket::bind </td>
           <td>(</td>
           <td class="paramtype">const Address::ptr&#160;</td>
           <td class="paramname"><em>addr</em></td><td>)</td>
@@ -494,7 +494,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </dl>
 <dl class="section return"><dt>返回</dt><dd>是否绑定成功 </dd></dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a0d2bec8689cb32f67a60b7edeb1dcf71">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a0d2bec8689cb32f67a60b7edeb1dcf71">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -508,7 +508,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool sylar::Socket::connect </td>
+          <td class="memname">virtual bool rock::Socket::connect </td>
           <td>(</td>
           <td class="paramtype">const Address::ptr&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
@@ -541,7 +541,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#af80ab931d1a8e01306311285ef036df8">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#af80ab931d1a8e01306311285ef036df8">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -555,9 +555,9 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Socket::ptr sylar::Socket::CreateTCP </td>
+          <td class="memname">static Socket::ptr rock::Socket::CreateTCP </td>
           <td>(</td>
-          <td class="paramtype">sylar::Address::ptr&#160;</td>
+          <td class="paramtype">rock::Address::ptr&#160;</td>
           <td class="paramname"><em>address</em></td><td>)</td>
           <td></td>
         </tr>
@@ -569,7 +569,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>创建TCP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型) </p>
+<p>创建TCP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型) </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>地址 </td></tr>
@@ -589,9 +589,9 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Socket::ptr sylar::Socket::CreateUDP </td>
+          <td class="memname">static Socket::ptr rock::Socket::CreateUDP </td>
           <td>(</td>
-          <td class="paramtype">sylar::Address::ptr&#160;</td>
+          <td class="paramtype">rock::Address::ptr&#160;</td>
           <td class="paramname"><em>address</em></td><td>)</td>
           <td></td>
         </tr>
@@ -603,7 +603,7 @@ Address::ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>创建UDP <a class="el" href="classsylar_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型) </p>
+<p>创建UDP <a class="el" href="classrock_1_1Socket.html" title="Socket封装类">Socket</a>(满足地址类型) </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>地址 </td></tr>
@@ -625,7 +625,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool sylar::Socket::getOption </td>
+          <td class="memname">bool rock::Socket::getOption </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em>, </td>
@@ -673,7 +673,7 @@ template&lt;class T &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool sylar::Socket::getOption </td>
+          <td class="memname">bool rock::Socket::getOption </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em>, </td>
@@ -719,7 +719,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool sylar::Socket::listen </td>
+          <td class="memname">virtual bool rock::Socket::listen </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>backlog</em> = <code>SOMAXCONN</code></td><td>)</td>
@@ -743,7 +743,7 @@ template&lt;class T &gt; </div>
 <dl class="section return"><dt>返回</dt><dd>返回监听是否成功 </dd></dl>
 <dl class="section pre"><dt>前置条件</dt><dd>必须先 bind 成功 </dd></dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#afdafa044aec7e161e308fe6ac22d7032">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#afdafa044aec7e161e308fe6ac22d7032">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -757,7 +757,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::recv </td>
+          <td class="memname">virtual int rock::Socket::recv </td>
           <td>(</td>
           <td class="paramtype">iovec *&#160;</td>
           <td class="paramname"><em>buffers</em>, </td>
@@ -806,7 +806,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#aa09cbf574c6a896d9438980b5fdfe1b5">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#aa09cbf574c6a896d9438980b5fdfe1b5">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -820,7 +820,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::recv </td>
+          <td class="memname">virtual int rock::Socket::recv </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -869,7 +869,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a32d1c1ea43ef650864d1c3caa4ebaa1e">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a32d1c1ea43ef650864d1c3caa4ebaa1e">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -883,7 +883,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::recvFrom </td>
+          <td class="memname">virtual int rock::Socket::recvFrom </td>
           <td>(</td>
           <td class="paramtype">iovec *&#160;</td>
           <td class="paramname"><em>buffers</em>, </td>
@@ -939,7 +939,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#ad24a65df3344ba7365a438ec363494b9">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#ad24a65df3344ba7365a438ec363494b9">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -953,7 +953,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::recvFrom </td>
+          <td class="memname">virtual int rock::Socket::recvFrom </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -1009,7 +1009,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a0b8d04fbf9a28eb80055adb78c390f28">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a0b8d04fbf9a28eb80055adb78c390f28">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -1023,7 +1023,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::send </td>
+          <td class="memname">virtual int rock::Socket::send </td>
           <td>(</td>
           <td class="paramtype">const iovec *&#160;</td>
           <td class="paramname"><em>buffers</em>, </td>
@@ -1072,7 +1072,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a251b229f5ca5d3229e4586a11485f659">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a251b229f5ca5d3229e4586a11485f659">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -1086,7 +1086,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::send </td>
+          <td class="memname">virtual int rock::Socket::send </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -1135,7 +1135,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a046a3616b1afb59d81100c862bde939d">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a046a3616b1afb59d81100c862bde939d">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -1149,7 +1149,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::sendTo </td>
+          <td class="memname">virtual int rock::Socket::sendTo </td>
           <td>(</td>
           <td class="paramtype">const iovec *&#160;</td>
           <td class="paramname"><em>buffers</em>, </td>
@@ -1205,7 +1205,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a6f140f9f8a6217adbc5b823803b7ddfb">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a6f140f9f8a6217adbc5b823803b7ddfb">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -1219,7 +1219,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int sylar::Socket::sendTo </td>
+          <td class="memname">virtual int rock::Socket::sendTo </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -1275,7 +1275,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>被 <a class="el" href="classsylar_1_1SSLSocket.html#a3ff1c8ec11526bb404f6a9ca935865f2">sylar::SSLSocket</a> 重载.</p>
+<p>被 <a class="el" href="classrock_1_1SSLSocket.html#a3ff1c8ec11526bb404f6a9ca935865f2">rock::SSLSocket</a> 重载.</p>
 
 </div>
 </div>
@@ -1291,7 +1291,7 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool sylar::Socket::setOption </td>
+          <td class="memname">bool rock::Socket::setOption </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em>, </td>
@@ -1339,7 +1339,7 @@ template&lt;class T &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool sylar::Socket::setOption </td>
+          <td class="memname">bool rock::Socket::setOption </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em>, </td>
@@ -1376,7 +1376,7 @@ template&lt;class T &gt; </div>
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/<a class="el" href="socket_8h_source.html">socket.h</a></li>
+<li>rock/<a class="el" href="socket_8h_source.html">socket.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

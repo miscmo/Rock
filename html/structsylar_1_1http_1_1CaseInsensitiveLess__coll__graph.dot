@@ -1,7 +1,7 @@
-digraph "sylar::http::CaseInsensitiveLess"
+digraph "rock::http::CaseInsensitiveLess"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::http::CaseInsensitiveLess\n||+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="忽略大小写比较仿函数"];
+  Node1 [label="{rock::http::CaseInsensitiveLess\n||+ operator()()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="忽略大小写比较仿函数"];
 }

@@ -4,9 +4,9 @@ digraph "类继承关系图"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="sylar::IFoxThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1IFoxThread.html",tooltip=" "];
+  Node0 [label="rock::IFoxThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1IFoxThread.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="sylar::FoxThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1FoxThread.html",tooltip=" "];
+  Node1 [label="rock::FoxThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1FoxThread.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="sylar::FoxThreadPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1FoxThreadPool.html",tooltip=" "];
+  Node2 [label="rock::FoxThreadPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1FoxThreadPool.html",tooltip=" "];
 }

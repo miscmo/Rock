@@ -1,18 +1,18 @@
-#include "sylar/tcp_server.h"
-#include "sylar/iomanager.h"
-#include "sylar/log.h"
+#include "rock/tcp_server.h"
+#include "rock/iomanager.h"
+#include "rock/log.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 void run() {
-    auto addr = sylar::Address::LookupAny("0.0.0.0:8033");
-    //auto addr2 = sylar::UnixAddress::ptr(new sylar::UnixAddress("/tmp/unix_addr"));
-    std::vector<sylar::Address::ptr> addrs;
+    auto addr = rock::Address::LookupAny("0.0.0.0:8033");
+    //auto addr2 = rock::UnixAddress::ptr(new rock::UnixAddress("/tmp/unix_addr"));
+    std::vector<rock::Address::ptr> addrs;
     addrs.push_back(addr);
     //addrs.push_back(addr2);
 
-    sylar::TcpServer::ptr tcp_server(new sylar::TcpServer);
-    std::vector<sylar::Address::ptr> fails;
+    rock::TcpServer::ptr tcp_server(new rock::TcpServer);
+    std::vector<rock::Address::ptr> fails;
     while(!tcp_server->bind(addrs, fails)) {
         sleep(2);
     }
@@ -20,7 +20,7 @@ void run() {
     
 }
 int main(int argc, char** argv) {
-    sylar::IOManager iom(2);
+    rock::IOManager iom(2);
     iom.schedule(run);
     return 0;
 }

@@ -1,7 +1,7 @@
-digraph "sylar::EMail"
+digraph "rock::EMail"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::EMail\n||+ getFromEMailAddress()\l+ getFromEMailPasswd()\l+ getTitle()\l+ getBody()\l+ setFromEMailAddress()\l+ setFromEMailPasswd()\l+ setTitle()\l+ setBody()\l+ getToEMailAddress()\l+ getCcEMailAddress()\l和 6 更多...\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::EMail\n||+ getFromEMailAddress()\l+ getFromEMailPasswd()\l+ getTitle()\l+ getBody()\l+ setFromEMailAddress()\l+ setFromEMailPasswd()\l+ setTitle()\l+ setBody()\l+ getToEMailAddress()\l+ getCcEMailAddress()\l和 6 更多...\l+ Create()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

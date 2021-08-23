@@ -1,11 +1,11 @@
 #include "name_server_module.h"
-#include "sylar/log.h"
-#include "sylar/worker.h"
+#include "rock/log.h"
+#include "rock/worker.h"
 
-namespace sylar {
+namespace rock {
 namespace ns {
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
+static rock::Logger::ptr g_logger = ROCK_LOG_NAME("system");
 
 uint64_t s_request_count = 0;
 uint64_t s_on_connect = 0;
@@ -16,10 +16,10 @@ NameServerModule::NameServerModule()
     m_domains = std::make_shared<NSDomainSet>();
 }
 
-bool NameServerModule::handleRockRequest(sylar::RockRequest::ptr request
-                                         ,sylar::RockResponse::ptr response
-                                         ,sylar::RockStream::ptr stream) {
-    sylar::Atomic::addFetch(s_request_count, 1);
+bool NameServerModule::handleRockRequest(rock::RockRequest::ptr request
+                                         ,rock::RockResponse::ptr response
+                                         ,rock::RockStream::ptr stream) {
+    rock::Atomic::addFetch(s_request_count, 1);
     switch(request->getCmd()) {
         case (int)NSCommand::REGISTER:
             return handleRegister(request, response, stream);
@@ -28,59 +28,59 @@ bool NameServerModule::handleRockRequest(sylar::RockRequest::ptr request
         case (int)NSCommand::TICK:
             return handleTick(request, response, stream);
         default:
-            SYLAR_LOG_WARN(g_logger) << "invalid cmd=0x" << std::hex << request->getCmd();
+            ROCK_LOG_WARN(g_logger) << "invalid cmd=0x" << std::hex << request->getCmd();
             break;
     }
     return true;
 }
 
-bool NameServerModule::handleRockNotify(sylar::RockNotify::ptr notify
-                                        ,sylar::RockStream::ptr stream) {
+bool NameServerModule::handleRockNotify(rock::RockNotify::ptr notify
+                                        ,rock::RockStream::ptr stream) {
     return true;
 }
 
-bool NameServerModule::onConnect(sylar::Stream::ptr stream) {
-    sylar::Atomic::addFetch(s_on_connect, 1);
+bool NameServerModule::onConnect(rock::Stream::ptr stream) {
+    rock::Atomic::addFetch(s_on_connect, 1);
     auto rockstream = std::dynamic_pointer_cast<RockStream>(stream);
     if(!rockstream) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid stream";
+        ROCK_LOG_ERROR(g_logger) << "invalid stream";
         return false;
     }
     auto addr = rockstream->getRemoteAddress();
     if(addr) {
-        SYLAR_LOG_INFO(g_logger) << "onConnect: " << *addr;
+        ROCK_LOG_INFO(g_logger) << "onConnect: " << *addr;
     }
     return true;
 }
 
-bool NameServerModule::onDisconnect(sylar::Stream::ptr stream) {
-    sylar::Atomic::addFetch(s_on_disconnect, 1);
+bool NameServerModule::onDisconnect(rock::Stream::ptr stream) {
+    rock::Atomic::addFetch(s_on_disconnect, 1);
     auto rockstream = std::dynamic_pointer_cast<RockStream>(stream);
     if(!rockstream) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid stream";
+        ROCK_LOG_ERROR(g_logger) << "invalid stream";
         return false;
     }
     auto addr = rockstream->getRemoteAddress();
     if(addr) {
-        SYLAR_LOG_INFO(g_logger) << "onDisconnect: " << *addr;
+        ROCK_LOG_INFO(g_logger) << "onDisconnect: " << *addr;
     }
     set(rockstream, nullptr);
     //setQueryDomain(rockstream, {});
     return true;
 }
 
-NSClientInfo::ptr NameServerModule::get(sylar::RockStream::ptr rs) {
-    sylar::RWMutex::ReadLock lock(m_mutex);
+NSClientInfo::ptr NameServerModule::get(rock::RockStream::ptr rs) {
+    rock::RWMutex::ReadLock lock(m_mutex);
     auto it = m_sessions.find(rs);
     return it == m_sessions.end() ? nullptr : it->second;
 }
 
-bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
-                                      ,sylar::RockResponse::ptr response
-                                      ,sylar::RockStream::ptr stream) {
+bool NameServerModule::handleRegister(rock::RockRequest::ptr request
+                                      ,rock::RockResponse::ptr response
+                                      ,rock::RockStream::ptr stream) {
     auto rr = request->getAsPB<RegisterRequest>();
     if(!rr) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid register request from: "
+        ROCK_LOG_ERROR(g_logger) << "invalid register request from: "
             << stream->getRemoteAddressString();
         return false;
     }
@@ -90,7 +90,7 @@ bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
         auto& info = rr->infos(i);
 #define XX(info, attr) \
         if(!info.has_##attr()) { \
-            SYLAR_LOG_ERROR(g_logger) << "invalid register request from: " \
+            ROCK_LOG_ERROR(g_logger) << "invalid register request from: " \
                 << stream->getRemoteAddressString() \
                 << " " #attr " is null"; \
             return false; \
@@ -99,7 +99,7 @@ bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
         XX(info, domain);
 
         if(info.cmds_size() == 0) {
-            SYLAR_LOG_ERROR(g_logger) << "invalid register request from: "
+            ROCK_LOG_ERROR(g_logger) << "invalid register request from: "
                 << stream->getRemoteAddressString()
                 << " cmds is null";
             return false;
@@ -111,7 +111,7 @@ bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
 
         NSNode::ptr ns_node(new NSNode(node.ip(), node.port(), node.weight()));
         if(!(ns_node->getId() >> 32)) {
-            SYLAR_LOG_ERROR(g_logger) << "invalid register request from: "
+            ROCK_LOG_ERROR(g_logger) << "invalid register request from: "
                 << stream->getRemoteAddressString()
                 << " ip=" << node.ip() << " invalid";
             return false;
@@ -119,7 +119,7 @@ bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
 
         if(old_value) {
             if(old_value->m_node->getId() != ns_node->getId()) {
-                SYLAR_LOG_ERROR(g_logger) << "invalid register request from: "
+                ROCK_LOG_ERROR(g_logger) << "invalid register request from: "
                     << stream->getRemoteAddressString()
                     << " old.ip=" << old_value->m_node->getIp()
                     << " old.port=" << old_value->m_node->getPort()
@@ -130,7 +130,7 @@ bool NameServerModule::handleRegister(sylar::RockRequest::ptr request
         }
         if(new_value) {
             if(new_value->m_node->getId() != ns_node->getId()) {
-                SYLAR_LOG_ERROR(g_logger) << "invalid register request from: "
+                ROCK_LOG_ERROR(g_logger) << "invalid register request from: "
                     << stream->getRemoteAddressString()
                     << " new.ip=" << new_value->m_node->getIp()
                     << " new.port=" << new_value->m_node->getPort()
@@ -190,7 +190,7 @@ void diff(const std::map<std::string, std::set<uint32_t> >& old_value,
 }
 
 
-void NameServerModule::set(sylar::RockStream::ptr rs, NSClientInfo::ptr new_value) {
+void NameServerModule::set(rock::RockStream::ptr rs, NSClientInfo::ptr new_value) {
     if(!rs->isConnected()) {
         new_value = nullptr;
     }
@@ -273,10 +273,10 @@ void NameServerModule::set(sylar::RockStream::ptr rs, NSClientInfo::ptr new_valu
         }
     }
 
-    //sylar::WorkerMgr::GetInstance()->schedule("notify",
+    //rock::WorkerMgr::GetInstance()->schedule("notify",
     //        std::bind(&NameServerModule::doNotify, this, ds, nty));
 
-    sylar::RWMutex::WriteLock lock(m_mutex);
+    rock::RWMutex::WriteLock lock(m_mutex);
     if(new_value) {
         m_sessions[rs] = new_value;
     } else {
@@ -284,10 +284,10 @@ void NameServerModule::set(sylar::RockStream::ptr rs, NSClientInfo::ptr new_valu
     }
 }
 
-std::set<sylar::RockStream::ptr> NameServerModule::getStreams(const std::string& domain) {
-    sylar::RWMutex::ReadLock lock(m_mutex);
+std::set<rock::RockStream::ptr> NameServerModule::getStreams(const std::string& domain) {
+    rock::RWMutex::ReadLock lock(m_mutex);
     auto it = m_domainToSessions.find(domain);
-    return it == m_domainToSessions.end() ? std::set<sylar::RockStream::ptr>() : it->second;
+    return it == m_domainToSessions.end() ? std::set<rock::RockStream::ptr>() : it->second;
 }
 
 void NameServerModule::doNotify(std::set<std::string>& domains, std::shared_ptr<NotifyMessage> nty) {
@@ -302,17 +302,17 @@ void NameServerModule::doNotify(std::set<std::string>& domains, std::shared_ptr<
     }
 }
 
-bool NameServerModule::handleQuery(sylar::RockRequest::ptr request
-                                   ,sylar::RockResponse::ptr response
-                                   ,sylar::RockStream::ptr stream) {
+bool NameServerModule::handleQuery(rock::RockRequest::ptr request
+                                   ,rock::RockResponse::ptr response
+                                   ,rock::RockStream::ptr stream) {
     auto qreq = request->getAsPB<QueryRequest>();
     if(!qreq) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid query request from: "
+        ROCK_LOG_ERROR(g_logger) << "invalid query request from: "
             << stream->getRemoteAddressString();
         return false;
     }
     if(!qreq->domains_size()) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid query request from: "
+        ROCK_LOG_ERROR(g_logger) << "invalid query request from: "
             << stream->getRemoteAddressString()
             << " domains is null";
     }
@@ -351,10 +351,10 @@ bool NameServerModule::handleQuery(sylar::RockRequest::ptr request
     return true;
 }
 
-void NameServerModule::setQueryDomain(sylar::RockStream::ptr rs, const std::set<std::string>& ds) {
+void NameServerModule::setQueryDomain(rock::RockStream::ptr rs, const std::set<std::string>& ds) {
     std::set<std::string> old_ds;
     {
-        sylar::RWMutex::ReadLock lock(m_mutex);
+        rock::RWMutex::ReadLock lock(m_mutex);
         auto it = m_queryDomains.find(rs);
         if(it != m_queryDomains.end()) {
             if(it->second == ds) {
@@ -363,7 +363,7 @@ void NameServerModule::setQueryDomain(sylar::RockStream::ptr rs, const std::set<
             old_ds = it->second;
         }
     }
-    sylar::RWMutex::WriteLock lock(m_mutex);
+    rock::RWMutex::WriteLock lock(m_mutex);
     if(!rs->isConnected()) {
         return;
     }
@@ -380,9 +380,9 @@ void NameServerModule::setQueryDomain(sylar::RockStream::ptr rs, const std::set<
     }
 }
 
-bool NameServerModule::handleTick(sylar::RockRequest::ptr request
-                                  ,sylar::RockResponse::ptr response
-                                  ,sylar::RockStream::ptr stream) {
+bool NameServerModule::handleTick(rock::RockRequest::ptr request
+                                  ,rock::RockResponse::ptr response
+                                  ,rock::RockStream::ptr stream) {
     return true;
 }
 
@@ -395,7 +395,7 @@ std::string NameServerModule::statusString() {
     m_domains->dump(ss);
 
     ss << "domainToSession: " << std::endl;
-    sylar::RWMutex::ReadLock lock(m_mutex);
+    rock::RWMutex::ReadLock lock(m_mutex);
     for(auto& i : m_domainToSessions) {
         ss << "    " << i.first << ":" << std::endl;
         for(auto& v : i.second) {

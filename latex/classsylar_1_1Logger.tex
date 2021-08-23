@@ -1,5 +1,5 @@
-\doxysection{sylar\+::Logger类 参考}
-\label{classsylar_1_1Logger}\index{sylar::Logger@{sylar::Logger}}
+\doxysection{rock\+::Logger类 参考}
+\label{classrock_1_1Logger}\index{rock::Logger@{rock::Logger}}
 
 
 日志器  
@@ -11,19 +11,19 @@
 
 
 
-类 sylar\+::Logger 继承关系图\+:
+类 rock\+::Logger 继承关系图\+:
 % FIG 0
 
 
-sylar\+::Logger 的协作图\+:
+rock\+::Logger 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Logger_a947f09bae8ec3d783a1f60231f6b6cd3}} 
+\mbox{\label{classrock_1_1Logger_a947f09bae8ec3d783a1f60231f6b6cd3}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Logger} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1Logger_a878d7a87bd8b62024584bf444f4e43ba}} 
+\mbox{\label{classrock_1_1Logger_a878d7a87bd8b62024584bf444f4e43ba}} 
 typedef \textbf{ Spinlock} {\bfseries Mutex\+Type}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
@@ -47,34 +47,34 @@ void \textbf{ add\+Appender} (Log\+Appender\+::ptr appender)
 \begin{DoxyCompactList}\small\item\em 添加日志目标 \end{DoxyCompactList}\item 
 void \textbf{ del\+Appender} (Log\+Appender\+::ptr appender)
 \begin{DoxyCompactList}\small\item\em 删除日志目标 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a4c8e15330062585251acceb4acaebd1b}} 
+\mbox{\label{classrock_1_1Logger_a4c8e15330062585251acceb4acaebd1b}} 
 void \textbf{ clear\+Appenders} ()
 \begin{DoxyCompactList}\small\item\em 清空日志目标 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a7ef4982f170be398f325485a18311510}} 
+\mbox{\label{classrock_1_1Logger_a7ef4982f170be398f325485a18311510}} 
 \textbf{ Log\+Level\+::\+Level} \textbf{ get\+Level} () const
 \begin{DoxyCompactList}\small\item\em 返回日志级别 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a541502ab0661d82c220e8cbfc09d6424}} 
+\mbox{\label{classrock_1_1Logger_a541502ab0661d82c220e8cbfc09d6424}} 
 void \textbf{ set\+Level} (\textbf{ Log\+Level\+::\+Level} val)
 \begin{DoxyCompactList}\small\item\em 设置日志级别 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_ae7abddc0cde582c040a292cd623852ec}} 
+\mbox{\label{classrock_1_1Logger_ae7abddc0cde582c040a292cd623852ec}} 
 const std\+::string \& \textbf{ get\+Name} () const
 \begin{DoxyCompactList}\small\item\em 返回日志名称 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a0920f4007d4ca5cbf53d21bf229099cd}} 
+\mbox{\label{classrock_1_1Logger_a0920f4007d4ca5cbf53d21bf229099cd}} 
 void \textbf{ set\+Formatter} (Log\+Formatter\+::ptr val)
 \begin{DoxyCompactList}\small\item\em 设置日志格式器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a601281d2bfb4f852b460b24c115f7352}} 
+\mbox{\label{classrock_1_1Logger_a601281d2bfb4f852b460b24c115f7352}} 
 void \textbf{ set\+Formatter} (const std\+::string \&val)
 \begin{DoxyCompactList}\small\item\em 设置日志格式模板 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_ad25fd35789ba9948d46112ca4bb25a07}} 
+\mbox{\label{classrock_1_1Logger_ad25fd35789ba9948d46112ca4bb25a07}} 
 Log\+Formatter\+::ptr \textbf{ get\+Formatter} ()
 \begin{DoxyCompactList}\small\item\em 获取日志格式器 \end{DoxyCompactList}\item 
-\mbox{\label{classsylar_1_1Logger_a6867fe27a7f11e85a9eb1f1d3155cc98}} 
+\mbox{\label{classrock_1_1Logger_a6867fe27a7f11e85a9eb1f1d3155cc98}} 
 std\+::string \textbf{ to\+Yaml\+String} ()
 \begin{DoxyCompactList}\small\item\em 将日志器的配置转成\+Y\+A\+ML String \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{友元}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1Logger_ab315504a6dd6a6c8d2514affb54a9cf2}} 
+\mbox{\label{classrock_1_1Logger_ab315504a6dd6a6c8d2514affb54a9cf2}} 
 class {\bfseries Logger\+Manager}
 \end{DoxyCompactItemize}
 
@@ -83,11 +83,11 @@ class {\bfseries Logger\+Manager}
 日志器 
 
 \doxysubsection{构造及析构函数说明}
-\mbox{\label{classsylar_1_1Logger_aedeb6df93457a283ca8685fb9e0ebc06}} 
-\index{sylar::Logger@{sylar::Logger}!Logger@{Logger}}
-\index{Logger@{Logger}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_aedeb6df93457a283ca8685fb9e0ebc06}} 
+\index{rock::Logger@{rock::Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{Logger()}
-{\footnotesize\ttfamily sylar\+::\+Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}root\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily rock\+::\+Logger\+::\+Logger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}root\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -101,11 +101,11 @@ class {\bfseries Logger\+Manager}
 
 
 \doxysubsection{成员函数说明}
-\mbox{\label{classsylar_1_1Logger_ac8879660f7fd549e467084a309f24cd4}} 
-\index{sylar::Logger@{sylar::Logger}!addAppender@{addAppender}}
-\index{addAppender@{addAppender}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_ac8879660f7fd549e467084a309f24cd4}} 
+\index{rock::Logger@{rock::Logger}!addAppender@{addAppender}}
+\index{addAppender@{addAppender}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{addAppender()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::add\+Appender (\begin{DoxyParamCaption}\item[{Log\+Appender\+::ptr}]{appender }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::add\+Appender (\begin{DoxyParamCaption}\item[{Log\+Appender\+::ptr}]{appender }\end{DoxyParamCaption})}
 
 
 
@@ -116,11 +116,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em appender} & 日志目标 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_afd444ae2c8fe2eed75b40f816b9dc13d}} 
-\index{sylar::Logger@{sylar::Logger}!debug@{debug}}
-\index{debug@{debug}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_afd444ae2c8fe2eed75b40f816b9dc13d}} 
+\index{rock::Logger@{rock::Logger}!debug@{debug}}
+\index{debug@{debug}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{debug()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::debug (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::debug (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -131,11 +131,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em event} & 日志事件 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_a66beed5f8de77a9e4e56767086bca079}} 
-\index{sylar::Logger@{sylar::Logger}!delAppender@{delAppender}}
-\index{delAppender@{delAppender}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_a66beed5f8de77a9e4e56767086bca079}} 
+\index{rock::Logger@{rock::Logger}!delAppender@{delAppender}}
+\index{delAppender@{delAppender}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{delAppender()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::del\+Appender (\begin{DoxyParamCaption}\item[{Log\+Appender\+::ptr}]{appender }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::del\+Appender (\begin{DoxyParamCaption}\item[{Log\+Appender\+::ptr}]{appender }\end{DoxyParamCaption})}
 
 
 
@@ -146,11 +146,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em appender} & 日志目标 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_a7c2b57e31bea9635d0ab7265f5d574cb}} 
-\index{sylar::Logger@{sylar::Logger}!error@{error}}
-\index{error@{error}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_a7c2b57e31bea9635d0ab7265f5d574cb}} 
+\index{rock::Logger@{rock::Logger}!error@{error}}
+\index{error@{error}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{error()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::error (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::error (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -161,11 +161,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em event} & 日志事件 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_a349e94ae1b30ac2c7a18bceb7015babc}} 
-\index{sylar::Logger@{sylar::Logger}!fatal@{fatal}}
-\index{fatal@{fatal}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_a349e94ae1b30ac2c7a18bceb7015babc}} 
+\index{rock::Logger@{rock::Logger}!fatal@{fatal}}
+\index{fatal@{fatal}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{fatal()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::fatal (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::fatal (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -176,11 +176,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em event} & 日志事件 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_a174c80350e2eb65a122c6dee5b04e138}} 
-\index{sylar::Logger@{sylar::Logger}!info@{info}}
-\index{info@{info}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_a174c80350e2eb65a122c6dee5b04e138}} 
+\index{rock::Logger@{rock::Logger}!info@{info}}
+\index{info@{info}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{info()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::info (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::info (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -191,11 +191,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em event} & 日志事件 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_a847ba76fb24349c266eabfbf7694ec3f}} 
-\index{sylar::Logger@{sylar::Logger}!log@{log}}
-\index{log@{log}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_a847ba76fb24349c266eabfbf7694ec3f}} 
+\index{rock::Logger@{rock::Logger}!log@{log}}
+\index{log@{log}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{log()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{\textbf{ Log\+Level\+::\+Level}}]{level,  }\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -208,11 +208,11 @@ class {\bfseries Logger\+Manager}
 \mbox{\texttt{ in}}  & {\em event} & 日志事件 \\
 \hline
 \end{DoxyParams}
-\mbox{\label{classsylar_1_1Logger_af7d497a334cfe29f35799a2a36f6222b}} 
-\index{sylar::Logger@{sylar::Logger}!warn@{warn}}
-\index{warn@{warn}!sylar::Logger@{sylar::Logger}}
+\mbox{\label{classrock_1_1Logger_af7d497a334cfe29f35799a2a36f6222b}} 
+\index{rock::Logger@{rock::Logger}!warn@{warn}}
+\index{warn@{warn}!rock::Logger@{rock::Logger}}
 \doxysubsubsection{warn()}
-{\footnotesize\ttfamily void sylar\+::\+Logger\+::warn (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rock\+::\+Logger\+::warn (\begin{DoxyParamCaption}\item[{Log\+Event\+::ptr}]{event }\end{DoxyParamCaption})}
 
 
 
@@ -227,4 +227,4 @@ class {\bfseries Logger\+Manager}
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/\textbf{ log.\+h}\end{DoxyCompactItemize}
+rock/\textbf{ log.\+h}\end{DoxyCompactItemize}

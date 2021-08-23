@@ -1,11 +1,11 @@
-#ifndef __SYLAR_HTTP_WS_SESSION_H__
-#define __SYLAR_HTTP_WS_SESSION_H__
+#ifndef __ROCK_HTTP_WS_SESSION_H__
+#define __ROCK_HTTP_WS_SESSION_H__
 
-#include "sylar/config.h"
-#include "sylar/http/http_session.h"
+#include "rock/config.h"
+#include "rock/http/http_session.h"
 #include <stdint.h>
 
-namespace sylar {
+namespace rock {
 namespace http {
 
 #pragma pack(1)
@@ -70,7 +70,7 @@ private:
     bool handleClientShake();
 };
 
-extern sylar::ConfigVar<uint32_t>::ptr g_websocket_message_max_size;
+extern rock::ConfigVar<uint32_t>::ptr g_websocket_message_max_size;
 WSFrameMessage::ptr WSRecvMessage(Stream* stream, bool client);
 int32_t WSSendMessage(Stream* stream, WSFrameMessage::ptr msg, bool client, bool fin);
 int32_t WSPing(Stream* stream);

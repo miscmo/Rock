@@ -1,9 +1,9 @@
-digraph "sylar::FoxThreadPool"
+digraph "rock::FoxThreadPool"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::FoxThreadPool\n||+ FoxThreadPool()\l+ ~FoxThreadPool()\l+ start()\l+ stop()\l+ join()\l+ dispatch()\l+ batchDispatch()\l+ dispatch()\l+ getRandFoxThread()\l+ setInitCb()\l+ dump()\l+ broadcast()\l+ getTotal()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::FoxThreadPool\n||+ FoxThreadPool()\l+ ~FoxThreadPool()\l+ start()\l+ stop()\l+ join()\l+ dispatch()\l+ batchDispatch()\l+ dispatch()\l+ getRandFoxThread()\l+ setInitCb()\l+ dump()\l+ broadcast()\l+ getTotal()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{sylar::IFoxThread\n||+ ~IFoxThread()\l+ dispatch()\l+ dispatch()\l+ batchDispatch()\l+ broadcast()\l+ start()\l+ stop()\l+ join()\l+ dump()\l+ getTotal()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1IFoxThread.html",tooltip=" "];
+  Node2 [label="{rock::IFoxThread\n||+ ~IFoxThread()\l+ dispatch()\l+ dispatch()\l+ batchDispatch()\l+ broadcast()\l+ start()\l+ stop()\l+ join()\l+ dump()\l+ getTotal()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1IFoxThread.html",tooltip=" "];
 }

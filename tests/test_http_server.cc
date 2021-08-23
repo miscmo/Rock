@@ -1,38 +1,38 @@
-#include "sylar/http/http_server.h"
-#include "sylar/log.h"
+#include "rock/http/http_server.h"
+#include "rock/log.h"
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static rock::Logger::ptr g_logger = ROCK_LOG_ROOT();
 
 #define XX(...) #__VA_ARGS__
 
 
-sylar::IOManager::ptr worker;
+rock::IOManager::ptr worker;
 void run() {
-    g_logger->setLevel(sylar::LogLevel::INFO);
-    //sylar::http::HttpServer::ptr server(new sylar::http::HttpServer(true, worker.get(), sylar::IOManager::GetThis()));
-    sylar::http::HttpServer::ptr server(new sylar::http::HttpServer(true));
-    sylar::Address::ptr addr = sylar::Address::LookupAnyIPAddress("0.0.0.0:8020");
+    g_logger->setLevel(rock::LogLevel::INFO);
+    //rock::http::HttpServer::ptr server(new rock::http::HttpServer(true, worker.get(), rock::IOManager::GetThis()));
+    rock::http::HttpServer::ptr server(new rock::http::HttpServer(true));
+    rock::Address::ptr addr = rock::Address::LookupAnyIPAddress("0.0.0.0:8020");
     while(!server->bind(addr)) {
         sleep(2);
     }
     auto sd = server->getServletDispatch();
-    sd->addServlet("/sylar/xx", [](sylar::http::HttpRequest::ptr req
-                ,sylar::http::HttpResponse::ptr rsp
-                ,sylar::http::HttpSession::ptr session) {
+    sd->addServlet("/rock/xx", [](rock::http::HttpRequest::ptr req
+                ,rock::http::HttpResponse::ptr rsp
+                ,rock::http::HttpSession::ptr session) {
             rsp->setBody(req->toString());
             return 0;
     });
 
-    sd->addGlobServlet("/sylar/*", [](sylar::http::HttpRequest::ptr req
-                ,sylar::http::HttpResponse::ptr rsp
-                ,sylar::http::HttpSession::ptr session) {
+    sd->addGlobServlet("/rock/*", [](rock::http::HttpRequest::ptr req
+                ,rock::http::HttpResponse::ptr rsp
+                ,rock::http::HttpSession::ptr session) {
             rsp->setBody("Glob:\r\n" + req->toString());
             return 0;
     });
 
-    sd->addGlobServlet("/sylarx/*", [](sylar::http::HttpRequest::ptr req
-                ,sylar::http::HttpResponse::ptr rsp
-                ,sylar::http::HttpSession::ptr session) {
+    sd->addGlobServlet("/rockx/*", [](rock::http::HttpRequest::ptr req
+                ,rock::http::HttpResponse::ptr rsp
+                ,rock::http::HttpSession::ptr session) {
             rsp->setBody(XX(<html>
 <head><title>404 Not Found</title></head>
 <body>
@@ -54,8 +54,8 @@ void run() {
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(1, true, "main");
-    worker.reset(new sylar::IOManager(3, false, "worker"));
+    rock::IOManager iom(1, true, "main");
+    worker.reset(new rock::IOManager(3, false, "worker"));
     iom.schedule(run);
     return 0;
 }

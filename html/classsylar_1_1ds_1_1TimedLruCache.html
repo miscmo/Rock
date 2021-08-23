@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>sylar: sylar::ds::TimedLruCache&lt; K, V, MutexType &gt; 模板类 参考</title>
+<title>rock: rock::ds::TimedLruCache&lt; K, V, MutexType &gt; 模板类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">sylar
+   <div id="projectname">rock
    </div>
   </td>
  </tr>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>sylar</b></li><li class="navelem"><b>ds</b></li><li class="navelem"><a class="el" href="classsylar_1_1ds_1_1TimedLruCache.html">TimedLruCache</a></li>  </ul>
+<li class="navelem"><b>rock</b></li><li class="navelem"><b>ds</b></li><li class="navelem"><a class="el" href="classrock_1_1ds_1_1TimedLruCache.html">TimedLruCache</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -70,13 +70,13 @@ $(function() {
 <a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-methods">Protected 成员函数</a> &#124;
-<a href="classsylar_1_1ds_1_1TimedLruCache-members.html">所有成员列表</a>  </div>
+<a href="classrock_1_1ds_1_1TimedLruCache-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
-<div class="title">sylar::ds::TimedLruCache&lt; K, V, MutexType &gt; 模板类 参考</div>  </div>
+<div class="title">rock::ds::TimedLruCache&lt; K, V, MutexType &gt; 模板类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-sylar::ds::TimedLruCache&lt; K, V, MutexType &gt; 的协作图:</div>
+rock::ds::TimedLruCache&lt; K, V, MutexType &gt; 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 0 -->
 </div>
@@ -85,7 +85,7 @@ sylar::ds::TimedLruCache&lt; K, V, MutexType &gt; 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a85cedc4774d4ddf5ccc47e1d9b86c1c3"><td class="memItemLeft" align="right" valign="top"><a id="a85cedc4774d4ddf5ccc47e1d9b86c1c3"></a>
-typedef std::shared_ptr&lt; <a class="el" href="classsylar_1_1ds_1_1TimedLruCache.html">TimedLruCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
+typedef std::shared_ptr&lt; <a class="el" href="classrock_1_1ds_1_1TimedLruCache.html">TimedLruCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td></tr>
 <tr class="separator:a85cedc4774d4ddf5ccc47e1d9b86c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0842ac23472edc68a923e045247926"><td class="memItemLeft" align="right" valign="top"><a id="a9b0842ac23472edc68a923e045247926"></a>
 typedef Item&#160;</td><td class="memItemRight" valign="bottom"><b>item_type</b></td></tr>
@@ -109,7 +109,7 @@ typedef std::set&lt; value_type, ItemTimeOp &gt;&#160;</td><td class="memItemRig
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a2ac19c6e0c113a1ab0b2d138bf662416"><td class="memItemLeft" align="right" valign="top"><a id="a2ac19c6e0c113a1ab0b2d138bf662416"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TimedLruCache</b> (size_t max_size=0, size_t elasticity=0, <a class="el" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> *status=nullptr)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TimedLruCache</b> (size_t max_size=0, size_t elasticity=0, <a class="el" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a> *status=nullptr)</td></tr>
 <tr class="separator:a2ac19c6e0c113a1ab0b2d138bf662416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57ec6135f7868cc6523edabddfb622e6"><td class="memItemLeft" align="right" valign="top"><a id="a57ec6135f7868cc6523edabddfb622e6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (const K &amp;k, const V &amp;v, uint64_t expired)</td></tr>
@@ -161,13 +161,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setPruneCallback</b> 
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toStatusString</b> ()</td></tr>
 <tr class="separator:a7941c3c882752a1f573c541291f7b518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fef0e9fbf2079e0f8d8c1abe721d1db"><td class="memItemLeft" align="right" valign="top"><a id="a4fef0e9fbf2079e0f8d8c1abe721d1db"></a>
-<a class="el" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> () const</td></tr>
+<a class="el" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getStatus</b> () const</td></tr>
 <tr class="separator:a4fef0e9fbf2079e0f8d8c1abe721d1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae073b3806dd4795d64af8e549a1fdb93"><td class="memItemLeft" align="right" valign="top"><a id="ae073b3806dd4795d64af8e549a1fdb93"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setStatus</b> (<a class="el" href="classsylar_1_1ds_1_1CacheStatus.html">CacheStatus</a> *v, bool owner=false)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStatus</b> (<a class="el" href="classrock_1_1ds_1_1CacheStatus.html">CacheStatus</a> *v, bool owner=false)</td></tr>
 <tr class="separator:ae073b3806dd4795d64af8e549a1fdb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0012935f6166b3081c744592a8f82d3"><td class="memItemLeft" align="right" valign="top"><a id="ab0012935f6166b3081c744592a8f82d3"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>checkTimeout</b> (const uint64_t &amp;ts=sylar::GetCurrentMS())</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>checkTimeout</b> (const uint64_t &amp;ts=rock::GetCurrentMS())</td></tr>
 <tr class="separator:ab0012935f6166b3081c744592a8f82d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -177,7 +177,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>prune</b> ()</td></
 <tr class="separator:a9895560d76aa1fcccffec12f76f8fd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>sylar/ds/<a class="el" href="timed__lru__cache_8h_source.html">timed_lru_cache.h</a></li>
+<li>rock/ds/<a class="el" href="timed__lru__cache_8h_source.html">timed_lru_cache.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

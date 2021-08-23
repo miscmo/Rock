@@ -1,11 +1,11 @@
-#ifndef __SYLAR_DAEMON_H__
-#define __SYLAR_DAEMON_H__
+#ifndef __ROCK_DAEMON_H__
+#define __ROCK_DAEMON_H__
 
 #include <unistd.h>
 #include <functional>
-#include "sylar/singleton.h"
+#include "rock/singleton.h"
 
-namespace sylar {
+namespace rock {
 
 struct ProcessInfo {
     /// 父进程id
@@ -22,7 +22,7 @@ struct ProcessInfo {
     std::string toString() const;
 };
 
-typedef sylar::Singleton<ProcessInfo> ProcessInfoMgr;
+typedef rock::Singleton<ProcessInfo> ProcessInfoMgr;
 
 /**
  * @brief 启动程序可以选择用守护进程的方式

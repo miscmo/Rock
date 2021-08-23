@@ -1,54 +1,54 @@
-\doxysection{sylar\+::I\+Fox\+Thread类 参考}
-\label{classsylar_1_1IFoxThread}\index{sylar::IFoxThread@{sylar::IFoxThread}}
+\doxysection{rock\+::I\+Fox\+Thread类 参考}
+\label{classrock_1_1IFoxThread}\index{rock::IFoxThread@{rock::IFoxThread}}
 
 
-类 sylar\+::I\+Fox\+Thread 继承关系图\+:
+类 rock\+::I\+Fox\+Thread 继承关系图\+:
 % FIG 0
 
 
-sylar\+::I\+Fox\+Thread 的协作图\+:
+rock\+::I\+Fox\+Thread 的协作图\+:
 % FIG 1
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a274ac40eab547b2c0ca2e4639aa7e79f}} 
+\mbox{\label{classrock_1_1IFoxThread_a274ac40eab547b2c0ca2e4639aa7e79f}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ I\+Fox\+Thread} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_aeb14d5daa107d5cfe832e7603bd7a855}} 
+\mbox{\label{classrock_1_1IFoxThread_aeb14d5daa107d5cfe832e7603bd7a855}} 
 typedef std\+::function$<$ void()$>$ {\bfseries callback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a2b04e10f6c979aa3bfba5a479453f89b}} 
+\mbox{\label{classrock_1_1IFoxThread_a2b04e10f6c979aa3bfba5a479453f89b}} 
 virtual bool {\bfseries dispatch} (callback cb)=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a8bb6d4a8cca1113b985da4418874ad85}} 
+\mbox{\label{classrock_1_1IFoxThread_a8bb6d4a8cca1113b985da4418874ad85}} 
 virtual bool {\bfseries dispatch} (uint32\+\_\+t id, callback cb)=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_abe592a5a85fe83a37116a43afad1bdcd}} 
+\mbox{\label{classrock_1_1IFoxThread_abe592a5a85fe83a37116a43afad1bdcd}} 
 virtual bool {\bfseries batch\+Dispatch} (const std\+::vector$<$ callback $>$ \&cbs)=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_ab58309fb459785fba1cbb59623f8b377}} 
+\mbox{\label{classrock_1_1IFoxThread_ab58309fb459785fba1cbb59623f8b377}} 
 virtual void {\bfseries broadcast} (callback cb)=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a11ff146e01c17904ec0c9955fa336b4a}} 
+\mbox{\label{classrock_1_1IFoxThread_a11ff146e01c17904ec0c9955fa336b4a}} 
 virtual void {\bfseries start} ()=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a6ace7d8ed823c872c1587017242555b0}} 
+\mbox{\label{classrock_1_1IFoxThread_a6ace7d8ed823c872c1587017242555b0}} 
 virtual void {\bfseries stop} ()=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a55aaa751339a9bafa5cffc74567536d9}} 
+\mbox{\label{classrock_1_1IFoxThread_a55aaa751339a9bafa5cffc74567536d9}} 
 virtual void {\bfseries join} ()=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_aca08bf64070f40f0dddc652c28b88d93}} 
+\mbox{\label{classrock_1_1IFoxThread_aca08bf64070f40f0dddc652c28b88d93}} 
 virtual void {\bfseries dump} (std\+::ostream \&os)=0
 \item 
-\mbox{\label{classsylar_1_1IFoxThread_a743f01145c6fa29b2fa1c352da305b18}} 
+\mbox{\label{classrock_1_1IFoxThread_a743f01145c6fa29b2fa1c352da305b18}} 
 virtual uint64\+\_\+t {\bfseries get\+Total} ()=0
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}
+rock/db/fox\+\_\+thread.\+h\end{DoxyCompactItemize}

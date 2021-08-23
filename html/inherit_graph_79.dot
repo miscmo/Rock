@@ -4,11 +4,11 @@ digraph "类继承关系图"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="sylar::ILoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1ILoadBalance.html",tooltip=" "];
+  Node0 [label="rock::ILoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1ILoadBalance.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="sylar::LoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1LoadBalance.html",tooltip=" "];
+  Node1 [label="rock::LoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1LoadBalance.html",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="sylar::RoundRobinLoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1RoundRobinLoadBalance.html",tooltip=" "];
+  Node2 [label="rock::RoundRobinLoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1RoundRobinLoadBalance.html",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="sylar::WeightLoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsylar_1_1WeightLoadBalance.html",tooltip=" "];
+  Node3 [label="rock::WeightLoadBalance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrock_1_1WeightLoadBalance.html",tooltip=" "];
 }

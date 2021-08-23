@@ -1,74 +1,74 @@
-\doxysection{sylar\+::ds\+::Hash\+Map$<$ K, V, Pos\+Hash $>$ 模板类 参考}
-\label{classsylar_1_1ds_1_1HashMap}\index{sylar::ds::HashMap$<$ K, V, PosHash $>$@{sylar::ds::HashMap$<$ K, V, PosHash $>$}}
+\doxysection{rock\+::ds\+::Hash\+Map$<$ K, V, Pos\+Hash $>$ 模板类 参考}
+\label{classrock_1_1ds_1_1HashMap}\index{rock::ds::HashMap$<$ K, V, PosHash $>$@{rock::ds::HashMap$<$ K, V, PosHash $>$}}
 
 
-sylar\+::ds\+::Hash\+Map$<$ K, V, Pos\+Hash $>$ 的协作图\+:
+rock\+::ds\+::Hash\+Map$<$ K, V, Pos\+Hash $>$ 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_aeb546cd5dae8d0cad0106521fe75aff4}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_aeb546cd5dae8d0cad0106521fe75aff4}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Hash\+Map} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a6802860b4a6c80257d292156339d6426}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a6802860b4a6c80257d292156339d6426}} 
 typedef \textbf{ Pair}$<$ K, V $>$ {\bfseries value\+\_\+type}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a42c027b493c62e1b91c9ea073001874a}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a42c027b493c62e1b91c9ea073001874a}} 
 typedef std\+::function$<$ bool(const K \&k, const V \&v)$>$ {\bfseries rcallback}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_ac9f47ec5499cdaa3758bc8246f2e1e84}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_ac9f47ec5499cdaa3758bc8246f2e1e84}} 
 typedef std\+::function$<$ bool(const K \&k, V \&v)$>$ {\bfseries wcallback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_adf089e638d179c955f70c02e77a77d1f}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_adf089e638d179c955f70c02e77a77d1f}} 
 {\bfseries Hash\+Map} (const uint32\+\_\+t \&size=0)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a6591a611798f3a990f7916144cb01f63}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a6591a611798f3a990f7916144cb01f63}} 
 void {\bfseries rforeach} (rcallback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_adaee2d17568a3235081fc1ad9d5e8865}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_adaee2d17568a3235081fc1ad9d5e8865}} 
 void {\bfseries wforeach} (wcallback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a03f77cce884f3138096904f5c5f066eb}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a03f77cce884f3138096904f5c5f066eb}} 
 bool {\bfseries get} (const K \&k, V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_afb5734e47b2d983e755ab2a15646162b}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_afb5734e47b2d983e755ab2a15646162b}} 
 bool {\bfseries exists} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a039b95a6fc6ed1dfd841048a58f745db}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a039b95a6fc6ed1dfd841048a58f745db}} 
 bool {\bfseries set} (const K \&k, const V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a31a490c896d28720f94e1db2741ef3ef}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a31a490c896d28720f94e1db2741ef3ef}} 
 uint64\+\_\+t {\bfseries get\+Total} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_ac5cdc5d1ca589874c6943eaac9b50bc3}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_ac5cdc5d1ca589874c6943eaac9b50bc3}} 
 bool {\bfseries del} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_aeaffc9ac80e47c34ce355d6506a14482}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_aeaffc9ac80e47c34ce355d6506a14482}} 
 void {\bfseries clear} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_aca3b622b183c60447600a61bcdcd7444}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_aca3b622b183c60447600a61bcdcd7444}} 
 void {\bfseries swap} (\textbf{ Hash\+Map} \&oth)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a3f4aa97b41b16eba805787fd1362c299}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a3f4aa97b41b16eba805787fd1362c299}} 
 void {\bfseries merge} (\textbf{ Hash\+Map} \&oth)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a76eb60bd6763850766754dec7ff73f0a}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a76eb60bd6763850766754dec7ff73f0a}} 
 void {\bfseries rehash} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a212a12e3bab902c38c6990d680adaa0b}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a212a12e3bab902c38c6990d680adaa0b}} 
 std\+::ostream \& {\bfseries dump} (std\+::ostream \&os)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_afd8df9ae31b91d4bc60ecef296fb9751}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_afd8df9ae31b91d4bc60ecef296fb9751}} 
 bool {\bfseries write\+To} (std\+::ostream \&os, uint64\+\_\+t speed=-\/1)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1HashMap_a0e6a9d573089c9f008b005fd3b126240}} 
+\mbox{\label{classrock_1_1ds_1_1HashMap_a0e6a9d573089c9f008b005fd3b126240}} 
 bool {\bfseries read\+From} (std\+::istream \&is, uint64\+\_\+t speed=-\/1)
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/ds/hash\+\_\+map.\+h\end{DoxyCompactItemize}
+rock/ds/hash\+\_\+map.\+h\end{DoxyCompactItemize}

@@ -1,101 +1,101 @@
-\doxysection{sylar\+::ds\+::Timed\+Cache$<$ K, V, R\+W\+Mutex\+Type $>$ 模板类 参考}
-\label{classsylar_1_1ds_1_1TimedCache}\index{sylar::ds::TimedCache$<$ K, V, RWMutexType $>$@{sylar::ds::TimedCache$<$ K, V, RWMutexType $>$}}
+\doxysection{rock\+::ds\+::Timed\+Cache$<$ K, V, R\+W\+Mutex\+Type $>$ 模板类 参考}
+\label{classrock_1_1ds_1_1TimedCache}\index{rock::ds::TimedCache$<$ K, V, RWMutexType $>$@{rock::ds::TimedCache$<$ K, V, RWMutexType $>$}}
 
 
-sylar\+::ds\+::Timed\+Cache$<$ K, V, R\+W\+Mutex\+Type $>$ 的协作图\+:
+rock\+::ds\+::Timed\+Cache$<$ K, V, R\+W\+Mutex\+Type $>$ 的协作图\+:
 % FIG 0
 \doxysubsection*{Public 类型}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a6471cf3e2537fa01b59f7c96a5baec62}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a6471cf3e2537fa01b59f7c96a5baec62}} 
 typedef std\+::shared\+\_\+ptr$<$ \textbf{ Timed\+Cache} $>$ {\bfseries ptr}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_ace1bd94c6cdd30b6f337a47f6de3d301}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_ace1bd94c6cdd30b6f337a47f6de3d301}} 
 typedef Item {\bfseries item\+\_\+type}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a0878518d2f4a8ca7b42bf9097cde264f}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a0878518d2f4a8ca7b42bf9097cde264f}} 
 typedef std\+::set$<$ item\+\_\+type $>$ {\bfseries set\+\_\+type}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a470a1e4b13c2fd1a222c335369120874}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a470a1e4b13c2fd1a222c335369120874}} 
 typedef std\+::unordered\+\_\+map$<$ K, typename set\+\_\+type\+::iterator $>$ {\bfseries map\+\_\+type}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a4a1a205ab7e83b4ff85571ab55c78be9}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a4a1a205ab7e83b4ff85571ab55c78be9}} 
 typedef std\+::function$<$ void(const K \&, const V \&)$>$ {\bfseries prune\+\_\+callback}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a56c271edf676776108a4889e1d6556e9}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a56c271edf676776108a4889e1d6556e9}} 
 {\bfseries Timed\+Cache} (size\+\_\+t max\+\_\+size=0, size\+\_\+t elasticity=0, \textbf{ Cache\+Status} $\ast$status=nullptr)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a34fd0af0d81c7dee863ecd95cbde393c}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a34fd0af0d81c7dee863ecd95cbde393c}} 
 void {\bfseries set} (const K \&k, const V \&v, uint64\+\_\+t expired)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a9a67384c7aa315e1ff7a1134836c5ea4}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a9a67384c7aa315e1ff7a1134836c5ea4}} 
 bool {\bfseries get} (const K \&k, V \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_aba6f86b02ceacb72940e8e5bb1bf862e}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_aba6f86b02ceacb72940e8e5bb1bf862e}} 
 V {\bfseries get} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a48ffb358c537d4fa0cc406374a1f7ddf}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a48ffb358c537d4fa0cc406374a1f7ddf}} 
 bool {\bfseries del} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a9f164461d0455cba58e3771d2568a6a9}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a9f164461d0455cba58e3771d2568a6a9}} 
 bool {\bfseries expired} (const K \&k, const uint64\+\_\+t \&ts)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a03f760aa7962c7ca647e6bf051122fbf}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a03f760aa7962c7ca647e6bf051122fbf}} 
 bool {\bfseries exists} (const K \&k)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_ab3828845ca3826ea4fd161b80b44e204}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_ab3828845ca3826ea4fd161b80b44e204}} 
 size\+\_\+t {\bfseries size} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a3bf631ae9069d0719a4f1d991ed8c1dd}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a3bf631ae9069d0719a4f1d991ed8c1dd}} 
 size\+\_\+t {\bfseries empty} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a612e25d63e5e58390c67e9df2983b35a}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a612e25d63e5e58390c67e9df2983b35a}} 
 bool {\bfseries clear} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a4596bf435dc9387e5403945289e335de}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a4596bf435dc9387e5403945289e335de}} 
 void {\bfseries set\+Max\+Size} (const size\+\_\+t \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a18b2df925a2c50893e2214cf49044d82}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a18b2df925a2c50893e2214cf49044d82}} 
 void {\bfseries set\+Elasticity} (const size\+\_\+t \&v)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_aff1b5370a6948dc0fb8ecb101499ea74}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_aff1b5370a6948dc0fb8ecb101499ea74}} 
 size\+\_\+t {\bfseries get\+Max\+Size} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a0dd0879925174b0fd88a44a123e84d37}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a0dd0879925174b0fd88a44a123e84d37}} 
 size\+\_\+t {\bfseries get\+Elasticity} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_ab4685b4193bd2111a78582f5723ecb3e}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_ab4685b4193bd2111a78582f5723ecb3e}} 
 size\+\_\+t {\bfseries get\+Max\+Allowed\+Size} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a57c077fe4b641624475e6c959fa381bb}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a57c077fe4b641624475e6c959fa381bb}} 
 {\footnotesize template$<$class F $>$ }\\void {\bfseries foreach} (F \&f)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a1d3eafed26314a5088d8cc44834dee5e}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a1d3eafed26314a5088d8cc44834dee5e}} 
 void {\bfseries set\+Prune\+Callback} (prune\+\_\+callback cb)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_ad26548e23dc51ab89e436f3ff4e86aad}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_ad26548e23dc51ab89e436f3ff4e86aad}} 
 std\+::string {\bfseries to\+Status\+String} ()
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a37e5ccf91754d844816a951f06779179}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a37e5ccf91754d844816a951f06779179}} 
 \textbf{ Cache\+Status} $\ast$ {\bfseries get\+Status} () const
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a0f7405be910c5f701ee8ebc00dc7907e}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a0f7405be910c5f701ee8ebc00dc7907e}} 
 void {\bfseries set\+Status} (\textbf{ Cache\+Status} $\ast$v, bool owner=false)
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_af035dc6292c5ea0f837a8e9fc37030d2}} 
-size\+\_\+t {\bfseries check\+Timeout} (const uint64\+\_\+t \&ts=sylar\+::\+Get\+Current\+MS())
+\mbox{\label{classrock_1_1ds_1_1TimedCache_af035dc6292c5ea0f837a8e9fc37030d2}} 
+size\+\_\+t {\bfseries check\+Timeout} (const uint64\+\_\+t \&ts=rock\+::\+Get\+Current\+MS())
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected 成员函数}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\label{classsylar_1_1ds_1_1TimedCache_a6ae015691f67265001f88ac69d7f18d6}} 
+\mbox{\label{classrock_1_1ds_1_1TimedCache_a6ae015691f67265001f88ac69d7f18d6}} 
 size\+\_\+t {\bfseries prune} ()
 \end{DoxyCompactItemize}
 
 
 该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
 \item 
-sylar/ds/timed\+\_\+cache.\+h\end{DoxyCompactItemize}
+rock/ds/timed\+\_\+cache.\+h\end{DoxyCompactItemize}

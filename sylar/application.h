@@ -1,11 +1,11 @@
-#ifndef __SYLAR_APPLICATION_H__
-#define __SYLAR_APPLICATION_H__
+#ifndef __ROCK_APPLICATION_H__
+#define __ROCK_APPLICATION_H__
 
-#include "sylar/http/http_server.h"
-#include "sylar/streams/service_discovery.h"
-#include "sylar/rock/rock_stream.h"
+#include "rock/http/http_server.h"
+#include "rock/streams/service_discovery.h"
+#include "rock/rock/rock_stream.h"
 
-namespace sylar {
+namespace rock {
 
 class Application {
 public:
@@ -27,7 +27,7 @@ private:
     int m_argc = 0;
     char** m_argv = nullptr;
 
-    //std::vector<sylar::http::HttpServer::ptr> m_httpservers;
+    //std::vector<rock::http::HttpServer::ptr> m_httpservers;
     std::map<std::string, std::vector<TcpServer::ptr> > m_servers;
     IOManager::ptr m_mainIOManager;
     static Application* s_instance;

@@ -1,7 +1,7 @@
-digraph "sylar::RockBody"
+digraph "rock::RockBody"
 {
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{sylar::RockBody\n|# m_body\l|+ ~RockBody()\l+ setBody()\l+ getBody()\l+ serializeToByteArray()\l+ parseFromByteArray()\l+ getAsPB()\l+ setAsPB()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{rock::RockBody\n|# m_body\l|+ ~RockBody()\l+ setBody()\l+ getBody()\l+ serializeToByteArray()\l+ parseFromByteArray()\l+ getAsPB()\l+ setAsPB()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }
