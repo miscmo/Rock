@@ -220,9 +220,12 @@ void Scheduler::run() {
             }
         } else {
             if(is_active) {
+                //is_active说明协程队列还可能有可执行的协程
                 --m_activeThreadCount;
                 continue;
             }
+
+            //协程队列中的任务执行完毕后，开始执行idle_fiber
             if(idle_fiber->getState() == Fiber::TERM) {
                 SYLAR_LOG_INFO(g_logger) << "idle fiber term";
                 break;
